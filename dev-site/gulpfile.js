@@ -14,7 +14,6 @@ const imagemin = require('../node_modules/gulp-imagemin');
 const panini = require('../node_modules/panini');
 const browser = require('../node_modules/browser-sync');
 const postcss = require('../node_modules/gulp-postcss');
-const discardComments = require('../node_modules/postcss-discard-comments');
 const discardDuplicates = require('../node_modules/postcss-discard-duplicates');
 const discardEmpty = require('../node_modules/postcss-discard-empty');
 const orderedValues = require('../node_modules/postcss-ordered-values');
