@@ -1,0 +1,13 @@
+// new header/footer only
+// utilities
+@import 'breakpoint';
+@import 'mixin';
+// base
+@import 'settings';
+@import 'standalone-reset';
+@import "header-dev"; // shared
+@import 'mobile-menu-dev'; // shared
+@import 'main-menu-top-dev'; // shared
+@import 'wide-menu-dev'; // shared
+@import 'color-theme';
+@import "footer"; // shared

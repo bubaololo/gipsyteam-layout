@@ -1,0 +1,912 @@
+// freerolls
+.freerolls-wrap {
+  // theme = dark
+  [theme='dark'] & {
+    --custom-xfr-opacity-bg-image: .02;
+    --custom-xfr-bg-color: #313131;
+    --custom-xfr-tips-border-color: #404040;
+    --custom-xfr-tips-color: #fff;
+    --custom-xfr-fs-bg-color: #282828;
+    --custom-xfr-fs-head-color: #44d487;
+    --custom-xfr-fs-subhead-color: #fff;
+    --custom-xfr-fs-line-color: #313131;
+  }
+  --xfr-opacity-bg-image: var(--custom-xfr-opacity-bg-image, .04);
+  --xfr-bg-color: var(--custom-xfr-bg-color, #fff);
+  --xfr-tips-color: var(--custom-xfr-tips-color, #000);
+  --xfr-tips-border-color: var(--custom-xfr-tips-border-color, #f9f9f9);
+  --xfr-fs-bg-color: var(--custom-xfr-fs-bg-color, #fff);
+  --xfr-fs-head-color: var(--custom-xfr-fs-head-color, #000);
+  --xfr-fs-subhead-color: var(--custom-xfr-fs-subhead-color, #000);
+  --xfr-fs-line-color: var(--custom-xfr-fs-line-color, #f0f0f0);
+  //
+  --xfr-pr-color: var(--text-1-color, #000);
+  --xfr-pr-item-bg-color: var(--layer-3-color, #fff);
+  //
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  background-color: var(--xfr-bg-color);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    opacity: var(--xfr-opacity-bg-image);
+    background-size: 300px;
+    background-image: url(#{$images}/pattern-welcome.svg);
+  }
+}
+// freerolls promo widget
+.freerolls-promo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 48px 24px 15px;
+  z-index: 1;
+  @include breakpoint(large) {
+    padding: 48px 30px 15px;
+  }
+}
+.freerolls-promo--heading {
+  font-size: 30px;
+  line-height: 35px;
+  color: var(--xfr-pr-color);
+  margin: 0 0 32px;
+}
+//
+.freerolls-pr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.freerolls-pr--item {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  justify-content: center;
+  gap: 16px 30px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 396px;
+  @include breakpoint(large) {
+    max-width: 822px;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+  }
+  @include breakpoint(xlarge) {
+    max-width: 1246px;
+    grid-template-columns: repeat(3, minmax(290px, 1fr));
+  }
+  li {
+    position: relative;
+    padding: 24px;
+    width: 100%;
+    max-width: 395px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 2px #ffc800;
+    background-color: var(--xfr-pr-item-bg-color);
+    @include breakpoint(large) {
+      padding: 32px;
+      grid-column: span 2;
+      &:nth-last-child(1) {
+        grid-column: 2 / span 2;
+      }
+    }
+    @include breakpoint(xlarge) {
+      grid-column: span 1;
+      &:nth-last-child(1) {
+        grid-column: auto / span 1;
+      }
+    }
+  }
+}
+.freerolls-pr--image {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 16px;
+  border-radius: 10px;
+  background-color: #fffae5;
+  img {
+    border-radius: 10px;
+  }
+}
+.freerolls-pr-promo {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  height: 32px;
+  width: 100%;
+  max-width: 112px;
+  margin: 0 0 32px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background-color: #ffc800;
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0;
+  }
+}
+.freerolls-pr--content {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  @include breakpoint(large) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  a {
+    color: var(--xfr-pr-color);
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      z-index: 1;
+    }
+  }
+}
+// menu filter
+.free-head {
+  // theme = dark
+  --x-free-menu-color: var(--text-1-color, #000);
+  --x-free-sep-bg-color: var(--line-1-color, #ebedee);
+  //
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 0;
+  padding: 20px 24px 0;
+  width: 100%;
+  z-index: 1;
+  @include breakpoint(large) {
+    padding: 45px 30px 0;
+  }
+  @include breakpoint(xlarge) {
+    grid-template-columns: 1fr 108px;
+    gap: 0 16px;
+  }
+}
+.free-head--wrap {
+  display: flex;
+  order: 1;
+  @include breakpoint(xlarge) {
+    order: 2;
+  }
+}
+.free-head--toggle {
+  --i-color1: #ec314d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 100%;
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #ec314d;
+  text-align: center;
+  border: 1px solid #ec314d;
+  border-radius: 10px;
+  cursor: pointer;
+  appearance: none;
+  @include breakpoint(xlarge) {
+    height: 32px;
+  }
+  &_active {
+    --i-color1: #ec314d;
+    color: #fff;
+    background-color: #ec304d;
+  }
+}
+.free-toggle-default {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin: 0 10px 0 0;
+  flex-shrink: 0;
+  .free-head--toggle_active & {
+    display: none;
+  }
+}
+.free-toggle-active {
+  display: none;
+  width: 12px;
+  height: 12px;
+  margin: 0 10px 0 0;
+  flex-shrink: 0;
+  .free-head--toggle_active & {
+    display: flex;
+  }
+}
+// menu
+.free-menu {
+  order: 2;
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  // firefox
+  scrollbar-width: none;
+  //
+  -webkit-overflow-scrolling: touch;
+  @include breakpoint(xlarge) {
+    flex-wrap: wrap;
+    order: 1;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.free-menu--item {
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: var(--x-free-menu-color);
+  padding: 7px 16px 9px;
+  border-radius: 10px;
+  appearance: none;
+  white-space: nowrap;
+  &_active {
+    color: #fff;
+    background-color: #ec314d;
+  }
+  &:not(:first-child):not(:last-child) {
+    margin: 0 16px 0 0;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 11px;
+      right: -24px;
+      width: 1px;
+      height: 10px;
+      margin: 0 16px;
+      pointer-events: none;
+      background-color: var(--x-free-sep-bg-color);
+    }
+  }
+  &:first-child {
+    margin: 0 8px 0 0;
+  }
+}
+.free-filter--item {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  color: var(--x-feed-menu-color);
+  padding: 7px 16px 9px;
+  border-radius: 10px;
+  appearance: none;
+  white-space: nowrap;
+  @include breakpoint(large) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &_active {
+    color: #fff;
+    background-color: #ec314d;
+  }
+  &:not(:last-child) {
+    margin: 0 8px 0 0;
+  }
+}
+//
+// filter dropdown
+.freefilter-wrap {
+  // theme = dark
+  --x-free-filter-bg-color: var(--layer-3-color, #fff);
+  --x-free-filter-color: var(--text-1-color, #000);
+  --x-free-filter-sep-bg-color: var(--line-1-color, #ebedee);
+  //
+  padding: 20px 24px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1;
+  @include breakpoint(large) {
+    padding: 45px 30px 30px;
+  }
+}
+.freefilter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 0;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: var(--x-free-filter-bg-color);
+  box-shadow: 0 0 60px rgba(0, 0, 0, .1);
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1px 170px 1px 170px;
+    gap: 0 24px;
+    padding: 48px;
+  }
+  @include breakpoint(xlarge) {
+    gap: 0 48px;
+  }
+}
+.freefilter--cell {
+  display: flex;
+  flex-direction: column;
+}
+.freefilter--heading {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--x-free-filter-color);
+  margin: 0 0 32px;
+}
+.freefilter--sep {
+  width: 100%;
+  height: 1px;
+  background-color: var(--x-free-filter-sep-bg-color);
+  @include breakpoint(large) {
+    width: 1px;
+    height: 100%;
+  }
+}
+.freefilter--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 24px 12px;
+  justify-items: start;
+}
+// checkbox item
+.free-ui-label {
+  position: relative;
+  font-size: 16px;
+  color: var(--x-free-filter-color);
+  line-height: 24px;
+  padding: 0 0 0 40px;
+  cursor: pointer;
+}
+.free-ui-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #dfe1e4;
+  border-radius: 10px;
+  background-color: transparent;
+  &::after {
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    content: '';
+    width: 6px;
+    height: 10px;
+    border: 3px solid #ec314d;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg);
+  }
+}
+.free-ui-input {
+  position: absolute;
+  opacity: 0;
+  &:checked {
+    + .free-ui-circle {
+      border-color: #ec314d;
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+// freerolls section
+.freerolls {
+  // theme = dark
+  --fr-bg-color: var(--layer-3-color, #f1f1f1);
+  --fr-head-color: var(--text-5-color, #a8a8a9);
+  --fr-date-color: var(--text-1-color, #000);
+  --fr-day-color: var(--text-5-color, #a8a8a9);
+  --fr-room-color: var(--text-1-color, #000);
+  --fr-tour-color: var(--text-1-color, #000);
+  --fr-rules-color: var(--text-1-color, #000);
+  --fr-mark-color: var(--text-5-color, #a8a8a9);
+  --fr-tooltip-bg-color: var(--layer-5-color, #616161);
+  --fr-tooltip-color: var(--text-4-color, #fff);
+  //
+  margin: 0 0 18px;
+  padding: 20px 24px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1;
+  @include breakpoint(large) {
+    padding: 45px 30px 30px;
+  }
+}
+.freeitem {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 30px 16px;
+  border-radius: 10px;
+  background-color: var(--fr-bg-color);
+  grid-template-columns: 1fr;
+  @include breakpoint(medium) {
+    grid-template-columns:
+          minmax(120px, 300px)
+          minmax(220px, 390px)
+          minmax(100px, 160px);
+    margin: 0 0 30px;
+    padding: 36px 32px;
+  }
+  @include breakpoint(xlarge) {
+    gap: 0 16px;
+    grid-template-columns:
+          minmax(80px, 130px)
+          200px
+          minmax(40px, 80px)
+          minmax(120px, 230px)
+          minmax(220px, 300px)
+          minmax(100px, 160px);
+  }
+  &_clear {
+    margin: 0;
+    padding: 0 32px 32px;
+    background-color: transparent;
+    display: none;
+    @include breakpoint(xlarge) {
+      display: grid;
+    }
+  }
+}
+.freeitem--heading {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--fr-head-color);
+}
+// time
+.freeitem-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &--date {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--fr-date-color);
+  }
+  &--day {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--fr-day-color);
+  }
+}
+// room
+.freeitem-room {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 0 16px;
+  align-items: center;
+  &--logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &--name {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: var(--fr-room-color);
+  }
+}
+// prize
+.freeitem-prize {
+  display: flex;
+  align-items: center;
+  &--data {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #3ba56c;
+  }
+}
+// tournament
+.freeitem-tournament {
+  display: flex;
+  align-items: center;
+  &--name {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: var(--fr-tour-color);
+  }
+}
+// info
+.freeitem-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &--inner {
+    display: flex;
+    align-items: center;
+  }
+  &--rules {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--fr-rules-color);
+  }
+  &--notes {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 8px;
+    flex-shrink: 0;
+    transform: translateY(2px);
+    align-self: flex-start;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &--iconmark {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    margin: 0 8px 0 0;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &--mark {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--fr-mark-color);
+    margin: 0 8px 0 0;
+  }
+  &--pass {
+    font-size: 14px;
+    line-height: 24px;
+    color: #ec314d;
+    margin: 0 8px 0 0;
+  }
+}
+// copy click
+.freeitem-info--click {
+  position: relative;
+  display: flex;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  @include breakpoint(large) {
+    &:active {
+      top: 1px;
+    }
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+  span {
+    z-index: 1;
+    position: absolute;
+    top: -30px;
+    left: -50px;
+    padding: 6px 8px 6px;
+    border-radius: 2px;
+    background-color: var(--fr-tooltip-bg-color);
+    color: var(--fr-tooltip-color);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 55px;
+      width: 0;
+      height: 0;
+      border-width: 6px 5px 0 5px;
+      border-style: solid;
+      border-color: var(--fr-tooltip-bg-color) transparent transparent transparent;
+    }
+  }
+}
+// cta button
+.freeitem-cta {
+  display: flex;
+  align-items: center;
+  &--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 10px;
+    background-color: #ec314d;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+  }
+}
+// button more
+.freerolls--toggle {
+  display: flex;
+}
+.freerolls--more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #ec314d;
+  text-align: center;
+  padding: 0 16px;
+  height: 48px;
+  width: 100%;
+  max-width: 192px;
+  border-radius: 10px;
+  border: 1px solid #ec314d;
+  background-color: transparent;
+}
+// widget telegram 2 (freerolls page)
+.widget-tgm2-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 32px 24px;
+  z-index: 1;
+  @include breakpoint(large) {
+    padding: 32px 30px;
+  }
+}
+.widget-tgm2 {
+  // theme = dark
+  --tgm-bg-color: var(--layer-4-color, #fff);
+  --tgm-head-color: var(--text-1-color, #000);
+  //
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 0;
+  width: 100%;
+  max-width: 1246px;
+  padding: 32px 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, .1);
+  background-color: var(--tgm-bg-color);
+  @include breakpoint(xlarge) {
+    grid-template-columns: 1fr 302px;
+    gap: 0 48px;
+    align-items: center;
+    padding: 48px 64px;
+  }
+}
+.widget-tgm2--head {
+  display: flex;
+  align-items: center;
+}
+.widget-tgm2--logo {
+  [theme='dark'] & {
+    --i-color1: #fff;
+  }
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  margin: 0 8px 0 0;
+  @include breakpoint(large) {
+    width: 99px;
+    height: 99px;
+    margin: 0 48px 0 0;
+  }
+}
+.widget-tgm2--heading {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--tgm-head-color);
+  @include breakpoint(large) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.widget-tgm2--subheading {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--tgm-head-color);
+}
+.widget-tgm2--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  max-width: 302px;
+  height: 64px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background-color: #ec314d;
+  &:hover {
+    background-color: #b9253b;
+  }
+  svg {
+    --i-color1: #fff;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px 0 0;
+  }
+}
+// freerolls tips
+.freerolls-tips {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0;
+  z-index: 1;
+  @include breakpoint(large) {
+    padding: 0 30px;
+  }
+}
+.freerolls-tips--item {
+  padding: 36px 0;
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--xfr-tips-border-color);
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 700;
+    color: var(--xfr-tips-color);
+    margin: 0 0 16px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--xfr-tips-color);
+    margin: 0;
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
+  }
+  a {
+    color: var(--xfr-tips-color);
+    text-decoration: underline;
+  }
+}
+// freerolls fast support
+.freerolls-fast-support {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 24px;
+  z-index: 1;
+  @include breakpoint(large) {
+    padding: 30px 30px 50px;
+  }
+}
+.freerolls-fs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px 0;
+  width: 100%;
+  padding: 32px 24px;
+  border-radius: 10px;
+  border: 4px solid #44d587;
+  background-color: var(--xfr-fs-bg-color);
+  @include breakpoint(xlarge) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+    padding: 54px 64px;
+  }
+}
+.freerolls-fs--top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include breakpoint(large) {
+    flex-direction: row;
+    padding: 0 20px 0 0;
+  }
+}
+.freerolls-fs--logo {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin: 0 0 16px;
+  @include breakpoint(large) {
+    margin: 0 32px 0 0;
+  }
+  svg {
+    --i-color1: #44d487;
+    --i-color3: #fff;
+    [theme='dark'] & {
+      --i-color1: #fff;
+      --i-color3: #44d487;
+    }
+    width: 100px;
+    height: 96px;
+  }
+}
+.freerolls-fs--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include breakpoint(large) {
+    align-items: flex-start;
+  }
+}
+.freerolls-fs--heading {
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--xfr-fs-head-color);
+  font-weight: 700;
+  margin: 0 0 14px;
+  @include breakpoint(large) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.freerolls-fs--subheading {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--xfr-fs-subhead-color);
+}
+// freerolls news
+.freerolls-news {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 24px;
+  z-index: 1;
+  @include breakpoint(large) {
+    padding: 50px 30px 80px;
+  }
+}
+// freerolls article
+.freerolls-article {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  @include breakpoint(large) {
+    padding: 0 30px 24px;
+  }
+}
+.freerolls-article--wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--layer-2a-color, #fff);
+  // override border
+  .article {
+    border-bottom: 0;
+  }
+  //
+}

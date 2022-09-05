@@ -1,0 +1,41 @@
+.plain-text {
+  width: 100%;
+  max-width: 994px;
+  margin: 0 auto;
+  padding: 10px 15px 50px;
+  @include breakpoint(large) {
+    padding: 30px 15px 50px;
+  }
+}
+.plain-text h1 {
+  font-size: 20px;
+  line-height: 25px;
+  color: #202020;
+  margin: 35px 0 25px;
+}
+.plain-text h2 {
+  font-size: 20px;
+  line-height: 25px;
+  color: #202020;
+  margin: 35px 0 25px;
+}
+.plain-text p {
+  overflow-wrap: break-word;
+  font-size: 15px;
+  line-height: 25px;
+  color: #202020;
+  margin: 0 0 14px;
+  word-break: break-word;
+  @include breakpoint(xlarge) {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+.plain-text a {
+  overflow-wrap: break-word;
+  font-weight: 700;
+  color: #202020;
+  text-decoration: underline;
+  word-break: break-word;
+}
+

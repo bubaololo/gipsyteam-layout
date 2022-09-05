@@ -1,0 +1,398 @@
+// GTP page
+.gtp-page {
+  flex-grow: 1;
+  padding: 40px 0 0;
+  background-color: #fbfbfb;
+  background-repeat: repeat;
+  background-image: url(/aimg/rooms/std-background-white.png);
+  &--header {
+    width: 100%;
+    max-width: 1276px;
+    padding: 0 15px;
+    margin: 0 auto 40px;
+  }
+  &--content {
+    position: relative;
+    padding: 25px 15px 40px;
+    margin: 20px auto 0;
+    width: 100%;
+    max-width: 1246px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    @include breakpoint(xlarge) {
+      padding: 25px 30px 40px;
+    }
+  }
+  &--wrap {
+    width: 100%;
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 40px 15px;
+    border: 1px solid #eee;
+    background-color: #fff;
+  }
+}
+//
+.gtp-back {
+  margin: 0 0 30px;
+  a {
+    font-size: 16px;
+    color: #848484;
+    display: inline-block;
+    padding: 2px 0 2px 35px;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: left 50%;
+    background-size: 24px;
+    background-image: url(/aimg/rooms/icon-arrow-back.svg);
+    &:hover {
+      color: #a5a5a5;
+      background-color: transparent;
+    }
+  }
+}
+.gtp-line {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  border-bottom: 2px solid #ccc;
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #333;
+    margin: 0 0 -2px;
+    padding: 0 0 10px;
+    border-bottom: 2px solid #e75113;
+    @include breakpoint(xlarge) {
+      font-size: 32px;
+    }
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #333;
+    padding: 0 0 10px;
+    margin: 0 0 -2px;
+    border-bottom: 2px solid #e75113;
+    @include breakpoint(xlarge) {
+      font-size: 24px;
+    }
+  }
+  &_full {
+    max-width: initial;
+  }
+}
+.gtp-subheader {
+  font-size: 18px;
+  line-height: 1.25;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  @include breakpoint(xlarge) {
+    font-size: 28px;
+  }
+  a {
+    text-decoration: none;
+    color: #e74f12;
+  }
+}
+//
+.gtp-rate {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 476px;
+  margin: 0 auto 30px;
+  padding: 20px 15px;
+  background-color: #ffe;
+  border: 1px solid #f6e7ca;
+  @include breakpoint(xlarge) {
+    margin: 0 auto 50px;
+    padding: 40px 15px;
+  }
+  &--info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #616161;
+    @include breakpoint(xlarge) {
+      font-size: 20px;
+    }
+    &::before {
+      content: '';
+      width: 50px;
+      height: 40px;
+      margin: 0 20px 0 0;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url(/aimg/rooms/deposit-bonus.png);
+    }
+  }
+}
+//
+.gtp-quote {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 20px 15px 35px;
+  background-color: #f5f5f5;
+  @include breakpoint(large) {
+    padding: 20px 35px 35px;
+  }
+  &--heading {
+    font-size: 17px;
+    line-height: 26px;
+    color: #424242;
+    margin: 0 0 24px;
+  }
+  &--list {
+    list-style-type: initial;
+    margin: 0 0 0 20px;
+    font-size: 17px;
+    line-height: 26px;
+    color: #424242;
+    li {
+      margin: 0 0 4px;
+    }
+  }
+}
+//
+.gtp-screen {
+  width: 100%;
+  max-width: 1170px;
+  padding: 20px 0 0;
+  margin: 0 auto 35px;
+  @include breakpoint(large) {
+    padding: 40px 0 0;
+  }
+  &--inner {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    @include breakpoint(large) {
+      padding: 40px 0 60px;
+    }
+  }
+  p {
+    font-size: 17px;
+    line-height: 26px;
+    color: #424242;
+    margin: 0;
+  }
+  a {
+    color: #424242;
+    text-decoration: underline;
+  }
+}
+//
+.gtp-card-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1180px;
+  padding: 35px 0 0;
+  margin: 0 auto 30px;
+}
+.gtp-room {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 285px;
+  margin: 0 5px 10px;
+  padding: 20px 15px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, .05);
+  &--label {
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding: 2px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #ccc;
+  }
+  &--logo {
+    height: 70px;
+    margin: 0 0 10px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    background-image: url(#{$images}/888l.png);
+    @include breakpoint(medium) {
+      height: 80px;
+      margin: 0 0 15px;
+      background-size: 241px;
+    }
+  }
+  &--link {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    margin: 0 0 5px;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      z-index: 1;
+    }
+  }
+  &--bonus {
+    min-height: 50px;
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      color: #757575;
+      margin: 0 0 10px;
+    }
+  }
+}
+//
+.gtp-product-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 30px;
+}
+.gtp-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 285px;
+  margin: 0 5px 10px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  &:nth-child(n+4) {
+    display: none;
+    @include breakpoint(large) {
+      display: flex;
+    }
+  }
+  &--logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    padding: 10px;
+  }
+  &--image {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    padding: 12px 15px 25px;
+    background-color: #fafafa;
+  }
+  &--link {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    margin: 0 0 5px;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      z-index: 1;
+    }
+  }
+  &--price {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    color: #449100;
+    margin: 0 0 14px;
+  }
+  &--bonus {
+    min-height: 50px;
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      color: #757575;
+      margin: 0;
+    }
+  }
+}
+// old support widget
+.rs-support--wraper {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
+.support-allrooms {
+  width: 100%;
+  max-width: 1244px;
+  margin: 24px 0;
+  padding: 20px;
+  padding-bottom: 15px;
+  background-color: #005581;
+  @include breakpoint(medium) {
+    padding: 24px 30px;
+  }
+}
+.support-allrooms h3 {
+  text-align: left;
+  color: #fff;
+  margin: 0 0 16px;
+}
+.support-allrooms a {
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+.supp-link {
+  font-size: 16px;
+  display: inline-block;
+  padding: 5px 25px 5px 35px;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: left 50%;
+  background-size: 28px;
+  &.icon-chat {
+    background-image: url(/aimg/rooms/icon-support-chat.svg);
+  }
+  &.icon-telegram {
+    background-image: url(/aimg/rooms/icon-support-telegram.svg);
+  }
+  &.icon-skype {
+    background-image: url(/aimg/rooms/icon-support-skype.svg);
+  }
+  &.icon-mail {
+    background-image: url(/aimg/rooms/icon-support-mail.svg);
+  }
+}
+//

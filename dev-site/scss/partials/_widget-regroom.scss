@@ -1,0 +1,273 @@
+.widget-regroom {
+  // theme = dark
+  --rgr-color: var(--text-1-color, #000);
+  --rgr-title-color: var(--text-4-color, #808080);
+  --rgr-icon-color: var(--text-1-color, #808080);
+  --rgr-icon-link-color: var(--text-1-color, #000);
+  --rgr-line-color: var(--line-2-color, #e0e0e0);
+  //
+  margin: 40px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.regroom-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 24px;
+  border-radius: 20px 20px 10px 10px;
+  background-image: linear-gradient(10.15deg, #ececec 22.47%, #efefef 78.8%);
+  @include breakpoint(medium) {
+    max-width: 320px;
+  }
+  [theme='dark'] & {
+    background-image: linear-gradient(10.15deg, #1a1a1a 22.47%, #424242 78.8%);
+  }
+  &_accent {
+    background-image: linear-gradient(209.14deg, #ffecde 7.32%, #ffdca8 94.85%);
+    [theme='dark'] & {
+      background-image: linear-gradient(209.14deg, #ffecde 7.32%, #ffdca8 94.85%);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 57px;
+      height: 82px;
+      background-image: url(/nimg/pokerdom_tag.svg);
+      background-repeat: no-repeat;
+      top: -19px;
+      right: -4px;
+    }
+  }
+}
+.regroom-card__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 122px;
+  margin: 0 0 10px;
+  background-repeat: no-repeat;
+  background-size: 100% 122px;
+  background-image: url(/nimg/room_bg_bright.svg);
+  .regroom-card_accent & {
+    background-image: url(/nimg/room_bg_blue.svg);
+  }
+}
+.regroom-card__picture {
+  display: flex;
+  transform: translateY(-5px);
+  img {
+    height: 60px;
+  }
+}
+.regroom-card__picture_dark {
+  display: none;
+  .regroom-card_accent & {
+    display: block;
+  }
+}
+.regroom-card__picture_light {
+  .regroom-card_accent & {
+    display: none;
+  }
+}
+.regroom-card__top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+.regroom-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rgr-line-color);
+  .regroom-card_accent & {
+    border-color: #fed9ad;
+  }
+}
+.regroom-row__title {
+  font-family: $condensed-font;
+  color: var(--rgr-title-color);
+  font-size: 15px;
+  line-height: 20px;
+  .regroom-card_accent & {
+    color: #c98013;
+  }
+}
+.regroom-row__data {
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--rgr-color);
+  gap: 8px;
+  &_rate {
+    gap: 4px;
+  }
+  .regroom-card_accent & {
+    color: #000;
+  }
+}
+.regroom-row__icon {
+  --i-color1: var(--rgr-icon-color);
+  .regroom-card_accent & {
+    --i-color1: #c98013;
+  }
+}
+.regroom-mid {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 0 17px;
+}
+.regroom-mid__item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rgr-line-color);
+  .regroom-card_accent & {
+    border-color: #fed9ad;
+  }
+}
+.regroom-mid__title {
+  font-family: $condensed-font;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--rgr-title-color);
+  margin: 0 0 7px;
+  .regroom-card_accent & {
+    color: #c98013;
+  }
+}
+.regroom-mid__content {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.regroom-mid__text {
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--rgr-color);
+  .regroom-card_accent & {
+    color: #000;
+  }
+}
+.regroom-card__bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  margin: auto 0 0;
+}
+.regroom-card__review {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 9px 0 0;
+  padding: 9px 0;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--rgr-color);
+  // override for article
+  .article-body & {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--rgr-color);
+  }
+  //
+  .regroom-card_accent & {
+    color: #000;
+  }
+}
+.regroom-card__lines {
+  --i-color1: var(--rgr-icon-link-color);
+  .regroom-card_accent & {
+    --i-color1: #000;
+  }
+}
+.regroom-card__button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  border-radius: 3px;
+  background-color: #4f4f4f;
+  padding: 9px 0;
+  .regroom-card_accent & {
+    background-color: #e50c2c;
+  }
+  // override for article
+  .article-body & {
+    color: #fff;
+    text-decoration: none;
+  }
+  //
+}
+.regroom-card__label {
+  font-family: $condensed-font;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--rgr-title-color);
+  width: 100%;
+  margin: 0 0 6px;
+  .regroom-card_accent & {
+    color: #c98013;
+  }
+}
+.regroom-card__copy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 13px;
+  margin: 0 0 9px;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  .regroom-card_accent & {
+    border-color: #fed6a5;
+    background-color: #fef6eb;
+  }
+}
+.regroom-card__code {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+  letter-spacing: 0.1em;
+}
+.regroom-card__click {
+  position: relative;
+  display: flex;
+  font-family: $condensed-font;
+  gap: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #4f4f4f;
+  text-transform: uppercase;
+  // override for article
+  .article-body & {
+    color: #4f4f4f;
+    text-decoration: none;
+  }
+  //
+  .regroom-card_accent & {
+    --i-color1: #e50c2c;
+    color: #e50c2c;
+  }
+  &:active {
+    top: 1px;
+  }
+}

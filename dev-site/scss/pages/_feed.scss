@@ -1,0 +1,320 @@
+// feed page
+.content {
+  &_feed {
+    align-items: center;
+    padding: 55px 24px 56px;
+    background-color: var(--layer-2a-color, #fff);
+    @include breakpoint(xlarge) {
+      padding: 70px 30px 84px;
+    }
+    --x-feed-heading-color: var(--w-text-1-color, #000);
+    --x-feed-menu-color: var(--w-text-7-color, #a8a8a9);
+    --x-feed-menu-icon-color: var(--w-text-7-color, #a8a8a9);
+    --x-feed-line-color: var(--w-line-2-color, #dfe1e4);
+    --x-feed-meta-color: var(--w-text-7-color, #a8a8a9);
+    --x-feed-meta-icon-color: var(--w-text-7-color, #a8a8a9);
+    //
+  }
+}
+//
+.feed-head {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 36px;
+  width: 100%;
+  max-width: 396px;
+  @include breakpoint(large) {
+    max-width: 822px;
+  }
+  @include breakpoint(xlarge) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 56px;
+    max-width: 1246px;
+  }
+}
+.feed-head--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.feed-heading {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+  color: var(--x-feed-heading-color);
+  margin: 0;
+  @include breakpoint(large) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+.feed-head--toggle {
+  --i-color1: var(--x-feed-menu-icon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--x-feed-menu-color);
+  text-align: center;
+  appearance: none;
+  @include breakpoint(large) {
+    font-size: 14px;
+    line-height: 16px;
+    height: 32px;
+  }
+  @include breakpoint(xlarge) {
+    display: none;
+  }
+  &_active {
+    --i-color1: #ec314d;
+    color: #ec314d;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 8px 0 0;
+    flex-shrink: 0;
+  }
+}
+// menu
+.feed-menu {
+  position: relative;
+  display: none;
+  margin: 24px 0 0;
+  overflow-x: auto;
+  // firefox
+  scrollbar-width: none;
+  //
+  -webkit-overflow-scrolling: touch;
+  @include breakpoint(xlarge) {
+    display: flex;
+    margin: 0;
+  }
+  &_active {
+    display: flex;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.feed-menu--item {
+  position: relative;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  color: var(--x-feed-menu-color);
+  padding: 7px 16px 9px;
+  border-radius: 10px;
+  appearance: none;
+  white-space: nowrap;
+  @include breakpoint(large) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &_active {
+    color: #fff;
+    background-color: #ec314d;
+  }
+  &:not(:first-child):not(:last-child) {
+    margin: 0 16px 0 0;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 11px;
+      right: -24px;
+      width: 1px;
+      height: 10px;
+      margin: 0 16px;
+      pointer-events: none;
+      background-color: var(--x-feed-line-color);
+    }
+  }
+  &:first-child {
+    margin: 0 8px 0 0;
+  }
+}
+.feed-filter {
+  display: none;
+  margin: 24px 0 0;
+  @include breakpoint(xlarge) {
+    display: flex;
+    order: 1;
+    margin: 0;
+  }
+  &_active {
+    display: flex;
+  }
+}
+.feed-filter--item {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  color: var(--x-feed-menu-color);
+  padding: 7px 16px 9px;
+  border-radius: 10px;
+  appearance: none;
+  white-space: nowrap;
+  @include breakpoint(large) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &_active {
+    color: #fff;
+    background-color: #ec314d;
+  }
+  &:not(:last-child) {
+    margin: 0 8px 0 0;
+  }
+}
+// grid
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-auto-rows: auto;
+  justify-content: center;
+  gap: 16px 30px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 396px;
+  @include breakpoint(large) {
+    max-width: 822px;
+  }
+  @include breakpoint(xlarge) {
+    max-width: 1246px;
+  }
+}
+.feed-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  &_small {
+    background-color: #eef0f5;
+  }
+}
+.feed-item--image {
+  position: relative;
+  width: 100%;
+  &::before {
+    content: '';
+    display: table;
+    padding-bottom: 57.236%;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+.feed-item--main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  width: 100%;
+  padding: 18px 0 0;
+  @include breakpoint(large) {
+    padding: 22px 0 0;
+  }
+}
+.feed-item--label {
+  font-size: 12px;
+  line-height: 14px;
+  color: #ec314d;
+  margin: 0 0 7px;
+  @include breakpoint(large) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.feed-item--title {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: var(--x-feed-heading-color);
+  margin: 0 0 18px;
+  @include breakpoint(large) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+// meta
+.feed-item--meta {
+  --i-color1: var(--x-feed-meta-icon-color);
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: auto 0 0;
+  border-top: 1px solid var(--x-feed-line-color);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 8px 0 0;
+    flex-shrink: 0;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.feed-item--date,
+.feed-item--view {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--x-feed-meta-color);
+  padding: 15px 0;
+  white-space: nowrap;
+  &::after {
+    content: '';
+    width: 1px;
+    height: 8px;
+    background-color: var(--x-feed-line-color);
+    margin: 0 16px;
+  }
+}
+.feed-item--comment {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--x-feed-meta-color);
+  padding: 15px 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+// pagination wrap
+.feed-bottom {
+  margin: 33px 0 0;
+  width: 100%;
+  max-width: 396px;
+  @include breakpoint(large) {
+    margin: 45px 0 0;
+    max-width: 822px;
+  }
+  @include breakpoint(xlarge) {
+    max-width: 1246px;
+  }
+}

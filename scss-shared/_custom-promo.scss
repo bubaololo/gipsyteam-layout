@@ -1,0 +1,121 @@
+// widget custom promo
+.custom-promo {
+  // theme = dark
+  --custom-promo-bg-color: var(--layer-4-color, #fff);
+  --custom-promo-avatar-border-color: var(--line-2-color, #fff);
+  --custom-promo-avatar-bg-color: var(--promo-avatar-bg-color, #e0e0e0);
+  --custom-promo-text-color: var(--text-4-color, #333);
+  --custom-promo-border-color: var(--promo-border-color, #ccc);
+  //
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 615px;
+  margin: 0 auto 10px;
+  @include breakpoint(large) {
+    max-width: 645px;
+    padding: 0 15px;
+  }
+  @include breakpoint(xlarge) {
+    max-width: 1276px;
+    margin: 10px auto;
+  }
+  // forum fix
+  .app-forum & {
+    max-width: initial;
+    @include breakpoint(large) {
+      max-width: 1276px;
+    }
+  }
+  //
+  &--top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    @include breakpoint(large) {
+      padding: 0 30px;
+    }
+  }
+  &--avatar {
+    width: 44px;
+    height: 44px;
+    border: 3px solid var(--custom-promo-avatar-border-color);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-color: var(--custom-promo-avatar-bg-color);
+    transform: translateY(10px);
+  }
+  &--head {
+    width: 100%;
+    padding: 15px 30px;
+    background-color: #66bb6a;
+  }
+  &--heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &--inner {
+    width: 100%;
+    padding: 0 20px;
+    background-color: var(--custom-promo-bg-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    @include breakpoint(large) {
+      padding: 0 30px;
+    }
+  }
+}
+.pr-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 14px 0;
+  border-bottom: 1px solid transparent;
+  @include breakpoint(xlarge) {
+    grid-template-columns: 110px 1fr 130px;
+    grid-gap: 0 10px;
+  }
+  &:not(:last-child) {
+    border-color: var(--custom-promo-border-color);
+  }
+  &--logo {
+    display: flex;
+    align-items: flex-start;
+    width: 90px;
+    min-height: 35px;
+  }
+  &--slogan {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--custom-promo-text-color);
+    margin: 0 0 13px;
+    @include breakpoint(xlarge) {
+      margin: 0;
+    }
+  }
+  &--date {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--custom-promo-text-color);
+    &::before {
+      content: '';
+      width: 13px;
+      height: 13px;
+      margin: 0 14px 0 0;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url(#{$images}/icon-calendar.svg);
+    }
+  }
+}

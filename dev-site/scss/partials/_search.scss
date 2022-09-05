@@ -1,0 +1,168 @@
+// search page
+.widget-search {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1276px;
+  margin: 0 auto;
+  padding: 0 15px 30px;
+}
+.search-form {
+  // theme = dark
+  --s-form-field-bg-color: var(--layer-2-color, #fff);
+  --s-form-field-color: var(--text-2-color, #000);
+  --s-form-field-border-color: var(--line-1-color, #e0e0e0);
+  --s-form-button-bg-color: var(--layer-4-color, #4f4f4f);
+  //
+  width: 100%;
+  margin: 0 0 20px;
+  &_medium {
+    max-width: 960px;
+  }
+  // SK page
+  &_small {
+    margin: 20px 0 0;
+  }
+  // fantasy results page
+  &_nick {
+    margin: 24px 0 0;
+  }
+}
+.search-field {
+  display: flex;
+  &--input {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    color: var(--s-form-field-color);
+    padding: 8px 12px;
+    border: 1px solid var(--s-form-field-border-color);
+    border-radius: 3px 0 0 3px;
+    background-color: var(--s-form-field-bg-color);
+    // SK page
+    .search-form_small & {
+      padding: 3px 12px;
+    }
+    // fantasy results page
+    .search-form_nick & {
+      padding: 3px 12px;
+    }
+  }
+  &--button {
+    font-size: 16px;
+    line-height: 40px;
+    height: 42px;
+    color: #f2f2f2;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    text-transform: uppercase;
+    padding: 0 20px 0 21px;
+    border: 1px solid var(--s-form-field-border-color);
+    border-left: 0;
+    background-color: var(--s-form-button-bg-color);
+    border-radius: 0 3px 3px 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 19px;
+    background-image: url(#{$images}/search-input-button.svg);
+    @include breakpoint(large) {
+      padding: 0 40px 0 55px;
+      background-position: 30px 50%;
+    }
+    // SK page
+    .search-form_small & {
+      font-size: 14px;
+      line-height: 1;
+      height: 32px;
+      background-size: 15px;
+      @include breakpoint(large) {
+        padding: 0 20px 0 35px;
+        background-position: 15px 50%;
+      }
+    }
+    // fantasy results page
+    .search-form_nick & {
+      font-size: 14px;
+      line-height: 1;
+      height: 32px;
+      background-size: 15px;
+      @include breakpoint(large) {
+        padding: 0 20px 0 35px;
+        background-position: 15px 50%;
+      }
+    }
+  }
+  &--txt {
+    display: none;
+    @include breakpoint(large) {
+      display: inline;
+    }
+  }
+}
+.search-note {
+  font-size: 16px;
+  line-height: 20px;
+  color: #202020;
+}
+.search-filter {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0;
+  &--button {
+    font-size: 14px;
+    line-height: 22px;
+    height: 22px;
+    color: #202020;
+    white-space: nowrap;
+    padding: 0 8px;
+    border-radius: 3px;
+    &:not(:last-child) {
+      margin: 0 5px 0 0;
+    }
+    &.active {
+      color: #fff;
+      background-color: #e50c2c;
+    }
+  }
+}
+//
+.search-pager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 10px;
+}
+.s-pager {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+  max-width: 1246px;
+  li {
+    margin: 0;
+  }
+  &--link {
+    display: flex;
+    font-family: $condensed-font;
+    font-size: 14px;
+    line-height: 20px;
+    color: #202020;
+    padding: 6px 8px;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+    .active & {
+      background-color: #efefef;
+    }
+    span {
+      margin: 0 0 0 5px;
+      color: #909090;
+    }
+  }
+}
+//

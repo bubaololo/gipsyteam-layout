@@ -1,0 +1,329 @@
+.post {
+  .smiley {
+    display: inline-block;
+    vertical-align: middle;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    margin: 0 2px;
+  }
+  .s_blush {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/blush.gif);
+  }
+  .s_blink {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/blink.gif);
+  }
+  .s_huh {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/huh.gif);
+  }
+  .s_sad {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/sad.gif);
+  }
+  .s_ph34r {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/ph34r.gif);
+  }
+  .s_laugh {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/laugh.gif);
+  }
+  .s_ohmy {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/ohmy.gif);
+  }
+  .s_unsure {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/unsure.gif);
+  }
+  .s_sleep {
+    width: 21px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/sleep.gif);
+  }
+  .s_mellow {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/mellow.gif);
+  }
+  .s_wacko {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/wacko.gif);
+  }
+  .s_smile {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/smile.gif);
+  }
+  .s_biggrin {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/biggrin.gif);
+  }
+  .s_rolleyes {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/rolleyes.gif);
+  }
+  .s_wink {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/wink.gif);
+  }
+  .s_angry {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/angry.gif);
+  }
+  .s_tongue {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/tongue.gif);
+  }
+  .s_dry {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/dry.gif);
+  }
+  .s_happy {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/happy.gif);
+  }
+  .s_cool {
+    width: 20px;
+    height: 20px;
+    background-image: url(#{$images}/emoticons/cool.gif);
+  }
+  .s_smirk {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/smirk.gif);
+  }
+  .s_bwahaha {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/bwahaha.gif);
+  }
+  .s_redface {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/redface.gif);
+  }
+  .s_table {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/table.gif);
+  }
+  .s_dull {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/dull.gif);
+  }
+  .s_capt {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/capt.gif);
+  }
+  .s_angrymonkey {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/angrymonkey.gif);
+  }
+  .s_happymonkey {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/happymonkey.gif);
+  }
+  .s_plus1 {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/plus1.gif);
+  }
+  .s_wall {
+    width: 26px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/wall.gif);
+  }
+  .s_pioneer {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/pioneer.gif);
+  }
+  .s_italy {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/italy.gif);
+  }
+  .s_winking {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/winking.gif);
+  }
+  .s_hehe {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/hehe.gif);
+  }
+  .s_lick {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/lick.gif);
+  }
+  .s_doctor {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/doctor.gif);
+  }
+  .s_fish {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/fish.gif);
+  }
+  .s_olen {
+    width: 26px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/olen.gif);
+  }
+  .s_happyspade {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/happyspade.gif);
+  }
+  .s_happyheart {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/happyheart.gif);
+  }
+  .s_happyclub {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/happyclub.gif);
+  }
+  .s_happydiamond {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/happydiamond.gif);
+  }
+  .s_ivey {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/ivey.gif);
+  }
+  .s_destroy {
+    width: 28px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/destroy.gif);
+  }
+  .s_dance {
+    width: 28px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/dance.gif);
+  }
+  .s_dontknow {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/dontknow.gif);
+  }
+  .s_facepalm {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/facepalm.gif);
+  }
+  .s_cry {
+    width: 30px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/cry.gif);
+  }
+  .s_popcorn {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/popcorn.gif);
+  }
+  .s_smoke {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/smoke.gif);
+  }
+  .s_vomit {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/vomit.gif);
+  }
+  .s_wife {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/wife.gif);
+  }
+  .s_rigged {
+    width: 52px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/rigged.gif);
+  }
+  .s_beer {
+    width: 30px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/beer.gif);
+  }
+  .s_clap {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/clap.gif);
+  }
+  .s_bayan {
+    width: 30px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/bayan.gif);
+  }
+  .s_fuuuu {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/fuuuu.gif);
+  }
+  .s_lolu {
+    width: 28px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/lolu.gif);
+  }
+  .s_noway {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/noway.gif);
+  }
+  .s_shark {
+    width: 30px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/shark.gif);
+  }
+  .s_respect {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/respect.gif);
+  }
+  .s_puzzled {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/puzzled.gif);
+  }
+  .s_telefon {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/telefon.gif);
+  }
+  .s_troll {
+    width: 24px;
+    height: 24px;
+    background-image: url(#{$images}/emoticons/troll.gif);
+  }
+}

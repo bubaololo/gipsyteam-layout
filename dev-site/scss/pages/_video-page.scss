@@ -1,0 +1,229 @@
+// video page
+.video-all {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0 20px;
+  @include breakpoint(large) {
+    padding: 25px 15px 20px;
+  }
+  @include breakpoint(xlarge) {
+    padding: 25px 15px 40px;
+    max-width: 100%;
+  }
+}
+.video-all--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 10px 20px;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 402px;
+  @include breakpoint(large) {
+    max-width: 824px;
+  }
+  @include breakpoint(xlarge) {
+    max-width: 1246px;
+  }
+}
+// media video
+.video-element {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.video-element--image {
+  position: relative;
+  width: 100%;
+  padding-bottom: 57.236%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    content: "";
+    background-size: 46px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(#{$images}/stream-play.svg);
+    transform: translate(-50%, -50%);
+  }
+}
+.video-element--head {
+  display: flex;
+  flex-direction: column;
+  // fix
+  flex-grow: 1;
+  align-items: center;
+  padding: 19px 15px;
+  @include breakpoint(large) {
+    padding: 23px 15px 25px;
+  }
+  .media-meta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+}
+.video-element--heading {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin: 0 0 10px;
+  @include breakpoint(large) {
+    margin: 0 0 7px;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    z-index: 1;
+  }
+}
+// content head
+.content-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  @include breakpoint(large) {
+    padding: 0 15px;
+  }
+  &--top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 1246px;
+    padding: 17px 15px 14px;
+    @include breakpoint(large) {
+      padding: 32px 0 18px;
+      border-bottom: 1px solid #ccc;
+    }
+    &_clean {
+      border: 0;
+    }
+  }
+  &--heading {
+    font-family: $noto-font;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #202020;
+    margin: 0 0 10px;
+    width: 100%;
+    @include breakpoint(large) {
+      font-size: 24px;
+      line-height: 29px;
+      margin: 0 20px 6px 0;
+      width: auto;
+    }
+    // registration page
+    &_clean {
+      @include breakpoint(large) {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0 10px 6px 0;
+        width: auto;
+      }
+    }
+  }
+  &--new {
+    font-family: $condensed-font;
+    font-size: 12px;
+    line-height: 16px;
+    color: #909090;
+    text-transform: uppercase;
+    padding: 0 4px;
+    border: 1px solid #e5e5e5;
+  }
+  &--mark {
+    display: flex;
+    font-family: $condensed-font;
+    font-size: 13px;
+    line-height: 18px;
+    color: #404040;
+    text-transform: uppercase;
+    padding: 0 0 0 16px;
+    &::before {
+      position: relative;
+      top: 6px;
+      left: -8px;
+      content: "";
+      height: 4px;
+      width: 4px;
+      background-color: #808080;
+      transform: rotate(-45deg);
+    }
+  }
+  // registration page
+  &--note {
+    display: flex;
+    font-family: $condensed-font;
+    font-size: 13px;
+    line-height: 18px;
+    color: #404040;
+    text-transform: uppercase;
+    padding: 0 0 0 8px;
+    &::before {
+      position: relative;
+      top: 6px;
+      left: -8px;
+      content: "";
+      height: 4px;
+      width: 4px;
+      background-color: #679a13;
+      transform: rotate(-45deg);
+    }
+  }
+  //
+  &--bottom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1246px;
+    padding: 15px;
+    background-color: #efefef;
+    @include breakpoint(large) {
+      padding: 15px 0;
+      background-color: #fafafa;
+    }
+  }
+}
+// content foot
+.content-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto 0 0;
+  @include breakpoint(large) {
+    padding: 0 15px;
+  }
+  &--pager {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 1246px;
+    padding: 10px 15px 30px;
+    @include breakpoint(large) {
+      padding: 20px 0 55px;
+    }
+  }
+}
+// comments
+.comments {
+  padding: 40px 0;
+}

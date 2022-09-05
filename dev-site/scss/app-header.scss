@@ -1,0 +1,14 @@
+// new tmp header/footer only
+// utilities
+@import 'breakpoint';
+@import 'mixin';
+// base
+@import 'settings';
+@import 'standalone-reset';
+//
+@import "header"; // shared
+@import "mobile-menu"; // shared
+@import "main-menu-top"; // shared
+@import "main-menu"; // shared
+@import "footer"; // shared
+//

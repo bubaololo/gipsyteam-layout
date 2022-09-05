@@ -1,0 +1,121 @@
+// custom footer/header reset
+html {
+  #custom-footer,
+  #custom-header {
+    font-size: 100%;
+    box-sizing: border-box;
+    // prevent ios landscape-specific font scale
+    -webkit-text-size-adjust: 100%;
+    // Correct the inability to style clickable types in iOS and Safari
+    [type="button"] {
+      -webkit-appearance: button;
+    }
+  }
+}
+body {
+  #custom-footer,
+  #custom-header {
+    font-family: $body-font-family;
+    font-weight: 400;
+    line-height: $global-lineheight;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    // background-color: var(--site-bg-color, $body-background-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+#custom-footer,
+#custom-header {
+  // Set box-sizing globally to handle padding and border widths
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+  // Remove the inheritance of text transform in Edge, Firefox, and IE
+  button,
+  select {
+    text-transform: none;
+  }
+  // Get rid of gap under images by making them display: inline-block; by default
+  // Grid defaults to get images and embeds to work properly
+  img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  // Make select elements are 100% width by default
+  select {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: $global-radius;
+  }
+  // Reset <button> styles created by most browsers
+  // Remove the default margin: 2px in Safari
+  button {
+    font: inherit;
+    color: inherit;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    margin: 0;
+    cursor: pointer;
+    background: transparent;
+  }
+  p {
+    font-size: inherit;
+    line-height: $paragraph-lineheight;
+    margin-bottom: $paragraph-margin-bottom;
+  }
+  em,
+  i {
+    font-style: italic;
+    line-height: inherit;
+  }
+  // Remove the outline on focused links when they are also active or hovered
+  // in all browsers (opinionated).
+  a {
+    line-height: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    color: $anchor-color;
+    &:active,
+    &:focus,
+    &:hover {
+      outline-width: 0;
+    }
+    img {
+      border: 0;
+    }
+  }
+  dl,
+  ol,
+  ul {
+    line-height: $list-lineheight;
+    margin-bottom: $list-margin-bottom;
+    list-style-position: $list-style-position;
+  }
+  li {
+    font-size: inherit;
+  }
+  ul {
+    margin-left: 0;
+    list-style-type: $list-style-type;
+    ol,
+    ul {
+      margin-bottom: 0;
+      margin-left: 20px;
+    }
+  }
+  ol {
+    margin-left: 0;
+    ol,
+    ul {
+      margin-bottom: 0;
+      margin-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+// support restricted
+.spt-restricted {
+  // theme = dark
+  --spr-bg-color: #eef0f5;
+  --spr-color: #000;
+  --spr-border-color: #dfe1e4;
+  .content_theme & {
+    :root[theme='dark'] & {
+      --spr-bg-color: var(--layer-4-color);
+      --spr-color: var(--text-1-color);
+      --spr-border-color: var(--line-2-color);
+    }
+  }
+  //
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 24px;
+  margin: 20px 0 0;
+  border-radius: 10px;
+  background-color: var(--spr-bg-color);
+  @include breakpoint(xlarge) {
+    padding: 40px 15px 44px;
+  }
+}
+.spt-restricted--inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 730px;
+}
+.spt-restricted--top {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin: 0 0 16px;
+}
+.spt-restricted--logo {
+  display: flex;
+  flex-shrink: 0;
+  align-items: flex-start;
+  width: 60px;
+  height: 60px;
+  margin: 0 16px 0 0;
+}
+.spt-restricted--heading {
+  width: 100%;
+  color: var(--spr-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.spt-restricted--text {
+  padding: 16px 0 0;
+  border-top: 1px dashed var(--spr-border-color);
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--spr-color);
+    margin: 0;
+  }
+}
+

@@ -1,0 +1,84 @@
+// drop menu
+.dropmenu {
+  // theme = dark
+  --dropmenu-bg-color: var(--layer-4-color, #f4f4f4);
+  --dropmenu-icon-bg-color: var(--layer-3-color, #fff);
+  --dropmenu-link-color: var(--text-1-color, #000);
+  --dropmenu-line-color: var(--line-2-color, #e3e3e3);
+  --dropmenu-close-color: var(--line-2-color, #aaa);
+  //
+  display: none;
+  width: 100%;
+  padding: 16px 0;
+  -webkit-tap-highlight-color: transparent;
+  @include breakpoint(xlarge) {
+    display: block;
+  }
+  &--close {
+    position: absolute;
+    display: flex;
+    top: 12px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    padding: 6px;
+    svg {
+      --i-color1: var(--dropmenu-close-color);
+      width: 12px;
+      height: 12px;
+    }
+  }
+  &--inner {
+    display: flex;
+    width: 100%;
+    max-width: 1246px;
+  }
+  &--list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  &--item {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    &:not(:last-child) {
+      border-bottom: 1px solid transparent;
+    }
+    a {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      font-size: 14px;
+      line-height: 19px;
+      color: var(--dropmenu-link-color);
+      padding: 4px 0;
+      &:hover {
+        color: #ec314d;
+      }
+    }
+  }
+}
+.dropmenu--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 16px 0 0;
+  border-radius: 10px;
+  background-color: var(--dropmenu-icon-bg-color);
+  flex-shrink: 0;
+  &_all {
+    svg {
+      [theme='dark'] & {
+        --color1: #fff;
+      }
+    }
+  }
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+//

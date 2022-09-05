@@ -1,0 +1,74 @@
+.pager {
+  --pager-input-color: #202020;
+  --pager-input-active-bg-color: #e50c2c;
+  --pagination-input-active-color: #fff;
+  .comments-list & {
+    // dark theme for comments
+    // theme = dark
+    --pager-input-color: var(--control-1-color, #202020);
+    --pager-input-active-bg-color: var(--pal-gt-accent, #e50c2c);
+    --pagination-input-active-color: var(--text-1-color, #fff);
+    //
+  }
+  .reportage-pager-top &,
+  .reportage-day-pager & {
+    // dark theme for reportage
+    // theme = dark
+    --pager-input-color: var(--control-1-color, #202020);
+    --pager-input-active-bg-color: var(--pal-gt-accent, #e50c2c);
+    --pagination-input-active-color: var(--text-1-color, #fff);
+    //
+  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 5px 0;
+  &_center {
+    justify-content: center;
+  }
+  &_right {
+    margin: 0 0 0 auto;
+  }
+  &_right_mobile {
+    margin: 0 0 0 auto;
+    display: none;
+    @include breakpoint(xlarge) {
+      display: flex;
+    }
+  }
+  &_mobile {
+    margin: 0 0 0 auto;
+    display: flex;
+    @include breakpoint(xlarge) {
+      display: none;
+    }
+  }
+  &--item {
+    font-size: 16px;
+    color: var(--pager-input-color);
+    line-height: 26px;
+    text-align: center;
+    padding: 0 7px;
+    border: 0;
+    border-radius: 3px;
+    &:not(:last-child) {
+      margin: 0 8px 0 0;
+    }
+    &_active {
+      color: var(--pagination-input-active-color);
+      background-color: var(--pager-input-active-bg-color);
+    }
+    &_wide_only {
+      display: none;
+      @include breakpoint(xlarge) {
+        display: block;
+      }
+    }
+  }
+  &_warp_mobile {
+    width: 100%;
+    @include breakpoint(large) {
+      width: auto;
+    }
+  }
+}

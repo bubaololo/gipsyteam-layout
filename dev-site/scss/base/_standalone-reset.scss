@@ -1,0 +1,349 @@
+// 1. Change the font styles in all browsers (opinionated)
+// 2. Remove the margin in Firefox and Safari
+.header input,
+.header optgroup,
+.header select,
+.header textarea,
+.footer input,
+.footer optgroup,
+.footer select,
+.footer textarea {
+  font-family: $base-font-family;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+// Remove the inheritance of text transform in Edge, Firefox, and IE
+.header button,
+.header select,
+.footer button,
+.footer select {
+  text-transform: none;
+}
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video` controls in Android 4
+// 2. Correct the inability to style clickable types in iOS and Safari
+.header [type='reset'],
+.header [type='submit'],
+.header button,
+html .header [type='button'],
+.footer [type='reset'],
+.footer [type='submit'],
+.footer button,
+html .footer [type='button'] {
+  -webkit-appearance: button;
+}
+// Show the overflow in Edge
+.header input,
+.footer input {
+  overflow: visible;
+}
+html .header,
+html .footer {
+  font-size: 100%;
+  box-sizing: border-box;
+  // prevent ios landscape-specific font scale
+  -webkit-text-size-adjust: 100%;
+}
+// Set box-sizing globally to handle padding and border widths
+.header *,
+.header *::after,
+.header *::before,
+.footer *,
+.footer *::after,
+.footer *::before {
+  box-sizing: inherit;
+}
+body .header,
+body .footer {
+  font-family: $body-font-family;
+  font-weight: 400;
+  line-height: $global-lineheight;
+  -webkit-font-smoothing: antialiased;
+}
+// Get rid of gap under images by making them display: inline-block; by default
+// Grid defaults to get images and embeds to work properly
+.header img,
+.footer img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+// Make sure textarea takes on height automatically
+// Remove the default vertical scrollbar in IE
+.header textarea,
+.footer textarea {
+  overflow: auto;
+  height: auto;
+  min-height: 50px;
+  border-radius: $global-radius;
+}
+// Make select elements are 100% width by default
+.header select,
+.footer select {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: $global-radius;
+}
+// Reset <button> styles created by most browsers
+// Remove the default margin: 2px in Safari
+.header button,
+.footer button {
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  &:active {
+    top: 0;
+  }
+}
+.header p,
+.footer p {
+  font-size: inherit;
+  line-height: $paragraph-lineheight;
+  margin-bottom: $paragraph-margin-bottom;
+}
+// Remove the outline on focused links when they are also active or hovered
+// in all browsers (opinionated).
+.header a,
+.footer a {
+  cursor: pointer;
+  text-decoration: none;
+  &:active,
+  &:focus,
+  &:hover {
+    outline-width: 0;
+  }
+  img {
+    border: 0;
+  }
+}
+.header dl,
+.header ol,
+.header ul,
+.footer dl,
+.footer ol,
+.footer ul {
+  line-height: $list-lineheight;
+  margin-bottom: $list-margin-bottom;
+  list-style-position: $list-style-position;
+}
+.header li,
+.footer li {
+  font-size: inherit;
+}
+.header ul,
+.footer ul {
+  margin-left: 0;
+  list-style-type: $list-style-type;
+  z-index: auto;
+  ol,
+  ul {
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+}
+.header ol,
+.footer ol {
+  margin-left: 0;
+  ol,
+  ul {
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+}
+.header figure,
+.footer figure {
+  margin: 0;
+}
+// override for scss/standalone/new-header.scss
+.page-header {
+  .header {
+    display: block;
+    background-color: transparent;
+  }
+}
+// header links hover color
+.header {
+  .submenu-header--item {
+    color: var(--x-header-menu-color);
+  }
+  .header-user--nick {
+    color: var(--x-header-menu-color);
+  }
+  .header-user--link {
+    color: var(--x-header-menu-color);
+  }
+  .submenu-top--item {
+    color: var(--x-header-menu-color);
+  }
+  .menu-top--item_vip {
+    color: #ec314d;
+  }
+  .roommain--link {
+    color: var(--roommenu-link-color);
+  }
+  .mobile-menu--inner {
+    margin: 0;
+    padding: 20px 0 30px;
+  }
+  .mobile-menu--item {
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-user--login {
+    color: #ec314d;
+  }
+  .mobile-submenu--item {
+    color: var(--m-item-color);
+  }
+  .mobile-menu--link {
+    color: var(--m-item-color);
+  }
+  .mobile-menu--link_vip {
+    color: #ec314d;
+  }
+  .promomenu-list {
+    margin: 0;
+    padding: 16px 24px;
+  }
+  .promomenu-list--item {
+    margin: 0;
+  }
+  .room-submenu {
+    margin: 0;
+    padding: 0;
+  }
+  .room-submenu--item {
+    margin: 0;
+  }
+  .allrooms-list {
+    margin: 0;
+    padding: 16px 24px;
+  }
+  .allrooms-list--item {
+    margin: 0;
+  }
+  .allrooms-list--link {
+    color: var(--allrooms-link-color);
+  }
+  .dropmenu--list {
+    margin: 0;
+    padding: 0;
+  }
+  .dropmenu--item {
+    margin: 0;
+  }
+  .roommain--list {
+    margin: 0;
+    padding: 0;
+  }
+  .roommain--item {
+    margin: 0;
+  }
+}
+// new header with wide menu override
+.page-header .header.content {
+  z-index: 5;
+}
+.concept .menu-top.menu-opened {
+  box-shadow: var(--header-shadow, 0 3px #eef0f5);
+}
+//
+.header {
+  .menu-top--section {
+    margin: 0;
+    padding: 0;
+  }
+  @media screen and (min-width: 64em) {
+    .menu-top--section {
+      margin: 0 auto 0 0;
+    }
+  }
+  .menu-top--item {
+    margin: 0;
+  }
+  .menu-top--item:not(:last-child) {
+    margin: 0 0 18px;
+  }
+  @media screen and (min-width: 64em) {
+    .menu-top--item:not(:last-child) {
+      margin: 0 24px 0 0;
+    }
+  }
+  .menu-top--link {
+    color: var(--x-header-menu-color);
+  }
+  .widelist--main {
+    margin: 0;
+  }
+  .widelist--link {
+    color: var(--widemenu-link-color);
+  }
+  .widelist--link_active {
+    color: #ec314d;
+  }
+  .wroom-link-more {
+    color: #ec314d;
+  }
+  .soft-menucard--link {
+    color: var(--softmenu-link-color);
+  }
+  .actions-menucard--heading {
+    color: var(--widemenu-cardhead-color);
+  }
+  .shop-menucard--heading {
+    color: var(--widemenu-cardhead-color);
+  }
+  .gtpl-menucard--heading {
+    color: var(--widemenu-cardhead-color);
+  }
+  .widelist--headlogo {
+    color: var(--widemenu-heading-color);
+  }
+  //
+  .mobile-user--link {
+    color: var(--m-item-color);
+  }
+}
+// footer links hover color
+.footer {
+  .footer-menu--item {
+    color: var(--f-footer-menu-color);
+  }
+  .footer-submenu--item {
+    color: var(--f-footer-menu-color);
+  }
+  .footer-support--item {
+    color: var(--f-footer-menu-color);
+  }
+  .footer-rules--item {
+    color: var(--f-footer-menu-color);
+  }
+  .footer-info--partners {
+    color: var(--f-footer-menu-color);
+  }
+  .footer-info--ads {
+    color: var(--f-footer-menu-color);
+  }
+  .footer-info--vacancy {
+    color: var(--f-footer-menu-color);
+  }
+}
+// menu dropdowns
+.concept {
+  .menu-top {
+    max-width: 1306px;
+    margin: 0 auto;
+    box-shadow: none;
+  }
+  .menu-top--inner {
+    box-shadow: var(--header-shadow, 0 3px #eef0f5);
+    [theme='dark'] & {
+      box-shadow: none;
+    }
+  }
+}
+//

@@ -1,0 +1,99 @@
+// Pont schedule for article
+.artgrid {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  &--item {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) 70px 90px;
+    grid-column-gap: 5px;
+    padding: 9px 0;
+    border-bottom: 1px solid #e0e0e0;
+    @include breakpoint(large) {
+      grid-template-columns: 90px minmax(100px, 1fr) 70px 100px;
+      padding: 12px 0;
+    }
+    &:last-child {
+      border-color: transparent;
+    }
+  }
+  &--head {
+    font-size: 11px;
+    line-height: 16px;
+    color: #757575;
+    text-transform: uppercase;
+    &_wide {
+      display: none;
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+    &_right {
+      text-align: right;
+    }
+  }
+  &--date {
+    display: grid;
+    font-size: 14px;
+    line-height: 20px;
+    color: #757575;
+    @include breakpoint(large) {
+      grid-row-gap: 5px;
+      font-size: 16px;
+    }
+  }
+  &--day {
+    color: #ba9d6e;
+  }
+  &--offer {
+    display: grid;
+    grid-column: span 3;
+    @include breakpoint(large) {
+      grid-row-gap: 5px;
+      grid-column: span 1;
+    }
+  }
+  &--tournament {
+    font-family: $noto-font;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #212121;
+    @include breakpoint(large) {
+      font-size: 17px;
+    }
+  }
+  &--gtd {
+    font-family: $noto-font;
+    font-size: 15px;
+    line-height: 20px;
+    color: #757575;
+    @include breakpoint(large) {
+      font-size: 17px;
+    }
+  }
+  &--format {
+    font-size: 14px;
+    line-height: 20px;
+    color: #212121;
+    grid-row: 1;
+    grid-column: 2;
+    @include breakpoint(large) {
+      grid-column: 3;
+      font-size: 16px;
+    }
+  }
+  &--stack {
+    font-size: 14px;
+    line-height: 20px;
+    color: #212121;
+    text-align: right;
+    grid-row: 1;
+    grid-column: 3;
+    @include breakpoint(large) {
+      grid-column: 4;
+      font-size: 16px;
+    }
+  }
+}
+// !Pont for article

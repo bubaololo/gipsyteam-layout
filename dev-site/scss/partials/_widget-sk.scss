@@ -1,0 +1,138 @@
+// widget sunday kings
+.widget-sk {
+  --w-sk-header-color: #333;
+  --w-sk-nick-color: #202020;
+  --w-sk-line-color: #909090;
+  --w-sk-border-color: #cfcfcf;
+  --w-sk-link-color: #404040;
+  --w-sk-icon: none;
+  .content_theme & {
+    --w-sk-header-color: var(--text-5-color, #333);
+    --w-sk-nick-color: var(--text-3-color, #202020);
+    --w-sk-line-color: var(--line-1-color, #909090);
+    --w-sk-border-color: var(--line-1-color, #cfcfcf);
+    --w-sk-link-color: var(--sidebar-link-color, #404040);
+    --w-sk-icon: var(--icon-5-filter, none);
+  }
+  width: 100%;
+  max-width: 330px;
+  justify-self: center;
+  @include breakpoint(xlarge) {
+    max-width: 1276px;
+    justify-self: stretch;
+  }
+}
+.widget-sk--header {
+  font-family: $condensed-font;
+  font-size: 23px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--w-sk-header-color);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 0 0;
+  //
+  margin: 0 0 18px;
+  @include breakpoint(medium) {
+    padding: 5px 0 0;
+  }
+  @include breakpoint(xlarge) {
+    text-align: left;
+  }
+}
+.widget-sk--inner {
+  display: grid;
+  border-top: 2px solid var(--w-sk-line-color);
+  margin: 0 0 18px;
+  .widget-sk_full & {
+    @include breakpoint(xlarge) {
+      grid-template-columns: minmax(290px, 1fr) minmax(290px, 1fr) minmax(290px, 1fr);
+      grid-gap: 0 20px;
+      border-bottom: 1px solid var(--w-sk-border-color);
+    }
+  }
+}
+.widget-sk--item {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--w-sk-border-color);
+  .widget-sk_full & {
+    @include breakpoint(xlarge) {
+      border-bottom: 0;
+      padding: 14px 0;
+    }
+  }
+}
+.widget-sk--wrap {
+  display: flex;
+  justify-content: center;
+  @include breakpoint(medium) {
+    padding: 0;
+  }
+  @include breakpoint(xlarge) {
+    justify-content: flex-start;
+  }
+}
+.widget-sk--button {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--w-sk-link-color);
+  text-transform: uppercase;
+}
+// grid
+.grid-sk {
+  display: grid;
+  grid-template-columns: 1fr 28px 1fr;
+  grid-gap: 0 10px;
+  line-height: 32px;
+  @include breakpoint(xlarge) {
+    grid-template-columns: 40px 28px 1fr;
+  }
+}
+//
+.grid-sk--limit {
+  grid-column: 1;
+  font-size: 15px;
+  line-height: 32px;
+  color: #909090;
+  text-transform: uppercase;
+  justify-self: end;
+  @include breakpoint(xlarge) {
+    justify-self: start;
+  }
+}
+.grid-sk--icon {
+  grid-column: 2;
+  display: flex;
+}
+.grid-sk--crown {
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 28px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
+  filter: var(--w-sk-icon);
+  &_gold {
+    background-image: url(#{$images}/top-gold.svg);
+  }
+  &_silver {
+    background-image: url(#{$images}/top-silver.svg);
+  }
+  &_bronze {
+    background-image: url(#{$images}/top-bronze.svg);
+  }
+}
+.grid-sk--player {
+  display: flex;
+  grid-column: 3;
+  a {
+    font-family: $condensed-font;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--w-sk-nick-color);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

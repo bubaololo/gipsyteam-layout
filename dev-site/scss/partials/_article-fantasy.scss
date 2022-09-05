@@ -1,0 +1,189 @@
+// article fantasy teams
+.article-fantasy {
+  // theme = dark
+  --fnt-bg-color: var(--layer-3-color, #fafafa);
+  --fnt-border-color: var(--line-1-color, #e0e0e0);
+  --fnt-card-color: var(--text-2-color, #616161);
+  --fnt-label-color: var(--text-3-color, #757575);
+  --fnt-check-border-color: var(--line-2-color, #ccc);
+  --fnt-check-bg-color: var(--layer-2-color, #fff);
+  //
+  margin: 35px 0 50px;
+  @include breakpoint(xlarge) {
+    margin: 35px 0 70px;
+  }
+}
+.article-fantasy--heading {
+  font-family: $noto-font;
+  font-size: 23px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--article-heading-color);
+  margin: 0 0 10px;
+  text-align: center;
+  @include breakpoint(xlarge) {
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0 0 13px;
+  }
+}
+.article-fantasy--note {
+  font-family: $noto-font;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--article-color);
+  margin: 0 0 14px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-align: center;
+  @include breakpoint(xlarge) {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+.article-fantasy--form {
+  width: 100%;
+  margin: 25px 0 0;
+  @include breakpoint(xlarge) {
+    margin: 36px 0 0;
+  }
+}
+.fantasy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px 16px;
+  width: 100%;
+  @include breakpoint(large) {
+    grid-template-columns: repeat(4, minmax(75px, 1fr));
+  }
+  @include breakpoint(xlarge) {
+    grid-template-columns: repeat(6, minmax(145px, 1fr));
+  }
+}
+.fantasy-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fnt-bg-color);
+  grid-column: span 2;
+  @include breakpoint(large) {
+    &:nth-last-child(1) {
+      grid-column: 3 / span 2;
+    }
+  }
+}
+//
+.fantasy-card--head {
+  width: 100%;
+  padding: 16px 15px 12px;
+  border-bottom: 1px solid var(--fnt-border-color);
+}
+.fantasy-card--heading {
+  font-family: $noto-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--fnt-card-color);
+}
+.fantasy-card--main {
+  width: 100%;
+  padding: 28px 15px;
+}
+.fantasy-card--list {
+  .article-fantasy & {
+    margin: 0;
+    list-style-type: none;
+  }
+}
+.fantasy-card--item {
+  .article-fantasy & {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    &:not(:last-child) {
+      margin: 0 0 12px;
+    }
+  }
+  &.disabled {
+    opacity: .5;
+    [theme='dark'] & {
+      opacity: .3;
+    }
+  }
+}
+.fantasy-card--label {
+  position: relative;
+  display: flex;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--fnt-label-color);
+  cursor: pointer;
+}
+.fantasy-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.fantasy-checkbox:checked ~ .fantasy-checkbox--mark::after {
+  display: block;
+}
+.fantasy-checkbox--mark {
+  position: relative;
+  top: 2px;
+  left: 0;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0 8px 0 0;
+  border: 1px solid var(--fnt-check-border-color);
+  background-color: var(--fnt-check-bg-color);
+}
+.fantasy-checkbox--mark::after {
+  display: none;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  transform: rotate(45deg);
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #e51e25;
+}
+.article-fantasy--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 36px 0 0;
+}
+.article-fantasy--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 260px;
+  height: 64px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background-color: #ec314d;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  text-align: center;
+}
+.article-fantasy--alert {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #e51e25;
+  padding: 12px 0 0;
+}
+.fantasy-login {
+  margin: 35px 0 50px;
+  @include breakpoint(xlarge) {
+    margin: 35px 0 70px;
+  }
+}

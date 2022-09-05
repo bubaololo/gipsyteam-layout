@@ -1,0 +1,305 @@
+// widget recommend
+.rec-widget {
+  // theme = dark
+  --rec-stream-header-color: var(--text-5-color, #333);
+  --rec-item-bg-color: var(--layer-3-color, #fff);
+  --rec-heading-color: var(--text-4-color, #000);
+  --rec-subheading-color: var(--text-5-color, #666);
+  //
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 645px;
+  padding: 20px 15px 0 5px;
+  margin: 0 auto 10px;
+  @include breakpoint(xlarge) {
+    padding: 32px 15px 0 5px;
+    max-width: 1276px;
+    margin: 0 auto 37px;
+  }
+}
+.rec-widget--head {
+  display: flex;
+  align-items: center;
+  margin: 0 0 16px;
+  padding: 0 0 0 10px;
+  @include breakpoint(large) {
+    margin: 0 0 20px;
+  }
+}
+.rec-widget--icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin: 0 10px 0 0;
+  --color1: var(--pal-icon-color1, #000);
+}
+.rec-widget--heading {
+  font-family: $condensed-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--rec-stream-header-color);
+  text-transform: uppercase;
+  @include breakpoint(xlarge) {
+    font-size: 18px;
+  }
+}
+.rec-control {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 64px;
+  height: 28px;
+  margin: 0 0 0 auto;
+  @include breakpoint(xlarge) {
+    display: flex;
+  }
+}
+.rec-control--button {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  cursor: pointer;
+  svg {
+    --i-color1: #fff;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    [theme='dark'] & {
+      --i-color1: #606060;
+      --i-color2: #fff;
+    }
+  }
+  &_disabled {
+    cursor: auto;
+    pointer-events: none;
+    opacity: .35;
+  }
+}
+//
+.recommend--container {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  max-width: 1256px;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 10px;
+  overflow: hidden;
+}
+.recommend--row {
+  display: grid;
+  grid-gap: 10px 0;
+  grid-template-columns: 1fr;
+  @include breakpoint(xlarge) {
+    // ff fix
+    grid-gap: 0;
+    //
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition-property: transform;
+    box-sizing: content-box;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.recommend-item {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 32px 20px 20px;
+  background-color: var(--rec-item-bg-color);
+}
+// flag
+.recommend-item--flag {
+  --flag-color1: #43a047;
+  --flag-color2: #247928;
+  display: none;
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  padding: 0 9px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--flag-color1);
+  &::before {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 5px solid var(--flag-color2);
+    border-left: 9px solid transparent;
+    content: '';
+  }
+  &::after {
+    position: absolute;
+    right: -6px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 11px solid var(--flag-color1);
+    border-right: 6px solid transparent;
+    border-bottom: 11px solid var(--flag-color1);
+    content: '';
+  }
+  &_cash {
+    .recommend-item_cash & {
+      display: flex;
+    }
+  }
+  &_mtt {
+    .recommend-item_mtt & {
+      --flag-color1: #ff9800;
+      --flag-color2: #d37e00;
+      display: flex;
+    }
+  }
+  &_cash_mtt {
+    --flag-color1: #a0588e;
+    --flag-color2: #77556e;
+    .recommend-item_cash_mtt & {
+      display: flex;
+    }
+  }
+}
+//
+.recommend-item--grid {
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  gap: 0 16px;
+  width: 100%;
+}
+.recommend-item--inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.recommend-item--logo {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+}
+// Pocarr logo icon
+.recommend-pocarr-icon {
+  --logo-color-1: #242021;
+  [theme='dark'] & {
+    --logo-color-1: #e0e0e0;
+  }
+  display: flex;
+  align-items: flex-start;
+  height: 70px;
+  width: 100px;
+}
+// MVPschool logo icon
+.recommend-mvp-icon {
+  --logo-color-1: #206fe4;
+  --logo-color-2: #1e4e9f;
+  display: flex;
+  align-items: flex-start;
+  height: 70px;
+  width: 100px;
+}
+// SVschool logo icon
+.recommend-sv-icon {
+  display: flex;
+  align-items: flex-start;
+  svg {
+    height: 70px;
+    width: 70px;
+  }
+}
+// mountain team logo icon
+.recommend-mountainteam-icon {
+  height: 56px;
+  max-width: 200px;
+  --logo-color-1: #282828;
+  [theme='dark'] & {
+    --logo-color-1: #e0e0e0;
+  }
+}
+// greenline poker logo icon
+.recommend-greenline-icon {
+  height: 60px;
+  max-width: 200px;
+  --logo-color-1: #282828;
+  --logo-color-2: #149842;
+  [theme='dark'] & {
+    --logo-color-1: #e0e0e0;
+    --logo-color-2: #4abc00;
+  }
+}
+// kot poker logo icon
+.recommend-kot-icon {
+  height: 64px;
+  max-width: 200px;
+  --logo-color-1: #616161;
+  --logo-color-2: #ffc800;
+  [theme='dark'] & {
+    --logo-color-1: #fff;
+  }
+}
+// team a logo icon
+.recommend-teama-icon {
+  height: 70px;
+  max-width: 200px;
+}
+// itc logo icon
+.recommend-itc-icon {
+  height: 70px;
+  max-width: 200px;
+}
+// fiatlab logo icon
+.recommend-fiatlab-icon {
+  height: 64px;
+  max-width: 200px;
+}
+// newage logo icon
+.recommend-newage-icon {
+  height: 64px;
+  max-width: 200px;
+  [theme='dark'] & {
+    --logo-color-1: #e0e0e0;
+  }
+}
+//
+.recommend-item--heading {
+  font-family: $secondary-font;
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: 700;
+  color: var(--rec-heading-color);
+  margin: 0 0 8px;
+  &::after {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+  }
+}
+.recommend-item--subheading {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--rec-subheading-color);
+}
+
+

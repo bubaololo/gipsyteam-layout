@@ -1,0 +1,956 @@
+.referral-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  background-color: #fff;
+}
+// header section
+.referral-header {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 316px 30px 50px;
+  background-color: #fff1bf;
+  background-size: 219px, cover;
+  background-position: 50% 50px, 50%;
+  background-image: url(#{$images}/referral-header-bg1.svg), url(#{$images}/referral-header-bg2.svg);
+  box-shadow: inset 0 8px 10px -5px rgba(0, 0, 0, .12);
+  @include breakpoint(large) {
+    min-height: 565px;
+    padding: 125px 30px 50px;
+    background-size: cover;
+    background-position: initial;
+    background-image: url(#{$images}/referral-header-bg.svg);
+  }
+}
+.referral-header--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1035px;
+  @include breakpoint(large) {
+    align-items: flex-start;
+  }
+}
+.referral-header--heading {
+  font-family: $secondary-font;
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #03172c;
+  margin: 0 0 18px;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 39px;
+    line-height: 1.5;
+    margin: 0 0 24px;
+    text-align: left;
+  }
+}
+.referral-header--inner {
+  width: 100%;
+  max-width: 534px;
+  margin: 0 0 28px;
+  @include breakpoint(large) {
+    margin: 0 0 34px;
+  }
+}
+.referral-header--subheading {
+  font-size: 18px;
+  line-height: 1.3;
+  color: #03172c;
+  margin: 0 0 10px;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 0 0 20px;
+    text-align: left;
+  }
+}
+.referral-header--cta {
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #03172c;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: left;
+  }
+}
+.referral-header--button {
+  font-size: 19px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #fff;
+  padding: 12px 16px;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #e51e25;
+  @include breakpoint(large) {
+    font-size: 22px;
+    padding: 16px 32px;
+  }
+}
+// subheader section
+.referral-subheader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  @include breakpoint(large) {
+    padding: 0 30px;
+  }
+}
+.referral-subheader--wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1035px;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  z-index: 1;
+  @include breakpoint(large) {
+    margin: -40px 0 -100px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, .15);
+  }
+}
+.referral-subheader--top {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 24px 24px;
+  @include breakpoint(large) {
+    padding: 64px 24px 60px;
+  }
+}
+.reftop-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 18px 0;
+  width: 100%;
+  max-width: 820px;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 32px;
+  }
+}
+.reftop-grid--content {
+  display: flex;
+  flex-direction: column;
+}
+.reftop-grid--heading {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #03172c;
+  margin: 0 0 16px;
+  @include breakpoint(large) {
+    font-size: 26px;
+    margin: 0 0 20px;
+  }
+}
+.reftop-grid--text {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #03172c;
+  @include breakpoint(large) {
+    font-size: 20px;
+  }
+}
+.reftop-grid--list {
+  margin: 0;
+  li {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #03172c;
+    margin: 0;
+    @include breakpoint(large) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0 32px;
+      font-size: 20px;
+    }
+    &:not(:last-child) {
+      margin: 0 0 8px;
+      @include breakpoint(large) {
+        margin: 0 0 15px;
+      }
+    }
+    &::before {
+      content: '—';
+      margin: 0 6px 0 0;
+    }
+  }
+}
+.referral-subheader--bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 24px 0 0;
+  padding: 0 24px 30px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #c4c4c4;
+  @include breakpoint(large) {
+    margin: 32px 0 0;
+    padding: 0 24px 54px;
+  }
+}
+.refsub-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  max-width: 268px;
+  margin: 0 0 6px;
+  transform: translateY(-50%);
+  border-top: 2px solid #a2a2a2;
+  border-bottom: 2px solid #a2a2a2;
+  background-color: #f7f7f7;
+  @include breakpoint(large) {
+    max-width: 376px;
+    height: 64px;
+    margin: 0 0 24px;
+  }
+  &--icon {
+    width: 23px;
+    height: 32px;
+    margin: 0 10px 0 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 23px;
+    background-image: url(#{$images}/media-best.svg);
+  }
+  &--text {
+    font-family: $condensed-font;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #03172c;
+    text-transform: uppercase;
+    @include breakpoint(large) {
+      font-size: 23px;
+      line-height: 27px;
+    }
+  }
+}
+.referral-subheader--inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 820px;
+  p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #03172c;
+    margin: 0 0 12px;
+    @include breakpoint(large) {
+      font-size: 20px;
+      margin: 0 0 20px;
+    }
+  }
+}
+// pros section
+.referral-pros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px 24px 40px;
+  background-color: #efefef;
+  @include breakpoint(large) {
+    padding: 190px 30px 90px;
+    background-color: #f9f9f9;
+  }
+  h2 {
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #03172c;
+    text-align: center;
+    margin: 0 0 26px;
+    @include breakpoint(large) {
+      font-size: 32px;
+      line-height: 1.5;
+      margin: 0 0 32px;
+    }
+  }
+}
+.referral-pros--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px 0;
+  width: 100%;
+  max-width: 1246px;
+  @include breakpoint(large) {
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  @include breakpoint(xxlarge) {
+    gap: 0 20px;
+    grid-template-columns: repeat(3, minmax(290px, 1fr));
+  }
+}
+.referral-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px 32px;
+  margin: 30px 0 0;
+  border-radius: 5px;
+  background-color: #fff;
+  @include breakpoint(large) {
+    padding: 68px 24px 70px;
+    margin: 48px 0 0;
+    grid-column: span 2;
+    &:nth-last-child(1) {
+      grid-column: 2 / span 2;
+    }
+  }
+  @include breakpoint(xxlarge) {
+    grid-column: span 1;
+    &:nth-last-child(1) {
+      grid-column: auto / span 1;
+    }
+  }
+}
+.referral-item--head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -30px;
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: #e51e25;
+  @include breakpoint(large) {
+    width: 96px;
+    height: 96px;
+    top: -48px;
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    @include breakpoint(large) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+.referral-item--heading {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #03172c;
+  text-align: center;
+  max-width: 264px;
+  margin: 0 0 12px;
+  @include breakpoint(large) {
+    font-size: 22px;
+    max-width: 306px;
+  }
+}
+.referral-item--content {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #03172c;
+  text-align: center;
+  max-width: 264px;
+  @include breakpoint(large) {
+    font-size: 18px;
+    max-width: 306px;
+  }
+}
+// profit section
+.referral-profit {
+  padding: 40px 24px 0;
+  width: 100%;
+  background-color: #fff;
+  @include breakpoint(large) {
+    padding: 70px 30px 0;
+  }
+  h2 {
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #03172c;
+    text-align: center;
+    margin: 0 0 24px;
+    @include breakpoint(large) {
+      font-size: 32px;
+      line-height: 1.5;
+      margin: 0 0 42px;
+    }
+  }
+}
+.referral-profit--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 18px 0;
+  width: 100%;
+  margin: 0 0 24px;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 22px;
+    margin: 0 0 32px;
+  }
+}
+.refprofit-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #c7c7c7;
+  @include breakpoint(large) {
+    border-radius: 10px;
+  }
+}
+.refprofit-card--top {
+  padding: 24px;
+  background-color: #fff;
+  @include breakpoint(large) {
+    min-height: 314px;
+    padding: 34px 30px;
+  }
+}
+.refprofit-card--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  grid-gap: 14px 0;
+  width: 100%;
+  margin: 0 0 34px;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 18px;
+    margin: 0 0 40px;
+  }
+}
+.refprofit-card--player {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  @include breakpoint(large) {
+    padding: 0 6px 0 0;
+    border-right: 1px solid #e4e3e3;
+  }
+}
+.refprofit-card--avatar {
+  width: 76px;
+  height: 76px;
+  margin: 0 16px 0 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  svg {
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+  }
+}
+.refprofit-card--name {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #03172c;
+}
+.refprofit-card--list {
+  margin: 0;
+  li {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #03172c;
+    margin: 0;
+    &::before {
+      content: '';
+      display: inline-flex;
+      width: 13px;
+      height: 13px;
+      margin: 0 8px 0 0;
+      transform: translateY(1px);
+      background-image: url('data:image/svg+xml,%3Csvg width=\'13\' height=\'13\' viewBox=\'0 0 13 13\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M6.16265 12.5C2.84936 12.5 0.163574 9.8138 0.163574 6.5C0.163574 3.1862 2.84936 0.5 6.16265 0.5C9.47593 0.5 12.1617 3.1862 12.1617 6.5C12.1617 9.8138 9.47593 12.5 6.16265 12.5ZM5.56454 8.9L9.80588 4.6574L8.95761 3.809L5.56454 7.2032L3.8674 5.5058L3.01913 6.3542L5.56454 8.9Z\' fill=\'%2303172C\'/%3E%3C/svg%3E');
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 13px;
+      flex-shrink: 0;
+    }
+  }
+  a {
+    color: #03172c;
+    text-decoration: underline;
+  }
+}
+//
+.refprofit-card--content {
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #03172c;
+    margin: 0 0 10px;
+    @include breakpoint(large) {
+      font-size: 18px;
+    }
+  }
+}
+.refprofit-card--bottom {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 24px;
+  background-image: linear-gradient(209deg, #fffbec 7.32%, #ffeaa2 94.85%);
+  @include breakpoint(large) {
+    padding: 30px;
+  }
+}
+.refprofit-result {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 0 16px;
+  margin: 0 0 7px;
+}
+.refprofit-result--text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #03172c;
+  @include breakpoint(large) {
+    font-size: 18px;
+  }
+}
+.refprofit-result--data {
+  align-self: end;
+  justify-self: end;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #03172c;
+  white-space: nowrap;
+  @include breakpoint(large) {
+    font-size: 18px;
+  }
+}
+.referral-profit--note {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #03172c;
+  @include breakpoint(large) {
+    font-size: 16px;
+  }
+}
+// contacts section
+.referral-contacts {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: calc(50% - 170px);
+    width: 100%;
+    max-width: 340px;
+    height: 203px;
+    background-repeat: no-repeat;
+    background-size: 340px;
+    background-position: 50%;
+    background-image: url(#{$images}/referral-main-bg.svg);
+    @include breakpoint(xlarge) {
+      top: 28px;
+      left: 0;
+      max-width: 1225px;
+      height: 769px;
+      background-size: 1225px;
+      background-image: url(#{$images}/referral-main-bg2.svg);
+    }
+  }
+}
+.referral-contacts--top {
+  min-height: 138px;
+  position: relative;
+  @include breakpoint(xlarge) {
+    min-height: 320px;
+  }
+}
+.referral-contacts--main {
+  padding: 85px 24px 40px;
+  background-color: #fff1bf;
+  background-image: url(#{$images}/referral-contacts-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include breakpoint(large) {
+    padding: 95px 24px 28px;
+  }
+}
+.referral-contacts--wrap {
+  display: flex;
+  width: 100%;
+  max-width: 1090px;
+  justify-content: center;
+  @include breakpoint(xlarge) {
+    justify-content: flex-end;
+  }
+}
+.referral-contacts--inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  z-index: 1;
+}
+.referral-contacts--heading {
+  font-family: $secondary-font;
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #03172c;
+  margin: 0 0 20px;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 35px;
+    margin: 0 0 24px;
+  }
+  @include breakpoint(xlarge) {
+    text-align: left;
+  }
+}
+.referral-contacts--subheading {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #03172c;
+  margin: 0 0 24px;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 21px;
+    margin: 0 0 30px;
+  }
+  @include breakpoint(xlarge) {
+    text-align: left;
+  }
+  strong {
+    color: #e51e25;
+  }
+}
+.referral-contacts--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 144px);
+  grid-gap: 8px;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 24px;
+  @include breakpoint(large) {
+    margin: 0 0 38px;
+  }
+}
+.referral-contacts--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #03172c;
+  svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 12px 0 0;
+    flex-shrink: 0;
+  }
+}
+.referral-contacts--note {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #03172c;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 16px;
+  }
+  @include breakpoint(xlarge) {
+    text-align: left;
+  }
+}
+// payments section
+.referral-payments {
+  padding: 40px 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  @include breakpoint(large) {
+    padding: 70px 30px;
+  }
+  h2 {
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #03172c;
+    text-align: center;
+    margin: 0 0 16px;
+    @include breakpoint(large) {
+      font-size: 32px;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+}
+.referral-payments--note {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #03172c;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 18px;
+    margin: 0;
+  }
+}
+.referral-payments--wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 312px;
+  margin: 16px 0 0;
+  justify-content: center;
+  @include breakpoint(large) {
+    max-width: 822px;
+    margin: 72px 0 0;
+  }
+}
+.referral-payments--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px 8px;
+  width: 100%;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
+    margin: 0;
+  }
+  &_top {
+    margin: 0 0 16px;
+    @include breakpoint(large) {
+      margin: 0;
+      &::after {
+        content: '';
+        display: block;
+        grid-column: 1 / -1;
+        width: 100%;
+        height: 1px;
+        margin: 26px 0;
+        background-color: #e9e9e9;
+      }
+    }
+  }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 202px;
+    width: 100%;
+    height: 53px;
+    @include breakpoint(large) {
+      &:not(:last-child) {
+        border-right: 1px solid #e9e9e9;
+      }
+    }
+    img {
+      max-width: 150px;
+      max-height: 38px;
+    }
+  }
+}
+// rooms section
+.referral-rooms {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 24px;
+  background-color: #f9f9f9;
+  @include breakpoint(large) {
+    padding: 70px 30px;
+  }
+  h2 {
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #03172c;
+    text-align: center;
+    margin: 0 0 18px;
+    @include breakpoint(large) {
+      font-size: 32px;
+      line-height: 1.5;
+      margin: 0 0 42px;
+    }
+  }
+}
+.referral-rooms--wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px 0;
+  width: 100%;
+  padding: 0 0 0 10px;
+}
+.referral-rooms--item {
+  min-height: 118px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 116px 1fr;
+  border-radius: 4px;
+  border: 1px solid #c7c7c7;
+  @include breakpoint(large) {
+    grid-template-columns: 228px 1fr;
+    grid-template-rows: auto;
+    border-radius: 0;
+  }
+}
+.referral-rooms--head {
+  position: relative;
+  background-color: #03172c;
+  padding: 24px 16px 0;
+  border-radius: 4px 4px 0 0;
+  @include breakpoint(large) {
+    padding: 24px 16px 0 64px;
+    border-radius: 0;
+  }
+}
+.referral-rooms--flag {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  padding: 0 10px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #e51e25;
+  .referral-rooms--item_flag & {
+    display: flex;
+  }
+  &::before {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 5px solid #7b2d30;
+    border-left: 9px solid transparent;
+    content: '';
+  }
+  &::after {
+    position: absolute;
+    right: -6px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-top: 11px solid #e51e25;
+    border-right: 6px solid transparent;
+    border-bottom: 11px solid #e51e25;
+    content: '';
+  }
+}
+.referral-rooms--share {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  @include breakpoint(large) {
+    text-align: left;
+  }
+  span {
+    font-size: 39px;
+  }
+}
+.referral-rooms--rake {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e51e25;
+  @include breakpoint(large) {
+    text-align: left;
+  }
+}
+.referral-rooms--content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 32px 16px;
+  border-radius: 0 0 4px 4px;
+  background-color: #fff;
+  @include breakpoint(large) {
+    flex-direction: row;
+    padding: 0 16px 0 40px;
+    border-radius: 0;
+    &::after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 16px;
+      width: 48px;
+      height: 100%;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, .1), #fff 75%);
+    }
+  }
+}
+.referral-rooms--list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  @include breakpoint(large) {
+    flex-direction: row;
+    overflow: hidden;
+  }
+  li {
+    margin: 0;
+    @include breakpoint(large) {
+      flex-shrink: 0;
+    }
+    &:not(:last-child) {
+      margin: 0 0 24px;
+      @include breakpoint(large) {
+        margin: 0 45px 0 0;
+      }
+    }
+  }
+  img {
+    width: auto;
+    height: 100%;
+    max-height: 50px;
+  }
+}

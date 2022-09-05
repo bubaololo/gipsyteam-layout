@@ -1,0 +1,173 @@
+// profile rake
+.subnote {
+  font-size: 14px;
+  line-height: 18px;
+  color: #404040;
+  max-width: 910px;
+  margin: 10px 0;
+  padding: 9px 15px;
+  border: 1px solid #dedede;
+  background-color: #fffdf0;
+}
+//
+.rakedata {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1246px;
+  &--head {
+    max-width: 910px;
+    padding: 0 15px;
+    margin: 0 0 10px;
+    @include breakpoint(xlarge) {
+      padding: 0;
+    }
+  }
+  &--nick {
+    font-size: 15px;
+    color: #202020;
+    line-height: 20px;
+    padding: 4px 0;
+  }
+  &--bottom {
+    display: flex;
+    padding: 15px;
+    max-width: 910px;
+    @include breakpoint(xlarge) {
+      padding: 15px 0;
+    }
+  }
+}
+.rakedata-form {
+  display: flex;
+  flex-wrap: wrap;
+  &--room {
+    padding: 4px 0;
+    margin: 0 10px 0 0;
+  }
+  &--date {
+    padding: 4px 0;
+    margin: 0 10px 0 0;
+  }
+  &--button {
+    padding: 4px 0;
+    width: 100%;
+    @include breakpoint(large) {
+      width: auto;
+    }
+  }
+}
+.rakedata-form--input {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #606060;
+  height: 32px;
+  padding: 0 15px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+// rake head
+.profile-selector {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 30px;
+  height: 32px;
+  width: 150px;
+  padding: 0 10px;
+  color: #202020;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  background-size: 10px;
+  background-image: url(#{$images}/search-angle.svg);
+  background-origin: content-box;
+  -webkit-appearance: none; // selector reset
+  -moz-appearance: none;
+  &_middle {
+    width: 200px;
+  }
+}
+// rake table grid
+.rakegrid {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 15px 28px;
+  max-width: 910px;
+  background-color: #fff;
+  @include breakpoint(xlarge) {
+    padding: 12px 30px 28px;
+  }
+  &--item {
+    display: grid;
+    grid-template-columns: 80px minmax(64px, 1fr) minmax(66px, 1fr) minmax(40px, 1fr);
+    grid-gap: 0 5px;
+    padding: 9px 0;
+    border-bottom: 1px solid #ccc;
+    .rakegrid_wide & {
+      &:last-child {
+        border-color: transparent;
+      }
+    }
+  }
+  &--head {
+    font-size: 11px;
+    line-height: 18px;
+    color: #909090;
+    text-transform: uppercase;
+    &_right {
+      text-align: right;
+    }
+  }
+  &--date {
+    font-size: 15px;
+    line-height: 18px;
+    color: #606060;
+    @include breakpoint(large) {
+      margin: 0;
+    }
+    &_sum {
+      font-family: $condensed-font;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  &--rake {
+    font-family: $condensed-font;
+    font-size: 18px;
+    line-height: 18px;
+    color: #202020;
+    text-align: right;
+    &_sum {
+      font-weight: 700;
+    }
+  }
+  &--rakeback {
+    font-family: $condensed-font;
+    font-size: 18px;
+    line-height: 18px;
+    color: #649213;
+    text-align: right;
+    &_sum {
+      font-weight: 700;
+    }
+  }
+  &--gtp {
+    font-family: $condensed-font;
+    font-size: 18px;
+    line-height: 18px;
+    color: #529410;
+    text-align: right;
+    &_sum {
+      font-weight: 700;
+    }
+  }
+}

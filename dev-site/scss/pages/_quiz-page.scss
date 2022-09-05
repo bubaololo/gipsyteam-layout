@@ -1,0 +1,29 @@
+.article-quiz {
+  background-color: #333;
+  padding: 0;
+  @include breakpoint(large) {
+    padding: 30px 10%;
+  }
+  &_pattern4 {
+    background-size: 488px;
+    background-image: url(/temp/quiz/wsop-bracelet-pattern.jpg);
+    @include retina {
+      background-image: url(/temp/quiz/wsop-bracelet-pattern@2x.jpg);
+    }
+  }
+}
+.article-quiz--inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // keep article width 994
+  max-width: 1044px;
+  background-color: #fff;
+  padding: 25px 15px 40px;
+  @include breakpoint(large) {
+    padding: 25px 25px 40px;
+  }
+}
+.quiz-container {
+  margin: 0 0 30px;
+}

@@ -1,0 +1,57 @@
+// widget middle banner
+.widget-mb {
+  @include breakpoint(xlarge) {
+    max-width: $global-width;
+  }
+}
+.widget-mb--header {
+  font-family: $condensed-font;
+  font-size: 23px;
+  line-height: 1;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  // for 1 column layout
+  padding: 5px 0 0 16px;
+  margin: 0 0 18px;
+  @include breakpoint(medium) {
+    padding: 5px 0 0;
+  }
+}
+.widget-mb--heading {
+  position: relative;
+  font-family: $condensed-font;
+  font-size: 23px;
+  line-height: 1;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  &::after {
+    position: absolute;
+    top: 6px;
+    right: -16px;
+    width: 10px;
+    height: 14px;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 10px;
+    background-image: url(#{$images}/arrow-right-short.svg);
+  }
+}
+.widget-mb--inner {
+  display: grid;
+  grid-template-columns: minmax(290px, 1fr);
+}
+.widget-mb--item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  justify-self: center;
+  max-width: 402px;
+}
+.widget-mb--link {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}

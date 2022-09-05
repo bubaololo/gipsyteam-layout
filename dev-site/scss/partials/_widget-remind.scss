@@ -1,0 +1,96 @@
+// widget remind
+.widget-remind {
+  // theme = dark
+  --rm-bg-color: var(--layer-3-color, #fff);
+  --rm-heading-color: var(--text-2-color, #000);
+  //
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 615px;
+  padding: 20px 0 0;
+  margin: 0 auto 32px;
+  @include breakpoint(xlarge) {
+    max-width: 1276px;
+    padding: 20px 15px 0;
+  }
+}
+.widget-remind--grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px 0;
+  align-items: center;
+  width: 100%;
+  padding: 11px 11px 20px 17px;
+  border-left: 3px solid #e31f26;
+  background-color: var(--rm-bg-color);
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr auto;
+    grid-gap: 0 20px;
+    padding: 11px 11px 11px 17px;
+  }
+  @include breakpoint(large) {
+    padding: 11px 11px 11px 22px;
+  }
+  @include breakpoint(xlarge) {
+    padding: 11px 11px 11px 31px;
+  }
+}
+.widget-remind--content {
+  display: flex;
+  flex-direction: column;
+}
+.widget-remind--tag {
+  font-size: 12px;
+  line-height: 14px;
+  color: #e31f26;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+.widget-remind--heading {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--rm-heading-color);
+  @include breakpoint(xlarge) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+.widget-remind--picture {
+  position: relative;
+  width: 210px;
+  min-height: 98px;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.widget-remind--chips {
+  --i-color1: #252525;
+  --i-color2: #fff;
+  --i-color3: #e31f26;
+  max-width: 77px;
+  height: 66px;
+  flex-shrink: 0;
+  margin: 0 24px 0 0;
+  [theme='dark'] & {
+    --i-color1: #e0e0e0;
+    --i-color2: var(--rm-bg-color);
+  }
+}

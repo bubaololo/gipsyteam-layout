@@ -1,0 +1,42 @@
+// button show more
+.media-more {
+  --x-main-more-color: #202020;
+  --x-main-more-line-color: #d3d3d3;
+  .content_theme & {
+    --x-main-more-color: var(--text-2-color, #202020);
+    --x-main-more-line-color: var(--line-2-color, #d3d3d3);
+  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto 0;
+  width: 100%;
+  max-width: 615px;
+  @include breakpoint(xlarge) {
+    max-width: 1246px;
+  }
+  &::before,
+  &::after {
+    flex-grow: 1;
+    height: 1px;
+    content: '';
+    background-color: var(--x-main-more-line-color);
+    top: 0;
+  }
+  .media-top & {
+    // fix for media-top buttom padding
+    margin: 25px auto 10px;
+    @include breakpoint(xlarge) {
+      margin: 25px auto 30px;
+    }
+  }
+}
+.media-more--show {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--x-main-more-color);
+  padding: 0 20px;
+  text-transform: uppercase;
+}

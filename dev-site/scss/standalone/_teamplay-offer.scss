@@ -1,0 +1,113 @@
+.teamplay-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 65px 15px 75px;
+  background-color: #fff;
+  &_dark {
+    background-color: #f3f3f3;
+  }
+  &_sv {
+    background-color: #1e1e21;
+  }
+  &_mvp {
+    background-color: #1e1e21;
+  }
+  &_pocarr {
+    background-color: #242a3b;
+  }
+  &_fiatlab {
+    background-color: #1e1e21;
+  }
+  &_new-age {
+    background-color: #21191f;
+  }
+  h2 {
+    font-family: $secondary-font;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--theme-tmpl-color-1, #333);
+    margin: 0 0 50px;
+    text-align: center;
+    @include breakpoint(large) {
+      font-size: 36px;
+      margin: 0 0 65px;
+    }
+  }
+}
+.teamplay-offer--list {
+  width: 100%;
+  max-width: 704px;
+  margin: 0;
+  &_multi {
+    margin: 0 0 65px;
+  }
+  li {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    padding: 0 0 0 20px;
+    @include breakpoint(large) {
+      font-size: 18px;
+      line-height: 26px;
+      padding: 0 0 0 40px;
+    }
+    &:not(:last-child) {
+      margin: 0 0 24px;
+      @include breakpoint(large) {
+        margin: 0 0 26px;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--theme-tmpl-color-3, #9e9e9e);
+      @include breakpoint(large) {
+        top: 8px;
+      }
+    }
+    .teamplay-wrap_sv & {
+      color: #c6c6c6;
+    }
+    .teamplay-wrap_mvp & {
+      color: #c6c6c6;
+    }
+    .teamplay-wrap_pocarr & {
+      color: #c6c6c6;
+    }
+    .teamplay-wrap_fiatlab & {
+      color: #c6c6c6;
+    }
+    .teamplay-wrap_new-age & {
+      color: #c6c6c6;
+    }
+  }
+}
+.teamplay-offer--color {
+  color: var(--theme-tmpl-color-2, #333);
+}
+.teamplay-offer--note {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #c6c6c6;
+  margin: 24px 0;
+  width: 100%;
+  max-width: 704px;
+}
+// subnote
+.teamplay-subnote {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0 0 24px;
+  width: 100%;
+  max-width: 566px;
+  text-align: center;
+}

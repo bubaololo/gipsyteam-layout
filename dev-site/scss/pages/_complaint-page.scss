@@ -1,0 +1,70 @@
+// complaint message to moderator
+.remark-note {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &_complaint {
+    margin: 0 0 10px;
+  }
+}
+.remark-note--inner {
+  padding: 20px 15px;
+  border: 1px solid #dedede;
+  background-color: #fffdf0;
+}
+.remark-note--wrap {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 10px;
+  padding: 0 0 15px;
+  border-bottom: 1px solid #e5e5e5;
+  &::before {
+    position: absolute;
+    bottom: -5px;
+    left: 160px;
+    width: 10px;
+    height: 10px;
+    content: "";
+    border: solid #e5e5e5;
+    border-width: 1px 0 0 1px;
+    background-color: #fffdee;
+    transform: rotate(45deg);
+  }
+}
+.remark-note--heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #616161;
+}
+.remark-note--subheading {
+  font-size: 18px;
+  color: #000;
+  margin: 0 0 10px;
+}
+.remark-note--list {
+  margin: 0;
+  list-style: disc;
+  list-style-position: inside;
+}
+.remark-note--item {
+  font-size: 14px;
+  color: #616161;
+  margin: 0 0 5px;
+}
+//
+.complaint-text {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  color: #333;
+  width: 100%;
+  height: 160px;
+  padding: 10px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  resize: vertical;
+  border: 1px solid #ccc;
+  vertical-align: bottom;
+  background-color: #fff;
+}

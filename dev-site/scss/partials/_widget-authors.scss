@@ -1,0 +1,61 @@
+// widget authors
+.widget-authors {
+  // theme = dark
+  --wau-name-color: var(--text-2-color, #000);
+  --wau-color: var(--text-5-color, #808080);
+  //
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 55px;
+  padding: 18px 0 0;
+  // center in quiz
+  .article-quiz & {
+    justify-content: center;
+  }
+  //
+}
+.widget-authors--item {
+  display: inline-flex;
+  gap: 0 10px;
+  flex-shrink: 0;
+  // override
+  .article--lead & {
+    .article--inner & {
+      text-decoration: none;
+    }
+  }
+  .article-lead & {
+    .article--inner & {
+      text-decoration: none;
+    }
+  }
+  //
+}
+.widget-authors--avatar {
+  overflow: hidden;
+  display: flex;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  img {
+    border-radius: 50%;
+  }
+}
+.widget-authors--data {
+  display: flex;
+  flex-direction: column;
+}
+.widget-authors--name {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  margin: 0 0 3px;
+  color: var(--wau-name-color);
+  text-align: left;
+}
+.widget-authors--tag {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--wau-color);
+  text-align: left;
+}

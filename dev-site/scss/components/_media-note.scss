@@ -1,0 +1,77 @@
+// media note
+.media-note {
+  --m-note-bg-color: #fff;
+  --m-note-color: #000;
+  --m-note-border-color: #dfd6d4;
+  --m-note-line-color: #e2e2e2;
+  .content_theme & {
+    --m-note-bg-color: var(--layer-3-color, #fff);
+    --m-note-color: var(--text-2-color, #000);
+    --m-note-border-color: var(--line-1-color, #dfd6d4);
+    --m-note-line-color: var(--layer-2-color, #e2e2e2);
+  }
+  display: flex;
+  width: 100%;
+  max-width: 615px;
+  margin: 10px auto 0;
+  @include breakpoint(large) {
+    max-width: 645px;
+    padding: 0 15px;
+  }
+  @include breakpoint(xlarge) {
+    max-width: 1276px;
+    margin: 20px auto 0;
+  }
+  &--inner {
+    position: relative;
+    width: 100%;
+    padding: 15px 15px 15px 28px;
+    border: 1px solid var(--m-note-border-color);
+    background-color: var(--m-note-bg-color);
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      content: '';
+      border-right: 1px solid var(--m-note-border-color);
+      background-color: var(--m-note-line-color);
+    }
+    a {
+      &::after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        display: inline-flex;
+        margin: 0 0 0 8px;
+        background-repeat: no-repeat;
+        background-image: url(#{$images}/note-link.svg);
+      }
+    }
+  }
+  &--date {
+    position: relative;
+    top: -1px;
+    margin: 0 14px 0 0;
+    font-size: 13px;
+    color: #e50c2c;
+    text-transform: uppercase;
+  }
+  &--message {
+    font-family: $secondary-font;
+    font-size: 18px;
+    line-height: 1.25;
+    color: var(--m-note-color);
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      z-index: 1;
+    }
+  }
+}
+

@@ -1,0 +1,367 @@
+// profile widget rate
+.feedback-new {
+  background-color: #fff;
+  &--header {
+    width: 100%;
+    max-width: 1246px;
+    padding: 24px 15px 10px;
+    @include breakpoint(xlarge) {
+      padding: 24px 30px 10px;
+    }
+  }
+  &--heading {
+    font-size: 16px;
+    line-height: 17px;
+    color: #696969;
+  }
+  &--wrap {
+    display: flex;
+    padding: 4px 15px 25px;
+    @include breakpoint(xlarge) {
+      padding: 4px 30px 25px;
+    }
+  }
+  &--button {
+    font-size: 12px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #fff;
+    height: 32px;
+    padding: 0 20px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 3px;
+    background-color: #000;
+  }
+}
+//
+.feedback-edit {
+  padding: 0 0 25px;
+  background-color: #fff;
+  &--inner {
+    width: 100%;
+    max-width: 1246px;
+    padding: 4px 15px 17px 10px;
+  }
+  &--wrap {
+    display: flex;
+    padding: 0 15px;
+    @include breakpoint(xlarge) {
+      padding: 0 30px;
+    }
+  }
+  &--button {
+    font-size: 12px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #fff;
+    height: 32px;
+    padding: 0 20px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 3px;
+    background-color: #000;
+  }
+}
+//
+.widget-rate {
+  width: 100%;
+  max-width: 1246px;
+  &_staking {
+    margin: 0 0 20px;
+  }
+  &--header {
+    width: 100%;
+    max-width: 1246px;
+    padding: 24px 15px 10px;
+    background-color: #fff;
+    @include breakpoint(xlarge) {
+      padding: 24px 30px 10px;
+    }
+  }
+  &--heading {
+    font-size: 16px;
+    line-height: 17px;
+    color: #696969;
+  }
+  &--inner {
+    padding: 0 15px 25px;
+    background-color: #fff;
+    @include breakpoint(xlarge) {
+      padding: 0 30px 25px;
+    }
+  }
+  &--subheader {
+    font-size: 15px;
+    line-height: 20px;
+    color: #202020;
+    margin: 0 0 8px;
+  }
+  &--note {
+    font-size: 12px;
+    line-height: 16px;
+    color: #909090;
+  }
+  &--link {
+    font-size: 12px;
+    line-height: 16px;
+    color: #909090;
+    a {
+      font-size: 12px;
+      line-height: 16px;
+      color: #909090;
+      text-decoration: underline;
+    }
+  }
+  &--wrap {
+    padding: 24px 0 0;
+    margin: 0 0 12px;
+  }
+  &--field {
+    font-family: $primary-font;
+    font-size: 15px;
+    line-height: 21px;
+    width: 100%;
+    height: 90px;
+    vertical-align: bottom;
+    min-height: 90px;
+    padding: 10px;
+    word-wrap: break-word;
+    color: #202020;
+    margin: 0;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    box-shadow: none;
+    resize: none;
+    overflow: hidden;
+    &:focus {
+      box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .1);
+    }
+  }
+  &--admin {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  &--save {
+    font-size: 12px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #fff;
+    height: 32px;
+    padding: 0 20px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 3px;
+    background-color: #000;
+  }
+  &--remove {
+    display: inline-flex;
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #202020;
+    height: 32px;
+    margin: 0 0 0 5px;
+    padding: 0 10px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  // jq ui fix
+  .ui-widget-content {
+    position: relative;
+    height: 10px;
+    background-image: linear-gradient(to bottom, #b9b9b9 0%, #c8c8c8 50%, #dbdbdb 100%);
+  }
+  // jq ui fix
+  .ui-widget {
+    &.ui-widget-content {
+      border: 1px solid #d3d3d3;
+    }
+  }
+  // jq ui fix
+  .ui-slider {
+    .ui-slider-handle {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px solid #d3d3d3;
+      background-color: #fff;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+  // jq ui fix
+  .ui-slider-horizontal {
+    .ui-slider-handle {
+      top: -4px;
+      margin-left: -8px;
+    }
+  }
+  .ui-corner-all {
+    border-radius: 3px;
+  }
+}
+//
+.rate-slider {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  margin: 0 0 6px;
+}
+.rate-slider--inner {
+  position: relative;
+  width: 100%;
+}
+.rate-slider--range {
+  position: absolute;
+  display: flex;
+  width: 50%;
+  z-index: 1;
+  &_negative {
+    top: 0;
+    left: 0;
+    justify-content: flex-end;
+  }
+  &_positive {
+    top: 0;
+    right: 0;
+    justify-content: flex-start;
+  }
+}
+.rate-slider--line {
+  width: 0;
+  height: 10px;
+  &_negative {
+    background-color: #e50e2b;
+  }
+  &_positive {
+    background-color: #649212;
+  }
+}
+.rate-slider--side {
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  &_negative {
+    margin: 0 10px 0 0;
+  }
+  &_positive {
+    margin: 0 0 0 10px;
+  }
+}
+.rate-slider--cancel {
+  position: absolute;
+  top: -8px;
+  display: none;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 16px;
+  background-image: url(#{$images}/rate-slider-cancel.svg);
+  z-index: 2;
+  .active & {
+    display: block;
+  }
+  .rate-slider--side_negative & {
+    left: -8px;
+  }
+  .rate-slider--side_positive & {
+    right: -8px;
+  }
+}
+//
+.rate-slider--input {
+  font-size: 15px;
+  display: block;
+  width: 43px;
+  line-height: 26px;
+  margin: 0;
+  border: 0;
+  outline-width: 0;
+  border-radius: 3px;
+  &_negative {
+    padding: 0 0 0 6px;
+    .active & {
+      color: #e50e2b;
+    }
+  }
+  &_positive {
+    padding: 0 0 0 4px;
+    .active & {
+      color: #649213;
+    }
+  }
+  .active & {
+    font-weight: 700;
+  }
+}
+// staking page rate
+.stake-rate {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px;
+  &--label {
+    font-size: 12px;
+    line-height: 20px;
+    color: #606060;
+    margin: 0 10px 0 0;
+    text-transform: uppercase;
+  }
+  &--list {
+    display: flex;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  &--item {
+    display: flex;
+    height: 28px;
+    &_plus {
+      width: 29px;
+      border-right: 1px solid #ccc;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 12px;
+      background-image: url(#{$images}/rating-list-plus.svg);
+    }
+    &_minus {
+      width: 28px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 12px;
+      background-image: url(#{$images}/rating-list-minus.svg);
+    }
+    &.selected {
+      background-color: #efefef;
+    }
+    a {
+      flex-grow: 1;
+    }
+  }
+}

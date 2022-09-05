@@ -1,0 +1,210 @@
+// chat
+// fix for iframe
+#chatContainer {
+  iframe {
+    width: 100%;
+    height: 497px;
+    margin: 0 0 40px;
+  }
+}
+@media screen and (min-width: 50.8125em) {
+  #chatContainer iframe {
+    height: 410px;
+  }
+}
+//
+.live-chat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 40px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  &_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    margin: 0;
+  }
+}
+.live-chat--inner {
+  display: flex;
+  flex-grow: 1;
+  height: 318px;
+  .live-chat_modal & {
+    height: initial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 145px;
+    @include breakpoint(large) {
+      bottom: 89px;
+    }
+  }
+}
+//
+.frame-message {
+  margin: 0;
+  overflow-y: auto;
+  width: 100%;
+  padding: 15px 15px 10px;
+  list-style-type: none;
+  @include breakpoint(large) {
+    padding: 15px 15px 10px 30px;
+  }
+  &--item {
+    font-size: 13px;
+    color: #000;
+    line-height: 20px;
+  }
+}
+.msg-time {
+  font-size: 13px;
+  color: #a1a1a1;
+}
+.msg-nick {
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+}
+.msg-std {
+  font-size: 13px;
+  color: #000;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+//
+.frame-user {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-x: hidden;
+  width: 250px;
+  padding: 15px 10px 10px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  border-left: 1px solid #ededed;
+  @include breakpoint(large) {
+    display: flex;
+  }
+  &--quant {
+    font-size: 11px;
+    line-height: 20px;
+    color: #a1a1a1;
+    text-transform: uppercase;
+  }
+  &--nick {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+}
+//
+.chat-send {
+  padding: 15px 15px 10px;
+  background-color: #efefef;
+  @include breakpoint(large) {
+    padding: 15px 30px 20px;
+  }
+  .live-chat_modal & {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  &--form {
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(large) {
+      flex-wrap: nowrap;
+    }
+    .live-chat_modal & {
+      flex-wrap: wrap;
+    }
+  }
+  &--wrap {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    @include breakpoint(large) {
+      flex-wrap: nowrap;
+    }
+  }
+  &--field {
+    font-size: 14px;
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 6px 5px;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    @include breakpoint(large) {
+      margin: 0 10px 0 0;
+    }
+  }
+  &--button {
+    font: inherit;
+    font-size: 12px;
+    line-height: 32px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0 20px;
+    margin: 0 0 10px;
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 0;
+    outline: none;
+    -webkit-appearance: none;
+    background-color: #000;
+    @include breakpoint(large) {
+      margin: 0;
+      width: auto;
+    }
+  }
+  &--new {
+    font-size: 12px;
+    line-height: 30px;
+    color: #606060;
+    height: 32px;
+    padding: 0 12px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include breakpoint(large) {
+      margin: 0 0 0 20px;
+      width: auto;
+    }
+  }
+  &--note {
+    font-size: 12px;
+    color: #999;
+    line-height: 14px;
+    padding: 6px 0 2px;
+    width: 100%;
+    br {
+      @include breakpoint(large) {
+        display: none;
+      }
+    }
+  }
+  // new messages dots
+  &.new-messages {
+    background-repeat: no-repeat;
+    background-position: 58px -3px;
+    background-size: 22px;
+    background-image: url(#{$images}/chat-dots.svg);
+    @include breakpoint(large) {
+      background-position: 73px -3px;
+    }
+  }
+}

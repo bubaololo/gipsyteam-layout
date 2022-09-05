@@ -1,0 +1,118 @@
+// market page
+.market-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #f4f4f4;
+}
+// header section
+.market-header {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 32px 24px 308px;
+  background-size: 288px, cover;
+  background-position: 50% 103%, 50%;
+  background-image: url(#{$images}/market-header-bg1.png), url(#{$images}/market-header-bg.jpg);
+  @include breakpoint(large) {
+    min-height: 445px;
+    padding: 90px 30px 50px;
+    background-size: cover;
+    background-position: initial;
+    background-image: url(#{$images}/market-header-bg2.jpg);
+  }
+}
+.market-header--wrap {
+  width: 100%;
+  max-width: 1034px;
+}
+.market-header--inner {
+  width: 100%;
+  max-width: 640px;
+}
+.market-header--heading {
+  font-family: $secondary-font;
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 20px;
+  @include breakpoint(large) {
+    font-size: 39px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+  }
+  span {
+    text-transform: uppercase;
+  }
+}
+.market-header--subheading {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0 0 18px;
+  @include breakpoint(large) {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 11px;
+  }
+}
+// button show more
+.market-more {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 0 24px;
+  @include breakpoint(large) {
+    padding: 0 30px;
+  }
+}
+.market-more--wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1034px;
+  &::before,
+  &::after {
+    flex-grow: 1;
+    height: 1px;
+    content: '';
+    background-color: #e7e7e7;
+    top: 0;
+  }
+}
+.market-more--button {
+  font-family: $condensed-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: #666;
+  padding: 10px 24px;
+  text-transform: uppercase;
+  border: 1px solid #e4e5e7;
+}
+// mid
+.market-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+}
+// bottom
+.market-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 14px 0 0;
+  background-color: #fff;
+  @include breakpoint(large) {
+    margin: 40px 0 0;
+  }
+}

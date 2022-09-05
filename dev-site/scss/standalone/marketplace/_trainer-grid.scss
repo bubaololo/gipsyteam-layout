@@ -1,0 +1,224 @@
+// trainer grid section
+.trainer-grid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 0 24px;
+  @include breakpoint(large) {
+    padding: 0 30px;
+  }
+}
+.trainer-grid--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1034px;
+  @include breakpoint(large) {
+    gap: 24px;
+  }
+}
+.trainer-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  background-color: #fff;
+  @include breakpoint(xxsmall) {
+    max-width: 328px;
+  }
+  @include breakpoint(large) {
+    padding: 24px;
+    &:hover {
+      box-shadow: 0 6px 15px rgba(68, 8, 8, .1), 0 26px 25px -17px rgba(68, 8, 8, .3);
+    }
+  }
+}
+.trainer-card--top {
+  width: 100%;
+  display: flex;
+  gap: 0 16px;
+  margin: 0 0 36px;
+}
+.trainer-card--avatar {
+  overflow: hidden;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.trainer-card--wrap {
+  display: flex;
+  flex-direction: column;
+}
+.trainer-card--nick {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #202020;
+}
+.trainer-card--name {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #202020;
+}
+.trainer-card--rate {
+  margin: 0 0 8px;
+}
+// market rating stars
+.market-meta {
+  display: flex;
+  align-items: center;
+  gap: 0 12px;
+}
+.market-meta--score {
+  position: relative;
+  overflow: hidden;
+  width: 92px;
+  height: 16px;
+  background-size: 19px;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-image: url(/nimg/yellow-star-hollow19x16.svg);
+}
+.market-meta--value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-size: 19px;
+  background-repeat: repeat-x;
+  background-image: url(/nimg/yellow-star19x16.svg);
+  [data-rating='1'] & {
+    width: 20%;
+  }
+  [data-rating='2'] & {
+    width: 40%;
+  }
+  [data-rating='3'] & {
+    width: 60%;
+  }
+  [data-rating='4'] & {
+    width: 80%;
+  }
+  [data-rating='5'] & {
+    width: 100%;
+  }
+}
+.market-meta--rate {
+  font-size: 14px;
+  line-height: 21px;
+  color: #282828;
+}
+//
+.trainer-card--graph {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #202020;
+}
+.trainer-card--list {
+  margin: 0 0 24px;
+  li {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin: 0 0 12px;
+    }
+    &::after {
+      content: '';
+      height: 0;
+      flex-grow: 1;
+      margin: 0 4px;
+      order: 2;
+      border-bottom: 1px dashed #f0f1f4;
+    }
+  }
+}
+.trainer-card--title {
+  font-size: 14px;
+  line-height: 17px;
+  color: #202020;
+  order: 1;
+}
+.trainer-card--tag {
+  display: flex;
+  gap: 0 4px;
+  order: 3;
+}
+.trainer-card--label {
+  font-size: 13px;
+  line-height: 1;
+  color: #202020;
+  padding: 3px 7px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 40px;
+  background-color: #e4e5e7;
+}
+.trainer-card--data {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: #202020;
+  order: 3;
+}
+.trainer-card--review {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  order: 3;
+}
+.trainer-card--positive {
+  display: flex;
+  align-items: center;
+  gap: 0 3px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: #6dab73;
+  svg {
+    width: 18px;
+    height: 16px;
+    transform: translateY(-1px);
+  }
+}
+.trainer-card--negative {
+  display: flex;
+  align-items: center;
+  gap: 0 3px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: #666;
+  svg {
+    width: 18px;
+    height: 16px;
+    transform: translateY(1px);
+  }
+}
+.trainer-card--bottom {
+  display: flex;
+  width: 100%;
+  margin: auto 0 0;
+}
+.trainer-card--link {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #e51e25;
+  text-align: center;
+  width: 100%;
+  padding: 13px 24px;
+  border: 1px solid #f49fa2;
+  border-radius: 5px;
+  @include breakpoint(large) {
+    .trainer-card:hover & {
+      color: #fff;
+      border-color: #e51e25;
+      background-color: #e51e25;
+    }
+  }
+}

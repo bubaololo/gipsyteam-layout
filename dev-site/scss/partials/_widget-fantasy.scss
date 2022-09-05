@@ -1,0 +1,120 @@
+// widget wsop 2022 fantasy
+.widget-fs {
+  // theme = dark
+  --wfs-header-color: var(--text-5-color, #333);
+  --wfs-bg-color: var(--layer-3-color, #fff);
+  --wfs-color: var(--text-2-color, #000);
+  --wfs-subhead-color: var(--text-5-color, #909090);
+  --wfs-num-color: var(--text-5-color, #909090);
+  --wfs-line-color: var(--line-1-color, #ededed);
+  --wfs-border-color: var(--line-1-color, #ededed);
+  //
+  width: 100%;
+  max-width: 615px;
+  @include breakpoint(xlarge) {
+    max-width: $global-width;
+  }
+}
+.widget-fs--head {
+  display: flex;
+  align-items: center;
+  margin: 0 0 12px;
+  padding: 0 0 0 16px;
+  @include breakpoint(medium) {
+    padding: 0;
+  }
+  svg {
+    --i-color1: transparent;
+    --i-color2: #333;
+    width: 29px;
+    height: 29px;
+    flex-shrink: 0;
+    margin: 0 8px 0 0;
+    [theme='dark'] & {
+      --i-color1: #9e9e9e;
+    }
+  }
+}
+.widget-fs--heading {
+  position: relative;
+  font-family: $condensed-font;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--wfs-header-color);
+  text-transform: uppercase;
+  span {
+    color: #e51e25;
+  }
+}
+.widget-fs--wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 34px 24px 24px;
+  background-color: var(--wfs-bg-color);
+}
+.widget-fs--list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 0 18px;
+}
+.widget-fs--subheader {
+  padding: 10px 0 2px;
+  margin: 0 0 4px;
+  border-bottom: 1px solid var(--wfs-line-color);
+}
+.widget-fs--subhead {
+  font-family: $condensed-font;
+  font-size: 12px;
+  color: var(--wfs-subhead-color);
+  text-transform: uppercase;
+}
+.widget-fs--item {
+  padding: 14px 0;
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--wfs-border-color);
+  }
+}
+// grid
+.grid-fs {
+  display: grid;
+  grid-template-columns: 30px 1fr 80px;
+  grid-gap: 0 8px;
+  line-height: 20px;
+}
+//
+.grid-fs--num {
+  grid-column: 1;
+  font-family: $condensed-font;
+  font-size: 15px;
+  color: var(--wfs-num-color);
+  white-space: nowrap;
+}
+.grid-fs--nick {
+  grid-column: 2;
+  font-family: $condensed-font;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--wfs-color);
+  white-space: nowrap;
+}
+.grid-fs--score {
+  grid-column: 3;
+  font-family: $condensed-font;
+  font-size: 15px;
+  color: var(--wfs-color);
+  white-space: nowrap;
+}
+//
+.widget-fs--bottom {
+  display: flex;
+}
+.widget-fs--link {
+  font-size: 13px;
+  line-height: 21px;
+  color: #e50c2c;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

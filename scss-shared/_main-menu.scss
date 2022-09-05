@@ -1,0 +1,78 @@
+// footer menu
+.menu-main {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  background-color: #000;
+  @include breakpoint(xlarge) {
+    display: flex;
+  }
+  &--inner {
+    display: none;
+    justify-content: center;
+    height: 64px;
+    width: 100%;
+    max-width: $global-width;
+    padding: 0 15px;
+    align-items: center;
+    @include breakpoint(xlarge) {
+      display: flex;
+    }
+  }
+  &--item {
+    font-family: $condensed-font;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 700;
+    color: var(--footer-menu-color, #fff);
+    text-transform: uppercase;
+    white-space: nowrap;
+    height: 28px;
+    padding: 2px 0 0;
+    margin: 0 20px 0 0;
+    border-bottom: 2px solid transparent;
+    &:nth-last-child(1) {
+      margin: 0;
+    }
+    &_room {
+      --footer-menu-color: #e50e2c;
+    }
+    &.active {
+      border-bottom-color: #e50c2c;
+    }
+  }
+  &--counter {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    padding: 0 4px;
+    margin: 0 0 0 2px;
+    color: #828282;
+  }
+  &--vip {
+    width: 34px;
+    height: 48px;
+    flex-shrink: 0;
+    margin: 0 20px 0 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 34px;
+    background-image: url(#{$images}/500plus-logo-white.svg);
+  }
+  &--search {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #606060;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin: 0 0 0 auto;
+    padding: 0 0 0 28px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 16px;
+    background-image: url(#{$images}/menu-search.svg);
+  }
+}

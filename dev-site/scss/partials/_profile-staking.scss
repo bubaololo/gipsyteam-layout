@@ -1,0 +1,382 @@
+// profile staking
+.st-rate {
+  display: grid;
+  grid-template-columns: minmax(90px, 160px) minmax(90px, 160px) minmax(90px, 160px);
+  grid-gap: 0 5px;
+  width: 100%;
+  margin: 0 0 20px;
+  @include breakpoint(xlarge) {
+    margin: 0 0 30px;
+  }
+  &--item {
+    display: flex;
+    flex-direction: column;
+    padding: 11px 0 13px;
+    background-color: #fff;
+  }
+  &--heading {
+    font-size: 10px;
+    line-height: 20px;
+    color: #808080;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &--inner {
+    display: flex;
+    justify-content: center;
+  }
+  &--num {
+    font-family: $noto-font;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #606060;
+    &_positive {
+      color: #649213;
+    }
+    &_negative {
+      color: #e31f26;
+    }
+    &_sep {
+      margin: 0 3px;
+      font-size: 22px;
+      line-height: 22px;
+      font-weight: 400;
+      color: #909090;
+    }
+  }
+}
+.stakedata {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1246px;
+  margin: 0 0 20px;
+  &_stats {
+    padding: 0 15px;
+    @include breakpoint(xlarge) {
+      padding: 0;
+    }
+  }
+  &_full {
+    margin: 0;
+  }
+  &--header {
+    // with subscription button
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    //
+    width: 100%;
+    max-width: 1246px;
+    padding: 18px 0 0;
+    background-color: #fff;
+    @include breakpoint(xlarge) {
+      padding: 0;
+      margin: 0 0 13px;
+      background-color: transparent;
+    }
+    &_complex {
+      // with subscription button
+      @include breakpoint(xlarge) {
+        margin: 0 0 8px;
+      }
+    }
+  }
+  &--heading {
+    font-family: $condensed-font;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #333;
+    padding: 0 15px;
+    text-transform: uppercase;
+    @include breakpoint(xlarge) {
+      font-size: 18px;
+      padding: 0;
+    }
+    &_complex {
+      // with subscription button
+      margin: 0 auto 0 0;
+      padding: 5px 15px;
+      @include breakpoint(xlarge) {
+        padding: 5px 0;
+      }
+    }
+  }
+  &--bottom {
+    display: flex;
+    padding: 15px;
+    @include breakpoint(xlarge) {
+      padding: 15px 0;
+    }
+  }
+}
+.stakedata-button {
+  font-size: 11px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #606060;
+  height: 28px;
+  margin: 0 15px;
+  padding: 0 10px;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  @include breakpoint(xlarge) {
+    margin: 0 0 0 15px;
+  }
+  .profile-breadcrumbs--inner & {
+    margin: 0;
+    @include breakpoint(xlarge) {
+      margin: 0;
+    }
+  }
+}
+// staking offers
+.stakegrid {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 15px 20px;
+  background-color: #fff;
+  @include breakpoint(xlarge) {
+    padding: 12px 30px 20px;
+  }
+  &--item {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) 80px 84px;
+    grid-gap: 0 5px;
+    padding: 9px 0;
+    border-bottom: 1px solid #ccc;
+    @include breakpoint(large) {
+      grid-template-columns: 90px minmax(100px, 1fr) 100px 100px;
+    }
+    .stakegrid_wide & {
+      &:last-child {
+        border-color: transparent;
+      }
+    }
+  }
+  &--head {
+    font-size: 11px;
+    line-height: 18px;
+    color: #909090;
+    text-transform: uppercase;
+    &_wide {
+      display: none;
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+    &_right {
+      text-align: right;
+    }
+  }
+  &--date {
+    font-size: 15px;
+    line-height: 18px;
+    color: #606060;
+    margin: 0 0 2px;
+    grid-column: span 3;
+    @include breakpoint(large) {
+      margin: 0;
+      grid-column: span 1;
+    }
+  }
+  &--offer {
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
+    a {
+      font-size: 15px;
+      line-height: 18px;
+      color: #000;
+    }
+  }
+  &--profit {
+    font-family: $condensed-font;
+    font-size: 18px;
+    line-height: 18px;
+    color: #202020;
+    text-align: right;
+  }
+  &--result {
+    font-family: $condensed-font;
+    font-size: 18px;
+    line-height: 18px;
+    color: #202020;
+    text-align: right;
+    &_positive {
+      color: #649213;
+    }
+    &_negative {
+      color: #e31f26;
+    }
+  }
+  &--footer {
+    display: flex;
+    width: 100%;
+    max-width: 1246px;
+    padding: 12px 0 0;
+  }
+  &--link {
+    font-size: 12px;
+    line-height: 16px;
+    color: #404040;
+    text-transform: uppercase;
+    display: none;
+    @include breakpoint(xlarge) {
+      display: block;
+    }
+    span {
+      margin: 0 0 0 4px;
+    }
+  }
+}
+// staking stats
+.stakestats {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 15px 20px;
+  background-color: #fff;
+  @include breakpoint(xlarge) {
+    padding: 12px 30px 20px;
+  }
+  &--item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-gap: 0 5px;
+    padding: 7px 0;
+    @include breakpoint(large) {
+      grid-template-columns: minmax(100px, 1fr) 110px 110px;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+  &--head {
+    font-size: 11px;
+    line-height: 22px;
+    color: #909090;
+    text-transform: uppercase;
+    &_wide {
+      display: none;
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+    &_right {
+      text-align: right;
+    }
+  }
+  &--label {
+    font-size: 15px;
+    line-height: 22px;
+    color: #606060;
+    margin: 0 0 6px;
+    grid-column: span 2;
+    @include breakpoint(large) {
+      margin: 0;
+      grid-column: span 1;
+    }
+  }
+  &--mark {
+    font-size: 11px;
+    line-height: 18px;
+    color: #909090;
+    text-transform: uppercase;
+    padding: 4px 0 0;
+    grid-column: 1;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+  &--online {
+    font-family: $condensed-font;
+    font-size: 18px;
+    line-height: 22px;
+    color: #202020;
+    grid-column: 2;
+    &_positive {
+      color: #649213;
+    }
+    &_negative {
+      color: #e31f26;
+    }
+  }
+  &--offline {
+    font-family: $condensed-font;
+    font-size: 18px;
+    line-height: 22px;
+    color: #202020;
+    grid-column: 2;
+    @include breakpoint(large) {
+      grid-column: 3;
+    }
+    &_positive {
+      color: #649213;
+    }
+    &_negative {
+      color: #e31f26;
+    }
+  }
+}
+// profile page - all staking offers
+.profile-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 15px;
+  margin: 0 0 9px;
+  width: 100%;
+  max-width: 1246px;
+  @include breakpoint(xlarge) {
+    padding: 0;
+  }
+  &--link {
+    display: flex;
+    align-items: center;
+    font-family: $condensed-font;
+    font-size: 16px;
+    line-height: 22px;
+    color: #909090;
+    text-transform: uppercase;
+    margin: 0 28px 0 0;
+    padding: 5px 0;
+    @include breakpoint(xlarge) {
+      font-size: 18px;
+    }
+    &::before {
+      content: '';
+      width: 17px;
+      height: 8px;
+      margin: 0 12px 0 0;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 17px;
+      background-image: url(#{$images}/arrow-back.svg);
+    }
+  }
+  &--heading {
+    font-family: $condensed-font;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    // with subscription button
+    padding: 5px 0;
+    margin: 0 15px 0 0;
+    //
+    @include breakpoint(xlarge) {
+      font-size: 18px;
+    }
+  }
+  &--inner {
+    display: flex;
+    margin: 0 auto 0 0;
+  }
+}

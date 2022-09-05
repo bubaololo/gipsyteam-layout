@@ -1,0 +1,47 @@
+{
+  "private": true,
+  "browserslist": [
+    "last 2 major version, not IE 11, not OperaMini all, not dead"
+  ],
+  "scripts": {
+    "start": "gulp --development",
+    "build": "gulp --production",
+    "standdev": "gulp --development standalone",
+    "standprod": "gulp --production standalone"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "browser-sync": "^2.26.7",
+    "browserslist": "^4.12.0",
+    "chalk": "^4.1.0",
+    "css-declaration-sorter": "5.1.2",
+    "eslint": "^7.3.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-html": "^6.0.2",
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-htmlhint": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-mode": "^1.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^13.0.0",
+    "node-sass": "^4.14.1",
+    "panini": "^1.6.3",
+    "perfectionist": "^2.4.0",
+    "postcss-discard-comments": "^4.0.2",
+    "postcss-discard-duplicates": "^4.0.2",
+    "postcss-discard-empty": "^4.0.1",
+    "postcss-easing-gradients": "^3.0.1",
+    "postcss-ordered-values": "^4.1.2",
+    "postcss-prettify": "^0.3.4",
+    "postcss-unique-selectors": "^4.0.1",
+    "stylelint": "^13.5.0"
+  },
+  "dependencies": {}
+}

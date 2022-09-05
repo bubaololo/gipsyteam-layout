@@ -15,6 +15,7 @@ dev-site/src/
 dev-site/templates/
 package-lock.json
 yarn.lock
+*.yarnrc
 **/css/maps/
 **/src/js/
 **/dist/*.html

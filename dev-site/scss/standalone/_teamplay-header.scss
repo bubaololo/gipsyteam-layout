@@ -1,0 +1,191 @@
+.teamplay-wrap {
+  // color themes
+  &_mountainteam {
+    --theme-tmpl-color-1: #3bb39b;
+    --theme-tmpl-color-2: #26ab91;
+    --theme-tmpl-color-3: #17a589;
+    --theme-tmpl-color-4: #8bd2c4;
+    --theme-tmpl-color-5: #92d5c7;
+  }
+  &_greenline {
+    --theme-tmpl-color-1: #388e3c;
+    --theme-tmpl-color-2: #388e3c;
+    --theme-tmpl-color-3: #388e3c;
+    --theme-tmpl-color-4: #9bc69d;
+    --theme-tmpl-color-5: #a1caa3;
+  }
+  &_sv {
+    --theme-tmpl-color-1: #d3ad52;
+    --theme-tmpl-color-2: #26ab91;
+    --theme-tmpl-color-3: #d3ad52;
+    --theme-tmpl-color-4: #8bd2c4;
+  }
+  &_mvp {
+    --theme-tmpl-color-1: #4e86e6;
+    --theme-tmpl-color-3: #458dc5;
+  }
+  &_pocarr {
+    --theme-tmpl-color-1: #0db8ec;
+    --theme-tmpl-color-3: #0db8ec;
+  }
+  &_fiatlab {
+    --theme-tmpl-color-1: #872136;
+    --theme-tmpl-color-3: #872136;
+  }
+  &_new-age {
+    --theme-tmpl-color-1: #872136;
+    --theme-tmpl-color-3: #872136;
+  }
+}
+.teamplay-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 190px;
+  background-color: #2a2a2a;
+  background-image: url(#{$images}/pattern-rooms-dark2.png);
+  background-repeat: repeat;
+  background-size: 186px;
+  @include breakpoint(large) {
+    min-height: 270px;
+  }
+  .teamplay-wrap_sv & {
+    background-image: none;
+    background-color: #0f0f0f;
+  }
+  .teamplay-wrap_mvp & {
+    background-image: none;
+    background-color: #0f0f0f;
+  }
+  .teamplay-wrap_pocarr & {
+    background-image: none;
+    background-color: #191c28;
+  }
+  .teamplay-wrap_fiatlab & {
+    background-image: none;
+    background-color: #0f0f0f;
+    padding: 48px 15px 32px;
+  }
+  .teamplay-wrap_new-age & {
+    background-image: none;
+    background-color: #0f0f0f;
+  }
+}
+.teamplay-logo {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  // mountain team hashtag
+  &--hashtag {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 500;
+    color: #bdbdbd;
+    margin: 8px 0 0;
+    @include breakpoint(large) {
+      font-size: 24px;
+      margin: 10px 0 0;
+    }
+  }
+  // sv school logo
+  .teamplay-wrap_sv & {
+    width: 150px;
+    height: 150px;
+    background-size: 150px;
+    background-image: url(#{$images}/svschool-logo-page.svg);
+    @include breakpoint(large) {
+      width: 190px;
+      height: 190px;
+      background-size: 190px;
+    }
+  }
+  // mountain team logo
+  .teamplay-wrap_mountainteam & {
+    width: 150px;
+    height: 98px;
+    background-size: 150px;
+    background-image: url(#{$images}/mountain-team.svg);
+    @include breakpoint(large) {
+      width: 232px;
+      height: 150px;
+      background-size: 232px;
+    }
+  }
+  // greenline logo
+  .teamplay-wrap_greenline & {
+    width: 200px;
+    height: 60px;
+    background-size: 200px;
+    background-image: url(#{$images}/greenline-team.svg);
+    @include breakpoint(large) {
+      width: 372px;
+      height: 110px;
+      background-size: 372px;
+    }
+  }
+  // mvp school logo
+  .teamplay-wrap_mvp & {
+    width: 150px;
+    height: 150px;
+    background-size: 150px;
+    background-image: url(#{$images}/mvpschool-text-logo.svg);
+    @include breakpoint(large) {
+      width: 190px;
+      height: 190px;
+      background-size: 190px;
+    }
+  }
+  // pocarr logo
+  .teamplay-wrap_pocarr & {
+    width: 180px;
+    height: 150px;
+    background-size: 180px;
+    background-image: url(#{$images}/pocarr-text-logo.svg);
+    @include breakpoint(large) {
+      width: 230px;
+      height: 190px;
+      background-size: 230px;
+    }
+  }
+  // fiatlab logo
+  .teamplay-wrap_fiatlab & {
+    width: 150px;
+    height: 150px;
+    background-size: 108px;
+    background-image: url(#{$images}/fiatlab-text-logo22.svg);
+    @include breakpoint(large) {
+      width: 190px;
+      height: 190px;
+      background-size: 138px;
+    }
+  }
+  // new age logo
+  .teamplay-wrap_new-age & {
+    width: 190px;
+    height: 190px;
+  }
+}
+.teamplay-head--slogan {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #fff;
+  margin: 4px 0 16px;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 30px;
+    margin: 4px 0 24px;
+  }
+}
+.teamplay-head--subheading {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 20px;
+  }
+}

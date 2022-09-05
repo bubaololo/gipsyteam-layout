@@ -1,0 +1,549 @@
+// sunday kings page
+.sk-sidebar-top {
+  grid-area: sidebar-top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 20px;
+  @include breakpoint(large) {
+    padding: 20px 0;
+  }
+  @include breakpoint(xlarge) {
+    grid-area: sidebar;
+    padding: 20px 0 0;
+  }
+}
+.sk-top-logo {
+  height: 130px;
+  width: 130px;
+  margin: 0 0 5px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 130px;
+  background-image: url(#{$images}/sk_logo.png);
+  @include breakpoint(large) {
+    width: 160px;
+    margin: 0 0 20px;
+    background-size: 157px;
+  }
+}
+.sk-top-sublogo {
+  height: 43px;
+  width: 130px;
+  margin: 0 0 10px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 130px;
+  background-image: url(#{$images}/sharkscope.png);
+  @include breakpoint(large) {
+    width: 160px;
+    background-size: 157px;
+  }
+}
+//
+.about-sk {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 310px;
+  height: 20px;
+  margin: 0 auto;
+  &--link {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #666;
+    &::after {
+      content: '·';
+      margin: 0 5px;
+    }
+  }
+  &--system {
+    position: relative;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #666;
+    border-bottom: 1px dotted #666;
+    &.active {
+      &::after {
+        position: absolute;
+        top: 38px;
+        left: 50px;
+        width: 12px;
+        height: 12px;
+        content: "";
+        transform: rotate(45deg) translateX(-50%) translateX(-6px);
+        background-color: #fff;
+        z-index: 4;
+      }
+    }
+  }
+}
+.sk-system {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  max-width: 310px;
+  padding: 25px 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+  z-index: 3;
+  &--head {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #808080;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+  }
+  &--link {
+    font-size: 12px;
+    line-height: 20px;
+    color: #333;
+    margin: 0 0 12px;
+    a {
+      color: #333;
+      text-decoration: underline;
+    }
+  }
+  strong {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 12px;
+  }
+  sup {
+    font-weight: 400;
+  }
+  &--note {
+    font-size: 12px;
+    line-height: 16px;
+    color: #333;
+  }
+  em {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333;
+    font-style: italic;
+    margin: 16px 0 0;
+  }
+  &.show {
+    display: block;
+  }
+}
+//
+.sk-sidebar-bottom {
+  grid-area: sidebar-bottom;
+  width: 100%;
+  min-height: 200px;
+  @include breakpoint(xlarge) {
+    grid-area: sidebar;
+    grid-row-start: 2;
+  }
+}
+// sk reg form
+.sk-player-form {
+  padding: 30px 0 0;
+}
+.sk-player-note {
+  font-size: 14px;
+  line-height: 18px;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  padding: 0 24px;
+}
+.sk-regbox {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0 20px;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  label {
+    font-size: 14px;
+    line-height: 26px;
+    width: 80px;
+    float: left;
+    color: #333;
+  }
+  span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    line-height: 26px;
+  }
+  fieldset {
+    padding: 5px 0;
+    margin: 0 0 10px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #404040;
+    margin: 10px 0 20px;
+  }
+}
+.sk-regbox--edit {
+  display: block;
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-image: url(#{$images}/sk-nick-edit.svg);
+}
+.sk-regbox--head {
+  font-family: $noto-font;
+  font-size: 16px;
+  font-weight: 700;
+  color: #202020;
+  line-height: 20px;
+  padding: 25px 0 10px;
+  border-bottom: 1px solid #e8e8e8;
+  a {
+    color: #202020;
+    text-decoration: underline;
+  }
+}
+.sk-regbox--inner {
+  min-width: 0;
+  padding: 20px 0;
+}
+.sk-regbox--button {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: #202020;
+}
+.sk-regbox--field {
+  width: 100%;
+  max-width: 186px;
+  padding: 4px 5px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+}
+.regbox-message {
+  position: relative;
+  display: block;
+  padding: 0 20px 20px;
+  margin: 0 0 20px;
+  border: 1px solid #dedede;
+  background-color: #fffdf0;
+  &--head {
+    font-family: $noto-font;
+    font-size: 16px;
+    font-weight: 700;
+    color: #202020;
+    line-height: 20px;
+    padding: 25px 0 10px;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  &--close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 12px;
+    background-image: url(#{$images}/delete-item.svg);
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #616161;
+    margin: 0;
+  }
+  a {
+    color: #202020;
+    text-decoration: underline;
+  }
+}
+//
+.sk-tour-head {
+  font-family: $noto-font;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #202020;
+  text-align: center;
+  padding: 20px 0 0;
+  margin: 0 0 12px;
+}
+.sk-tour {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+.sk-tour--heading {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #202020;
+  padding: 10px 0;
+  margin: 0 0 10px;
+  border-bottom: 1px solid #d9d9d9;
+  @include breakpoint(xlarge) {
+    text-align: center;
+  }
+}
+.sk-line {
+  display: grid;
+  grid-gap: 0 5px;
+  grid-template-columns: 50px 1fr;
+  &--buyin {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #649242;
+  }
+  &--name {
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+  }
+  &--time {
+    font-size: 14px;
+    line-height: 20px;
+    color: #808080;
+    grid-column: 2;
+  }
+}
+//
+.sk-main {
+  display: flex;
+  flex-direction: column;
+  grid-area: main;
+  width: 100%;
+  &--head {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    @include breakpoint(large) {
+      padding: 20px;
+    }
+  }
+  &--filter {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+  }
+  &--wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  &--inner {
+    padding: 0 0 20px;
+    background-color: #fff;
+  }
+  &--bottom {
+    padding: 0 0 20px;
+    background-color: #fff;
+  }
+}
+.sunday-kings-grid {
+  display: grid;
+  width: 100%;
+  max-width: 1276px;
+  padding: 0 0 30px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "sidebar-top"
+    "main"
+    "sidebar-bottom";
+  align-items: start;
+  @include breakpoint(large) {
+    padding: 0 15px 40px;
+  }
+  @include breakpoint(xlarge) {
+    padding: 35px 15px 40px;
+    grid-gap: 0 40px;
+    grid-template-columns: 310px 1fr;
+    grid-template-areas:
+      "sidebar main"
+      ". main";
+    grid-template-rows: 245px 1fr;
+  }
+}
+// main
+.sk-pager {
+  display: flex;
+  margin: 0;
+  width: 100%;
+  align-items: center;
+  li {
+    margin: 0;
+  }
+  &--link {
+    display: flex;
+    font-family: $noto-font;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+    color: #202020;
+    min-height: 45px;
+    padding: 14px 15px 0;
+    background-color: #f4f4f4;
+    @include breakpoint(large) {
+      font-size: 17px;
+      padding: 14px 20px 0;
+    }
+    .active & {
+      background-color: #fff;
+    }
+  }
+}
+//
+.title-sk {
+  width: 100%;
+  padding: 20px 0 0;
+  margin: 16px 0 0;
+  @include breakpoint(large) {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+}
+.title-sk--heading {
+  font-family: $noto-font;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #202020;
+  text-transform: uppercase;
+  padding: 20px 0 0 55px;
+  margin: 0 0 12px;
+  @include breakpoint(large) {
+    font-size: 15px;
+  }
+}
+.title-sk--inner {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  margin: 0 0 7px;
+  @include breakpoint(large) {
+    padding: 0 20px;
+  }
+}
+.info-sk {
+  &--grid {
+    display: grid;
+    grid-template-columns: 30px 1fr 50px 50px 50px;
+    grid-gap: 0 5px;
+    line-height: 28px;
+    border-bottom: 1px solid #e0e0e0;
+    @include breakpoint(large) {
+      grid-template-columns: 30px 1fr 50px 50px 50px 90px;
+      padding: 4px 0;
+    }
+  }
+  &--stats {
+    display: none;
+    line-height: 16px;
+    padding: 15px 0 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  &--drop {
+    grid-column: 1;
+    grid-row: 1;
+    width: 30px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(#{$images}/diary-drop.svg);
+    .active & {
+      transform: rotate(180deg);
+    }
+  }
+  &--nick {
+    grid-row: 1;
+    grid-column: 2 / 6;
+    font-size: 15px;
+    line-height: 28px;
+    color: #666;
+    @include breakpoint(large) {
+      grid-column: 2;
+    }
+  }
+  &--result {
+    display: flex;
+    justify-content: flex-end;
+    grid-row: 2;
+    @include breakpoint(large) {
+      grid-row: 1;
+    }
+  }
+  &--crown {
+    width: 22px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 18px;
+    &_gold {
+      background-image: url(#{$images}/crown-sk2-gold.svg);
+    }
+    &_silver {
+      background-image: url(#{$images}/crown-sk2-silver.svg);
+    }
+    &_bronze {
+      background-image: url(#{$images}/crown-sk2-bronze.svg);
+    }
+  }
+  &--num {
+    display: flex;
+    font-size: 15px;
+    color: #666;
+    margin: 0 7px 0 0;
+  }
+  &--score {
+    display: flex;
+    font-size: 15px;
+    color: #666;
+    grid-column: 1 / 3;
+    grid-row: 2;
+    margin: 0 0 0 35px;
+    @include breakpoint(large) {
+      grid-row: 1;
+      grid-column: -2;
+      padding: 0 0 0 30px;
+      margin: 0;
+    }
+  }
+}
+.info-sk-txt {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #666;
+  margin: 0 0 5px 35px;
+  span {
+    font-weight: 400;
+  }
+  a {
+    font-weight: 400;
+    text-decoration: underline;
+    color: #000;
+  }
+}

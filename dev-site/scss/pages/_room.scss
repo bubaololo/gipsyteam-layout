@@ -1,0 +1,869 @@
+// poker room page
+.content {
+  // poker room page
+  &_room {
+    padding: 50px 24px;
+    --content-bg-color: #fff;
+    @include breakpoint(xlarge) {
+      padding: 50px 30px;
+    }
+  }
+}
+// back button link
+.review-back {
+  display: flex;
+  align-items: center;
+  margin: 0 0 24px;
+  a {
+    color: #000;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  svg {
+    --color1: #000;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 0;
+  }
+}
+.review-arrow-left {
+  transform: rotate(180deg);
+}
+//
+.room-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px 0;
+  grid-template-areas:
+    'review'
+    'sidebar'
+    'details'
+    'regplace';
+  @include breakpoint(xlarge) {
+    grid-template-columns: minmax(0, 927px) 289px;
+    gap: 32px 30px;
+    grid-template-areas:
+    'review sidebar'
+    'details sidebar'
+    'regplace sidebar';
+  }
+  // reviews page
+  &_reviews {
+    grid-template-areas:
+    'sidebar'
+    'details';
+    @include breakpoint(xlarge) {
+      grid-template-areas: 'details sidebar';
+    }
+  }
+}
+//
+.room-review {
+  grid-area: review;
+  padding: 0 0 32px;
+  border-radius: 10px;
+  background-color: #fff;
+  @include breakpoint(xlarge) {
+    padding: 0 0 8px;
+  }
+}
+.room-review--top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px 0;
+  align-items: start;
+  margin: 0 0 32px;
+  background-color: #eef0f5;
+  border-radius: 10px;
+  padding: 24px;
+  @include breakpoint(large) {
+    grid-template-columns: 183px 1fr;
+    gap: 0 30px;
+    padding: 32px;
+  }
+}
+.room-logo {
+  border-radius: 10px;
+  border: 1px solid #44d487;
+  background-color: #fff;
+  &--image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    img {
+      max-height: 48px;
+    }
+  }
+  &--heading {
+    height: 56px;
+    padding: 16px 0 0;
+    border-top: 1px solid #dfe1e4;
+  }
+  h1 {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+  }
+}
+// rating stars
+.room-review--meta {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 16px;
+  @include breakpoint(large) {
+    justify-content: flex-start;
+  }
+}
+.rr-score {
+  position: relative;
+  overflow: hidden;
+  width: 112px;
+  height: 16px;
+  background-size: 24px;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-image: url(/nimg/gray-star2416.svg);
+}
+.rr-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-size: 24px;
+  background-repeat: repeat-x;
+  background-image: url(/nimg/green-star2416.svg);
+  [data-rating='1'] & {
+    width: 20%;
+  }
+  [data-rating='2'] & {
+    width: 40%;
+  }
+  [data-rating='3'] & {
+    width: 60%;
+  }
+  [data-rating='4'] & {
+    width: 80%;
+  }
+  [data-rating='5'] & {
+    width: 100%;
+  }
+}
+.room-rate {
+  font-size: 14px;
+  line-height: 16px;
+  color: #a8a8a9;
+  margin: 0 0 0 16px;
+  min-height: 16px;
+}
+// text content
+.room-content {
+  margin: 0 0 24px;
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    &:not(:last-child) {
+      margin: 0 0 16px;
+    }
+  }
+}
+.room-review-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px 0;
+  align-items: start;
+  @include breakpoint(xxlarge) {
+    grid-template-columns: minmax(0, 304px) minmax(0, 380px);
+    gap: 0 16px;
+  }
+}
+.room-review-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  padding: 0 16px;
+  height: 64px;
+  max-width: 304px;
+  border-radius: 10px;
+  border: 1px solid #ec314d;
+  background-color: #ec314d;
+  appearance: none;
+  order: 1;
+  @include breakpoint(xxlarge) {
+    order: 0;
+  }
+  &_active {
+    color: #ec314d;
+    background-color: transparent;
+  }
+}
+.room-payments {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(xxlarge) {
+    min-height: 64px;
+    padding: 0 0 0 14px;
+    border-left: 1px solid #dfe1e4;
+  }
+}
+.room-payments--heading {
+  font-size: 12px;
+  line-height: 14px;
+  color: #a8a8a9;
+  margin: 0 0 12px;
+}
+.room-payments--list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  li {
+    display: flex;
+    line-height: 1;
+    margin: 0;
+    padding: 4px 0;
+    &:not(:last-child) {
+      margin: 0 16px 0 0;
+    }
+  }
+  .visa-logo {
+    width: 50px;
+    height: 24px;
+  }
+  .mastercard-logo {
+    width: 32px;
+    height: 24px;
+  }
+  .skrill-logo {
+    width: 60px;
+    height: 24px;
+  }
+  .qiwi-logo {
+    width: 54px;
+    height: 24px;
+  }
+  .neteller-logo {
+    width: 92px;
+    height: 24px;
+  }
+  .webmoney-logo {
+    width: 104px;
+    height: 24px;
+  }
+  .yoomoney-logo {
+    width: 112px;
+    height: 24px;
+  }
+  .crypto-logo {
+    width: 24px;
+    height: 24px;
+  }
+  .ecopayz-logo {
+    width: 100px;
+    height: 24px;
+  }
+  .muchbetter-logo {
+    width: 110px;
+    height: 24px;
+  }
+  .sms-logo {
+    width: 28px;
+    height: 24px;
+  }
+  .pix-logo {
+    width: 68px;
+    height: 24px;
+  }
+  .astropay-logo {
+    width: 93px;
+    height: 24px;
+  }
+  .luxonpay-logo {
+    width: 110px;
+    height: 24px;
+  }
+  .pay4fun-logo {
+    width: 109px;
+    height: 24px;
+  }
+  .applepay-logo {
+    width: 59px;
+    height: 24px;
+  }
+  .paypal-logo {
+    width: 100px;
+    height: 24px;
+  }
+  .paysafe-logo {
+    width: 142px;
+    height: 24px;
+  }
+}
+// room registration
+.roomreg-wrap {
+  margin: 0 0 32px;
+}
+.roomreg {
+  border-radius: 10px;
+  background-color: #eef0f5;
+}
+// room edge
+.room-edge-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 0 24px;
+  padding: 16px 0;
+  border-top: 1px solid #ebedee;
+  border-bottom: 1px solid #ebedee;
+  @include breakpoint(large) {
+    flex-direction: row;
+    margin: 0 0 38px;
+    padding: 24px 0;
+  }
+}
+.room-edge {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+  padding: 8px 0;
+  white-space: nowrap;
+  @include breakpoint(large) {
+    font-size: 16px;
+    &:not(:last-child) {
+      margin: 0 48px 0 0;
+    }
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 12px 0 0;
+  }
+}
+// slider with screens
+.slider-screen {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.slider-screen--container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.slider-screen--row {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  transition-property: transform;
+  box-sizing: content-box;
+  transform: translate3d(0, 0, 0);
+  z-index: 1;
+}
+.slider-screen--item {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  transition-property: transform;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  a {
+    display: flex;
+    -webkit-tap-highlight-color: transparent;
+  }
+  img {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+.slider-screen--button {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  width: 48px;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  outline: none;
+  background-size: 28px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  @include breakpoint(large) {
+    pointer-events: auto;
+  }
+  &_next {
+    right: 0;
+    left: auto;
+    transition: opacity .2s ease-in-out;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 64px;
+      height: 100%;
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 95%);
+      pointer-events: none;
+    }
+    &::after {
+      display: none;
+      width: 13px;
+      height: 13px;
+      content: '';
+      border: solid #ec314d;
+      border-width: 0 3px 3px 0;
+      transform: rotate(-45deg);
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+  }
+  &_disabled {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+//
+.room-sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(xlarge) {
+      position: sticky;
+      top: 32px;
+    }
+  }
+}
+// support sidebar
+.room-sp {
+  display: none;
+  margin: 0 0 32px;
+  padding: 28px;
+  border-radius: 10px;
+  border: 2px solid #44d587;
+  background-color: #fff;
+  @include breakpoint(xlarge) {
+    display: flex;
+    flex-direction: column;
+  }
+  // sticky without promo actions
+  &_sticky {
+    @include breakpoint(xlarge) {
+      position: sticky;
+      top: 32px;
+    }
+  }
+  //
+}
+.room-sp_bottom {
+  display: flex;
+}
+.room-sp--top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 24px;
+}
+.room-sp--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  height: 32px;
+  width: 100%;
+  max-width: 112px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background-color: #44d587;
+  z-index: 1;
+}
+.room-sp--avatar {
+  display: flex;
+  align-items: flex-start;
+  width: 144px;
+  min-height: 144px;
+  margin: 0 0 15px;
+  transform: translateY(-16px);
+  img {
+    border-radius: 10px;
+  }
+}
+.room-sp--name {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin: 0 0 10px;
+}
+.room-sp--job {
+  font-size: 14px;
+  line-height: 24px;
+  color: #a8a8a9;
+  text-align: center;
+}
+//
+.room-sp--chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  margin: 0 0 16px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background-color: #ec314d;
+  &:hover {
+    background-color: #b9253b;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 16px 0 0;
+  }
+}
+.room-sp--contact {
+  display: flex;
+  justify-content: space-between;
+}
+.i-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid #ec314d;
+  &:hover {
+    --i-color1: #fff;
+    background-color: #ec314d;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+//
+.room-bs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px 0;
+  margin: 0 0 32px;
+  padding: 28px;
+  border-radius: 10px;
+  border: 2px solid #44d587;
+  background-color: #fff;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+  }
+  @include breakpoint(xlarge) {
+    display: none;
+    // bottom block is always visible
+    .room-bottom & {
+      display: grid;
+    }
+    //
+  }
+}
+.room-bs--top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include breakpoint(large) {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 20px 0 0;
+    border-right: 1px solid #ebedee;
+  }
+}
+.room-bs--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  height: 32px;
+  width: 100%;
+  max-width: 112px;
+  margin: 0 0 16px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background-color: #44d587;
+  z-index: 1;
+}
+.room-bs--avatar {
+  display: flex;
+  align-items: flex-start;
+  width: 80px;
+  min-height: 80px;
+  flex-shrink: 0;
+  margin: 0 0 16px;
+  @include breakpoint(large) {
+    margin: 0 32px 0 0;
+  }
+  img {
+    border-radius: 10px;
+  }
+}
+.room-bs--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include breakpoint(large) {
+    align-items: flex-start;
+  }
+}
+.room-bs--name {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 10px;
+}
+.room-bs--job {
+  font-size: 14px;
+  line-height: 24px;
+  color: #a8a8a9;
+  text-align: center;
+  @include breakpoint(large) {
+    text-align: left;
+  }
+}
+.room-bs--chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  margin: 0 0 16px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background-color: #ec314d;
+  &:hover {
+    background-color: #b9253b;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 16px 0 0;
+  }
+}
+.room-bs--contact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 16px;
+}
+.bs-i-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid #ec314d;
+  &:hover {
+    --i-color1: #fff;
+    background-color: #ec314d;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+//
+.room-pr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+  padding: 24px;
+  border-radius: 10px;
+  border: 2px solid #ffc800;
+  background-color: #fff;
+  @include breakpoint(large) {
+    padding: 32px;
+  }
+}
+.room-pr-promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  height: 32px;
+  width: 100%;
+  max-width: 112px;
+  margin: 0 0 32px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background-color: #ffc800;
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0;
+  }
+}
+.room-pr--item {
+  margin: 0;
+  width: 100%;
+  max-width: 300px;
+  li {
+    position: relative;
+    &:not(:last-child) {
+      margin: 0 0 32px;
+      padding: 0 0 26px;
+      border-bottom: 1px solid #ebedee;
+    }
+  }
+}
+.room-pr--image {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 16px;
+  img {
+    border-radius: 10px;
+  }
+}
+.room-pr--content {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  a {
+    color: #000;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      z-index: 1;
+    }
+  }
+}
+//
+.room-details {
+  grid-area: details;
+  padding: 32px 0 0;
+  background-color: #fff;
+  @include breakpoint(large) {
+    padding: 0;
+  }
+}
+.room-details-inner {
+  display: flex;
+  flex-direction: column;
+  &_feedback {
+    margin: 0 0 40px;
+  }
+}
+// bottom section
+.room-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0;
+}
+.room-regplace {
+  grid-area: regplace;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  &_bottom {
+    margin: 0 0 56px;
+  }
+}
+// forum links
+.room-forum {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 24px 0;
+  margin: 0 0 57px;
+  border-bottom: 1px solid #dfe1e4;
+  @include breakpoint(large) {
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 0 85px;
+  }
+  &--text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+    width: 100%;
+    margin: 0 0 16px;
+    @include breakpoint(large) {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+}
+.room-forum--link {
+  --color1: #ec314d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 184px;
+  height: 48px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+  color: #ec314d;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid #ec314d;
+  @include breakpoint(large) {
+    margin: 0 0 0 16px;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 16px 0 0;
+  }
+}
+

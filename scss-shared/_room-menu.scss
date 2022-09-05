@@ -1,0 +1,212 @@
+// room menu
+.roommenu {
+  // theme = dark
+  --roommenu-bg-color: var(--layer-5-color, #e0e0e0);
+  --roommenu-icon-color: var(--text-1-color, #000);
+  --roommenu-icon-bg-color: var(--layer-3-color, #fff);
+  --roommenu-link-color: var(--text-1-color, #000);
+  --roommenu-line-color: var(--line-2-color, #e3e3e3);
+  --roommenu-close-color: var(--line-2-color, #aaa);
+  //
+  --roommenu-scroll-bg-color: var(--layer-3-color, #fff);
+  --roommenu-scroll-color: var(--line-1-color, #e3e3e3);
+  //
+  display: none;
+  position: absolute;
+  top: 77px;
+  left: 0;
+  padding: 0 16px;
+  z-index: 4;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--roommenu-bg-color);
+  @include breakpoint(xlarge) {
+    display: block;
+  }
+  &_rakeback {
+    left: 106px;
+    padding: 0 0 0 16px;
+  }
+  &_offers {
+    left: 291px;
+  }
+  &--close {
+    position: absolute;
+    display: none;
+    top: 12px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    padding: 6px;
+    svg {
+      --i-color1: var(--roommenu-close-color);
+      width: 12px;
+      height: 12px;
+    }
+  }
+  &--inner {
+    display: flex;
+    width: 100%;
+    max-width: 1246px;
+    .roommenu_rakeback & {
+      padding: 0 16px 0 0;
+    }
+  }
+  &--list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    max-width: 270px;
+  }
+  &--item {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    &:not(:last-child) {
+      border-bottom: 1px solid transparent;
+    }
+    a {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      font-size: 14px;
+      line-height: 19px;
+      color: var(--roommenu-link-color);
+      padding: 4px 0;
+      &:hover {
+        color: #ec314d;
+      }
+    }
+  }
+}
+.roommenu--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 16px 0 0;
+  border-radius: 10px;
+  background-color: var(--roommenu-icon-bg-color);
+  flex-shrink: 0;
+  svg {
+    --i-color1: var(--roommenu-icon-color);
+    width: 16px;
+    height: 16px;
+  }
+}
+.roommenu--grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0 16px;
+  padding: 16px 0;
+}
+.roommain {
+  // theme = dark
+  --roommenu-bg-color: var(--layer-4-color, #f4f4f4);
+  --roommenu-icon-color: var(--text-1-color, #000);
+  --roommenu-icon-bg-color: var(--layer-3-color, #fff);
+  --roommenu-link-color: var(--text-1-color, #000);
+  --roommenu-line-color: var(--line-2-color, #e3e3e3);
+  --roommenu-close-color: var(--line-2-color, #aaa);
+  --roommenu-arrow-color: var(--line-2-color, #aaa);
+  //
+  display: flex;
+  width: 100%;
+  max-width: 1246px;
+  overflow: auto;
+  &--list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  &--item {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    &:not(:last-child) {
+      border-bottom: 1px solid transparent;
+    }
+  }
+  &--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 16px 0 0;
+    border-radius: 10px;
+    background-color: var(--roommenu-icon-bg-color);
+    flex-shrink: 0;
+    &_rate {
+      background-color: #44d487;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+    &_all {
+      svg {
+        [theme='dark'] & {
+          --i-color1: #fff;
+        }
+      }
+    }
+    &_dark {
+      display: none;
+      [theme='dark'] & {
+        display: flex;
+      }
+    }
+    &_light {
+      [theme='dark'] & {
+        display: none;
+      }
+    }
+  }
+  // Firefox
+  scrollbar-width: thin;
+  scrollbar-color: var(--roommenu-scroll-color) var(--roommenu-scroll-bg-color);
+  // Chrome, Edge, Safari
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background-color: var(--roommenu-scroll-bg-color);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: var(--roommenu-scroll-color);
+    border: 5px solid transparent;
+    background-clip: content-box;
+  }
+  //
+}
+.roommain--link {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--roommenu-link-color);
+  padding: 4px 0;
+  &:hover {
+    color: #ec314d;
+  }
+  &_active {
+    font-weight: 700;
+    color: #ec314d;
+  }
+}
+.roommain--arrow {
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 auto;
+  --i-color1: var(--roommenu-arrow-color);
+  .roommain--link_active & {
+    --i-color1: #ec314d;
+  }
+}

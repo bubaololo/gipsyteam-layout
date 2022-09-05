@@ -1,0 +1,404 @@
+// all promo page
+.global-promo--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1365px;
+  margin: 0 auto;
+  padding: 40px 10px;
+  background-color: #e0e0e0;
+  background-repeat: repeat;
+  background-image: url(/aimg/rooms/std-background-white.png);
+  @include breakpoint(medium) {
+    padding: 40px 20px;
+  }
+}
+.global-promo-header--wrap {
+  width: 100%;
+  max-width: 1235px;
+}
+.header--line h1 {
+  display: inline-block;
+  margin-bottom: -2px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e75113;
+}
+.global-promo-button--wrap {
+  display: flex;
+  width: 100%;
+  max-width: 1235px;
+  padding: 30px 0 40px;
+}
+.a-promo--link {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  padding: 15px 0;
+  color: #333;
+  border-top: 1px solid #eee;
+  &:hover {
+    color: #e31e26;
+  }
+}
+.promo-button--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+//
+.pr-sort--button {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  color: #333;
+  height: 40px;
+  width: 40px;
+  white-space: nowrap;
+  margin: 0 2px 2px 0;
+  background-position: 7px 50%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+  @include breakpoint(large) {
+    width: auto;
+    padding: 0 8px 0 36px;
+  }
+  &:active {
+    top: 0;
+  }
+  span {
+    display: none;
+    @include breakpoint(large) {
+      display: inline;
+    }
+  }
+  &_all {
+    background-position: 12px 50%;
+    background-size: 17px;
+    background-image: url(/aimg/rooms/squares-red.svg);
+    &.is-checked {
+      background-image: url(/aimg/rooms/squares-white.svg);
+    }
+  }
+  &_freeplay {
+    background-position: 9px 50%;
+    background-size: 22px;
+    background-image: url(/aimg/rooms/freeplay.svg);
+    &.is-checked {
+      background-image: url(/aimg/rooms/freeplay-white.svg);
+    }
+  }
+  &_payment {
+    background-size: 26px;
+    background-image: url(/aimg/rooms/filter-payment.svg);
+    &.is-checked {
+      background-image: url(/aimg/rooms/filter-payment-white.svg);
+    }
+  }
+  &_cash {
+    background-position: 8px 50%;
+    background-size: 24px;
+    background-image: url(/aimg/rooms/filter-cash.svg);
+    &.is-checked {
+      background-image: url(/aimg/rooms/filter-cash-white.svg);
+    }
+  }
+  &_event {
+    background-size: 26px;
+    background-image: url(/aimg/rooms/filter-event.svg);
+    &.is-checked {
+      background-image: url(/aimg/rooms/filter-event-white.svg);
+    }
+  }
+  &_mobile {
+    background-size: 14px;
+    background-position: 12px 50%;
+    background-image: url(/aimg/rooms/mobile-app-red.svg);
+    &.is-checked {
+      background-image: url(/aimg/rooms/mobile-app-white.svg);
+    }
+  }
+  &.is-checked {
+    color: #fff;
+    background-color: #6b6b6b;
+  }
+}
+.promo-button--wrap.sort-buttons {
+  display: flex;
+  margin: 0 0 0 auto;
+}
+.pre--sort-buttons {
+  display: none;
+  white-space: nowrap;
+  font-size: 18px;
+  color: #7f7f7f;
+  line-height: 18px;
+  padding: 10px 5px 10px 0;
+  @include breakpoint(large) {
+    display: block;
+  }
+}
+.pr-sort--button.all-promo-room {
+  font-family: Roboto, Arial, sans-serif;
+  padding: 0;
+  margin: 0 0 0 10px;
+  width: auto;
+  min-width: 122px;
+  box-shadow: none;
+  text-align: right;
+  background-color: transparent;
+  outline: none;
+  &::after {
+    display: inline-block;
+    position: relative;
+    content: '';
+    top: -2px;
+    right: 0;
+    margin-left: 6px;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+  }
+}
+.pr-sort--button.all-promo-room:hover {
+  background-color: transparent;
+  color: #a5a5a5;
+}
+.pr-sort--button.all-promo-room:active,
+.pr-sort--button.all-promo-room.is-checked {
+  color: #333;
+  outline: none;
+}
+.pr-sort--button.date-promo {
+  font-family: Roboto, Arial, sans-serif;
+  padding: 0;
+  margin: 0 0 0 10px;
+  width: auto;
+  min-width: 122px;
+  box-shadow: none;
+  text-align: right;
+  background-color: transparent;
+  outline: none;
+  &::after {
+    display: inline-block;
+    position: relative;
+    content: '';
+    top: -2px;
+    right: 0;
+    margin-left: 6px;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+  }
+}
+.pr-sort--button.date-promo:hover {
+  background-color: transparent;
+  color: #a5a5a5;
+}
+.pr-sort--button.date-promo:active,
+.pr-sort--button.date-promo.is-checked {
+  color: #333;
+  outline: none;
+}
+.logo-placeholder {
+  width: 100%;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 188px;
+  background-image: url(/aimg/rooms/gt-logo-new.svg);
+}
+.rs-main-header--wrap {
+  width: 100%;
+  max-width: 1235px;
+  padding: 30px 10px 10px;
+  background-color: #fff;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.05);
+  @include breakpoint(large) {
+    padding: 30px 30px 10px;
+  }
+}
+.rs-promo-header--wrap {
+  width: 100%;
+  max-width: 1235px;
+  margin: 0 0 25px;
+  .rs-header--promo {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
+}
+.rs-subheader--promo {
+  font-size: 16px;
+  color: #606060;
+  @include breakpoint(large) {
+    font-size: 18px;
+  }
+}
+.header-element-item--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include breakpoint(xlarge) {
+    flex-wrap: nowrap;
+  }
+}
+.header-element-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 10px 0;
+  margin: 0 0 20px;
+  background-color: #f4f4f4;
+  width: 100%;
+  @include breakpoint(xlarge) {
+    width: 49%;
+  }
+  &:hover .a-promo-link--date {
+    color: #e31e26;
+  }
+}
+.grid {
+  width: 100%;
+  max-width: 1235px;
+}
+.grid-sizer {
+  width: 100%;
+  @include breakpoint(medium) {
+    width: 49%;
+  }
+}
+// fix old 1200px breakpoint
+@media screen and (min-width: 75em) {
+  .grid-sizer {
+    width: 24%;
+  }
+}
+//
+.element-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px;
+  padding: 5px 30px;
+  color: #333;
+  background: #fff;
+  width: 100%;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, .05);
+  @include breakpoint(medium) {
+    width: 49%;
+  }
+}
+// fix old 1200px breakpoint
+@media screen and (min-width: 75em) {
+  .element-item {
+    width: 24%;
+  }
+}
+//
+.element-item.f-date {
+  flex-direction: row;
+  padding: 0;
+  width: 100%;
+  @include breakpoint(medium) {
+    width: 100%;
+  }
+  @include breakpoint(xlarge) {
+    width: 49%;
+  }
+}
+// fix old 1200px breakpoint
+@media screen and (min-width: 75em) {
+  .element-item {
+    &.f-date {
+      width: 49%;
+    }
+  }
+}
+//
+.gutter-sizer {
+  width: 0;
+  @include breakpoint(medium) {
+    width: 2%;
+  }
+}
+// fix old 1200px breakpoint
+@media screen and (min-width: 75em) {
+  .gutter-sizer {
+    width: 1.33%;
+  }
+}
+//
+.logo-date--wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  padding: 10px;
+  margin: 0 0 0 auto;
+  background-color: #f4f4f4;
+  @include breakpoint(large) {
+    width: 200px;
+  }
+}
+.logo-placeholder--date {
+  width: 100%;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100%;
+  background-color: #fff;
+  background-image: url(/aimg/rooms/gt-logo-new.svg);
+  @include breakpoint(large) {
+    height: 70px;
+  }
+}
+.header-link-date--wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+.link-date--wrap {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+.promo-offer--head {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #ef413e;
+  margin: 0 0 10px;
+}
+.a-promo-link--date {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  width: 100%;
+  color: #333;
+  @include breakpoint(large) {
+    font-size: 18px;
+  }
+  &:hover {
+    color: #e31e26;
+  }
+}
+// promo room page
+.room-promo-heading {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #333;
+  width: 100%;
+  max-width: 1235px;
+  margin: 0 0 24px;
+  @include breakpoint(large) {
+    font-size: 28px;
+  }
+}

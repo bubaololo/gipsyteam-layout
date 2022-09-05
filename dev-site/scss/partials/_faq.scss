@@ -1,0 +1,87 @@
+.faq-wrap {
+  width: 100%;
+  max-width: 1094px;
+  padding: 30px 15px;
+  background-color: #f7f7f7;
+  @include breakpoint(large) {
+    padding: 50px 40px;
+  }
+  h2 {
+    font-family: $condensed-font;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    color: #666;
+    margin: 0 0 10px;
+    padding: 0 0 0 25px;
+    text-transform: uppercase;
+    @include breakpoint(large) {
+      font-size: 24px;
+      margin: 0 0 19px;
+      padding: 0 0 0 38px;
+    }
+  }
+}
+.faq-section {
+  margin: 0 0 38px;
+  @include breakpoint(large) {
+    margin: 0 0 68px;
+  }
+}
+.faq-button {
+  position: relative;
+  font-family: $condensed-font;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #333;
+  cursor: pointer;
+  padding: 12px 5px 12px 25px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  display: block;
+  border-bottom: 1px solid #e0e0e0;
+  @include breakpoint(large) {
+    font-size: 18px;
+    padding: 14px 15px 14px 38px;
+  }
+  &::before {
+    position: absolute;
+    top: 18px;
+    left: 5px;
+    width: 10px;
+    height: 6px;
+    content: '';
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-image: url(#{$images}/faq-dropdown.svg);
+    @include breakpoint(large) {
+      top: 22px;
+      left: 10px;
+    }
+  }
+  &.ui-state-active {
+    border-color: transparent;
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+}
+.faq-item {
+  display: none;
+  padding: 10px 5px;
+  border-bottom: 1px solid #e0e0e0;
+  @include breakpoint(large) {
+    padding: 20px 15px 10px 38px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #333;
+    margin: 0 0 24px;
+  }
+  a {
+    text-decoration: underline;
+  }
+}

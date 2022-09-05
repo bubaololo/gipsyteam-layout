@@ -1,0 +1,451 @@
+// vip room page
+.vipview-head {
+  padding: 50px 15px 30px;
+  @include breakpoint(large) {
+    padding: 50px 15px 60px;
+  }
+}
+.vipview-head--return {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1196px;
+  margin: 0 auto;
+  padding: 0 15px;
+  a {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #808080;
+    padding: 0 0 0 35px;
+    background-repeat: no-repeat;
+    background-position: left 50%;
+    background-size: 24px;
+    background-image: url(/aimg/rooms/icon-arrow-back.svg);
+  }
+}
+.vipview-head--logo {
+  width: 100%;
+  max-width: 1196px;
+  margin: 20px auto 0;
+  text-align: center;
+  @include breakpoint(large) {
+    margin: 75px auto 0;
+    min-height: 140px;
+  }
+}
+.vipview-head--line {
+  width: 100%;
+  max-width: 1105px;
+  height: 20px;
+  margin: 0 auto 20px;
+  border-bottom: 1px solid #808080;
+  @include breakpoint(large) {
+    margin: 0 auto 40px;
+  }
+}
+.vipview-head--list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1196px;
+  margin: 0 auto;
+  @include breakpoint(large) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  li {
+    font-size: 22px;
+    align-items: center;
+    @include breakpoint(large) {
+      padding: 0 10px;
+    }
+  }
+}
+.vipview-head--country {
+  display: flex;
+  span {
+    display: inline-flex;
+    width: 26px;
+    height: 26px;
+    margin: 0 8px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 26px;
+  }
+}
+//
+.vipview-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #979797;
+  background-image: url(/aimg/rooms/pattern-500.png);
+  @include breakpoint(xlarge) {
+    flex-direction: row;
+    justify-content: center;
+    padding: 60px 15px;
+  }
+  &::before {
+    position: absolute;
+    top: -16px;
+    left: calc(50% - 16px);
+    width: 0;
+    height: 0;
+    content: "";
+    border-width: 0 16px 16px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: #979797;
+    z-index: 1;
+  }
+  &--item {
+    max-width: 370px;
+    margin: 0 0 20px;
+    @include breakpoint(xlarge) {
+      margin: 0 30px 0 0;
+    }
+    &:nth-last-of-type(1) {
+      margin: 0;
+    }
+  }
+}
+//
+.vipview-offer {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 40px 15px;
+  @include breakpoint(large) {
+    padding: 65px 15px 90px;
+  }
+  &--heading {
+    font-size: 22px;
+    color: #000;
+    margin: 0 0 20px;
+    text-align: center;
+    @include breakpoint(large) {
+      font-size: 28px;
+    }
+  }
+}
+.vipview-offer--list {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 20px 0;
+  list-style: none;
+  columns: 1;
+  @include breakpoint(xlarge) {
+    columns: 2;
+    padding: 30px 0 20px;
+  }
+  >li {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 15px 30px;
+    padding: 0;
+    @include breakpoint(xlarge) {
+      display: inline-block;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0 0 20px 40px;
+    }
+    &::before {
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      top: 0;
+      left: -30px;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 20px;
+      background-image: url(/aimg/rooms/icon-green-mark.svg);
+      @include breakpoint(xlarge) {
+        height: 30px;
+        width: 30px;
+        left: -40px;
+        background-size: 30px;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+      border-bottom: 1px dashed #005581;
+    }
+  }
+}
+.vipview-offer--sublist {
+  margin: 0;
+  padding: 5px 0 0;
+  list-style: none;
+  li {
+    font-size: 16px;
+    &::before {
+      display: inline-block;
+      width: 16px;
+      margin: 0 0 0 -16px;
+      content: "●";
+      color: #36933e;
+    }
+  }
+}
+//
+.vipview-offer--buttom {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+.vipview-offer--mail {
+  font-size: 18px;
+  position: relative;
+  margin: 0 12px;
+  padding: 19px 24px 19px 67px;
+  text-decoration: none;
+  color: #555;
+  background-color: #ebebeb;
+  background-repeat: no-repeat;
+  background-position: 20px 50%;
+  background-image: url(/aimg/rooms/icon-vip-mail-gray.png);
+}
+// alt contact
+.v-alt-contact--wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto 50px;
+  padding: 60px 0 30px;
+  background-color: #fff;
+}
+.cta-chat--wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 35px;
+}
+.vip-cta-button {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 57px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 15px;
+  padding: 0 0 0 75px;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 3px solid #126f92;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  &_skype {
+    width: 220px;
+    margin: 0;
+    background-color: #019bd4;
+    background-image: url(/aimg/rooms/skype-logo.svg);
+    background-position: 20px 50%;
+    background-size: 35px;
+  }
+}
+.contact-icons--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+.contact-icons--call {
+  display: none;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 20px 0 0;
+  @include breakpoint(large) {
+    display: flex;
+  }
+}
+.messenger-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 25px;
+  &:nth-last-of-type(1) {
+    margin: 0;
+  }
+  &_phone {
+    background-size: 20px;
+    background-image: url(/aimg/rooms/phone-gray.svg);
+  }
+  &_viber {
+    background-image: url(/aimg/rooms/viber-gray.svg);
+  }
+  &_whatsapp {
+    background-image: url(/aimg/rooms/whatsapp-gray.svg);
+  }
+  &_telegram {
+    background-image: url(/aimg/rooms/telegram-gray.svg);
+  }
+}
+//
+.v-regstep--promocode {
+  font-size: 26px;
+  display: inline-block;
+  margin: 10px 0 0;
+  padding: 4px 15px;
+  color: #000;
+  border: 1px dashed #f00;
+  border-radius: 2px;
+}
+.v-reg--heading {
+  font-size: 22px;
+  color: #000;
+  margin: 20px 0;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 28px;
+    margin: 20px 0 25px;
+  }
+}
+.v-regsteps--wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto 50px;
+  background-color: #fff;
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
+}
+.v-regstep--number {
+  height: 60px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 54px;
+  .v-regstep--login & {
+    background-image: url(/aimg/rooms/v-step-1-white.svg);
+  }
+  .v-regstep--install & {
+    background-image: url(/aimg/rooms/v-step-2-white.svg);
+  }
+}
+.v-regstep--login {
+  flex-basis: 50%;
+  min-height: 330px;
+  padding: 40px 0 20px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  @include breakpoint(large) {
+    border-bottom: 0;
+    border-right: 1px solid #eee;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.4;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+.v-regstep--install {
+  flex-basis: 50%;
+  min-height: 330px;
+  padding: 40px 15px 20px;
+  text-align: center;
+  background-color: #fff;
+  p {
+    font-size: 18px;
+    line-height: 1.4;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+.vip-skype--wrap {
+  margin: 21px 0 10px;
+}
+.icon-vip-skype {
+  font-size: 18px;
+  display: inline-block;
+  padding: 5px 10px 3px 35px;
+  text-decoration: none;
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 24px;
+  background-image: url(/aimg/rooms/skype-logo-gray.svg);
+}
+.v-contact--call {
+  font-size: 18px;
+  margin: 0 0 15px;
+  color: #000;
+}
+.v-contact-icon--wrap {
+  display: flex;
+  justify-content: center;
+}
+.v-messenger-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 15px 0 0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 25px;
+  &:nth-last-of-type(1) {
+    margin: 0;
+  }
+  &_viber {
+    background-image: url(/aimg/rooms/viber-gray.svg);
+  }
+  &_whatsapp {
+    background-image: url(/aimg/rooms/whatsapp-gray.svg);
+  }
+  &_telegram {
+    background-image: url(/aimg/rooms/telegram-gray.svg);
+  }
+}
+.form-nickname {
+  padding: 10px 0;
+}
+.form-nickname--note {
+  font-size: 17px;
+  line-height: 27px;
+  margin: 0 0 15px;
+  color: #000;
+}
+.form-nickname--text-field {
+  font-size: 15px;
+  width: 170px;
+  padding: 8px 5px;
+  color: #000;
+  border: 1px solid #d9cca3;
+  border-right: 0;
+  border-radius: 3px 0 0 3px;
+  outline: none;
+  background-color: #fff;
+}
+.form-nickname--send-button {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 35px;
+  height: 35px;
+  margin-left: -4px;
+  padding: 0 8px;
+  color: #fff;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  outline: none;
+  background-color: #e84c22;
+}

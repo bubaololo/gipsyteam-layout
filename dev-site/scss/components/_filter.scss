@@ -1,0 +1,67 @@
+// filters
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px 0 0;
+  &_nowrap {
+    flex-wrap: nowrap;
+  }
+  &_right {
+    // additional right margin
+    @include breakpoint(large) {
+      margin: 0 15px 0 0;
+    }
+  }
+  &_right_auto {
+    margin: 0 auto 0 0;
+  }
+  &_right_small {
+    margin: 0 5px 0 0;
+  }
+  &--item {
+    position: relative;
+    font-size: 14px;
+    line-height: 22px;
+    color: #202020;
+    white-space: nowrap;
+    padding: 0 5px;
+    margin: 0 5px 5px;
+    &::before {
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: -5px;
+      content: "";
+      border-style: solid;
+      border-width: 11px 5px 11px 0;
+      border-color: transparent;
+    }
+    &::after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      right: -5px;
+      content: "";
+      border-style: solid;
+      border-width: 11px 0 11px 5px;
+      border-color: transparent;
+    }
+    &_active {
+      color: #fff;
+      background-color: #e50c2c;
+      &::before {
+        border-color: transparent #e50c2c transparent transparent;
+      }
+      &::after {
+        border-color: transparent transparent transparent #e50c2c;
+      }
+    }
+    strong {
+      margin: 0 0 0 4px;
+    }
+  }
+}
+//

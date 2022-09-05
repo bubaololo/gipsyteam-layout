@@ -1,0 +1,211 @@
+// fund grid section
+.fund-grid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 0 24px;
+  @include breakpoint(large) {
+    padding: 0 30px;
+  }
+}
+.fund-grid--wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  width: 100%;
+  max-width: 1034px;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+.fund-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  background-color: #fff;
+  @include breakpoint(large) {
+    padding: 24px;
+    &:hover {
+      box-shadow: 0 6px 15px rgba(68, 8, 8, .1), 0 26px 25px -17px rgba(68, 8, 8, .3);
+    }
+  }
+}
+.fund-card--top {
+  width: 100%;
+  display: flex;
+  gap: 0 8px;
+  margin: 0 0 21px;
+  @include breakpoint(large) {
+    gap: 0 24px;
+  }
+}
+.fund-card--logo {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid #e7e7e7;
+  @include breakpoint(large) {
+    width: 86px;
+    height: 86px;
+  }
+  svg {
+    width: 100%;
+    max-width: 46px;
+    height: 48px;
+    @include breakpoint(large) {
+      max-width: 50px;
+      height: 60px;
+    }
+  }
+  // tmp fix for dark theme
+  svg {
+    [theme='dark'] .market-wrap & {
+      --logo-color-1: initial;
+      --logo-color-2: initial;
+    }
+  }
+  //
+}
+.fund-card--wrap {
+  display: flex;
+  flex-direction: column;
+}
+.fund-card--heading {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #202020;
+  margin: 0 0 2px;
+  @include breakpoint(large) {
+    font-size: 24px;
+    margin: 0 0 4px;
+  }
+}
+.fund-card--lead {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0 0 8px;
+  @include breakpoint(large) {
+    font-size: 16px;
+    margin: 0 0 13px;
+  }
+}
+.fund-card--tag {
+  display: flex;
+  gap: 0 4px;
+}
+.fund-card--label {
+  font-size: 13px;
+  line-height: 1;
+  color: #202020;
+  padding: 3px 7px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 40px;
+  background-color: #e4e5e7;
+}
+.fund-card--list {
+  margin: 0 0 27px;
+  padding: 0 0 0 24px;
+  @include breakpoint(large) {
+    margin: 0 0 32px;
+  }
+  li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #202020;
+    list-style-position: outside;
+    list-style-type: disc;
+    &:not(:last-child) {
+      margin: 0 0 6px;
+      @include breakpoint(large) {
+        margin: 0 0 8px;
+      }
+    }
+  }
+}
+.fund-card--bottom {
+  display: flex;
+  width: 100%;
+  margin: auto 0 0;
+}
+.fund-card--link {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #e51e25;
+  text-align: center;
+  width: 100%;
+  padding: 13px 24px;
+  border: 1px solid #f49fa2;
+  border-radius: 5px;
+  @include breakpoint(large) {
+    .fund-card:hover & {
+      color: #fff;
+      border-color: #e51e25;
+      background-color: #e51e25;
+    }
+  }
+}
+// fund mail
+.fund-mail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  padding: 16px 0;
+  @include breakpoint(large) {
+    padding: 58px 0 0;
+  }
+}
+.fund-mail--icon {
+  width: 78px;
+  height: 80px;
+  margin: 0 0 10px;
+  flex-shrink: 0;
+  @include breakpoint(large) {
+    width: 76px;
+    height: 78px;
+    margin: 0 0 12px;
+  }
+}
+.fund-mail--inner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 18px;
+  @include breakpoint(large) {
+    max-width: 420px;
+    margin: 0 0 24px;
+  }
+}
+.fund-mail--text {
+  font-size: 18px;
+  line-height: 1.3;
+  color: #202020;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 24px;
+  }
+}
+.fund-mail--link {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin: auto 0 0;
+  padding: 14px 24px;
+  border-radius: 5px;
+  background-color: #202020;
+}

@@ -1,0 +1,249 @@
+.vacancy-wrap {
+  // theme = dark
+  --vc-bg-color: var(--layer-2a-color, #fff);
+  --vc-header-color: var(--text-2-color, #000);
+  --vc-item-color: var(--text-2-color, #000);
+  --vc-item-bg-color: var(--layer-3-color, #fff);
+  --vc-item-border-color: var(--line-1-color, #e3e3e3);
+  --vc-item-button-bg-color: var(--layer-3-color, #f4f4f4);
+  --vc-textarea-bg-color: var(--layer-2-color, #fff);
+  --vc-textarea-border-color: var(--line-1-color, #e3e3e3);
+  //
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  padding: 0 24px 40px;
+  background-color: var(--vc-bg-color);
+  @include breakpoint(xlarge) {
+    padding: 0 30px 64px;
+  }
+}
+.vacancy-head {
+  display: flex;
+  padding: 56px 0 36px;
+  width: 100%;
+  max-width: 1246px;
+  @include breakpoint(large) {
+    padding: 70px 0 56px;
+  }
+}
+.vacancy-heading {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+  color: var(--vc-header-color);
+  margin: 0;
+  @include breakpoint(large) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+.vacancy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1246px;
+  padding: 0;
+  margin: 0 auto;
+}
+.vacancy-section {
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 36px 16px;
+  border-radius: 10px;
+  background-color: var(--vc-item-bg-color);
+  border: 1px solid var(--vc-item-border-color);
+  @include breakpoint(large) {
+    padding: 36px 32px;
+  }
+  &_active {
+    box-shadow: 0 10px 60px rgba(0, 0, 0, .1);
+  }
+}
+.vacancy-button {
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ec314d;
+  cursor: pointer;
+  padding: 4px 0 4px 56px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  display: block;
+  @include breakpoint(large) {
+    font-size: 20px;
+    padding: 4px 0 4px 56px;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    content: '';
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    background-color: var(--vc-item-button-bg-color);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 16px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 16 16\'%3E%3Cpath fill=\'%23C4C4C4\' d=\'M7 0h2v16H7z\' /%3E%3Cpath fill=\'%23aaa\' d=\'M16 7v2H0V7z\' /%3E%3C/svg%3E');
+  }
+  &.ui-state-active {
+    &::before {
+      border-color: #ec314d;
+      background-color: transparent;
+      background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 16 2\'%3E%3Cpath fill=\'%23ec314d\' d=\'M16 0v2H0V0z\' /%3E%3C/svg%3E');
+    }
+  }
+}
+.vacancy-item {
+  display: none;
+  padding: 32px 0 0;
+  color: var(--vc-item-color);
+  @include breakpoint(large) {
+    padding: 32px 0 0 56px;
+  }
+  // plain page
+  .vacancy-wrap_plain & {
+    display: block;
+    @include breakpoint(large) {
+      padding: 32px 0 0;
+    }
+    h2 {
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 700;
+      color: var(--vc-item-color);
+      margin: 0 0 32px;
+      @include breakpoint(large) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      color: var(--vc-item-color);
+      margin: 24px 0 12px;
+      @include breakpoint(large) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+  //
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 24px;
+    a {
+      color: var(--vc-item-color);
+      text-decoration: underline;
+    }
+  }
+  ul {
+    margin: 24px 0 16px;
+    padding: 8px 0;
+    .vacancy-wrap_plain & {
+      margin: 12px 0 24px;
+      padding: 12px 0;
+    }
+    li {
+      display: flex;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 0 8px;
+      &::before {
+        content: '';
+        width: 9px;
+        height: 9px;
+        flex-shrink: 0;
+        margin: 0 12px 0 0;
+        transform: translateY(7px);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 9px;
+        background-image: url('data:image/svg+xml,%3Csvg width=\'9\' height=\'9\' viewBox=\'0 0 9 9\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect x=\'4.24265\' y=\'0.707107\' width=\'5\' height=\'5\' rx=\'0.5\' transform=\'rotate(45 4.24265 0.707107)\' stroke=\'%23000\' /%3E%3C/svg%3E');
+        [theme='dark'] & {
+          background-image: url('data:image/svg+xml,%3Csvg width=\'9\' height=\'9\' viewBox=\'0 0 9 9\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect x=\'4.24265\' y=\'0.707107\' width=\'5\' height=\'5\' rx=\'0.5\' transform=\'rotate(45 4.24265 0.707107)\' stroke=\'%23fff\' /%3E%3C/svg%3E');
+        }
+      }
+    }
+  }
+}
+// submit form
+.vacancy-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.vacancy-label {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 8px;
+  color: var(--vc-item-color);
+  font-weight: 700;
+}
+.vacancy-text {
+  resize: vertical;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--vc-item-color);
+  width: 100%;
+  height: 160px;
+  margin: 0 0 16px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--vc-textarea-border-color);
+  background-color: var(--vc-textarea-bg-color);
+  appearance: none;
+}
+.vacancy-field {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--vc-item-color);
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0 0 32px;
+  border: 1px solid var(--vc-textarea-border-color);
+  border-radius: 10px;
+  background-color: var(--vc-textarea-bg-color);
+  appearance: none;
+}
+.vacancy-submit {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fff;
+  padding: 12px 64px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  border: 0;
+  appearance: none;
+  border-radius: 10px;
+  background-color: #ec314d;
+}
+.vacancy-more {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ec314d;
+  margin: 8px 0 0;
+  padding: 11px 30px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  appearance: none;
+  border-radius: 10px;
+  border: 1px solid #ec314d;
+}

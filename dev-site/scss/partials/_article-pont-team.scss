@@ -1,0 +1,300 @@
+// Pont team table for article
+.teamgrid {
+  // theme = dark
+  --tmg-border-color: var(--line-1-color, #e0e0e0);
+  --tmg-score-color: var(--text-2-color, #000);
+  --tmg-place-color: var(--text-2-color, #000);
+  --tmg-name-color: var(--text-2-color, #000);
+  --tmg-button-bg-color: var(--layer-4-color, #fafafa);
+  //
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  &--item {
+    display: grid;
+    grid-template-columns: 25px minmax(100px, 1fr) 50px;
+    grid-column-gap: 5px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--tmg-border-color);
+    @include breakpoint(large) {
+      grid-template-columns: 40px minmax(100px, 1fr) 100px;
+      padding: 12px 10px;
+    }
+    &:last-child {
+      border-color: transparent;
+    }
+  }
+  &--head {
+    font-size: 11px;
+    line-height: 16px;
+    color: #757575;
+    text-transform: uppercase;
+    &_right {
+      text-align: right;
+    }
+  }
+  &--place {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--tmg-place-color);
+    @include breakpoint(large) {
+      font-size: 16px;
+    }
+    &.top {
+      font-weight: 700;
+      color: #a40000;
+    }
+  }
+  &--offer {
+    display: grid;
+    @include breakpoint(large) {
+      grid-row-gap: 5px;
+    }
+    .teamgrid--name {
+      font-weight: 400;
+      text-decoration: none;
+      color: var(--tmg-name-color);
+    }
+  }
+  &--name {
+    display: flex;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--tmg-name-color);
+    @include breakpoint(large) {
+      font-size: 16px;
+    }
+    &.top {
+      font-weight: 700;
+      color: #a40000;
+    }
+  }
+  &--button {
+    position: relative;
+    flex-shrink: 0;
+    width: 23px;
+    height: 23px;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+    background-color: var(--tmg-button-bg-color);
+    &::before {
+      position: absolute;
+      top: 6px;
+      left: 11px;
+      width: 1px;
+      height: 11px;
+      content: '';
+      background-color: #bdbdbd;
+    }
+    &::after {
+      position: absolute;
+      top: 11px;
+      left: 6px;
+      width: 11px;
+      height: 1px;
+      content: '';
+      background-color: #bdbdbd;
+    }
+    .active & {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &--score {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--tmg-score-color);
+    text-align: right;
+    @include breakpoint(large) {
+      font-size: 16px;
+    }
+    &.top {
+      font-weight: 700;
+      color: #a40000;
+    }
+  }
+}
+//
+.hidgrid {
+  display: flex;
+  flex-direction: column;
+  &--item {
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) 45px;
+    grid-column-gap: 5px;
+    @include breakpoint(large) {
+      grid-template-columns: minmax(100px, 1fr) 100px;
+    }
+    &_head {
+      margin: 0 0 5px;
+      padding: 5px 0 0;
+      border-bottom: 1px solid var(--tmg-border-color);
+    }
+  }
+  &--head {
+    font-size: 11px;
+    line-height: 16px;
+    color: #757575;
+    text-transform: uppercase;
+    &_right {
+      text-align: right;
+    }
+  }
+  &--name {
+    display: flex;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--tmg-name-color);
+  }
+  &--score {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--tmg-score-color);
+    text-align: right;
+  }
+}
+//
+.opengrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  margin: 0 0 30px;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr;
+  }
+  &--item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px 15px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    a {
+      text-decoration: none;
+    }
+  }
+  &--teamhead {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 5px;
+    background-color: #909090;
+  }
+}
+//
+.tmform-wrap {
+  width: 100%;
+  display: flex;
+  padding: 5px 0 9px;
+  &_line {
+    padding: 0;
+  }
+}
+.tmform-button {
+  font-size: 14px;
+  line-height: 20px;
+  border-bottom: 1px solid #757575;
+  &_pull {
+    margin: auto 0 0;
+  }
+}
+.tmform-form {
+  width: 100%;
+  &_pad {
+    padding: 10px 0 0;
+  }
+  &_reset {
+    padding: 0;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+.tmform-row {
+  display: flex;
+  margin: 0 0 10px;
+  align-items: flex-start;
+}
+.tmform-default {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 420px;
+}
+.tmform-label {
+  font-size: 14px;
+  line-height: 20px;
+  color: #616161;
+  margin: 0 0 2px;
+}
+.tmform-field {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  color: #202020;
+  width: 100%;
+  max-width: 420px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  align-self: start;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &::placeholder {
+    color: #757575;
+  }
+}
+.tmform-save {
+  font-size: 12px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #fff;
+  height: 34px;
+  margin: 5px 0;
+  padding: 0 20px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 3px;
+  background-color: #000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.tmform-cancel {
+  font-size: 12px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #424242;
+  height: 34px;
+  margin: 5px 0;
+  padding: 0 20px;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  background-color: #efefef;
+  &_right {
+    margin: 5px 0 5px 15px;
+  }
+}
+//
+.tmform-list {
+  margin: 0;
+  padding: 5px 0;
+  list-style: none;
+}
+.tmform-member {
+  font-size: 14px;
+  line-height: 20px;
+  color: #424242;
+}

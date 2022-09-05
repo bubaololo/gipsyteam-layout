@@ -1,0 +1,28 @@
+{
+  "syntax": "css",
+  "rules": {
+    "declaration-block-no-shorthand-property-overrides": [true, {
+      "message": "Свойство это неочевидно перебивает другое для селектора этого"
+    }],
+    "selector-max-compound-selectors": [4, {
+      "message": "Селектор более чем 4-составной не хочешь ты",
+      "severity": "warning"
+    }],
+    "selector-no-qualifying-type": [true, {
+      "message": "Возможно, перенасыщенный селектор (использован селектор типа)",
+      ignore: ["attribute"],
+      "severity": "warning"
+    }],
+    "selector-type-no-unknown": [true, {
+      "message": "Селектора такого на светлой стороне силы нет"
+    }],
+    "max-nesting-depth": [3, {
+      "message": "Вложения более 3 уровней — на тёмную сторону путь",
+      "ignore": ["blockless-at-rules"],
+      "severity": "warning"
+    }],
+    "no-duplicate-selectors": [true, {
+      "message": "Селекторы дублировать не хочешь ты"
+    }],
+  }
+}

@@ -1,0 +1,155 @@
+// widget rakerace
+.widget-rr {
+  width: 100%;
+  max-width: 615px;
+  @include breakpoint(xlarge) {
+    max-width: 1276px;
+  }
+}
+.widget-rr--head {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  padding: 0 0 0 16px;
+  margin: 0 0 13px;
+  @include breakpoint(medium) {
+    padding: 0;
+  }
+}
+.widget-rr--icon {
+  width: 33px;
+  height: 33px;
+  margin: 0 8px 0 0;
+}
+.widget-rr--heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: $condensed-font;
+  font-size: 23px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--rr-head-color, #333);
+  text-transform: uppercase;
+  svg {
+    position: absolute;
+    top: 4px;
+    right: -16px;
+    width: 10px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+}
+.widget-rr--subheader {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px 0 16px;
+  margin: 0 0 16px;
+  background-color: #f44308;
+}
+.widget-rr--switch {
+  display: flex;
+}
+.widget-rr--button {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  color: #efefef;
+  text-transform: uppercase;
+  padding: 3px 4px;
+  margin: 0 4px;
+  border-radius: 3px;
+  &.active {
+    background-color: #282828;
+  }
+}
+.widget-rr--logo {
+  width: 87px;
+  height: 18px;
+  margin: 0 0 0 auto;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 87px;
+  background-image: url(#{$images}/partypoker-rr.png);
+}
+.widget-rr--inner {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 10px;
+  background-color: #2a2a2a;
+}
+.widget-rr--item {
+  padding: 4px 15px;
+}
+// grid
+.grid-rr {
+  display: grid;
+  grid-template-columns: 55px 1fr 45px;
+  grid-gap: 0 10px;
+  line-height: 25px;
+}
+//
+.grid-rr--num {
+  grid-column: 1;
+  font-size: 16px;
+  color: #bfbfbf;
+  padding: 0 0 0 15px;
+}
+.grid-rr--nick {
+  grid-column: 2;
+  font-size: 16px;
+  color: #fff;
+  overflow: hidden;
+}
+.grid-rr--score {
+  grid-column: 3;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  &_top {
+    color: #f44308;
+  }
+}
+//
+.widget-rr--wrap {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 24px;
+  background-color: #2a2a2a;
+}
+.rr-control {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  &::before,
+  &::after {
+    flex-grow: 1;
+    height: 1px;
+    content: '';
+    background-color: #f44308;
+    top: 0;
+  }
+}
+.rr-control--button {
+  width: 28px;
+  height: 28px;
+  margin: 0 10px;
+  flex-shrink: 0;
+  svg {
+    --i-color1: #f4430a;
+    --i-color2: #fff;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+  }
+  &_disabled {
+    cursor: auto;
+    pointer-events: none;
+    opacity: .35;
+  }
+}

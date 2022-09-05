@@ -1,0 +1,25 @@
+// activity widget
+.widget-activity {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 615px;
+  margin: 0 auto 32px;
+  padding: 15px 0 0;
+  @include breakpoint(xlarge) {
+    padding: 15px 15px 0;
+    max-width: 1276px;
+  }
+  &--grid {
+    display: grid;
+    grid-template-columns: minmax(290px, 1fr);
+    grid-gap: 20px 0;
+    width: 100%;
+    max-width: 824px;
+    @include breakpoint(xlarge) {
+      grid-template-columns: repeat(3, minmax(290px, 1fr));
+      grid-gap: 0 20px;
+      max-width: 1276px;
+    }
+  }
+}

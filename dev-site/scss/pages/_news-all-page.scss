@@ -1,0 +1,220 @@
+// news-all page
+.news-all {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 15px 20px;
+}
+.news-all--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 10px 20px;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 402px;
+  @include breakpoint(large) {
+    max-width: 824px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  @include breakpoint(xlarge) {
+    max-width: 1246px;
+  }
+}
+//
+.news-element {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.news-element--image {
+  position: relative;
+  width: 100%;
+  &::before {
+    display: table;
+    padding-bottom: 57.236%;
+    content: "";
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // fix
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  // fix for blogs images
+  .news-all_blogs & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+    img {
+      position: static;
+      object-fit: contain;
+      max-width: 100px;
+    }
+  }
+}
+.news-element--head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 19px 15px;
+  border: 1px solid #e5e5e5;
+  border-top: 0;
+  flex-grow: 1;
+  @include breakpoint(large) {
+    padding: 23px 15px 25px;
+  }
+  .media-meta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+}
+.news-element--heading {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin: 0 0 10px;
+  @include breakpoint(large) {
+    margin: 0 0 7px;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    z-index: 1;
+  }
+}
+// news wide
+.news-wide {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  @include breakpoint(large) {
+    padding: 0 15px 20px;
+  }
+  @include breakpoint(xlarge) {
+    max-width: 100%;
+  }
+  &--inner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 1246px;
+  }
+}
+//
+.wide-item {
+  position: relative;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 15px auto;
+  grid-template-areas:
+    "image ."
+    "image meta"
+    "title title"
+    "content content";
+  @include breakpoint(large) {
+    padding: 0 20px 0 0;
+    grid-column-gap: 20px;
+    grid-template-columns: 236px 1fr;
+    grid-template-rows: 40px auto;
+    grid-template-areas:
+      "image ."
+      "image title"
+      "image content"
+      "image meta"
+      "image .";
+  }
+  &:not(:last-child) {
+    margin: 0 0 10px;
+  }
+  &--image {
+    grid-area: image;
+    display: flex;
+    width: 100px;
+    height: 80px;
+    margin: 0 0 12px;
+    @include breakpoint(large) {
+      width: 236px;
+      height: 168px;
+      margin: 0;
+    }
+    img {
+      object-fit: cover;
+      flex-grow: 1;
+    }
+    // fix for blogs images
+    .news-wide_blogs & {
+      align-items: center;
+      justify-content: center;
+      img {
+        object-fit: contain;
+        max-width: 70px;
+        @include breakpoint(large) {
+          max-width: 100px;
+        }
+      }
+    }
+  }
+  &--title {
+    grid-area: title;
+    font-family: $secondary-font;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 10px;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      z-index: 1;
+    }
+  }
+  &--content {
+    grid-area: content;
+    @include breakpoint(large) {
+      margin: 0 0 10px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 22px;
+      color: #202020;
+      margin: 0;
+    }
+  }
+  &--meta {
+    grid-area: meta;
+    display: flex;
+    align-items: flex-start;
+    @include breakpoint(large) {
+      margin: 0 0 15px;
+    }
+    .media-meta--comment {
+      width: 100%;
+      @include breakpoint(large) {
+        width: auto;
+      }
+    }
+  }
+}
+//

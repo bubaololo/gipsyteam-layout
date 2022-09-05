@@ -1,0 +1,64 @@
+// reg-note please register
+.reg-note {
+  display: flex;
+  padding: 0 15px;
+  justify-content: center;
+  width: 100%;
+  &_register {
+    margin: 20px 0;
+  }
+  &--wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 15px;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #e5e5e5;
+    &::before {
+      position: absolute;
+      bottom: -5px;
+      left: 160px;
+      width: 10px;
+      height: 10px;
+      content: "";
+      border: solid #e5e5e5;
+      border-width: 1px 0 0 1px;
+      background-color: #fffdee;
+      transform: rotate(45deg);
+    }
+  }
+  &--heading {
+    font-size: 18px;
+    color: #909090;
+    a {
+      color: #616161;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+  &--subheading {
+    font-size: 18px;
+    color: #000;
+    margin: 0 0 10px;
+  }
+  &--inner {
+    padding: 20px 15px;
+    max-width: 1246px;
+    border: 1px solid #dedede;
+    background-color: #fffdf0;
+    @include breakpoint(large) {
+      padding: 20px 30px;
+    }
+  }
+  &--list {
+    margin: 0;
+    list-style: disc;
+    list-style-position: inside;
+  }
+  &--item {
+    font-size: 14px;
+    color: #616161;
+    margin: 0 0 5px;
+  }
+}
+//

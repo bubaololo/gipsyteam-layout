@@ -1,0 +1,68 @@
+.page-error {
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1306px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #fff;
+  -webkit-font-smoothing: initial;
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 400;
+    color: #a00503;
+    margin: 0 0 10px;
+    @include breakpoint(large) {
+      font-size: 132px;
+      line-height: 120px;
+    }
+  }
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    color: #333;
+    margin: 0 0 18px;
+  }
+  a {
+    font-size: 20px;
+    line-height: 1;
+    color: #a00503;
+    text-decoration: underline;
+  }
+}
+.page-error-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
+}
+.page-error-image {
+  width: 100%;
+  max-width: 225px;
+  margin: 0 0 30px;
+  @include breakpoint(large) {
+    max-width: 450px;
+    margin: 0 30px 0 0;
+  }
+}
+.page-error-info {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.page-error-note {
+  font-size: 14px;
+  line-height: 18px;
+  color: #a00503;
+}

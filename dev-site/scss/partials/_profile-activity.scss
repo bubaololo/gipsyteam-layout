@@ -1,0 +1,271 @@
+// profile-activity
+.profile-activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 5px 0 30px;
+  background-color: #efefef;
+  @include breakpoint(xlarge) {
+    padding: 5px 15px 30px;
+  }
+  &--header {
+    width: 100%;
+    max-width: 1246px;
+    margin: 0 0 20px;
+  }
+  &--heading {
+    font-family: $condensed-font;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #333;
+    padding: 0 15px;
+    text-transform: uppercase;
+    @include breakpoint(xlarge) {
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+  &--grid {
+    display: grid;
+    grid-gap: 0 20px;
+    grid-template-columns: 1fr;
+    align-items: start;
+    width: 100%;
+    max-width: 1246px;
+    @include breakpoint(xlarge) {
+      grid-template-columns: 310px 1fr;
+    }
+  }
+}
+// forum sections and articles
+.activity-sections {
+  display: none;
+  padding: 20px 0 0;
+  @include breakpoint(xlarge) {
+    display: block;
+  }
+  &--heading {
+    font-family: $condensed-font;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #202020;
+    padding: 0 0 8px;
+    margin: 0 0 14px;
+    border-bottom: 1px solid #ccc;
+  }
+  &--list {
+    margin: 0;
+  }
+  &--item {
+    &:not(:last-child) {
+      margin: 0 0 15px;
+    }
+  }
+  &--grid {
+    display: grid;
+    grid-gap: 0 15px;
+    grid-template-columns: 1fr 40px;
+    width: 100%;
+  }
+  &--link {
+    font-size: 15px;
+    line-height: 19px;
+    color: #202020;
+    &:hover {
+      text-decoration: underline;
+    }
+    .activity-sections--item_active & {
+      font-weight: 700;
+      color: #e50c2c;
+    }
+  }
+  &--num {
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 500;
+    color: #606060;
+    text-align: right;
+    .activity-sections--item_active & {
+      font-weight: 700;
+      color: #e50c2c;
+    }
+  }
+}
+// comments
+.activity-comments {
+  display: flex;
+  flex-direction: column;
+  &--top {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 5px;
+  }
+  &--list {
+    margin: 0;
+  }
+  &--item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 17px 15px;
+    background-color: #fff;
+    @include breakpoint(xlarge) {
+      padding: 27px 20px;
+    }
+    &:not(:last-child) {
+      margin: 0 0 10px;
+    }
+  }
+  &--data {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 0 5px;
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+  &--section {
+    font-size: 11px;
+    line-height: 16px;
+    color: #606060;
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+  }
+  &--rate {
+    display: flex;
+  }
+  &--date {
+    font-size: 11px;
+    line-height: 16px;
+    color: #606060;
+    text-transform: uppercase;
+    margin: 0 10px 0 0;
+  }
+  &--icon {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px 0 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 13px;
+    background-image: url(#{$images}/icon-rating.svg);
+  }
+  &--rating {
+    font-size: 11px;
+    line-height: 16px;
+    color: #909090;
+    text-transform: uppercase;
+    &_positive {
+      color: #529410;
+    }
+    &_negative {
+      color: #e31f26;
+    }
+  }
+  &--link {
+    font-family: $secondary-font;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    margin: 0 0 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      z-index: 1;
+    }
+  }
+  &--text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #202020;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  &--pager {
+    display: flex;
+    width: 100%;
+    max-width: 1276px;
+    padding: 15px;
+    margin: 0 auto;
+    @include breakpoint(xlarge) {
+      padding: 15px 0;
+    }
+  }
+}
+// checkbox
+.activity-checkbox {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 6px;
+  z-index: 3;
+  &--input {
+    flex-shrink: 0;
+  }
+}
+// subscribe button
+.profile-subscribe {
+  display: flex;
+  padding: 5px 0;
+  margin: 0 auto 0 0;
+  &--button {
+    font-size: 11px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #606060;
+    height: 32px;
+    padding: 0 8px;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+}
+//
+.activity-selector-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0 0;
+}
+.activity-selector {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 30px;
+  height: 32px;
+  width: 142px;
+  margin: 0 0 5px;
+  padding: 0 8px;
+  color: #202020;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  background-size: 10px;
+  background-image: url(#{$images}/search-angle.svg);
+  background-origin: content-box;
+  -webkit-appearance: none; // selector reset
+  -moz-appearance: none;
+  &_right {
+    margin: 0 5px 5px 0;
+  }
+  &_mobile {
+    display: block;
+    @include breakpoint(xlarge) {
+      display: none;
+    }
+  }
+}

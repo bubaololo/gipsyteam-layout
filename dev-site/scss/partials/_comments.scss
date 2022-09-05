@@ -1,0 +1,203 @@
+// comments
+.comments-best {
+  // theme = dark
+  --comments-heading-color: var(--text-5-color, #333);
+  --comments-arrow-bg-color: var(--layer-3-color, #fff);
+  --comments-arrow-border-color: var(--line-2-color, #e0e0e0);
+  --comments-top-bg-color: var(--layer-5-color, #fff);
+  //
+  padding: 20px 0 0;
+  @include breakpoint(large) {
+    padding: 40px 0 0;
+  }
+  &--inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1276px;
+    margin: 0 auto 15px;
+    padding: 0 15px;
+    @include breakpoint(large) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+.comments-best-heading {
+  font-family: $condensed-font;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  color: var(--comments-heading-color);
+  text-transform: uppercase;
+  margin: 0 0 9px;
+  @include breakpoint(large) {
+    font-size: 23px;
+    margin: 0;
+  }
+}
+.comments-top {
+  display: flex;
+  align-items: center;
+  @include breakpoint(large) {
+    margin: 0 0 0 25px;
+  }
+  &--item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin: 0 6px 0 0;
+    background-color: var(--comments-top-bg-color);
+    cursor: pointer;
+    &_active {
+      box-shadow: inset 0 0 0 2px #e50c2c;
+      &::after {
+        position: absolute;
+        top: 50px;
+        left: 12px;
+        width: 14px;
+        height: 14px;
+        content: '';
+        border: solid var(--comments-arrow-border-color);
+        border-width: 1px 0 0 1px;
+        background-color: var(--comments-arrow-bg-color);
+        transform: rotate(45deg);
+        z-index: 2;
+      }
+    }
+  }
+  &--avatar {
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
+}
+.comments-top--button-next,
+.comments-top--button-prev {
+  display: none;
+  width: 28px;
+  height: 42px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+  z-index: 2;
+  @include breakpoint(large) {
+    display: block;
+  }
+  &_disabled {
+    cursor: auto;
+    pointer-events: none;
+    opacity: .35;
+  }
+}
+.comments-top--button-prev {
+  margin: 0 15px 0 0;
+  background-image: url(#{$images}/slider-hot-prev.svg);
+}
+.comments-top--button-next {
+  margin: 0 0 0 9px;
+  background-image: url(#{$images}/slider-hot-next.svg);
+}
+//
+.comments-list {
+  padding: 20px 0 0;
+  @include breakpoint(large) {
+    padding: 40px 0 0;
+  }
+  &--pager {
+    display: flex;
+    width: 100%;
+    max-width: 1276px;
+    padding: 5px 15px;
+    margin: 0 auto;
+  }
+}
+.comments-list-heading {
+  // theme = dark
+  --comments-heading-color: var(--text-5-color, #333);
+  //
+  font-family: $condensed-font;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  color: var(--comments-heading-color);
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 1276px;
+  margin: 0 auto 11px;
+  padding: 0 0 0 15px;
+  @include breakpoint(large) {
+    font-size: 23px;
+    padding: 0 15px;
+    margin: 0 auto 18px;
+  }
+}
+//
+.comments-editor {
+  padding: 30px 0;
+  overflow: hidden;
+}
+// admin
+.admin-post {
+  // theme = dark
+  --admin-post-border-color: var(--line-1-color, #ccc);
+  //
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 5px;
+  &--editor {
+    width: 100%;
+    font-size: 12px;
+    line-height: 18px;
+    color: #909090;
+    @include breakpoint(large) {
+      margin: 0 0 0 180px;
+    }
+  }
+  &--button {
+    font-size: 12px;
+    line-height: 24px;
+    color: #909090;
+    white-space: nowrap;
+    &_ip {
+      line-height: 26px;
+      margin: 0 auto 0 0;
+    }
+    &_edit {
+      padding: 0 5px;
+      margin: 0 0 0 auto;
+      line-height: 22px;
+      border: 1px solid var(--admin-post-border-color);
+    }
+    &_edit_admin {
+      padding: 0 5px;
+      margin: 0 0 0 auto;
+      line-height: 24px;
+    }
+    &_delete {
+      color: #e57373;
+      padding: 0 5px;
+      line-height: 22px;
+      border: 1px solid var(--admin-post-border-color);
+      margin: 0 0 0 -1px;
+    }
+    &_delete_admin {
+      color: #e57373;
+      padding: 0 5px;
+      line-height: 24px;
+    }
+  }
+  &--check {
+    flex-shrink: 0;
+    margin: 0 0 0 10px;
+  }
+}
+//

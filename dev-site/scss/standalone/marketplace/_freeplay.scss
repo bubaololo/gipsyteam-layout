@@ -1,0 +1,101 @@
+// freeplay section
+.freeplay {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: 0 0 24px;
+  @include breakpoint(large) {
+    padding: 0 30px;
+  }
+  // trainer page override
+  .market-mid & {
+    margin: 0;
+    @include breakpoint(large) {
+      padding: 40px 30px;
+    }
+  }
+  //
+}
+.freeplay--wrap {
+  width: 100%;
+  max-width: 1034px;
+  padding: 30px 24px 26px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  background-image: url(#{$images}/freeplay-bg.jpg);
+  @include breakpoint(large) {
+    border-radius: 10px;
+    min-height: 252px;
+    padding: 32px 24px 32px 275px;
+    background-size: 207px, cover;
+    background-position: 50px 100%, 50%;
+    background-image: url(#{$images}/freeplay-bg1.png), url(#{$images}/freeplay-bg.jpg);
+  }
+}
+.freeplay--inner {
+  width: 100%;
+  margin: 0 0 30px;
+}
+.freeplay--heading {
+  font-family: $secondary-font;
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 32px;
+    line-height: 1.3;
+    text-align: left;
+  }
+}
+.freeplay--subheading {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  @include breakpoint(large) {
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: left;
+  }
+}
+.freeplay--cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: auto 0 0;
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
+}
+.freeplay--reg {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 14px 24px;
+  border-radius: 5px;
+  background-color: #e51e25;
+  @include breakpoint(large) {
+    max-width: 196px;
+  }
+}
+.freeplay--link {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 14px 24px;
+  white-space: nowrap;
+  @include breakpoint(large) {
+    width: initial;
+  }
+}

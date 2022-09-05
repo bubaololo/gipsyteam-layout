@@ -1,0 +1,115 @@
+// widget hall of fame
+.widget-hof-wrap {
+  --w-hof-heading-color: #333;
+  .content_theme & {
+    --w-hof-heading-color: var(--text-5-color, #333);
+  }
+  display: flex;
+  justify-content: center;
+  padding: 0 0 40px;
+  width: 100%;
+  max-width: 615px;
+  margin: 0 auto;
+  @include breakpoint(xlarge) {
+    padding: 0 15px 65px;
+    max-width: 1276px;
+  }
+}
+.widget-hof {
+  width: 100%;
+  padding: 0 15px;
+  @include breakpoint(large) {
+    padding: 0;
+  }
+  &--grid {
+    display: grid;
+    grid-template-columns: minmax(290px, 1fr);
+    grid-gap: 38px 0;
+    justify-items: center;
+    width: 100%;
+    max-width: 824px;
+    @include breakpoint(xlarge) {
+      grid-template-columns: repeat(3, minmax(290px, 1fr));
+      grid-gap: 0 20px;
+      max-width: 1246px;
+    }
+  }
+}
+// header
+.widget-hof--header {
+  display: flex;
+  align-items: center;
+  margin: 0 0 19px;
+  justify-content: flex-start;
+}
+.widget-hof--icon {
+  [theme='dark'] & {
+    --i-color1: #9e9e9e;
+  }
+  width: 44px;
+  height: 28px;
+  margin: 0 10px 0 0;
+}
+.widget-hof--link {
+  position: relative;
+  font-family: $condensed-font;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--w-hof-heading-color);
+  text-transform: uppercase;
+  @include breakpoint(large) {
+    font-size: 18px;
+  }
+}
+//
+.hof-player1 {
+  --player-flag: #390c3d;
+}
+.hof-player2 {
+  --player-flag: #1c2035;
+}
+.hof-player3 {
+  --player-flag: #082718;
+}
+.widget-hof--item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 106px;
+  padding: 0 15px 0 18px;
+  background-repeat: no-repeat;
+  background-size: 131px;
+  background-position: -12px 48px;
+  background-color: var(--player-flag, #ccc);
+  background-image: url(#{$images}/widget-hof-left-crown.svg);
+}
+.widget-hof--avatar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 140px;
+  margin: -28px 0;
+}
+.widget-hof--name {
+  font-family: $condensed-font;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0 20px 0 0;
+  &::after {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+  }
+}

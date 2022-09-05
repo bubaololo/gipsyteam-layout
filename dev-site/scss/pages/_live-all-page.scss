@@ -1,0 +1,318 @@
+// live page
+.chat-open {
+  // theme = dark
+  --live-chat-button-color: var(--text-3-color, #606060);
+  --live-chat-button-bg-color: var(--layer-5-color, #fff);
+  --live-chat-button-border-color: var(--line-2-color, #ccc);
+  //
+  display: flex;
+  padding: 15px 0;
+  margin: 0 0 20px;
+  &--button {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    border-radius: 3px;
+    border: 1px solid var(--live-chat-button-border-color);
+    background-color: var(--live-chat-button-bg-color);
+    span {
+      display: flex;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 28px;
+      color: var(--live-chat-button-color);
+      text-transform: uppercase;
+      &::before {
+        content: '';
+        width: 20px;
+        height: 28px;
+        margin: 0 10px 0 0;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        background-size: 20px;
+        background-image: url(#{$images}/live-chat.svg);
+      }
+    }
+  }
+}
+//
+.audio-live {
+  // theme = dark
+  --live-line-color: var(--line-1-color, #ccc);
+  //
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 25px 0;
+  margin: 0 0 40px;
+  border-top: 1px solid var(--live-line-color);
+  border-bottom: 1px solid var(--live-line-color);
+  &--player {
+    @include breakpoint(large) {
+      margin: 0 25px 0 0;
+    }
+  }
+  &--inner {
+    display: flex;
+    width: 100%;
+    margin: 15px 0 0;
+    @include breakpoint(large) {
+      width: auto;
+      margin: 0;
+    }
+  }
+  &--dl {
+    display: flex;
+    font-size: 11px;
+    line-height: 25px;
+    color: #808080;
+    text-transform: uppercase;
+    &::before {
+      content: '';
+      width: 27px;
+      height: 25px;
+      margin: 0 6px 0 0;
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: 27px;
+      background-image: url(#{$images}/audio-download.svg);
+    }
+  }
+}
+.photo-live {
+  margin: 0 0 10px;
+  @include breakpoint(large) {
+    margin: 0 0 30px;
+  }
+}
+// live-all page
+.live-all {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0 20px;
+  @include breakpoint(large) {
+    padding: 20px 15px 40px;
+  }
+  @include breakpoint(xlarge) {
+    max-width: 100%;
+  }
+}
+.live-all--inner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1246px;
+}
+// dropdown
+.drop-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  @include breakpoint(large) {
+    width: auto;
+  }
+}
+.drop-header--nick {
+  position: relative;
+  display: flex;
+  font-size: 14px;
+  color: #606060;
+  white-space: nowrap;
+  line-height: 28px;
+  padding: 0 12px 0 0;
+  text-transform: uppercase;
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    content: "";
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(#{$images}/diary-drop.svg);
+  }
+  &.active {
+    @include breakpoint(large) {
+      &::before {
+        position: absolute;
+        top: 40px;
+        left: 35px;
+        width: 10px;
+        height: 10px;
+        content: "";
+        transform: rotate(45deg) translateX(-50%) translateX(-6px);
+        border: solid #bdbdbd;
+        border-width: 1px 0 0 1px;
+        background-color: #fff;
+        z-index: 10;
+      }
+    }
+    &::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+.drop-header--options {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  top: 37px;
+  left: 0;
+  width: 100%;
+  min-width: 136px;
+  padding: 8px 0 10px;
+  margin: 6px 0 0;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  @include breakpoint(large) {
+    position: absolute;
+    padding: 8px 15px 10px;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #bdbdbd;
+    z-index: 3;
+  }
+  &.show {
+    display: flex;
+  }
+}
+.drop-header--link {
+  display: block;
+  font-size: 14px;
+  color: #606060;
+  line-height: 30px;
+  margin: 0;
+  white-space: nowrap;
+  &:hover {
+    color: #000;
+  }
+}
+//
+.live-item {
+  position: relative;
+  padding: 15px;
+  background-color: #fff;
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 30px auto;
+  grid-template-areas:
+    "image onair"
+    "image meta"
+    "title title"
+    "content content";
+  @include breakpoint(large) {
+    padding: 0 20px 0 0;
+    grid-column-gap: 20px;
+    grid-template-columns: 320px 1fr;
+    grid-template-rows: 40px auto;
+    grid-template-areas:
+      "image onair"
+      "image title"
+      "image content"
+      "image meta"
+      "image .";
+  }
+  &:not(:last-child) {
+    margin: 0 0 10px;
+  }
+  &_active {
+    border: 1px solid #ccc;
+    .live-item--onair {
+      color: #529410;
+      &::before {
+        background-image: url(#{$images}/live-onair-on.svg);
+      }
+    }
+  }
+  &--image {
+    grid-area: image;
+    display: flex;
+    width: 100px;
+    height: 80px;
+    margin: 0 0 12px;
+    @include breakpoint(large) {
+      width: 320px;
+      height: 170px;
+      margin: 0;
+    }
+    img {
+      object-fit: cover;
+      // fix
+      flex-grow: 1;
+    }
+  }
+  &--onair {
+    grid-area: onair;
+    display: flex;
+    justify-self: start;
+    align-self: end;
+    font-size: 11px;
+    line-height: 24px;
+    color: #808080;
+    text-transform: uppercase;
+    @include breakpoint(large) {
+      justify-self: end;
+    }
+    &::before {
+      content: '';
+      width: 18px;
+      height: 25px;
+      margin: 0 4px 0 0;
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: 18px;
+      background-image: url(#{$images}/live-onair.svg);
+    }
+  }
+  &--title {
+    grid-area: title;
+    font-family: $secondary-font;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 10px;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+      z-index: 1;
+    }
+  }
+  &--content {
+    grid-area: content;
+    @include breakpoint(large) {
+      margin: 0 0 10px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 22px;
+      color: #202020;
+      margin: 0;
+    }
+  }
+  &--meta {
+    grid-area: meta;
+    display: flex;
+    align-items: flex-start;
+    @include breakpoint(large) {
+      margin: 0 0 15px;
+    }
+    .media-meta--comment {
+      width: 100%;
+      @include breakpoint(large) {
+        width: auto;
+      }
+    }
+  }
+}
+//

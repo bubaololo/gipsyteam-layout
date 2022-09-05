@@ -1,0 +1,27 @@
+// use these with the `breakpoint()` mixin to quickly create media queries
+$breakpoints: (small: 0, xsmall: 23.4375em, xxsmall: 30em, medium: 40em, large: 48em, xlarge: 64em, xxlarge: 70.625em, xxdlarge: 78.4375em, xxxlarge: 79.375em, xxxxlarge: 95.9375em) !default;
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error '`#{$breakpoint}` is not defined in your $breakpoints setting.';
+  }
+}
+// use these with the `hidpi-breakpoint()` mixin to quickly create media queries for HiDPI images
+@mixin hidpi-breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and (min-resolution: 192dpi) and (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error '`#{$breakpoint}` is not defined in your $breakpoints setting.';
+  }
+}
+// use these with the `hidpi` mixin for 2x HiDPI images
+@mixin hidpi-2x {
+  @media screen and (min-resolution: 192dpi) {
+    @content;
+  }
+}

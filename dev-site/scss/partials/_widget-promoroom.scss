@@ -1,0 +1,230 @@
+.widget-promoroom {
+  // theme = dark
+  --wpr-color: var(--text-4-color, #808080);
+  --wpr-data-color: var(--text-1-color, #000);
+  --wpr-border-color: var(--line-1-color, #e6e6e6);
+  --wpr-line-color: var(--line-2-color, #e0e0e0);
+  --wpr-review-color: var(--text-1-color, #000);
+  //
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin: 40px 0;
+  box-shadow: inset 0 0 0 1px var(--wpr-border-color);
+  background-image: linear-gradient(350.32deg, #e7e7e7 27.22%, #f8f8f8 65.01%, #f7f7f7 83.02%);
+  @include breakpoint(large) {
+    flex-direction: row;
+    min-height: 289px;
+  }
+  [theme='dark'] & {
+    background-image: linear-gradient(10.15deg, #1a1a1a 22.47%, #424242 78.8%);
+  }
+}
+.widget-promoroom--layer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/nimg/promoroom-bg6.jpg);
+  @include breakpoint(large) {
+    max-width: 500px;
+    height: initial;
+    padding: 0 0 0 26px;
+    background-image: none;
+  }
+  &::before {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    max-width: 200px;
+    height: calc(100% - 30px);
+    clip-path: polygon(102px 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-image: linear-gradient(216.57deg, #8f1289 21.3%, #661841 90.71%);
+    @include breakpoint(large) {
+      display: initial;
+    }
+  }
+  &::after {
+    display: none;
+    content: '';
+    width: 100%;
+    max-width: 474px;
+    margin: 0 0 0 auto;
+    clip-path: polygon(108px 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/nimg/promoroom-bg6.jpg);
+    @include breakpoint(large) {
+      display: initial;
+    }
+  }
+}
+.promoroom-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 14px 20px 32px 20px;
+  @include breakpoint(large) {
+    width: 494px;
+    flex-shrink: 0;
+    padding: 24px 0 26px 38px;
+  }
+}
+.promoroom-main--top {
+  display: flex;
+  align-items: center;
+  margin: 0 0 8px;
+}
+.promoroom-main--logo {
+  display: flex;
+  img {
+    height: 54px;
+  }
+}
+.promoroom-main--logo_dark {
+  display: none;
+  [theme='dark'] & {
+    display: block;
+  }
+}
+.promoroom-main--logo_light {
+  [theme='dark'] & {
+    display: none;
+  }
+}
+.promoroom-main--data {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 20px;
+  color: var(--wpr-data-color);
+  &::before {
+    content: '';
+    width: 1px;
+    height: 34px;
+    margin: 0 20px;
+    background-color: var(--wpr-line-color);
+  }
+  svg {
+    margin: 0 3px 0 0;
+    transform: translateY(-1px);
+  }
+}
+.promoroom-main--content {
+  font-size: 16px;
+  line-height: 25px;
+  margin: 0 0 20px;
+  color: var(--wpr-color);
+}
+.promoroom-main--bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: auto 0 0;
+}
+.promoroom-main--label {
+  font-family: $condensed-font;
+  font-size: 15px;
+  line-height: 18px;
+  color: #e50c2c;
+  width: 100%;
+}
+.promoroom-main--inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
+}
+.promoroom-main--review {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--wpr-review-color);
+  @include breakpoint(large) {
+    max-width: 228px;
+  }
+  // override for article
+  .article-body & {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--wpr-review-color);
+  }
+  //
+  svg {
+    --i-color1: var(--wpr-review-color);
+  }
+}
+.promoroom-main--copy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 11px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  @include breakpoint(large) {
+    max-width: 228px;
+  }
+}
+.promoroom-main--code {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+  letter-spacing: 0.1em;
+}
+.promoroom-main--click {
+  --i-color1: #e50c2c;
+  position: relative;
+  display: flex;
+  font-family: $condensed-font;
+  gap: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 14px;
+  color: #e50c2c;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  // override for article
+  .article-body & {
+    color: #e50c2c;
+    text-decoration: none;
+  }
+  //
+  &:active {
+    top: 1px;
+  }
+}
+.promoroom-main--button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  background-color: #e50c2c;
+  padding: 10px 0;
+  @include breakpoint(large) {
+    max-width: 192px;
+  }
+  // override for article
+  .article-body & {
+    color: #fff;
+    text-decoration: none;
+  }
+  //
+}

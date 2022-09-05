@@ -1,0 +1,97 @@
+// reviews page
+.site-review-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1276px;
+  padding: 20px 15px 50px;
+  margin: 0 auto;
+}
+.site-review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 10px 5px;
+  @include breakpoint(xxsmall) {
+    grid-template-columns: repeat(auto-fill, minmax(416px, 1fr));
+  }
+}
+.site-review {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+}
+.site-review--header {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  grid-gap: 0 10px;
+  margin: 0 0 5px;
+}
+.site-review--image {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  img {
+    border-radius: 50%;
+  }
+}
+.site-review--data {
+  display: flex;
+  flex-direction: column;
+}
+.site-review--name {
+  font-size: 13px;
+  line-height: 14px;
+  font-weight: 700;
+  color: #424242;
+  margin: 0 0 4px;
+}
+.site-review--meta {
+  display: flex;
+}
+.site-review--score {
+  position: relative;
+  width: 80px;
+  height: 16px;
+  margin: 0 8px 0 0;
+  background-size: 16px;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDguOSIgaGVpZ2h0PSIxMDMuNiIgdmlld0JveD0iMCAwIDEwOC45IDEwMy42Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2UzZTZlNjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPnN0YXJfMDwvdGl0bGU+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTA4LjkgMzkuNiA3MS4zIDM0LjEgNTQuNCAwIDM3LjYgMzQuMSAwIDM5LjYgMjcuMiA2Ni4xIDIwLjggMTAzLjYgNTQuNCA4NS45IDg4LjEgMTAzLjYgODEuNyA2Ni4xIDEwOC45IDM5LjYiLz48L2c+PC9nPjwvc3ZnPg0K);
+}
+.site-review--value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-size: 16px;
+  background-repeat: repeat-x;
+  background: url(data:image/svg+xml;base64,PHN2Zw0KCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwOC45IiBoZWlnaHQ9IjEwMy42IiB2aWV3Qm94PSIwIDAgMTA4LjkgMTAzLjYiPg0KCTxkZWZzPg0KCQk8c3R5bGU+LmNscy0xe2ZpbGw6I2YxYzk0Nzt9PC9zdHlsZT4NCgk8L2RlZnM+DQoJPHRpdGxlPnN0YXIxPC90aXRsZT4NCgk8ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj4NCgkJPGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj4NCgkJCTxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI1NC40IDAgNzEuMyAzNC4xIDEwOC45IDM5LjYgODEuNyA2Ni4xIDg4LjEgMTAzLjYgNTQuNCA4NS45IDIwLjggMTAzLjYgMjcuMiA2Ni4xIDAgMzkuNiAzNy42IDM0LjEgNTQuNCAwIi8+DQoJCTwvZz4NCgk8L2c+DQo8L3N2Zz4NCg==);
+  [data-rating='1'] & {
+    width: 20%;
+  }
+  [data-rating='2'] & {
+    width: 40%;
+  }
+  [data-rating='3'] & {
+    width: 60%;
+  }
+  [data-rating='4'] & {
+    width: 80%;
+  }
+  [data-rating='5'] & {
+    width: 100%;
+  }
+}
+.site-review--date {
+  font-size: 13px;
+  line-height: 16px;
+  color: #757575;
+}
+.site-review--text {
+  font-size: 14px;
+  line-height: 1.25;
+  color: #212121;
+}

@@ -1,0 +1,326 @@
+@import 'breakpoint';
+@import 'settings';
+//
+.partner-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  padding: 68px 24px 56px;
+  background-color: #303641;
+  background-image: url(#{$images}/bb-pattern.svg);
+  @include breakpoint(large) {
+    padding: 124px 30px 80px;
+  }
+}
+//
+.partner-head {
+  // tmp
+  // min-height: 600px;
+  //
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px 0;
+  width: 100%;
+  margin: 0 0 56px;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+    margin: 0 0 80px;
+  }
+}
+.partner-head--wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // tmp
+  // background-color: #1f2128;
+  //
+}
+.partner-head--heading {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 700;
+  color: #ec314d;
+  margin: 0 0 22px;
+  @include breakpoint(large) {
+    font-size: 48px;
+    line-height: 56px;
+    margin: 0 0 28px;
+  }
+}
+.partner-head--subheading {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 40px;
+  @include breakpoint(large) {
+    font-size: 24px;
+    line-height: 45px;
+    margin: 0 0 43px;
+  }
+}
+.partner-head--note {
+  font-size: 14px;
+  line-height: 26px;
+  color: #fff;
+  width: 100%;
+  max-width: 532px;
+  padding: 32px;
+  border-radius: 10px;
+  border: 1px solid #1f2128;
+  background-color: #363c47;
+  @include breakpoint(large) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  span {
+    font-weight: 700;
+    color: #ec314d;
+  }
+}
+.partner-head--icon {
+  width: 100%;
+  height: 224px;
+  @include breakpoint(large) {
+    height: 100%;
+  }
+}
+//
+.partner-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px 0;
+  width: 100%;
+  margin: 0 0 56px;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+    margin: 0 0 80px;
+  }
+}
+.partner-main--wrap {
+  width: 100%;
+  padding: 32px 32px 0;
+  border-radius: 10px;
+  background-color: #1f2128;
+  @include breakpoint(large) {
+    padding: 64px 64px 51px;
+  }
+}
+.partner-main--head {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  margin: 0 0 32px;
+  min-height: 186px;
+  @include breakpoint(xlarge) {
+    grid-template-columns: 96px 1fr;
+    gap: 0 42px;
+  }
+}
+.partner-main--icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 0 32px;
+  @include breakpoint(large) {
+    width: 96px;
+    height: 96px;
+  }
+  @include breakpoint(xlarge) {
+    margin: 0;
+  }
+}
+.partner-main--inner {
+  display: flex;
+  flex-direction: column;
+}
+.partner-main--heading {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+  color: #ec314d;
+  margin: 0 0 16px;
+  @include breakpoint(large) {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 0 13px;
+  }
+  &_accent {
+    color: #44d487;
+  }
+}
+.partner-main--subheading {
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  @include breakpoint(large) {
+    font-size: 16px;
+  }
+}
+//
+.partner-item {
+  display: grid;
+  grid-template-columns: 37px 1fr;
+  gap: 0 27px;
+  width: 100%;
+  padding: 24px 0 32px;
+  border-top: 3px solid #4d5159;
+}
+.partner-item--icon {
+  width: 37px;
+  height: 37px;
+}
+.partner-item--inner {
+  display: flex;
+  flex-direction: column;
+}
+.partner-item--heading {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 7px;
+  @include breakpoint(large) {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 8px;
+  }
+}
+.partner-item--subheading {
+  font-size: 14px;
+  line-height: 24px;
+  color: #6e727a;
+  @include breakpoint(large) {
+    font-size: 16px;
+  }
+}
+// partner fast support
+.partner-fs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px 0;
+  width: 100%;
+  padding: 32px 24px;
+  border-radius: 10px;
+  border: 4px solid #ec314d;
+  background-color: #1f2128;
+  @include breakpoint(xlarge) {
+    grid-template-columns: 1fr 248px;
+    gap: 0 20px;
+    padding: 50px 64px 52px;
+  }
+}
+.partner-fs--top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint(xlarge) {
+    justify-content: initial;
+  }
+}
+.partner-fs--logo {
+  display: flex;
+  flex-shrink: 0;
+  margin: 0 16px 0 0;
+  @include breakpoint(large) {
+    margin: 0 44px 0 0;
+  }
+  svg {
+    width: 40px;
+    height: 38px;
+    @include breakpoint(large) {
+      width: 100px;
+      height: 96px;
+    }
+  }
+}
+.partner-fs--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include breakpoint(large) {
+    align-items: flex-start;
+  }
+}
+.partner-fs--heading {
+  font-size: 20px;
+  line-height: 23px;
+  color: #ec314d;
+  font-weight: 700;
+  margin: 0 0 8px;
+  @include breakpoint(large) {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 0 14px;
+  }
+}
+.partner-fs--subheading {
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  @include breakpoint(large) {
+    font-size: 16px;
+  }
+}
+.partner-fs--bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @include breakpoint(xlarge) {
+    justify-content: flex-start;
+  }
+}
+.partner-fs--contact {
+  width: 100%;
+  max-width: 248px;
+}
+.partner-fs--inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+.pt-top-btn {
+  --i-color1: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  margin: 0 0 16px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid #ec314d;
+  background-color: #ec314d;
+  &:hover {
+    background-color: #b9253b;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 16px 0 0;
+  }
+}
+.pt-i-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid #ec314d;
+  &:hover {
+    --i-color1: #fff;
+    background-color: #ec314d;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

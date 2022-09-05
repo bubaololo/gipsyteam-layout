@@ -1,0 +1,175 @@
+$images: "/nimg";
+// x2 additional background image
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+    @content
+  }
+}
+// checkbox
+@mixin checkbox-large($size: "20px", $top: "6px", $bg-color: #fff, $border-color: #bdbdbd, $check-color: #606060) {
+  position: absolute;
+  opacity: 0;
+  $bem-mix: &;
+  &:checked {
+    ~#{$bem-mix}--mark {
+      &::after {
+        display: block;
+      }
+    }
+  }
+  &--mark {
+    position: relative;
+    flex-shrink: 0;
+    top: #{$top};
+    left: 0;
+    width: #{$size};
+    height: #{$size};
+    margin: 0 8px 0 0;
+    border: 1px solid #{$border-color};
+    background-color: #{$bg-color};
+    &::after {
+      position: absolute;
+      top: 2px;
+      left: 6px;
+      display: none;
+      width: 6px;
+      height: 12px;
+      content: "";
+      transform: rotate(45deg);
+      border: solid #{$check-color};
+      border-width: 0 2px 2px 0;
+    }
+    &_remove {
+      &::after {
+        top: 0;
+        height: 14px;
+        border: solid #bdbdbd;
+        border-width: 0 2px 0 0;
+        transform: rotate(90deg);
+      }
+    }
+    &_clean {
+      top: 0;
+    }
+  }
+}
+.checkbox-large {
+  @include checkbox-large;
+}
+// checkbox
+@mixin checkbox-medium($size: "18px", $top: "1px", $bg-color: #fff, $border-color: #ccc, $check-color: #606060) {
+  position: absolute;
+  opacity: 0;
+  $bem-mix: &;
+  &:checked {
+    ~#{$bem-mix}--mark {
+      &::after {
+        display: block;
+      }
+    }
+  }
+  &--mark {
+    position: relative;
+    flex-shrink: 0;
+    top: #{$top};
+    left: 0;
+    width: #{$size};
+    height: #{$size};
+    margin: 0 8px 0 0;
+    border-radius: 2px;
+    border: 1px solid #{$border-color};
+    background-color: #{$bg-color};
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 5px;
+      display: none;
+      width: 6px;
+      height: 12px;
+      content: "";
+      transform: rotate(45deg);
+      border: solid #{$check-color};
+      border-width: 0 2px 2px 0;
+    }
+    &_remove {
+      &::after {
+        top: 0;
+        height: 14px;
+        border: solid #bdbdbd;
+        border-width: 0 2px 0 0;
+        transform: rotate(90deg);
+      }
+    }
+    &_clean {
+      top: 0;
+    }
+  }
+}
+.checkbox-medium {
+  @include checkbox-medium;
+}
+//
+@mixin checkbox-small($size: "14px", $top: "9px", $bg-color: #fff, $border-color: #bdbdbd, $check-color: #606060) {
+  position: absolute;
+  opacity: 0;
+  $bem-mix: &;
+  &:checked {
+    ~#{$bem-mix}--mark {
+      &::after {
+        display: block;
+      }
+    }
+  }
+  &--mark {
+    position: relative;
+    flex-shrink: 0;
+    top: #{$top};
+    left: 0;
+    width: #{$size};
+    height: #{$size};
+    margin: 0 8px 0 0;
+    border: 1px solid #{$border-color};
+    background-color: #{$bg-color};
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 4px;
+      display: none;
+      width: 5px;
+      height: 9px;
+      content: "";
+      transform: rotate(45deg);
+      border: solid #{$check-color};
+      border-width: 0 2px 2px 0;
+    }
+  }
+}
+// search field
+@mixin search-field($width: "230px", $fs: "14px", $bg-color: #fff, $border-color: #cfcfcf) {
+  font-family: inherit;
+  font-size: #{$fs};
+  color: #606060;
+  line-height: 20px;
+  width: #{$width};
+  padding: 3px 5px;
+  border: 1px solid #{$border-color};
+  border-radius: 2px;
+  background-color: #{$bg-color};
+}
+// with search icon
+@mixin search-field-icon($width: "230px", $fs: "14px", $bg-color: #fff, $border-color: #cfcfcf) {
+  font-family: inherit;
+  font-size: #{$fs};
+  color: #606060;
+  line-height: 20px;
+  width: #{$width};
+  padding: 3px 5px 3px 26px;
+  border: 1px solid #{$border-color};
+  border-radius: 2px;
+  background-color: #{$bg-color};
+  background-repeat: no-repeat;
+  background-position: 5px 50%;
+  background-size: 15px;
+  background-image: url(#{$images}/subs-search.svg);
+}

@@ -1,0 +1,879 @@
+// hall of fame player page
+.hall-head {
+  width: 100%;
+  max-width: 1376px;
+  height: 240px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(/nimg/hall/hall-head-small.jpg);
+  @include breakpoint(large) {
+    height: 365px;
+    background-image: url(/nimg/hall/hall-head.jpg);
+  }
+}
+.hall-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 159px;
+  background-color: rgba(0, 0, 0, .8);
+  @include breakpoint(large) {
+    height: 134px;
+    padding: 31px 0 0;
+  }
+  &--link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1276px;
+    height: 50px;
+    margin: 0 0 23px;
+    padding: 0 15px;
+    background-color: #000;
+    @include breakpoint(large) {
+      position: absolute;
+      top: 39px;
+      margin: 0;
+      background-color: transparent;
+    }
+  }
+  &--heading {
+    position: relative;
+    font-family: $noto-font;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 9px;
+    z-index: 1;
+    @include breakpoint(large) {
+      font-size: 42px;
+    }
+  }
+  &--crown {
+    width: 121px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url(/nimg/hall/hall-crown.svg);
+  }
+}
+.hall-nav--button {
+  display: flex;
+  font-size: 13px;
+  line-height: 30px;
+  color: #808080;
+  white-space: nowrap;
+  @include breakpoint(large) {
+    font-size: 15px;
+  }
+  &_prev {
+    &::before {
+      content: '';
+      width: 27px;
+      height: 32px;
+      margin: 0 5px 0 0;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url(/nimg/hall/hall-nav-prev-icon.svg);
+    }
+  }
+  &_next {
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      width: 27px;
+      height: 32px;
+      margin: 0 0 0 5px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url(/nimg/hall/hall-nav-next-icon.svg);
+    }
+  }
+}
+// player lead
+.hall-lead {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  width: 100%;
+  max-width: 1276px;
+  padding: 0 15px 10px;
+  margin: -55px auto 0;
+  @include breakpoint(large) {
+    grid-template-columns: minmax(220px, 370px) minmax(493px, 800px);
+    grid-gap: 0 25px;
+    margin: -100px auto 14px;
+    padding: 0 15px 30px;
+  }
+  &--image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 220px;
+    text-align: center;
+    @include breakpoint(large) {
+      width: 100%;
+      max-width: 370px;
+    }
+  }
+  &--info {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0 0;
+    @include breakpoint(large) {
+      padding: 137px 0 0;
+      text-align: left;
+    }
+    h1 {
+      font-family: $mont-font;
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 600;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin: 0 0 22px;
+      @include breakpoint(large) {
+        font-size: 28px;
+        line-height: 34px;
+        margin: 0 0 18px;
+      }
+    }
+    p {
+      font-family: $caption-font;
+      font-size: 16px;
+      line-height: 1.3;
+      color: #b2b2b2;
+      margin: 0 0 20px;
+      @include breakpoint(large) {
+        font-size: 20px;
+        margin: 0 0 26px;
+      }
+    }
+  }
+}
+.hall-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.4;
+  padding: 11px 0 0;
+  @include breakpoint(large) {
+    display: inline;
+    padding: 8px 0;
+  }
+  &--link {
+    font-size: 15px;
+    color: #7f7f7f;
+    margin: 0 0 1px;
+    @include breakpoint(large) {
+      margin: 0 5px 0 0;
+    }
+  }
+  a {
+    font-size: 15px;
+    color: #e31f26;
+    text-decoration: underline;
+  }
+}
+.hall-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 20px;
+  @include breakpoint(large) {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 0 26px;
+  }
+  &--wrap {
+    display: flex;
+    padding: 35px 0 0;
+    @include breakpoint(large) {
+      &:first-child {
+        margin: 0 50px 0 0;
+      }
+    }
+  }
+  &--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &:first-child {
+      margin: 0 20px 0 0;
+      @include breakpoint(large) {
+        margin: 0 50px 0 0;
+      }
+    }
+  }
+  &--head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    line-height: 1;
+    color: #7f7f7f;
+    white-space: nowrap;
+    text-transform: uppercase;
+    &::after {
+      display: block;
+      content: '';
+      width: 130px;
+      height: 1px;
+      margin: 12px 0 14px;
+      background-color: #777;
+    }
+  }
+  &--data {
+    font-family: $noto-font;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 700;
+    color: #c0c0c0;
+  }
+}
+// info
+.hall-info {
+  position: relative;
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto 60px;
+  @include breakpoint(large) {
+    margin: 0 auto 114px;
+  }
+  &::before {
+    display: block;
+    top: -1px;
+    left: 0;
+    content: '';
+    width: 100%;
+    max-width: 1270px;
+    height: 1px;
+    background-color: #777;
+  }
+  &--inner {
+    width: 100%;
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: var(--player-content-bg-color, #fff);
+    @include breakpoint(large) {
+      padding: 0 50px;
+      background-repeat: no-repeat;
+      background-size: 25px, 25px;
+      background-position: 10px 0, calc(100% - 10px) 0;
+      background-image: linear-gradient(90deg, var(--hof-player-color), var(--hof-player-color)), linear-gradient(90deg, var(--hof-player-color), var(--hof-player-color));
+    }
+  }
+  &--content {
+    width: 100%;
+    max-width: 1056px;
+    margin: 0 auto;
+    padding: 21px 0 9px;
+    @include breakpoint(large) {
+      padding: 53px 0 48px;
+    }
+    p {
+      font-family: $secondary-font;
+      font-size: 16px;
+      line-height: 1.48;
+      color: #000;
+      margin: 0 0 15px;
+      @include breakpoint(large) {
+        font-size: 19px;
+      }
+    }
+  }
+}
+// forum
+.hall-forum {
+  position: relative;
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto 60px;
+  @include breakpoint(large) {
+    margin: 0 auto 114px;
+  }
+  &::before {
+    display: block;
+    top: -1px;
+    left: 0;
+    content: '';
+    width: 100%;
+    max-width: 1270px;
+    height: 1px;
+    background-color: #777;
+  }
+  &--inner {
+    width: 100%;
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+    background-color: var(--player-content-bg-color, #fff);
+    @include breakpoint(large) {
+      padding: 0 50px 40px;
+      background-repeat: no-repeat;
+      background-size: 25px, 25px;
+      background-position: 10px 0, calc(100% - 10px) 0;
+      background-image: linear-gradient(90deg, var(--hof-player-color), var(--hof-player-color)), linear-gradient(90deg, var(--hof-player-color), var(--hof-player-color));
+    }
+  }
+  &--top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-30px);
+  }
+  &--content {
+    width: 100%;
+    max-width: 1056px;
+    margin: 0 auto;
+    @include breakpoint(large) {
+      padding: 26px 0 10px;
+    }
+    @include breakpoint(xlarge) {
+      columns: 2 430px;
+      column-gap: 50px;
+      padding: 26px 0;
+    }
+  }
+  &--quote {
+    position: relative;
+    margin: 0 0 30px;
+    padding: 30px 0 0;
+    @include breakpoint(large) {
+      margin: 0 0 40px;
+      padding: 0 0 0 42px;
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 27px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url(/nimg/hall/hall-quote.svg);
+      @include breakpoint(large) {
+        top: 5px;
+      }
+    }
+    p {
+      font-family: $secondary-font;
+      font-size: 16px;
+      line-height: 1.3;
+      color: #202020;
+      margin: 0 0 22px;
+      @include breakpoint(large) {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+    }
+  }
+  &--link {
+    display: inline-flex;
+    margin: 0 0 0 4px;
+    svg {
+      --i-color1: #eb472b;
+      width: 24px;
+      height: 16px;
+      transform: translateY(2px);
+      @include breakpoint(large) {
+        transform: translateY(1px);
+      }
+    }
+  }
+  &--date {
+    display: block;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 500;
+    color: #a5a5a5;
+    text-transform: uppercase;
+  }
+  &--bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &--search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #202020;
+    padding: 0 22px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #f9fdfd;
+    &::before {
+      content: '';
+      width: 16px;
+      height: 18px;
+      margin: 0 8px 0 0;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url(/nimg/hall/hall-search-icon.svg);
+    }
+  }
+}
+// heading on a stripe
+.hall-head-stripe {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 63px;
+  padding: 13px 30px 18px;
+  border-bottom: 2px solid #686868;
+  background-color: #f9fdfd;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .15);
+  @include breakpoint(large) {
+    flex-direction: row;
+    min-width: 410px;
+    padding: 0 20px;
+    &::before {
+      position: absolute;
+      top: 11px;
+      left: -48px;
+      width: 69px;
+      height: 66px;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url(/nimg/hall/hall-head-left.svg);
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      top: 11px;
+      right: -48px;
+      width: 69px;
+      height: 66px;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-image: url(/nimg/hall/hall-head-right.svg);
+      z-index: -1;
+    }
+  }
+  h2 {
+    font-family: $condensed-font;
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    @include breakpoint(large) {
+      font-size: 23px;
+      line-height: 27px;
+    }
+    span {
+      white-space: nowrap;
+    }
+  }
+}
+.hall-head-sign {
+  width: 28px;
+  height: 28px;
+  margin: 0 0 4px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-image: url(/nimg/hall/hall-forum-sign.svg);
+  @include breakpoint(large) {
+    margin: 0 10px 0 0;
+  }
+  .hall-content & {
+    width: 32px;
+    height: 22px;
+    background-image: url(/nimg/hall/hall-content-sign.svg);
+    @include breakpoint(large) {
+      transform: translateY(-2px);
+    }
+  }
+}
+// content
+.hall-content {
+  position: relative;
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
+  &::before {
+    display: block;
+    top: -1px;
+    left: 0;
+    content: '';
+    width: 100%;
+    max-width: 1270px;
+    height: 1px;
+    background-color: #777;
+  }
+  &--inner {
+    width: 100%;
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 0 15px 30px;
+    background-color: var(--player-content-bg-color, #fff);
+    @include breakpoint(large) {
+      padding: 0 50px 40px;
+      background-repeat: no-repeat;
+      background-size: 25px, 25px;
+      background-position: 10px 0, calc(100% - 10px) 0;
+      background-image: linear-gradient(90deg, var(--hof-player-color), var(--hof-player-color)), linear-gradient(90deg, var(--hof-player-color), var(--hof-player-color));
+    }
+  }
+  &--top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-30px);
+    @include breakpoint(large) {
+      margin: 0 0 26px;
+    }
+  }
+  &--media {
+    width: 100%;
+    max-width: 984px;
+    margin: 0 auto;
+  }
+  &--bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include breakpoint(large) {
+      margin: 20px 0 0;
+    }
+  }
+  &--more {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #202020;
+    padding: 0 28px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #f9fdfd;
+  }
+}
+//
+.hof-media-grid {
+  display: grid;
+  grid-gap: 28px 0;
+  padding: 0 0 28px;
+  @include breakpoint(large) {
+    grid-gap: 30px 0;
+    padding: 0 0 30px;
+  }
+  @include breakpoint(xlarge) {
+    grid-template-columns: repeat(auto-fill, minmax(446px, 1fr));
+    grid-gap: 30px 16px;
+    grid-auto-rows: minmax(136px, auto);
+  }
+}
+.hof-media {
+  position: relative;
+  display: grid;
+  //grid-gap: 14px 12px;
+  grid-gap: 0 12px;
+  grid-template-columns: 102px 1fr;
+  //grid-template-areas:
+  //  'image meta'
+  //  'title title';
+  grid-template-areas:
+      'image meta'
+      'image title'
+      'image .';
+  @include breakpoint(large) {
+    grid-gap: 0 16px;
+    grid-template-columns: 173px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'image .'
+      'image title'
+      'image meta'
+      'image .';
+  }
+  &--image {
+    grid-area: image;
+    display: flex;
+    width: 102px;
+    height: 80px;
+    @include breakpoint(large) {
+      width: 173px;
+      height: 136px;
+    }
+    img {
+      object-fit: cover;
+      flex-grow: 1;
+    }
+  }
+  &--title {
+    grid-area: title;
+    font-family: $secondary-font;
+    //font-size: 18px;
+    //line-height: 23px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000;
+    @include breakpoint(large) {
+      font-size: 21px;
+      line-height: 25px;
+      margin: 0 0 5px;
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      z-index: 1;
+    }
+  }
+  &--meta {
+    grid-area: meta;
+    display: flex;
+    align-items: center;
+    @include breakpoint(large) {
+      align-items: flex-start;
+    }
+  }
+}
+// fix z-index for clickable comments link
+.hof-media--meta {
+  .media-meta {
+    position: relative;
+    @include breakpoint(large) {
+      padding: 5px 0;
+    }
+  }
+  .media-meta--comment {
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      z-index: 3;
+    }
+  }
+}
+// slider
+.hall-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 38px 0 50px;
+  @include breakpoint(large) {
+    padding: 80px 0 30px;
+  }
+  &--inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1550px;
+    @include breakpoint(large) {
+      padding: 36px 0 140px;
+    }
+    &::after {
+      display: none;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .5;
+      z-index: -1;
+      box-shadow: inset 20px 0 50px 20px #000;
+      background-repeat: no-repeat;
+      background-position: 50% 30%;
+      background-image: radial-gradient(closest-corner, rgba(0, 0, 0, .55), #000), url(/nimg/hall/hall-gallery-bg.jpg);
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+  }
+  &--link {
+    font-size: 13px;
+    line-height: 30px;
+    color: #808080;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+}
+.sw-tab-wrap {
+  display: flex;
+  justify-content: center;
+  font-family: $mont-font;
+  font-size: 20px;
+  line-height: 1;
+  color: #b2b2b2;
+  width: 100%;
+  margin: 0 0 36px;
+  text-transform: uppercase;
+  @include breakpoint(large) {
+    margin: 0 0 50px;
+  }
+  span {
+    margin: 0 5px;
+    padding: 2px 0;
+  }
+}
+.sw-tab {
+  color: #b2b2b2;
+  padding: 2px 0;
+  border-bottom: 1px solid transparent;
+  &.active {
+    border-color: #6b0516;
+  }
+}
+.hall-slider-list {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1270px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.slider-hof {
+  position: relative;
+  width: 100%;
+  max-width: 974px;
+  margin: 0 auto 35px;
+  padding: 0 42px;
+  @include breakpoint(large) {
+    margin: 0 auto;
+  }
+  &--button {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    outline: none;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    display: block;
+    &_prev {
+      left: 12px;
+      right: auto;
+      background-image: url(/nimg/hall/slide-arrow-prev.svg);
+    }
+    &_next {
+      right: 12px;
+      left: auto;
+      background-image: url(/nimg/hall/slide-arrow-next.svg);
+    }
+    &_disabled {
+      opacity: .35;
+      cursor: auto;
+      pointer-events: none;
+    }
+  }
+}
+.slider-hof--container {
+  display: none;
+  width: 100%;
+  max-width: 492px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  &.active {
+    display: flex;
+  }
+}
+@media screen and (min-width: 54.375em) {
+  // 870 px
+  .slider-hof--container {
+    max-width: 761px;
+  }
+}
+.slider-hof--row {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  margin: 0;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+.slider-hof--item {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+// test colors for text sections
+//.hof-player-771,
+//.hof-player-775 {
+//  .hall-info--inner {
+//    background-color: #1a1a1a;
+//  }
+//  .hall-info--content p {
+//    color: #bdbdbd;
+//  }
+//  .hall-forum--inner {
+//    background-color: #1a1a1a;
+//  }
+//  .hall-forum--quote p {
+//    color: #bdbdbd;
+//  }
+//  .hall-content--inner {
+//    background-color: #1a1a1a;
+//  }
+//  .hof-media--title {
+//    color: #e0e0e0;
+//  }
+//  .media-meta--comment span {
+//    color: #e0e0e0;
+//  }
+//}
