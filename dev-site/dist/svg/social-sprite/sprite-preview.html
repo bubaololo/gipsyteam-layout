@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>svg sprite preview</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style>
+.i-fb {
+	width: 22px;
+	height: 22px;
+}
+.i-logo {
+	width: 32px;
+	height: 32px;
+}
+.i-mail {
+	width: 23px;
+	height: 17px;
+}
+.i-telegram {
+	width: 24px;
+	height: 24px;
+}
+.i-tw {
+	width: 23px;
+	height: 19px;
+}
+.i-vc {
+	width: 23px;
+	height: 24px;
+}
+.i-youtube {
+	width: 22px;
+	height: 23px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+<!--
+
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position: absolute">
+		<symbol fill="none" viewBox="0 0 22 22" id="i-fb"><path fill="var(--i-color1, #e51e25)" d="M20.376.693H2.126C1.502.693.995 1.2.995 1.825v18.25c0 .625.507 1.132 1.133 1.132h9.825v-7.944H9.278v-3.096h2.674V7.884c0-2.65 1.618-4.093 3.982-4.093 1.133 0 2.106.085 2.39.123v2.769h-1.64c-1.286 0-1.534.612-1.534 1.508v1.977h3.066l-.4 3.096H15.15v7.943h5.227c.624 0 1.131-.507 1.131-1.133V1.825c0-.625-.507-1.132-1.132-1.132z"/></symbol>
+		<symbol fill="none" viewBox="0 0 32 32" id="i-logo"><g fill="var(--i-color1, #e51e25)" clip-path="url(#ba)"><path d="M14.596 31.43L.57 17.358a1.955 1.955 0 010-2.758L14.596.568a1.953 1.953 0 012.758 0L31.381 14.6a1.955 1.955 0 010 2.758L17.354 31.43a1.953 1.953 0 01-2.757 0zm2.319-.44L30.94 16.96a1.328 1.328 0 000-1.88L16.915 1.01a1.324 1.324 0 00-1.879 0L.97 15.04a1.33 1.33 0 000 1.88l14.028 14.03c.559.56 1.398.56 1.917.04z"/><path d="M15.116 28.792L9.84 23.555l.16-.08 8.312-12.992c.56-.839-.08-1.958-1.079-1.958H9.84l5.276-5.317c.519-.52 1.398-.52 1.958 0l5.315 5.317-.12.04-8.312 13.031c-.56.84.08 1.96 1.078 1.96h7.234l-5.235 5.236c-.52.52-1.399.52-1.918 0zm-7.074-7.036L3.286 16.96c-.519-.52-.519-1.399 0-1.959l3.957-3.957h7.633L8.042 21.756zm9.351-.759l6.794-10.634 4.675 4.678c.52.52.52 1.399 0 1.958l-3.996 3.998h-7.473z"/></g><defs><clipPath id="ba"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 23 17" id="i-mail"><path stroke="var(--i-color1, #e51e25)" stroke-width="2" d="M0 1h23M1 1v15h21V1M1 1l10.8 8.7L22 1"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="i-telegram"><path fill="var(--i-color1, #e51e25)" d="M22.38 2.068L1.12 10.266c-1.45.583-1.442 1.392-.266 1.753l5.459 1.703L18.94 5.754c.597-.363 1.143-.168.694.23l-10.23 9.234H9.4l.003.002-.377 5.626c.552 0 .795-.253 1.105-.552l2.65-2.578 5.515 4.073c1.017.56 1.747.273 2-.94l3.62-17.061c.37-1.486-.567-2.159-1.537-1.72z"/></symbol>
+		<symbol fill="none" viewBox="0 0 23 19" id="i-tw"><path fill="var(--i-color1, #e51e25)" d="M22.335 2.527a9.147 9.147 0 01-2.619.714A4.544 4.544 0 0021.721.734a9.18 9.18 0 01-2.896 1.1A4.565 4.565 0 0015.497.401c-2.943 0-5.106 2.73-4.441 5.564a12.97 12.97 0 01-9.397-4.734 4.52 4.52 0 001.41 6.05 4.561 4.561 0 01-2.064-.567c-.05 2.099 1.464 4.063 3.657 4.5a4.598 4.598 0 01-2.06.077 4.56 4.56 0 004.26 3.147 9.208 9.208 0 01-6.75 1.877A12.965 12.965 0 007.1 18.352c8.465 0 13.248-7.106 12.959-13.479a9.252 9.252 0 002.275-2.346z"/></symbol>
+		<symbol fill="none" viewBox="0 0 23 24" id="i-vc"><path fill="var(--i-color1, #e51e25)" d="M11.28.838C5.143.838.168 5.813.168 11.95c0 6.136 4.975 11.111 11.112 11.111 6.136 0 11.111-4.975 11.111-11.111C22.391 5.813 17.416.838 11.28.838zm5.874 14.966h-1.729c-.977 0-1.14-.556-1.946-1.36-.727-.727-1.13-.17-1.113.866.005.275-.13.495-.458.495-1.024 0-2.495.144-3.986-1.464-1.525-1.647-3.124-4.952-3.124-5.277 0-.192.16-.278.425-.278H6.98c.466 0 .505.23.636.526.54 1.232 1.834 3.705 2.18 2.325.198-.793.278-2.63-.57-2.788-.482-.088.367-.603 1.594-.603.306 0 .637.032.976.11.624.145.626.425.617.832-.031 1.543-.218 2.58.189 2.842.388.251 1.408-1.39 1.948-2.658.147-.35.177-.586.596-.586h2.15c1.126 0-.148 1.62-1.12 2.882-.785 1.018-.743 1.037.169 1.884.649.602 1.417 1.426 1.417 1.891 0 .22-.173.362-.608.362z"/></symbol>
+		<symbol fill="none" viewBox="0 0 22 23" id="i-youtube"><path fill="var(--i-color1, #e51e25)" d="M11.315.838C5.415.838.631 5.622.631 11.522c0 5.9 4.784 10.685 10.684 10.685 5.9 0 10.685-4.784 10.685-10.685C22 5.622 17.216.838 11.315.838zm3.954 15.04c-1.871.128-6.04.128-7.909 0-2.026-.139-2.262-1.13-2.277-4.356.015-3.23.253-4.217 2.277-4.355 1.87-.129 6.039-.129 7.91 0 2.027.138 2.262 1.13 2.278 4.355-.016 3.231-.254 4.217-2.279 4.356zM9.534 9.437l4.378 2.082-4.378 2.088v-4.17z"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-fb -->
+						<svg class="i-fb">
+							<use href="#i-fb"></use>
+						</svg>
+					</div>
+					<h2>i-fb</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-logo -->
+						<svg class="i-logo">
+							<use href="#i-logo"></use>
+						</svg>
+					</div>
+					<h2>i-logo</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-mail -->
+						<svg class="i-mail">
+							<use href="#i-mail"></use>
+						</svg>
+					</div>
+					<h2>i-mail</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-telegram -->
+						<svg class="i-telegram">
+							<use href="#i-telegram"></use>
+						</svg>
+					</div>
+					<h2>i-telegram</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-tw -->
+						<svg class="i-tw">
+							<use href="#i-tw"></use>
+						</svg>
+					</div>
+					<h2>i-tw</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-vc -->
+						<svg class="i-vc">
+							<use href="#i-vc"></use>
+						</svg>
+					</div>
+					<h2>i-vc</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-youtube -->
+						<svg class="i-youtube">
+							<use href="#i-youtube"></use>
+						</svg>
+					</div>
+					<h2>i-youtube</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+
+B) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS.
+
+-->
+
+			<h3>B) Inline SVG with external sprite</h3>
+			
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-fb -->
+						<svg class="i-fb">
+							<use href="social-sprite.svg#i-fb"></use>
+						</svg>
+					</div>
+					<h2>i-fb</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-logo -->
+						<svg class="i-logo">
+							<use href="social-sprite.svg#i-logo"></use>
+						</svg>
+					</div>
+					<h2>i-logo</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-mail -->
+						<svg class="i-mail">
+							<use href="social-sprite.svg#i-mail"></use>
+						</svg>
+					</div>
+					<h2>i-mail</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-telegram -->
+						<svg class="i-telegram">
+							<use href="social-sprite.svg#i-telegram"></use>
+						</svg>
+					</div>
+					<h2>i-telegram</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-tw -->
+						<svg class="i-tw">
+							<use href="social-sprite.svg#i-tw"></use>
+						</svg>
+					</div>
+					<h2>i-tw</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-vc -->
+						<svg class="i-vc">
+							<use href="social-sprite.svg#i-vc"></use>
+						</svg>
+					</div>
+					<h2>i-vc</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-youtube -->
+						<svg class="i-youtube">
+							<use href="social-sprite.svg#i-youtube"></use>
+						</svg>
+					</div>
+					<h2>i-youtube</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Mon, 15 Aug 2022 14:30:52 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<div class="room-faq">
+    <h2>FAQ</h2>
+    <div class="room-faq-section">
+        <a class="room-faq-button">Можно ли пользоваться Holdem Manager, Pokertracker или Hand2Note?</a>
+        <div class="room-faq-item">
+            <p>Нет, программы для сбора статистики и вывода HUD на столы запрещены.</p>
+        </div>
+    </div>
+    <div class="room-faq-section">
+        <a class="room-faq-button">Проблема с доступом к руму: не могу зайти на Покердом из России. Что делать?</a>
+        <div class="room-faq-item">
+            <p>Вход в личный кабинет Покердома часто бывает недоступен. Для решения этой проблемы вбейте в поисковике “зеркало покердома” и зайдите на сайт по одной из открывшихся ссылок. Есть и другое решение: открыть кассу в клиенте рума.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+  $(function() {
+    var accordions = $('.room-faq-section').accordion({
+      heightStyle: 'content',
+      collapsible: true,
+      active: false,
+      icons: false,
+      animate: false
+    });
+
+    accordions.on('click', function() {
+      accordions.not(this).accordion('option', 'active', false);
+    });
+  });
+</script>

@@ -1,0 +1,390 @@
+<div class="content content_theme">
+    <div class="settings-wrap">
+        <div class="settings-wrap--top">
+            <div class="settings-heading">
+                <h1>Настройки</h1>
+            </div>
+            <div class="settings-toggle">
+                <a class="settings-toggle--button tab-active" href="javascript:void(0);" data-tab-index="0">Профиль</a>
+                <a class="settings-toggle--button" href="javascript:void(0);" data-tab-index="1">Форум</a>
+            </div>
+        </div>
+        <div class="settings-list tab-active" data-tab-index="0">
+            <div class="settings-grid">
+                <div class="settings-inner">
+                    <div class="set-group">
+                        <div class="set-user">
+                            <div class="set-user--avatar">
+                                <div class="set-user--image"></div>
+                            </div>
+                            <div class="set-user--inner">
+                                <div class="set-user--nickname">
+                                    <div class="set-user--nick">Fenomenico</div>
+                                </div>
+                                <div class="set-user--file">
+                                    <svg>
+                                        <use href="/nimg/settings-sprite.svg#i-upload"></use>
+                                    </svg>
+                                    Сменить аватар
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="33554432"><input class="set-user--input" type="file" name="Filedata" size="40" id="avatarUploadInput" onclick="event.stopPropagation();"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="set-group">
+                        <div class="set-label">Имя и фамилия</div>
+                        <input class="set-field" type="text" value="">
+                    </div>
+                    
+                    <div class="set-group">
+                        <div class="set-label">Пол</div>
+                        <select class="set-select">
+                            <option value="0" selected="selected">Мужской</option>
+                            <option value="1">Женский</option>
+                        </select>
+                    </div>
+                    
+                    <div class="set-group">
+                        <div class="set-label">Twitter</div>
+                        <input class="set-field" type="text" value="" placeholder="@">
+                    </div>
+                    
+                    <div class="set-grid">
+                        <div class="set-group">
+                            <div class="set-label">Страна</div>
+                            <select class="set-select">
+                                <option value="0" selected="selected">Россия</option>
+                            </select>
+                        </div>
+                        <div class="set-group">
+                            <div class="set-label">Город</div>
+                            <select class="set-select">
+                                <option value="0" selected="selected">Москва</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="set-group">
+                        <div class="set-label">Часовой пояс</div>
+                        <select class="set-select set-select_space">
+                            <option value="0" selected="selected">(GMT+4:00) Ижевск, Самара, Абу-Даби, Баку</option>
+                        </select>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox" checked><strong class="set-ui-circle"></strong>Автоматический переход на летнее время
+                        </label>
+                    </div>
+                    <div class="set-group">
+                        <div class="set-label">О себе</div>
+                        <textarea class="set-textarea"></textarea>
+                    </div>
+                </div>
+                
+                <div class="settings-sep"></div>
+                
+                <div class="settings-inner settings-inner_left">
+                    <div class="set-group set-group_border">
+                        <a class="set-ui-link set-ui-link_mail" href="javascript:void(0);">
+                            <svg>
+                                <use href="/nimg/settings-sprite.svg#i-mail"></use>
+                            </svg>
+                            Изменить e-mail адрес
+                        </a>
+                        <a class="set-ui-link set-ui-link_pass" href="javascript:void(0);">
+                            <svg>
+                                <use href="/nimg/settings-sprite.svg#i-lock"></use>
+                            </svg>
+                            Изменить пароль
+                        </a>
+                        <a class="set-ui-link set-ui-link_active" href="javascript:void(0);">
+                            <svg class="set-ui-shield set-ui-shield_off">
+                                <use href="/nimg/settings-sprite.svg#i-shield-off"></use>
+                            </svg>
+                            <svg class="set-ui-shield">
+                                <use href="/nimg/settings-sprite.svg#i-shield"></use>
+                            </svg>
+                            Усиленная защита аккаунта <span>(Включена)</span>
+                        </a>
+                        <div class="set-tg-group">
+                            <a class="set-tg-link" href="javascript:void(0);">Изменить</a>
+                            <a class="set-tg-link" href="javascript:void(0);">Отключить</a>
+                        </div>
+                    </div>
+                    <div class="set-group set-group_border">
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox"><strong class="set-ui-circle"></strong>Отключить анимированные аватары
+                        </label>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox"><strong class="set-ui-circle"></strong>Использовать четырехцветную колоду
+                        </label>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox"><strong class="set-ui-circle"></strong>Не уведомлять в главном меню о новых материалах
+                        </label>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox" checked><strong class="set-ui-circle"></strong>Подписаться на рассылку акций и эксклюзивных предложений GipsyTeam
+                        </label>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox" checked><strong class="set-ui-circle"></strong>Подписаться на ежемесячную рассылку лучших материалов сайта и форума
+                        </label>
+                    </div>
+                    <div class="set-group set-group_border_short">
+                        <div class="set-group--heading set-group--heading_tg">
+                            <svg>
+                                <use href="/nimg/buttons-sprite.svg#i-btn-telegram"></use>
+                            </svg>
+                            Уведомления в телеграме
+                        </div>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox" checked><strong class="set-ui-circle set-ui-circle_tg"></strong>Личные сообщения
+                        </label>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox" checked><strong class="set-ui-circle set-ui-circle_tg"></strong>Материалы сайта
+                        </label>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox" checked><strong class="set-ui-circle set-ui-circle_tg"></strong>Лучшее на форуме
+                        </label>
+                    </div>
+                    <div class="set-group">
+                        <div class="set-ui-tg">Для подписки на уведомления в телеграме перейдите по этой ссылке и нажмите Start в окне мессенджера.</div>
+                        <a class="set-telegram-link" href="javascript:void(0);">
+                            <svg>
+                                <use href="/nimg/buttons-sprite.svg#i-btn-telegram"></use>
+                            </svg>
+                            Перейти
+                        </a>
+                    </div>
+                
+                </div>
+                <div class="set-ui-bottom">
+                    <input class="set-submit" value="Сохранить" type="submit">
+                </div>
+            </div>
+        </div>
+        <div class="settings-list" data-tab-index="1">
+            <div class="settings-grid settings-grid_forum">
+                <div class="settings-inner">
+                    <div class="set-group">
+                        <div class="set-group--heading">Закладки</div>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox" checked><strong class="set-ui-circle"></strong>Уведомлять о новых постах по почте
+                        </label>
+                        <label class="set-ui-label">
+                            <input class="set-ui-input" type="checkbox"><strong class="set-ui-circle"></strong>Автоматически добавлять в закладки темы, в которых я отвечаю
+                        </label>
+                    </div>
+                    <input class="set-mid-submit" value="Сохранить" type="submit">
+                </div>
+                <div class="settings-sep"></div>
+                <div class="settings-inner settings-inner_left">
+                    <div class="set-group set-group_mid">
+                        <div class="set-group--heading">Черный список</div>
+                        <div class="set-group--note">Добавьте ники пользователей, чьи посты вы не хотите видеть на форуме</div>
+                    </div>
+                    <div class="set-group set-group_mid">
+                        <div class="set-group--wrap">
+                            <input class="set-field set-field_mid" type="text" value="" placeholder="Введите никнейм">
+                            <input class="set-small-submit" value="Поиск" type="submit">
+                        </div>
+                    </div>
+                    <div class="set-group set-group_small">
+                        <input class="set-del-submit active" value="Удалить выбранных" type="submit">
+                    </div>
+                    <ul class="set-blacklist set-blacklist_high active">
+                        
+                        <li class="set-blacklist--item">
+                            <label class="set-blacklist--label">
+                                <input class="set-blacklist--input" type="checkbox">
+                                <strong class="set-blacklist--circle"></strong>
+                                <svg class="set-blacklist--icon">
+                                    <use href="/nimg/settings-sprite.svg#i-user"></use>
+                                </svg>
+                                <span class="set-blacklist--nick">Fenomenico</span>
+                            </label>
+                            <svg class="set-blacklist--mark">
+                                <use href="/nimg/settings-sprite.svg#i-trash"></use>
+                            </svg>
+                        </li>
+                        
+                        <li class="set-blacklist--item">
+                            <label class="set-blacklist--label">
+                                <input class="set-blacklist--input" type="checkbox" checked>
+                                <strong class="set-blacklist--circle"></strong>
+                                <svg class="set-blacklist--icon">
+                                    <use href="/nimg/settings-sprite.svg#i-user"></use>
+                                </svg>
+                                <span class="set-blacklist--nick">Fenomenico</span>
+                            </label>
+                            <svg class="set-blacklist--mark">
+                                <use href="/nimg/settings-sprite.svg#i-trash"></use>
+                            </svg>
+                        </li>
+                        
+                        {{#repeat 16}}
+                        <li class="set-blacklist--item">
+                            <label class="set-blacklist--label">
+                                <input class="set-blacklist--input" type="checkbox">
+                                <strong class="set-blacklist--circle"></strong>
+                                <svg class="set-blacklist--icon">
+                                    <use href="/nimg/settings-sprite.svg#i-user"></use>
+                                </svg>
+                                <span class="set-blacklist--nick">Fenomenico</span>
+                            </label>
+                            <svg class="set-blacklist--mark">
+                                <use href="/nimg/settings-sprite.svg#i-trash"></use>
+                            </svg>
+                        </li>
+                        {{/repeat}}
+                    </ul>
+                </div>
+            </div>
+            <form class="subs-ui subs-ui_active">
+                <div class="subs-ui--heading">Подписки</div>
+                <div class="subs-ui--alert" style="display: none;">Вы не подписаны ни на одну тему</div>
+                <div class="subs-ui--header">
+                    <div class="subs-select">
+                        <div class="subs-select--inner">
+                            <div class="subs-select--label">С выбранными</div>
+                            <select class="subs-select--selector" name="trackchoice" id="unsubscr">
+                                <option value="unsubscribe">Отписаться</option>
+                                <option value="none">Не уведомлять</option>
+                                <option value="immediate">Уведомлять мгновенно</option>
+                                <option value="delayed">Уведомлять, если меня нет на форуме</option>
+                                <option value="daily">Уведомлять ежедневно</option>
+                                <option value="weekly">Уведомлять еженедельно</option>
+                            </select>
+                        </div>
+                        <button class="subs-select--button">Применить</button>
+                    </div>
+                </div>
+                
+                <div class="subs-ui--item">
+                    <label class="subs-ui--label">
+                        <input class="subs-ui--input" type="checkbox" checked>
+                        <strong class="subs-ui--circle"></strong>
+                        <svg class="subs-ui--icon">
+                            <use href="/nimg/settings-sprite.svg#i-detail"></use>
+                        </svg>
+                        <span class="subs-ui--nick">О прикреплении файлов в первое сообщение при создании темы в бекинге</span>
+                    </label>
+                    <svg class="subs-ui--mark">
+                        <use href="/nimg/settings-sprite.svg#i-trash"></use>
+                    </svg>
+                </div>
+                {{#repeat 5}}
+                <div class="subs-ui--item">
+                    <label class="subs-ui--label">
+                        <input class="subs-ui--input" type="checkbox">
+                        <strong class="subs-ui--circle"></strong>
+                        <svg class="subs-ui--icon">
+                            <use href="/nimg/settings-sprite.svg#i-detail"></use>
+                        </svg>
+                        <span class="subs-ui--nick">О прикреплении файлов в первое сообщение при создании темы в бекинге</span>
+                    </label>
+                    <svg class="subs-ui--mark">
+                        <use href="/nimg/settings-sprite.svg#i-trash"></use>
+                    </svg>
+                </div>
+                {{/repeat}}
+                <div class="feed-bottom">
+                    <!-- pagination -->
+                    <div class="pagination">
+                        <a class="pagination--item" href="javascript:void(0);">←</a>
+                        <a class="pagination--item" href="javascript:void(0);">1</a>
+                        <a class="pagination--item pagination--item_active" href="javascript:void(0);">2</a>
+                        <a class="pagination--item" href="javascript:void(0);">3</a>
+                        <a class="pagination--item" href="javascript:void(0);">→</a>
+                        <!--<script>-->
+                        <!--  if (userTheme === 'dark') {-->
+                        <!--    root.setAttribute('theme', 'dark');-->
+                        <!--  }-->
+                        <!--</script>-->
+                    </div>
+                    <!-- !pagination -->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- settings mail popup -->
+<!--<div class="set-overlay hidden"></div>
+<div class="set-popup-wrap set-popup-wrap_mail hidden">
+    <div class="set-popup">
+        <a class="set-popup&#45;&#45;close" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/settings-sprite.svg#i-close"></use>
+            </svg>
+        </a>
+        <div class="set-popup&#45;&#45;inner">
+            <div class="set-popup&#45;&#45;heading">Изменить e-mail</div>
+            <form class="set-popup&#45;&#45;form" name="user" action="" method="post">
+                <div class="popup-group">
+                    <div class="popup-label">Текущий e-mail</div>
+                    <input class="popup-field" type="text" value="" placeholder="">
+                </div>
+                <div class="popup-group">
+                    <div class="popup-label">Новый e-mail</div>
+                    <input class="popup-field" type="text" value="">
+                </div>
+                <input class="popup-submit popup-submit_up" type="submit" value="Сохранить">
+            </form>
+        </div>
+    </div>
+</div>-->
+<!-- !settings mail popup -->
+
+<!-- settings pass popup -->
+<!--<div class="set-overlay hidden"></div>
+<div class="set-popup-wrap set-popup-wrap_pass hidden">
+    <div class="set-popup">
+        <a class="set-popup&#45;&#45;close" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/settings-sprite.svg#i-close"></use>
+            </svg>
+        </a>
+        <div class="set-popup&#45;&#45;inner">
+            <div class="set-popup&#45;&#45;heading">Изменить пароль</div>
+            <form class="set-popup&#45;&#45;form" name="user" action="" method="post">
+                <div class="popup-group">
+                    <div class="popup-label">Текущий пароль</div>
+                    <input class="popup-field" type="password" value="" placeholder="">
+                </div>
+                <div class="popup-group">
+                    <div class="popup-label">Новый пароль</div>
+                    <input class="popup-field" type="password" value="">
+                </div>
+                <div class="popup-group">
+                    <div class="popup-label">Повторите новый пароль</div>
+                    <input class="popup-field" type="password" value="">
+                </div>
+                <input class="popup-submit popup-submit_up" type="submit" value="Сохранить">
+            </form>
+        </div>
+    </div>
+</div>-->
+<!-- !settings pass popup -->
+
+<script>
+  var modal = document.querySelector('.set-popup-wrap_mail');
+  var modalOverlay = document.querySelector('.set-overlay');
+  var closeButton = document.querySelector('.set-popup--close');
+  var openButton = document.querySelector('.set-ui-link_mail');
+  closeButton.addEventListener('click', function() {
+    modal.classList.toggle('hidden');
+    modalOverlay.classList.toggle('hidden');
+  });
+  openButton.addEventListener('click', function() {
+    modal.classList.toggle('hidden');
+    modalOverlay.classList.toggle('hidden');
+  });
+</script>
+
+<script>
+  $('.settings-toggle--button').on('click', function() {
+    var tabClicked = $(this).data('tab-index');
+    $('.settings-wrap .tab-active').removeClass('tab-active');
+    $(this).addClass('tab-active');
+    $('.settings-list').each(function() {
+      $(this).data('tab-index') === tabClicked && $(this).addClass('tab-active');
+    });
+  });
+</script>

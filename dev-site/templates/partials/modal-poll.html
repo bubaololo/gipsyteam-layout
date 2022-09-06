@@ -1,0 +1,32 @@
+<div class="modal-poll--overlay hidden"></div>
+<div class="modal-poll hidden">
+    <button class="modal-poll--close"></button>
+    <form class="modal-poll--form" method="post" name="IGNORE">
+        <div class="modal-poll--header">
+            <div class="modal-poll--heading">Опрос</div>
+        </div>
+        <div class="modal-poll--scroll">
+            <fieldset>
+                <div class="modal-poll--theme">
+                    <input class="modal-poll--input" type="text" placeholder="Вопрос">
+                    <label class="modal-poll--label">
+                        <input class="checkbox-setup" type="checkbox" value=""><span class="checkbox-setup--mark"></span>Позволить пользователям выбирать больше одного варианта ответа</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                {{#repeat 2}}
+                <div class="modal-poll--item">
+                    <input class="modal-poll--answer" type="text">
+                    <input class="modal-poll--delete" type="submit" value="">
+                </div>
+                {{/repeat }}
+            </fieldset>
+            <fieldset>
+                <div class="modal-poll--list"><a class="modal-poll--add" href="javascript:void(0);">Добавить вариант ответа</a></div>
+            </fieldset>
+        </div>
+        <div class="modal-poll--bottom">
+            <input class="modal-poll--submit" type="submit" value="Добавить опрос">
+        </div>
+    </form>
+</div>

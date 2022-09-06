@@ -1,0 +1,11 @@
+<svg width="17" height="17" fill="none" viewBox="0 0 17 17">
+    <g clip-path="url(#aclip0_2934_2866)" stroke="var(--i-color1, #fff)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8.226 10.5a4.667 4.667 0 100-9.332 4.667 4.667 0 000 9.333z" />
+        <path d="M5.7 9.76l-.806 6.074 3.333-2 3.333 2-.806-6.08" />
+    </g>
+    <defs>
+        <clipPath id="aclip0_2934_2866">
+            <path fill="var(--i-color1, #fff)" transform="translate(.227 .5)" d="M0 0h16v16H0z" />
+        </clipPath>
+    </defs>
+</svg>

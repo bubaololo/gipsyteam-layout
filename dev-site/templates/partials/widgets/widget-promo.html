@@ -1,0 +1,60 @@
+<section class="adv-widget">
+    <div class="adv-widget--grid">
+        <!-- forum activity -->
+        {{> widget-fa-double}}
+        <!-- !forum activity -->
+        
+        <!-- adv promo -->
+        <div class="adv-widget--item">
+            <div class="adv-widget--head">
+                <a class="widget-promo--heading" href="javascript:void(0);">
+                    <svg class="widget-promo--card" width="27px" height="27px">
+                        <use href="/nimg/widget-promo-sprite.svg#i-card-clubs"></use>
+                    </svg>
+                    Играть в онлайне
+                    <svg class="widget-promo--arrow" width="10px" height="14px">
+                        <use href="/nimg/widget-promo-sprite.svg#i-arrow-right-short"></use>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="adv-widget--wrap adv-widget--wrap_action">
+                {{#repeat 2}}
+                <div class="adv-link">
+                    <div class="adv-link--logo">
+                        <img src="/{{images}}/room-logo-70x16.png" alt="">
+                    </div>
+                    <div class="adv-link--content">
+                        <a class="adv-link--heading" href="javascript:void(0);">100% бонус</a>
+                        <span class="adv-link--subheading">на первый депозит или билеты в спины и МТТ в подарок</span>
+                    </div>
+                    <div class="adv-link--arrow">
+                        <svg class="widget-promo--hl" width="24px" height="24px">
+                            <use href="/nimg/widget-promo-sprite.svg#i-arrow-right"></use>
+                        </svg>
+                    </div>
+                </div>
+                {{/repeat }}
+                <div class="adv-link">
+                    <div class="adv-link--logo adv-link--logo_image">
+                        <img src="/{{images}}/adv-logo.png" alt="">
+                    </div>
+                    <div class="adv-link--content">
+                        <a class="adv-link--heading" href="javascript:void(0);">$11 в подарок</a>
+                        <span class="adv-link--subheading">без депозита</span>
+                    </div>
+                    <div class="adv-link--arrow">
+                        <svg class="widget-promo--hl" width="24px" height="24px">
+                            <use href="/nimg/widget-promo-sprite.svg#i-arrow-right"></use>
+                        </svg>
+                    </div>
+                </div>
+                {{> widget-gtplus-button}}
+            </div>
+            <a class="adv-image" href="javascript:void(0);">
+                <img src="/{{images}}/804x280.png" alt="">
+            </a>
+        </div>
+        <!-- !adv promo -->
+    </div>
+</section>

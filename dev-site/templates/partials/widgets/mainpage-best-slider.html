@@ -1,0 +1,74 @@
+<aside class="bst-slider">
+    <div class="bst-slider--head">
+        <svg>
+            <use href="/nimg/mainpage-sprite.svg#i-spades"/>
+        </svg>
+        <a class="bst-slider--heading" href="javascript:void(0);">Лучшее на форуме</a>
+    </div>
+    <div class="bst-slider--main">
+        <div class="bst-slider--wrap">
+            {{#repeat 5}}
+            <ul class="bst-slider--list">
+                <li class="bst-link">
+                    <div class="bst-link--action slider-hot--action_top">Форум</div>
+                    <a class="bst-link--title" href="javascript:void(0);">PokerStars забрали депозит и выдали билеты на EPT. Как вернуть деньги?</a>
+                </li>
+                <li class="bst-link">
+                    <div class="bst-link--action slider-hot--action_top">Форум</div>
+                    <a class="bst-link--title" href="javascript:void(0);">Whatyoumeangto поднял ABI до $170. Винрейты выросли</a>
+                </li>
+                <li class="bst-link">
+                    <div class="bst-link--action slider-hot--action_contro">Блог</div>
+                    <a class="bst-link--title" href="javascript:void(0);">«Человек с большой буквы!»: perhaps67 вспоминает своего тренера по дзюдо</a>
+                </li>
+                <li class="bst-link">
+                    <div class="bst-link--action slider-hot--action_custom">Форум</div>
+                    <a class="bst-link--title" href="javascript:void(0);">Опенрейз 2.5x или 3x — что лучше?</a>
+                </li>
+                <li class="bst-link">
+                    <div class="bst-link--action slider-hot--action_rise">Новый блог</div>
+                    <a class="bst-link--title" href="javascript:void(0);">«Надо прислушиваться к организму»: Brdz1 попал в больницу после тренировки по ММА</a>
+                </li>
+                <li class="bst-link">
+                    <div class="bst-link--action slider-hot--action_top">Форум</div>
+                    <a class="bst-link--title" href="javascript:void(0);">Все ли настолько хорошо в приложениях? Альтернативный взгляд от AceKingMir</a>
+                </li>
+            </ul>
+            {{/repeat }}
+        </div>
+    </div>
+    
+    <div class="bst-pagination-wrap">
+        <a class="bst-slide-button bst-slide-button_prev" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/mainpage-sprite.svg#i-arrow-left"></use>
+            </svg>
+        </a>
+        <div class="bst-pagination"></div>
+        <a class="bst-slide-button bst-slide-button_next" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/mainpage-sprite.svg#i-arrow-right"></use>
+            </svg>
+        </a>
+    </div>
+</aside>
+
+<script>
+  var mySwiper = new Swiper('.bst-slider--main', {
+    wrapperClass: 'bst-slider--wrap',
+    slideClass: 'bst-slider--list',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.bst-slide-button_next',
+      prevEl: '.bst-slide-button_prev',
+      disabledClass: 'bst-slide-button_disabled'
+    },
+    pagination: {
+      el: '.bst-pagination',
+      bulletClass: 'bst-pagination--bullet',
+      bulletActiveClass: 'bst-pagination--bullet_active'
+    }
+  });
+</script>

@@ -1,0 +1,84 @@
+<header class="header">
+    <!-- mobile menu -->
+    {{> mobile-menu}}
+    <!-- mobile menu -->
+    <div class="top-header top-header_site">
+        <div class="top-header--inner">
+            <a class="top-header--target" href="javascript:void(0);"><img src="{{images}}/750x80.png" alt=""></a>
+        </div>
+    </div>
+    <!-- middle header -->
+    <div class="middle-header">
+        <div class="middle-header--inner">
+            <div class="middle-header--left">
+                <div class="submenu-header">
+                    <a class="submenu-header--item modal-login--open" href="javascript:void(0);">Вход</a>
+                    <a class="submenu-header--item" href="javascript:void(0);">Бекинг</a>
+                    <a class="submenu-header--item" href="javascript:void(0);">Поддержка</a>
+                    <a class="submenu-header--item" href="javascript:void(0);">Закладки</a>
+                </div>
+            </div>
+            <div class="middle-header--center">
+                <a class="middle-header--logo" href="/"></a>
+            </div>
+            <div class="middle-header--right">
+                <div class="submenu-header">
+                    <a class="submenu-header--item" href="javascript:void(0);">GTP<span class="submenu-header--counter-gtp">27</span></a>
+                    <a class="submenu-header--item" href="javascript:void(0);">Сообщения<span class="submenu-header--counter-msg">9</span></a>
+                    <div class="submenu-header--user"><a class="submenu-header--nick" href="javascript:void(0);" onclick="toggleNickMenu()">Alex_Superpoker_1993</a>
+                        <div class="submenu-header--options">
+                            <a class="submenu-header--user-link" href="javascript:void(0);">Профиль</a>
+                            <a class="submenu-header--user-link" href="javascript:void(0);">Настройки форума</a>
+                            <a class="submenu-header--user-link" href="javascript:void(0);">Настройки сайта</a>
+                            <a class="submenu-header--user-link" href="javascript:void(0);">Выйти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !middle header -->
+    <!-- modal login -->
+    <div class="modal-login--overlay hidden"></div>
+    <div class="modal-login hidden">
+        <button class="modal-login--close"></button>
+        <div class="modal-login--inner">
+            <div class="modal-login--heading">Авторизация</div>
+            <form class="modal-login--form" name="user" action="" method="post">
+                <input type="hidden" name="rememberme" value="1">
+                <input class="modal-login--input-login" type="text" name="login" value="" placeholder="Логин">
+                <input class="modal-login--input-pass" type="password" name="password" value="" placeholder="Пароль">
+                <a class="modal-login--remind" href="javascript:void(0);">Напомнить пароль</a>
+                <input class="modal-login--submit" type="submit" value="Войти">
+            </form>
+        </div>
+        <div class="modal-login--reg">
+            <a class="modal-login--reglink" href="javascript:void(0);">Регистрация</a>
+        </div>
+    </div>
+    <!-- !modal login -->
+    {{> modal-500}}
+    <!-- main menu -->
+    {{> main-menu-top}}
+    <!-- !main menu -->
+</header>
+<script>
+function toggleNickMenu() {
+    document.querySelector('.submenu-header--nick').classList.toggle('active');
+    document.querySelector('.submenu-header--options').classList.toggle('show');
+}
+</script>
+<script>
+var modal = document.querySelector(".modal-login");
+var modalOverlay = document.querySelector(".modal-login--overlay");
+var closeButton = document.querySelector(".modal-login--close");
+var openButton = document.querySelector(".modal-login--open");
+closeButton.addEventListener("click", function() {
+    modal.classList.toggle("hidden");
+    modalOverlay.classList.toggle("hidden");
+});
+openButton.addEventListener("click", function() {
+    modal.classList.toggle("hidden");
+    modalOverlay.classList.toggle("hidden");
+});
+</script>

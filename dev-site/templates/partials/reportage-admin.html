@@ -1,0 +1,19 @@
+<aside class="admin-module--wrap show">
+    <div class="reporter">
+        <div class="reporter-inner">
+            <div class="reporter-inner--toggle">
+                <a class="reporter-inner--button" href="javascript:void(0);" onclick="$(this).parent().next('.reporter-inner--top').toggleClass('show');">Верхний пост</a>
+            </div>
+            <div class="reporter-inner--top">
+                <form class="reporter-form" action="">
+                    {{> editor-reportage-top-post}}
+                </form>
+            </div>
+            <!-- editor -->
+            <form class="reporter-form" action="">
+                {{> editor-reportage}}
+            </form>
+            <!-- editor -->
+        </div>
+    </div>
+</aside>

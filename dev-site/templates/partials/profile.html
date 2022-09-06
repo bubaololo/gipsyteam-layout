@@ -1,0 +1,212 @@
+<div class="content">
+    {{> profile-header}}
+    <section class="profile-pager">
+        <ul class="u-pager">
+            <li class="active"><a class="u-pager--link" href="javascript:void(0);">Профиль</a></li>
+            <li><a class="u-pager--link" href="javascript:void(0);">Отзывы</a></li>
+            <li><a class="u-pager--link" href="javascript:void(0);">Бекинг</a></li>
+        </ul>
+    </section>
+    <section class="profile">
+        <!-- profile message -->
+        <div class="profile-message profile-message_nopad">
+            <a class="profile-message--button" href="javascript:void(0);">Отправить сообщение</a>
+        </div>
+        <!-- !profile message -->
+        <div class="profile--grid-top">
+            <div class="profile--column">
+                <!-- user blog -->
+                <div class="wgt-blog">
+                    <div class="wgt-blog--wrap">
+                        <div class="wgt-blog--remove">
+                            <div class="wgt-blog--heading">Блог на Gipsyteam</div>
+                            <a class="blog-remove-button" href="javascript:void(0);"></a>
+                        </div>
+                        <a class="wgt-blog--button" href="javascript:void(0);">Добавить</a>
+                    </div>
+                    <div class="wgt-blog--add">
+                        <span class="wgt-blog--mark">Блог на форуме</span>
+                        <div class="wgt-blog--line">
+                            <input type="text" value="" class="wgt-blog--field" placeholder="https://forum.gipsyteam.ru/index.php?viewtopic=">
+                            <a class="wgt-blog--save" href="javascript:void(0);">Сохранить</a>
+                        </div>
+                    </div>
+                    <div class="wgt-blog--head">
+                        <div class="wgt-blog--inner">
+                            <a class="wgt-blog--link" href="javascript:void(0);">Дневник талантливого лудомана</a>
+                        </div>
+                        <a class="wgt-blog--instagram" href="javascript:void(0);">Подключить инстаграм</a>
+                    </div>
+                </div>
+                <!-- !user blog -->
+                <!-- user info -->
+                <div class="wgt-info">
+                    <div class="wgt-info--top">
+                        <!-- user info list -->
+                        <ul class="wgt-info--list">
+                            <li class="wgt-info--item">Город:<span class="wgt-info--data">Москва</span></li>
+                            <li class="wgt-info--item">Страна:<span class="wgt-info--data">Россия</span></li>
+                            <li class="wgt-info--item">Пол:<span class="wgt-info--data">мужской</span></li>
+                            <li class="wgt-info--item">Записей в блоге:<span class="wgt-info--data">87</span></li>
+                            <li class="wgt-info--item">Дата регистрации:<span class="wgt-info--data">21.08.2010</span></li>
+                            <li class="wgt-info--item">Последний визит:<span class="wgt-info--data wgt-info--data_online">Сейчас на сайте</span></li>
+                        </ul>
+                        <!-- !user info list -->
+                        <!-- user sk -->
+                        <div class="user-sk">
+                            <div class="user-sk--heading">Sunday Kings</div>
+                            <div class="user-sk--inner">
+                                {{#repeat 3}}
+                                <div class="data-sk">
+                                    <div class="data-sk--limit">High</div>
+                                    <div class="data-sk--result">
+                                        <span class="data-sk--crown data-sk--crown_gold"></span>
+                                        <div class="data-sk--num">6</div>
+                                    </div>
+                                    <div class="data-sk--result">
+                                        <span class="data-sk--crown data-sk--crown_silver"></span>
+                                        <div class="data-sk--num">5</div>
+                                    </div>
+                                    <div class="data-sk--result">
+                                        <span class="data-sk--crown data-sk--crown_bronze"></span>
+                                        <div class="data-sk--num">12</div>
+                                    </div>
+                                </div>
+                                {{/repeat}}
+                            </div>
+                        </div>
+                        <!-- user sk -->
+                    </div>
+                    <!-- user sessions -->
+                    <div class="wgt-session-head">
+                        <span class="wgt-session-label">Активные сессии:</span>
+                        <a class="wgt-session-link" href="javascript:void(0);">Показать</a>
+                    </div>
+                    <!-- !user sessions -->
+                    <!-- user about -->
+                    <div class="user-about">
+                        <div class="user-about--heading">О себе</div>
+                        <p>Пожалуйста, будьте внимательны.<br>Все финансовые дела веду через личные сообщения ГТ.<br><br>Я не стучусь в скайп с предложением обмена, просьбой оплаты долей или просьбой дать в долг.<br><br><strong>Рекомендуемый HUD для спинов:</strong><br><a href="javascript:void(0);">http://forum.gipsyteam.ru/index.php?viewtopic=101924</a></p>
+                        <!-- admin -->
+                        <div class="admin-span">
+                            <a class="admin-span--toggle" href="javascript:void(0);" onclick="toggleAdminAbout()">Редактировать</a>
+                            <div class="admin-span--inner admin-span--inner_active">
+                                <form class="admin-span--form" action="">
+                                    <textarea class="admin-span--field"></textarea>
+                                    <div class="admin-span--footer">
+                                        <div class="admin-span--ftop">
+                                            <label class="admin-span--label">
+                                                <input class="checkbox-large" type="checkbox" checked><span class="checkbox-large--mark"></span>уведомить Fenomenico</label>
+                                        </div>
+                                        <div class="admin-span--fbottom">
+                                            <input class="admin-span-save" type="submit" value="Сохранить">
+                                            <a class="admin-span--cancel" href="javascript:void(0);">Отменить</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <script>
+                          function toggleAdminAbout() {
+                            let element = document.querySelector('.admin-span--inner');
+                            element.classList.toggle('admin-span--inner_active');
+                          }
+                        </script>
+                        <!-- !admin -->
+                    </div>
+                    <!-- !user about -->
+                    <!-- rake link -->
+                    <div class="rake-link">
+                        <a class="rake-link--button" href="javascript:void(0);">Статистика рейка</a>
+                    </div>
+                    <!-- !rake link -->
+                </div>
+                <!-- !user info -->
+            </div>
+            <div class="profile--column">
+                <!-- user articles -->
+                <section class="wgt-articles">
+                    <div class="wgt-articles--wrap">
+                        <div class="wgt-articles--head">
+                            <div class="wgt-articles--heading">Материалы о Fenomenico</div>
+                        </div>
+                        <div class="wgt-articles--inner">
+                            {{#repeat 3}}
+                            <div class="profile-article">
+                                <div class="profile-article--image">
+                                    <img src="/{{images}}/news-all-402x246.png" alt="">
+                                </div>
+                                <a class="profile-article--title" href="javascript:void(0);">Как дела у Run It Once Poker</a>
+                                <div class="profile-article--content">
+                                    <p>В начале апреля лонгрид Фила Гальфонда напомнил, что Run It Once Poker проработал уже почти два месяца. Мы перевели часть его монолога, а Михаил Савинов дополнил статью впечатлениями регуляра.</p>
+                                </div>
+                                <div class="profile-article--meta">
+                                    <!-- media-meta -->
+                                    <div class="media-meta">
+                                        <span class="media-meta--date">Вчера, 05:54</span>
+                                        <span class="media-meta--view">56</span>
+                                        <div class="media-meta--comment">37 /<span>3 новых</span></div>
+                                    </div>
+                                    <!-- !media-meta -->
+                                </div>
+                            </div>
+                            {{/repeat}}
+                        </div>
+                    </div>
+                    <div class="wgt-articles--bottom">
+                        <div class="pager">
+                            <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                            <a class="pager--item" href="javascript:void(0);">2</a>
+                            <a class="pager--item" href="javascript:void(0);">3</a>
+                            <a class="pager--item" href="javascript:void(0);">→</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- !user articles -->
+                <!-- user posts -->
+                <div class="wgt-messages">
+                    <div class="wgt-messages--wrap">
+                        <div class="wgt-messages--heading">Посты и комментарии</div>
+                        <button class="wgt-messages--button">Подписаться</button>
+                    </div>
+                    <ul class="wgt-messages--list">
+                        {{#repeat 7}}
+                        <li class="wgt-messages--item">
+                            <div class="wgt-messages--grid">
+                                <div class="wgt-messages--section">Игра в онлайне — покер-румы и платежные системы</div>
+                                <div class="wgt-messages--percent">36%</div>
+                                <div class="wgt-messages--qty">1566</div>
+                                <div class="wgt-messages--line">
+                                    <span class="wgt-messages--progress" style="width: 36%;"></span>
+                                </div>
+                            </div>
+                        </li>
+                        {{/repeat}}
+                    </ul>
+                    <div class="wgt-messages--inner">
+                        <a class="wgt-messages--link" href="javascript:void(0);">Все посты</a>
+                    </div>
+                </div>
+                <!-- !user posts -->
+                {{> widget-gtplus-button}}
+                <!-- widget 500 -->
+                <a class="wgt-500" href="javascript:void(0);">
+                    <div class="wgt-500--inner">
+                        <div class="wgt-500--logo"></div>
+                        <div class="wgt-500--info">
+                            <div class="wgt-500--title">Я играю много</div>
+                            <div class="wgt-500--subtitle">и хочу лучшие условия</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- !widget 500 -->
+            </div>
+        </div>
+        <!-- profile activity -->
+        {{> profile-activity}}
+        <!-- !profile activity -->
+        <!-- profile admin -->
+        {{> profile-admin}}
+        <!-- !profile admin -->
+    </section>
+</div>

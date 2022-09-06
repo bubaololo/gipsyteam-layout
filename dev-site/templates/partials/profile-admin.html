@@ -1,0 +1,400 @@
+<section class="profile-admin">
+    <div class="profile--grid-top">
+        <div class="profile--column">
+            <!-- main -->
+            <div class="mod-main">
+                <div class="mod-main--head">
+                    <div class="mod-main--heading">Модераторские функции</div>
+                    <a id="modOptions"></a>
+                </div>
+                <div class="mod-main--item">
+                    <div class="mod-main--subheading">Заблокировать</div>
+                    <a class="mod-tgl" href="javascript:void(0);" onclick="jQuery('#banDateFormContainer').toggle(); return false;">временно</a>
+                    <a class="mod-tgl" href="javascript:void(0);">навсегда</a>
+                    <div id="banDateFormContainer" style="display: none; margin: 10px 0;">
+                        <form method="post" action="">
+                            <div>
+                                до <select name="interval[hour]">
+                                    <option value="17" selected="selected">17:00</option>
+                                </select>
+                                <select name="interval[day]">
+                                    <option value="10" selected="selected">10</option>
+                                </select>
+                                <select name="interval[month]">
+                                    <option value="5" selected="selected">мая</option>
+                                </select>
+                                <select name="interval[year]">
+                                    <option value="2019">2019</option>
+                                </select>
+                                <input class="mod-main--button" type="submit" value="Поехали">
+                                <a href="javascript:void(0);" onclick="jQuery('#banDateFormContainer').hide(); return false;">Отменить</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="mod-main--item">
+                    <a class="mod-main--action" href="javascript:void(0);">Сделать PRO-другом</a>
+                </div>
+                <div class="mod-main--item">
+                    <a class="mod-main--action" href="javascript:void(0);"><strong>Запретить стримить</strong></a>
+                </div>
+                <div class="mod-main--item">
+                    <a class="mod-main--action" href="javascript:void(0);">Удалить аватар</a>
+                </div>
+                <div class="mod-main--item">
+                    <a class="mod-main--action" href="javascript:void(0);">Забанить в Бекинге и Обменах</a>
+                </div>
+                <div class="mod-main--item">
+                    <a class="mod-main--action" href="javascript:void(0);">Разрешить вечное редактирование постов на форуме</a>
+                </div>
+                <div class="mod-main--item">
+                    <a class="mod-main--action" href="javascript:void(0);">Разрешить доступ в бекинг и обмены без смс</a>
+                </div>
+                <div class="mod-main--item">
+                    <div class="mod-main--subheading">Загрузка файлов</div>
+                    <div class="mod-main--limit">стандарт</div><a class="mod-tgl" href="javascript:void(0);">увеличить</a>
+                </div>
+                <div class="mod-main--item">
+                    <a class="mod-main--action" href="javascript:void(0);">Снять блокировку пароля</a>
+                </div>
+                <div class="mod-main--item">
+                    <div class="mod-main--subheading">Запретить выставлять рейтинг</div>
+                    <a class="mod-tgl" href="javascript:void(0);" onclick="jQuery('#ratingDateFormContainer').toggle(); return false;">временно</a>
+                    <a class="mod-tgl" href="javascript:void(0);">навсегда</a>
+                    <div id="ratingDateFormContainer" style="display: none; margin: 10px 0;">
+                        <form method="post" action="">
+                            <div>
+                                до <select name="interval[hour]">
+                                    <option value="17" selected="selected">17:00</option>
+                                </select>
+                                <select name="interval[day]">
+                                    <option value="10" selected="selected">10</option>
+                                </select>
+                                <select name="interval[month]">
+                                    <option value="5" selected="selected">мая</option>
+                                </select>
+                                <select name="interval[year]">
+                                    <option value="2019">2019</option>
+                                </select>
+                                <input type="submit" value="Поехали">
+                                <a href="javascript:void(0);" onclick="jQuery('#ratingDateFormContainer').hide(); return false;">Отменить</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="mod-main--item">
+                    <div class="mod-main--subheading">Уведомлять меня о постах</div>
+                    <a class="mod-tgl" href="javascript:void(0);">всех</a>
+                    <a class="mod-tgl" href="javascript:void(0);">только со ссылками</a>
+                </div>
+                <div class="mod-main--item">
+                    <a class="mod-main--action" href="javascript:void(0);">Данные регистрации</a>
+                </div>
+
+                <!-- arbitrage -->
+                <form class="profile-admin--form" action="">
+                    <div class="mod-row">
+                        <span class="profile-admin-mark">Арбитраж</span>
+                        <input class="mod-field" type="text" value="">
+                    </div>
+                    <div class="mod-row mod-row_double">
+                        <span class="profile-admin-mark">Убрать ссылку</span>
+                        <span class="profile-admin-mark">не убирать / <a href="javascript:void(0);">установить дату</a></span>
+                    </div>
+                    <div class="mod-row">
+                        <div class="mod-select-wrap">
+                            <select class="mod-select mod-select_right">
+                                <option value="" selected="selected">18</option>
+                            </select>
+                            <select class="mod-select mod-select_right">
+                                <option value="" selected="selected">мая</option>
+                            </select>
+                            <select class="mod-select">
+                                <option value="" selected="selected">2019</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mod-row">
+                        <span class="profile-admin-mark"><a href="javascript:void(0);">не убирать</a></span>
+                    </div>
+                    <div class="mod-row">
+                        <input class="profile-admin-button" type="submit" value="Сохранить ссылку">
+                    </div>
+                </form>
+                <!-- !arbitrage -->
+
+                <!-- status -->
+                <form class="profile-admin--form" action="">
+                    <div class="mod-row">
+                        <span class="profile-admin-mark">Статус</span>
+                        <input class="mod-field" type="text" value="">
+                    </div>
+                    <div class="mod-row">
+                        <span class="profile-admin-mark">Цвет статуса</span>
+                        <select class="mod-select">
+                            <option>Обычный</option>
+                        </select>
+                    </div>
+                    <div class="mod-row">
+                        <span class="profile-admin-mark">Ссылка со статуса</span>
+                        <input class="mod-field" type="text" value="">
+                    </div>
+                    <div class="mod-row">
+                        <input class="profile-admin-button" type="submit" value="Сохранить статус">
+                    </div>
+                </form>
+                <!-- !status -->
+
+                <!-- partner -->
+                <form class="profile-admin--form" action="">
+                    <div class="mod-row">
+                        <label class="checkbox-medium--label">
+                            <input class="checkbox-medium" type="checkbox"><span class="checkbox-medium--mark"></span>Аккаунт партнера
+                        </label>
+                    </div>
+                    <div class="mod-row">
+                        <span class="profile-admin-mark">Название партнера</span>
+                        <input class="mod-field" type="text" value="">
+                    </div>
+                    <div class="mod-row">
+                        <input class="profile-admin-button" type="submit" value="Сохранить статус партнера">
+                    </div>
+                </form>
+                <!-- !partner -->
+
+                <!-- note -->
+                <form class="profile-admin--form" action="">
+                    <div class="mod-row">
+                        <div class="profile-admin-mark">Заметки о пользователе</div>
+                        <textarea class="setup-textarea" name="about"></textarea>
+                    </div>
+                    <div class="mod-row">
+                        <input class="profile-admin-button" type="submit" value="Сохранить заметку">
+                    </div>
+                </form>
+                <!-- !note -->
+            </div>
+            <!-- !main -->
+        </div>
+
+        <div class="profile--column">
+            <!-- feedback -->
+            <section class="feedback feedback_bottom">
+                <div class="feedback--header">
+                    <div class="feedback--heading">Отзывы Fenomenico</div>
+                </div>
+                <div class="feedback-comments">
+                    <div class="feedback-comments--top">
+                        <div class="filter filter_nowrap">
+                            <a class="filter--item filter--item_active" href="javascript:void(0);">Все<strong>67</strong></a>
+                            <a class="filter--item" href="javascript:void(0);">Позитив<strong>45</strong></a>
+                            <a class="filter--item" href="javascript:void(0);">Негатив<strong>12</strong></a>
+                        </div>
+                    </div>
+                    <ul class="feedback-list">
+                        {{#repeat 5}}
+                        <li class="feedback-list--item">
+                            <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                            <div class="feedback-list--grid">
+                                <div class="feedback-list--rating feedback-list--rating_positive">+100</div>
+                                <div class="feedback-list--content">
+                                    <div class="feedback-list--meta"><a class="feedback-list--nick" href="javascript:void(0);">shellshoked</a><span class="feedback-list--date">29 января 2019</span></div>
+                                    <div class="feedback-list--text">Интересный дневник :)<br>
+                                        +25 За целеустремленность :)<br>
+                                        Upd: отлично побегали в пейнтбол :)</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="feedback-list--item">
+                            <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                            <div class="feedback-list--grid">
+                                <div class="feedback-list--rating feedback-list--rating_positive">+35</div>
+                                <div class="feedback-list--content">
+                                    <div class="feedback-list--meta"><a class="feedback-list--nick" href="javascript:void(0);">no_mean</a><span class="feedback-list--date">29 января 2019</span></div>
+                                    <div class="feedback-list--text">хорошие видосы и вообще</div>
+                                </div>
+                            </div>
+                        </li>
+                        {{/repeat}}
+                    </ul>
+                    <div class="feedback-comments--bottom">
+                        <div class="pager">
+                            <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                            <a class="pager--item" href="javascript:void(0);">2</a>
+                            <a class="pager--item" href="javascript:void(0);">3</a>
+                            <a class="pager--item" href="javascript:void(0);">→</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- !feedback -->
+        </div>
+    </div>
+
+    <!-- account -->
+    <div class="mod-data">
+        <div class="mod-data--header">
+            <div class="mod-data--heading">Последние действия с аккаунтом</div>
+        </div>
+        <div class="mod-stats">
+            <div class="mod-stats--item mod-stats--item_wide">
+                <div class="mod-stats--head">Дата</div>
+                <div class="mod-stats--head">Действие</div>
+                <div class="mod-stats--head">Автор</div>
+            </div>
+            {{#repeat 3}}
+            <div class="mod-stats--item">
+                <span class="mod-stats--mark">Дата</span>
+                <div class="mod-stats--label">2018-11-24 11:28:43</div>
+                <span class="mod-stats--mark">Действие</span>
+                <div class="mod-stats--action">Редактирование профиля</div>
+                <span class="mod-stats--mark">Автор</span>
+                <div class="mod-stats--nick">Fenomenico</div>
+            </div>
+            {{/repeat}}
+        </div>
+    </div>
+    <!-- !account -->
+
+    <!-- complain -->
+    <div class="mod-data">
+        <div class="mod-data--header">
+            <div class="mod-data--heading">Жалобы на посты</div>
+        </div>
+        <div class="mod-stats mod-stats_single">
+            {{#repeat 3}}
+            <div class="mod-stats--item">
+                <div class="mod-stats--label"><a href="javascript:void(0);">LuCkAntikilleR</a></div>
+                <div class="mod-stats--label">пожаловался на</div>
+                <div class="mod-stats--label"><a href="javascript:void(0);">сообщение Fenomenico</a></div>
+            </div>
+            {{/repeat}}
+        </div>
+    </div>
+    <!-- !complain -->
+
+    <!-- user IP -->
+    <div class="mod-data">
+        <div class="mod-data--header">
+            <div class="mod-data--heading">IP пользователя</div>
+            <div class="mod-data--wrap">
+                <a class="mod-stats-button" href="javascript:void(0);" onclick="$(this).closest('.mod-data--header').next('.mod-stats_toggle').toggleClass('show');">Показать</a>
+            </div>
+        </div>
+        <div class="mod-stats mod-stats_single mod-stats_quad mod-stats_toggle">
+            <div class="mod-stats--item mod-stats--item_wide">
+                <div class="mod-stats--head">IP</div>
+                <div class="mod-stats--head">Использован</div>
+                <div class="mod-stats--head">Использовался другими пользователями</div>
+                <div class="mod-stats--head"></div>
+            </div>
+            {{#repeat 3}}
+            <div class="mod-stats--item">
+                <div class="mod-stats--label"><span>185.189.254.80</span><a href="javascript:void(0);">whois</a></div>
+                <div class="mod-stats--label">5</div>
+                <div class="mod-stats--label">
+                    {{#repeat 3}}
+                    <a href="javascript:void(0);">electrogatila</a>
+                    <a href="javascript:void(0);">Falmera</a>
+                    <a href="javascript:void(0);">fim</a>
+                    <a class="color6" href="javascript:void(0);">InnerLight</a>
+                    <a href="javascript:void(0);">gaw76</a>
+                    {{/repeat}}
+                </div>
+                <div class="mod-stats--block"><a href="javascript:void(0);">Заблокировать 185.189.254.80</a></div>
+            </div>
+            {{/repeat}}
+        </div>
+    </div>
+    <!-- user IP -->
+
+    <!-- multi-accounting -->
+    <div class="mod-data">
+        <div class="mod-data--header">
+            <div class="mod-data--heading">Мульти-аккаунтинг</div>
+        </div>
+        <div class="mod-stats mod-stats_solo">
+
+            <div class="mod-stats--item">
+                <div class="mod-stats--label"><a href="javascript:void(0);">Enlight</a></div>
+            </div>
+            {{#repeat 5}}
+            <div class="mod-stats--item">
+                <div class="mod-stats--label">2018-11-24 11:28:43</div>
+            </div>
+            {{/repeat}}
+        </div>
+    </div>
+    <!-- !multi-accounting -->
+
+    <!-- two factor auth -->
+    <div class="mod-data">
+        <div class="mod-data--header">
+            <div class="mod-data--heading">Совпадение номера двухфакторной авторизации</div>
+        </div>
+        <div class="mod-stats mod-stats_solo">
+            {{#repeat 3}}
+            <div class="mod-stats--item">
+                <div class="mod-stats--label"><a href="javascript:void(0);">electrogatila</a></div>
+            </div>
+            {{/repeat}}
+        </div>
+    </div>
+    <!-- !two factor auth -->
+
+    <!-- login/logout -->
+    <div class="profile--grid-top">
+        <div class="profile--column">
+            <!-- login -->
+            <div class="mod-data">
+                <div class="mod-data--header">
+                    <div class="mod-data--heading">Последние 10 авторизаций и выходов</div>
+                </div>
+                <div class="mod-stats mod-stats_single">
+                    <div class="mod-stats--item">
+                        <div class="mod-stats--subheading mod-stats--subheading_wide">Авторизация</div>
+                    </div>
+                    <div class="mod-stats--item mod-stats--item_wide">
+                        <div class="mod-stats--head">IP</div>
+                        <div class="mod-stats--head">Дата</div>
+                    </div>
+                    {{#repeat 3}}
+                    <div class="mod-stats--item">
+                        <div class="mod-stats--label"><span>185.189.254.80</span><a href="javascript:void(0);">whois</a></div>
+                        <div class="mod-stats--label">2018-11-24 11:28:43</div>
+                        <div class="mod-stats--block"><a href="javascript:void(0);">Заблокировать 185.189.254.80</a></div>
+                    </div>
+                    {{/repeat}}
+                </div>
+            </div>
+            <!-- !login -->
+        </div>
+        <div class="profile--column">
+            <!-- logout -->
+            <div class="mod-data">
+                <div class="mod-data--header">
+                    <div class="mod-data--heading"></div>
+                </div>
+                <div class="mod-stats mod-stats_single">
+                    <div class="mod-stats--item">
+                        <div class="mod-stats--subheading">Выход</div>
+                    </div>
+                    <div class="mod-stats--item mod-stats--item_wide">
+                        <div class="mod-stats--head">IP</div>
+                        <div class="mod-stats--head">Дата</div>
+                    </div>
+                    {{#repeat 3}}
+                    <div class="mod-stats--item">
+                        <div class="mod-stats--label"><span>185.189.254.80</span><a href="javascript:void(0);">whois</a></div>
+                        <div class="mod-stats--label">2018-11-24 11:28:43</div>
+                        <div class="mod-stats--block"><a href="javascript:void(0);">Заблокировать 185.189.254.80</a></div>
+                    </div>
+                    {{/repeat}}
+                </div>
+            </div>
+            <!-- !logout -->
+        </div>
+    </div>
+    <!-- !login/logout -->
+
+</section>

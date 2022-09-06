@@ -1,0 +1,119 @@
+<div class="content content_theme">
+    <div class="settings-wrap">
+        <div class="settings-head">
+            <h1>Настройки</h1>
+        </div>
+        <div class="settings-toggle">
+            <a class="settings-toggle--button tab-active" href="javascript:void(0);">Профиль</a>
+        </div>
+        <div class="settings-list tab-active">
+            <div class="settings-inner">
+                
+                <!-- email -->
+                <form class="userset-group-form" name="user" action="" method="post">
+                    <div class="userset-group-heading">Изменить e-mail</div>
+                    <div class="userset-group">
+                        <div class="userset-label">Текущий e-mail</div>
+                        <input class="userset-field" type="text" value="" placeholder="">
+                        <p class="userset-note">Неверный пароль</p>
+                    </div>
+                    <div class="userset-group">
+                        <div class="userset-label">Новый e-mail</div>
+                        <input class="userset-field" type="text" value="">
+                        <p class="userset-note">Неверный пароль</p>
+                    </div>
+                    <input class="userset-submit" type="submit" value="Сохранить">
+                </form>
+                <!-- !email -->
+                
+                <!-- pass -->
+                <form class="userset-group-form" name="user" action="" method="post">
+                    <div class="userset-group-heading">Изменить пароль</div>
+                    <div class="userset-group">
+                        <div class="userset-label">Текущий пароль</div>
+                        <input class="userset-field" type="text" value="" placeholder="">
+                        <p class="userset-note">Неверный пароль</p>
+                    </div>
+                    <div class="userset-group">
+                        <div class="userset-label">Новый пароль</div>
+                        <input class="userset-field" type="text" value="">
+                        <p class="userset-note">Неверный пароль</p>
+                    </div>
+                    <div class="userset-group">
+                        <div class="userset-label">Повторите новый пароль</div>
+                        <input class="userset-field" type="text" value="">
+                        <p class="userset-note">Неверный пароль</p>
+                    </div>
+                    <input class="userset-submit" type="submit" value="Сохранить">
+                </form>
+                <!-- !pass -->
+                
+                <!-- sms -->
+                <form class="userset-group-form" name="user" action="" method="post">
+                    <div class="userset-group-heading">Усиленная защита аккаунта по SMS</div>
+                    <div class="userset-group-subheading">Введите <strong>пароль от учетной записи</strong> и действующий <strong>номер телефона</strong>.</div>
+                    <div class="userset-group">
+                        <div class="userset-label">Пароль</div>
+                        <input class="userset-field" type="text" value="" placeholder="">
+                        <p class="userset-note">Ошибка</p>
+                    </div>
+                    <div class="userset-group">
+                        <div class="userset-label">Номер телефона</div>
+                        <input class="userset-field" type="text" value="">
+                        <p class="userset-note">Ошибка</p>
+                    </div>
+                    <div class="userset-grid">
+                        <input class="userset-submit" type="submit" value="Подтвердить">
+                        <input class="userset-submit userset-submit_cancel" type="submit" value="Отменить">
+                    </div>
+                    <a class="userset-sublink" href="javascript:void(0);">Не хочу получать код по SMS, предпочитаю использовать Google Authenticator</a>
+                </form>
+                <!-- !sms -->
+                
+                <!-- google authenticator -->
+                <form class="userset-group-form" name="user" action="" method="post">
+                    <div class="userset-group-heading">Google Authenticator</div>
+                    <div class="userset-group-subheading">1. <strong>Установите на своем телефоне приложение Google Authenticator</strong></div>
+                    <div class="userset-row">
+                        <a class="userset-row--button" href="https://itunes.apple.com/gb/app/google-authenticator/id388497605" target="_blank">iOS</a>
+                        <a class="userset-row--button" href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2" target="_blank">Android</a>
+                    </div>
+                    <div class="userset-group-subheading">2. <strong>Добавьте ключ в Google Authenticator</strong></div>
+                    
+                    <div class="userset-code">
+                        <div class="userset-group-subheading">Отсканируйте QR-код в приложении</div>
+                        <div class="userset-image-wrap">
+                            <img src="/nimg/qr.png" alt="">
+                        </div>
+                        <a class="userset-subnote" href="javascript:void(0);" onclick="jQuery('.userset-code').toggle(); jQuery('.userset-step').toggle();">Не смогли отсканировать QR-код?</a>
+                    </div>
+                    
+                    <div class="userset-step" style="display: none;">
+                        <ol class="userset-step--list">
+                            <li>В Google Authenticator коснитесь <strong>+</strong></li>
+                            <li>Тип ключа: убедитесь, что выбрано "с временным критерием"</li>
+                            <li>В разделе "Счет" введите Ваш полный электронный адрес</li>
+                            <li>В разделе "Ключ" введите Ваш секретный ключ<br>
+                                <strong class="userset-step--key">H4YVM6JF54OLN6CU</strong></li>
+                            <li>Нажмите "Готово"</li>
+                        </ol>
+                        <a class="userset-subnote" href="javascript:void(0);" onclick="jQuery( '.userset-code').toggle(); jQuery( '.userset-step').toggle();">Показать QR-код</a>
+                    </div>
+                    
+                    <div class="userset-group">
+                        <div class="userset-group-subheading">3. <strong>Подтвердите действие кодом из Google Authenticator</strong></div>
+                        <input class="userset-field" type="text" value="">
+                        <p class="userset-note">Ошибка</p>
+                    </div>
+                    <div class="userset-grid">
+                        <input class="userset-submit" type="submit" value="Подтвердить">
+                        <input class="userset-submit userset-submit_cancel" type="submit" value="Отменить">
+                    </div>
+                    <a class="userset-sublink" href="javascript:void(0);">Не хочу использовать Google Authenticator, предпочитаю получать код по SMS</a>
+                </form>
+                <!-- !google authenticator -->
+            
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,117 @@
+<section class="streamer-widget">
+    <!-- stream popup -->
+    <div class="stream-overlay hidden"></div>
+    <div class="stream-popup-wrap hidden">
+        <div class="stream-popup">
+            <a class="stream-popup--close" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/settings-sprite.svg#i-close"></use>
+                </svg>
+            </a>
+            <div class="stream-popup--inner">
+                <div class="stream-popup--heading">Опубликовать трансляцию</div>
+                <form class="stream-popup--form" name="user" action="" method="post">
+                    <div class="stream-popup-group">
+                        <div class="stream-popup-label">Название</div>
+                        <input class="stream-popup-field" type="text" value="" placeholder="Название стрима">
+                    </div>
+                    <div class="stream-popup-group">
+                        <div class="stream-popup-label">Ссылка</div>
+                        <input class="stream-popup-field" type="text" value="" placeholder="Только Twitch, YouTube или GoodGame">
+                    </div>
+                    <input class="stream-popup-submit popup-submit_up" type="submit" value="Опубликовать">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- !stream popup -->
+    
+    <div class="streamer-widget--head">
+        <svg class="streamer-widget--icon">
+            <use href="/nimg/ext-popcorn.svg#popcorn"/>
+        </svg>
+        <a class="streamer-widget--heading" href="javascript:void(0);">Стримы</a>
+        <a class="streamer-widget--new" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/mainpage-sprite.svg#i-stream"/>
+            </svg>
+            Начать трансляцию
+        </a>
+        <div class="streamer-control">
+            <a class="streamer-control--button streamer-control--button_prev" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/ext-slider-button-left.svg#sl-btn-left"/>
+                </svg>
+            </a>
+            <a class="streamer-control--button streamer-control--button_next" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/ext-slider-button-right.svg#sl-btn-right"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="streamer-slider">
+        <div class="streamer-widget--grid">
+            {{#repeat 3}}
+            <a class="streamer-widget--item" href="javascript:void(0);">
+                <div class="streamer-widget--image">
+                    <div class="streamer-widget--play">
+                        <img src="/{{images}}/112x86.png" alt="">
+                    </div>
+                </div>
+                <div class="streamer-widget--info">
+                    <div class="streamer-widget--nick">
+                        <div class="streamer-widget--user">FranSiSko</div>
+                        <span class="streamer-widget--stats">205</span>
+                    </div>
+                    <div class="streamer-widget--title">spin marafon cash nl5</div>
+                </div>
+            </a>
+            {{/repeat}}
+            <!-- create stream -->
+            <a class="streamer-widget--item streamer-widget--item_create" href="javascript:void(0);">
+                <div class="streamer-widget--inner">
+                    <div class="streamer-widget--create"></div>
+                </div>
+                <div class="streamer-widget--wrap">
+                    <div class="streamer-widget--slogan">Начните трансляцию своего стрима</div>
+                    <span class="streamer-widget--plus"></span>
+                </div>
+            </a>
+            <!-- !create stream -->
+        </div>
+    </div>
+</section>
+<script>
+  (function($) {
+    $(function() {
+      var mySwiper;
+      var breakpoint = window.matchMedia('(max-width: 63.9375em)');
+
+      function breakpointChecker() {
+        if (!breakpoint.matches) {
+          mySwiper = new Swiper('.streamer-slider', {
+            // custom namespace
+            wrapperClass: 'streamer-widget--grid',
+            slideClass: 'streamer-widget--item',
+            mousewheel: true,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 20,
+            loopFillGroupWithBlank: true,
+            navigation: {
+              nextEl: '.streamer-control--button_next',
+              prevEl: '.streamer-control--button_prev',
+              disabledClass: 'streamer-control--button_disabled'
+            }
+          });
+        } else if (mySwiper) {
+          mySwiper.destroy(true, true);
+        }
+      }
+
+      breakpoint.addListener(breakpointChecker);
+      breakpointChecker();
+    });
+  })(jQuery);
+</script>

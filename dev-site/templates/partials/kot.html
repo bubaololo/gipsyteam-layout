@@ -1,0 +1,324 @@
+<div class="content">
+    <!--kot page-->
+    <div class="kot-wrap">
+        <section class="kot-head">
+            <div class="kot-head--inner">
+                <a class="kot-head--link" href="javascript:void(0);">
+                    <svg class="kot-logo-image">
+                        <use href="/nimg/kot-sprite.svg#logo"></use>
+                    </svg>
+                    <svg class="kot-logo-text">
+                        <use href="/nimg/kot-sprite.svg#logo-text"></use>
+                    </svg>
+                </a>
+                <h1 class="kot-heading">Получи финансирование<br><span>и научись игре у профессионалов!</span></h1>
+            </div>
+            <div class="kot-play">
+                <div class="kot-video-wrap">
+                    <div class="kot-video">
+                        <a class="kot-video--link" href="javascript:void(0);">
+                            <img src="https://i.ytimg.com/vi/e538YbGf-y8/maxresdefault.jpg" alt="обзор">
+                        </a>
+                        <div class="kot-video--button">
+                            <svg width="72" height="72">
+                                <use href="/nimg/kot-sprite.svg#i-play"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+              function findVideos() {
+                let videos = document.querySelectorAll('.kot-video');
+                for (let i = 0; i < videos.length; i++) {
+                  setupVideo(videos[i]);
+                }
+              }
+
+              function setupVideo(video) {
+                let link = video.querySelector('.kot-video--link');
+                let button = video.querySelector('.kot-video--button');
+                video.addEventListener('click', () => {
+                  let iframe = createIframe();
+                  link.remove();
+                  button.remove();
+                  video.appendChild(iframe);
+                });
+              }
+
+              function createIframe() {
+                let iframe = document.createElement('iframe');
+                let embedCode = 'e538YbGf-y8';
+                let query = '?rel=0&showinfo=0&autoplay=1';
+                let videoSrc = 'https://www.youtube.com/embed/' + embedCode + query;
+                iframe.setAttribute('src', videoSrc);
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.setAttribute('allow', 'autoplay');
+                return iframe;
+              }
+
+              findVideos();
+            </script>
+        </section>
+        
+        <section class="kot-offer">
+            <h2 class="kot-offer--heading">Преимущества команды Kings of Tournaments</h2>
+            <div class="kot-offer--grid">
+                <div class="kot-offer--item">
+                    <svg class="kot-offer--icon">
+                        <use href="/nimg/kot-sprite.svg#i-pen"></use>
+                    </svg>
+                    <div class="kot-offer--text">Короткий контракт - 3000 турниров</div>
+                    <div class="kot-offer--subtext">Возможность прекратить сотрудничество в первый месяц без штрафов</div>
+                </div>
+                <div class="kot-offer--item">
+                    <svg class="kot-offer--icon">
+                        <use href="/nimg/kot-sprite.svg#i-pie-chart"></use>
+                    </svg>
+                    <div class="kot-offer--text">Доля игрока до 80%</div>
+                    <div class="kot-offer--subtext">Рейкбек и бонусы игроку</div>
+                </div>
+                <div class="kot-offer--item">
+                    <svg class="kot-offer--icon">
+                        <use href="/nimg/kot-sprite.svg#i-file"></use>
+                    </svg>
+                    <div class="kot-offer--text">Удобная и простая форма отчетности</div>
+                    <div class="kot-offer--subtext">Отчет - это просто внесение балансов</div>
+                </div>
+                <div class="kot-offer--item">
+                    <svg class="kot-offer--icon">
+                        <use href="/nimg/kot-sprite.svg#i-network-chart"></use>
+                    </svg>
+                    <div class="kot-offer--text">Расписатор 3.0: продвинутая система селекта</div>
+                    <div class="kot-offer--subtext">Моментальные 10% к вашему ROI</div>
+                </div>
+                <div class="kot-offer--item">
+                    <svg class="kot-offer--icon">
+                        <use href="/nimg/kot-sprite.svg#i-server"></use>
+                    </svg>
+                    <div class="kot-offer--text">Мощный сервер с покерным софтом</div>
+                    <div class="kot-offer--subtext">Готовые расчеты для всевозможных префлоп и постфлоп ситуаций</div>
+                </div>
+                <div class="kot-offer--item">
+                    <svg class="kot-offer--icon">
+                        <use href="/nimg/kot-sprite.svg#i-user"></use>
+                    </svg>
+                    <div class="kot-offer--text">Покерный психолог с профильным образованием</div>
+                    <div class="kot-offer--subtext">Бесплатная поддержка для каждого</div>
+                </div>
+                
+                <div class="kot-offer--item">
+                    <svg class="kot-offer--icon">
+                        <use href="/nimg/kot-sprite.svg#i-group"></use>
+                    </svg>
+                    <div class="kot-offer--text">Регулярные лидер борды с путевками на EPT</div>
+                </div>
+                <div class="kot-offer--item">
+                    <svg class="kot-offer--icon">
+                        <use href="/nimg/kot-sprite.svg#i-key"></use>
+                    </svg>
+                    <div class="kot-offer--text">Закрытые стримы от Kot_Spartac и AlexZA3</div>
+                </div>
+                <div class="kot-offer--item">
+                    <svg class="kot-offer--icon">
+                        <use href="/nimg/kot-sprite.svg#i-hat"></use>
+                    </svg>
+                    <div class="kot-offer--text">Доступ к 1000+ часов учебного материала</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="kot-graph">
+            <div class="kot-graph--header">
+                <h2 class="kot-graph--heading">График игроков команды</h2>
+            </div>
+            <div class="kot-graph--inner">
+                <div class="kot-graph--wrap"></div>
+                <div class="kot-graph--data">
+                    <div class="kot-data">
+                        <div class="kot-data--label">Дата старта проекта</div>
+                        <div class="kot-data--num">01.08.2020</div>
+                    </div>
+                    <div class="kot-data">
+                        <div class="kot-data--label">Profit</div>
+                        <div class="kot-data--num">1,004,898 $</div>
+                    </div>
+                    <div class="kot-data">
+                        <div class="kot-data--label">Tournament</div>
+                        <div class="kot-data--num">273732</div>
+                    </div>
+                    <div class="kot-data">
+                        <div class="kot-data--label">AVG Stake</div>
+                        <div class="kot-data--num">14.03</div>
+                    </div>
+                    <div class="kot-data">
+                        <div class="kot-data--label">ROI</div>
+                        <div class="kot-data--num">21.3%</div>
+                    </div>
+                    <div class="kot-data">
+                        <div class="kot-data--label">Дата обновления графика</div>
+                        <div class="kot-data--num">17.05.21</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="kot-quest">
+            <div class="kot-quest--wrap">
+                <div class="kot-quest--grid">
+                    <div class="kot-quest--heading">Обязательные требования к кандидатам</div>
+                    <div class="kot-quest--item">
+                        <div class="kot-quest--point">
+                            <svg>
+                                <use href="/nimg/kot-sprite.svg#i-check"></use>
+                            </svg>
+                        </div>
+                        <div>Готов уделять игре и обучению <strong>150 часов в месяц</strong></div>
+                    </div>
+                    <div class="kot-quest--item">
+                        <div class="kot-quest--point">
+                            <svg>
+                                <use href="/nimg/kot-sprite.svg#i-check"></use>
+                            </svg>
+                        </div>
+                        <div><strong>Сыграл 1000 турниров</strong> за последние полгода</div>
+                    </div>
+                    <div class="kot-quest--item">
+                        <div class="kot-quest--point">
+                            <svg>
+                                <use href="/nimg/kot-sprite.svg#i-check"></use>
+                            </svg>
+                        </div>
+                        <div>Можешь <strong>показать профит на рабочем лимите</strong></div>
+                    </div>
+                    <div class="kot-quest--item">
+                        <div class="kot-quest--point">
+                            <svg>
+                                <use href="/nimg/kot-sprite.svg#i-check"></use>
+                            </svg>
+                        </div>
+                        <div><strong>Хорошая репутация</strong> и отсутствие арбитража</div>
+                    </div>
+                </div>
+                
+                <div class="kot-deal">
+                    <input class="kot-deal--input" id="deal" type="checkbox">
+                    <label class="kot-deal--label" for="deal">
+                    <span class="kot-deal--tick">
+                        <svg>
+                            <use href="/nimg/kot-sprite.svg#i-checked"></use>
+                        </svg>
+                    </span>Согласен с требованиями
+                    </label>
+                    
+                    <div class="kot-deal--wrap kot-deal--wrap_active">
+                        <svg class="kot-deal--arrow">
+                            <use href="/nimg/kot-sprite.svg#i-uparrow"></use>
+                        </svg>
+                        <div class="kot-deal--note">Подтвердите согласие с требованиями, чтобы заполнить анкету</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kot-quest--inner kot-quest--inner_disabled">
+                <div class="kot-form-heading">Анкета</div>
+                
+                <form class="kot-form" action="">
+                    <div class="kot-group">
+                        <div class="kot-group--label">Ф.И.О</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Дата рождения</div>
+                        <input class="ktpl-input-text" type="text" value="" placeholder="ДД/ММ/ГГ">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Телефон</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Nickname (латиницей)</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Город</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Адрес электронной почты</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                        <span class="ktpl-required">Это поле обязательно для заполнения</span>
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Ссылка на профиль Gipsyteam</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Алиас в Sharkscope или перечислите румы и ники</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Среднемесячная дистанция за последние полгода</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Опишите вашу покерную карьеру</div>
+                        <textarea class="ktpl-input-area"></textarea>
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Какой ABI планируете играть?</div>
+                        <select class="ktpl-select">
+                            <option value="0" selected="selected">ABI 30</option>
+                            <option value="1">ABI 100</option>
+                        </select>
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Планируете ли вы совмещать покер с другой деятельностью? Если да, то с какой (укажите сферу деятельности)</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Мессенджер для связи (Skype, Telegram, Discord) и имя вашего аккаунта</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">С кем из покерного комьюнити вы знакомы, кто может вас рекомендовать? (ссылка на профиль GipsyTeam) *</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group">
+                        <div class="kot-group--label">Откуда вы узнали о нас? (если Twitch, то какой стример) *</div>
+                        <input class="ktpl-input-text" type="text" value="">
+                    </div>
+                    
+                    <div class="kot-group kot-group_bottom">
+                        <button class="ktpl-button-send">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <!--!kot page-->
+</div>
+
+<script>
+  (function($) {
+    $('.kot-deal--input').on('change', function() {
+      $('.kot-deal--tick').toggleClass('kot-deal--tick_active');
+      $('.kot-deal--wrap').toggleClass('kot-deal--wrap_active');
+      $('.kot-quest--inner').toggleClass('kot-quest--inner_disabled');
+    });
+  })(jQuery);
+</script>

@@ -1,0 +1,152 @@
+<section class="widget-rate">
+    <div class="widget-rate--header">
+        <div class="widget-rate--heading">Отзыв о <strong>Fenomenico</strong></div>
+    </div>
+    <div class="feedback-edit">
+        <div class="feedback-edit--inner">
+            <!-- include rating -->
+            <div class="feedback-list--grid">
+                <div class="feedback-list--rating feedback-list--rating_positive">+100</div>
+                <div class="feedback-list--content">
+                    <div class="feedback-list--meta"><a class="feedback-list--nick feedback-list--nick_gt" href="javascript:void(0);">Hightower</a><span class="feedback-list--date">29 января 2019</span></div>
+                    <div class="feedback-list--text">Твоя утренняя полу-березка на ковре была шедевральна! За сохранение в душе про-покериста детской непосредственности.</div>
+                </div>
+            </div>
+            <!-- !include rating -->
+        </div>
+        <div class="feedback-edit--wrap">
+            <a class="feedback-edit--button" href="javascript:void(0);">Изменить отзыв</a>
+        </div>
+    </div>
+    <div class="widget-rate--inner">
+        <form name="Reference" action="#review-form" method="post">
+            <div style="display: none;"><input type="hidden" name="Chrome_Form" value=""></div>
+            <div class="widget-rate--subheader">Ваш баланс: -∞ / +∞</div>
+            <div class="rate-slider">
+                <input id="ratingSliderInput" type="hidden" name="rating" value="0">
+                <div class="rate-slider--side rate-slider--side_negative">
+                    <a class="rate-slider--cancel"></a>
+                    <input class="rate-slider--input rate-slider--input_negative" id="ratingSliderMinBoundInput" tabindex="998" maxlength="4" type="text" placeholder="-100">
+                </div>
+                <div class="rate-slider--inner">
+                    <div class="rate-slider--range rate-slider--range_negative">
+                        <div class="rate-slider--line rate-slider--line_negative" id="sliderNegativeBg"></div>
+                    </div>
+                    <div class="rate-slider--range rate-slider--range_positive">
+                        <div class="rate-slider--line rate-slider--line_positive" id="sliderPositiveBg"></div>
+                    </div>
+                    <div id="ratingSliderTrack"></div>
+                </div>
+                <div class="rate-slider--side rate-slider--side_positive">
+                    <a class="rate-slider--cancel"></a>
+                    <input class="rate-slider--input rate-slider--input_positive" id="ratingSliderMaxBoundInput" tabindex="998" maxlength="4" type="text" placeholder="+100">
+                </div>
+            </div>
+            <div class="widget-rate--note">Рейтинг — это ваша характеристика человека, оценка его качеств и поведения</div>
+            <div class="widget-rate--link"><a href="javascript:void(0);">Запас очков обновляется по понедельникам</a></div>
+            <div class="widget-rate--wrap">
+                <textarea class="widget-rate--field" name="text" maxlength="300" placeholder="Текст отзыва" tabindex="999"></textarea>
+            </div>
+            <div class="widget-rate--admin">
+                <label class="admin-span--label">
+                    <input type="hidden" value="0" name="onTop">
+                    <input class="checkbox-large" type="checkbox" value="1" name="onTop"><span class="checkbox-large--mark"></span>Закрепить наверху</label>
+                <label class="admin-span--label">
+                    <input type="hidden" name="forceGt" value="0">
+                    <input class="checkbox-large" type="checkbox" name="forceGt" value="1" tabindex="1001"><span class="checkbox-large--mark"></span>Отзыв от ника GipsyTeam</label>
+            </div>
+            <button class="widget-rate--save" tabindex="1000">Сохранить отзыв</button>
+            <a class="widget-rate--remove" href="javascript:void(0);">Удалить отзыв</a>
+        </form>
+    </div>
+    <script>
+    (function($) {
+        $(function() {
+            function onSlide(event, ui) {
+                if (ui.value > 0) {
+                    $('#sliderPositiveBg').css({ width: ui.value + '%' });
+                    $('#sliderNegativeBg').css({ width: 0 });
+                    $('#ratingSliderMinBoundInput').val('').parent().removeClass('active');
+                    $('#ratingSliderMaxBoundInput').val('+' + ui.value).parent().addClass('active');
+                } else if (ui.value < 0) {
+                    $('#sliderNegativeBg').css({ width: Math.abs(ui.value) + '%' });
+                    $('#sliderPositiveBg').css({ width: 0 });
+                    $('#ratingSliderMinBoundInput').val(ui.value).parent().addClass('active');
+                    $('#ratingSliderMaxBoundInput').val('').parent().removeClass('active');
+                } else {
+                    $('#sliderNegativeBg').css({ width: 0 });
+                    $('#sliderPositiveBg').css({ width: 0 });
+                    if ($('#ratingSliderMinBoundInput').parent().hasClass('focused')) {
+                        $('#ratingSliderMinBoundInput').val('-').parent().addClass('active');
+                    } else {
+                        $('#ratingSliderMinBoundInput').val('').parent().removeClass('active');
+                    }
+                    if ($('#ratingSliderMaxBoundInput').parent().hasClass('focused')) {
+                        $('#ratingSliderMaxBoundInput').val('+').parent().addClass('active');
+                    } else {
+                        $('#ratingSliderMaxBoundInput').val('').parent().removeClass('active');
+                    }
+                }
+                $('#ratingSliderInput').val(ui.value);
+            }
+
+            function onInput() {
+                var that = $(this);
+                window.setTimeout(function() {
+                    $('#ratingSliderTrack').slider('value', isNaN(that.val()) ? 0 : parseInt(that.val()));
+                }, 300);
+            }
+            $('#ratingSliderTrack').slider({
+                max: 100,
+                min: -100,
+                step: 1,
+                slide: onSlide,
+                change: onSlide
+            }).slider('value', 0);
+            $('#ratingSliderMinBoundInput').keyup(onInput).focus(function() {
+                $('#ratingSliderMinBoundInput').attr('tabindex', 998);
+                $('#ratingSliderMaxBoundInput').attr('tabindex', 997);
+                $(this).parent().addClass('active').addClass('focused');
+                if (!$.trim($(this).val()).length) {
+                    $(this).val('-');
+                    if (navigator.userAgent.indexOf('AppleWebKit/') > -1) {
+                        var t = $(this).get(0);
+                        window.setTimeout(function() { t.setSelectionRange(1, 1) }, 0);
+                    }
+                }
+            }).blur(function() {
+                $(this).parent().removeClass('focused');
+                if (!/^\-(\d)+$/.test($.trim($(this).val()))) {
+                    $(this).val('').parent().removeClass('active');
+                }
+            });
+            $('#ratingSliderMaxBoundInput').keyup(onInput).focus(function() {
+                $('#ratingSliderMinBoundInput').attr('tabindex', 997);
+                $('#ratingSliderMaxBoundInput').attr('tabindex', 998);
+                $(this).parent().addClass('active').addClass('focused');
+                if (!$.trim($(this).val()).length) {
+                    $(this).val('+');
+                    if (navigator.userAgent.indexOf('AppleWebKit/') > -1) {
+                        var t = $(this).get(0);
+                        window.setTimeout(function() { t.setSelectionRange(1, 1) }, 0);
+                    }
+                }
+            }).blur(function() {
+                $(this).parent().removeClass('focused');
+                if (!/^\+(\d)+$/.test($.trim($(this).val()))) {
+                    $(this).val('').parent().removeClass('active');
+                }
+            });
+            // $("#ratingSliderMinBoundInput").float({ precision: 0, min: -100, max: 0 });
+            // $("#ratingSliderMaxBoundInput").float({ precision: 0, min: 0, max: 100 });
+            $('a.rate-slider--cancel').click(function() {
+                $('#ratingSliderTrack').slider('value', 0);
+            });
+            $('#flashMessageContainer').fadeIn(1000);
+            window.setTimeout(function() {
+                $('#flashMessageContainer').fadeOut(1000);
+            }, 2000);
+        });
+    })(jQuery);
+    </script>
+</section>

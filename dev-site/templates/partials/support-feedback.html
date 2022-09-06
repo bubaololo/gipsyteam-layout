@@ -1,0 +1,85 @@
+<!-- support feedback -->
+<div class="support-feedback">
+    <div class="support-feedback--top">
+        <form>
+            <div class="support-feedback-content">
+                <div class="support-feedback-avatar" style="background-image: url(/nimg/imguser.png);"></div>
+                <textarea class="support-feedback--field" placeholder="Оставить отзыв"></textarea>
+            </div>
+            <div class="support-feedback-action">
+                <div class="support-feedback--meta">
+                    <div class="support-feedback--note">Ваша оценка</div>
+                    <div id="rater"></div>
+                </div>
+                <button class="support-feedback--send">
+                    <svg>
+                        <use href="/nimg/support-sprite.svg#i-btn-send"></use>
+                    </svg>
+                    Отправить
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="support-feedback--bottom">
+        {{#repeat 3}}
+        <div class="sp-feedback">
+            <div class="sp-feedback--mobile">
+                <time class="sp-date sp-date_mobile">10 января 2021</time>
+            </div>
+            <div class="sp-feedback--wrap">
+                <div class="sp-feedback--avatar" style="background-image: url(/nimg/feedback-avatar.png);"></div>
+                <div class="sp-feedback--content">
+                    <div class="sp-feedback--header">
+                        <a class="sp-feedback--name" href="javascript:void(0);">Дмитрий</a>
+                        <time class="sp-date">10 января 2021</time>
+                    </div>
+                    <div class="sp-feedback--subheader">
+                        <div class="sp-score" data-rating="4">
+                            <div class="sp-value"></div>
+                        </div>
+                        <div class="sp-rate">4/5</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sp-feedback--text">Arcu, egestas ultricies purus rhoncus, pellentesque nulla curabitur tortor. Augue nulla consectetur sit quam mauris felis, in. Metus quam urna pellentesque ac convallis nunc neque, viverra. Quis amet laoreet malesuada pharetra. Varius mauris amet et platea leo. Lorem quam donec sit elementum integer vitae pellentesque molestie sit. Viverra viverra tortor aliquam non. Pellentesque nunc tempor, risus quam ultrices vel tempus eu neque.</div>
+            <div class="sp-feedback--translate">Traducido al español</div>
+            <div class="sp-feedback--admin">
+                <a class="sp-feedback--show" href="javascript:void(0);">Показать</a>
+                <a class="sp-feedback--remove" href="javascript:void(0);">Удалить</a>
+            </div>
+        </div>
+        {{/repeat}}
+        
+        <div class="support-feedback--toggle">
+            <div class="sp-bar">
+                <div class="sp-bar--container" style="width: 35%;"></div>
+            </div>
+            
+            <div class="support-feedback--wrap">
+                <div class="feedback-cell">
+                    <a class="support-feedback--more" href="javascript:void(0);">Больше отзывов</a>
+                </div>
+                <div class="feedback-aggregate">
+                    <div class="feedback-aggregate--counter">3.4</div>
+                    <div class="agg-score" data-rating="3">
+                        <div class="agg-value"></div>
+                    </div>
+                    <div class="feedback-aggregate--reviews"><strong>03</strong><span>/</span>248</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  const starRating = rater({
+    starSize: 24,
+    starGap: 8,
+    element: document.querySelector('#rater'),
+    rateCallback: function rateCallback(rating, done) {
+      this.setRating(rating);
+      done();
+    }
+  });
+</script>
+<!-- !support feedback -->

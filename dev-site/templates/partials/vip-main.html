@@ -1,0 +1,310 @@
+<div class="content content_darklogo">
+    
+    <section class="header-500">
+        <div class="header-500--inner">
+            <div class="header-500--logo"></div>
+            <div class="header-500--heading">Вы играете, мы позаботимся обо всем остальном</div>
+        </div>
+    </section>
+    
+    <section class="intro-500">
+        <div class="intro-500--grid">
+            <div class="intro-500--item">
+                <div class="intro-500--icon intro-500--icon_i1"></div>
+                <div class="intro-500--heading">Помогаем зарабатывать больше</div>
+                <div class="intro-500--text">Подберем рум под ваш график игры, обеспечим повышенный рейкбек, поделимся удобным HUD'ом и дадим доступ в закрытые азиатские клубы.</div>
+            </div>
+            <div class="intro-500--item">
+                <div class="intro-500--icon intro-500--icon_i2"></div>
+                <div class="intro-500--heading">Защищаем ваши интересы</div>
+                <div class="intro-500--text"><a href="javascript:void(0);">Помогаем разрешить</a> любую конфликтную ситуацию с румом, от долгих проверок до <a href="javascript:void(0);">банов с конфискацией</a>.</div>
+            </div>
+            <div class="intro-500--item">
+                <div class="intro-500--icon intro-500--icon_i3"></div>
+                <div class="intro-500--heading">Решаем проблемы</div>
+                <div class="intro-500--text">Не проходит депозит, не устанавливается трекер или не обновляется клиент? Оперативно поможем с решением любой проблемы.</div>
+            </div>
+        </div>
+        <div class="intro-500--wrap">
+            <div class="intro-500--item">
+                <div class="intro-500--icon intro-500--icon_i4"></div>
+                <div class="intro-500--heading">Не только покер</div>
+                <div class="intro-500--text">Игроки GT+ становятся членами самого крупного русскоязычного покерного сообщества: обсуждайте раздачи с единомышленниками, знакомьтесь с интересными людьми и отдыхайте на <a href="javascript:void(0);">наших вечеринках</a> от Москвы до Бали.</div>
+            </div>
+            <div class="video-v500-wrap">
+                <div class="video-v500">
+                    <a class="video-v500--link" href="javascript:void(0);">
+                        <img src="https://i.ytimg.com/vi/eIBSkLrC5Bk/maxresdefault.jpg" alt="обзор">
+                    </a>
+                    <span class="video-v500--button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
+                            <path fill="rgba(255, 255, 255, 0.5)" d="M461 68H51C23 68 0 91 0 120v272c0 29 23 52 51 52h410c28 0 51-23 51-52V120c0-29-23-52-51-52zM188 360V151l196 105-196 104z"/>
+                            <path fill="#fff" d="M188 360l196-104-196-105z"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script>
+          function findVideos() {
+            const videos = document.querySelectorAll('.video-v500');
+            for (let i = 0; i < videos.length; i++) {
+              setupVideo(videos[i]);
+            }
+          }
+
+          function setupVideo(video) {
+            const link = video.querySelector('.video-v500--link');
+            const button = video.querySelector('.video-v500--button');
+            video.addEventListener('click', () => {
+              const iframe = createIframe();
+              link.remove();
+              button.remove();
+              video.appendChild(iframe);
+            });
+          }
+
+          function createIframe() {
+            const iframe = document.createElement('iframe');
+            const embedCode = 'eIBSkLrC5Bk';
+            const query = '?rel=0&showinfo=0&autoplay=1';
+            const videoSrc = 'https://www.youtube.com/embed/' + embedCode + query;
+            iframe.setAttribute('src', videoSrc);
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.setAttribute('allow', 'autoplay');
+            return iframe;
+          }
+
+          findVideos();
+        </script>
+    </section>
+    
+    <section class="review-500">
+        <div class="review-500--inner"></div>
+    </section>
+    
+    <section class="vip-connect">
+        <a name="vip_contacts"></a>
+        <div class="form500-pattern">
+        
+        </div>
+    </section>
+    
+    <section class="room-plus-wrap">
+        <!-- room -->
+        <div class="room-plus">
+            <span class="room-plus--logo" style="background-image: url(/nimg/pokerking720x280.png);"></span>
+            <div class="room-plus--grid">
+                <div class="room-plus--screen">
+                    <a href="javascript:void(0);">
+                        <img src="/nimg/room-plus250.png" alt=""/>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <img src="/nimg/room-plus250.png" alt=""/>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <img src="/nimg/room-plus250.png" alt=""/>
+                    </a>
+                </div>
+                <div class="room-plus--list">
+                    <ul class="av-room--offer-list">
+                        <li><span>Возврат до 100% + VIP</span></li>
+                        <li>
+                            <div class="icon--country-wrap">Игроки из:
+                                <span class="flag--usa"></span>
+                                <span class="flag--china"></span>
+                                <span class="flag--canada"></span>
+                            </div>
+                        </li>
+                        <li><span>Рейк-гонки на $70,000</span></li>
+                        <li><span>Бонус от GT для активно играющих</span></li>
+                        <li><span>Программа WPN Tools в подарок</span></li>
+                    </ul>
+                    <div class="room-plus--mark">Игры:</div>
+                    <ul class="room-plus--game">
+                        <li>Кэш NLHE и PLO до $25/$50</li>
+                        <li>Zoom до $1/$2</li>
+                    </ul>
+                    <div class="room-plus--mark">Акции:</div>
+                    <ul class="room-plus--game">
+                        <li>Рейк-гонки на $70,000</li>
+                        <li>Бонусы для активных игроков</li>
+                    </ul>
+                </div>
+                <div class="plus-bonus">
+                    <div class="plus-bonus--mark">Бонусы GT+</div>
+                    <div class="plus-bonus--inner">
+                        <ul class="plus-bonus--list plus-bonus--list_gift">
+                            <li>Фирменный лэйаут</li>
+                            <li>Специальный бонус</li>
+                        </ul>
+                        <ul class="plus-bonus--list plus-bonus--list_manager">
+                            <li>Персональный менеджер</li>
+                            <li>Техническая поддержка</li>
+                        </ul>
+                        <ul class="plus-bonus--list plus-bonus--list_star">
+                            <li>Анализ игры на основе истории рук</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="room-plus--bottom">
+                <a class="room-plus--cta" href="javascript:void(0);">Играть здесь</a>
+                <div class="room-plus-reg">
+                    <!-- registration -->
+                    <div class="v-reg--heading">Регистрация</div>
+                    <div class="v-regsteps--wrap">
+                        <div class="v-regstep--login">
+                            <div class="v-regstep--number"></div>
+                            <p>Свяжитесь с нами</p>
+                            <div class="vip-skype--wrap"><a class="icon-vip-skype" href="skype:vip500plus?chat">vip500plus</a></div>
+                            <div class="vip-phone--wrap">
+                                <div class="v-contact--call">+7 (901) 700-0020</div>
+                                <div class="v-contact-icon--wrap">
+                                    <a class="v-messenger-icon v-messenger-icon_viber" href="viber://chat?number=+79017000020"></a>
+                                    <a class="v-messenger-icon v-messenger-icon_whatsapp" href="https://api.whatsapp.com/send?phone=79017000020"></a>
+                                    <a class="v-messenger-icon v-messenger-icon_telegram" href="https://tele.click/79017000020"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="v-regstep--install">
+                            <div class="v-regstep--number"></div>
+                            <p>Зарегистрируйтесь, используя регистрационный код</p>
+                            <div class="gutter-20"></div>
+                            <div class="v-regstep--promocode"><p>GTRS</p></div>
+                            <div class="form-nickname">
+                                <div class="form-nickname--note">Введите свой логин в покер-руме:</div>
+                                <form id="nick_redstarpoker" method="post" action="/tools/setroomnick">
+                                    <input name="rakeback_id" type="hidden" value="19">
+                                    <input name="nick" class="form-nickname--text-field" type="text">
+                                    <input class="form-nickname--send-button" type="submit" value="Отправить">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !registration -->
+                </div>
+            </div>
+        </div>
+        <!-- !room -->
+        <!-- telegram vip -->
+        <div class="widget-telegram">
+            <div class="widget-telegram--grid">
+                <div class="widget-telegram--heading">Что на ривере?</div>
+                <div class="widget-telegram--inner">
+                    <span class="widget-telegram--info">Канал в телеграме для оперативной связи</span>
+                    <span class="widget-telegram--info widget-telegram--info_light">Новости и акции коротко и емко</span>
+                </div>
+                <a class="widget-telegram--button" href="https://tele.click/GTplus">Подписаться</a>
+            </div>
+        </div>
+        <!-- !telegram vip -->
+        <!-- mobile apps -->
+        <div class="room-plus">
+            <span class="room-plus--logo" style="background-image: url(/aimg/rooms/mobile-plus-logo.png);"></span>
+            <div class="room-plus--grid">
+                <div class="room-plus--screen">
+                    <img src="/nimg/room-plus250.png" alt=""/>
+                </div>
+                <div class="room-plus--list">
+                    <ul class="av-room--offer-list">
+                        <li>
+                            <div class="icon--country-wrap">Игроки из:
+                                <span class="flag--usa"></span>
+                                <span class="flag--china"></span>
+                                <span class="flag--australia"></span>
+                                <span class="flag--india"></span>
+                                <span class="flag--brazil"></span>
+                            </div>
+                        </li>
+                        <li><span>Круглосуточная игра на NL25-NL2000</span></li>
+                        <li><span>Более 30 проверенных клубов</span></li>
+                        <li><span>Удобный мультитейблинг и продвинутые HUD'ы</span></li>
+                        <li><span>Поддерживаются все популярные платежные системы и криптовалюты</span></li>
+                        <li><span>Самые надежные партнеры: сохранность депозитов гарантируем</span></li>
+                    </ul>
+                </div>
+                <div class="plus-bonus">
+                    <div class="plus-bonus--mark">Бонусы GT+</div>
+                    <div class="plus-bonus--inner">
+                        <ul class="plus-bonus--list plus-bonus--list_gift">
+                            <li>Фирменный лэйаут</li>
+                            <li>Специальный бонус</li>
+                        </ul>
+                        <ul class="plus-bonus--list plus-bonus--list_manager">
+                            <li>Персональный менеджер</li>
+                            <li>Техническая поддержка</li>
+                        </ul>
+                        <ul class="plus-bonus--list plus-bonus--list_star">
+                            <li>Анализ игры на основе истории рук</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="room-plus--bottom">
+                <a class="room-plus--cta" href="javascript:void(0);">Играть здесь</a>
+            </div>
+        </div>
+        <!-- !mobile apps -->
+    </section>
+    
+    <section class="vip-hotplay">
+        <div class="vip-hotplay--heading">Наша команда</div>
+        
+        <!-- vip rooms slider -->
+        <div class="vip-hotlist">
+            <div class="vip-hotlist--inner">
+                <div class="vip-hotlist--container">
+                    <div class="vip-hotlist--row">
+                        {{#repeat 5}}
+                        <a class="vip-hotlist--item" href="javascript:void(0);">
+                            <div class="vip-hotlist--wrap">
+                                <div class="vip-hotlist--logo">
+                                    <!-- <img src="/nimg/sample200x200.png" alt="ImgPlaceholder"> -->
+                                    <img src="/nimg/avatar-sonet.png" alt="ImgPlaceholder">
+                                </div>
+                                <div class="vip-hotlist--title">Артем S0Net</div>
+                                <div class="vip-hotlist--limit">Способен разобраться в самых сложных таблицах и отчетах, не боится сложностей. Прошел все части Dark Souls по несколько раз.</div>
+                            </div>
+                        </a>
+                        {{/repeat}}
+                    </div>
+                </div>
+                <div class="vip-hotlist--button-prev"></div>
+                <div class="vip-hotlist--button-next"></div>
+            </div>
+        </div>
+        <!-- vip rooms slider -->
+        <script>
+          var swiper = new Swiper('.vip-hotlist--container', {
+            wrapperClass: 'vip-hotlist--row',
+            containerModifierClass: 'vip-hotlist--container_',
+            slideClass: 'vip-hotlist--item',
+            slideActiveClass: 'vip-hotlist--item_active',
+            slideNextClass: 'vip-hotlist--item_next',
+            slidePrevClass: 'vip-hotlist--item_prev',
+            //
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 30,
+            loopFillGroupWithBlank: true,
+            navigation: {
+              nextEl: '.vip-hotlist--button-next',
+              prevEl: '.vip-hotlist--button-prev',
+              disabledClass: 'disabled'
+            },
+            breakpoints: {
+              480: {
+                slidesPerView: 1,
+                slidesPerGroup: 1
+              },
+              768: {
+                slidesPerView: 2,
+                slidesPerGroup: 2
+              }
+            }
+          });
+        </script>
+    </section>
+
+</div>

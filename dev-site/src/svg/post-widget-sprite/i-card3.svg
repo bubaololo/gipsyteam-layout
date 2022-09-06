@@ -1,0 +1,10 @@
+<svg width="11" height="11" fill="none" viewBox="0 0 11 11">
+    <g clip-path="url(#dclip0_2934_2886)">
+        <path fill="var(--i-color1, #c93112)" d="M7.821 1.238c-1 0-1.857.572-2.321 1.357-.464-.785-1.321-1.357-2.321-1.357A2.698 2.698 0 00.5 3.917c0 2.964 4.214 4.536 5 6.428.786-1.892 5-3.464 5-6.428a2.698 2.698 0 00-2.679-2.679z" />
+    </g>
+    <defs>
+        <clipPath id="dclip0_2934_2886">
+            <path fill="var(--i-color2, #fff)" transform="translate(.5 .792)" d="M0 0h10v10H0z" />
+        </clipPath>
+    </defs>
+</svg>

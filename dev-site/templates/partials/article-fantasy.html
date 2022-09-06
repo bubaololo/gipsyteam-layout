@@ -1,0 +1,38 @@
+<div class="fantasy-login">
+    <p>Чтобы принять участие в фэнтези-драфте, вам необходимо <a href="/user/login">войти</a> или <a href="/user/register">зарегистрироваться</a>.
+    </p>
+</div>
+
+<div class="article-fantasy">
+    <div class="article-fantasy--heading">Фэнтези-драфт WSOP 2022</div>
+    <div class="article-fantasy--note">Чтобы создать команду, выберите одного игрока из каждой категории.</div>
+    <form action="" class="article-fantasy--form">
+        <div class="fantasy-grid">
+            {{#repeat 10}}
+            <!--item-->
+            <div class="fantasy-card">
+                <div class="fantasy-card--head">
+                    <div class="fantasy-card--heading">Пора брать прошлогодний снег</div>
+                </div>
+                <div class="fantasy-card--main">
+                    <ul class="fantasy-card--list">
+                        {{#repeat 4}}
+                        <li class="fantasy-card--item">
+                            <label class="fantasy-card--label">
+                                <input class="fantasy-checkbox" type="checkbox" name="" value=""><span class="fantasy-checkbox--mark"></span>
+                                Малиновский (limitless)
+                            </label>
+                        </li>
+                        {{/repeat}}
+                    </ul>
+                </div>
+            </div>
+            <!--!item-->
+            {{/repeat}}
+        </div>
+        <div class="article-fantasy--wrap">
+            <button class="article-fantasy--button">Создать команду</button>
+            <div class="article-fantasy--alert">Выберите ровно 10 игроков</div>
+        </div>
+    </form>
+</div>

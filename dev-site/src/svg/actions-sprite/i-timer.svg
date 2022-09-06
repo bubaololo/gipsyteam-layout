@@ -1,0 +1,5 @@
+<svg width="13" height="17" fill="none" viewBox="0 0 13 17">
+    <circle stroke="var(--i-color1, #202020)" cx="6.5" cy="9.682" r="5.85" stroke-width="1.3" />
+    <path fill="var(--i-color1, #202020)" d="M7.15 6.136a.65.65 0 00-1.3 0h1.3zm-.65 4.137h-.65v.65h.65v-.65zm2.955.65a.65.65 0 000-1.3v1.3zM5.85 6.136v4.137h1.3V6.136h-1.3zm.65 4.787h2.955v-1.3H6.5v1.3z" />
+    <rect fill="var(--i-color1, #202020)" x="4.727" y=".818" width="3.545" height="3.545" rx="1" />
+</svg>

@@ -1,0 +1,40 @@
+<div class="live-chat">
+    <div class="live-chat--inner">
+        <ul class="frame-message" id="messages">
+            <li class="frame-message--item">
+                <span class="msg-time">[23:28]</span>
+                <a class="msg-nick" href="javascript:void(0);" style="color: red;">alicepinky</a>:
+                <span class="msg-std">Vanes14, ответы в комментариях принимаем</span>
+            </li>
+            {{#repeat 39}}
+            <li class="frame-message--item">
+                <span class="msg-time">[23:32]</span>
+                <a class="msg-nick" href="javascript:void(0);">Dykalis</a>:
+                <span class="msg-std">Не слушайте Романа! Он тут не один. Про феминизм мне было интересно, например.</span>
+            </li>
+            {{/repeat}}
+            <li class="frame-message--item">
+                <span class="msg-time">[23:34]</span>
+                <a class="msg-nick" href="javascript:void(0);">Zadrot_mode</a>:
+                <span class="msg-std" style="color: #F60; font-weight: bold;">если подумать...aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span>
+            </li>
+        </ul>
+        <div class="frame-user" id="users">
+            <div class="frame-user--quant">Сейчас в чате (19):</div>
+            <a class="frame-user--nick" href="javascript:void(0);">Pro100VasyaKA</a>
+            {{#repeat 19}}
+            <a class="frame-user--nick" href="javascript:void(0);">Kashtan82</a>
+            {{/repeat}}
+        </div>
+    </div>
+    <div class="chat-send">
+        <form class="chat-send--form" method="post" onsubmit="return false;">
+            <div class="chat-send--wrap">
+                <input class="chat-send--field" type="text" id="messageInput" name="message" autocomplete="off" maxlength="255">
+                <input class="chat-send--button" type="submit" value="Отправить">
+            </div>
+            <a class="chat-send--new" href="javascript:void(0);" onclick="return false;">Открыть чат в новом окне</a>
+        </form>
+        <div class="chat-send--note">Чтобы выделить ваш вопрос оранжевым <br>цветом, наберите перед ним /q</div>
+    </div>
+</div>

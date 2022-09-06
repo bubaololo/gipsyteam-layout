@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" x="0" y="0" version="1.1" xml:space="preserve" width="28" height="28" viewBox="0 0 28 28">
+  <style id="style10">
+    .st1{fill:#fff}
+  </style>
+  <linearGradient id="SVGID_1_" x1="14.5" x2="14.5" y1="3.299" y2="27.701" gradientTransform="matrix(.97094 0 0 -.97094 -.079 29.05)" gradientUnits="userSpaceOnUse">
+    <stop id="stop12" offset="0" stop-color="#51986a"/>
+    <stop id="stop14" offset="1" stop-color="#67c286"/>
+  </linearGradient>
+  <circle id="circle17" cx="14" cy="14" r="11.846" fill="url(#SVGID_1_)" stroke-width=".971"/>
+  <path id="path19" stroke-width=".971" d="M14 0C6.281 0 0 6.28 0 14s6.281 14 14 14 14-6.28 14-14S21.719 0 14 0zM2.154 14C2.154 7.468 7.468 2.154 14 2.154S25.846 7.468 25.846 14 20.532 25.846 14 25.846 2.154 20.532 2.154 14z" class="st1"/>
+  <linearGradient id="SVGID_2_" x1="14.5" x2="14.5" y1="3.299" y2="27.701" gradientTransform="matrix(.97094 0 0 -.97094 -.079 29.05)" gradientUnits="userSpaceOnUse">
+    <stop id="stop21" offset="0" stop-color="#51986a"/>
+    <stop id="stop23" offset="1" stop-color="#67c286"/>
+  </linearGradient>
+  <circle id="circle26" cx="14" cy="14" r="11.846" fill="url(#SVGID_2_)" stroke-width=".971"/>
+  <path id="path28" stroke-width=".971" d="M17.182 8.14l1.698.87-4.054 6.062-7.525-3.445-2.767 4.295a9.46 9.46 0 00.51 1.717l2.761-4.293 7.516 3.439 4.792-7.162 1.788.87v-4.68z" class="st1"/>
+  <path id="path30" fill="#284930" stroke-width=".971" d="M6.24 18.933l-.325.46a9.586 9.586 0 007.988 4.293c3.365 0 6.327-1.746 8.038-4.376v-7.277l-.87-.537c-.104.128-.141.17-.173.215l-2.551 3.66v-.001l-2.43 3.494-7.261-3.41z"/>
+</svg>

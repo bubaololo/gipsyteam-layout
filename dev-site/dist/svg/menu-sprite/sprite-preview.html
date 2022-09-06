@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>svg sprite preview</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style>
+.i-actions {
+	width: 17px;
+	height: 16px;
+}
+.i-android {
+	width: 18px;
+	height: 21px;
+}
+.i-bookmark {
+	width: 16px;
+	height: 24px;
+}
+.i-cards {
+	width: 18px;
+	height: 19px;
+}
+.i-compass {
+	width: 19px;
+	height: 19px;
+}
+.i-forum {
+	width: 17px;
+	height: 16px;
+}
+.i-ios {
+	width: 16px;
+	height: 20px;
+}
+.i-left-arrow {
+	width: 25px;
+	height: 16px;
+}
+.i-login {
+	width: 22px;
+	height: 21px;
+}
+.i-logo-gt {
+	width: 71px;
+	height: 34px;
+}
+.i-logo-gtplus {
+	width: 130px;
+	height: 124px;
+}
+.i-logo-main {
+	width: 32px;
+	height: 32px;
+}
+.i-menu {
+	width: 26px;
+	height: 17px;
+}
+.i-message {
+	width: 23px;
+	height: 17px;
+}
+.i-promo {
+	width: 151px;
+	height: 81px;
+}
+.i-refs {
+	width: 154px;
+	height: 63px;
+}
+.i-search {
+	width: 16px;
+	height: 16px;
+}
+.i-soft {
+	width: 18px;
+	height: 16px;
+}
+.i-support {
+	width: 16px;
+	height: 17px;
+}
+.i-trainer {
+	width: 18px;
+	height: 18px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+<!--
+
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position: absolute">
+		<symbol fill="none" viewBox="0 0 17 16" id="i-actions"><path stroke="var(--i-color1, #808080)" stroke-miterlimit="10" stroke-width="1.33" d="M8.375 1.36L9.55 3.203a.067.067 0 00.087.022l1.937-1.007a.067.067 0 01.097.056l.097 2.183c.002.035.028.063.062.063l2.183.097a.067.067 0 01.056.096l-1.006 1.938a.067.067 0 00.022.087l1.842 1.174c.04.026.04.084 0 .11l-1.842 1.175a.067.067 0 00-.022.086l1.007 1.938a.067.067 0 01-.057.097l-2.183.095c-.034.002-.062.028-.062.062l-.097 2.183a.067.067 0 01-.097.057l-1.937-1.007a.067.067 0 00-.087.022l-1.174 1.84a.066.066 0 01-.11 0L7.09 12.729a.067.067 0 00-.086-.022l-1.938 1.007a.067.067 0 01-.096-.057l-.097-2.183c-.002-.034-.028-.063-.062-.063l-2.183-.096a.067.067 0 01-.057-.097L3.578 9.28a.067.067 0 00-.022-.086L1.713 8.019a.066.066 0 010-.111l1.843-1.174a.067.067 0 00.022-.087L2.571 4.709a.067.067 0 01.057-.096l2.183-.097a.064.064 0 00.062-.063L4.97 2.27a.067.067 0 01.096-.056L7.004 3.22c.03.016.068.006.086-.022l1.175-1.843a.066.066 0 01.11.004z"/><path fill="var(--i-color1, #808080)" d="M9.893 10.22c-.283.318-.692.505-1.227.563v.813h-.681v-.811c-.89-.093-1.444-.61-1.656-1.554l1.055-.275c.099.593.42.89.968.89.254 0 .447-.063.566-.188a.648.648 0 00.18-.461c0-.187-.06-.327-.18-.426-.12-.098-.389-.217-.803-.363a4.751 4.751 0 01-.877-.385 1.44 1.44 0 01-.513-.534 1.581 1.581 0 01-.197-.797c0-.398.117-.758.352-1.078.234-.317.603-.513 1.109-.584v-.628h.679v.628c.761.093 1.256.52 1.477 1.293l-.94.389c-.183-.528-.466-.79-.848-.79a.62.62 0 00-.463.178.585.585 0 00-.176.43c0 .17.057.302.168.395.114.093.353.203.722.342.403.146.72.286.949.418.23.131.413.312.55.544.136.232.204.5.204.81.004.473-.14.868-.418 1.182z"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 21" id="i-android"><path fill="var(--i-color2, #A4C639)" d="M3.6 7v8.264c0 .753.627 1.361 1.402 1.361H5.4v3.1c0 .703.636 1.275 1.359 1.275.725 0 1.341-.572 1.341-1.277v-3.098h1.8v3.1c0 .703.636 1.275 1.36 1.275.725 0 1.34-.572 1.34-1.277v-3.098h.4c.772 0 1.4-.61 1.4-1.363V7H3.6zM18 8.287C18 7.583 17.375 7 16.65 7c-.724 0-1.35.584-1.35 1.288v5.343c0 .705.625 1.244 1.35 1.244.725 0 1.35-.538 1.35-1.244V8.287zm-15.3 0C2.7 7.583 2.074 7 1.35 7 .625 7 0 7.584 0 8.288v5.343c0 .705.625 1.244 1.35 1.244.724 0 1.35-.538 1.35-1.244V8.287zm8.956-6.398l.846-1.627C12.563.147 12.485 0 12.355 0a.167.167 0 00-.147.092l-.854 1.643c-1.378-.645-3.19-.71-4.707 0L5.792.092A.165.165 0 005.645 0c-.13 0-.208.147-.147.263l.846 1.626C4.684 2.794 3.6 4.15 3.6 6.124h10.8c0-1.974-1.084-3.33-2.744-4.235zM6.75 4.375a.445.445 0 01-.451-.438c0-.24.203-.437.45-.437.25 0 .45.198.45.438 0 .241-.2.437-.45.437zm4.498 0a.443.443 0 01-.449-.438c0-.24.2-.437.45-.437.248 0 .45.198.45.438a.445.445 0 01-.45.437z"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 24" id="i-bookmark"><path stroke="var(--i-color1, #808080)" stroke-width="2" d="M14.705 1.213H1V21.41l7.213-5.77 6.492 5.77V1.213z"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 19" id="i-cards"><path stroke="var(--i-color1, #000)" stroke-linejoin="round" stroke-width="1.7" d="M4.4 1h12.75v17H4.4V1z" clip-rule="evenodd"/><path stroke="var(--i-color1, #000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M1 4.31l3.4-.76V18L1 4.31z" clip-rule="evenodd"/><path fill="var(--i-color1, #000)" fill-rule="evenodd" stroke="var(--i-color1, #000)" stroke-linejoin="round" stroke-width="1.7" d="M10.775 6.95L8.65 9.5l2.125 2.55L12.9 9.5l-2.125-2.55z" clip-rule="evenodd"/><path stroke="var(--i-color1, #000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M6.95 3.55v1.7m7.65 8.5v1.7"/></symbol>
+		<symbol fill="none" viewBox="0 0 19 19" id="i-compass"><path fill="var(--i-color1, #000)" d="M9.5 1.583c4.365 0 7.917 3.552 7.917 7.917s-3.552 7.917-7.917 7.917S1.583 13.865 1.583 9.5 5.135 1.583 9.5 1.583zM9.5 0a9.5 9.5 0 100 19 9.5 9.5 0 000-19zm4.75 4.75L9.8 7.112a2.375 2.375 0 00-2.641 2.602L4.75 14.25l4.531-2.408a2.37 2.37 0 001.926-.685 2.363 2.363 0 00.68-1.958l2.363-4.45zm-4.726 5.715a.99.99 0 110-1.98.99.99 0 010 1.98z"/></symbol>
+		<symbol fill="none" viewBox="0 0 17 16" id="i-forum"><g fill="var(--i-color1, #808080)" clip-path="url(#fa)"><path d="M2.617 1.333h7.334A1.668 1.668 0 0111.617 3v4.668a1.667 1.667 0 01-1.666 1.666H5.744l-1.7 1.984a1.002 1.002 0 01-1.58-.079 1 1 0 01-.18-.57v-1.37A1.668 1.668 0 01.951 7.667V3a1.668 1.668 0 011.666-1.666zM2.618 8h1v1.765L5.13 8h4.82a.335.335 0 00.334-.334V3.001a.335.335 0 00-.334-.334H2.618A.334.334 0 002.284 3v4.666A.334.334 0 002.618 8z"/><path d="M13.95 7.333h-2.666V6h2.668a1.668 1.668 0 011.665 1.666v3.668a1.667 1.667 0 01-1.333 1.632v.7a1.001 1.001 0 01-1.64.77L10.922 13H7.95a1.668 1.668 0 01-1.666-1.666V9h1.334v2.333a.335.335 0 00.333.334h3.454l1.546 1.288v-1.288h1s-.001 0 0 0a.335.335 0 00.333-.334V7.667a.335.335 0 00-.334-.334zM4.284 4.667h1.333V6H4.284zm2.667 0h1.333V6H6.951z"/></g><defs><clipPath id="fa"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 16 20" id="i-ios"><path fill="var(--i-color1, #000)" d="M16 14.673c-.629 1.9-2.511 5.264-4.45 5.301-1.287.026-1.7-.794-3.17-.794s-1.93.769-3.146.819C3.176 20.081 0 15.143 0 10.836 0 6.88 2.646 4.92 4.958 4.883c1.24-.023 2.412.871 3.168.871.759 0 2.181-1.075 3.676-.917.626.027 2.384.262 3.512 1.98-2.993 2.036-2.527 6.292.686 7.856zM11.822 0c-2.26.095-4.105 2.566-3.848 4.61 2.09.168 4.095-2.272 3.848-4.61z"/></symbol>
+		<symbol fill="none" viewBox="0 0 25 16" id="i-left-arrow"><path fill="var(--i-color1, #000)" d="M9.342.248l-8 7L.535 8l.807.752 8 7 1.316-1.504L4.66 9H24.5V7H4.66l5.998-5.248z"/></symbol>
+		<symbol fill="none" viewBox="0 0 22 21" id="i-login"><circle cx="11.301" cy="10.5" r="9.713" stroke="var(--i-color1, #E50C2C)" stroke-linejoin="round" stroke-width="1.575"/><path fill="var(--i-color1, #E50C2C)" d="M12.966 10.235L9.491 6.43c-.311-.34.116-.846.504-.597l6.743 4.335a.394.394 0 010 .662l-6.743 4.335c-.388.25-.815-.256-.504-.596l3.475-3.804a.394.394 0 000-.531z"/><path stroke="var(--i-color1, #E50C2C)" stroke-linecap="round" stroke-width="1.313" d="M7.102 10.5h7.35"/></symbol>
+		<symbol fill="none" viewBox="0 0 71 34" id="i-logo-gt"><path fill="var(--i-color1, #fff)" d="M17.999 33.097L33.096 18.02c.552-.552.552-1.444 0-2.038L17.998.902a1.413 1.413 0 00-2 0L.904 15.981a1.409 1.409 0 000 1.996L16 33.055a1.377 1.377 0 001.999.042z"/><path fill="var(--i-color2, #e31f26)" d="M15.533 33.395L.606 18.445a2.075 2.075 0 010-2.932L15.533.605a2.081 2.081 0 012.934 0l14.927 14.908a2.075 2.075 0 010 2.931l-14.927 14.95a2.081 2.081 0 01-2.934 0zm2.466-.468L32.926 18.02a1.409 1.409 0 000-1.996L18 1.073a1.413 1.413 0 00-1.998 0L1.03 15.98a1.409 1.409 0 000 1.996l14.927 14.908c.595.595 1.488.595 2.041.043z"/><path fill="var(--i-color2, #e31f26)" d="M16.087 30.591l-5.614-5.564.17-.085 8.846-13.804c.595-.892-.085-2.08-1.149-2.08h-7.867l5.614-5.65c.552-.552 1.488-.552 2.083 0l5.656 5.65-.127.042-8.846 13.846c-.595.892.085 2.081 1.148 2.081H23.7l-5.571 5.564a1.465 1.465 0 01-2.041 0zm-7.528-7.475L3.5 18.019c-.553-.552-.553-1.486 0-2.081l4.21-4.205h8.122zm9.951-.807l7.23-11.298 4.976 4.97c.553.552.553 1.486 0 2.08l-4.253 4.248z"/><path fill="var(--i-color3, #000)" d="M49.582 8.673c1.708 0 3.416.342 4.897 1.027v3.308c-1.196-.799-2.847-1.255-4.442-1.255-2.847 0-5.637 1.483-5.637 5.247 0 4.22 3.132 5.304 5.467 5.304.683 0 1.252-.114 1.765-.285v-5.703h3.245v7.927c-1.594.685-3.416 1.084-5.181 1.084-4.442 0-8.77-2.452-8.77-8.327 0-5.817 4.271-8.327 8.656-8.327zm20.731.342v3.08h-4.897v12.89H62v-12.89h-4.897v-3.08z"/></symbol>
+		<symbol fill="none" viewBox="0 0 130 124" id="i-logo-gtplus"><path fill="var(--i-color1, #fff)" d="M93.135 29.646L62.447.486l-4.1 1.73L2.104 57.843l-.92 3.525.92 3.371 7.203 7.51.766 3.37 2.605 10.421 6.13 6.59 15.938 4.137 6.284 7.509 19.31 17.777 5.516-1.073 42.604-43.522 9.808-3.37v-9.349l10.575-1.686V50.642l-10.575 1.685v-9.654l-9.808 1.533h-5.67l-.92-15.631-8.735 1.072z"/><path fill="var(--i-color2, #e51e25)" d="M119.393 51.105c1.569-.277 3.02-.527 4.468-.787 1.616-.292 3.23-.6 4.848-.888.954-.172 1.188.026 1.186.99-.006 4.167-.03 8.333-.011 12.5.003.806-.261 1.169-1.091 1.304-2.73.443-5.444.967-8.167 1.456-1.165.209-1.252.308-1.259 1.487-.015 2.522-.054 5.044-.036 7.566.006.814-.298 1.171-1.107 1.3a164.37 164.37 0 00-6.629 1.19c-.443.09-.901.391-1.229.719a29568.208 29568.208 0 00-42.993 42.965c-2.163 2.168-4.699 2.802-7.603 2.143-1.367-.309-2.479-1.112-3.469-2.102-7.227-7.234-14.468-14.456-21.69-21.695-.4-.402-.786-.575-1.361-.547-4.105.194-8.103-.32-11.864-2.063-6.681-3.097-10.477-8.46-11.854-15.566-.419-2.16-.41-4.407-.536-6.619-.03-.557-.148-.967-.555-1.367-2.036-1.997-4.006-4.059-6.067-6.03-3.024-2.893-3.016-7.853-.028-10.833A38077.83 38077.83 0 0056.518 2.109c2.806-2.809 7.819-2.818 10.733.124 8.78 8.862 17.636 17.648 26.453 26.477.44.442.817.643 1.492.498 2.194-.47 4.412-.835 6.619-1.242 1.039-.191 1.262-.01 1.258 1.08-.005 2.742-.039 5.484-.003 8.224.007.431.221.958.517 1.271 1.336 1.414 2.755 2.751 4.106 4.153.416.433.825.519 1.385.413 3.015-.563 6.034-1.098 9.052-1.642 1.132-.204 1.346-.005 1.333 1.165-.028 2.522-.046 5.044-.068 7.566-.003.267-.002.533-.002.909zM48.31 71.442c-.025.222-.017.357-.056.478-.709 2.177-1.816 4.11-3.585 5.599-2.864 2.413-6.263 3.477-9.933 3.57-4.468.116-7.906-2.397-9.123-6.703-1.474-5.217-.741-10.174 2.412-14.633 3.33-4.711 9.337-7.045 14.664-5.72 1.351.335 2.603 1.066 4.005 1.661 3.066-3.586 6.24-7.302 9.437-11.043-.25-.21-.408-.358-.58-.49-3.286-2.508-7.07-3.569-11.13-3.633-6.249-.097-12.082 1.509-17.493 4.616-11.7 6.715-17.864 19.83-15.307 32.762 1.197 6.06 4.44 10.735 10.065 13.532 4.01 1.993 8.296 2.48 12.722 2.072 8.462-.782 15.345-4.55 20.745-11.036 3.973-4.774 6.115-10.342 6.592-16.513.177-2.274.028-4.576.028-6.913-.453.03-.67.023-.88.063-7.829 1.464-15.654 2.938-23.483 4.383-.544.1-.645.326-.643.81.007 2.852-.016 5.701-.023 8.553 0 .229.04.458.066.728 3.853-.717 7.617-1.418 11.5-2.143zm24.838 14.066c.172-.012.277-.008.38-.027 4.09-.756 8.175-1.538 12.272-2.251.784-.137.916-.467.914-1.185-.023-11.814-.017-23.63-.017-35.444v-1.085c.28-.08.51-.167.747-.211 4.195-.782 8.391-1.568 12.592-2.328.632-.113.906-.31.901-1.039-.031-3.617.01-7.236.026-10.855.002-.257 0-.514 0-.845-14.058 2.625-27.98 5.226-41.876 7.824v12.554l14.061-2.623v37.515zM8.95 70.114c.195-1.372.31-2.77.6-4.131 2.33-10.966 8.662-18.825 18.61-23.866.502-.253.99-.59 1.389-.986 9.165-9.136 18.316-18.285 27.475-27.427.425-.425.86-.857 1.353-1.194 2.508-1.726 5.658-1.377 7.936.893 5.73 5.707 11.454 11.42 17.154 17.157.532.536 1.023.748 1.725.508.18-.061.375-.074.563-.109l5.613-1.062.189-.284c-.265-.181-.567-.328-.79-.55-8.328-8.307-16.647-16.622-24.968-24.936-2.495-2.494-5.47-2.499-7.958-.013l-39.624 39.59c-4.733 4.73-9.47 9.453-14.194 14.19-1.978 1.983-2.27 4.885-.474 6.91 1.664 1.876 3.576 3.533 5.401 5.31zm28.245 28.364c.104.12.248.308.412.473 6.825 6.821 13.647 13.646 20.481 20.454 2.178 2.169 5.3 2.15 7.487-.036a42123.602 42123.602 0 0040.879-40.877 1.68 1.68 0 00.445-1.059c.037-2.44.021-4.88.016-7.319 0-.2-.044-.397-.104-.873-.333.412-.501.664-.71.873-6.314 6.316-12.633 12.628-18.95 18.94-6.944 6.935-13.886 13.872-20.833 20.803-2.657 2.653-6.317 2.656-8.996.022-.606-.596-1.202-1.201-1.803-1.802-3.723-3.72-7.445-7.442-11.18-11.149-.198-.196-.574-.42-.79-.357-2.113.6-4.214 1.257-6.354 1.907zm71.985-26.033c.292-.02.511-.011.722-.051 2.233-.409 4.461-.857 6.701-1.217.651-.106.782-.37.776-.959-.025-2.713-.012-5.426-.008-8.14 0-.317.026-.637.041-.95 3.5-.635 6.912-1.256 10.325-1.877v-7.517a23628.4 23628.4 0 01-10.399 1.855v-9.81c-.274.017-.437.012-.593.04-2.289.418-4.57.868-6.865 1.244-.581.095-.7.328-.697.851.018 2.768.01 5.535.007 8.304 0 .29-.028.58-.041.858l-10.434 1.908v7.515l10.463-1.88c.002 3.343.002 6.566.002 9.826z"/></symbol>
+		<symbol fill="none" viewBox="0 0 32 32" id="i-logo-main"><g fill="var(--i-color1, #e31f26)" clip-path="url(#la)"><path d="M14.596 31.43L.57 17.358a1.955 1.955 0 010-2.758L14.596.568a1.953 1.953 0 012.758 0L31.381 14.6a1.955 1.955 0 010 2.758L17.354 31.43a1.953 1.953 0 01-2.757 0zm2.319-.44L30.94 16.96a1.328 1.328 0 000-1.88L16.915 1.01a1.324 1.324 0 00-1.879 0L.97 15.04a1.33 1.33 0 000 1.88l14.028 14.03c.559.56 1.398.56 1.917.04z"/><path d="M15.116 28.792L9.84 23.555l.16-.08 8.312-12.992c.56-.839-.08-1.958-1.079-1.958H9.84l5.276-5.317c.519-.52 1.398-.52 1.958 0l5.315 5.317-.12.04-8.312 13.031c-.56.84.08 1.96 1.078 1.96h7.234l-5.235 5.236c-.52.52-1.399.52-1.918 0zm-7.074-7.036L3.286 16.96c-.519-.52-.519-1.399 0-1.959l3.957-3.957h7.633L8.042 21.756zm9.351-.759l6.794-10.634 4.675 4.678c.52.52.52 1.399 0 1.958l-3.996 3.998h-7.473z"/></g><defs><clipPath id="la"><path fill="#fff" d="M0 0h32v32H0z"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 26 17" id="i-menu"><path fill="var(--i-color1, #000)" d="M0 0h26v3H0zm0 14h26v3H0zm0-7h19v3H0z"/></symbol>
+		<symbol fill="none" viewBox="0 0 23 17" id="i-message"><path stroke="var(--i-color1, #e31f26)" stroke-width="2" d="M0 1h23M1 1v15h21V1M1 1l10.8 8.7L22 1"/></symbol>
+		<symbol fill="none" viewBox="0 0 151 81" id="i-promo"><circle cx="124.299" cy="53.402" r="25.674" fill="var(--i-color2, #fff)" stroke="var(--i-color3, #404040)" stroke-width="2.054"/><path stroke="var(--i-color1, #E51E25)" stroke-width="2.054" d="M117.453 63.552l11.211-11.211a2.537 2.537 0 011.985-.735 4.954 4.954 0 003.891-1.435 4.924 4.924 0 001.442-3.494 5.02 5.02 0 00-.202-1.413l-2.975 2.975c-1.492.323-3.678-1.838-3.348-3.347l2.975-2.975a5.012 5.012 0 00-1.416-.204 4.922 4.922 0 00-3.493 1.443 4.948 4.948 0 00-1.436 3.892 2.532 2.532 0 01-.734 1.983l-11.21 11.211a2.34 2.34 0 003.31 3.31z"/><circle cx="26.701" cy="53.402" r="25.674" fill="var(--i-color2, #fff)" stroke="var(--i-color3, #404040)" stroke-width="2.054"/><path fill="var(--i-color2, #fff)" stroke="var(--i-color3, #404040)" stroke-width="2.054" d="M104.638 28.417l.124.432.402.201 6.137 3.081v9.396l-6.137 3.081-.402.202-.124.432a30.159 30.159 0 01-2.588 6.237l-.217.394.141.427 2.163 6.521-6.643 6.646-6.521-2.163-.427-.141-.394.217a30.128 30.128 0 01-6.237 2.588l-.432.124-.201.402-3.085 6.137h-9.396l-3.084-6.137-.202-.401-.431-.125a30.204 30.204 0 01-6.238-2.588l-.394-.217-.426.141-6.522 2.163-6.643-6.646 2.163-6.521.142-.427-.218-.394a29.954 29.954 0 01-2.587-6.236l-.124-.433-.403-.202-6.137-3.08V32.13l6.137-3.08.403-.203.124-.432a29.956 29.956 0 012.587-6.237l.218-.393-.142-.427-2.163-6.525 6.643-6.643 6.522 2.163.427.142.394-.219a30.03 30.03 0 016.237-2.587l.431-.124.202-.401L70.8 1.027h9.396l3.085 6.138.201.4.432.125a30.21 30.21 0 016.237 2.588l.394.218.426-.142 6.522-2.16 6.643 6.643-2.163 6.522-.141.427.217.393a30.16 30.16 0 012.588 6.238z"/><circle cx="65.833" cy="27.161" r="5.878" stroke="var(--i-color1, #E51E25)" stroke-width="2.054"/><circle cx="85.167" cy="46.497" r="5.878" stroke="var(--i-color1, #E51E25)" stroke-width="2.054"/><path stroke="var(--i-color1, #E51E25)" stroke-linecap="square" stroke-width="2.054" d="M58.928 53.402l33.146-33.146"/><path stroke="var(--i-color1, #E51E25)" stroke-linecap="round" stroke-width="2.054" d="M30.61 46.668h-4.268l2.405-3.932a2.14 2.14 0 011.826-1.023h.307a1.833 1.833 0 011.389 3.029l-1.659 1.926zm-8.536 0h4.267l-2.404-3.932a2.14 2.14 0 00-1.826-1.023h-.307a1.833 1.833 0 00-1.39 3.029l1.66 1.926z"/><path stroke="var(--i-color1, #E51E25)" stroke-width="2.054" d="M16.043 46.987h21.305v5.024H16.043z"/><path stroke="var(--i-color1, #E51E25)" stroke-width="2.054" d="M16.043 51.942h21.305v10.687H16.043zm5.344 5.024h10.618"/></symbol>
+		<symbol viewBox="0 0 154 63" fill="none" id="i-refs"><path fill="var(--i-color1, #404040)" d="M11.524 38.54a4.807 4.807 0 014.801 4.802 4.808 4.808 0 01-4.801 4.802 4.808 4.808 0 01-4.802-4.802 4.807 4.807 0 014.802-4.802zm0-1.92a6.722 6.722 0 100 13.444 6.722 6.722 0 000-13.445zm6.116 12.822a8.703 8.703 0 01-1.592 1.25c2.758 1.8 4.204 4.882 4.775 7.055H2.205c.55-2.199 1.976-5.285 4.776-7.066a8.65 8.65 0 01-1.593-1.26C1.3 52.371 0 57.59 0 59.667h23.048c0-2.057-1.383-7.257-5.408-10.225zM39.809 22.825a4.807 4.807 0 014.802 4.803 4.808 4.808 0 01-4.802 4.801 4.808 4.808 0 01-4.802-4.802 4.807 4.807 0 014.802-4.802zm0-1.92a6.722 6.722 0 100 13.444 6.722 6.722 0 000-13.445zm6.116 12.822a8.69 8.69 0 01-1.592 1.25c2.758 1.8 4.204 4.882 4.775 7.055H30.49c.55-2.199 1.976-5.284 4.776-7.066a8.647 8.647 0 01-1.593-1.26c-4.089 2.95-5.388 8.169-5.388 10.246h23.048c0-2.057-1.383-7.257-5.408-10.225zM11.524 8.159a4.807 4.807 0 014.801 4.802 4.808 4.808 0 01-4.801 4.802 4.808 4.808 0 01-4.802-4.802 4.807 4.807 0 014.802-4.802zm0-1.92a6.722 6.722 0 100 13.444 6.722 6.722 0 000-13.445zM17.64 19.06a8.698 8.698 0 01-1.592 1.25c2.758 1.8 4.204 4.882 4.775 7.055H2.205c.55-2.199 1.976-5.284 4.776-7.066a8.65 8.65 0 01-1.593-1.26C1.3 21.99 0 27.21 0 29.286h23.048c0-2.057-1.383-7.257-5.408-10.225z"/><path fill="var(--i-color2, #E51E25)" stroke="var(--i-color3, #fff)" stroke-width="1.4" fill-rule="evenodd" clip-rule="evenodd" d="M125.941 1.079c-1.573.2-4.612.832-5.732 1.192-2.212.711-2.134 1.464.652 6.35 1.234 2.164 2.244 4.032 2.244 4.151 0 .119-.322.35-.716.515-1.169.486-2.527 2.233-2.844 3.657-.232 1.042-.214 1.466.109 2.582.212.734.491 1.4.619 1.48.433.269.238.522-1.083 1.404-1.895 1.264-4.917 4.233-6.54 6.424-1.814 2.448-4.025 7.011-4.774 9.854-1.567 5.947-1.235 11.17.97 15.243.832 1.536 3.362 3.927 5.166 4.88 3.556 1.88 7.576 2.693 14.193 2.87 13.98.375 21.413-2.816 23.972-10.294 1.143-3.342 1.092-8.031-.138-12.7-.749-2.842-2.96-7.405-4.773-9.853-1.624-2.191-4.646-5.16-6.541-6.424-1.321-.882-1.516-1.135-1.083-1.404.128-.08.402-.727.607-1.44.533-1.84.169-3.497-1.081-4.925-.508-.58-1.247-1.19-1.641-1.354-.395-.164-.717-.396-.717-.515s1.01-1.987 2.244-4.152c1.235-2.164 2.245-4.2 2.245-4.522 0-1.352-.725-1.767-4.489-2.574-1.737-.372-9.08-.673-10.869-.445zm7.404 3.66c1.203.135 2.468.322 2.811.415l.624.171-1.891 3.326-1.891 3.326h-6.08l-1.892-3.326-1.892-3.326.692-.184c2.182-.582 6.35-.757 9.519-.402zm-.788 10.93c2.154.342 3.744.903 4.019 1.42.362.68.278 1.551-.208 2.154l-.441.548-2.099-.405c-1.154-.222-2.896-.404-3.87-.404-.975 0-2.717.182-3.871.404l-2.099.405-.441-.548c-.945-1.173-.456-2.434 1.151-2.967 2.414-.799 5.263-1.02 7.859-.607zm1.417 7.494c8.518 2.55 15.359 12.634 15.359 22.638 0 5.357-2.127 8.72-6.672 10.549-6.159 2.479-19.552 2.434-25.581-.087-4.472-1.87-6.497-5.128-6.497-10.457 0-10.927 8.068-21.663 17.366-23.107 1.271-.198 4.696.066 6.025.464zm-5.216 5.306c-.598.602-.691.872-.691 2.02 0 .76-.105 1.324-.246 1.324-.136 0-.775.497-1.422 1.105-1.553 1.462-2.079 3.073-1.642 5.036.515 2.315 3.027 4.312 5.423 4.312.709 0 1.432.84 1.432 1.663 0 .944-.743 1.663-1.718 1.663-.553 0-1.097-.27-1.916-.95-1.321-1.098-2.055-1.192-2.875-.367-.916.92-.773 1.79.5 3.053.594.59 1.392 1.2 1.772 1.36.643.267.692.378.692 1.552 0 1.597.701 2.558 1.866 2.558 1.174 0 1.746-.741 1.867-2.42.086-1.207.186-1.454.694-1.727.325-.176.995-.78 1.487-1.342 2.806-3.204.988-7.787-3.46-8.723-1.747-.367-2.217-.755-2.217-1.83 0-1.515 1.789-2.112 3.167-1.057 1.062.813 1.668.944 2.463.53.743-.386.985-.802.985-1.692 0-.655-1.338-2.06-2.374-2.491-.652-.271-.697-.375-.697-1.586 0-1.116-.096-1.393-.691-1.99-.38-.383-.919-.695-1.199-.695s-.82.312-1.2.694z"/><path d="M76.523 37.142h18.858m0 0l-2.358 2.62m2.358-2.62l-2.358-2.619M63.953 47.619H82.81m0 0l-2.357 2.62m2.357-2.62L80.453 45M63.953 26.667H82.81m0 0l-2.357 2.619m2.357-2.62l-2.357-2.618" stroke="var(--i-color1, #404040)" stroke-width="2.095"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 16" id="i-search"><path fill="var(--i-color1, #808080)" stroke="var(--i-color1, #808080)" stroke-width=".3" d="M15 13.627l-3.649-3.62a5.617 5.617 0 001.092-3.331C12.443 3.546 9.877 1 6.721 1 3.567 1 1 3.546 1 6.676c0 3.13 2.567 5.676 5.721 5.676a5.723 5.723 0 003.227-.99L13.616 15 15 13.627zM2.678 6.676c0-2.212 1.814-4.012 4.044-4.012 2.23 0 4.044 1.8 4.044 4.012 0 2.212-1.814 4.011-4.044 4.011-2.23 0-4.044-1.8-4.044-4.011z"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 16" id="i-soft"><path fill="var(--i-color1, #000)" fill-rule="evenodd" d="M17.454 5.236a.875.875 0 00-.872-.872h-4.8a.875.875 0 00-.873.872v9.891a.875.875 0 00.873.873h4.8a.875.875 0 00.872-.873v-9.89zM9.454 16H3.637l1.89-2.182h3.929V16zm4.728-.727a.727.727 0 110-1.454.727.727 0 010 1.454zm2.545-2.182V6.528h-5.09v6.563h5.09zM15.273 2.909h-1.455V1.455H1.455v9.454h8v1.455H0V0h15.273v2.91zm-.364 2.91a.364.364 0 000-.728h-1.455a.364.364 0 000 .727h1.455z" clip-rule="evenodd"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 17" id="i-support"><path fill="var(--i-color1, #808080)" stroke="var(--i-color1, #808080)" stroke-width=".5" d="M8 1C4.15 1 1 3.84 1 7.375v2.196c0 1.5 1.283 2.679 2.917 2.679.35 0 .583-.214.583-.536V7.43c0-.322-.233-.536-.583-.536-.642 0-1.284.214-1.75.536v-.11c0-2.892 2.625-5.25 5.833-5.25s5.833 2.358 5.833 5.304v.054a3.178 3.178 0 00-1.75-.536c-.35 0-.583.214-.583.536v4.285c0 .322.233.536.583.536.409 0 .817-.107 1.167-.214-.583 1.125-1.633 1.982-2.917 2.464v-.107c0-.322-.233-.536-.583-.536H8c-.35 0-.583.214-.583.536v1.071c0 .322.233.536.583.536 3.85 0 7-2.786 7-6.214v-2.41C15 3.839 11.85 1 8 1z"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 18" id="i-trainer"><path fill="var(--i-color1, #000)" d="M12.375 9.375c0 .621-.42 1.125-.938 1.125-.517 0-.937-.504-.937-1.125s.42-1.125.938-1.125c.517 0 .937.504.937 1.125zM6.562 8.25c-.517 0-.937.504-.937 1.125s.42 1.125.938 1.125c.517 0 .937-.504.937-1.125S7.08 8.25 6.562 8.25zM9 12.268c-1.781-1.09-1.267 1.571-3.75.479.375 1.509 2.63 1.765 3.75.856 1.12.909 3.375.653 3.75-.856-2.483 1.093-1.969-1.569-3.75-.48zm9-2.283c0 1.324-.739 2.993-2.354 3.68C14.108 16.12 11.914 18 9 18c-2.812 0-5.143-1.936-6.646-4.336C.739 12.977 0 11.308 0 9.984c0-1.495.608-2.83 2.012-2.968l.023-.021.002-.016c-.188-1.458-.253-3.69.54-4.535.425-.454.912-.629 1.535-.423C5.082.697 6.702 0 8.89 0c3.485 0 4.915 1.813 6.133 3.345.67.842 1.477 1.686 2.977 1.64a7.112 7.112 0 01-2.124 1.346c.038.225.07.453.091.68C17.355 7.135 18 8.44 18 9.985zm-1.935-1.4a.566.566 0 00-.503-.04.751.751 0 01-1.055-.685c0-.36-.026-.718-.075-1.073-3.074.697-6.557-.173-7.776-2.6-1.781.281-2.887 1.767-3.171 3.766h-.003a.742.742 0 01-1.043.593.57.57 0 00-.504.04c-.75.487-.67 3.137 1.165 3.758a.75.75 0 01.402.323C4.782 14.789 6.513 16.5 9 16.5c2.489 0 4.218-1.713 5.498-3.833a.757.757 0 01.402-.323c1.836-.621 1.915-3.273 1.165-3.759z"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-actions -->
+						<svg class="i-actions">
+							<use href="#i-actions"></use>
+						</svg>
+					</div>
+					<h2>i-actions</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-android -->
+						<svg class="i-android">
+							<use href="#i-android"></use>
+						</svg>
+					</div>
+					<h2>i-android</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-bookmark -->
+						<svg class="i-bookmark">
+							<use href="#i-bookmark"></use>
+						</svg>
+					</div>
+					<h2>i-bookmark</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-cards -->
+						<svg class="i-cards">
+							<use href="#i-cards"></use>
+						</svg>
+					</div>
+					<h2>i-cards</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-compass -->
+						<svg class="i-compass">
+							<use href="#i-compass"></use>
+						</svg>
+					</div>
+					<h2>i-compass</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-forum -->
+						<svg class="i-forum">
+							<use href="#i-forum"></use>
+						</svg>
+					</div>
+					<h2>i-forum</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-ios -->
+						<svg class="i-ios">
+							<use href="#i-ios"></use>
+						</svg>
+					</div>
+					<h2>i-ios</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-left-arrow -->
+						<svg class="i-left-arrow">
+							<use href="#i-left-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-left-arrow</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-login -->
+						<svg class="i-login">
+							<use href="#i-login"></use>
+						</svg>
+					</div>
+					<h2>i-login</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-logo-gt -->
+						<svg class="i-logo-gt">
+							<use href="#i-logo-gt"></use>
+						</svg>
+					</div>
+					<h2>i-logo-gt</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-logo-gtplus -->
+						<svg class="i-logo-gtplus">
+							<use href="#i-logo-gtplus"></use>
+						</svg>
+					</div>
+					<h2>i-logo-gtplus</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-logo-main -->
+						<svg class="i-logo-main">
+							<use href="#i-logo-main"></use>
+						</svg>
+					</div>
+					<h2>i-logo-main</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-menu -->
+						<svg class="i-menu">
+							<use href="#i-menu"></use>
+						</svg>
+					</div>
+					<h2>i-menu</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-message -->
+						<svg class="i-message">
+							<use href="#i-message"></use>
+						</svg>
+					</div>
+					<h2>i-message</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-promo -->
+						<svg class="i-promo">
+							<use href="#i-promo"></use>
+						</svg>
+					</div>
+					<h2>i-promo</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-refs -->
+						<svg class="i-refs">
+							<use href="#i-refs"></use>
+						</svg>
+					</div>
+					<h2>i-refs</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-search -->
+						<svg class="i-search">
+							<use href="#i-search"></use>
+						</svg>
+					</div>
+					<h2>i-search</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-soft -->
+						<svg class="i-soft">
+							<use href="#i-soft"></use>
+						</svg>
+					</div>
+					<h2>i-soft</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-support -->
+						<svg class="i-support">
+							<use href="#i-support"></use>
+						</svg>
+					</div>
+					<h2>i-support</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-trainer -->
+						<svg class="i-trainer">
+							<use href="#i-trainer"></use>
+						</svg>
+					</div>
+					<h2>i-trainer</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+
+B) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS.
+
+-->
+
+			<h3>B) Inline SVG with external sprite</h3>
+			
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-actions -->
+						<svg class="i-actions">
+							<use href="menu-sprite.svg#i-actions"></use>
+						</svg>
+					</div>
+					<h2>i-actions</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-android -->
+						<svg class="i-android">
+							<use href="menu-sprite.svg#i-android"></use>
+						</svg>
+					</div>
+					<h2>i-android</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-bookmark -->
+						<svg class="i-bookmark">
+							<use href="menu-sprite.svg#i-bookmark"></use>
+						</svg>
+					</div>
+					<h2>i-bookmark</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-cards -->
+						<svg class="i-cards">
+							<use href="menu-sprite.svg#i-cards"></use>
+						</svg>
+					</div>
+					<h2>i-cards</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-compass -->
+						<svg class="i-compass">
+							<use href="menu-sprite.svg#i-compass"></use>
+						</svg>
+					</div>
+					<h2>i-compass</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-forum -->
+						<svg class="i-forum">
+							<use href="menu-sprite.svg#i-forum"></use>
+						</svg>
+					</div>
+					<h2>i-forum</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-ios -->
+						<svg class="i-ios">
+							<use href="menu-sprite.svg#i-ios"></use>
+						</svg>
+					</div>
+					<h2>i-ios</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-left-arrow -->
+						<svg class="i-left-arrow">
+							<use href="menu-sprite.svg#i-left-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-left-arrow</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-login -->
+						<svg class="i-login">
+							<use href="menu-sprite.svg#i-login"></use>
+						</svg>
+					</div>
+					<h2>i-login</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-logo-gt -->
+						<svg class="i-logo-gt">
+							<use href="menu-sprite.svg#i-logo-gt"></use>
+						</svg>
+					</div>
+					<h2>i-logo-gt</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-logo-gtplus -->
+						<svg class="i-logo-gtplus">
+							<use href="menu-sprite.svg#i-logo-gtplus"></use>
+						</svg>
+					</div>
+					<h2>i-logo-gtplus</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-logo-main -->
+						<svg class="i-logo-main">
+							<use href="menu-sprite.svg#i-logo-main"></use>
+						</svg>
+					</div>
+					<h2>i-logo-main</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-menu -->
+						<svg class="i-menu">
+							<use href="menu-sprite.svg#i-menu"></use>
+						</svg>
+					</div>
+					<h2>i-menu</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-message -->
+						<svg class="i-message">
+							<use href="menu-sprite.svg#i-message"></use>
+						</svg>
+					</div>
+					<h2>i-message</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-promo -->
+						<svg class="i-promo">
+							<use href="menu-sprite.svg#i-promo"></use>
+						</svg>
+					</div>
+					<h2>i-promo</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-refs -->
+						<svg class="i-refs">
+							<use href="menu-sprite.svg#i-refs"></use>
+						</svg>
+					</div>
+					<h2>i-refs</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-search -->
+						<svg class="i-search">
+							<use href="menu-sprite.svg#i-search"></use>
+						</svg>
+					</div>
+					<h2>i-search</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-soft -->
+						<svg class="i-soft">
+							<use href="menu-sprite.svg#i-soft"></use>
+						</svg>
+					</div>
+					<h2>i-soft</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-support -->
+						<svg class="i-support">
+							<use href="menu-sprite.svg#i-support"></use>
+						</svg>
+					</div>
+					<h2>i-support</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-trainer -->
+						<svg class="i-trainer">
+							<use href="menu-sprite.svg#i-trainer"></use>
+						</svg>
+					</div>
+					<h2>i-trainer</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Thu, 30 Jun 2022 11:42:05 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,208 @@
+<div class="content">
+    <section class="content-head">
+        <div class="content-head--top">
+            <h1 class="content-head--heading">Sunday Kings</h1>
+        </div>
+    </section>
+    <div class="sunday-kings-grid">
+
+        <!-- sidebar top -->
+        <section class="sk-sidebar-top">
+            <div class="sk-top-logo"></div>
+            <div class="sk-top-sublogo"></div>
+            <!-- about -->
+            <div class="about-sk">
+                <a class="about-sk--link" href="javascript:void(0);">О рейтинге</a>
+                <a class="about-sk--system" href="javascript:void(0);">Система очков</a>
+                <!-- popup -->
+                <div class="sk-system">
+                    <div class="sk-system--head">Как мы считаем очки</div>
+                    <div class="sk-system--link">Мы используем <a href="https://www.pocketfives.com/plb-calculator/" target="_blank">формулу PocketFives</a></div>
+                    <strong>(X<sup>1/2</sup>) / (Y<sup>3/5</sup>) = кол-во очков</strong>
+                    <div class="sk-system--note">X - призовой фонд турнира</div>
+                    <div class="sk-system--note">Y - занятое место</div>
+                    <em>Очки начисляются только за призовые места</em>
+                </div>
+                <!-- !popup -->
+            </div>
+            <!-- !about -->
+        </section>
+        <!-- !sidebar top -->
+
+        <!-- sidebar bottom -->
+        <section class="sk-sidebar-bottom">
+            <form class="sk-player-form" name="SundayKingsPlayer" action="" method="post">
+                <div style="display: none;"><input type="hidden" name="Chrome_Form" value=""></div>
+                <div class="sk-regbox">
+                    <div class="sk-regbox--head">Мои ники</div>
+                    <div class="sk-regbox--inner">
+                        <fieldset>
+                            <label for="nick1">PokerStars</label>
+                            <input class="sk-regbox--field" type="text" name="nick1" value="" id="nick1">
+                        </fieldset>
+                        <fieldset>
+                            <label for="nick3">888</label>
+                            <input class="sk-regbox--field" type="text" name="nick3" value="" id="nick3">
+                        </fieldset>
+                        <fieldset>
+                            <label for="nick4">iPoker</label>
+                            <input class="sk-regbox--field" type="text" name="nick4" value="" id="nick4">
+                        </fieldset>
+                        <fieldset>
+                            <label for="nick5">PartyPoker</label>
+                            <input class="sk-regbox--field" type="text" name="nick5" value="" id="nick5">
+                        </fieldset>
+                        <fieldset>
+                            <button class="sk-regbox--button">Сохранить</button>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="sk-regbox edit_box">
+                    <a href="javascript:void(0);" onclick="jQuery('.sk-regbox.edit_box').hide(); jQuery('.sk-regbox:not(.edit_box)').show();" class="sk-regbox--edit" title="Редактировать"></a>
+                    <div class="sk-regbox--head">Мои ники</div>
+                    <div class="sk-regbox--inner">
+                        <fieldset>
+                            <label>PokerStars:</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset>
+                            <label>888:</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset>
+                            <label>iPoker:</label>
+                            <span></span>
+                        </fieldset>
+                        <fieldset>
+                            <label>PartyPoker:</label>
+                            <span></span>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+            <div class="sk-tour-head">Турниры Sunday <span>High</span></div>
+            <div class="sk-tour">
+                <div class="sk-tour--heading">Pokerstars</div>
+                {{#repeat 5}}
+                <div class="sk-line">
+                    <span class="sk-line--buyin">$1250</span>
+                    <span class="sk-line--name">Bounty Builder, $125K Gtd</span>
+                    <span class="sk-line--time">18:00</span>
+                </div>
+                {{/repeat}}
+            </div>
+            <div class="sk-tour">
+                <div class="sk-tour--heading">partypoker</div>
+                {{#repeat 5}}
+                <div class="sk-line">
+                    <span class="sk-line--buyin">$1050</span>
+                    <span class="sk-line--name">Sunday High Roller Deepstack: $200K Gtd</span>
+                    <span class="sk-line--time">19:30</span>
+                </div>
+                {{/repeat}}
+            </div>
+        </section>
+        <!-- !sidebar bottom -->
+
+        <section class="sk-main">
+            <ul class="sk-pager">
+                <li class="active"><a class="sk-pager--link" href="javascript:void(0);">Лидеры</a></li>
+                <li><a class="sk-pager--link" href="javascript:void(0);">High</a></li>
+                <li><a class="sk-pager--link" href="javascript:void(0);">Medium</a></li>
+                <li><a class="sk-pager--link" href="javascript:void(0);">Low</a></li>
+            </ul>
+            <div class="sk-main--head">
+                <!-- filter -->
+                <div class="sk-main--filter">
+                    <div class="filter">
+                        <a class="filter--item" href="javascript:void(0);">7 июля</a>
+                        <a class="filter--item filter--item_active" href="javascript:void(0);">2019 год</a>
+                        <a class="filter--item" href="javascript:void(0);">Все время</a>
+                    </div>
+                </div>
+                <!-- !filter -->
+                <!-- search -->
+                <form class="search-form search-form_small" action="/search" method="get">
+                    <div class="search-field">
+                        <input class="search-field--input" type="text" name="query" value="" placeholder="Поиск по нику">
+                        <button class="search-field--button" type="submit"><span class="search-field--txt">Найти</span></button>
+                    </div>
+                </form>
+                <!-- !search -->
+            </div>
+            <div class="sk-main--inner">
+                {{#repeat 3}}
+                <div class="title-sk">
+                    <div class="title-sk--heading">High</div>
+                    <div class="title-sk--inner">
+                        {{#repeat 7}}
+                        <div class="info-sk">
+                            <div class="info-sk--grid">
+                                <div class="info-sk--drop"></div>
+                                <div class="info-sk--nick">Josef_Shvejk</div>
+                                <div class="info-sk--result">
+                                    <div class="info-sk--num">6</div>
+                                    <span class="info-sk--crown info-sk--crown_gold"></span>
+                                </div>
+                                <div class="info-sk--result">
+                                    <div class="info-sk--num">5</div>
+                                    <span class="info-sk--crown info-sk--crown_silver"></span>
+
+                                </div>
+                                <div class="info-sk--result">
+                                    <div class="info-sk--num">12</div>
+                                    <span class="info-sk--crown info-sk--crown_bronze"></span>
+                                </div>
+                                <div class="info-sk--score">3556.45</div>
+                            </div>
+                            <div class="info-sk--stats">
+                                <div class="info-sk-txt">Сессий сыграно: <span>22</span></div>
+                                <div class="info-sk-txt">Лучшая сессия: <span>$15,756.37 — 21 апреля 2019</span></div>
+                                <div class="info-sk-txt">Профиль на GipsyTeam: <a href="javascript:void(0);">scorpioon</a></div>
+                                <div class="info-sk-txt">PokerStars: <span>drupa-lucker</span></div>
+                                <div class="info-sk-txt">888: <span>drupalucker</span></div>
+                                <div class="info-sk-txt">PartyPoker: <span>andstar555</span></div>
+                            </div>
+                        </div>
+                        {{/repeat}}
+                    </div>
+                </div>
+                {{/repeat}}
+            </div>
+            <div class="sk-main--bottom">
+                <!-- pager -->
+                <div class="pager pager_center">
+                    <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                    <a class="pager--item" href="javascript:void(0);">2</a>
+                    <a class="pager--item" href="javascript:void(0);">10</a>
+                    <a class="pager--item" href="javascript:void(0);">11</a>
+                    <a class="pager--item" href="javascript:void(0);">→</a>
+                </div>
+                <!-- !pager -->
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+(function ($) {
+    $('.about-sk--system').on('click', function (ev) {
+        $('.about-sk--system').toggleClass('active');
+        $('.sk-system').toggleClass('show');
+        ev.preventDefault();
+        ev.stopPropagation();
+    });
+    $(document).on('click', function (ev) {
+        if ($(ev.target).closest('.sk-system').length < 1) {
+            $('.about-sk--system').removeClass('active');
+            $('.sk-system').removeClass('show');
+        }
+    });
+})(jQuery);
+</script>
+<script>
+$('.info-sk--grid').click(function () {
+    $(this).toggleClass('active');
+    $(this).next('.info-sk--stats').toggle();
+});
+</script>

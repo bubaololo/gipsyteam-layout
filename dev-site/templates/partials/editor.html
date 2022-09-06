@@ -1,0 +1,68 @@
+<div class="editor editor_site">
+    <div class="editor--inner">
+        <div class="editor--main">
+            <div class="editor--menu">
+                <div class="editor--button editor--button_bold"></div>
+                <div class="editor--button editor--button_italic"></div>
+                <div class="editor--button editor--button_strike"></div>
+                <div class="editor--button editor--button_color editor--menu-dropdown">
+                    <div class="editor--dropdown editor--dropdown_text_color">
+                        {{> editor-colors}}
+                    </div>
+                </div>
+                <div class="editor--button editor--button_link"></div>
+                <div class="editor--button editor--button_spoiler"></div>
+                <div class="editor--button editor--button_blockquote"></div>
+                <div class="editor--button editor--button_image"></div>
+                <div class="editor--button editor--button_video"></div>
+                <div class="editor--button editor--button_audio"></div>
+            </div>
+            <textarea></textarea>
+            <div class="editor--submenu">
+                <div class="editor--button editor--button_smile" onclick="$('.editor--smiles').toggleClass('show');"></div>
+                <div class="editor--button editor--button_card" onclick="$('.editor--cards').toggleClass('show');"></div>
+            </div>
+        </div>
+        <div class="editor--smiles">
+            {{> smiles}}
+        </div>
+        <div class="editor--cards">
+            {{> card-list}}
+        </div>
+    </div>
+    <div class="editor--footer">
+        <input class="editor--button-send" type="submit" value="Отправить">
+        <a class="editor--button-preview" href="javascript:void(0);" onclick="togglePreview()">Предварительный просмотр</a>
+    </div>
+    <!-- post-preview -->
+    <div class="editor--preview">
+        {{> post-preview}}
+    </div>
+    <!-- !post-preview -->
+</div>
+<script>
+autosize(document.querySelector('textarea'));
+</script>
+<script>
+(function($) {
+    $(function() {
+        $('.editor--menu-dropdown').click(function(e) {
+            ($('.editor--menu-dropdown').not($(this))).removeClass('active');
+            $(this).toggleClass('active');
+            $('.editor--dropdown').not($(this).children()).removeClass('show');
+            $(this).children('.editor--dropdown').toggleClass('show');
+            e.stopPropagation();
+        });
+        $('html').click(function() {
+            $('.editor--dropdown').removeClass('show');
+            $('.editor--menu-dropdown').removeClass('active');
+        });
+    });
+})(jQuery);
+</script>
+<script>
+function togglePreview() {
+    document.querySelector('.editor--button-preview').classList.toggle('active');
+    document.querySelector('.editor--preview').classList.toggle('show');
+}
+</script>

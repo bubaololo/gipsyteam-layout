@@ -1,0 +1,69 @@
+<div class="content content_light">
+    <section class="content-head">
+        <div class="content-head--top content-head--top_clean">
+            <h1 class="content-head--heading">Результаты поиска</h1>
+        </div>
+    </section>
+    <!-- search -->
+    <section class="widget-search">
+        <form class="search-form search-form_medium" action="/search" method="get">
+            <div class="search-field">
+                <input class="search-field--input" type="text" name="query" value="">
+                <button class="search-field--button" type="submit"><span class="search-field--txt">Найти</span></button>
+            </div>
+        </form>
+        <div class="search-note">Ничего не найдено</div>
+        <section class="search-pager">
+            <ul class="s-pager">
+                <li class="active"><a class="s-pager--link" href="javascript:void(0);">Везде<span>393</span></a></li>
+                <li><a class="s-pager--link" href="javascript:void(0);">Новости<span>127</span></a></li>
+                <li><a class="s-pager--link" href="javascript:void(0);">LIVE<span>104</span></a></li>
+                <li><a class="s-pager--link" href="javascript:void(0);">Блоги<span>131</span></a></li>
+                <li><a class="s-pager--link" href="javascript:void(0);">Видео<span>31</span></a></li>
+            </ul>
+        </section>
+        <div class="search-filter">
+            <button class="search-filter--button active" onclick="">По релевантности</button>
+            <button class="search-filter--button" onclick="">По дате</button>
+        </div>
+    </section>
+    <!-- !search -->
+    <section class="news-wide">
+        <div class="news-wide--inner">
+            {{#repeat 1}}
+            <div class="wide-item">
+                <div class="wide-item--image">
+                    <img src="/{{images}}/k-276x207.png" alt="">
+                </div>
+                <a class="wide-item--title" href="javascript:void(0);">Кейт Холл ушла от бэкера со всеми деньгами: обзор новостей</a>
+                <div class="wide-item--content">
+                    <p>Partypoker расширяет сферу влияния, выдающиеся достижения участников сентябрьских онлайн-серий, Уильям Кассуф лишился спонсора и репутации, PokerStars в виртуальной реальности, Даг Полк закончил профессиональную карьеру.</p>
+                </div>
+                <div class="wide-item--meta">
+                    <!-- media-meta -->
+                    <div class="media-meta">
+                        <span class="media-meta--date">Вчера, 05:54</span>
+                        <span class="media-meta--view">56</span>
+                        <div class="media-meta--comment">37 /<span>3 новых</span></div>
+                    </div>
+                    <!-- !media-meta -->
+                </div>
+            </div>
+            {{/repeat}}
+        </div>
+    </section>
+    <section class="content-foot">
+        <div class="content-foot--pager">
+            <!-- pager -->
+            <div class="pager pager_right">
+                <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                <a class="pager--item" href="javascript:void(0);">2</a>
+                <a class="pager--item" href="javascript:void(0);">43</a>
+                <a class="pager--item" href="javascript:void(0);">86</a>
+                <a class="pager--item" href="javascript:void(0);">121</a>
+                <a class="pager--item" href="javascript:void(0);">→</a>
+            </div>
+            <!-- !pager -->
+        </div>
+    </section>
+</div>

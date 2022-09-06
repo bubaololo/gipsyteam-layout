@@ -1,0 +1,336 @@
+<div class="mobile-top">
+    <a class="mobile-top--logo" href="javascript:void(0);">
+        <svg>
+            <use href="/nimg/mobile-menu-sprite.svg#i-logo"></use>
+        </svg>
+    </a>
+    <div class="mobile-top--inner">
+        <a class="mobile-top--item" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/mobile-menu-sprite.svg#i-promo"></use>
+            </svg>
+        </a>
+        <a class="mobile-top--item mobile-top--item_active" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/mobile-menu-sprite.svg#i-bookmark"></use>
+            </svg>
+            <span class="mobile-top--badge">99</span>
+        </a>
+        <a class="mobile-top--item" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/mobile-menu-sprite.svg#i-message"></use>
+            </svg>
+            <span class="mobile-top--badge">99</span>
+        </a>
+        <a class="mobile-top--item" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/mobile-menu-sprite.svg#i-forum"></use>
+            </svg>
+        </a>
+    </div>
+    <a class="mobile-top--button" href="javascript:void(0);">
+        <svg class="mobile-i-menu">
+            <use href="/nimg/mobile-menu-sprite.svg#i-menu"></use>
+        </svg>
+        <svg class="mobile-i-close">
+            <use href="/nimg/mobile-menu-sprite.svg#i-menu-close"></use>
+        </svg>
+    </a>
+</div>
+
+<div class="mobile-menu">
+    <div class="mobile-menu--wrap">
+        <!-- user menu -->
+        <div class="mobile-user">
+            <div class="mobile-user--avatar"></div>
+            <a class="mobile-user--nick" href="javascript:void(0);">Alex_Superpoker_1993
+                <svg>
+                    <use href="/nimg/header-sprite.svg#i-icon-arrow"></use>
+                </svg>
+            </a>
+            <!-- dropdown -->
+            <div class="mobile-user--options">
+                <div class="mobile-user--top">
+                    <a class="mobile-user--link mobile-user--link_space" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/header-sprite.svg#i-icon-user"></use>
+                        </svg>
+                        Профиль
+                    </a>
+                    <a class="mobile-user--link" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/header-sprite.svg#i-icon-stack"></use>
+                        </svg>
+                        Бекинг
+                    </a>
+                    <a class="mobile-user--link" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/header-sprite.svg#i-icon-stack"></use>
+                        </svg>
+                        GTP
+                        <span class="mobile-user--gtp">18638</span>
+                    </a>
+                    <a class="mobile-user--link" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/header-sprite.svg#i-icon-settings"></use>
+                        </svg>
+                        Настройки форума
+                    </a>
+                    <a class="mobile-user--link" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/header-sprite.svg#i-icon-settings"></use>
+                        </svg>
+                        Настройки сайта
+                    </a>
+                </div>
+                <div class="mobile-user--bottom">
+                    <a class="mobile-user--link" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/header-sprite.svg#i-icon-logout"></use>
+                        </svg>
+                        Выйти
+                    </a>
+                </div>
+            </div>
+            <!-- !dropdown -->
+            <a class="mobile-user--login" href="javascript:void(0);" style="display:none;">Войти</a>
+        </div>
+        <!-- !user menu -->
+        <!-- submenu -->
+        <div class="mobile-submenu mobile-submenu_lang">
+            <div class="mobile-submenu--top">
+                <a class="mobile-submenu--item" href="javascript:void(0);">
+                    <svg>
+                        <use href="/nimg/header-sprite.svg#i-icon-search"></use>
+                    </svg>
+                </a>
+                <span class="mobile-submenu--sep"></span>
+                <a class="mobile-submenu--item mobile-submenu--item_support" href="javascript:void(0);">
+                    <svg>
+                        <use href="/nimg/header-sprite.svg#i-icon-support"></use>
+                    </svg>
+                    Поддержка
+                </a>
+            </div>
+            <span class="mobile-submenu--sep"></span>
+            <div class="theme-button-wrap">
+                {{> theme-switch-dev}}
+            </div>
+            <span class="mobile-submenu--sep"></span>
+            <div class="lang-flag-wrap">
+                <svg>
+                    <use href="/nimg/mobile-menu-sprite.svg#i-flag-ru"></use>
+                </svg>
+                <div class="flag-options flag-options_show">
+                    <div class="flag-options--inner">
+                        <a class="flag-options--link" href="javascript:void(0);">
+                            <svg>
+                                <use href="/nimg/mobile-menu-sprite.svg#i-flag-ua"></use>
+                            </svg>
+                            Ua
+                        </a>
+                        <a class="flag-options--link" href="javascript:void(0);">
+                            <svg>
+                                <use href="/nimg/mobile-menu-sprite.svg#i-flag-by"></use>
+                            </svg>
+                            By
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- !submenu -->
+    </div>
+    
+    <ul class="mobile-menu--inner">
+        <li class="mobile-menu--item">
+            <a class="mobile-menu--link" href="javascript:void(0);">Лента</a>
+        </li>
+        <li class="mobile-menu--item">
+            <a class="mobile-menu--link mobile-menu--link_active" href="javascript:void(0);">Покер-румы</a>
+            <!-- rooms menu -->
+            <ul class="allrooms-list">
+                <li class="allrooms-list--item">
+                    <a class="allrooms-list--link" href="javascript:void(0);">
+                        <div class="allrooms-list--icon allrooms-list--icon_rate">
+                            <svg>
+                                <use href="/nimg/dropmenu-sprite.svg#i-chart"></use>
+                            </svg>
+                        </div>
+                        Рейтинги
+                        <svg class="allrooms-list--arrow">
+                            <use href="/nimg/dropmenu-sprite.svg#i-right-arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="allrooms-list--item">
+                    <a class="allrooms-list--link" href="javascript:void(0);">
+                        <div class="allrooms-list--icon allrooms-list--icon_all">
+                            <svg>
+                                <use href="/nimg/dropmenu-sprite.svg#i-3-cards"></use>
+                            </svg>
+                        </div>
+                        Все покер-румы
+                    </a>
+                </li>
+                <li class="allrooms-list--item">
+                    <a class="allrooms-list--link allrooms-list--link_active" href="javascript:void(0);">
+                        <div class="allrooms-list--icon">
+                            <img src="/nimg/pokerdom-drop-logo.png" alt=""/>
+                        </div>
+                        Покердом
+                        <svg class="allrooms-list--arrow">
+                            <use href="/nimg/dropmenu-sprite.svg#i-right-arrow"></use>
+                        </svg>
+                    </a>
+                    <!-- room submenu -->
+                    <ul class="room-submenu">
+                        <li class="room-submenu--item">
+                            <a href="javascript:void(0);">
+                                <div class="room-submenu--icon">
+                                    <svg>
+                                        <use href="/nimg/dropmenu-sprite.svg#i-reg"></use>
+                                    </svg>
+                                </div>
+                                Регистрация</a>
+                        </li>
+                        <li class="room-submenu--item">
+                            <a href="javascript:void(0);">
+                                <div class="room-submenu--icon">
+                                    <svg>
+                                        <use href="/nimg/dropmenu-sprite.svg#i-mobile"></use>
+                                    </svg>
+                                </div>
+                                Мобильные приложения</a>
+                        </li>
+                        <li class="room-submenu--item">
+                            <a href="javascript:void(0);">
+                                <div class="room-submenu--icon">
+                                    <svg>
+                                        <use href="/nimg/dropmenu-sprite.svg#i-bank"></use>
+                                    </svg>
+                                </div>
+                                Платежные системы</a>
+                        </li>
+                        <li class="room-submenu--item">
+                            <a href="javascript:void(0);">
+                                <div class="room-submenu--icon">
+                                    <svg>
+                                        <use href="/nimg/dropmenu-sprite.svg#i-free"></use>
+                                    </svg>
+                                </div>
+                                Играть бесплатно</a>
+                        </li>
+                        <li class="room-submenu--item">
+                            <a href="javascript:void(0);">
+                                <div class="room-submenu--icon">
+                                    <svg>
+                                        <use href="/nimg/dropmenu-sprite.svg#i-comment"></use>
+                                    </svg>
+                                </div>
+                                Отзывы</a>
+                        </li>
+                    </ul>
+                    <!-- !room submenu -->
+                </li>
+                {{#repeat 3}}
+                <li class="allrooms-list--item">
+                    <a class="allrooms-list--link" href="javascript:void(0);">
+                        <div class="allrooms-list--icon">
+                            <img src="/nimg/partypoker-drop-logo.png" alt=""/>
+                        </div>
+                        partypoker
+                        <svg class="allrooms-list--arrow">
+                            <use href="/nimg/dropmenu-sprite.svg#i-right-arrow"></use>
+                        </svg>
+                    </a>
+                </li>
+                {{/repeat }}
+            </ul>
+            <!-- !rooms menu -->
+        </li>
+        <li class="mobile-menu--item">
+            <a class="mobile-menu--link mobile-menu--link_vip" href="javascript:void(0);">GT+</a>
+        </li>
+        <li class="mobile-menu--item">
+            <a class="mobile-menu--link mobile-menu--link_active" href="javascript:void(0);">Акции</a>
+            <!-- promo menu -->
+            <ul class="promomenu-list">
+                <li class="promomenu-list--item">
+                    <a href="javascript:void(0);">
+                        <div class="promomenu-list--icon promomenu-list--icon_all">
+                            <svg>
+                                <use href="/nimg/dropmenu-sprite.svg#i-promo-all"></use>
+                            </svg>
+                        </div>
+                        Все акции</a>
+                </li>
+                <li class="promomenu-list--item">
+                    <a href="javascript:void(0);">
+                        <div class="promomenu-list--icon">
+                            <svg>
+                                <use href="/nimg/dropmenu-sprite.svg#i-free"></use>
+                            </svg>
+                        </div>
+                        Играть бесплатно</a>
+                </li>
+                <li class="promomenu-list--item">
+                    <a href="javascript:void(0);">
+                        <div class="promomenu-list--icon">
+                            <svg>
+                                <use href="/nimg/dropmenu-sprite.svg#i-money"></use>
+                            </svg>
+                        </div>
+                        Играть на деньги</a>
+                </li>
+                <li class="promomenu-list--item">
+                    <a href="javascript:void(0);">
+                        <div class="promomenu-list--icon">
+                            <svg>
+                                <use href="/nimg/dropmenu-sprite.svg#i-bank"></use>
+                            </svg>
+                        </div>
+                        Платежные системы</a>
+                </li>
+                <li class="promomenu-list--item">
+                    <a href="javascript:void(0);">
+                        <div class="promomenu-list--icon">
+                            <svg>
+                                <use href="/nimg/dropmenu-sprite.svg#i-mobile"></use>
+                            </svg>
+                        </div>
+                        Мобильные приложения</a>
+                </li>
+                <li class="promomenu-list--item">
+                    <a href="javascript:void(0);">
+                        <div class="promomenu-list--icon">
+                            <svg>
+                                <use href="/nimg/dropmenu-sprite.svg#i-trophy"></use>
+                            </svg>
+                        </div>
+                        Турниры</a>
+                </li>
+            </ul>
+            <!-- !promo menu -->
+        </li>
+        <li class="mobile-menu--item">
+            <a class="mobile-menu--link" href="javascript:void(0);">Магазин</a>
+        </li>
+    </ul>
+</div>
+<script>
+  document.querySelector('.mobile-top--button').addEventListener('click', function() {
+    this.classList.toggle('menu-opened');
+    document.querySelector('.mobile-top').classList.toggle('menu-opened');
+    document.querySelector('.mobile-menu').classList.toggle('menu-opened');
+    document.body.classList.toggle('lock-scroll');
+  });
+</script>
+
+<script>
+  const mobileNickButton = document.querySelector('.mobile-user--nick');
+  mobileNickButton.addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.mobile-user--options').classList.toggle('show');
+  });
+</script>

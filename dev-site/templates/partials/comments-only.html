@@ -1,0 +1,38 @@
+<section class="comments-list">
+    <div class="comments-list-heading">16 комментариев</div>
+    {{> post}}
+    <div class="comments-list--pager">
+        <div class="pager pager_right">
+            <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+            <a class="pager--item" href="javascript:void(0);">2</a>
+            <a class="pager--item" href="javascript:void(0);">3</a>
+            <a class="pager--item" href="javascript:void(0);">→</a>
+        </div>
+    </div>
+</section>
+<section class="comments-editor">
+    <div class="comments-list-heading">Добавить комментарий</div>
+    {{> editor}}
+</section>
+<script>
+$(".post-vote--rating").click(function() {
+    $(this).toggleClass("active");
+    $(this).parent().next(".rating-list").toggleClass("show");
+});
+</script>
+<script>
+$(function() {
+    $('.js-dropmenu').on('click', function(e) {
+        $(this).toggleClass('active');
+        $(this).siblings('.author-menu').toggleClass('open');
+        e.stopPropagation();
+        e.preventDefault();
+        e.stop();
+        return false;
+    });
+    $('html').on('click', function() {
+        $('.author-menu').removeClass('open');
+        $('.js-dropmenu').removeClass('active');
+    });
+});
+</script>

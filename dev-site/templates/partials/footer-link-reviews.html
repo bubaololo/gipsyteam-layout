@@ -1,0 +1,32 @@
+<div class="content">
+    <section class="content-head">
+        <div class="content-head--top content-head--top_clean">
+            <h1 class="content-head--heading">Отзывы о сайте</h1>
+        </div>
+    </section>
+    
+    <section class="site-review-wrap">
+        <!--<a class="sr-button" href="javascript:void(0);">Button</a>-->
+        <div class="site-review-grid">
+            {{#repeat 9}}
+            <div class="site-review">
+                <div class="site-review--header">
+                    <div class="site-review--image">
+                        <img src="/nimg/imguser.png" alt=""/>
+                    </div>
+                    <div class="site-review--data">
+                        <div class="site-review--name">Максим Вершинин</div>
+                        <div class="site-review--meta">
+                            <div class="site-review--score" data-rating="4">
+                                <div class="site-review--value"></div>
+                            </div>
+                            <time class="site-review--date">10 апреля 2020</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-review--text">Подписан через джипси на старзы и китайские приложухи. Служба техподдержки всегда на высоте. Крупный надежный аффилейт с человеческим подходом.</div>
+            </div>
+            {{/repeat}}
+        </div>
+    </section>
+</div>

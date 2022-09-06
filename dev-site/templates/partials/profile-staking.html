@@ -1,0 +1,307 @@
+<div class="content">
+    {{> profile-header}}
+    <section class="profile-pager">
+        <ul class="u-pager">
+            <li><a class="u-pager--link" href="javascript:void(0);">Профиль</a></li>
+            <li><a class="u-pager--link" href="javascript:void(0);">Отзывы</a></li>
+            <li class="active"><a class="u-pager--link" href="javascript:void(0);">Бекинг</a></li>
+        </ul>
+    </section>
+    <section class="profile profile_wide">
+        <!-- profile message -->
+        <div class="profile-message">
+            <a class="profile-message--button" href="javascript:void(0);">Отправить сообщение</a>
+        </div>
+        <!-- !profile message -->
+        <div class="profile--grid-top">
+            <div class="profile--column">
+                <!-- widget staking rating -->
+                <div class="st-rate">
+                    <div class="st-rate--item">
+                        <div class="st-rate--heading">Предложений</div>
+                        <div class="st-rate--inner">
+                            <div class="st-rate--num">199</div>
+                        </div>
+                    </div>
+                    <div class="st-rate--item">
+                        <div class="st-rate--heading">Долей</div>
+                        <div class="st-rate--inner">
+                            <div class="st-rate--num">520</div>
+                        </div>
+                    </div>
+                    <div class="st-rate--item">
+                        <div class="st-rate--heading">Репутация</div>
+                        <div class="st-rate--inner">
+                            <div class="st-rate--num st-rate--num_positive">+50</div>
+                            <div class="st-rate--num st-rate--num_sep">/</div>
+                            <div class="st-rate--num st-rate--num_negative">0</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- !widget staking rating -->
+                <!-- staking offers -->
+                <section class="stakedata">
+                    <div class="stakedata--header">
+                        <div class="stakedata--heading">Предложения Fenomenico</div>
+                    </div>
+                    <div class="stakegrid">
+                        <div class="stakegrid--item">
+                            <div class="stakegrid--head stakegrid--head_wide">Дата</div>
+                            <div class="stakegrid--head">Предложение</div>
+                            <div class="stakegrid--head stakegrid--head_right">Прибыль</div>
+                            <div class="stakegrid--head stakegrid--head_right">Результат</div>
+                        </div>
+                        {{#repeat 5}}
+                        <div class="stakegrid--item">
+                            <div class="stakegrid--date">09.12.2017</div>
+                            <div class="stakegrid--offer">Мейн Праги surprisefirm</div>
+                            <div class="stakegrid--profit">$2748.1</div>
+                            <div class="stakegrid--result stakegrid--result_positive">+$1122.57</div>
+                        </div>
+                        <div class="stakegrid--item">
+                            <div class="stakegrid--date">03.05.2016</div>
+                            <div class="stakegrid--offer">PS NL25-50 6max SH 75K hands</div>
+                            <div class="stakegrid--profit">$1254.98</div>
+                            <div class="stakegrid--result stakegrid--result_negative">-$353.78</div>
+                        </div>
+                        {{/repeat}}
+                        <div class="stakegrid--footer">
+                            <a class="stakegrid--link" href="javascript:void(0);">Все предложения Fenomenico<span>(215)</span></a>
+                            <div class="pager pager_mobile">
+                                <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                                <a class="pager--item" href="javascript:void(0);">2</a>
+                                <a class="pager--item" href="javascript:void(0);">3</a>
+                                <a class="pager--item" href="javascript:void(0);">→</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- !staking offers -->
+                <!-- staking stats -->
+                <section class="stakedata stakedata_stats">
+                    <div class="stakedata--header">
+                        <div class="stakedata--heading">Статистика продаж</div>
+                    </div>
+                    <div class="stakestats">
+                        <div class="stakestats--item">
+                            <div class="stakestats--head stakestats--head_wide">Показатель</div>
+                            <div class="stakestats--head stakestats--head_wide">Онлайн</div>
+                            <div class="stakestats--head stakestats--head_wide">Офлайн</div>
+                        </div>
+                        <div class="stakestats--item">
+                            <div class="stakestats--label">Кол-во продаж</div>
+                            <span class="stakestats--mark">Онлайн</span>
+                            <div class="stakestats--online">188</div>
+                            <span class="stakestats--mark">Офлайн</span>
+                            <div class="stakestats--offline">11</div>
+                        </div>
+                        <div class="stakestats--item">
+                            <div class="stakestats--label">Результат не внесен</div>
+                            <span class="stakestats--mark">Онлайн</span>
+                            <div class="stakestats--online">14</div>
+                            <span class="stakestats--mark">Офлайн</span>
+                            <div class="stakestats--offline">0</div>
+                        </div>
+                        <div class="stakestats--item">
+                            <div class="stakestats--label">Всего выплачено</div>
+                            <span class="stakestats--mark">Онлайн</span>
+                            <div class="stakestats--online">$323838.44</div>
+                            <span class="stakestats--mark">Офлайн</span>
+                            <div class="stakestats--offline">$55375.95</div>
+                        </div>
+                        <div class="stakestats--item">
+                            <div class="stakestats--label">Максимальный выигрыш</div>
+                            <span class="stakestats--mark">Онлайн</span>
+                            <div class="stakestats--online">$81982</div>
+                            <span class="stakestats--mark">Офлайн</span>
+                            <div class="stakestats--offline">$18800</div>
+                        </div>
+                        <div class="stakestats--item">
+                            <div class="stakestats--label">ROI по деньгам</div>
+                            <span class="stakestats--mark">Онлайн</span>
+                            <div class="stakestats--online stakestats--online_positive">27.06%</div>
+                            <span class="stakestats--mark">Офлайн</span>
+                            <div class="stakestats--offline stakestats--offline_negative">-42.95%</div>
+                        </div>
+                        <div class="stakestats--item">
+                            <div class="stakestats--label">ROI по бай-инам</div>
+                            <span class="stakestats--mark">Онлайн</span>
+                            <div class="stakestats--online stakestats--online_positive">4.66%</div>
+                            <span class="stakestats--mark">Офлайн</span>
+                            <div class="stakestats--offline stakestats--offline_negative">-47.53%</div>
+                        </div>
+                    </div>
+                </section>
+                <!-- !staking stats -->
+            </div>
+            <div class="profile--column">
+                <!-- feedback staking -->
+                <section class="feedback">
+                    <div class="feedback--header">
+                        <div class="feedback--heading">Отзывы о работе с Fenomenico</div>
+                    </div>
+                    <div class="feedback-comments">
+                        <div class="feedback-comments--top">
+                            <div class="filter filter_nowrap filter_right_auto">
+                                <a class="filter--item filter--item_active" href="javascript:void(0);">Все<strong>12</strong></a>
+                                <a class="filter--item" href="javascript:void(0);">Позитив<strong>11</strong></a>
+                                <a class="filter--item" href="javascript:void(0);">Негатив<strong>1</strong></a>
+                            </div>
+                        </div>
+                        <ul class="feedback-list feedback-list_staking">
+                            {{#repeat 1}}
+                            <li class="feedback-list--item">
+                                <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                                <div class="feedback-list--grid">
+                                    <span class="feedback-list--plus"></span>
+                                    <div class="feedback-list--content">
+                                        <div class="feedback-list--meta"><a class="feedback-list--nick feedback-list--nick_gt" href="javascript:void(0);">Mr_Lyeika</a><span class="feedback-list--date">29 января 2019</span></div>
+                                        <div class="feedback-list--text">Бэк+</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="feedback-list--item">
+                                <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                                <div class="feedback-list--grid">
+                                    <span class="feedback-list--plus"></span>
+                                    <div class="feedback-list--content">
+                                        <div class="feedback-list--meta"><a class="feedback-list--nick" href="javascript:void(0);">hobas</a><span class="feedback-list--date">29 января 2019</span></div>
+                                        <div class="feedback-list--text">быстрая выплата после окончания пакета в плюс</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="feedback-list--item">
+                                <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                                <div class="feedback-list--grid">
+                                    <span class="feedback-list--minus"></span>
+                                    <div class="feedback-list--content">
+                                        <div class="feedback-list--meta"><a class="feedback-list--nick" href="javascript:void(0);">shellshoked</a><span class="feedback-list--date">29 января 2019</span></div>
+                                        <div class="feedback-list--text">Очень некрасиво с твоей стороны<br>
+                                            <a href="javascript:void(0);">http://forum.gipsyteam.ru/index.php?viewtopic=85811&amp;view=findpost&amp;p=2959943</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="feedback-list--item">
+                                <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                                <div class="feedback-list--grid">
+                                    <span class="feedback-list--plus"></span>
+                                    <div class="feedback-list--content">
+                                        <div class="feedback-list--meta"><a class="feedback-list--nick" href="javascript:void(0);">amphetamine</a><span class="feedback-list--date">29 января 2019</span></div>
+                                        <div class="feedback-list--text">Никаких проблем не возникло</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="feedback-list--item">
+                                <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                                <div class="feedback-list--grid">
+                                    <span class="feedback-list--plus"></span>
+                                    <div class="feedback-list--content">
+                                        <div class="feedback-list--meta"><a class="feedback-list--nick" href="javascript:void(0);">Moonglade</a><span class="feedback-list--date">29 января 2019</span></div>
+                                        <div class="feedback-list--text">за бекинг. хорошо отыграл все пакеты. хорошие отчеты, переводы быстрые.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/repeat}}
+                        </ul>
+                        <div class="feedback-comments--bottom">
+                            <div class="pager">
+                                <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                                <a class="pager--item" href="javascript:void(0);">2</a>
+                                <a class="pager--item" href="javascript:void(0);">3</a>
+                                <a class="pager--item" href="javascript:void(0);">→</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- !feedback staking -->
+                <!-- widget rate st -->
+                <section class="widget-rate widget-rate_staking">
+                    <div class="widget-rate--header">
+                        <div class="widget-rate--heading">Ваш отзыв о <strong>Fenomenico</strong></div>
+                    </div>
+                    <div class="widget-rate--inner">
+                        <form name="BackingReference" action="" method="post">
+                            <div style="display: none;"><input type="hidden" name="Chrome_Form" value=""></div>
+                            <div class="stake-rate">
+                                <span class="stake-rate--label">Рейтинг</span>
+                                <input type="hidden" value="" name="rating" id="hiddenRatingElement">
+                                <ul class="stake-rate--list">
+                                    <li class="stake-rate--item stake-rate--item_plus"><a href="javascript:void(0);" onclick="jQuery('#hiddenRatingElement').val(1); jQuery(this).parent().addClass('selected').next().removeClass('selected'); return false;"></a>
+                                    </li>
+
+                                    <li class="stake-rate--item stake-rate--item_minus"><a href="javascript:void(0);" onclick="jQuery('#hiddenRatingElement').val(-1); jQuery(this).parent().addClass('selected').prev().removeClass('selected'); return false;"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="widget-rate--note">Рейтинг работы с Fenomenico — это ваша оценка деловых качеств Fenomenico в бекинге</div>
+                            <div class="widget-rate--wrap">
+                                <textarea class="widget-rate--field" name="text" maxlength="300" placeholder="Текст отзыва" tabindex="999"></textarea>
+                            </div>
+                            <button class="widget-rate--save" tabindex="1000">Сохранить отзыв</button>
+                        </form>
+                    </div>
+                </section>
+                <!-- widget rate st -->
+                <!-- feedback staking -->
+                <section class="feedback">
+                    <div class="feedback--header">
+                        <div class="feedback--heading">Мои отзывы</div>
+                    </div>
+                    <div class="feedback-comments">
+                        <div class="feedback-comments--top">
+                            <div class="filter filter_nowrap filter_right_auto">
+                                <a class="filter--item filter--item_active" href="javascript:void(0);">Все<strong>12</strong></a>
+                                <a class="filter--item" href="javascript:void(0);">Позитив<strong>11</strong></a>
+                                <a class="filter--item" href="javascript:void(0);">Негатив<strong>1</strong></a>
+                            </div>
+                        </div>
+                        <ul class="feedback-list feedback-list_staking">
+                            {{#repeat 1}}
+                            <li class="feedback-list--item">
+                                <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                                <div class="feedback-list--grid">
+                                    <span class="feedback-list--plus"></span>
+                                    <div class="feedback-list--content">
+                                        <div class="feedback-list--meta"><a class="feedback-list--nick" href="javascript:void(0);">hobas</a><span class="feedback-list--date">29 января 2019</span></div>
+                                        <div class="feedback-list--text">быстрая выплата после окончания пакета в плюс</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="feedback-list--item">
+                                <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                                <div class="feedback-list--grid">
+                                    <span class="feedback-list--minus"></span>
+                                    <div class="feedback-list--content">
+                                        <div class="feedback-list--meta"><a class="feedback-list--nick" href="javascript:void(0);">shellshoked</a><span class="feedback-list--date">29 января 2019</span></div>
+                                        <div class="feedback-list--text">Очень некрасиво с твоей стороны<br>
+                                            <a href="javascript:void(0);">http://forum.gipsyteam.ru/index.php?viewtopic=85811&amp;view=findpost&amp;p=2959943</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="feedback-list--item">
+                                <a class="feedback-list--delete" href="javascript:void(0);"></a>
+                                <div class="feedback-list--grid">
+                                    <span class="feedback-list--plus"></span>
+                                    <div class="feedback-list--content">
+                                        <div class="feedback-list--meta"><a class="feedback-list--nick" href="javascript:void(0);">Moonglade</a><span class="feedback-list--date">29 января 2019</span></div>
+                                        <div class="feedback-list--text">за бекинг. хорошо отыграл все пакеты. хорошие отчеты, переводы быстрые.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/repeat}}
+                        </ul>
+                        <div class="feedback-comments--bottom">
+                            <div class="pager">
+                                <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                                <a class="pager--item" href="javascript:void(0);">2</a>
+                                <a class="pager--item" href="javascript:void(0);">3</a>
+                                <a class="pager--item" href="javascript:void(0);">→</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- !feedback staking -->
+            </div>
+        </div>
+    </section>
+</div>

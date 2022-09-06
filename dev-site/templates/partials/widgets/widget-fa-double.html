@@ -1,0 +1,38 @@
+<aside class="widget-fa2">
+    <div class="widget-fa2--header">
+        <!--<span class="widget-fa2&#45;&#45;icon"></span>-->
+        <svg class="widget-fa2--icon">
+            <use href="/nimg/ext-widget-header.svg#widget-header"/>
+        </svg>
+        <a class="widget-fa2--heading" href="javascript:void(0);">Популярные темы<span>на форуме</span></a>
+    </div>
+    <ul class="fa2-list">
+        {{#repeat 5}}
+        <li class="fa2-item">
+            <div class="fa2-item--info">
+                <div class="fa2-num"><span>1.</span></div>
+                <span class="fa2-item--nick">Pro100Kidhotstar</span>
+                <span class="fa2-item--date">35 сек назад</span>
+            </div>
+            <div class="fa2-item--link">
+                <a href="javascript:void(0);">Гриндим на забор</a>
+            </div>
+        </li>
+        {{/repeat}}
+        {{#repeat 5}}
+        <li class="fa2-item fa2-item_hidden">
+            <div class="fa2-item--info">
+                <div class="fa2-num"><span>20.</span></div>
+                <span class="fa2-item--nick">HD_M24</span>
+                <span class="fa2-item--date">35 сек назад</span>
+            </div>
+            <div class="fa2-item--link">
+                <a href="javascript:void(0);">Хватит катать вату или ME GUSTA Mangusta</a>
+            </div>
+        </li>
+        {{/repeat}}
+        <li class="fa2-more">
+            <a class="fa2-more--button" href="javascript:void(0);" onclick="$(this).closest('.fa2-list').find('.fa2-item:hidden').slice(0, 10).show(); if (!$(this).closest('.fa2-list').find('.fa2-item:hidden').length) {$(this).parent().hide();}">Показать еще</a>
+        </li>
+    </ul>
+</aside>

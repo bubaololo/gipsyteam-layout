@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+    <circle cx="10" cy="10" r="10" fill="var(--i-color2, #f4f4f4)" />
+    <path fill="var(--i-color1, #000)" d="M15 7.906L13.11 6l-4.472 4.429-1.74-1.74L5 10.587l3.63 3.63L15 7.907z" />
+</svg>

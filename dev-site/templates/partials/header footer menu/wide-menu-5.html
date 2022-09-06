@@ -1,0 +1,87 @@
+<div class="widemenu">
+    <div class="widemenu--grid">
+        <!-- main list -->
+        <div class="widelist">
+            <div class="widelist--heading">Магазин покерных товаров</div>
+            <ul class="widelist--main">
+                <li class="widelist--item">
+                    <a class="widelist--link" href="javascript:void(0);">Лейауты</a>
+                </li>
+                <li class="widelist--item">
+                    <a class="widelist--link" href="javascript:void(0);">Обзоры</a>
+                </li>
+                <li class="widelist--item">
+                    <a class="widelist--link widelist--link_active" href="javascript:void(0);">Весь магазин</a>
+                </li>
+            </ul>
+        </div>
+        <!-- !main list -->
+        
+        <!-- secondary list -->
+        <div class="widemenu--inner">
+            <div class="widemenu--subheading">Популярное</div>
+            <div class="widemenu--subgrid widemenu--subgrid_actions">
+                {{#repeat 1}}
+                <div class="shop-menucard">
+                    <div class="shop-menucard--content">
+                        <div class="shop-menucard--logo">
+                            <div class="shop-menucard--img shop-menucard--img_dark">
+                                <img src="/nimg/hand2note-dark.png" alt="">
+                            </div>
+                            <div class="shop-menucard--img shop-menucard--img_light">
+                                <img src="/nimg/hand2note-light.png" alt="">
+                            </div>
+                        </div>
+                        <div class="shop-menucard--data">
+                            <a class="shop-menucard--heading" href="javascript:void(0);">Hand2Note</a>
+                            <div class="shop-menucard--price">Бесплатно</div>
+                        </div>
+                    </div>
+                    <div class="shop-menucard--bottom">
+                        <div class="shop-menucard--desc">Инновационный софт для сбора, анализа и вывода на стол статистики для про-игроков</div>
+                    </div>
+                </div>
+                <div class="shop-menucard">
+                    <div class="shop-menucard--content">
+                        <div class="shop-menucard--logo">
+                            <div class="shop-menucard--img shop-menucard--img_dark">
+                                <img src="/nimg/sharkscope-dark.png" alt="">
+                            </div>
+                            <div class="shop-menucard--img shop-menucard--img_light">
+                                <img src="/nimg/sharkscope-light.png" alt="">
+                            </div>
+                        </div>
+                        <div class="shop-menucard--data">
+                            <a class="shop-menucard--heading" href="javascript:void(0);">Sharkscope</a>
+                            <div class="shop-menucard--price">$10 / 640 ₽</div>
+                        </div>
+                    </div>
+                    <div class="shop-menucard--bottom">
+                        <div class="shop-menucard--desc">Статистика по игрокам MTT и SNG</div>
+                    </div>
+                </div>
+                <div class="shop-menucard">
+                    <div class="shop-menucard--content">
+                        <div class="shop-menucard--logo">
+                            <div class="shop-menucard--img shop-menucard--img_dark">
+                                <img src="/nimg/flopzilla-dark.png" alt="">
+                            </div>
+                            <div class="shop-menucard--img shop-menucard--img_light">
+                                <img src="/nimg/flopzilla-light.png" alt="">
+                            </div>
+                        </div>
+                        <div class="shop-menucard--data">
+                            <a class="shop-menucard--heading" href="javascript:void(0);">Flopzilla</a>
+                            <div class="shop-menucard--price">$25 / 1600 ₽</div>
+                        </div>
+                    </div>
+                    <div class="shop-menucard--bottom">
+                        <div class="shop-menucard--desc">Расчет вероятности попадания в заданную доску различных диапазонов рук</div>
+                    </div>
+                </div>
+                {{/repeat}}
+            </div>
+        </div>
+        <!-- !secondary list -->
+    </div>
+</div>

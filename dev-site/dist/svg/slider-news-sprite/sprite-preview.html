@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>svg sprite preview</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style>
+.i-icon-calendar {
+	width: 16px;
+	height: 16px;
+}
+.i-icon-comment {
+	width: 16px;
+	height: 16px;
+}
+.i-icon-view {
+	width: 16px;
+	height: 16px;
+}
+.i-left-arrow {
+	width: 24px;
+	height: 24px;
+}
+.i-right-arrow {
+	width: 24px;
+	height: 24px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+<!--
+
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position: absolute">
+		<symbol fill="none" viewBox="0 0 16 16" id="i-icon-calendar"><path fill="var(--i-color1, #A8A8A9)" d="M4.667 7.333H6v1.334H4.667V7.333zm0 2.667H6v1.333H4.667V10zm2.666-2.667h1.334v1.334H7.333V7.333zm0 2.667h1.334v1.333H7.333V10zM10 7.333h1.333v1.334H10V7.333zM10 10h1.333v1.333H10V10z"/><path fill="var(--i-color1, #A8A8A9)" d="M3.333 14.667h9.334c.735 0 1.333-.598 1.333-1.334V4c0-.735-.598-1.333-1.333-1.333h-1.334V1.333H10v1.334H6V1.333H4.667v1.334H3.333C2.598 2.667 2 3.265 2 4v9.333c0 .736.598 1.334 1.333 1.334zm9.334-9.334v8H3.333v-8h9.334z"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 16" id="i-icon-comment"><path fill="var(--i-color1, #A8A8A9)" d="M4.667 4.667h6.666V6H4.667V4.667zm0 2.666h4.666v1.334H4.667V7.333z"/><path fill="var(--i-color1, #A8A8A9)" d="M13.333 1.333H2.667c-.736 0-1.334.598-1.334 1.334v12L4.89 12h8.444c.736 0 1.334-.598 1.334-1.333v-8c0-.736-.598-1.334-1.334-1.334zm0 9.334H4.445L2.667 12V2.667h10.666v8z"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 16" id="i-icon-view"><path fill="var(--i-color1, #A8A8A9)" d="M14.58 7.667c-.427-.74-2.773-4.454-6.76-4.334-3.687.094-5.82 3.334-6.4 4.334a.667.667 0 000 .666c.42.727 2.667 4.334 6.593 4.334h.167c3.687-.094 5.827-3.334 6.4-4.334a.667.667 0 000-.666zm-6.433 3.666C5.273 11.4 3.4 8.94 2.813 8 3.48 6.927 5.22 4.733 7.887 4.667c2.86-.074 4.74 2.393 5.333 3.333-.687 1.073-2.407 3.267-5.073 3.333z"/><path fill="var(--i-color1, #A8A8A9)" d="M8 5.667a2.333 2.333 0 100 4.666 2.333 2.333 0 000-4.666zM8 9a1 1 0 110-2 1 1 0 010 2z"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="i-left-arrow"><path fill="var(--i-color1, #DFE1E4)" d="M14.586 5.586L16 7l-5.207 5.293L16 17.586 14.586 19l-6.707-6.707 6.707-6.707z"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="i-right-arrow"><path fill="var(--i-color1, #DFE1E4)" d="M9.414 18.414L8 17l5.207-5.293L8 6.414 9.414 5l6.707 6.707-6.707 6.707z"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-calendar -->
+						<svg class="i-icon-calendar">
+							<use href="#i-icon-calendar"></use>
+						</svg>
+					</div>
+					<h2>i-icon-calendar</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-comment -->
+						<svg class="i-icon-comment">
+							<use href="#i-icon-comment"></use>
+						</svg>
+					</div>
+					<h2>i-icon-comment</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-view -->
+						<svg class="i-icon-view">
+							<use href="#i-icon-view"></use>
+						</svg>
+					</div>
+					<h2>i-icon-view</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-left-arrow -->
+						<svg class="i-left-arrow">
+							<use href="#i-left-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-left-arrow</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-right-arrow -->
+						<svg class="i-right-arrow">
+							<use href="#i-right-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-right-arrow</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+
+B) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS.
+
+-->
+
+			<h3>B) Inline SVG with external sprite</h3>
+			
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-calendar -->
+						<svg class="i-icon-calendar">
+							<use href="slider-news-sprite.svg#i-icon-calendar"></use>
+						</svg>
+					</div>
+					<h2>i-icon-calendar</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-comment -->
+						<svg class="i-icon-comment">
+							<use href="slider-news-sprite.svg#i-icon-comment"></use>
+						</svg>
+					</div>
+					<h2>i-icon-comment</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-view -->
+						<svg class="i-icon-view">
+							<use href="slider-news-sprite.svg#i-icon-view"></use>
+						</svg>
+					</div>
+					<h2>i-icon-view</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-left-arrow -->
+						<svg class="i-left-arrow">
+							<use href="slider-news-sprite.svg#i-left-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-left-arrow</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-right-arrow -->
+						<svg class="i-right-arrow">
+							<use href="slider-news-sprite.svg#i-right-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-right-arrow</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Tue, 02 Mar 2021 19:29:38 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

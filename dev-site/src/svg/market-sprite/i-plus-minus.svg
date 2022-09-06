@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+    <path fill="var(--i-color1, #202020)" d="M0 6h14v2H0Z" />
+    <path fill="var(--i-color2, #202020)" d="M8 0v14H6V0Z" />
+</svg>

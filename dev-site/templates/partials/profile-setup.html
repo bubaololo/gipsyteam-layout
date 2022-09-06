@@ -1,0 +1,165 @@
+<div class="content">
+    <form action="">
+        <!-- profile header -->
+        <section class="profile-header">
+            <div class="profile-header--inner">
+                <div class="user-main">
+                    <div class="user-main--avatar">
+                        <div class="user-main--image"></div>
+                        <a class="user-main--remove" href="javascript:void(0);" title="Удалить аватар"></a>
+                    </div>
+                    <div class="user-main--inner">
+                        <div class="user-main--nickname">
+                            <div class="user-main--nick">Fenomenico</div>
+                        </div>
+                        <div class="user-main--file">Сменить аватар<input type="hidden" name="MAX_FILE_SIZE" value="33554432"><input class="user-main--input" type="file" name="Filedata" size="40" id="avatarUploadInput" onclick="event.stopPropagation();"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- !profile header -->
+        <section class="profile-pager">
+            <ul class="u-pager">
+                <li class="active"><a class="u-pager--link" href="javascript:void(0);">Настройки</a></li>
+            </ul>
+        </section>
+        <section class="profile">
+            <div class="profile--grid-top">
+                <div class="profile--column">
+                    <div class="profile-setup">
+                        <div class="setup-wrap setup-wrap_double">
+                            <span class="profile-setup--mark">Имя и фамилия</span>
+                            <input class="setup-field" type="text" name="fullName" value="">
+                        </div>
+                        <div class="setup-wrap setup-wrap_double">
+                            <span class="profile-setup--mark">Пол</span>
+                            <select class="setup-select setup-select_short" name="gender">
+                                <option value="0" selected="selected">мужской</option>
+                                <option value="1">женский</option>
+                            </select>
+                        </div>
+                        <div class="setup-wrap setup-wrap_double">
+                            <span class="profile-setup--mark">Twiter</span>
+                            <input class="setup-field setup-field_short" type="text" name="twitter" value="">
+                        </div>
+                        <div class="setup-wrap setup-wrap_double">
+                            <span class="profile-setup--mark">Город</span>
+                            <select class="setup-select" name="Settlement" id="settlementSelect">
+                                <option value="849">Москва</option>
+                                <option>Другой город</option>
+                            </select>
+                        </div>
+                        <div class="setup-wrap setup-wrap_double">
+                            <input class="setup-field" type="text" value="">
+                        </div>
+                        <div class="setup-wrap setup-wrap_double">
+                            <span class="profile-setup--mark">Страна</span>
+                            <select class="setup-select" name="Country" id="countrySelect">
+                                <option value="164" selected="selected">Россия</option>
+                            </select>
+                        </div>
+                        <div class="setup-wrap setup-wrap_double">
+                            <span class="profile-setup--mark">Часовой пояс</span>
+                            <select class="setup-select" name="Timezone">
+                                <option value="19" selected="selected">(GMT+3:00) Москва, Санкт-Петербург, Багдад, Эр-Рияд, Найроби</option>
+                            </select>
+                        </div>
+                        <div class="setup-wrap setup-wrap_double">
+                            <label class="checkbox-medium--label">
+                                <input class="checkbox-medium" type="checkbox"><span class="checkbox-medium--mark"></span>Автоматический переход на летнее время
+                            </label>
+                        </div>
+                        <div class="setup-wrap setup-wrap_double">
+                            <label class="checkbox-medium--label">
+                                <input class="checkbox-medium" type="checkbox"><span class="checkbox-medium--mark"></span>Перейти на летнее время
+                            </label>
+                        </div>
+                        <div class="setup-wrap">
+                            <div class="profile-setup--mark">О себе</div>
+                            <textarea class="setup-textarea" name="about"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile--column">
+                    <div class="profile-setup">
+                        <div class="setup-wrap">
+                            <label class="checkbox-medium--label">
+                                <input class="checkbox-medium" type="checkbox"><span class="checkbox-medium--mark"></span>Отключить анимированные аватары
+                            </label>
+                        </div>
+                        <div class="setup-wrap">
+                            <label class="checkbox-medium--label">
+                                <input class="checkbox-medium" type="checkbox"><span class="checkbox-medium--mark"></span>Использовать четырехцветную колоду
+                            </label>
+                        </div>
+                        <div class="setup-wrap">
+                            <label class="checkbox-medium--label">
+                                <input class="checkbox-medium" type="checkbox"><span class="checkbox-medium--mark"></span>Не уведомлять в главном меню о новых материалах
+                            </label>
+                        </div>
+                        <div class="setup-wrap">
+                            <label class="checkbox-medium--label">
+                                <input class="checkbox-medium" type="checkbox"><span class="checkbox-medium--mark"></span>Подписаться на анонсы акций и бонусов от GipsyTeam
+                            </label>
+                        </div>
+                    </div>
+                    <div class="profile-setup">
+                        <div class="setup-wrap">
+                            <a class="setup-link setup-link_email" href="javascript:void(0);">Изменить e-mail адрес</a>
+                        </div>
+                        <div class="setup-wrap">
+                            <a class="setup-link setup-link_pwd" href="javascript:void(0);">Поменять пароль</a>
+                        </div>
+                        <div class="setup-wrap">
+                            <a class="setup-link setup-link_2f" href="javascript:void(0);">Усиленная защита аккаунта Google Authenticator</a>
+                        </div>
+                        <div class="setup-wrap">
+                            <a class="setup-2f-button" href="javascript:void(0);">Включить защиту</a>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-setup profile-setup_telegram">
+                        <a href="#tgbot"></a>
+                        <div class="profile-setup--note">Для подписки на уведомления в телеграме <a href="javascript:void(0);" target="_blank">перейдите по этой ссылке</a>, нажмите "Открыть", а потом Start в окне мессенджера.</div>
+                        <div class="profile-setup--note">О чем уведомлять:</div>
+                        <div class="setup-wrap">
+                            <label class="checkbox-medium--label">
+                                <input type="checkbox" name="tgPm" value="1" checked="checked" tabindex="18" class="checkbox-medium">
+                                <span class="checkbox-medium--mark"></span>Личные сообщения</label>
+                        </div>
+                        <div class="setup-wrap">
+                            <label class="checkbox-medium--label">
+                                <input type="checkbox" name="tgContent" value="1" checked="checked" tabindex="19" class="checkbox-medium">
+                                <span class="checkbox-medium--mark"></span>Материалы сайта</label>
+                        </div>
+                        
+                        <div class="setup-wrap">
+                            <label class="checkbox-medium--label">
+                                <input type="checkbox" name="tgSlider" value="1" checked="checked" tabindex="20" class="checkbox-medium">
+                                <span class="checkbox-medium--mark"></span>Лучшее на форуме</label>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="profile-setup--footer">
+                <input class="profile-setup--input" value="Сохранить изменения" type="submit">
+            </div>
+        </section>
+    </form>
+</div>
+
+<script>
+  $(function() {
+    var hash = window.location.hash;
+    var anchor = $('a[href$="' + hash + '"]');
+
+    if (anchor.length > 0) {
+      anchor.click();
+      $('.profile-setup_telegram').css('box-shadow', 'inset 0 0 0 2px #649213');
+      $('html, body').animate({
+        scrollTop: anchor.offset().top - 30
+      }, 200);
+    }
+  });
+</script>

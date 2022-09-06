@@ -1,0 +1,57 @@
+<section class="comments-best">
+    <div class="comments-best--inner">
+        <div class="comments-best-heading">Лучшие комментарии</div>
+        <div class="comments-top">
+            <div class="comments-top--button-prev comments-top--button-prev_disabled"></div>
+            <div class="comments-top--item comments-top--item_active">
+                <div class="comments-top--avatar" style="background-image: url({{images}}/imguser-a.jpg)"></div>
+            </div>
+            {{#repeat 4}}
+            <div class="comments-top--item">
+                <div class="comments-top--avatar" style="background-image: url({{images}}/imguser-i.jpg)"></div>
+            </div>
+            {{/repeat}}
+            <div class="comments-top--button-next"></div>
+        </div>
+    </div>
+    {{> post-best}}
+</section>
+<section class="comments-list">
+    <div class="comments-list-heading">16 комментариев</div>
+    {{> post}}
+    <div class="comments-list--pager">
+        <div class="pager pager_right">
+            <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+            <a class="pager--item" href="javascript:void(0);">2</a>
+            <a class="pager--item" href="javascript:void(0);">3</a>
+            <a class="pager--item" href="javascript:void(0);">→</a>
+        </div>
+    </div>
+</section>
+<section class="comments-editor">
+    <div class="comments-list-heading">Добавить комментарий</div>
+    {{> editor}}
+    {{> reg-note}}
+</section>
+<script>
+$(".post-vote--rating").click(function() {
+    $(this).toggleClass("active");
+    $(this).parent().next(".rating-list").toggleClass("show");
+});
+</script>
+<script>
+$(function() {
+    $('.js-dropmenu').on('click', function(e) {
+        $(this).toggleClass('active');
+        $(this).siblings('.author-menu').toggleClass('open');
+        e.stopPropagation();
+        e.preventDefault();
+        e.stop();
+        return false;
+    });
+    $('html').on('click', function() {
+        $('.author-menu').removeClass('open');
+        $('.js-dropmenu').removeClass('active');
+    });
+});
+</script>

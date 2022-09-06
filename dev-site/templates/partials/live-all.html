@@ -1,0 +1,87 @@
+<div class="content content_light">
+    <section class="content-head">
+        <div class="content-head--top">
+            <h1 class="content-head--heading">Архив трансляций</h1>
+            <!-- dropdown -->
+            <div class="drop-header"><a class="drop-header--nick" href="javascript:void(0);" onclick="toggleLiveMenu()">Все трансляции</a>
+                <div class="drop-header--options">
+                    <a class="drop-header--link" href="javascript:void(0);">Радио</a>
+                    <a class="drop-header--link" href="javascript:void(0);">Репортажи</a>
+                </div>
+            </div>
+            <!-- !dropdown -->
+        </div>
+        <div class="content-head--bottom">
+            <!-- filter -->
+            <div class="filter">
+                <a class="filter--item filter--item_active" href="javascript:void(0);">По дате</a>
+                <a class="filter--item" href="javascript:void(0);">По новым комментариям</a>
+            </div>
+            <!-- !filter -->
+        </div>
+    </section>
+    <section class="live-all">
+        <div class="live-all--inner">
+            <div class="live-item live-item_active">
+                <div class="live-item--image">
+                    <img src="/{{images}}/live-all-item.jpg" alt="">
+                </div>
+                <div class="live-item--onair">В эфире</div>
+                <a class="live-item--title" href="javascript:void(0);">Вечерний форум, выпуск 6: Подсказчики</a>
+                <div class="live-item--content">
+                    <p>В среду, в 21:30 по Москве к ведущей программы Алисе Pinky присоединится Илья Городецкий. Тема настолько актуальна, что в эфир выйдут сразу два Городецких, такое невозможно пропустить!</p>
+                </div>
+                <div class="live-item--meta">
+                    <!-- media-meta -->
+                    <div class="media-meta">
+                        <span class="media-meta--date">Вчера, 05:54</span>
+                        <span class="media-meta--view">56</span>
+                        <div class="media-meta--comment">37 /<span>3 новых</span></div>
+                    </div>
+                    <!-- !media-meta -->
+                </div>
+            </div>
+            {{#repeat 2}}
+            <div class="live-item">
+                <div class="live-item--image">
+                    <img src="/{{images}}/live-all-item.jpg" alt="">
+                </div>
+                <div class="live-item--onair">Эфир закончен</div>
+                <a class="live-item--title" href="javascript:void(0);">Вечерний форум, выпуск 6: Подсказчики</a>
+                <div class="live-item--content">
+                    <p>В среду, в 21:30 по Москве к ведущей программы Алисе Pinky присоединится Илья Городецкий. Тема настолько актуальна, что в эфир выйдут сразу два Городецких, такое невозможно пропустить!</p>
+                </div>
+                <div class="live-item--meta">
+                    <!-- media-meta -->
+                    <div class="media-meta">
+                        <span class="media-meta--date">Вчера, 05:54</span>
+                        <span class="media-meta--view">56</span>
+                        <div class="media-meta--comment">37 /<span>3 новых</span></div>
+                    </div>
+                    <!-- !media-meta -->
+                </div>
+            </div>
+            {{/repeat}}
+        </div>
+    </section>
+    <section class="content-foot">
+        <div class="content-foot--pager">
+            <!-- pager -->
+            <div class="pager pager_right">
+                <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                <a class="pager--item" href="javascript:void(0);">2</a>
+                <a class="pager--item" href="javascript:void(0);">43</a>
+                <a class="pager--item" href="javascript:void(0);">86</a>
+                <a class="pager--item" href="javascript:void(0);">121</a>
+                <a class="pager--item" href="javascript:void(0);">→</a>
+            </div>
+            <!-- !pager -->
+        </div>
+    </section>
+</div>
+<script>
+function toggleLiveMenu() {
+    document.querySelector('.drop-header--nick').classList.toggle('active');
+    document.querySelector('.drop-header--options').classList.toggle('show');
+}
+</script>

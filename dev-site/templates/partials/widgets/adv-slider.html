@@ -1,0 +1,70 @@
+<aside class="adv-slider zzz_adv-slider_double">
+    <div class="adv-slider--head">
+        <!--<span class="adv-slider&#45;&#45;icon"></span>-->
+        <svg class="adv-slider--icon">
+            <use href="/nimg/ext-widget-header.svg#widget-header"/>
+        </svg>
+        <a class="adv-slider--heading" href="javascript:void(0);">Лучшее на форуме</a>
+    </div>
+    <div class="adv-slider--main">
+        <div class="adv-slider--wrap">
+            {{#repeat 9}}
+            <ul class="adv-slider--list">
+                <li class="hot-link">
+                    <div class="hot-link--wrap">
+                        <div class="hot-link--data"><span class="hot-link--action slider-hot--action_top">Форум</span></div>
+                        <a class="hot-link--title" href="javascript:void(0);">Fenomenico провел покерный стрим по PLO8 на PokerStars, покерный стрим</a>
+                    </div>
+                </li>
+                <li class="hot-link">
+                    <div class="hot-link--wrap">
+                        <div class="hot-link--data"><span class="hot-link--action slider-hot--action_top">Форум</span></div>
+                        <a class="hot-link--title" href="javascript:void(0);">Fenomenico провел стрим</a>
+                    </div>
+                </li>
+                <li class="hot-link">
+                    <div class="hot-link--wrap">
+                        <div class="hot-link--data"><span class="hot-link--action slider-hot--action_top">Форум</span></div>
+                        <a class="hot-link--title" href="javascript:void(0);">Fenomenico провел покерный стрим по PLO8 на PokerStars</a>
+                    </div>
+                </li>
+            </ul>
+            {{/repeat }}
+        </div>
+    </div>
+    <div class="hot-control">
+        <a class="hot-control--button hot-control--button_prev" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/ext-slider-button-left.svg#sl-btn-left"/>
+            </svg>
+        </a>
+        <a class="hot-control--button hot-control--button_next" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/ext-slider-button-right.svg#sl-btn-right"/>
+            </svg>
+        </a>
+    </div>
+</aside>
+
+<script>
+  // 3 column swiper
+  var mySwiper = new Swiper('.adv-slider--main', {
+    // custom namespace
+    wrapperClass: 'adv-slider--wrap',
+    slideClass: 'adv-slider--list',
+    slidesPerView: 2,
+    spaceBetween: 20,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.hot-control--button_next',
+      prevEl: '.hot-control--button_prev',
+      disabledClass: 'hot-control--button_disabled'
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      }
+    }
+  });
+</script>

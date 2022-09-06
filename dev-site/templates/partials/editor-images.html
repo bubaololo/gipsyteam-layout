@@ -1,0 +1,28 @@
+<div class="imgtool">
+    <div class="imgtool--heading">Изображения</div>
+    <div class="imgtool--wrap">
+        <a class="imgtool--button imgtool--button_refresh" href="javascript:void(0);">Обновить</a>
+        <div class="imgtool--button imgtool--button_file">Добавить
+            <input class="imgtool--input" type="file" name="Filedata">
+        </div>
+    </div>
+    <div class="imgtool--container">
+        {{#repeat 1}}
+        <div class="imgtool-item">
+            <div class="imgtool-item--top">
+                <a class="imgtool-item--button imgtool-item--button_insert" href="javascript:void(0);">Вставить</a>
+                <a class="imgtool-item--button imgtool-item--button_delete" href="javascript:void(0);">Удалить</a>
+            </div>
+            <div class="imgtool-item--preview">
+                <a href="javascript:void(0);">
+                    <img src="/{{images}}/120x120.png" alt="">
+                </a>
+            </div>
+            <div class="imgtool-item--wrap">
+                <label class="admin-medium--label"><input class="checkbox-medium" type="checkbox" checked="checked"><span class="checkbox-medium--mark"></span>Логотип GipsyTeam</label>
+                <span class="imgtool-item--loader"></span>
+            </div>
+        </div>
+        {{/repeat}}
+    </div>
+</div>

@@ -1,0 +1,147 @@
+<section class="widget-frs-wrap">
+    <div class="widget-frs">
+        <div class="widget-frs--head">
+            <a class="widget-frs--heading" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/mainpage-sprite.svg#i-free"></use>
+                </svg>
+                Фрироллы
+            </a>
+            <a class="widget-frs--link" href="javascript:void(0);">
+                Еще 114 фрироллов
+                <svg>
+                    <use href="/nimg/mainpage-sprite.svg#i-arrow-right"></use>
+                </svg>
+            </a>
+        </div>
+        <div class="frs-slide-wrap">
+            <div class="frs-slide">
+                <div class="frs-slide--inner">
+                    <!--item-->
+                    <div class="frs-slide--item">
+                        <div class="frs-slide--head">
+                            <svg>
+                                <use href="/nimg/mainpage-sprite.svg#i-calendar"></use>
+                            </svg>
+                            <div class="frs-slide--date">30 января 18:20</div>
+                        </div>
+                        <div class="frs-slide--main">
+                            <div class="frs-slide--top">
+                                <div class="frs-slide--logo">
+                                    <div class="frs-slide--img frs-slide--img_dark">
+                                        <img src="/nimg/888-dark.png" alt=""/>
+                                    </div>
+                                    <div class="frs-slide--img frs-slide--img_light">
+                                        <img src="/nimg/888-dark.png" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="frs-slide--price">
+                                    Билеты
+                                    <a href="javascript:void(0);">
+                                        <svg>
+                                            <use href="/nimg/mainpage-sprite.svg#i-quest"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="frs-slide--heading">$500 Freeroll</div>
+                            <div class="frs-slide--bottom">
+                                <ul class="frs-slide--rules">
+                                    <li>Призы - вход в 888LIVE</li>
+                                </ul>
+                                <a class="frs-slide--cta" href="javascript:void(0);">
+                                    <svg>
+                                        <use href="/nimg/mainpage-sprite.svg#i-cta-play"></use>
+                                    </svg>
+                                    Играть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--!item-->
+                    {{#repeat 5}}
+                    <!--item-->
+                    <div class="frs-slide--item">
+                        <div class="frs-slide--head">
+                            <svg>
+                                <use href="/nimg/mainpage-sprite.svg#i-calendar"></use>
+                            </svg>
+                            <div class="frs-slide--date">30 января 18:20</div>
+                        </div>
+                        <div class="frs-slide--main">
+                            <div class="frs-slide--top">
+                                <div class="frs-slide--logo">
+                                    <div class="frs-slide--img frs-slide--img_dark">
+                                        <img src="/nimg/888-dark.png" alt=""/>
+                                    </div>
+                                    <div class="frs-slide--img frs-slide--img_light">
+                                        <img src="/nimg/888-dark.png" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="frs-slide--price">
+                                    Билеты
+                                    <a href="javascript:void(0);">
+                                        <svg>
+                                            <use href="/nimg/mainpage-sprite.svg#i-quest"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="frs-slide--heading">$500 Fabulous Winner Spinner Freeroll</div>
+                            <div class="frs-slide--bottom">
+                                <ul class="frs-slide--rules">
+                                    <li>Призы - вход в 888LIVE</li>
+                                    <li>London Weekend - ENTRIES<a href="javascript:void(0);">
+                                        <svg>
+                                            <use href="/nimg/mainpage-sprite.svg#i-info"></use>
+                                        </svg>
+                                    </a></li>
+                                </ul>
+                                <a class="frs-slide--cta" href="javascript:void(0);">
+                                    <svg>
+                                        <use href="/nimg/mainpage-sprite.svg#i-cta-play"></use>
+                                    </svg>
+                                    Играть
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--!item-->
+                    {{/repeat}}
+                </div>
+            </div>
+            <a class="frs-slide-button frs-slide-button_prev" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/actions-sprite.svg#i-arrow-slider2"></use>
+                </svg>
+            </a>
+            <a class="frs-slide-button frs-slide-button_next" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/actions-sprite.svg#i-arrow-slider2"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+  var mySwiper = new Swiper('.frs-slide', {
+    wrapperClass: 'frs-slide--inner',
+    containerModifierClass: 'frs-slide_',
+    slideClass: 'frs-slide--item',
+    slideActiveClass: 'frs-slide--item_active',
+    slideNextClass: 'frs-slide--item_next',
+    slidePrevClass: 'frs-slide--item_prev',
+    //
+    // slidesPerView: '4',
+    slidesPerView: 'auto',
+    slidesPerGroup: 1,
+    spaceBetween: 20,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.frs-slide-button_next',
+      prevEl: '.frs-slide-button_prev',
+      disabledClass: 'frs-slide-button_disabled'
+    }
+  });
+</script>

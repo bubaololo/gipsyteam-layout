@@ -1,0 +1,136 @@
+<style>
+.header,
+.footer {display: none;}
+.f-form-wrap {
+  width: 100%;
+  min-height: 100vh;
+  padding: 12px 15px;
+  background-color: #f0ebf8;
+}
+
+.f-form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.f-form--item {
+  width: 100%;
+  margin: 0 0 12px;
+  padding: 20px 24px 28px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.f-form--item_top {
+  border-top: 10px solid #673ab7;
+}
+
+.f-form--heading {
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #212121;
+}
+
+.f-form--subheading {
+  font-size: 18px;
+  line-height: 1.25;
+  color: #212121;
+  margin: 0 0 24px;
+}
+
+.f-form--input {
+  line-height: 24px;
+  color: #212121;
+  display: block;
+  width: 100%;
+  height: 24px;
+  min-height: 24px;
+  margin: 0;
+  padding: 0;
+  resize: none;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.f-form--input::-webkit-input-placeholder {
+  font-size: 16px;
+  color: #9e9e9e;
+}
+
+.f-form--input::-moz-placeholder {
+  font-size: 16px;
+  color: #9e9e9e;
+}
+
+.f-form--input::placeholder {
+  font-size: 16px;
+  color: #9e9e9e;
+}
+
+.f-form--input:focus ~ .f-form--underline::before {
+  left: 0;
+  width: 100%;
+}
+
+.f-form--underline {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  background-color: #e0e0e0;
+}
+
+.f-form--underline::before {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  content: "";
+  transition: left .28s ease, width .28s ease;
+  background-color: #673ab7;
+  z-index: 2;
+}
+
+.f-form--button {
+  font-size: 12px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #fff;
+  height: 36px;
+  padding: 0 20px;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+  background-color: #673ab7;
+}
+</style>
+<div class="f-form-wrap">
+    <form class="f-form">
+        <div class="f-form--item f-form--item_top">
+            <div class="f-form--heading">Спасибо, будем придумывать больше акций!</div>
+        </div>
+        <div class="f-form--item">
+            <div class="f-form--subheading">В каких акциях интереснее всего участвовать?</div>
+            <input class="f-form--input" type="text" placeholder="ваш текст">
+            <div class="f-form--underline"></div>
+        </div>
+        <div class="f-form--item">
+            <div class="f-form--subheading">Оставьте почту, чтобы мы могли с вами связаться.</div>
+            <input class="f-form--input" type="text" placeholder="ваш email">
+            <div class="f-form--underline"></div>
+        </div>
+        <button class="f-form--button">Отправить</button>
+    </form>
+</div>

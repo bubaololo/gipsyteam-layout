@@ -1,0 +1,77 @@
+<div class="toprec-widget">
+    <div class="toprec-widget--head">
+        <div class="toprec-widget--heading">Нас рекомендуют</div>
+        <div class="toprec-control">
+            <a class="toprec-control--button toprec-control--button_prev" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/ext-slider-button-left.svg#sl-btn-left"/>
+                </svg>
+            </a>
+            <a class="toprec-control--button toprec-control--button_next" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/ext-slider-button-right.svg#sl-btn-right"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    
+    <div class="toprecommend--container">
+        <div class="toprecommend--row">
+            {{#repeat 5}}
+            <div class="toprecommend-item">
+                <div class="toprecommend-item--grid">
+                    <div class="toprecommend-user">
+                        <div class="toprecommend-user--avatar" style="background-image: url(/nimg/imguser-a.jpg);"></div>
+                        <div class="toprecommend-user--data">
+                            <a class="toprecommend-user--nick" href="javascript:void(0);">SwitchBladeSmile</a>
+                            <div class="toprecommend-user--profile">
+                                <div class="toprecommend-user--post">
+                                    <svg>
+                                        <use href="/nimg/meta-sprite.svg#i-icon-comment2"></use>
+                                    </svg>
+                                    10,629
+                                </div>
+                                <div class="toprecommend-user--score">
+                                    <svg>
+                                        <use href="/nimg/meta-sprite.svg#i-icon-bars"></use>
+                                    </svg>
+                                    15,517
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toprecommend-item--text">Дорогие друзья, дальнейшее развитие различных форм деятельности обеспечивает актуальность дальнейших направлений развитая системы массового участия. С другой стороны реализация намеченного плана развития напрямую зависит от ключевых компонентов планируемого обновления. С другой стороны социально-экономическое развитие требует определения и уточнения соответствующих условий активизации.</div>
+                </div>
+            </div>
+            {{/repeat}}
+        </div>
+    </div>
+</div>
+
+<script>
+  (function($) {
+    $(function() {
+      toprecSlider = new Swiper('.toprecommend--container', {
+        wrapperClass: 'toprecommend--row',
+        containerModifierClass: 'toprecommend--container_',
+        slideClass: 'toprecommend-item',
+        slideActiveClass: 'toprecommend-item_active',
+        slideNextClass: 'toprecommend-item_next',
+        slidePrevClass: 'toprecommend-item_prev',
+        slidesPerView: 1,
+        spaceBetween: 32,
+        loopFillGroupWithBlank: true,
+        breakpoints: {
+          767: {
+            slidesPerView: 2
+          }
+        },
+        navigation: {
+          nextEl: '.toprec-control--button_next',
+          prevEl: '.toprec-control--button_prev',
+          disabledClass: 'toprec-control--button_disabled'
+        }
+      });
+    });
+  })(jQuery);
+</script>

@@ -1,0 +1,72 @@
+<div class="widemenu">
+    <div class="widemenu--grid">
+        <!-- main list -->
+        <div class="widelist">
+            <div class="widelist--heading">Выберите удобный способ игры</div>
+            <ul class="widelist--main">
+                <li class="widelist--item">
+                    <a class="widelist--link" href="javascript:void(0);">Онлайн</a>
+                </li>
+                <li class="widelist--item">
+                    <a class="widelist--link" href="javascript:void(0);">Оффлайн</a>
+                </li>
+                <li class="widelist--item">
+                    <a class="widelist--link" href="javascript:void(0);">Бесплатно</a>
+                </li>
+                <li class="widelist--item">
+                    <a class="widelist--link widelist--link_icon" href="javascript:void(0);">
+                        <div class="widelist--icon">
+                            <svg>
+                                <use href="/nimg/menu-sprite.svg#i-ios"></use>
+                            </svg>
+                        </div>
+                        iOs
+                    </a>
+                </li>
+                <li class="widelist--item">
+                    <a class="widelist--link widelist--link_icon" href="javascript:void(0);">
+                        <div class="widelist--icon">
+                            <svg>
+                                <use href="/nimg/menu-sprite.svg#i-android"></use>
+                            </svg>
+                        </div>
+                        Android
+                    </a>
+                </li>
+                <li class="widelist--item">
+                    <a class="widelist--link widelist--link_active" href="javascript:void(0);">Весь раздел</a>
+                </li>
+            </ul>
+        </div>
+        <!-- !main list -->
+        
+        <!-- secondary list -->
+        <div class="widemenu--inner">
+            <div class="widemenu--subheading">Покер-румы</div>
+            <div class="widemenu--subgrid widemenu--subgrid_rooms">
+                {{#repeat 6}}
+                <a class="wroom-link" href="javascript:void(0);">
+                    <div class="wroom-link--wrap wroom-link--wrap_dark">
+                        <img src="/nimg/pokerking480x180-dark.png" alt="">
+                    </div>
+                    <div class="wroom-link--wrap wroom-link--wrap_light">
+                        <img src="/nimg/pokerking480x180.png" alt="">
+                    </div>
+                </a>
+                {{/repeat }}
+                {{#repeat 4}}
+                <a class="wroom-link" href="javascript:void(0);">
+                    <div class="wroom-link--wrap wroom-link--wrap_dark">
+                        <img src="/nimg/888-dark.png" alt="">
+                    </div>
+                    <div class="wroom-link--wrap wroom-link--wrap_light">
+                        <img src="/nimg/888-dark.png" alt="">
+                    </div>
+                </a>
+                {{/repeat }}
+                <a class="wroom-link-more" href="javascript:void(0);">Остальные<br>бренды</a>
+            </div>
+        </div>
+        <!-- !secondary list -->
+    </div>
+</div>

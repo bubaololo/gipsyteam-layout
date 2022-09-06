@@ -1,0 +1,129 @@
+<main class="content content_theme">
+    <!-- media top -->
+    {{!> media-top}}
+    {{> media-top-dev}}
+    <!-- !media top -->
+    <!-- media note -->
+    {{!> media-note}}
+    <!-- !media note -->
+    <!-- widget adv -->
+    {{!> widget-adv}}
+    <!-- !widget adv -->
+    <!-- widget remind -->
+    {{> widget-remind}}
+    <!-- !widget remind -->
+    <!-- widget recommend -->
+    {{!> widget-recommend}}
+    {{> widget-recommend-dev}}
+    <!-- !widget recommend -->
+    <!-- widget play online -->
+    {{> widget-onplay}}
+    <!-- !widget play online -->
+    <!-- widget activity -->
+    {{> widget-activity}}
+    <!-- !widget activity -->
+    <!-- custom promo widget -->
+    {{!> custom-promo}}
+    <!-- !custom promo widget -->
+    <!-- widget adv -->
+    {{!> widget-adv}}
+    <!-- !widget adv -->
+    <!-- widget-promo -->
+    {{!> widget-promo}}
+    <!-- !widget-promo -->
+    <!-- widget streamer -->
+    {{> widget-streamer}}
+    <!-- !widget streamer -->
+    <!-- widget bestroom -->
+    {{> widget-bestroom}}
+    <!-- !widget bestroom -->
+    <!-- widget sunday -->
+    {{> widget-sunday}}
+    <!-- !widget sunday -->
+    <!-- widget freerolls -->
+    {{> widget-freerolls}}
+    <!-- !widget freerolls -->
+    <!-- data widget -->
+    {{!> data-widget}}
+    <!-- !data widget -->
+    <!-- heroes widget -->
+    {{!> heroes-widget}}
+    <!-- !heroes widget -->
+    <!-- widget hof -->
+    {{> widget-hof}}
+    <!-- !widget hof -->
+    <!-- media best main -->
+    {{> media-best}}
+    <!-- !media best main -->
+    <!-- widget description -->
+    {{> widget-description}}
+    <!-- !widget description -->
+    <!-- widget policy -->
+    {{> widget-policy}}
+    <!-- !widget policy -->
+</main>
+
+<script>
+  (function($) {
+    $(function() {
+      var mySwiper;
+      var breakpoint = window.matchMedia('(max-width: 63.9375em)');
+
+      function breakpointChecker() {
+        if (!breakpoint.matches) {
+          mySwiper = new Swiper('.streamer-slider', {
+            // custom namespace
+            wrapperClass: 'streamer-widget--grid',
+            slideClass: 'streamer-widget--item',
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 20,
+            loopFillGroupWithBlank: true,
+            navigation: {
+              nextEl: '.streamer-control--next',
+              prevEl: '.streamer-control--prev',
+              disabledClass: 'disabled'
+            }
+          });
+        } else if (mySwiper) {
+          mySwiper.destroy(true, true);
+        }
+      }
+
+      breakpoint.addListener(breakpointChecker);
+      breakpointChecker();
+
+      let overlay = $('.stream-overlay');
+      let popup = $('.stream-popup-wrap');
+
+      $(document).on('click', '.streamer-widget--new', function() {
+        overlay.removeClass('hidden');
+        popup.removeClass('hidden');
+      });
+
+      $(document).on('click', '.stream-popup--close', function() {
+        overlay.addClass('hidden');
+        popup.addClass('hidden');
+      });
+
+      $(document).on('submit', '.stream-popup--form', function(event) {
+        let form = $(this);
+        event.preventDefault();
+        event.stopPropagation();
+
+        $.post(
+          'https://www.gipsyteam.ru/stream/edit',
+          form.serialize(),
+          function(data, textStatus, xhr) {
+            if (xhr.status === 206) {
+              form.replaceWith(data);
+            } else {
+              form.remove();
+              $('.stream-popup--heading').html('Трансляция опуубликована');
+            }
+          }
+        );
+      });
+    });
+  })(jQuery);
+</script>

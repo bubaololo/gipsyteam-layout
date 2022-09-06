@@ -1,0 +1,170 @@
+<nav class="menu-top">
+    <div class="menu-top--inner">
+        <ul class="menu-top--section">
+            <li class="menu-top--item">
+                <a class="menu-top--link" href="javascript:void(0);">Лента</a>
+            </li>
+            <li class="menu-top--item">
+                <a class="menu-top--link menu-top--link_drop" href="javascript:void(0);">Играть в покер</a>
+                {{> wide-menu-1}}
+            </li>
+            <li class="menu-top--item">
+                <a class="menu-top--link menu-top--link_drop" href="javascript:void(0);">Акции</a>
+                {{> wide-menu-2}}
+            </li>
+            <li class="menu-top--item">
+                <a class="menu-top--link menu-top--link_drop" href="javascript:void(0);">Новичкам</a>
+                {{> wide-menu-3}}
+            </li>
+            <li class="menu-top--item">
+                <a class="menu-top--link menu-top--link_drop" href="javascript:void(0);">Про-игрокам</a>
+                {{> wide-menu-4}}
+            </li>
+            <li class="menu-top--item">
+                <a class="menu-top--link menu-top--link_drop" href="javascript:void(0);">Магазин</a>
+                {{> wide-menu-5}}
+            </li>
+            <li class="menu-top--item">
+                <a class="menu-top--link" href="javascript:void(0);">Форум</a>
+            </li>
+        </ul>
+        
+        <div class="submenu-top">
+            <a class="submenu-top--search" href="javascript:void(0);">
+                <svg width="16" height="16">
+                    <use href="/nimg/menu-sprite.svg#i-search"></use>
+                </svg>
+                <span>Поиск</span>
+            </a>
+            <span class="submenu-top--sep"></span>
+            <a class="submenu-top--support" href="javascript:void(0);">
+                <svg width="16" height="17">
+                    <use href="/nimg/menu-sprite.svg#i-support"></use>
+                </svg>
+                <span>Поддержка</span>
+            </a>
+        </div>
+        <span class="submenu-top--sep"></span>
+        <div class="theme-button-wrap">
+            {{> theme-switch-dev}}
+        </div>
+        <!-- lang switch -->
+        <span class="submenu-top--sep"></span>
+        <div class="lang-flag-wrap">
+            <svg>
+                <use href="/nimg/mobile-menu-sprite.svg#i-flag-ru"></use>
+            </svg>
+            <div class="flag-options flag-options_show_zzz">
+                <div class="flag-options--inner">
+                    <a class="flag-options--link" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/mobile-menu-sprite.svg#i-flag-ua"></use>
+                        </svg>
+                        Ua
+                    </a>
+                    <a class="flag-options--link" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/mobile-menu-sprite.svg#i-flag-by"></use>
+                        </svg>
+                        By
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- !lang switch -->
+    </div>
+</nav>
+
+<script>
+  (function($) {
+    'use strict';
+
+    $(function() {
+      // mobile menu
+      function openMobileMenu() {
+        $('.mobile-top--button').addClass('menu-opened');
+        $('.mobile-top, .menu-top, .mobile-menu').addClass('menu-opened');
+        $('body').addClass('lock-scroll');
+      }
+
+      function closeMobileMenu() {
+        $('.mobile-top--button').removeClass('menu-opened');
+        $('.mobile-top, .menu-top, .mobile-menu').removeClass('menu-opened');
+        $('body').removeClass('lock-scroll');
+      }
+
+      $(document).on('click', '.mobile-top--button:not(.submenu)', function() {
+        if ($('.mobile-top--button').hasClass('menu-opened')) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+
+      $('.mobile-top--avatar').on('click', function() {
+        $(this).toggleClass('active');
+        $('.mobile-user--options').toggleClass('show');
+      });
+
+      function closeWideMenu() {
+        $('.widemenu').removeClass('menu-opened');
+        $('.menu-top--link_drop').removeClass('active');
+        $('body').removeClass('widemenu-open');
+        $('.mobile-top--button').removeClass('submenu');
+      }
+
+      // wide menu
+      $(document).on('click', '.mobile-top--button.submenu', closeWideMenu);
+
+      $('.menu-top--link_drop').on('click', function(ev) {
+        ev.preventDefault();
+        const active = $(this).hasClass('active');
+        closeWideMenu();
+        closeMobileMenu();
+        if (!active) {
+          $(this).addClass('active');
+          $(this).next('.widemenu').addClass('menu-opened');
+          $('body').addClass('widemenu-open');
+          openMobileMenu();
+          $('.mobile-top--button').addClass('submenu');
+        }
+      });
+
+      // profile menu
+      $('.header-user--nick').on('click', function(ev) {
+        $('.header-user--nick').toggleClass('active');
+        $('.header-user--options').toggleClass('show');
+        ev.preventDefault();
+        ev.stopPropagation();
+      });
+      $(document).on('click', function() {
+        $('.header-user--nick').removeClass('active');
+        $('.header-user--options').removeClass('show');
+      });
+    });
+  })(jQuery);
+</script>
+
+<script>
+  const themeSwitch = document.querySelectorAll('.theme-button');
+  const root = document.documentElement;
+  const userTheme = localStorage.getItem('theme');
+
+  if (userTheme === 'dark') {
+    root.setAttribute('theme', 'dark');
+  }
+
+  const themeSwitchHandler = () => {
+    if (root.hasAttribute('theme')) {
+      root.removeAttribute('theme');
+      localStorage.removeItem('theme');
+    } else {
+      root.setAttribute('theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  };
+
+  for (const item of themeSwitch) {
+    item.addEventListener('click', themeSwitchHandler);
+  }
+</script>

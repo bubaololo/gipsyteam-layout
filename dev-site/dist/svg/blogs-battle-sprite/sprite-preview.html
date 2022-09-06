@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>svg sprite preview</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style>
+.battle-logo-main {
+	width: 480px;
+	height: 248px;
+}
+.battle-logo-pokermatch {
+	width: 103px;
+	height: 39px;
+}
+.battle-logo-pokermatch-mono {
+	width: 43px;
+	height: 16px;
+}
+.bb-locals {
+	width: 28px;
+	height: 28px;
+}
+.bb-newbie {
+	width: 28px;
+	height: 28px;
+}
+.bb-regs {
+	width: 28px;
+	height: 28px;
+}
+.blog-edit {
+	width: 16px;
+	height: 16px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+<!--
+
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position: absolute">
+		<symbol fill="none" viewBox="0 0 480 248" id="battle-logo-main"><g clip-path="url(#aclip0)"><path fill="#fff" d="M109.18 195.31c-4.91-3.17-11.64-4.34-19.97-3.28l-21.05 2.43 1.07-13.22 45.19-5.3 1.5-17.98-67.74 7.94-6.62 82.1 40.38-4.76c8.01-.95 14.85-2.86 20.51-5.93 5.66-2.96 9.83-6.77 12.4-11.42a25.45 25.45 0 002.99-15.56c-.75-6.77-3.64-11.84-8.66-15.02zm-17.41 27.62c-2.24 2.11-5.56 3.38-9.83 3.91l-16.45 1.9 1.39-17.67 16.45-1.9c3.53-.42 6.2-.1 8.12.85 1.82.95 2.88 2.75 3.2 5.18a8.7 8.7 0 01-2.88 7.73zm42.63-22.43c-.75 6.66-1.93 11.63-3.32 14.8-1.5 3.18-3.74 4.98-6.94 5.3-.43.1-1.39.1-2.78.1L118.8 239c4.38.54 8.01.54 11.1.22 5.03-.64 9.09-2.22 12.19-4.97 3.1-2.75 5.45-6.88 7.26-12.49 1.82-5.5 3.2-13.12 4.38-22.64l1.28-9.84 15.82-1.8-3.74 45.92 22-2.54 5.24-63.59-56.73 6.67-3.2 26.56zm132.68-29.2a27.3 27.3 0 00-12.6-8.58c-5.24-1.8-11.11-2.22-17.74-1.48-7.37.85-13.78 3.18-19.23 6.98a35.84 35.84 0 00-12.28 14.5 34.35 34.35 0 00-2.78 18.94c.64 5.6 2.56 10.47 5.87 14.39a26.56 26.56 0 0012.61 8.57c5.23 1.8 11.11 2.22 17.73 1.48 7.38-.85 13.9-3.17 19.34-6.98 5.45-3.81 9.5-8.68 12.18-14.5a34.34 34.34 0 002.78-18.94c-.75-5.71-2.67-10.47-5.88-14.39zm-12.07 40.2c-.1-.1-.1-.21-.21-.32-.86-1.48-1.6-2.96-2.46-4.44a13.9 13.9 0 00-3.2-4.24c-.33-.2-.54-.42-.86-.74-.1.22-.21.32-.32.53l-.1.1c0 .43-.12.86-.12 1.17a14.07 14.07 0 01-2.45 6.77c-1.71 2.54-4.06 4.24-7.16 4.66a9.1 9.1 0 01-6.41-1.48c-2.24-1.38-3.74-3.39-4.91-5.72a29.48 29.48 0 01-2.57-6.87 143.18 143.18 0 00-6.3-17.56c-.32-.64-.53-1.28-.75-1.9v-.12l2.25-.31c5.44-.64 10.9-1.48 16.34-2.44 1.82-.31 3.63-.74 5.45-1.05 2.88-.43 5.77-.32 8.65.63 2.78.95 4.92 2.65 6.2 5.4a9.88 9.88 0 01.43 6.98 12.68 12.68 0 01-4.92 6.77c-.53.42-1.17.85-1.81 1.27v.1c.2.11.53.22.74.32 1.71.64 3.63.74 5.45.74 1.82 0 3.63-.1 5.45-.1h.43A313.33 313.33 0 01255 211.5zm31.19-55.02l-5.23 63.7 21.9-2.65 3.53-45.81 30.87-3.6 1.39-17.78-52.46 6.14zm116.56-1.06a27.32 27.32 0 00-12.6-8.57c-5.24-1.8-11.12-2.22-17.74-1.48-7.37.85-13.78 3.18-19.23 6.98a35.84 35.84 0 00-12.29 14.5 34.35 34.35 0 00-2.77 18.94c.64 5.6 2.56 10.47 5.87 14.39a26.55 26.55 0 0012.6 8.57c5.24 1.8 11.12 2.22 17.74 1.48 7.37-.85 13.9-3.17 19.34-6.98 5.45-3.81 9.5-8.68 12.18-14.5a34.35 34.35 0 002.78-18.94c-.75-5.71-2.68-10.47-5.88-14.39zm-19.02 31.1a13.33 13.33 0 01-10.14 6.04c-3.74.42-6.74-.32-9.09-2.12-2.35-1.9-3.74-4.65-4.16-8.25-.64-5.18.32-9.52 2.67-13.12 2.35-3.49 5.77-5.6 10.15-6.03 3.74-.42 6.73.32 9.08 2.22 2.35 1.9 3.74 4.66 4.17 8.36.53 5.08-.33 9.42-2.68 12.9zm86.22-20.94c3.52-1.9 6.2-4.23 7.9-6.98a13.88 13.88 0 002.03-9.2c-.53-4.87-3.1-8.37-7.37-10.48-4.38-2.12-10.25-2.75-17.63-1.9l-32.9 3.8-5.24 63.59 36.11-4.23c9.2-1.06 16.14-3.6 20.73-7.62 4.6-4.02 6.62-9.1 5.88-15.13-.75-6.14-3.96-10.05-9.51-11.85zm-29.6-13.12l12.08-1.38c2.13-.2 3.74 0 4.91.64 1.18.63 1.92 1.8 2.14 3.39.21 1.9-.43 3.6-1.93 4.97-1.5 1.37-3.52 2.22-6.2 2.54l-12.06 1.37 1.06-11.53zm17.52 30.9c-1.49 1.37-3.63 2.22-6.4 2.53l-14 1.6.96-11.75 14.21-1.7c4.27-.53 6.73.85 7.05 4.13a5.41 5.41 0 01-1.81 5.19z"/><path fill="#44D587" d="M73.29 141.88c2.67-4.66 3.63-9.73 2.99-15.55-.86-6.98-3.74-12.06-8.65-15.24-4.92-3.17-11.65-4.23-19.98-3.28l-21.05 2.44 1.07-13.23 45.19-5.29 1.5-17.99-67.74 7.94L0 163.78l40.38-4.76c8.02-.95 14.85-2.86 20.51-5.92 5.67-2.86 9.73-6.67 12.4-11.22zm-23.19-3.17c-2.24 2.11-5.55 3.38-9.82 3.91l-16.46 1.9 1.4-17.66 16.44-1.9c3.53-.43 6.2-.11 8.12.84 1.82.95 2.89 2.75 3.2 5.18a8.27 8.27 0 01-2.88 7.73zm84.4-24.13l-3.1 33.86 22.01-2.54 5.24-63.59-20.73 2.44-28.84 36.82 2.99-33.86-21.9 2.54-5.24 63.7 20.73-2.44 28.84-36.93zm47.65 28.04l21.9-2.64 3.53-45.82 20.4-2.43 1.5-17.67-62.29 7.3-1.5 17.67 19.88-2.33-3.42 45.92zm107.58-17.77c4.6-4.02 6.62-9.1 5.88-15.13-.75-6.03-3.85-9.95-9.51-11.75 3.52-1.9 6.2-4.23 7.9-6.98a13.88 13.88 0 002.03-9.2c-.53-4.87-3.1-8.36-7.37-10.48-4.38-2.12-10.25-2.75-17.63-1.9l-33 3.6-5.24 63.58 36.1-4.23c9.2-.95 16.14-3.5 20.84-7.51zm-33.22-40l12.07-1.37c2.13-.21 3.74 0 4.91.63 1.18.64 1.93 1.8 2.14 3.39.21 1.9-.43 3.6-1.92 4.97-1.5 1.38-3.53 2.22-6.2 2.54l-12.07 1.38 1.07-11.54zm-2.89 35.13l.96-11.75 14.21-1.69c4.27-.53 6.73.85 7.05 4.13a5.95 5.95 0 01-1.81 5.08c-1.5 1.37-3.64 2.22-6.41 2.54l-14 1.69zm55.88-4.55c2.99 4.02 6.62 6.88 10.9 8.68a26.5 26.5 0 0013.45 1.9c6.84-.85 12.5-3.7 16.88-8.57.1-.1.32-.21.43-.21l-.53 5.82 20.83-2.44 5.13-63.58-22.01 2.54-.64 7.61c-4.38-5.18-11.11-7.3-20.2-6.24a33.52 33.52 0 00-16.55 6.67A35.04 35.04 0 00306.29 82c-2.35 5.82-3.2 12.06-2.35 18.83.75 5.71 2.56 10.58 5.56 14.6zm6.73-24.97a10.03 10.03 0 0112.5-5.6 9.7 9.7 0 01.64-5.2 10.11 10.11 0 0113.03-5.5 9.95 9.95 0 015.56 12.92 10.32 10.32 0 01-3.21 4.12 9.9 9.9 0 014.91 12.7 10.11 10.11 0 01-13.03 5.5 10.08 10.08 0 01-4.7-3.92l-.43-.42c-.1.21-.1.53-.21.74a11.82 11.82 0 000 4.34c.21 1.48.53 2.86.75 4.34v.42l-10.15-4.13.21-.2c1.07-.85 2.14-1.6 3.2-2.44 1.18-.85 2.25-1.8 3-2.96.21-.32.43-.64.64-1.06-.64 0-1.18.1-1.71.1h-1.5a9.66 9.66 0 01-4.16-.74 10 10 0 01-5.34-13z"/><path fill="#fff" d="M432.25 97.66s-12.5-5.5-15.07-3.28c-2.45 2.22 4.92-7.41 26.28-15.56L469.64 0s-57.26 32.16-95.83 137.97c0 0 48.82-36.08 58.44-40.31z"/></g><defs><clipPath id="aclip0"><path fill="#fff" d="M0 0h480v248H0z"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 103 39" id="battle-logo-pokermatch"><g clip-path="url(#bclip0)"><path d="M41.704 12.763h2.03c4.272 0 5.87-3.001 5.87-5.472a4.048 4.048 0 00-1.175-2.895 4.012 4.012 0 00-2.882-1.18H39.89L36.792 17.16h3.954l.958-4.397zm1.286-6.01h1.494c.32 0 .535.105.75.217a.966.966 0 01.32.754c0 .858-.75 1.5-1.494 1.5h-1.605l.535-2.47z" fill="url(#bpaint0_linear)"/><path d="M30.601 9.008h-5.358l1.07-5.098.015-.583c0-1.373-1.196-2.575-2.564-2.575H8.604c-1.435 0-2.735 1.008-3.189 2.523l-4.8 23.387-.015.582c0 1.374 1.196 2.576 2.564 2.576h5.358l-1.078 5.098-.015.582c0 1.374 1.197 2.576 2.564 2.576H25.05c1.434 0 2.735-1.016 3.188-2.523l4.912-23.38.015-.582c0-1.381-1.196-2.583-2.564-2.583zM3.164 28.312c-.55 0-1.07-.523-1.07-1.075v-.351l4.77-23.238c.246-.82.96-1.396 1.74-1.396h15.16c.55 0 1.07.523 1.07 1.075v.351l-1.122 5.337h-8.167c-1.435 0-2.735 1.016-3.188 2.531l-3.523 16.78h-5.67v-.014zM23.4 10.508l-3.448 16.408c-.246.821-.959 1.396-1.74 1.396h-7.847l3.448-16.408c.245-.82.959-1.396 1.74-1.396H23.4zm8.271 1.426L26.79 35.172c-.245.821-.959 1.396-1.74 1.396H9.994c-.55 0-1.07-.523-1.07-1.075v-.35l1.122-5.33h8.168c1.434 0 2.735-1.016 3.188-2.531l3.53-16.774h5.67c.55 0 1.07.523 1.07 1.075v.351z" fill="url(#bpaint1_linear)"/><path d="M55.698 17.585c4.697 0 7.365-4.397 7.365-8.793 0-3.218-2.245-5.681-5.767-5.681-4.697 0-7.365 4.397-7.365 8.793 0 3.218 2.237 5.681 5.767 5.681zM57.08 6.649c1.279 0 2.03.963 2.03 2.254 0 2.36-1.28 5.151-3.1 5.151-1.278 0-1.925-.963-1.925-2.254-.096-2.367 1.078-5.15 2.995-5.15z" fill="url(#bpaint2_linear)"/><path d="M68.614 12.442l1.494 4.822h4.377l-2.883-7.398 5.662-6.546h-4.696l-3.85 5.046 1.07-5.046h-3.946l-3.099 13.944h3.946l.75-3.322 1.175-1.5z" fill="url(#bpaint3_linear)"/><path d="M84.206 17.264l.743-3.434h-4.8l.423-1.821h4.697l.75-3.539h-4.697l.424-1.716h4.808l.743-3.434h-8.754L75.45 17.264h8.755z" fill="url(#bpaint4_linear)"/><path d="M90.181 17.16v.104l.96-4.501h1.173l.536 4.501h4.273l-.959-5.039c1.813-.858 2.987-2.792 2.987-4.83 0-1.074-.423-2.142-1.278-3-.854-.754-1.925-1.18-2.987-1.18h-5.552L86.235 17.16h3.947zm2.245-10.406h1.494a.97.97 0 01.75.32.966.966 0 01.32.755c0 .425-.104.753-.424 1.074-.32.321-.639.426-1.07.426h-1.605l.535-2.575z" fill="url(#bpaint5_linear)"/><path d="M48.965 20.802l-3.522 6.226-.64-6.226h-5.016l-3.099 13.944h3.954l1.598-7.51.966 7.51H44.7l4.161-7.51-1.709 7.51h3.954l3.091-13.944h-5.232z" fill="url(#bpaint6_linear)"/><path d="M59.429 20.802l-7.15 13.944h4.377l.855-1.821h3.634v1.821h4.162l-1.07-13.944h-4.808zm1.605 8.801h-2.03l2.03-4.613v4.613z" fill="url(#bpaint7_linear)"/><path d="M77.265 20.802h-9.72l-.744 3.434h2.884l-2.245 10.51h3.954l2.237-10.51h2.883l.75-3.434z" fill="url(#bpaint8_linear)"/><path d="M82.282 31.53c-1.175 0-1.925-.964-1.925-2.255 0-2.36 1.278-5.15 3.099-5.15 1.07 0 1.71.962 1.813 2.142l3.738-.963c-.32-2.255-1.813-4.718-5.336-4.718-4.697 0-7.365 4.292-7.365 8.793 0 3.434 2.349 5.681 5.767 5.681 2.349 0 4.482-1.396 5.448-3.434l-2.988-1.717c-.438.874-1.293 1.516-2.251 1.62z" fill="url(#bpaint9_linear)"/><path d="M99.046 20.802l-1.07 5.046h-3.522l1.07-5.046H91.57l-2.987 13.944h3.953l1.175-5.471h3.41l-1.173 5.471H99.9L103 20.802h-3.954z" fill="url(#bpaint10_linear)"/></g><defs><linearGradient id="bpaint0_linear" x1="7.582" y1="-1.742" x2="100.89" y2="30.766" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint1_linear" x1="711.832" y1="12154.1" x2="42652.5" y2="-651.744" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint2_linear" x1="1597.64" y1="8687.89" x2="18393.5" y2="3355.39" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint3_linear" x1="2065.49" y1="-9130.39" x2="20113.9" y2="-2552.81" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint4_linear" x1="1906.9" y1="-9795.53" x2="17231.2" y2="-5239.64" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint5_linear" x1="2269.86" y1="10488.2" x2="18749.4" y2="5185.95" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint6_linear" x1="541.63" y1="-4801.62" x2="21204.1" y2="4277.59" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint7_linear" x1="673.311" y1="5590.65" x2="17244.3" y2="172.69" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint8_linear" x1="781.915" y1="-6375.78" x2="14564" y2="-2756.57" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint9_linear" x1="1137.2" y1="7285.45" x2="17478.4" y2="2267.47" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><linearGradient id="bpaint10_linear" x1="1570.07" y1="-7746.9" x2="19519.3" y2="-1252.48" gradientUnits="userSpaceOnUse"><stop stop-color="#F6A10E"/><stop offset="1" stop-color="#EB4E0E"/></linearGradient><clipPath id="bclip0"><path fill="#fff" transform="translate(.6 .752)" d="M0 0h102.401v37.324H0z"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 43 16" id="battle-logo-pokermatch-mono"><g clip-path="url(#cclip0)" fill="#C67548"><path d="M17.26 5.149h.853c1.794 0 2.465-1.287 2.465-2.346a1.768 1.768 0 00-.494-1.241 1.649 1.649 0 00-1.21-.506H16.5l-1.301 5.978h1.66l.403-1.885zm.54-2.576h.628c.134 0 .224.045.315.093a.414.414 0 01.134.323.65.65 0 01-.627.643h-.674l.224-1.06zM12.598 3.54h-2.25l.45-2.186.006-.25C10.804.515 10.3 0 9.727 0H3.361c-.602 0-1.148.432-1.339 1.082L.006 11.107l-.006.25c0 .589.502 1.104 1.077 1.104h2.25l-.453 2.185-.006.25c0 .589.502 1.104 1.077 1.104h6.322c.602 0 1.149-.435 1.339-1.082l2.063-10.022.006-.25c0-.592-.503-1.107-1.077-1.107zM1.077 11.813c-.231 0-.45-.224-.45-.46v-.15l2.004-9.962c.103-.352.402-.599.73-.599h6.366c.231 0 .45.224.45.461v.15l-.472 2.288h-3.43c-.602 0-1.148.436-1.338 1.085l-1.48 7.194h-2.38v-.007zm8.497-7.632l-1.448 7.034c-.103.352-.402.598-.73.598H4.101l1.448-7.033c.103-.352.402-.599.73-.599h3.295zm3.474.612l-2.05 9.961c-.104.352-.403.599-.73.599H3.944c-.231 0-.45-.224-.45-.461v-.15l.471-2.285h3.43c.602 0 1.148-.436 1.339-1.085l1.482-7.19h2.381c.231 0 .45.223.45.46v.15zM23.137 7.216c1.972 0 3.092-1.885 3.092-3.77 0-1.379-.942-2.435-2.421-2.435-1.973 0-3.093 1.885-3.093 3.77 0 1.379.94 2.435 2.422 2.435zm.58-4.688c.537 0 .852.413.852.966 0 1.012-.537 2.208-1.301 2.208-.537 0-.808-.412-.808-.966-.041-1.014.452-2.208 1.257-2.208zM28.56 5.011l.628 2.067h1.838l-1.211-3.17L32.193 1.1h-1.972l-1.617 2.163.45-2.163h-1.657l-1.302 5.977h1.657l.316-1.424.492-.643zM35.108 7.078l.312-1.472h-2.016l.178-.78h1.972l.315-1.517h-1.972l.178-.736h2.019l.312-1.472H32.73l-1.298 5.977h3.676zM37.617 7.034v.044l.403-1.93h.493l.224 1.93h1.795l-.403-2.16c.762-.368 1.255-1.196 1.255-2.07 0-.46-.178-.918-.537-1.286a1.896 1.896 0 00-1.255-.506h-2.33L35.96 7.034h1.657zm.942-4.461h.628a.4.4 0 01.315.137.414.414 0 01.134.324.602.602 0 01-.178.46.568.568 0 01-.45.183h-.673l.224-1.104zM20.31 8.595l-1.48 2.669-.268-2.669h-2.106l-1.302 5.978h1.66l.671-3.22.406 3.22h.627l1.748-3.22-.718 3.22h1.66l1.299-5.978H20.31zM24.703 8.595l-3.002 5.978h1.838l.36-.781h1.525v.78h1.748l-.45-5.977h-2.019zm.674 3.773h-.852l.852-1.978v1.978zM32.193 8.595h-4.082l-.312 1.472h1.211l-.942 4.506h1.66l.94-4.506h1.21l.315-1.472zM34.3 13.194c-.493 0-.808-.413-.808-.967 0-1.011.536-2.208 1.3-2.208.45 0 .719.413.762.919l1.57-.413c-.134-.967-.762-2.023-2.24-2.023-1.973 0-3.093 1.84-3.093 3.77 0 1.472.986 2.435 2.421 2.435.986 0 1.882-.598 2.288-1.472l-1.255-.736c-.184.375-.543.65-.945.695zM41.34 8.595l-.45 2.163h-1.479l.45-2.163H38.2l-1.255 5.978h1.66l.493-2.346h1.432l-.493 2.346h1.66L43 8.595h-1.66z"/></g><defs><clipPath id="cclip0"><path fill="#fff" d="M0 0h43v16H0z"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 28 28" id="bb-locals"><path fill="url(#dpaint0_linear)" d="M14 28c7.732 0 14-6.268 14-14S21.732 0 14 0 0 6.268 0 14s6.268 14 14 14z"/><path stroke="#fff" stroke-width="2" d="M14 27c7.18 0 13-5.82 13-13S21.18 1 14 1 1 6.82 1 14s5.82 13 13 13z"/><g clip-path="url(#dclip0)"><path fill="#fff" d="M21.975 16.093c-.088-.768-.403-1.335-.957-1.688-.542-.352-1.272-.478-2.192-.377l-2.317.277.126-1.474 4.975-.58.163-2.002-7.38.87c-.542-.328-1.247-.441-2.141-.34l-2.317.276.125-1.473 4.975-.58L15.186 7l-7.456.882-.73 9.13 4.446-.528c.882-.101 1.637-.328 2.254-.655.088-.05.164-.088.24-.139l-.366 4.56 4.446-.53c.882-.1 1.637-.327 2.255-.654.617-.328 1.07-.756 1.372-1.272.303-.517.403-1.071.328-1.7zm-9.308-1.36c0-.013-.012-.013-.012-.025-.05-.1-.1-.202-.164-.303-.063-.1-.126-.201-.214-.29-.012-.012-.038-.024-.063-.05-.013.013-.013.026-.025.038 0 .026 0 .05-.013.076a.987.987 0 01-.163.453.697.697 0 01-.479.315.577.577 0 01-.428-.1.942.942 0 01-.328-.378 2.967 2.967 0 01-.176-.466 10.161 10.161 0 00-.416-1.184c-.012-.038-.037-.089-.05-.126v-.013c.05-.012.1-.012.151-.025.365-.038.73-.1 1.083-.164.126-.025.24-.05.366-.063.188-.025.39-.025.579.038a.664.664 0 01.415.365.63.63 0 01.026.479.852.852 0 01-.328.453.688.688 0 00-.113.088v.013c.013.013.038.013.05.025.114.05.24.05.365.05.126 0 .24 0 .366-.012h.025c-.139.29-.29.542-.454.806zm6.235 2.708c-.139.063-.29.075-.441.063a.84.84 0 01-.466 1.058.84.84 0 01-1.108-.441.816.816 0 01-.05-.516v-.05a.174.174 0 00-.051.037 1.38 1.38 0 00-.265.264c-.075.101-.138.202-.214.303 0 .012-.012.012-.025.025l-.34-.87h.025c.114.014.227.026.34.051a1.1 1.1 0 00.353 0c.038-.012.063-.012.1-.025a.63.63 0 00-.113-.088l-.088-.088a.798.798 0 01-.201-.29.84.84 0 011.524-.705.918.918 0 01.34-.277.84.84 0 011.108.44c.202.429 0 .92-.428 1.109z"/></g><defs><linearGradient id="dpaint0_linear" x1="14" x2="14" y1="4.5" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#FF4460"/><stop offset="1" stop-color="#8B1A2B"/></linearGradient><clipPath id="dclip0"><path fill="#fff" d="M0 0h15v13.262H0z" transform="translate(7 7)"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 28 28" id="bb-newbie"><path fill="url(#epaint0_linear)" d="M14 28c7.732 0 14-6.268 14-14S21.732 0 14 0 0 6.268 0 14s6.268 14 14 14z"/><path stroke="#fff" stroke-width="2" d="M14 27c7.18 0 13-5.82 13-13S21.18 1 14 1 1 6.82 1 14s5.82 13 13 13z"/><g clip-path="url(#eclip0)"><path fill="#fff" d="M21.975 16.093c-.088-.768-.403-1.335-.957-1.688-.542-.352-1.272-.478-2.192-.377l-2.317.277.126-1.474 4.975-.58.163-2.002-7.38.87c-.542-.328-1.247-.441-2.141-.34l-2.317.276.125-1.473 4.975-.58L15.186 7l-7.456.882-.73 9.13 4.446-.528c.882-.101 1.637-.328 2.254-.655.088-.05.164-.088.24-.139l-.366 4.56 4.446-.53c.882-.1 1.637-.327 2.255-.654.617-.328 1.07-.756 1.372-1.272.303-.517.403-1.071.328-1.7zm-9.308-1.36c0-.013-.012-.013-.012-.025-.05-.1-.1-.202-.164-.303-.063-.1-.126-.201-.214-.29-.012-.012-.038-.024-.063-.05-.013.013-.013.026-.025.038 0 .026 0 .05-.013.076a.987.987 0 01-.163.453.697.697 0 01-.479.315.577.577 0 01-.428-.1.942.942 0 01-.328-.378 2.967 2.967 0 01-.176-.466 10.161 10.161 0 00-.416-1.184c-.012-.038-.037-.089-.05-.126v-.013c.05-.012.1-.012.151-.025.365-.038.73-.1 1.083-.164.126-.025.24-.05.366-.063.188-.025.39-.025.579.038a.664.664 0 01.415.365.63.63 0 01.026.479.852.852 0 01-.328.453.688.688 0 00-.113.088v.013c.013.013.038.013.05.025.114.05.24.05.365.05.126 0 .24 0 .366-.012h.025c-.139.29-.29.542-.454.806zm6.235 2.708c-.139.063-.29.075-.441.063a.84.84 0 01-.466 1.058.84.84 0 01-1.108-.441.816.816 0 01-.05-.516v-.05a.174.174 0 00-.051.037 1.38 1.38 0 00-.265.264c-.075.101-.138.202-.214.303 0 .012-.012.012-.025.025l-.34-.87h.025c.114.014.227.026.34.051a1.1 1.1 0 00.353 0c.038-.012.063-.012.1-.025a.63.63 0 00-.113-.088l-.088-.088a.798.798 0 01-.201-.29.84.84 0 011.524-.705.918.918 0 01.34-.277.84.84 0 011.108.44c.202.429 0 .92-.428 1.109z"/></g><defs><linearGradient id="epaint0_linear" x1="14" x2="14" y1="4.5" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#808491"/><stop offset="1" stop-color="#303641"/></linearGradient><clipPath id="eclip0"><path fill="#fff" d="M0 0h15v13.262H0z" transform="translate(7 7)"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 28 28" id="bb-regs"><path fill="url(#fpaint0_linear)" d="M14 28c7.732 0 14-6.268 14-14S21.732 0 14 0 0 6.268 0 14s6.268 14 14 14z"/><path stroke="#fff" stroke-width="2" d="M14 27c7.18 0 13-5.82 13-13S21.18 1 14 1 1 6.82 1 14s5.82 13 13 13z"/><g clip-path="url(#fclip0)"><path fill="#fff" d="M21.975 16.093c-.088-.768-.403-1.335-.957-1.688-.542-.352-1.272-.478-2.192-.377l-2.317.277.126-1.474 4.975-.58.163-2.002-7.38.87c-.542-.328-1.247-.441-2.141-.34l-2.317.276.125-1.473 4.975-.58L15.186 7l-7.456.882-.73 9.13 4.446-.528c.882-.101 1.637-.328 2.254-.655.088-.05.164-.088.24-.139l-.366 4.56 4.446-.53c.882-.1 1.637-.327 2.255-.654.617-.328 1.07-.756 1.372-1.272.303-.517.403-1.071.328-1.7zm-9.308-1.36c0-.013-.012-.013-.012-.025-.05-.1-.1-.202-.164-.303-.063-.1-.126-.201-.214-.29-.012-.012-.038-.024-.063-.05-.013.013-.013.026-.025.038 0 .026 0 .05-.013.076a.987.987 0 01-.163.453.697.697 0 01-.479.315.577.577 0 01-.428-.1.942.942 0 01-.328-.378 2.967 2.967 0 01-.176-.466 10.161 10.161 0 00-.416-1.184c-.012-.038-.037-.089-.05-.126v-.013c.05-.012.1-.012.151-.025.365-.038.73-.1 1.083-.164.126-.025.24-.05.366-.063.188-.025.39-.025.579.038a.664.664 0 01.415.365.63.63 0 01.026.479.852.852 0 01-.328.453.688.688 0 00-.113.088v.013c.013.013.038.013.05.025.114.05.24.05.365.05.126 0 .24 0 .366-.012h.025c-.139.29-.29.542-.454.806zm6.235 2.708c-.139.063-.29.075-.441.063a.84.84 0 01-.466 1.058.84.84 0 01-1.108-.441.816.816 0 01-.05-.516v-.05a.174.174 0 00-.051.037 1.38 1.38 0 00-.265.264c-.075.101-.138.202-.214.303 0 .012-.012.012-.025.025l-.34-.87h.025c.114.014.227.026.34.051a1.1 1.1 0 00.353 0c.038-.012.063-.012.1-.025a.63.63 0 00-.113-.088l-.088-.088a.798.798 0 01-.201-.29.84.84 0 011.524-.705.918.918 0 01.34-.277.84.84 0 011.108.44c.202.429 0 .92-.428 1.109z"/></g><defs><linearGradient id="fpaint0_linear" x1="14" x2="14" y1="4.5" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#FFD63F"/><stop offset="1" stop-color="#A58100"/></linearGradient><clipPath id="fclip0"><path fill="#fff" d="M0 0h15v13.262H0z" transform="translate(7 7)"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 16 16" id="blog-edit"><path d="M10.667 1.333H5.333c-2.206 0-4 1.794-4 4V14a.667.667 0 00.667.667h8.667c2.206 0 4-1.794 4-4V5.333c0-2.206-1.794-4-4-4zm2.666 9.334a2.67 2.67 0 01-2.666 2.666h-8v-8a2.67 2.67 0 012.666-2.666h5.334a2.67 2.67 0 012.666 2.666v5.334z" fill="#EC314D"/><path d="M4.667 9.991v1.333h1.332l3.686-3.681L8.353 6.31 4.667 9.99zM10.313 7.015L8.981 5.68l1.016-1.014 1.333 1.332-1.017 1.016z" fill="#EC314D"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- battle-logo-main -->
+						<svg class="battle-logo-main">
+							<use href="#battle-logo-main"></use>
+						</svg>
+					</div>
+					<h2>battle-logo-main</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- battle-logo-pokermatch -->
+						<svg class="battle-logo-pokermatch">
+							<use href="#battle-logo-pokermatch"></use>
+						</svg>
+					</div>
+					<h2>battle-logo-pokermatch</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- battle-logo-pokermatch-mono -->
+						<svg class="battle-logo-pokermatch-mono">
+							<use href="#battle-logo-pokermatch-mono"></use>
+						</svg>
+					</div>
+					<h2>battle-logo-pokermatch-mono</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- bb-locals -->
+						<svg class="bb-locals">
+							<use href="#bb-locals"></use>
+						</svg>
+					</div>
+					<h2>bb-locals</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- bb-newbie -->
+						<svg class="bb-newbie">
+							<use href="#bb-newbie"></use>
+						</svg>
+					</div>
+					<h2>bb-newbie</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- bb-regs -->
+						<svg class="bb-regs">
+							<use href="#bb-regs"></use>
+						</svg>
+					</div>
+					<h2>bb-regs</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- blog-edit -->
+						<svg class="blog-edit">
+							<use href="#blog-edit"></use>
+						</svg>
+					</div>
+					<h2>blog-edit</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+
+B) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS.
+
+-->
+
+			<h3>B) Inline SVG with external sprite</h3>
+			
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- battle-logo-main -->
+						<svg class="battle-logo-main">
+							<use href="blogs-battle-sprite.svg#battle-logo-main"></use>
+						</svg>
+					</div>
+					<h2>battle-logo-main</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- battle-logo-pokermatch -->
+						<svg class="battle-logo-pokermatch">
+							<use href="blogs-battle-sprite.svg#battle-logo-pokermatch"></use>
+						</svg>
+					</div>
+					<h2>battle-logo-pokermatch</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- battle-logo-pokermatch-mono -->
+						<svg class="battle-logo-pokermatch-mono">
+							<use href="blogs-battle-sprite.svg#battle-logo-pokermatch-mono"></use>
+						</svg>
+					</div>
+					<h2>battle-logo-pokermatch-mono</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- bb-locals -->
+						<svg class="bb-locals">
+							<use href="blogs-battle-sprite.svg#bb-locals"></use>
+						</svg>
+					</div>
+					<h2>bb-locals</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- bb-newbie -->
+						<svg class="bb-newbie">
+							<use href="blogs-battle-sprite.svg#bb-newbie"></use>
+						</svg>
+					</div>
+					<h2>bb-newbie</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- bb-regs -->
+						<svg class="bb-regs">
+							<use href="blogs-battle-sprite.svg#bb-regs"></use>
+						</svg>
+					</div>
+					<h2>bb-regs</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- blog-edit -->
+						<svg class="blog-edit">
+							<use href="blogs-battle-sprite.svg#blog-edit"></use>
+						</svg>
+					</div>
+					<h2>blog-edit</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Tue, 16 Mar 2021 08:41:14 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<div class="content">
+    <section class="profile profile_wide">
+        <div class="profile-breadcrumbs">
+            <a class="profile-breadcrumbs--link" href="javascript:void(0);">Профиль</a>
+            <div class="profile-breadcrumbs--heading">Активные сессии</div>
+        </div>
+        
+        <div class="wgt-session-wrap">
+            <ul class="wgt-session">
+                <li class="wgt-session--item">
+                    <div class="wgt-session--device wgt-session--device_desktop"></div>
+                    <div class="wgt-session--os">Windows 7</div>
+                    <div class="wgt-session--ip">123.456.789.000</div>
+                    <div class="wgt-session--inner">
+                        <div class="wgt-session--location">Moscow</div>
+                        <div class="wgt-session--date wgt-session--date_current">This device</div>
+                    </div>
+                    <form class="wgt-session--form" action="">
+                        <button class="wgt-session--button">Завершить</button>
+                    </form>
+                </li>
+                {{#repeat 3}}
+                <li class="wgt-session--item">
+                    <div class="wgt-session--device wgt-session--device_desktop"></div>
+                    <div class="wgt-session--os">Windows 10</div>
+                    <div class="wgt-session--ip">123.456.789.000</div>
+                    <div class="wgt-session--inner">
+                        <div class="wgt-session--location">St. Petersburg</div>
+                        <div class="wgt-session--date">10 часов назад</div>
+                    </div>
+                    <form class="wgt-session--form" action="">
+                        <button class="wgt-session--button">Завершить</button>
+                    </form>
+                </li>
+                {{/repeat}}
+                <li class="wgt-session--item">
+                    <div class="wgt-session--device wgt-session--device_unknown"></div>
+                    <div class="wgt-session--os">N/A</div>
+                    <div class="wgt-session--ip">123.456.789.000</div>
+                    <div class="wgt-session--inner">
+                        <div class="wgt-session--location">N/A</div>
+                        <div class="wgt-session--date">28 апреля 2018</div>
+                    </div>
+                    <form class="wgt-session--form" action="">
+                        <button class="wgt-session--button">Завершить</button>
+                    </form>
+                </li>
+                <li class="wgt-session--item">
+                    <div class="wgt-session--device wgt-session--device_mobile"></div>
+                    <div class="wgt-session--os">iOS</div>
+                    <div class="wgt-session--ip">123.456.789.000</div>
+                    <div class="wgt-session--inner">
+                        <div class="wgt-session--location">Moscow</div>
+                        <div class="wgt-session--date">28 апреля 2018</div>
+                    </div>
+                    <form class="wgt-session--form" action="">
+                        <button class="wgt-session--button">Завершить</button>
+                    </form>
+                </li>
+            </ul>
+            <div class="wgt-session-mark">Выйти из всех сессий, кроме текущей</div>
+            <form action="">
+                <button class="wgt-session-logout">Выход</button>
+            </form>
+        </div>
+    </section>
+</div>

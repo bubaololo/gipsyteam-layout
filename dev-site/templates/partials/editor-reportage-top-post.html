@@ -1,0 +1,28 @@
+<div class="editor editor_reportage">
+    <div class="editor--inner">
+        <div class="editor--main">
+            <div class="editor--menu">
+                <div class="editor--button editor--button_bold"></div>
+                <div class="editor--button editor--button_italic"></div>
+                <div class="editor--button editor--button_strike"></div>
+                <div class="editor--button editor--button_heading"></div>
+                <div class="editor--button editor--button_center"></div>
+                <div class="editor--button editor--button_link"></div>
+                <div class="editor--button editor--button_spoiler"></div>
+                <div class="editor--button editor--button_blockquote"></div>
+                <div class="editor--button editor--button_html"></div>
+            </div>
+            <textarea></textarea>
+            <div class="editor--submenu">
+                <div class="editor--button editor--button_card" onclick="$(this).closest('.editor').find('.editor--cards').toggleClass('show');"></div>
+            </div>
+        </div>
+        <div class="editor--cards">
+            {{> card-list}}
+        </div>
+    </div>
+    <div class="editor--footer">
+        <input class="editor-reportage--send" type="submit" value="Сохранить">
+        <a class="editor-reportage--cancel" href="javascript:void(0);">Отменить</a>
+    </div>
+</div>

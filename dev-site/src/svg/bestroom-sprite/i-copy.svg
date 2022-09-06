@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+    <path fill="var(--i-color1, #202020)" stroke="var(--i-color1, #202020)" stroke-width=".3" d="M11.5 4.5V1H1v10.5h3.5V15H15V4.5h-3.5Zm-7 5.83H2.17V2.17h8.16V4.5H4.5v5.83Zm9.33 3.5H5.67V5.67h8.16v8.16Z" />
+</svg>

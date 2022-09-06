@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 22">
+    <path stroke="var(--i-color1, #000)" stroke-linejoin="round" stroke-width="2" d="M5 1h15v20H5V1Z" clip-rule="evenodd" />
+    <path stroke="var(--i-color1, #000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 4.9 5 4v17L1 4.9Z" clip-rule="evenodd" />
+    <path fill="var(--i-color1, #000)" fill-rule="evenodd" stroke="var(--i-color1, #000)" stroke-linejoin="round" stroke-width="2" d="M12.5 8 10 11l2.5 3 2.5-3-2.5-3Z" clip-rule="evenodd" />
+    <path stroke="var(--i-color1, #000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4v2m9 10v2" />
+</svg>

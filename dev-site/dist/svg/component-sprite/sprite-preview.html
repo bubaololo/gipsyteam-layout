@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>svg sprite preview</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style>
+.i-icon-exclamation {
+	width: 100px;
+	height: 96px;
+}
+.i-icon-question {
+	width: 100px;
+	height: 96px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+<!--
+
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position: absolute">
+		<symbol fill="none" viewBox="0 0 100 96" id="i-icon-exclamation"><path fill="#fff" d="M10.538 31.494C21.06 6.605 51.15-3.518 74.568 10.07c28.742 16.672 30.139 57.65 2.601 76.243-15.38 10.385-35.647 10.236-50.865-.375L12.228 93.56C9.805 94.873 7.006 93.046 7 90.462c-.004-1.18 2.772-3.817 8.751-14.855l-.003-.003-.004-.004-.012-.01.004-.01-.006.008c-.309-.274-4.143-5.419-6.476-12.49C5.9 52.93 6.257 41.606 10.538 31.494z"/><path fill="#000" d="M70.567 7.07C47.15-6.518 17.06 3.605 6.538 28.494 2.257 38.606 1.9 49.93 5.255 60.098c2.333 7.071 6.167 12.216 6.476 12.49l.006-.007-.004.008.012.01c.002 0 .002.003.004.005.002 0 .002.001.003.003.496.416.916.297 1.092.297l.004-.002a1.2 1.2 0 00.25-.072h.003l.03-.014h.003c.853-.366 1.003-1.447.542-1.987-20.347-28.079-.01-67.175 34.33-67.175 23.7 0 42.369 19.327 42.369 42.353 0 23.404-18.95 42.353-42.368 42.353-8.987 0-17.575-2.78-24.834-8.038a1.332 1.332 0 00-1.401-.092l-14.8 8.01c-.703.377-1.338-.237-1.334-.778.004-.316-.32.376 5.62-10.594a1.318 1.318 0 10-2.317-1.255c-5.98 11.039-5.944 10.669-5.94 11.849.005 2.584 2.804 4.41 5.227 3.098l14.076-7.622c15.218 10.61 35.484 10.76 50.865.375 27.538-18.594 26.14-59.57-2.602-76.243z"/><path fill="#44d487" d="M50.519 21.79c-1.93 0-3.5 1.593-3.5 3.553v26.35c0 1.958 1.57 3.553 3.5 3.553s3.5-1.594 3.5-3.554v-26.35c0-1.959-1.57-3.553-3.5-3.553zm0 37.376c-1.93 0-3.5 1.594-3.5 3.554 0 1.959 1.57 3.553 3.5 3.553s3.5-1.594 3.5-3.554c0-1.959-1.57-3.553-3.5-3.553z"/></symbol>
+		<symbol fill="none" viewBox="0 0 100 96" id="i-icon-question"><path fill="var(--i-color1, #fff)" d="M10.538 31.494C21.06 6.605 51.15-3.518 74.568 10.07c28.742 16.672 30.139 57.65 2.601 76.243-15.38 10.385-35.647 10.236-50.865-.375L12.228 93.56C9.805 94.873 7.006 93.046 7 90.462c-.004-1.18 2.772-3.817 8.751-14.855l-.003-.003-.004-.004-.012-.01.004-.01-.006.008c-.309-.274-4.143-5.419-6.476-12.49C5.9 52.93 6.257 41.606 10.538 31.494z"/><path fill="var(--i-color2, #000)" d="M70.567 7.07C47.15-6.518 17.06 3.605 6.538 28.494 2.257 38.606 1.9 49.93 5.255 60.098c2.333 7.071 6.167 12.216 6.476 12.49l.006-.007-.004.008.012.01c.002 0 .002.003.004.005.002 0 .002.001.003.003.496.416.916.297 1.092.297l.004-.002a1.2 1.2 0 00.25-.072h.003l.03-.014h.003c.853-.366 1.003-1.447.542-1.987-20.347-28.079-.01-67.175 34.33-67.175 23.7 0 42.369 19.327 42.369 42.353 0 23.404-18.95 42.353-42.368 42.353-8.987 0-17.575-2.78-24.834-8.038a1.332 1.332 0 00-1.401-.092l-14.8 8.01c-.703.377-1.338-.237-1.334-.778.004-.316-.32.376 5.62-10.594a1.318 1.318 0 10-2.317-1.255c-5.98 11.039-5.944 10.669-5.94 11.849.005 2.584 2.804 4.41 5.227 3.098l14.076-7.622c15.218 10.61 35.484 10.76 50.865.375 27.538-18.594 26.14-59.57-2.602-76.243z"/><path fill="var(--i-color3, #44d487)" d="M46.263 26.8c-4.384 1.768-7.261 6.126-7.263 10.902 0 1.734 1.376 3.149 3.09 3.149 1.712 0 3.09-1.412 3.09-3.148.005-2.988 2.363-5.42 5.316-5.422 2.898 0 5.323 2.49 5.323 5.416 0 2.267-1.341 4.255-3.412 5.068a7.805 7.805 0 00-3.634 2.895c-1.632 2.401-1.363 4.427-1.363 7.575 0 .25.029.498.086.74 0 1.654 6.091 2.267 6.095-.74v-3.107c.002-.661.399-1.23 1.034-1.483 4.492-1.76 7.38-6.113 7.375-10.941 0-8.225-8.199-13.956-15.737-10.905zm7.081 34.169c-1.3-2.155-4.298-2.11-5.622-.117-1.453 2.189.071 5.18 2.804 5.18 2.517 0 4.195-2.782 2.818-5.063z"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-exclamation -->
+						<svg class="i-icon-exclamation">
+							<use href="#i-icon-exclamation"></use>
+						</svg>
+					</div>
+					<h2>i-icon-exclamation</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-question -->
+						<svg class="i-icon-question">
+							<use href="#i-icon-question"></use>
+						</svg>
+					</div>
+					<h2>i-icon-question</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+
+B) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS.
+
+-->
+
+			<h3>B) Inline SVG with external sprite</h3>
+			
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-exclamation -->
+						<svg class="i-icon-exclamation">
+							<use href="component-sprite.svg#i-icon-exclamation"></use>
+						</svg>
+					</div>
+					<h2>i-icon-exclamation</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-icon-question -->
+						<svg class="i-icon-question">
+							<use href="component-sprite.svg#i-icon-question"></use>
+						</svg>
+					</div>
+					<h2>i-icon-question</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Thu, 12 Aug 2021 16:44:49 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

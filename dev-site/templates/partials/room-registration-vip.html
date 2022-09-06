@@ -1,0 +1,79 @@
+<div class="regs--header">
+    <h2>Зарегистрироваться</h2>
+</div>
+
+<!-- registration vip -->
+<div class="vip-rg-wrap">
+    <div class="vip-rg">
+        <div class="vip-rg--contact vip-rg--contact_top">
+            <a class="vip-rg-button vip-rg-button_double" href="https://tele.click/GIPSYTEAMplus" target="_blank">
+                <svg>
+                    <use href="/nimg/buttons-sprite.svg#i-btn-telegram"></use>
+                </svg>
+            </a>
+            <a class="vip-rg--chat" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/buttons-sprite.svg#i-btn-chat"></use>
+                </svg>
+            </a>
+            <a class="vip-rg-button" href="https://join.skype.com/invite/l4sxgHcuOZCd" target="_blank">
+                <svg>
+                    <use href="/nimg/buttons-sprite.svg#i-btn-skype"></use>
+                </svg>
+            </a>
+            <div class="vip-ds-wrap">
+                <a class="vip-rg-button vip-rg-button_discord" href="javascript:void(0);">
+                    <svg>
+                        <use href="/nimg/support-sprite.svg#i-btn-discord"></use>
+                    </svg>
+                </a>
+                <ul class="vip-ds">
+                    <li class="vip-ds--item"><span>Скачайте приложение с <a href="https://discordapp.com" target="_blank">https://discordapp.com</a> и зарегистрируйте аккаунт.</span></li>
+                    <li class="vip-ds--item"><span>Зайдите во вкладку Friends, кликните "Добавить друга" и введите <strong>GT+ #0379</strong></span></li>
+                    <li class="vip-ds--item"><span>Теперь GipsyTeam есть в списке друзей! Выбирайте вкладку и пишите нам.</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="vip-rg--contact">
+            <a class="rg-tr-btn" href="viber://chat?number=+79017000020" target="_blank">
+                <svg>
+                    <use href="/nimg/buttons-sprite.svg#i-btn-viber"></use>
+                </svg>
+                Viber
+            </a>
+            <span class="rg-tr-sep"></span>
+            <a class="rg-tr-btn" href="https://api.whatsapp.com/send?phone=79017000020" target="_blank">
+                <svg>
+                    <use href="/nimg/buttons-sprite.svg#i-btn-whatsapp"></use>
+                </svg>
+                WhatsApp
+            </a>
+            <span class="rg-tr-sep rg-tr-sep_mob"></span>
+            <div class="rg-tr-wrap">
+                <a class="rg-tr-btn rg-tr-btn_mob" href="tel:+79017000020" target="_blank">
+                    <svg>
+                        <use href="/nimg/buttons-sprite.svg#i-btn-signal"></use>
+                    </svg>
+                    +7 (901) 700-0020
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- !registration vip -->
+
+<script>
+  (function($) {
+    $(document).on('click', '.vip-rg-button_discord', function (ev) {
+      $('.vip-rg-button_discord').addClass('vip-rg-button_discord_active');
+      $('.vip-ds').addClass('vip-ds_show');
+      ev.preventDefault();
+    });
+    $(document).on('click', function(ev) {
+      if ($(ev.target).closest('.vip-ds-wrap').length === 0) {
+        $('.vip-rg-button_discord').removeClass('vip-rg-button_discord_active');
+        $('.vip-ds').removeClass('vip-ds_show');
+      }
+    });
+  })(jQuery);
+</script>

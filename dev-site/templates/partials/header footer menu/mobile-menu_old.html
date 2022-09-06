@@ -1,0 +1,91 @@
+<div class="mobile-top">
+    <div class="mobile-top--button"></div>
+    <a class="mobile-top--logo" href="javascript:void(0);"></a>
+    <div class="mobile-top--inner">
+        
+        <!-- registered user -->
+        <!-- <a class="mobile-menu--promo" href="javascript:void(0);">
+            <div class="mobile-menu--icon-promo"></div>
+            <div class="mobile-menu--text">Акции</div>
+        </a>
+        <a class="mobile-menu--message" href="javascript:void(0);">
+            <div class="mobile-menu--label">2</div>
+            <div class="mobile-menu--icon-message"></div>
+            <div class="mobile-menu--text">Сообщения</div>
+        </a>
+        <a class="mobile-menu--bookmark new" href="javascript:void(0);">
+            <div class="mobile-menu--icon-bookmark"></div>
+            <div class="mobile-menu--text">Закладки</div>
+        </a>
+        <a class="mobile-menu--forum" href="javascript:void(0);">
+            <div class="mobile-menu--icon-forum"></div>
+            <div class="mobile-menu--text">Форум</div>
+        </a> -->
+        <!-- !registered user -->
+        
+        <!-- guest user -->
+        <a class="mobile-menu--forum" href="javascript:void(0);">
+            <div class="mobile-menu--icon-forum"></div>
+            <div class="mobile-menu--text">Форум</div>
+        </a>
+        <a class="mobile-menu--rooms" href="javascript:void(0);">
+            <div class="mobile-menu--icon-rooms"></div>
+            <div class="mobile-menu--text">Покер-румы</div>
+        </a>
+        <a class="mobile-menu--promo" href="javascript:void(0);">
+            <div class="mobile-menu--icon-promo"></div>
+            <div class="mobile-menu--text">Акции</div>
+            <span class="mobile-menu--badge">2</span>
+        </a>
+        <a class="mobile-menu--support" href="javascript:void(0);">
+            <div class="mobile-menu--icon-support"></div>
+            <div class="mobile-menu--text">Поддержка</div>
+        </a>
+        <!-- !guest user -->
+        
+        <a class="mobile-menu--gtp" href="javascript:void(0);">
+            <div class="mobile-menu--icon-gtp"></div>
+            <div class="mobile-menu--text">GTP<span>18638</span></div>
+        </a>
+        
+        <!-- <a class="mobile-menu--staking" href="javascript:void(0);">
+        <div class="mobile-menu--icon-staking"></div>
+        <div class="mobile-menu--text">Бекинг</div>
+    </a> -->
+        <!-- <a class="mobile-menu--user" href="javascript:void(0);">
+            <div class="mobile-menu--icon-user"></div>
+            <div class="mobile-menu--text user">Alex_Superpoker_1993</div>
+        </a> -->
+    </div>
+</div>
+<div class="mobile-menu">
+    <div class="mobile-menu--inner">
+        <a class="mobile-menu--item" href="javascript:void(0);">Новости<span class="mobile-menu--counter">26</span></a>
+        <a class="mobile-menu--item" href="javascript:void(0);">Видео<span class="mobile-menu--counter">9</span></a>
+        <a class="mobile-menu--item" href="javascript:void(0);">Live<span class="mobile-menu--counter">12</span></a>
+        <a class="mobile-menu--item mobile-menu--item_room" href="javascript:void(0);">Покер-румы</a>
+        <a class="mobile-menu--item" href="javascript:void(0);">Акции</a>
+        <a class="mobile-menu--item mobile-menu--item_vip" href="javascript:void(0);">GT+</a>
+        <a class="mobile-menu--item" href="javascript:void(0);">Сочи</a>
+        <a class="mobile-menu--item" href="javascript:void(0);">Ставки</a>
+        <a class="mobile-menu--item" href="javascript:void(0);">Магазин</a>
+        <a class="mobile-menu--item" href="javascript:void(0);">Форум</a>
+        <div class="mobile-menu--line-wrap">
+            <div class="mobile-menu--line">
+                {{> theme-switch-mobile-v3}}
+            </div>
+        </div>
+        <a class="mobile-menu--subitem" href="javascript:void(0);">Поддержка</a>
+        <a class="mobile-menu--subitem" href="javascript:void(0);">Настройки форума</a>
+        <a class="mobile-menu--subitem" href="javascript:void(0);">Настройки сайта</a>
+        <a class="mobile-menu--subitem" href="javascript:void(0);">Logout</a>
+    </div>
+</div>
+<script>
+  document.querySelector('.mobile-top--button').addEventListener('click', function() {
+    this.classList.toggle('menu-opened');
+    document.querySelector('.mobile-top').classList.toggle('menu-opened');
+    document.querySelector('.mobile-menu').classList.toggle('menu-opened');
+    document.body.classList.toggle('lock-scroll');
+  });
+</script>

@@ -1,0 +1,62 @@
+<!--special promo-->
+<div class="special-promo special-promo_active">
+    <div class="special-promo--top">
+        <div class="special-promo--avatar"></div>
+        <div class="special-promo--head">
+            <div class="special-promo--heading">Твои персональные акции</div>
+            <div class="special-promo--subheading">Индивидуальные предложения для игроков GipsyTeam</div>
+        </div>
+    </div>
+    <div class="special-promo--inner">
+        <div class="sp-item ">
+            <div class="sp-item--inner">
+                <span class="sp-item--logo"><img src="/nimg/888-dark.png" width="90" height="35" alt="" srcset="/nimg/888-dark.png 1x, /nimg/888-dark.png 2x"/></span>
+                <a class="sp-item--slogan" href="javascript:void(0);">40% рейкбека на месяц без еженедельного отыгрыша</a>
+                <span class="sp-item--date">23 января – 7 февраля</span>
+                <!--<a class="sp-item&#45;&#45;button" href="javascript:void(0);">Подробнее</a>-->
+            </div>
+            <div class="sp-item--offer">
+                <div class="sp-item--rules">
+                    <p>Стабильный рейкбек до конца месяца без условий по еженедельному отыгрышу! Отыграйте рейка на partypoker и получите 40% рейкбека до конца месяца. Действует во всех форматах и разновидностях покера</p>
+                </div>
+                <div class="sp-item--action">
+                    <em class="sp-item--note">Регистрация в 1 шаг!</em>
+                    <a class="sp-item--reg" href="javascript:void(0);" data-id="1">Активировать акцию</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--special promo-->
+
+<!--<div class="custom-promo">
+    <div class="custom-promo&#45;&#45;top">
+        <div class="custom-promo&#45;&#45;avatar" style="background-image: url({{images}}/imguser.png);"></div>
+        <div class="custom-promo&#45;&#45;head">
+            <div class="custom-promo&#45;&#45;heading">Твои персональные акции</div>
+        </div>
+    </div>
+    <div class="custom-promo&#45;&#45;inner">
+        <a class="pr-item" href="javascript:void(0);">
+            <span class="pr-item&#45;&#45;logo"><img src="{{images}}/logo-888-90x35.png" alt=""></span>
+            <span class="pr-item&#45;&#45;slogan">$6,000 в марте в рейк-гонках для игроков GipsyTeam</span>
+            <span class="pr-item&#45;&#45;date">До 31 декабря</span>
+        </a>
+        <a class="pr-item" href="javascript:void(0);">
+            <span class="pr-item&#45;&#45;logo"><img src="{{images}}/90x35-partypoker.png" alt=""></span>
+            <span class="pr-item&#45;&#45;slogan">$6,000 в марте в рейк-гонках для игроков GipsyTeam в рейк-гонках для игроков</span>
+            <span class="pr-item&#45;&#45;date">До 30 марта</span>
+        </a>
+    </div>
+</div>-->
+
+<script>
+  (function($) {
+    $(function() {
+      $('.sp-item--slogan').click(function() {
+        $(this).toggleClass('active');
+        $(this).closest('.sp-item').find('.sp-item--offer').toggleClass('show');
+      });
+    });
+  })(jQuery);
+</script>

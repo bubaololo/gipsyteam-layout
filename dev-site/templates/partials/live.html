@@ -1,0 +1,109 @@
+<div class="content content_theme">
+    <article class="article">
+        <div class="article--inner">
+            <!-- archive link -->
+            <div class="live-breadcrumbs">
+                <a class="live-breadcrumbs--link" href="javascript:void(0);">Радио</a>
+                <a class="live-breadcrumbs--link" href="javascript:void(0);">Репортажи</a>
+                <a class="live-breadcrumbs--link" href="javascript:void(0);">Архив</a>
+            </div>
+            <!-- !archive link -->
+            <div class="article--meta">
+                <!-- media-meta -->
+                <div class="media-meta">
+                    <span class="media-meta--date">Вчера, 05:54</span>
+                    <span class="media-meta--live">Эфир закончен</span>
+                    <span class="media-meta--view">238</span>
+                    <div class="media-meta--comment">37 /<span>5 новых</span></div>
+                </div>
+                <!-- !media-meta -->
+            </div>
+            <h1 class="article--heading">Вечерний форум, выпуск 6: Подсказчики</h1>
+            <p class="article--lead">В среду, в 21:30 по Москве к ведущей программы Алисе Pinky присоединится Илья Городецкий, чтобы в компании четырех гостей разобраться в главной теме этого месяца!</p>
+            <!-- chat button -->
+            <div class="chat-open">
+                <a class="chat-open--button" href="javascript:void(0);"><span>Войти в чат</span></a>
+            </div>
+            <!-- chat button -->
+            <div id="chatContainer">
+                <!-- chat onpage -->
+                {{> chat-onpage}}
+                <!-- chat onpage -->
+            </div>
+            <!-- test -->
+            <script>
+              (function($) {
+                $(function() {
+                  var opened = false;
+
+                  function removeChatUser() {
+                    var date = new Date();
+                    $.get('/chat/inactive');
+                  }
+
+                  $('.chat-open--button').on('click', function() {
+                    if (opened) {
+                      $('#chatContainer').html('');
+                      $('.chat-open--button').html('<span>Войти в чат</span>');
+                      removeChatUser();
+                      $(window).off('unload', removeChatUser);
+                    } else {
+                      $('#chatContainer').html('<iframe src="/chat" frameborder="no" id="chatIframe" scrolling="no"></iframe>');
+                      $('.chat-open--button').html('<span>Закрыть чат</span>');
+                      $(window).on('unload', removeChatUser);
+                    }
+                    opened = !opened;
+                  });
+                  $(document).on('click', '.chat-send--new', function() {
+                    if (opened) {
+                      $('.chat-open--button').get(0).click();
+                    }
+                    window.open('/chat.html', 'mainChat', 'height=1024,width=768,menubar=no,status=no,toolbar=no,location=no,titlebar=no');
+                  });
+                });
+              })(jQuery);
+            </script>
+            <!-- !test -->
+            <!-- audio -->
+            <div class="audio-live">
+                <audio class="audio-live--player" controls="">
+                    <source src="//www.gipsyteam.ru/live/mp3/v-f-6.mp3" type="audio/mpeg">
+                    Тег audio не поддерживается вашим браузером.
+                </audio>
+                <div class="audio-live--inner"><a class="audio-live--dl" href="javascript:void(0);">Скачать выпуск</a></div>
+            </div>
+            <!-- !audio -->
+            <div class="photo-live">
+                <img src="/{{images}}/news-all-402x246.png" alt="">
+            </div>
+            <figure class="article-video article-video_live">
+                <div class="article-video--ratio">
+                    <iframe width="560" height="315" src="//www.youtube.com/embed/BhwS7mDC3fc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </figure>
+            <div class="article-share">
+                <div class="article-tag article-tag_medium">
+                    <span class="article-tag--heading">Теги:</span>
+                    {{#repeat 3}}
+                    <a class="article-tag--item" href="javascript:void(0);">Интервью</a>
+                    <a class="article-tag--item" href="javascript:void(0);">Джо Када</a>
+                    <a class="article-tag--item" href="javascript:void(0);">WSOP 2018</a>
+                    <a class="article-tag--item" href="javascript:void(0);">Том Дван</a>
+                    <a class="article-tag--item" href="javascript:void(0);">Суперхайроллеры</a>
+                    {{/repeat}}
+                </div>
+                <div class="article-social article-social_small">
+                    <div class="article-social--heading">Поделиться новостью:</div>
+                    <div class="article-social--inner">
+                        <a class="article-social--item article-social--item_vk" href="javascript:void(0);">23</a>
+                        <a class="article-social--item article-social--item_fb" href="javascript:void(0);">97</a>
+                        <a class="article-social--item article-social--item_tw" href="javascript:void(0);">12</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- comments -->
+    {{> comments}}
+    <!-- !comments -->
+</div>

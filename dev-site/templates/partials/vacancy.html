@@ -1,0 +1,68 @@
+<div class="vacancy-wrap">
+    <section class="vacancy-head">
+        <h1 class="vacancy-heading">Работа в GipsyTeam</h1>
+    </section>
+    
+    <div class="vacancy">
+        <!-- vacancy -->
+        <div class="vacancy-section">
+            <a class="vacancy-button">Менеджер проектов</a>
+            <div class="vacancy-item">
+                <p>Двух одинаковых покер-румов не существует: в одном вы найдете много бонусов на первый депозит и удобное расписание турниров. Двух одинаковых покер-румов не существует: в одном вы найдете много бонусов на первый депозит и удобное расписание турниров.Двух одинаковых покер-румов не существует: в одном вы найдете много бонусов на первый депозит и удобное расписание турниров.</p>
+                <ul>
+                    <li>50 GTP в подарок за $15 рейка без депозита в подарок</li>
+                    <li>Бонус $88 без депозита</li>
+                    <li>50 GTP в подарок за $15 рейка без депозита в подарок</li>
+                    <li>Бонус $88 без депозита</li>
+                    <li>50 GTP в подарок за $15 рейка без депозита в подарок</li>
+                    <li>Бонус $88 без депозита</li>
+                    <li>50 GTP в подарок за $15 рейка без депозита в подарок</li>
+                </ul>
+                
+                <form action="" class="vacancy-form">
+                    <div class="vacancy-label">Напишите о себе</div>
+                    <textarea class="vacancy-text"></textarea>
+                    
+                    <div class="vacancy-label">Как с вами связаться</div>
+                    <input class="vacancy-field" type="text" value="">
+                    
+                    <input class="vacancy-submit" value="Отправить" type="submit"/>
+                </form>
+            </div>
+        </div>
+        <!-- !vacancy -->
+        
+        <!-- vacancy -->
+        <div class="vacancy-section">
+            <a class="vacancy-button">SMM менеджер</a>
+            <div class="vacancy-item">
+                <p>Двух одинаковых покер-румов не существует: в одном вы найдете много бонусов на первый депозит и удобное расписание турниров. Двух одинаковых покер-румов не существует: в одном вы найдете много бонусов на первый депозит и удобное расписание турниров.Двух одинаковых покер-румов не существует: в одном вы найдете много бонусов на первый депозит и удобное расписание турниров.</p>
+                
+                <form action="" class="vacancy-form">
+                    <div class="vacancy-label">Напишите о себе и как с вами связаться</div>
+                    <textarea class="vacancy-text"></textarea>
+                    <input class="vacancy-submit" value="Отправить" type="submit"/>
+                </form>
+            </div>
+        </div>
+        <!-- !vacancy -->
+        <a class="vacancy-more" href="javascript:void(0);">Больше вакансий</a>
+    </div>
+</div>
+
+<script>
+  $(function() {
+    var accordions = $('.vacancy-section').accordion({
+      heightStyle: 'content',
+      collapsible: true,
+      active: false,
+      icons: false,
+      animate: false
+    });
+
+    accordions.on('click', function() {
+      accordions.not(this).accordion('option', 'active', false);
+      accordions.not(this).removeClass('vacancy-section_active');
+    });
+  });
+</script>

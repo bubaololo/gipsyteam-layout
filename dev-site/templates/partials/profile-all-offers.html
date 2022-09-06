@@ -1,0 +1,55 @@
+<div class="content">
+    {{> profile-header}}
+    <section class="profile-pager">
+        <ul class="u-pager">
+            <li><a class="u-pager--link" href="javascript:void(0);">Профиль</a></li>
+            <li><a class="u-pager--link" href="javascript:void(0);">Отзывы</a></li>
+            <li class="active"><a class="u-pager--link" href="javascript:void(0);">Бекинг</a></li>
+        </ul>
+    </section>
+    <section class="profile profile_wide">
+        <!-- profile message -->
+        <div class="profile-message">
+            <a class="profile-message--button" href="javascript:void(0);">Отправить сообщение</a>
+        </div>
+        <!-- !profile message -->
+        <div class="profile-breadcrumbs">
+            <a class="profile-breadcrumbs--link" href="javascript:void(0);">Бекинг</a>
+            <div class="profile-breadcrumbs--heading">Все предложения Fenomenico</div>
+        </div>
+        <!-- staking offers -->
+        <section class="stakedata stakedata_full">
+            <div class="stakegrid stakegrid_wide">
+                <div class="stakegrid--item">
+                    <div class="stakegrid--head stakegrid--head_wide">Дата</div>
+                    <div class="stakegrid--head">Предложение</div>
+                    <div class="stakegrid--head stakegrid--head_right">Прибыль</div>
+                    <div class="stakegrid--head stakegrid--head_right">Результат</div>
+                </div>
+                {{#repeat 6}}
+                <div class="stakegrid--item">
+                    <div class="stakegrid--date">09.12.2018</div>
+                    <div class="stakegrid--offer">555 шутаутов (hu sng 4 макс) 15$ турбо</div>
+                    <div class="stakegrid--profit">$1625.31</div>
+                    <div class="stakegrid--result stakegrid--result_positive">+$932.57</div>
+                </div>
+                <div class="stakegrid--item">
+                    <div class="stakegrid--date">03.05.2018</div>
+                    <div class="stakegrid--offer">50к рук nl25 SH (PokerStars)</div>
+                    <div class="stakegrid--profit">$2318.98</div>
+                    <div class="stakegrid--result stakegrid--result_negative">-$524.78</div>
+                </div>
+                {{/repeat}}
+            </div>
+            <div class="stakedata--bottom">
+                <div class="pager pager_right">
+                    <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                    <a class="pager--item" href="javascript:void(0);">2</a>
+                    <a class="pager--item" href="javascript:void(0);">3</a>
+                    <a class="pager--item" href="javascript:void(0);">→</a>
+                </div>
+            </div>
+        </section>
+        <!-- !staking offers -->
+    </section>
+</div>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>svg sprite preview</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style>
+.i-3-cards {
+	width: 16px;
+	height: 16px;
+}
+.i-bank {
+	width: 18px;
+	height: 18px;
+}
+.i-chart {
+	width: 16px;
+	height: 16px;
+}
+.i-close {
+	width: 12px;
+	height: 12px;
+}
+.i-comment {
+	width: 16px;
+	height: 16px;
+}
+.i-free {
+	width: 18px;
+	height: 18px;
+}
+.i-mobile {
+	width: 18px;
+	height: 18px;
+}
+.i-money {
+	width: 18px;
+	height: 18px;
+}
+.i-promo-all {
+	width: 17px;
+	height: 16px;
+}
+.i-reg {
+	width: 16px;
+	height: 16px;
+}
+.i-review {
+	width: 16px;
+	height: 12px;
+}
+.i-right-arrow {
+	width: 24px;
+	height: 24px;
+}
+.i-schedule {
+	width: 15px;
+	height: 15px;
+}
+.i-trophy {
+	width: 18px;
+	height: 18px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+<!--
+
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position: absolute">
+		<symbol fill="none" viewBox="0 0 16 16" id="i-3-cards"><path fill="var(--i-color1, #000)" fill-rule="evenodd" d="M8.73 1.65A1.46 1.46 0 006.79.83L1.3 3.11a1.5 1.5 0 00-.82 1.95l3.71 8.95a1.5 1.5 0 001.95.83l5.52-2.29a1.51 1.51 0 00.82-1.95L8.73 1.65zm2.33-.93H9.98l2.58 6.25V2.22a1.5 1.5 0 00-1.5-1.5zm4.01 1.58l-1-.43v6.76l1.82-4.38a1.49 1.49 0 00-.82-1.95zM5.15 4.65L9.1 7.18l-.54 4.21-3.95-2.54.54-4.2z" clip-rule="evenodd"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 18" id="i-bank"><path fill="var(--i-color1, #ffc800)" d="M1.5 6v3h.75v4.5H1.5v2.25h15V13.5h-.75V9h.75V6L9 1.5 1.5 6zm3 7.5V9H6v4.5H4.5zm3.75 0V9h1.5v4.5h-1.5zm5.25 0H12V9h1.5v4.5zm-3-7.5a1.5 1.5 0 11-3.001-.001A1.5 1.5 0 0110.5 6z"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 16" id="i-chart"><path fill="var(--i-color1, #fff)" d="M13.334 4.667h-2.667v-2c0-.736-.598-1.334-1.333-1.334H6.667c-.736 0-1.333.598-1.333 1.334V6H2.667c-.735 0-1.333.598-1.333 1.333v6c0 .368.297.667.666.667h12a.666.666 0 00.667-.667V6c0-.735-.598-1.333-1.333-1.333zM2.667 7.333h2.667v5.334H2.667V7.333zm4-.666v-4h2.667v10H6.667v-6zm6.667 6h-2.667V6h2.667v6.667z"/></symbol>
+		<symbol fill="none" viewBox="0 0 12 12" id="i-close"><path fill="var(--i-color1, #aaa)" d="M11 2.907L9.093 1 6 4.093 2.907 1 1 2.907 4.093 6 1 9.093 2.907 11 6 7.907 9.093 11 11 9.093 7.907 6 11 2.907z"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 16" id="i-comment"><path fill="var(--i-color1, #000)" d="M13.334 1.333H2.667c-.735 0-1.333.598-1.333 1.333v12L4 11.999h9.334c.735 0 1.333-.598 1.333-1.333v-8c0-.735-.598-1.333-1.333-1.333zm-4 7.333H4.667V7.333h4.667v1.333zm2-2.667H4.667V4.666h6.667v1.333z"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 18" id="i-free"><path fill="var(--i-color1, #ffc800)" d="M14.78 6.97l-.53-.53V4.5a.75.75 0 00-.75-.75h-1.94l-.53-.53-1.5-1.5a.75.75 0 00-1.06 0l-1.5 1.5-.53.53H4.5a.75.75 0 00-.75.75v1.94l-.53.53-1.5 1.5a.75.75 0 000 1.06l1.5 1.5.53.53v1.94c0 .415.336.75.75.75h1.94l.53.53 1.5 1.5a.748.748 0 001.06 0l1.5-1.5.53-.53h1.94a.75.75 0 00.75-.75v-1.94l.53-.53 1.5-1.5a.75.75 0 000-1.06l-1.5-1.5zm-1.81 3.75l-.22.22v1.81h-1.81l-.22.22-.75.75-.97.97-.97-.97-.75-.75-.22-.22H5.25v-1.81l-.22-.22-.75-.75L3.31 9l.97-.97.75-.75.22-.22V5.25h1.81l.22-.22.75-.75.97-.97.97.97.75.75.22.22h1.81v1.81l.22.22.75.75.97.97-.97.97-.75.75z"/><path fill="var(--i-color1, #ffc800)" d="M9 6C7.346 6 6 7.346 6 9c0 1.655 1.346 3 3 3 1.655 0 3-1.345 3-3 0-1.654-1.345-3-3-3z"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 18" id="i-mobile"><path fill="var(--i-color1, #ffc800)" d="M13 16.5c.827 0 1.5-.673 1.5-1.5V3c0-.827-.673-1.5-1.5-1.5H5.5C4.673 1.5 4 2.173 4 3v12c0 .827.673 1.5 1.5 1.5H13zm-3.75-3.75a.75.75 0 11.001 1.499.75.75 0 01-.001-1.499z"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 18" id="i-money"><path fill="var(--i-color1, #ffc800)" d="M15.75 3H2.25a.75.75 0 00-.75.75v10.5c0 .415.335.75.75.75h13.5a.75.75 0 00.75-.75V3.75a.75.75 0 00-.75-.75zM15 11.25a2.25 2.25 0 00-2.25 2.25h-7.5A2.25 2.25 0 003 11.25v-4.5A2.25 2.25 0 005.25 4.5h7.5A2.25 2.25 0 0015 6.75v4.5z"/><path fill="var(--i-color1, #ffc800)" d="M9 6C7.346 6 6 7.346 6 9c0 1.655 1.346 3 3 3 1.655 0 3-1.345 3-3 0-1.654-1.345-3-3-3zm0 4.5c-.827 0-1.5-.673-1.5-1.5S8.173 7.5 9 7.5s1.5.673 1.5 1.5-.673 1.5-1.5 1.5z"/></symbol>
+		<symbol fill="none" viewBox="0 0 17 16" id="i-promo-all"><g clip-path="url(#iclip0)"><path fill="var(--color1, #000)" fill-rule="evenodd" d="M8.55 15.76a.53.53 0 00.9 0l1.14-1.8 1.9.98c.16.09.35.08.5-.01.17-.1.27-.26.27-.44l.1-2.13 2.13-.1a.53.53 0 00.45-.77l-.98-1.9 1.8-1.14a.53.53 0 000-.9l-1.8-1.14.98-1.9a.53.53 0 00-.45-.78l-2.13-.09-.1-2.13a.53.53 0 00-.77-.45l-1.9.99L9.45.25a.53.53 0 00-.9-.02L7.4 2.04l-1.89-.98a.53.53 0 00-.51.01.53.53 0 00-.27.44l-.1 2.13-2.12.1a.53.53 0 00-.45.78l.98 1.88-1.8 1.15a.53.53 0 000 .9l1.8 1.14-.98 1.9a.53.53 0 00.01.5c.1.17.26.27.44.27l2.13.1.1 2.13a.53.53 0 00.77.45l1.9-.98 1.14 1.8zm.88-4.27a2.3 2.3 0 001.54-.7c.35-.4.53-.9.52-1.49a1.86 1.86 0 00-.95-1.7 7.75 7.75 0 00-1.18-.52 3.7 3.7 0 01-.9-.43.61.61 0 01-.22-.5c0-.2.08-.39.22-.53a.78.78 0 01.59-.23c.47 0 .83.33 1.06 1l1.18-.5c-.28-.96-.9-1.5-1.86-1.61v-.8h-.85v.8c-.63.09-1.1.33-1.39.73A2.22 2.22 0 007 7.36c.17.29.39.5.65.67.27.16.63.32 1.1.48.52.18.86.33 1 .46.16.12.24.3.24.53 0 .23-.08.42-.23.58-.15.15-.4.23-.71.23-.69 0-1.1-.37-1.21-1.11l-1.33.34c.27 1.19.96 1.83 2.08 1.95v1.02h.85v-1.02z" clip-rule="evenodd"/></g><defs><clipPath id="iclip0"><path fill="#fff" d="M0 0h16v16H0z" transform="translate(1)"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 16 16" id="i-reg"><path fill="var(--i-color1, #000)" d="M12.334 1.333H3.667a.333.333 0 00-.333.334v5.666h4v-2L10.666 8l-3.333 2.667v-2h-4v5.666c0 .184.149.334.333.334h8.666c.184 0 .334-.15.334-.334V1.667a.333.333 0 00-.333-.334z"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 12" id="i-review"><path fill="var(--i-color1, #000)" d="M14.675 0h-3.883c-1.336 0-2.498.954-2.79 2.3C7.709.954 6.55 0 5.215 0h-3.88C.596 0 0 .616 0 1.375v7.041c0 .76.597 1.375 1.333 1.375h2.492c2.839 0 3.686.7 4.092 2.149.02.08.144.08.166 0 .409-1.45 1.256-2.149 4.092-2.149h2.492c.736 0 1.333-.616 1.333-1.375V1.378C16 .622 15.408.006 14.675 0zM6.722 7.603c0 .054-.041.1-.097.1H2.172a.098.098 0 01-.097-.1v-.656c0-.055.042-.1.097-.1h4.456c.053 0 .097.042.097.1v.656h-.003zm0-1.745c0 .055-.041.1-.097.1H2.172a.098.098 0 01-.097-.1v-.656c0-.054.042-.1.097-.1h4.456c.053 0 .097.043.097.1v.656h-.003zm0-1.744c0 .054-.041.1-.097.1H2.172a.098.098 0 01-.097-.1v-.656c0-.055.042-.1.097-.1h4.456c.053 0 .097.042.097.1v.656h-.003zM13.925 7.6c0 .054-.042.1-.097.1H9.375a.098.098 0 01-.097-.1v-.656c0-.055.041-.1.097-.1h4.456c.052 0 .097.043.097.1V7.6h-.003zm0-1.745c0 .055-.042.1-.097.1H9.375a.098.098 0 01-.097-.1V5.2c0-.054.041-.1.097-.1h4.456c.052 0 .097.043.097.1v.656h-.003zm0-1.744c0 .054-.042.1-.097.1H9.375a.098.098 0 01-.097-.1v-.653c0-.055.041-.1.097-.1h4.456c.052 0 .097.042.097.1v.653h-.003z"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="i-right-arrow"><path fill="var(--i-color1, #aaa)" d="M9.414 18.414L8 17l5.207-5.293L8 6.414 9.414 5l6.707 6.707-6.707 6.707z"/></symbol>
+		<symbol viewBox="0 0 15 15" id="i-schedule"><path fill="var(--i-color1, #e51e25)" d="M6.33 7.5a1.17 1.17 0 002.22.5H11a.5.5 0 000-1H8.55A1.17 1.17 0 008 6.45V3.5a.5.5 0 00-1 0v3a1.17 1.17 0 00-.67 1z"/><path fill="var(--i-color1, #e51e25)" d="M7.5 0A7.5 7.5 0 1015 7.5 7.5 7.5 0 007.5 0zm0 13.2a5.7 5.7 0 115.7-5.7 5.7 5.7 0 01-5.7 5.7z"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 18" id="i-trophy"><path fill="var(--i-color1, #ffc800)" d="M15.75 3H13.5v-.75a.75.75 0 00-.75-.75h-7.5a.75.75 0 00-.75.75V3H2.25a.75.75 0 00-.75.75V6c0 3.232 1.35 5.182 3.614 5.259a4.501 4.501 0 003.136 2.173V15h-1.5v1.5h4.5V15h-1.5v-1.568a4.507 4.507 0 003.136-2.173C15.15 11.182 16.5 9.232 16.5 6V3.75a.75.75 0 00-.75-.75zM3 6V4.5h1.5v5.123C3.162 9.059 3 6.974 3 6zm10.5 3.623V4.5H15V6c0 .974-.162 3.059-1.5 3.623z"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-3-cards -->
+						<svg class="i-3-cards">
+							<use href="#i-3-cards"></use>
+						</svg>
+					</div>
+					<h2>i-3-cards</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-bank -->
+						<svg class="i-bank">
+							<use href="#i-bank"></use>
+						</svg>
+					</div>
+					<h2>i-bank</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-chart -->
+						<svg class="i-chart">
+							<use href="#i-chart"></use>
+						</svg>
+					</div>
+					<h2>i-chart</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-close -->
+						<svg class="i-close">
+							<use href="#i-close"></use>
+						</svg>
+					</div>
+					<h2>i-close</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-comment -->
+						<svg class="i-comment">
+							<use href="#i-comment"></use>
+						</svg>
+					</div>
+					<h2>i-comment</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-free -->
+						<svg class="i-free">
+							<use href="#i-free"></use>
+						</svg>
+					</div>
+					<h2>i-free</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-mobile -->
+						<svg class="i-mobile">
+							<use href="#i-mobile"></use>
+						</svg>
+					</div>
+					<h2>i-mobile</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-money -->
+						<svg class="i-money">
+							<use href="#i-money"></use>
+						</svg>
+					</div>
+					<h2>i-money</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-promo-all -->
+						<svg class="i-promo-all">
+							<use href="#i-promo-all"></use>
+						</svg>
+					</div>
+					<h2>i-promo-all</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-reg -->
+						<svg class="i-reg">
+							<use href="#i-reg"></use>
+						</svg>
+					</div>
+					<h2>i-reg</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-review -->
+						<svg class="i-review">
+							<use href="#i-review"></use>
+						</svg>
+					</div>
+					<h2>i-review</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-right-arrow -->
+						<svg class="i-right-arrow">
+							<use href="#i-right-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-right-arrow</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-schedule -->
+						<svg class="i-schedule">
+							<use href="#i-schedule"></use>
+						</svg>
+					</div>
+					<h2>i-schedule</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-trophy -->
+						<svg class="i-trophy">
+							<use href="#i-trophy"></use>
+						</svg>
+					</div>
+					<h2>i-trophy</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+
+B) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS.
+
+-->
+
+			<h3>B) Inline SVG with external sprite</h3>
+			
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-3-cards -->
+						<svg class="i-3-cards">
+							<use href="dropmenu-sprite.svg#i-3-cards"></use>
+						</svg>
+					</div>
+					<h2>i-3-cards</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-bank -->
+						<svg class="i-bank">
+							<use href="dropmenu-sprite.svg#i-bank"></use>
+						</svg>
+					</div>
+					<h2>i-bank</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-chart -->
+						<svg class="i-chart">
+							<use href="dropmenu-sprite.svg#i-chart"></use>
+						</svg>
+					</div>
+					<h2>i-chart</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-close -->
+						<svg class="i-close">
+							<use href="dropmenu-sprite.svg#i-close"></use>
+						</svg>
+					</div>
+					<h2>i-close</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-comment -->
+						<svg class="i-comment">
+							<use href="dropmenu-sprite.svg#i-comment"></use>
+						</svg>
+					</div>
+					<h2>i-comment</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-free -->
+						<svg class="i-free">
+							<use href="dropmenu-sprite.svg#i-free"></use>
+						</svg>
+					</div>
+					<h2>i-free</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-mobile -->
+						<svg class="i-mobile">
+							<use href="dropmenu-sprite.svg#i-mobile"></use>
+						</svg>
+					</div>
+					<h2>i-mobile</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-money -->
+						<svg class="i-money">
+							<use href="dropmenu-sprite.svg#i-money"></use>
+						</svg>
+					</div>
+					<h2>i-money</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-promo-all -->
+						<svg class="i-promo-all">
+							<use href="dropmenu-sprite.svg#i-promo-all"></use>
+						</svg>
+					</div>
+					<h2>i-promo-all</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-reg -->
+						<svg class="i-reg">
+							<use href="dropmenu-sprite.svg#i-reg"></use>
+						</svg>
+					</div>
+					<h2>i-reg</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-review -->
+						<svg class="i-review">
+							<use href="dropmenu-sprite.svg#i-review"></use>
+						</svg>
+					</div>
+					<h2>i-review</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-right-arrow -->
+						<svg class="i-right-arrow">
+							<use href="dropmenu-sprite.svg#i-right-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-right-arrow</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-schedule -->
+						<svg class="i-schedule">
+							<use href="dropmenu-sprite.svg#i-schedule"></use>
+						</svg>
+					</div>
+					<h2>i-schedule</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-trophy -->
+						<svg class="i-trophy">
+							<use href="dropmenu-sprite.svg#i-trophy"></use>
+						</svg>
+					</div>
+					<h2>i-trophy</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Wed, 10 Nov 2021 19:12:51 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

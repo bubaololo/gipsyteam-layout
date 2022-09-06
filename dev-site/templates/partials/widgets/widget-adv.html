@@ -1,0 +1,49 @@
+<section class="adv-widget">
+    <div class="adv-widget--grid">
+        <!-- forum activity -->
+        {{> widget-fa-double}}
+        <!-- !forum activity -->
+        
+        <!-- adv room -->
+        <div class="adv-widget--item adv-widget--item_room">
+            <div class="adv-widget--head">
+                <span class="adv-widget--icon adv-widget--icon_play_online"></span>
+                <a class="adv-widget--heading" href="javascript:void(0);">Играть в онлайне</a>
+            </div>
+            <div class="adv-widget--wrap adv-widget--wrap_room">
+                {{#repeat 1}}
+                <div class="adv-room">
+                    <span class="adv-room--logo"><img src="/{{images}}/logo-ps-small.png" alt=""></span>
+                    <a class="adv-room--slogan" href="javascript:void(0);">Регулярные рейк-гонки и релоад-бонусы</a>
+                </div>
+                {{/repeat }}
+            </div>
+        </div>
+        <!-- !adv room -->
+        
+        <!-- adv promo -->
+        <div class="adv-widget--item adv-widget--item_action">
+            <div class="adv-widget--head">
+                <span class="adv-widget--icon adv-widget--icon_promo_action"></span>
+                <a class="adv-widget--heading" href="javascript:void(0);">Акции</a>
+            </div>
+            <div class="adv-widget--wrap adv-widget--wrap_action">
+                {{#repeat 2}}
+                <div class="adv-link adv-link_room">
+                    <div class="adv-link--item adv-link--item_room">
+                        <span class="adv-link--logo"><img src="/{{images}}/logo-888-90x35.png" alt=""></span>
+                        <a class="adv-link--slogan" href="javascript:void(0);">$88 в подарок и бонус на первый депозит</a>
+                    </div>
+                </div>
+                {{/repeat }}
+                <div class="adv-link adv-link_gtplus">
+                    {{> widget-gtplus-button}}
+                </div>
+            </div>
+            <a class="adv-image" href="javascript:void(0);">
+                <img src="/{{images}}/804x280.png" alt="">
+            </a>
+        </div>
+        <!-- !adv promo -->
+    </div>
+</section>

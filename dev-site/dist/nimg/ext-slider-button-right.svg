@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="sl-btn-right" viewBox="0 0 28 28">
+        <path fill="var(--i-color1, #d3d3d3)" d="M28 14a14 14 0 11-28 0 14 14 0 0128 0z" />
+        <path fill="var(--i-color2, #404040)" d="M13.03 9a1 1 0 00-.74.3 1 1 0 000 1.4l3.3 3.3-3.3 3.3a1 1 0 000 1.4 1 1 0 001.42 0l4.7-4.7-4.7-4.7a1 1 0 00-.68-.3z" />
+    </symbol>
+</svg>

@@ -1,0 +1,277 @@
+<div class="content">
+
+    <section class="vip-play">
+        <div class="return-link">
+            <a href="javascript:void(0);">К списку румов</a>
+        </div>
+        <div class="vip-play--heading">Играйте с нами — и выигрывайте много</div>
+        <p>По данным китайских властей, в 2018 году китайские любители проиграли в покерных приложениях более 3 млрд юаней или <strong>435 миллионов долларов.</strong></p>
+
+        <!-- vip rooms slider -->
+        <div class="vip-hot">
+            <div class="vip-hot--inner">
+                <div class="vip-hot--container">
+                    <div class="vip-hot--row">
+                        <a class="vip-hot--item" href="javascript:void(0);">
+                            <div class="vip-hot--wrap">
+                                <div class="vip-hot--logo vip-hot--logo_realpoker"></div>
+                                <div class="vip-hot--title">RealPoker</div>
+                                <div class="vip-hot--line"></div>
+                                <div class="vip-hot--limit">NL60 – NL1000</div>
+                                <div class="vip-hot--badge">
+                                    <span>HM2</span>
+                                    <span>PT4</span>
+                                    <span>H2N</span>
+                                </div>
+                                <div class="vip-hot--stars">
+                                    <div class="vip-hot--mark">Оценка поля:</div>
+                                    <div class="vip-hot--rating">
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star hot-star_gray"></span>
+                                        <span class="hot-star hot-star_gray"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="vip-hot--item" href="javascript:void(0);">
+                            <div class="vip-hot--wrap">
+                                <div class="vip-hot--logo vip-hot--logo_firepoker"></div>
+                                <div class="vip-hot--title">FirePoker</div>
+                                <div class="vip-hot--line"></div>
+                                <div class="vip-hot--limit">NL60 – NL500</div>
+                                <div class="vip-hot--badge">
+                                    <span>HM2</span>
+                                    <span>H2N</span>
+                                </div>
+                                <div class="vip-hot--stars">
+                                    <div class="vip-hot--mark">Оценка поля:</div>
+                                    <div class="vip-hot--rating">
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star hot-star_gray"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="vip-hot--item" href="javascript:void(0);">
+                            <div class="vip-hot--wrap">
+                                <div class="vip-hot--logo vip-hot--logo_pokertime"></div>
+                                <div class="vip-hot--title">PokerTime</div>
+                                <div class="vip-hot--line"></div>
+                                <div class="vip-hot--limit">NL60 – NL1000</div>
+                                <div class="vip-hot--badge">
+                                    <span>HM2</span>
+                                    <span>PT4</span>
+                                    <span>H2N</span>
+                                </div>
+                                <div class="vip-hot--stars">
+                                    <div class="vip-hot--mark">Оценка поля:</div>
+                                    <div class="vip-hot--rating">
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star hot-star_half"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="vip-hot--item" href="javascript:void(0);">
+                            <div class="vip-hot--wrap">
+                                <div class="vip-hot--logo vip-hot--logo_wepoker"></div>
+                                <div class="vip-hot--title">WePoker</div>
+                                <div class="vip-hot--line"></div>
+                                <div class="vip-hot--limit">NL120 – NL2000</div>
+                                <div class="vip-hot--badge">
+                                    <span>HM2</span>
+                                    <span>PT4</span>
+                                    <span>H2N</span>
+                                </div>
+                                <div class="vip-hot--stars">
+                                    <div class="vip-hot--mark">Оценка поля:</div>
+                                    <div class="vip-hot--rating">
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                        <span class="hot-star"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="vip-hot--button-prev"></div>
+                <div class="vip-hot--button-next"></div>
+            </div>
+        </div>
+        <!-- vip rooms slider -->
+        <script>
+            var swiper = new Swiper('.vip-hot--container', {
+            wrapperClass: 'vip-hot--row',
+            containerModifierClass: 'vip-hot--container_',
+            slideClass: 'vip-hot--item',
+            slideActiveClass: 'vip-hot--item_active',
+            slideNextClass: 'vip-hot--item_next',
+            slidePrevClass: 'vip-hot--item_prev',
+            //
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 30,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.vip-hot--button-next',
+                prevEl: '.vip-hot--button-prev',
+                disabledClass: 'disabled'
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1
+                },
+                768: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2
+                }
+            }
+        });
+        </script>
+
+        <a class="vip-play--button" href="#vip_contacts">Выигрывать больше с GipsyTeam+</a>
+
+    </section>
+
+    <section class="viptube-info">
+        <h1>Как работают китайские приложения?</h1>
+        <p>Китайские приложения — главный способ играть с любителями одной из самых богатых и азартных стран. 85% жителей Китая предпочитают развлечения на смартфонах, поэтому почти все покерные приложения не имеют версии для ПК.</p>
+        <div class="viptube-wrap">
+            <div class="viptube">
+                <a class="viptube--link" href="javascript:void(0);">
+                    <img src="https://i.ytimg.com/vi/JdD1vhLE4Iw/maxresdefault.jpg" alt="обзор">
+                </a>
+                <span class="viptube--button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 142 142">
+                    <g class="viptube--button-shape">
+                        <path d="M142 69A71 71 0 100 74a71 71 0 00142-5zm-30 41a56 56 0 01-43 17 56 56 0 1143-17z" />
+                        <path d="M95 67L63 44c-3-2-8 0-8 5v45c0 4 5 6 8 4l32-23c2-2 2-6 0-8z" />
+                    </g>
+                </svg>
+                </span>
+            </div>
+        </div>
+        <p>Получите доступ в самые надежные и выгодные клубы — от команды GipsyTeam. Мы работаем в Китае с 2017 года, знаем все местные особенности и обеспечиваем отличные условия напрямую от организаторов игр.</p>
+    </section>
+    <script>
+        function findVideos() {
+        let videos = document.querySelectorAll('.viptube');
+        for (let i = 0; i < videos.length; i++) {
+            setupVideo(videos[i]);
+        }
+    }
+
+    function setupVideo(video) {
+        let link = video.querySelector('.viptube--link');
+        let button = video.querySelector('.viptube--button');
+        video.addEventListener('click', () => {
+            let iframe = createIframe();
+            link.remove();
+            button.remove();
+            video.appendChild(iframe);
+        });
+    }
+
+    function createIframe() {
+        let iframe = document.createElement('iframe');
+        let embedCode = 'JdD1vhLE4Iw';
+        let query = '?rel=0&showinfo=0&autoplay=1';
+        let videoSrc = 'https://www.youtube.com/embed/' + embedCode + query;
+        iframe.setAttribute('src', videoSrc);
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('allow', 'autoplay');
+        return iframe;
+    }
+    findVideos();
+    </script>
+
+    <section class="graph-info">
+        <h2>Почему GT+?</h2>
+        <p>С весны 2017 года наши игроки выиграли более 2.5 млн долларов в 19 различных приложениях и 493 клубах.</p>
+        <div class="graph-info--wrap">
+            <div class="graph-info--main">
+                <img src="aimg/rooms/vip-graph-cash.png" alt="graphics">
+            </div>
+            <div class="graph-info--inner">
+                <a class="graph-info--button graph-info--button_active" href="javascript:void(0);">Кэш</a>
+            </div>
+        </div>
+        <div class="graph-info--grid">
+            <div class="graph-info--item">
+                <span class="graph-info--icon graph-info--icon_1"></span>
+                <p>Гарантируем надежность партнеров и сохранность средств</p>
+            </div>
+            <div class="graph-info--item">
+                <span class="graph-info--icon graph-info--icon_2"></span>
+                <p>Большой выбор платежных систем с низкими комиссиями</p>
+            </div>
+            <div class="graph-info--item">
+                <span class="graph-info--icon graph-info--icon_3"></span>
+                <p>Первыми предоставляем доступ к новым приложениям и клубам</p>
+            </div>
+            <div class="graph-info--item">
+                <span class="graph-info--icon graph-info--icon_4"></span>
+                <p>Подберем оптимальную игру для ваших лимитов и удобного времени сессии</p>
+            </div>
+            <div class="graph-info--item">
+                <span class="graph-info--icon graph-info--icon_5"></span>
+                <p>Помогаем с настройкой софта и решением технических проблем</p>
+            </div>
+            <div class="graph-info--item">
+                <span class="graph-info--icon graph-info--icon_6"></span>
+                <p>Снабдим вспомогательным софтом и майнингом</p>
+            </div>
+        </div>
+        <p>Больше 800 игроков уже выбрали нас аффилейтом в Китае. В их числе: <strong>Diacon, Elephant, Eyeshield, zadrot_mode.</strong></p>
+    </section>
+
+    <section class="vip-connect">
+        <a name="vip_contacts"></a>
+        <div class="form500-pattern">
+            <div class="form500-wrap">
+                <div class="form500-wrap--icon"></div>
+                <h2>Хочешь выигрывать больше?</h2>
+                <p>Мы свяжемся с тобой и подберем лучшие румы для игры</p>
+                <form class="form500" action="">
+                    <div class="form500--inner">
+                        <select class="form500--select">
+                            <option value="0" selected="selected">Telegram</option>
+                            <option value="1">Skype</option>
+                        </select>
+                        <input class="form500--field" type="text" value="">
+                        <input class="form500--field" type="text" value="">
+                        <input class="form500--submit" value="Отправить" type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="vip-supp">
+            <h2>Напиши нам</h2>
+            <div class="vip-supp--top">
+                <a class="vip-supp--button vip-supp--button_skype" href="skype:vip500plus?chat">Skype</a>
+                <a class="vip-supp--button vip-supp--button_telegram" href="https://tele.click/GipsyTeam500">Telegram</a>
+            </div>
+            <div class="vip-supp--bottom">
+                <div class="vip-supp-phone">+7 (901) 700-0020</div>
+                <div class="messenger500">
+                    <a class="messenger500--item messenger500--item_phone" href="tel:+79017000020"></a>
+                    <a class="messenger500--item messenger500--item_viber" href="viber://chat?number=+79017000020"></a>
+                    <a class="messenger500--item messenger500--item_whatsapp" href="https://api.whatsapp.com/send?phone=79017000020"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

@@ -1,0 +1,44 @@
+<style>
+.policy-popup {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    line-height: 21px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    padding: 25px 100px 25px 15px;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 999;
+}
+.policy-popup--button {
+  font-size: 13px;
+  color: #212121;
+  padding: 1px 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+  background-color: #e0e0e0;
+}
+.policy-popup--text {
+  font-size: 14px;
+  color: #fff;
+  display: block;
+  margin: 0 5px 0 0;
+}
+.policy-popup--link {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #757575;
+}
+
+</style>
+<div class="policy-popup">
+    <div class="policy-popup--text">Закрывая это окно, вы соглашаетесь на <a class="policy-popup--link" href="javascript:void(0);">обработку персональных данных</a> и использование сайтом cookies.</div>
+    <a class="policy-popup--button" href="javascript:void(0);">Закрыть</a>
+</div>

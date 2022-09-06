@@ -1,0 +1,74 @@
+<aside class="pop-slider">
+    <div class="pop-slider--head">
+        <svg>
+            <use href="/nimg/mainpage-sprite.svg#i-star"/>
+        </svg>
+        <a class="pop-slider--heading" href="javascript:void(0);">Популярные темы</a>
+    </div>
+    <div class="pop-slider--main">
+        <div class="pop-slider--wrap">
+            {{#repeat 5}}
+            <ul class="pop-slider--list">
+                {{#repeat 5}}
+                <li class="pop-link">
+                    <div class="pop-link--num">1</div>
+                    <div class="pop-link--inner">
+                        <a class="pop-link--title" href="javascript:void(0);">Дневник Сандрикса: Хроники чуйкорега</a>
+                        <div class="pop-link--info">
+                            <span class="pop-link--nick">Pro100Kidhotstar</span>
+                            <span class="pop-link--date">17 минут назад</span>
+                        </div>
+                    </div>
+                </li>
+                {{/repeat }}
+                {{#repeat 5}}
+                <li class="pop-link">
+                    <div class="pop-link--num">10</div>
+                    <div class="pop-link--inner">
+                        <a class="pop-link--title" href="javascript:void(0);">Царство Анубиса</a>
+                        <div class="pop-link--info">
+                            <span class="pop-link--nick">WhatYouMeanGoTo</span>
+                            <span class="pop-link--date">Вчера, 21:55</span>
+                        </div>
+                    </div>
+                </li>
+                {{/repeat }}
+            </ul>
+            {{/repeat }}
+        </div>
+    </div>
+    
+    <div class="pop-pagination-wrap">
+        <a class="pop-slide-button pop-slide-button_prev" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/mainpage-sprite.svg#i-arrow-left"></use>
+            </svg>
+        </a>
+        <div class="pop-pagination"></div>
+        <a class="pop-slide-button pop-slide-button_next" href="javascript:void(0);">
+            <svg>
+                <use href="/nimg/mainpage-sprite.svg#i-arrow-right"></use>
+            </svg>
+        </a>
+    </div>
+</aside>
+
+<script>
+  var mySwiper = new Swiper('.pop-slider--main', {
+    wrapperClass: 'pop-slider--wrap',
+    slideClass: 'pop-slider--list',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.pop-slide-button_next',
+      prevEl: '.pop-slide-button_prev',
+      disabledClass: 'pop-slide-button_disabled'
+    },
+    pagination: {
+      el: '.pop-pagination',
+      bulletClass: 'pop-pagination--bullet',
+      bulletActiveClass: 'pop-pagination--bullet_active'
+    }
+  });
+</script>

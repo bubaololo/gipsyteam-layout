@@ -1,0 +1,26 @@
+<main class="content content_white">
+    <div class="authors-wrap">
+        <section class="authors-list">
+            <div class="authors-list--grid">
+                <div class="authors-list--head">
+                    <h1 class="authors-list--heading">Все авторы GipsyTeam</h1>
+                </div>
+                <ul class="authors-list--data">
+                    {{#repeat 3}}
+                    <li class="authors-list--item">
+                        <div class="authors-list--avatar">
+                            <img src="/nimg/author-main-avatar.png" alt=""/>
+                        </div>
+                        <div class="authors-list--content">
+                            <a class="authors-list--link" href="javascript:void(0);">Илья Городецкий</a>
+                            <div class="authors-list--lead">Один из самых популярных покерных игроков в России. Также этот человек занимает должность главного редактора известного журнала.</div>
+                        </div>
+                    </li>
+                    {{/repeat }}
+                </ul>
+            </div>
+            <div class="authors-list--bottom"></div>
+        </section>
+    </div>
+    {{> media-best}}
+</main>

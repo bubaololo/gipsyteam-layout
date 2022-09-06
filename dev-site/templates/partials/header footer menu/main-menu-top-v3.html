@@ -1,0 +1,91 @@
+<nav class="menu-top">
+    <div class="menu-top--inner">
+        <div class="menu-top--section">
+            <a class="menu-top--item active" href="javascript:void(0);">Лента</a>
+            <a class="menu-top--item" href="javascript:void(0);">Покер-румы</a>
+            {{> wide-menu}}
+            <a class="menu-top--item menu-top--item_vip" href="javascript:void(0);">GT+</a>
+            <a class="menu-top--item" href="javascript:void(0);">Акции</a>
+            <a class="menu-top--item" href="javascript:void(0);">Магазин</a>
+            <a class="menu-top--item" href="javascript:void(0);">Форум</a>
+        </div>
+        
+        <div class="submenu-top">
+            <a class="submenu-top--item" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/header-sprite.svg#i-icon-search"></use>
+                </svg>
+                Поиск
+            </a>
+            <span class="submenu-top--sep"></span>
+            <a class="submenu-top--item" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/header-sprite.svg#i-icon-support"></use>
+                </svg>
+                Поддержка
+            </a>
+        </div>
+        <span class="submenu-top--sep"></span>
+        <div class="theme-button-wrap">
+            {{!> theme-switch-v3}}
+            {{> theme-switch-dev}}
+        </div>
+        <!-- lang switch -->
+        <span class="submenu-top--sep"></span>
+        <div class="lang-flag-wrap">
+            <svg>
+                <use href="/nimg/mobile-menu-sprite.svg#i-flag-ru"></use>
+            </svg>
+            <div class="flag-options flag-options_show_zzz">
+                <div class="flag-options--inner">
+                    <a class="flag-options--link" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/mobile-menu-sprite.svg#i-flag-ua"></use>
+                        </svg>
+                        Ua
+                    </a>
+                    <a class="flag-options--link" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/mobile-menu-sprite.svg#i-flag-by"></use>
+                        </svg>
+                        By
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- !lang switch -->
+    </div>
+    <!-- drop menu -->
+    {{!> drop-menu}}
+    <!-- !drop menu -->
+    <!-- drop menu -->
+    {{!> room-menu}}
+    <!-- !drop menu -->
+    <!-- wide menu -->
+    {{!> wide-menu}}
+    <!-- !wide menu -->
+</nav>
+
+<script>
+  const themeSwitch = document.querySelectorAll('.theme-button');
+  const root = document.documentElement;
+  const userTheme = localStorage.getItem('theme');
+
+  if (userTheme === 'dark') {
+    root.setAttribute('theme', 'dark');
+  }
+
+  const themeSwitchHandler = () => {
+    if (root.hasAttribute('theme')) {
+      root.removeAttribute('theme');
+      localStorage.removeItem('theme');
+    } else {
+      root.setAttribute('theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  };
+
+  for (const item of themeSwitch) {
+    item.addEventListener('click', themeSwitchHandler);
+  }
+</script>

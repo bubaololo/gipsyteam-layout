@@ -1,0 +1,79 @@
+<div class="content">
+    {{> profile-header}}
+    <section class="profile-pager">
+        <ul class="u-pager">
+            <li class="active"><a class="u-pager--link" href="javascript:void(0);">Профиль</a></li>
+            <li><a class="u-pager--link" href="javascript:void(0);">Отзывы</a></li>
+            <li><a class="u-pager--link" href="javascript:void(0);">Бекинг</a></li>
+        </ul>
+    </section>
+    <section class="profile profile_wide">
+        <div class="profile-breadcrumbs">
+            <a class="profile-breadcrumbs--link" href="javascript:void(0);">Профиль</a>
+            <div class="profile-breadcrumbs--heading">Статистика рейка</div>
+        </div>
+        <!-- staking offers -->
+        <section class="rakedata">
+            <div class="rakedata--head">
+                <form class="rakedata-form" name="rakestats_filter" action="" method="get">
+                    <div class="rakedata-form--room">
+                        <select class="profile-selector" name="roomName">
+                            <option value="RedStarPoker" selected="selected">RedStar Poker</option>
+                            <option value="TitanPoker">Titan Poker</option>
+                            <option value="PokerDom">Покердом</option>
+                        </select>
+                    </div>
+                    <div class="rakedata-form--date">
+                        <select class="profile-selector profile-selector_middle" name="periodName">
+                            <option value="2019W16">17-04-2019 - 23-04-2019</option>
+                            <option value="2019W17">24-04-2019 - 30-04-2019</option>
+                            <option value="2019W18" selected="selected">01-05-2019 - 07-05-2019</option>
+                        </select>
+                    </div>
+                    <div class="rakedata-form--button">
+                        <input class="rakedata-form--input" type="submit" value="Показать">
+                    </div>
+                </form>
+                <div class="rakedata--nick">Ваш ник в покер-руме: <strong>GreenGrass</strong></div>
+            </div>
+            <div class="rakegrid rakegrid_wide">
+                <div class="rakegrid--item">
+                    <div class="rakegrid--head">Дата</div>
+                    <div class="rakegrid--head rakegrid--head_right">Рейк</div>
+                    <div class="rakegrid--head rakegrid--head_right">Рейкбек %</div>
+                    <div class="rakegrid--head rakegrid--head_right">GTP</div>
+                </div>
+                {{#repeat 9}}
+                <div class="rakegrid--item">
+                    <div class="rakegrid--date">03.01.2019</div>
+                    <div class="rakegrid--rake">$73.41</div>
+                    <div class="rakegrid--rakeback">$22.02</div>
+                    <div class="rakegrid--gtp">0.73</div>
+                </div>
+                <div class="rakegrid--item">
+                    <div class="rakegrid--date">05.01.2019</div>
+                    <div class="rakegrid--rake">$126.02</div>
+                    <div class="rakegrid--rakeback">$37.81</div>
+                    <div class="rakegrid--gtp">1.26</div>
+                </div>
+                {{/repeat}}
+                <div class="rakegrid--item">
+                    <div class="rakegrid--date rakegrid--date_sum">Итого</div>
+                    <div class="rakegrid--rake rakegrid--rake_sum">$262.91</div>
+                    <div class="rakegrid--rakeback rakegrid--rakeback_sum">$78.87</div>
+                    <div class="rakegrid--gtp rakegrid--gtp_sum">2.62</div>
+                </div>
+            </div>
+            <div class="subnote">Рейкбек автоматически выплачивается в ночь с понедельника на вторник за прошедшую неделю.</div>
+            <div class="rakedata--bottom">
+                <div class="pager pager_right">
+                    <a class="pager--item pager--item_active" href="javascript:void(0);">1</a>
+                    <a class="pager--item" href="javascript:void(0);">2</a>
+                    <a class="pager--item" href="javascript:void(0);">3</a>
+                    <a class="pager--item" href="javascript:void(0);">→</a>
+                </div>
+            </div>
+        </section>
+        <!-- !staking offers -->
+    </section>
+</div>

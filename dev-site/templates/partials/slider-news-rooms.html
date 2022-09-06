@@ -1,0 +1,143 @@
+<div class="slider-news slider-news_rooms">
+    <div class="slider-news--head">
+        <h2 class="slider-news--heading">{{slider-news--heading}}</h2>
+        <div class="slider-news--wrap">
+            <a class="slider-news--button slider-news--button_prev" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/slider-news-sprite.svg#i-left-arrow"></use>
+                </svg>
+            </a>
+            <a class="slider-news--button slider-news--button_next" href="javascript:void(0);">
+                <svg>
+                    <use href="/nimg/slider-news-sprite.svg#i-right-arrow"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+    
+    <div class="slider-news--container">
+        <ul class="slider-news--row">
+            <!-- slider item -->
+            <li class="slider-news--item">
+                <div class="slider-news--image">
+                    <img src="/nimg/pokerdom-funtable6@2x.jpg" alt=""/>
+                </div>
+                <div class="slider-news--main">
+                    <div class="slider-news--label">#Обзор</div>
+                    <a href="javascript:void(0);" class="slider-news--title">Как депозитить и кэшаутить в покер-румы в 2021 году</a>
+                </div>
+                <div class="slider-news--meta">
+                    <div class="slider-news--date">
+                        <svg>
+                            <use href="/nimg/slider-news-sprite.svg#i-icon-calendar"></use>
+                        </svg>
+                        <span>21/02/2020, 04:47</span>
+                    </div>
+                    <div class="slider-news--view">
+                        <svg>
+                            <use href="/nimg/slider-news-sprite.svg#i-icon-view"></use>
+                        </svg>
+                        <span>8074</span>
+                    </div>
+                    <div class="slider-news--comment">
+                        <svg>
+                            <use href="/nimg/slider-news-sprite.svg#i-icon-comment"></use>
+                        </svg>
+                        <span>17</span>
+                    </div>
+                </div>
+            </li>
+            <!-- !slider item -->
+            
+            <!-- slider item -->
+            <li class="slider-news--item">
+                <div class="slider-news--image">
+                    <img src="/nimg/pokerdom-funtable6@2x.jpg" alt=""/>
+                </div>
+                <div class="slider-news--main">
+                    <div class="slider-news--label">#Новости</div>
+                    <a href="javascript:void(0);" class="slider-news--title">PokerStars избавляется от непопулярных игр: новости покер-румов</a>
+                </div>
+                <div class="slider-news--meta">
+                    <div class="slider-news--date">
+                        <svg>
+                            <use href="/nimg/slider-news-sprite.svg#i-icon-calendar"></use>
+                        </svg>
+                        <span>21/02/2020, 04:47</span>
+                    </div>
+                    <div class="slider-news--view">
+                        <svg>
+                            <use href="/nimg/slider-news-sprite.svg#i-icon-view"></use>
+                        </svg>
+                        <span>8074</span>
+                    </div>
+                    <div class="slider-news--comment">
+                        <svg>
+                            <use href="/nimg/slider-news-sprite.svg#i-icon-comment"></use>
+                        </svg>
+                        <span>17</span>
+                    </div>
+                </div>
+            </li>
+            <!-- !slider item -->
+            
+            <!-- slider item -->
+            <li class="slider-news--item">
+                <div class="slider-news--image">
+                    <img src="/nimg/pokerdom-funtable6@2x.jpg" alt=""/>
+                </div>
+                <div class="slider-news--main">
+                    <div class="slider-news--label">#Обзор</div>
+                    <a href="javascript:void(0);" class="slider-news--title">Как депозитить и кэшаутить в покер-румы в 2021 году</a>
+                </div>
+                <div class="slider-news--meta">
+                    <div class="slider-news--date">
+                        <svg>
+                            <use href="/nimg/slider-news-sprite.svg#i-icon-calendar"></use>
+                        </svg>
+                        <span>21/02/2020, 04:47</span>
+                    </div>
+                    <div class="slider-news--view">
+                        <svg>
+                            <use href="/nimg/slider-news-sprite.svg#i-icon-view"></use>
+                        </svg>
+                        <span>8074</span>
+                    </div>
+                    <div class="slider-news--comment">
+                        <svg>
+                            <use href="/nimg/slider-news-sprite.svg#i-icon-comment"></use>
+                        </svg>
+                        <span>17</span>
+                    </div>
+                </div>
+            </li>
+            <!-- !slider item -->
+        </ul>
+        <div class="slider-news--gradient"></div>
+    </div>
+</div>
+
+<script>
+  var newsSwiper = new Swiper('.slider-news--container', {
+    wrapperClass: 'slider-news--row',
+    containerModifierClass: 'slider-news--container_',
+    slideClass: 'slider-news--item',
+    slideActiveClass: 'slider-news--item_active',
+    slideNextClass: 'slider-news--item_next',
+    slidePrevClass: 'slider-news--item_prev',
+    //
+    slidesPerView: 'auto',
+    spaceBetween: 24,
+    loopFillGroupWithBlank: true,
+    breakpoints: {
+      767: {
+        spaceBetween: 30
+      }
+    },
+    navigation: {
+      nextEl: '.slider-news--button_next',
+      prevEl: '.slider-news--button_prev',
+      disabledClass: 'slider-news--button_disabled'
+    }
+  });
+</script>

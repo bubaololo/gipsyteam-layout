@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>svg sprite preview</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+
+<!--
+
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style>
+.i-arrow {
+	width: 40px;
+	height: 40px;
+}
+.i-discord {
+	width: 60px;
+	height: 60px;
+}
+.i-hand {
+	width: 59px;
+	height: 60px;
+}
+.i-minus {
+	width: 14px;
+	height: 2px;
+}
+.i-negative {
+	width: 18px;
+	height: 16px;
+}
+.i-plus {
+	width: 14px;
+	height: 14px;
+}
+.i-plus-minus {
+	width: 14px;
+	height: 14px;
+}
+.i-positive {
+	width: 18px;
+	height: 16px;
+}
+.i-post {
+	width: 16px;
+	height: 15px;
+}
+.i-rate {
+	width: 16px;
+	height: 16px;
+}
+.i-youtube {
+	width: 47px;
+	height: 38px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+
+<!--
+
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position: absolute">
+		<symbol fill="none" viewBox="0 0 40 40" id="i-arrow"><rect width="40" height="40" rx="20" fill="#E51E25"/><path d="M30.707 20.707a1 1 0 000-1.414l-6.364-6.364a1 1 0 00-1.414 1.414L28.586 20l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM10 21h20v-2H10v2z" fill="#fff"/></symbol>
+		<symbol fill="none" viewBox="0 0 60 60" id="i-discord"><path d="M49.95 14.225c-4.2-3.35-10.2-4.275-12.8-4.55h-.1c-.4 0-.775.225-.9.6-.225.575.125 1.2.7 1.3 2.925.6 6.3 1.65 9.375 3.575.625.375.775 1.225.275 1.8-.4.45-1.075.5-1.6.2-6-3.7-13.45-3.9-14.9-3.9-1.45 0-8.9.2-14.9 3.9-.525.3-1.2.25-1.6-.2-.5-.575-.35-1.425.275-1.8 3.075-1.925 6.45-2.975 9.375-3.575.575-.1.925-.725.7-1.3-.125-.375-.5-.6-.9-.6h-.1c-2.6.275-8.6 1.2-12.8 4.55C7.6 16.5 2.725 29.575 2.5 41.15c0 .775.2 1.55.65 2.175 2.925 4.125 9.275 6.6 14.075 6.95a2.084 2.084 0 001.85-.875c.025 0 .025-.025.05-.05.875-1.2.35-2.9-1.05-3.425-4-1.475-6.05-3.225-6.175-3.35-.5-.45-.55-1.2-.125-1.7.45-.5 1.2-.55 1.7-.1.075.05 5.625 4.775 16.525 4.775 10.9 0 16.45-4.725 16.525-4.775.5-.45 1.25-.4 1.7.1.425.5.375 1.25-.125 1.7-.125.125-2.175 1.875-6.175 3.35-1.4.525-1.925 2.225-1.05 3.425.025.025.025.05.05.05.425.6 1.125.925 1.85.875 4.8-.35 11.15-2.825 14.075-6.95.45-.625.65-1.4.65-2.175-.225-11.575-5.1-24.65-7.55-26.925zm-27.725 22.95c-2.3 0-4.175-2.15-4.175-4.775 0-2.65 1.875-4.8 4.175-4.8 2.325 0 4.175 2.15 4.175 4.8 0 2.625-1.85 4.775-4.175 4.775zm15.55 0c-2.325 0-4.175-2.15-4.175-4.775 0-2.65 1.85-4.8 4.175-4.8 2.3 0 4.175 2.15 4.175 4.8 0 2.625-1.875 4.775-4.175 4.775z" fill="#784EF5"/></symbol>
+		<symbol fill="none" viewBox="0 0 59 60" id="i-hand"><g clip-path="url(#cclip0_1505_3377)"><path d="M24.5 1v8.616l-5.323-5.323a1.002 1.002 0 00-1.414 0L.793 21.263a1 1 0 000 1.414l29.699 29.699a1 1 0 001.414 0l5.782-5.782 1.815 2.688A11.012 11.012 0 0050.5 60h7a1 1 0 001-1V35a5.016 5.016 0 00-.621-2.41L50.5 20.715V1a1 1 0 00-1-1h-24a1 1 0 00-1 1zm-1.052 24.742c-.013-.056-.302-1.376.68-2.357.11-.11.235-.205.372-.28v8.284c-3.406.271-4.074-.392-4.526-.843-.363-.363-1.077-1.93-.09-2.919.981-.98 2.302-.692 2.35-.682a.995.995 0 001.213-1.203zm7.75 24.513L2.915 21.97 18.47 6.414l6.03 6.03v8.54a3.628 3.628 0 00-1.788.987 4.477 4.477 0 00-1.3 2.942 4.474 4.474 0 00-2.942 1.3c-1.88 1.883-.957 4.699.09 5.748.768.765 1.77 1.488 4.526 1.488.427 0 .897-.018 1.414-.055V43a1 1 0 001 1h10.434l.613.906-5.348 5.349zM56.5 35v23h-6a9.01 9.01 0 01-8.998-8.81 1 1 0 00-.153-.75l-6.487-9.6a3 3 0 114.971-3.36l.018.027 5.839 8.08a1.001 1.001 0 00.81.413h3a1 1 0 001-1V24.504l5.661 9.111c.222.428.339.903.339 1.385zm-30-33h22v40h-1.489l-5.53-7.653a5 5 0 10-8.276 5.612L34.583 42H26.5V2z" fill="#202020"/><path d="M13.433 18.347a3.382 3.382 0 00-1.587-.833c-.87-.191-1.657.01-2.214.567a2.501 2.501 0 00-.702 1.42 2.5 2.5 0 00-1.42.702c-1.138 1.138-.565 2.97.266 3.801.608.608 1.425 1.183 3.863 1.183.565 0 1.216-.03 1.973-.1a1 1 0 00.905-.905c.365-4.02-.335-5.087-1.084-5.835zm-.845 4.812c-2.677.153-3.156-.328-3.398-.57-.205-.204-.425-.813-.266-.972a.617.617 0 01.443-.15c.104 0 .208.014.309.04a.98.98 0 001.26-1.26c-.016-.058-.127-.515.11-.752.081-.082.287-.047.37-.028.222.048.428.15.602.294.242.242.722.722.57 3.398zM32.668 21.555l4 6a1 1 0 001.664 0l4-6a1 1 0 000-1.11l-4-6a1 1 0 00-1.664 0l-4 6a1 1 0 000 1.11zm4.832-4.752L40.298 21 37.5 25.197 34.702 21l2.798-4.197zM34.368 8.996a1 1 0 000-.992l-2-3.5a1 1 0 00-1.736 0l-2 3.5a1 1 0 000 .992l2 3.5a1 1 0 001.736 0l2-3.5zm-2.868.988L30.652 8.5l.848-1.484.848 1.484-.848 1.484z" fill="#E51E25"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24.5 31.389c-3.406.271-4.074-.392-4.526-.843-.363-.363-1.077-1.93-.09-2.919.981-.98 2.302-.692 2.35-.682a.996.996 0 001.213-1.203c-.012-.056-.3-1.376.68-2.357.11-.11.236-.205.373-.28v-2.122a3.628 3.628 0 00-1.788.988 4.476 4.476 0 00-1.3 2.942 4.474 4.474 0 00-2.942 1.3c-1.88 1.883-.957 4.699.09 5.748.768.765 1.77 1.488 4.526 1.488.427 0 .897-.018 1.414-.055V31.39z" fill="#E51E25"/></g><defs><clipPath id="cclip0_1505_3377"><path fill="#fff" transform="translate(.5)" d="M0 0h58v60H0z"/></clipPath></defs></symbol>
+		<symbol fill="none" viewBox="0 0 14 2" id="i-minus"><path d="M0 0h14v2H0V0z" fill="#202020"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 16" id="i-negative"><path d="M10.784 10h4.8a1.5 1.5 0 001.5-1.5V6.922a1.5 1.5 0 00-.113-.571L14.65.715a.75.75 0 00-.692-.465H1.334a.75.75 0 00-.75.75v7.5a.75.75 0 00.75.75h2.611a.75.75 0 01.613.317l4.09 5.795a.375.375 0 00.474.119l1.36-.681a1.875 1.875 0 00.98-2.14L10.783 10zm-5.7-1.941V1.75h8.37l2.13 5.172V8.5h-4.8a1.5 1.5 0 00-1.454 1.87l.678 2.66a.375.375 0 01-.196.429l-.496.248-3.532-5.005a2.262 2.262 0 00-.7-.643zm-1.5-.309h-1.5v-6h1.5v6z" fill="#666"/></symbol>
+		<symbol fill="none" viewBox="0 0 14 14" id="i-plus"><path d="M6 6V0h2v6h6v2H8v6H6V8H0V6h6z" fill="#202020"/></symbol>
+		<symbol fill="none" viewBox="0 0 14 14" id="i-plus-minus"><path fill="var(--i-color1, #202020)" d="M0 6h14v2H0z"/><path fill="var(--i-color2, #202020)" d="M8 0v14H6V0z"/></symbol>
+		<symbol fill="none" viewBox="0 0 18 16" id="i-positive"><path d="M10.784 6h4.8a1.5 1.5 0 011.5 1.5v1.578a1.5 1.5 0 01-.113.571l-2.32 5.637a.75.75 0 01-.694.464H1.334a.75.75 0 01-.75-.75V7.5a.75.75 0 01.75-.75h2.611a.75.75 0 00.613-.317L8.648.637a.375.375 0 01.474-.119l1.36.68a1.875 1.875 0 01.98 2.14L10.783 6zm-5.7 1.941v6.309h8.37l2.13-5.172V7.5h-4.8A1.5 1.5 0 019.33 5.63l.678-2.66a.375.375 0 00-.196-.429l-.496-.248-3.532 5.004a2.262 2.262 0 01-.7.644zm-1.5.309h-1.5v6h1.5v-6z" fill="#6DAB73"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 15" id="i-post"><path d="M.5 2A1.5 1.5 0 012 .5h11.03a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5H8.782a2.5 2.5 0 00-1.67.64l-2.125 1.908a.888.888 0 01-1.481-.66A1.888 1.888 0 001.618 9.5h-.115C.949 9.5.5 9.05.5 8.497V2z" stroke="#CFCFCF"/></symbol>
+		<symbol fill="none" viewBox="0 0 16 16" id="i-rate"><path stroke="#C4C4C4" d="M.5 7.885h5.154V15.5H.5zm9.846-2.462H15.5V15.5h-5.154z"/><path stroke="#C4C4C4" d="M5.423.5h5.154v15H5.423z"/></symbol>
+		<symbol fill="none" viewBox="0 0 47 38" id="i-youtube"><path fill="#fff" d="M12.611 8.111h21.778v21.778H12.611z"/><path fill="#e51e25" d="M45.767 6.162C46.833 10.32 46.833 19 46.833 19s0 8.68-1.066 12.838c-.593 2.298-2.326 4.107-4.522 4.718-3.988 1.11-17.745 1.11-17.745 1.11s-13.75 0-17.745-1.11c-2.205-.62-3.936-2.427-4.522-4.718C.167 27.68.167 19 .167 19s0-8.68 1.066-12.838c.593-2.298 2.326-4.107 4.522-4.718C9.75.334 23.5.334 23.5.334s13.757 0 17.745 1.11c2.205.62 3.936 2.427 4.522 4.718zM18.833 27.167l14-8.167-14-8.167z"/></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-arrow -->
+						<svg class="i-arrow">
+							<use href="#i-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-arrow</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-discord -->
+						<svg class="i-discord">
+							<use href="#i-discord"></use>
+						</svg>
+					</div>
+					<h2>i-discord</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-hand -->
+						<svg class="i-hand">
+							<use href="#i-hand"></use>
+						</svg>
+					</div>
+					<h2>i-hand</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-minus -->
+						<svg class="i-minus">
+							<use href="#i-minus"></use>
+						</svg>
+					</div>
+					<h2>i-minus</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-negative -->
+						<svg class="i-negative">
+							<use href="#i-negative"></use>
+						</svg>
+					</div>
+					<h2>i-negative</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-plus -->
+						<svg class="i-plus">
+							<use href="#i-plus"></use>
+						</svg>
+					</div>
+					<h2>i-plus</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-plus-minus -->
+						<svg class="i-plus-minus">
+							<use href="#i-plus-minus"></use>
+						</svg>
+					</div>
+					<h2>i-plus-minus</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-positive -->
+						<svg class="i-positive">
+							<use href="#i-positive"></use>
+						</svg>
+					</div>
+					<h2>i-positive</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-post -->
+						<svg class="i-post">
+							<use href="#i-post"></use>
+						</svg>
+					</div>
+					<h2>i-post</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-rate -->
+						<svg class="i-rate">
+							<use href="#i-rate"></use>
+						</svg>
+					</div>
+					<h2>i-rate</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-youtube -->
+						<svg class="i-youtube">
+							<use href="#i-youtube"></use>
+						</svg>
+					</div>
+					<h2>i-youtube</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+
+B) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS.
+
+-->
+
+			<h3>B) Inline SVG with external sprite</h3>
+			
+			<ul>
+				<li>
+					<div class="icon-box">
+						<!-- i-arrow -->
+						<svg class="i-arrow">
+							<use href="market-sprite.svg#i-arrow"></use>
+						</svg>
+					</div>
+					<h2>i-arrow</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-discord -->
+						<svg class="i-discord">
+							<use href="market-sprite.svg#i-discord"></use>
+						</svg>
+					</div>
+					<h2>i-discord</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-hand -->
+						<svg class="i-hand">
+							<use href="market-sprite.svg#i-hand"></use>
+						</svg>
+					</div>
+					<h2>i-hand</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-minus -->
+						<svg class="i-minus">
+							<use href="market-sprite.svg#i-minus"></use>
+						</svg>
+					</div>
+					<h2>i-minus</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-negative -->
+						<svg class="i-negative">
+							<use href="market-sprite.svg#i-negative"></use>
+						</svg>
+					</div>
+					<h2>i-negative</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-plus -->
+						<svg class="i-plus">
+							<use href="market-sprite.svg#i-plus"></use>
+						</svg>
+					</div>
+					<h2>i-plus</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-plus-minus -->
+						<svg class="i-plus-minus">
+							<use href="market-sprite.svg#i-plus-minus"></use>
+						</svg>
+					</div>
+					<h2>i-plus-minus</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-positive -->
+						<svg class="i-positive">
+							<use href="market-sprite.svg#i-positive"></use>
+						</svg>
+					</div>
+					<h2>i-positive</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-post -->
+						<svg class="i-post">
+							<use href="market-sprite.svg#i-post"></use>
+						</svg>
+					</div>
+					<h2>i-post</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-rate -->
+						<svg class="i-rate">
+							<use href="market-sprite.svg#i-rate"></use>
+						</svg>
+					</div>
+					<h2>i-rate</h2>
+				</li>
+				<li>
+					<div class="icon-box">
+						<!-- i-youtube -->
+						<svg class="i-youtube">
+							<use href="market-sprite.svg#i-youtube"></use>
+						</svg>
+					</div>
+					<h2>i-youtube</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Mon, 05 Sep 2022 17:30:07 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

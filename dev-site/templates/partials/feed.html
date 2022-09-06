@@ -1,0 +1,78 @@
+<div class="feed-head">
+    <div class="feed-head--wrap">
+        <h1 class="feed-heading">Лента</h1>
+        <button class="feed-head--toggle">
+            <svg>
+                <use href="/nimg/control-sprite.svg#i-btn-filter"></use>
+            </svg>
+            Фильтр
+        </button>
+    </div>
+    
+    <div class="feed-filter">
+        <button class="feed-filter--item feed-filter--item_active">По дате</button>
+        <button class="feed-filter--item">По просмотрам</button>
+    </div>
+    
+    <div class="feed-menu">
+        <button class="feed-menu--item feed-menu--item_active">Все</button>
+        <button class="feed-menu--item">Новости</button>
+        <button class="feed-menu--item">Видео</button>
+        <button class="feed-menu--item">Игры</button>
+        <button class="feed-menu--item">Репортажи</button>
+    </div>
+</div>
+
+<script>
+  $('.feed-head--toggle').on('click', function() {
+    $('.feed-head--toggle').toggleClass('feed-head--toggle_active');
+    $('.feed-menu').toggleClass('feed-menu_active');
+    $('.feed-filter').toggleClass('feed-filter_active');
+  });
+</script>
+
+<div class="feed-grid">
+    {{# repeat 6}}
+    <div class="feed-item">
+        <div class="feed-item--image">
+            <!--<img src="/nimg/402x338.png" alt="">-->
+            <img src="/nimg/396x225x.png" alt="">
+        </div>
+        <div class="feed-item--main">
+            <div class="feed-item--label">#High_stakes_feud</div>
+            <a href="javascript:void(0);" class="feed-item--title">Даг Полк: Живу простой жизнью, а он ставит свой мизинец</a>
+            <div class="feed-item--meta">
+                <div class="feed-item--date">
+                    <svg>
+                        <use href="/nimg/meta-sprite.svg#i-icon-calendar"></use>
+                    </svg>
+                    <span>09/10/2020, 06:57</span>
+                </div>
+                <div class="feed-item--view">
+                    <svg>
+                        <use href="/nimg/meta-sprite.svg#i-icon-view"></use>
+                    </svg>
+                    <span>15 847</span>
+                </div>
+                <a class="feed-item--comment" href="javascript:void(0);">
+                    <svg>
+                        <use href="/nimg/meta-sprite.svg#i-icon-comment"></use>
+                    </svg>
+                    <span>32 /</span>
+                    <span class="feed-latest-comment">2 новых</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {{/ repeat}}
+</div>
+
+<div class="feed-bottom">
+    <div class="pagination">
+        <a class="pagination--item" href="javascript:void(0);">←</a>
+        <a class="pagination--item" href="javascript:void(0);">1</a>
+        <a class="pagination--item pagination--item_active" href="javascript:void(0);">2</a>
+        <a class="pagination--item" href="javascript:void(0);">3</a>
+        <a class="pagination--item" href="javascript:void(0);">→</a>
+    </div>
+</div>

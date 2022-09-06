@@ -1,0 +1,126 @@
+<style>
+.header,
+.footer {
+    display: none;
+}
+.app-site {
+    display: block;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    margin: 0;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #b2b2b2;
+}
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.page-error {
+  display: flex;
+  width: 100%;
+  max-width: 1306px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #fff;
+  -webkit-font-smoothing: auto;
+}
+.page-error h1 {
+  font-family: Arial, sans-serif;
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 400;
+  color: #a00503;
+  margin: 0 0 10px;
+}
+@media screen and (min-width: 48em) {
+  .page-error h1 {
+    font-size: 132px;
+    line-height: 120px;
+  }
+}
+.page-error p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  margin: 0 0 18px;
+}
+.page-error a {
+  font-size: 20px;
+  line-height: 1;
+  color: #a00503;
+  text-decoration: underline;
+}
+.page-error-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+@media screen and (min-width: 48em) {
+  .page-error-wrap {
+    flex-direction: row;
+  }
+}
+.page-error-image {
+  width: 100%;
+  max-width: 225px;
+  margin: 0 0 30px;
+}
+@media screen and (min-width: 48em) {
+  .page-error-image {
+    max-width: 450px;
+    margin: 0 30px 0 0;
+  }
+}
+.page-error-info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 520px;
+}
+.page-error-note {
+  font-size: 14px;
+  line-height: 18px;
+  color: #a00503;
+}
+</style>
+<div class="page-error">
+    <div class="page-error-wrap">
+        <div class="page-error-image">
+            <img src="/graphics/404.jpg" alt="" />
+        </div>
+        <div class="page-error-info">
+            <div class="page-error-note">Ошибка</div>
+            <h1>404</h1>
+            <p>Вы попали на страницу, где бесплатно раздают Royal Flush. Сохраняйте спокойствие, не паникуйте - сейчас браузер вернет вас на главную страницу, и вы навсегда забудете о том, что видели.</p>
+            <a href="javascript:void(0);">На главную</a>
+        </div>
+    </div>
+</div>

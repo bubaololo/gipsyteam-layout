@@ -1,0 +1,71 @@
+<div class="market-wrap">
+    <!--header-->
+    <section class="market-header">
+        <div class="market-header--wrap">
+            <div class="market-header--inner">
+                <h1 class="market-header--heading">Обучение покеру на <span>gipsyteam</span></h1>
+                <div class="market-header--subheading">Развивать свои навыки и расти по лимитам можно самостоятельно — <strong>но быстрее и выгоднее учиться у профессионалов и не повторять чужих ошибок.</strong></div>
+                <div class="market-header--subheading">Мы собрали самую подробную базу тренеров, школ и обучающих покерных курсов на русском языке – просто укажите свою дисциплину, лимит и желаемый формат обучения.</div>
+            </div>
+        </div>
+    </section>
+    <!--!header-->
+    
+    <!--subheader-->
+    {{> market-subheader}}
+    <!--!subheader-->
+    
+    <!--trainer grid-->
+    {{> trainer-grid}}
+    <!--!trainer grid-->
+    
+    <!--freeplay-->
+    {{> freeplay}}
+    <!--!freeplay-->
+    
+    <!--fund grid-->
+    {{> fund-grid}}
+    <!--!fund grid-->
+    
+    <!--mail-->
+    {{> market-mail}}
+    <!--!mail-->
+    
+    <!--more-->
+    <div class="market-more">
+        <div class="market-more--wrap">
+            <a class="market-more--button" href="javascript:void(0);">Ещё 20 тренеров</a>
+        </div>
+    </div>
+    <!--!more-->
+    
+    <div class="market-bottom">
+        <!--faq-->
+        {{> market-faq}}
+        <!--!faq-->
+        
+        <!--discord-->
+        {{> market-discord}}
+        <!--!discord-->
+    </div>
+    
+    <!--contact form-->
+    {{> market-form}}
+    <!--!contact form-->
+</div>
+
+<script>
+  $(function() {
+    var accordions = $('.market-faq--item').accordion({
+      heightStyle: 'content',
+      collapsible: true,
+      active: false,
+      icons: false,
+      animate: false
+    });
+
+    accordions.on('click', function() {
+      accordions.not(this).accordion('option', 'active', false);
+    });
+  });
+</script>

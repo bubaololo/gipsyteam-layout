@@ -13,10 +13,11 @@ dev-stillpoker/
 dev-stillpoker-aff/
 dev-subaff/
 node_modules/
-dev-site/dist/
+#dev-site/dist/
 dev-site/node_modules/
-dev-site/src/
-dev-site/templates/
+#dev-site/src/
+#dev-site/templates/
+dev-site/gulpfile.js
 package-lock.json
 yarn.lock
 *.yarnrc

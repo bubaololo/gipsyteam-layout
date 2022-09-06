@@ -1,0 +1,81 @@
+<div class="room-feedback">
+    <div class="room-feedback--top">
+        <div class="room-feedback--signup">Чтобы оставить отзыв, необходимо <a href="javascript:void(0);">войти</a> или <a href="javascript:void(0);">зарегистрироваться</a></div>
+        <form>
+            <div class="room-feedback-content">
+                <div class="room-feedback-avatar">
+                    <img src="/nimg/feedback-avatar.png" alt=""/>
+                </div>
+                <textarea class="room-feedback--field" placeholder="Оставить отзыв"></textarea>
+            </div>
+            <div class="room-feedback-action">
+                <div class="room-feedback--meta">
+                    <div class="room-feedback--note">Ваша оценка</div>
+                    <div id="rater"></div>
+                </div>
+                <button class="room-feedback--send">
+                    <svg>
+                        <use href="/nimg/buttons-sprite.svg#i-btn-send"></use>
+                    </svg>
+                    Отправить
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="room-feedback--bottom">
+        <div class="room-feedback--subheading">Отзывы</div>
+        {{#repeat 3}}
+        <div class="rr-feedback">
+            <div class="rr-feedback--wrap">
+                <div class="rr-feedback--avatar">
+                    <img src="/nimg/feedback-avatar.png" alt=""/>
+                </div>
+                <div class="rr-feedback--content">
+                    <div class="rr-feedback--header">
+                        <div class="rr-feedback--name">Дмитрий</div>
+                        <time class="rr-date">10 января 2021</time>
+                    </div>
+                    <div class="rr-feedback--subheader">
+                        <div class="rr-score" data-rating="4">
+                            <div class="rr-value"></div>
+                        </div>
+                        <div class="rr-rate">4/5</div>
+                    </div>
+                </div>
+            </div>
+            <div class="rr-feedback--text">Arcu, egestas ultricies purus rhoncus, pellentesque nulla curabitur tortor. Augue nulla consectetur sit quam mauris felis, in. Metus quam urna pellentesque ac convallis nunc neque, viverra. Quis amet laoreet malesuada pharetra. Varius mauris amet et platea leo. Lorem quam donec sit elementum integer vitae pellentesque molestie sit. Viverra viverra tortor aliquam non. Pellentesque nunc tempor, risus quam ultrices vel tempus eu neque.</div>
+            <div class="rr-feedback--translate">Traducido al español</div>
+            <div class="rr-feedback--admin">
+                <a class="rr-feedback--show" href="javascript:void(0);">Показать</a>
+                <a class="rr-feedback--remove" href="javascript:void(0);">Удалить</a>
+            </div>
+        </div>
+        {{/repeat}}
+        <div class="room-feedback--toggle room-feedback--toggle_aggregate">
+            <div class="feedback-cell">
+                <a class="room-feedback--more" href="javascript:void(0);">Больше отзывов</a>
+            </div>
+            
+            <div class="feedback-aggregate">
+                <div class="feedback-aggregate--counter">3.4</div>
+                <div class="agg-score" data-rating="3">
+                    <div class="agg-value"></div>
+                </div>
+                <div class="feedback-aggregate--reviews"><strong>03</strong><span>/</span>248</div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+<script>
+  const starRating = rater({
+    starSize: 24,
+    starGap: 8,
+    element: document.querySelector('#rater'),
+    rateCallback: function rateCallback(rating, done) {
+      this.setRating(rating);
+      done();
+    }
+  });
+</script>

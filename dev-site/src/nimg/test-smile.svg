@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="24"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="i-smile.svg"
+   style="fill:none">
+  <metadata
+     id="metadata16">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1978"
+     inkscape:window-height="1231"
+     id="namedview12"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     inkscape:zoom="14.75"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-x="77"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <circle
+     cx="12"
+     cy="12"
+     r="7.5"
+     id="circle4"
+     style="stroke:#909090" />
+  <path
+     d="m 8.706,14.353 c 0.855,1.166 2.016,1.882 3.294,1.882 1.279,0 2.44,-0.716 3.294,-1.882"
+     id="path6"
+     inkscape:connector-curvature="0"
+     style="stroke:#909090;stroke-linecap:round;stroke-linejoin:round" />
+  <circle
+     cx="8.7059994"
+     cy="10.587999"
+     r="0.94099998"
+     id="circle8"
+     style="fill:#909090" />
+  <circle
+     cx="15.293"
+     cy="10.587999"
+     r="0.94099998"
+     id="circle10"
+     style="fill:#909090" />
+</svg>

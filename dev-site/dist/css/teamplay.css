@@ -1,0 +1,668 @@
+.teamplay-wrap_mountainteam {
+  --theme-tmpl-color-1: #3bb39b;
+  --theme-tmpl-color-2: #26ab91;
+  --theme-tmpl-color-3: #17a589;
+  --theme-tmpl-color-4: #8bd2c4;
+  --theme-tmpl-color-5: #92d5c7;
+}
+
+.teamplay-wrap_greenline {
+  --theme-tmpl-color-1: #388e3c;
+  --theme-tmpl-color-2: #388e3c;
+  --theme-tmpl-color-3: #388e3c;
+  --theme-tmpl-color-4: #9bc69d;
+  --theme-tmpl-color-5: #a1caa3;
+}
+
+.teamplay-wrap_sv {
+  --theme-tmpl-color-1: #d3ad52;
+  --theme-tmpl-color-2: #26ab91;
+  --theme-tmpl-color-3: #d3ad52;
+  --theme-tmpl-color-4: #8bd2c4;
+}
+
+.teamplay-wrap_mvp {
+  --theme-tmpl-color-1: #4e86e6;
+  --theme-tmpl-color-3: #458dc5;
+}
+
+.teamplay-wrap_pocarr {
+  --theme-tmpl-color-1: #0db8ec;
+  --theme-tmpl-color-3: #0db8ec;
+}
+
+.teamplay-wrap_fiatlab {
+  --theme-tmpl-color-1: #872136;
+  --theme-tmpl-color-3: #872136;
+}
+
+.teamplay-wrap_new-age {
+  --theme-tmpl-color-1: #eea926;
+  --theme-tmpl-color-3: #eea926;
+}
+
+.teamplay-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 190px;
+  background-color: #2a2a2a;
+  background-image: url(/nimg/pattern-rooms-dark2.png);
+  background-repeat: repeat;
+  background-size: 186px;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-head {
+    min-height: 270px;
+  }
+}
+
+.teamplay-wrap_sv .teamplay-head {
+  background-color: #0f0f0f;
+  background-image: none;
+}
+
+.teamplay-wrap_mvp .teamplay-head {
+  background-color: #0f0f0f;
+  background-image: none;
+}
+
+.teamplay-wrap_pocarr .teamplay-head {
+  background-color: #191c28;
+  background-image: none;
+}
+
+.teamplay-wrap_fiatlab .teamplay-head {
+  padding: 48px 15px 32px;
+  background-color: #0f0f0f;
+  background-image: none;
+}
+
+.teamplay-wrap_new-age .teamplay-head {
+  background-color: #0f0f0f;
+  background-image: none;
+}
+
+.teamplay-logo {
+  width: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.teamplay-logo--hashtag {
+  margin: 8px 0 0;
+  color: #bdbdbd;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-logo--hashtag {
+    margin: 10px 0 0;
+    font-size: 24px;
+  }
+}
+
+.teamplay-wrap_sv .teamplay-logo {
+  width: 150px;
+  height: 150px;
+  background-image: url(/nimg/svschool-logo-page.svg);
+  background-size: 150px;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-wrap_sv .teamplay-logo {
+    width: 190px;
+    height: 190px;
+    background-size: 190px;
+  }
+}
+
+.teamplay-wrap_mountainteam .teamplay-logo {
+  width: 150px;
+  height: 98px;
+  background-image: url(/nimg/mountain-team.svg);
+  background-size: 150px;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-wrap_mountainteam .teamplay-logo {
+    width: 232px;
+    height: 150px;
+    background-size: 232px;
+  }
+}
+
+.teamplay-wrap_greenline .teamplay-logo {
+  width: 200px;
+  height: 60px;
+  background-image: url(/nimg/greenline-team.svg);
+  background-size: 200px;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-wrap_greenline .teamplay-logo {
+    width: 372px;
+    height: 110px;
+    background-size: 372px;
+  }
+}
+
+.teamplay-wrap_mvp .teamplay-logo {
+  width: 150px;
+  height: 150px;
+  background-image: url(/nimg/mvpschool-text-logo.svg);
+  background-size: 150px;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-wrap_mvp .teamplay-logo {
+    width: 190px;
+    height: 190px;
+    background-size: 190px;
+  }
+}
+
+.teamplay-wrap_pocarr .teamplay-logo {
+  width: 180px;
+  height: 150px;
+  background-image: url(/nimg/pocarr-text-logo.svg);
+  background-size: 180px;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-wrap_pocarr .teamplay-logo {
+    width: 230px;
+    height: 190px;
+    background-size: 230px;
+  }
+}
+
+.teamplay-wrap_fiatlab .teamplay-logo {
+  width: 150px;
+  height: 150px;
+  background-image: url(/nimg/fiatlab-text-logo22.svg);
+  background-size: 108px;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-wrap_fiatlab .teamplay-logo {
+    width: 190px;
+    height: 190px;
+    background-size: 138px;
+  }
+}
+
+.teamplay-wrap_new-age .teamplay-logo {
+  width: 190px;
+  height: 190px;
+}
+
+.teamplay-head--slogan {
+  margin: 4px 0 16px;
+  color: #fff;
+  font-family: "PT Serif", serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-head--slogan {
+    margin: 4px 0 24px;
+    font-size: 30px;
+  }
+}
+
+.teamplay-head--subheading {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-head--subheading {
+    font-size: 20px;
+  }
+}
+
+.teamplay-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 65px 15px 75px;
+  background-color: #fff;
+}
+
+.teamplay-offer_dark {
+  background-color: #f3f3f3;
+}
+
+.teamplay-offer_sv {
+  background-color: #1e1e21;
+}
+
+.teamplay-offer_mvp {
+  background-color: #1e1e21;
+}
+
+.teamplay-offer_pocarr {
+  background-color: #242a3b;
+}
+
+.teamplay-offer_fiatlab {
+  background-color: #1e1e21;
+}
+
+.teamplay-offer_new-age {
+  background-color: #212121;
+}
+
+.teamplay-offer h2 {
+  margin: 0 0 50px;
+  color: var(--theme-tmpl-color-1, #333);
+  font-family: "PT Serif", serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-offer h2 {
+    margin: 0 0 65px;
+    font-size: 36px;
+  }
+}
+
+.teamplay-offer--list {
+  width: 100%;
+  max-width: 704px;
+  margin: 0;
+}
+
+.teamplay-offer--list_multi {
+  margin: 0 0 65px;
+}
+
+.teamplay-offer--list li {
+  position: relative;
+  padding: 0 0 0 20px;
+  color: #333;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-offer--list li {
+    padding: 0 0 0 40px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.teamplay-offer--list li:not(:last-child) {
+  margin: 0 0 24px;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-offer--list li:not(:last-child) {
+    margin: 0 0 26px;
+  }
+}
+
+.teamplay-offer--list li::before {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--theme-tmpl-color-3, #9e9e9e);
+  content: '';
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-offer--list li::before {
+    top: 8px;
+  }
+}
+
+.teamplay-wrap_sv .teamplay-offer--list li {
+  color: #c6c6c6;
+}
+
+.teamplay-wrap_mvp .teamplay-offer--list li {
+  color: #c6c6c6;
+}
+
+.teamplay-wrap_pocarr .teamplay-offer--list li {
+  color: #c6c6c6;
+}
+
+.teamplay-wrap_fiatlab .teamplay-offer--list li {
+  color: #c6c6c6;
+}
+
+.teamplay-wrap_new-age .teamplay-offer--list li {
+  color: #c6c6c6;
+}
+
+.teamplay-offer--color {
+  color: var(--theme-tmpl-color-2, #333);
+}
+
+.teamplay-offer--note {
+  width: 100%;
+  max-width: 704px;
+  margin: 24px 0;
+  color: #c6c6c6;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.teamplay-subnote {
+  width: 100%;
+  max-width: 566px;
+  margin: 0 0 24px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.teamplay-quest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 65px 15px 75px;
+  background-color: #f9f9f9;
+}
+
+.teamplay-wrap_sv .teamplay-quest {
+  background-color: #f5f5f5;
+}
+
+.teamplay-quest h2 {
+  margin: 0 0 50px;
+  color: var(--theme-tmpl-color-1, #333);
+  font-family: "PT Serif", serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+@media screen and (min-width: 48em) {
+  .teamplay-quest h2 {
+    margin: 0 0 65px;
+    font-size: 36px;
+  }
+}
+
+.teamplay-quest--bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 704px;
+  margin: 0 auto;
+}
+
+.teamplay-quest--subnote {
+  margin: 0 0 6px;
+  color: #212121;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.teamplay-quest--sublink {
+  color: #0076b0;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.teamplay-form {
+  width: 100%;
+  max-width: 704px;
+  padding: 20px 0;
+}
+
+.teamplay-form .form-error {
+  margin: 8px 0 0;
+  padding: 4px 8px;
+  border-left: 2px solid #ff002e;
+  background-color: #ffebee;
+  color: #ff002e;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.teamplay-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 0 40px;
+}
+
+.teamplay-group_bottom {
+  align-items: center;
+  min-height: 52px;
+  margin: 70px 0 40px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.teamplay-group--label {
+  margin: 0 0 13px;
+  color: #212121;
+  font-family: "PT Serif", serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.tmpl-label {
+  position: relative;
+  padding: 0 0 0 35px;
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.tmpl-label:not(:last-child) {
+  margin: 0 0 15px;
+}
+
+.tmpl-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--theme-tmpl-color-4, #ccc);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.tmpl-circle::after {
+  display: none;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--theme-tmpl-color-3, #9e9e9e);
+  content: '';
+}
+
+.tmpl-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.tmpl-input:checked + .tmpl-circle {
+  border-color: var(--theme-tmpl-color-3, #9e9e9e);
+}
+
+.tmpl-input:checked + .tmpl-circle::after {
+  display: block;
+}
+
+.tmpl-input-text {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  border: 1px solid var(--theme-tmpl-color-3, #ccc);
+  border-radius: 5px;
+  outline: none;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.tmpl-datepicker-wrap {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.tmpl-datepicker-wrap::after {
+  position: absolute;
+  top: 7px;
+  right: 14px;
+  width: 25px;
+  height: 30px;
+  background-image: url(/nimg/datepicker-icon.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  content: '';
+  pointer-events: none;
+}
+
+.tmpl-input-area {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 95px;
+  padding: 10px;
+  border: 1px solid var(--theme-tmpl-color-3, #ccc);
+  border-radius: 5px;
+  outline: none;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.33;
+  resize: vertical;
+}
+
+.tmpl-input-area_medium {
+  height: 135px;
+}
+
+.tmpl-upload {
+  display: flex;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px 10px 10px 5px;
+  border: 0;
+  background-color: var(--theme-tmpl-color-3, #9e9e9e);
+}
+
+.tmpl-upload--remove {
+  flex-shrink: 0;
+  width: 20px;
+  height: 23px;
+  margin: 0 5px 0 0;
+  background-color: transparent;
+  background-image: url(/nimg/icon-poll-delete-white.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.tmpl-upload--file {
+  margin: 0 5px 0 0;
+  padding: 4px 0 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 17px;
+  word-break: break-all;
+}
+
+.tmpl-button-file {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 28px;
+  border-radius: 5px;
+  background-color: #e7e7e7;
+  color: #333;
+  font-size: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tmpl-button-file::before {
+  width: 16px;
+  height: 20px;
+  margin: 0 5px 0 0;
+  background-image: url(/nimg/icon-attach.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  content: '';
+}
+
+.tmpl-required {
+  margin: 8px 0 0;
+  padding: 4px 8px;
+  border-left: 2px solid #ff002e;
+  background-color: #ffebee;
+  color: #ff002e;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.tmpl-button-send {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 52px;
+  padding: 0 48px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--theme-tmpl-color-3, #424242);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tmpl-button-send_sv {
+  background-color: #c79a33;
+}
