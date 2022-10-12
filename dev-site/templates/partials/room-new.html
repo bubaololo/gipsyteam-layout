@@ -324,9 +324,12 @@
                                     <div class="room2-steps__text">
                                         Скопируйте в буфер промокод <span class="room2_full-text"> GT</span> :
                                     </div>
-                                    <div class="room2-steps__copy-area">
-                                        GT2022FG
-                                    </div>
+                                        <div class="room2-steps__copy-area">
+                                            GT2022FG
+                                            <svg class="room2-steps__copy">
+                                                <use href="/nimg/tmpimg/icons-room.svg#icon-copy" />
+                                            </svg>
+                                        </div>
                                 </div>
                                 <div class="room2-steps__bullet">
                                     <div class="room2-steps__bullet-content">
@@ -427,6 +430,9 @@
                                         </div>
                                         <div class="room2-steps__copy-area">
                                             GT2022FG
+                                            <svg class="room2-steps__copy">
+                                                <use href="/nimg/tmpimg/icons-room.svg#icon-copy" />
+                                            </svg>
                                         </div>
                                     </div>
                                     <div class="room2-steps__bullet">
@@ -940,8 +946,8 @@
                             Депозит и кэшаут
                         </a>
                         <a href="#nav-3" class="room2-review__link">
-                        Как установить Покердом на Windows
-                    </a>
+                            Как установить Покердом на Windows
+                        </a>
                         <a href="#nav-4" class="room2-review__link">
                             Мобильное приложение Покердом для iOS и Android
                         </a>
@@ -1240,6 +1246,9 @@
                                 </div>
                                 <div class="room2-steps__copy-area">
                                     GT2022FG
+                                    <svg class="room2-steps__copy">
+                                        <use href="/nimg/tmpimg/icons-room.svg#icon-copy" />
+                                    </svg>
                                 </div>
                             </div>
                             <div class="room2-steps__bullet">
@@ -1364,7 +1373,7 @@
                 </div>
             </div>
         </div>
-        <div class="room2-banners ">
+        <div class="room2-banners">
             <div class="room2-container">
                 <div class="room2-banners-inner">
                     <a href="#" class="room2-banner__item">
@@ -1398,7 +1407,6 @@
             </div>
         </div>
     </aside>
-
     <script>
         $('.room2-other-img-wrapper').magnificPopup({
             delegate: 'a',
@@ -1411,45 +1419,96 @@
             closeBtnInside: false,
             fixedContentPos: true
         });
+        document.querySelector('html').style.scrollBehavior = 'smooth';
+        let notify = document.createElement("div");
+        let text = document.createTextNode("Скопировано!");
+        notify.appendChild(text);
+        notify.classList.add('room2-notify');
+        document.querySelector('body').appendChild(notify);
+        const contentItems = document.querySelectorAll('.room2-review__content-item');
+
+        if (window.matchMedia("(min-width: 768px)").matches) {
+            const linkItemsArray = Array.from(document.querySelectorAll('.room2-review__link'))
+            console.log(linkItemsArray)
+            const contentItemsArray = Array.from(contentItems)
+            itemsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if ((entry.isIntersecting == true)) {
+                        indexOfContentSection = contentItemsArray.indexOf(entry.target)
+                        linkItemsArray.forEach(element => element.classList.remove('room2-review__link_active'))
+                        currentActiveLink = linkItemsArray[indexOfContentSection]
+                        currentActiveLink.classList.add('room2-review__link_active')
+
+                        // console.log(currentActiveLink.innerText)
+
+                        // console.log(Array.from(items).indexOf(entry.target))
+                        // console.log(entry.target.firstElementChild.innerText)
+
+                    } else {
+                        // button.classList.add('room2-review__next-button_disabled')
+                    }
+                })
+            });
+            contentItems.forEach(item => {
+                itemsObserver.observe(item)
+            })
+        } else {
+            itemsObserver = new IntersectionObserver((entries) => {
+
+                entries.forEach(entry => {
+
+                    if ((entry.isIntersecting == true)) {
+                        console.log(entries.indexOf(entry))
+                        let oldScrollTopPosition = 0;
+                        window.onscroll = () => {
+                            const scrollTopPosition = document.documentElement.scrollTop;
+                            direction = (oldScrollTopPosition > scrollTopPosition);
+                            oldScrollTopPosition = scrollTopPosition;
+                            if (direction) {
+                                button.classList.add('room2-review__next-button_disabled')
+                            } else {
+                                button.classList.remove('room2-review__next-button_disabled')
+                                if (entry.target.nextElementSibling) {
+                                    next = entry.target.nextElementSibling.firstElementChild.innerText
+                                    buttonText.innerText = next
+                                    button.addEventListener('click', () => {
+                                        entry.target.nextElementSibling.scrollIntoView({ behavior: "smooth", block: "start" })
+                                    })
+                                }
+                            }
+                        }
+
+                    } else {
+                        button.classList.add('room2-review__next-button_disabled')
+
+                    }
+                })
+            });
+            contentItems.forEach(item => {
+                itemsObserver.observe(item)
+            })
+        }
 
         const buttonText = document.querySelector('.room2-review__next-button span');
         const button = document.querySelector('.room2-review__next-button');
-        const items = document.querySelectorAll('.room2-review__content-item');
 
-        itemsObserver = new IntersectionObserver((entries) => {
+        // CLIPBOARD_______________________
 
-            entries.forEach(entry => {
+        const promoWrappers = document.querySelectorAll('.room2-steps__copy-area');
+        const promoCode = 'GT2022FG';
+        const promoNotify = document.querySelector('.room2-notify');
 
-                if ((entry.isIntersecting == true)) {
-                    console.log(entries.indexOf(entry))
-                    let oldScrollTopPosition = 0;
-                    window.onscroll = () => {
-                        const scrollTopPosition = document.documentElement.scrollTop;
-                        direction = (oldScrollTopPosition > scrollTopPosition);
-                        oldScrollTopPosition = scrollTopPosition;
-                        if (direction) {
-                            button.classList.add('room2-review__next-button_disabled')
-                        } else {
-                            button.classList.remove('room2-review__next-button_disabled')
-                            if (entry.target.nextElementSibling) {
-                                next = entry.target.nextElementSibling.firstElementChild.innerText
-                                buttonText.innerText = next
-                                button.addEventListener('click', () => {
-                                    entry.target.nextElementSibling.scrollIntoView({ behavior: "smooth", block: "start" })
-                                })
-                            }
-                        }
-                    }
 
-                } else {
-                    button.classList.add('room2-review__next-button_disabled')
-
-                }
-            })
-        });
-        items.forEach(item => {
-            itemsObserver.observe(item)
+        promoWrappers.forEach(promoWrapper => promoWrapper.addEventListener('click', () => {
+            navigator.clipboard.writeText(promoCode);
+            promoNotify.classList.add('room2-notify_active');
+            setTimeout(function () {
+                promoNotify.classList.remove('room2-notify_active');
+            }, 1000)
         })
+)
+
+
 
     </script>
 

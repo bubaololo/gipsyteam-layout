@@ -28559,6 +28559,12 @@ figure {
 }
 
 .app-site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: var(--site-wrap-width, 1306px);
+  min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -44452,10 +44458,6 @@ figure {
   cursor: pointer;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .content_room2 {
   --room-accent: #e51e25;
   --room-accent2: #e31f26;
@@ -44474,16 +44476,6 @@ html {
   --room-color13: #d7dce8;
   --room-color14: #a9b0c0;
   scroll-behavior: smooth;
-}
-
-.app-site {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: var(--site-wrap-width, 1306px);
-  min-height: 100vh;
-  margin: 0 auto;
 }
 
 .content_room2 {
@@ -45185,6 +45177,13 @@ html {
 }
 
 @media screen and (min-width: 79.375em) {
+  .room2-banners {
+    position: sticky;
+    top: 35px;
+  }
+}
+
+@media screen and (min-width: 79.375em) {
   .room2-banners .room2-container {
     padding: 0;
   }
@@ -45523,6 +45522,7 @@ html {
 
 @media screen and (min-width: 48em) {
   .room2-steps {
+    grid-template-columns: 39px 1fr;
     padding: 30px 35px;
     -moz-column-gap: 16px;
     column-gap: 16px;
@@ -45588,14 +45588,31 @@ html {
 
 .room2-steps__copy-area {
   display: block;
+  position: relative;
   max-width: 281px;
   padding: 11px 0 10px;
   border: 1px dashed rgba(0, 0, 0, .3);
   border-radius: 3px;
+  color: var(--text-2-color, #000);
   font-size: 19px;
   font-weight: 700;
   line-height: 17px;
   text-align: center;
+  cursor: pointer;
+}
+
+.room2-steps__copy-area:hover .room2-steps__copy {
+  opacity: .3;
+}
+
+.room2-steps__copy {
+  position: absolute;
+  top: 11px;
+  right: 17%;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  transition: all .3s;
 }
 
 .room2-steps__reg-link {
@@ -45661,11 +45678,20 @@ html {
 }
 
 .room2-steps__rkn-logo {
-  flex-basis: 49px;
+  flex-basis: 29px;
   flex-grow: 0;
   flex-shrink: 0;
-  width: 49px;
-  height: 49px;
+  width: 29px;
+  height: 29px;
+}
+
+@media screen and (min-width: 48em) {
+  .room2-steps__rkn-logo {
+    flex-basis: 49px;
+    width: 49px;
+    height: 49px;
+    margin-left: -7px;
+  }
 }
 
 .room2-steps_blocked {
@@ -46318,6 +46344,22 @@ html {
   }
 }
 
+.room2-review__content {
+  padding-top: 38px;
+}
+
+@media screen and (min-width: 48em) {
+  .room2-review__content {
+    padding-top: 26px;
+  }
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-review__content {
+    padding-top: 35px;
+  }
+}
+
 @media screen and (min-width: 48em) {
   .room2-review__author-item {
     gap: 10px;
@@ -46519,10 +46561,21 @@ html {
   gap: 14px;
   display: flex;
   position: sticky;
-  top: 35px;
   flex-direction: column;
   align-items: flex-start;
   color: var(--room-color2);
+}
+
+@media screen and (min-width: 48em) {
+  .room2-review__links {
+    top: 26px;
+  }
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-review__links {
+    top: 35px;
+  }
 }
 
 .room2-review__link {
@@ -46554,6 +46607,26 @@ html {
   margin-bottom: .5ch;
   font-family: "PT Serif", serif;
   font-weight: 700;
+}
+
+.room2-notify {
+  box-sizing: border-box;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  transform: translateY(-100%);
+  background-color: #fff;
+  color: var(--i-color1, #000);
+  line-height: 50px;
+  text-align: center;
+  transition: transform .2s;
+}
+
+.room2-notify_active {
+  transform: translateY(0%);
 }
 
 /*# sourceMappingURL=maps/app-site.css.map */
