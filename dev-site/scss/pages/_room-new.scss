@@ -93,7 +93,7 @@
       justify-content: space-between;
     }
     @include breakpoint(xxxlarge) {
-      padding-bottom: 20px;
+      padding-bottom: 28px;
     }
   }
 }
@@ -139,7 +139,7 @@
     align-items: center;
     font-family: "PT Serif", serif;
     @include breakpoint(large) {
-      margin-bottom: 19px;
+      margin-bottom: 16px;
     }
   }
   &__description {
@@ -202,41 +202,46 @@
   &__title {
     margin-bottom: 32px;
   }
-  &__text {
-    &-items-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 29px;
-      row-gap: 25px;
-      // margin-bottom: 25px;
-      @include breakpoint(large) {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-          "text-item_1 text-item_2 text-item_5"
-          "text-item_3 text-item_4 text-item_6"
-          "icons-item_1 icons-item_2 .";
-      }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 29px;
+    row-gap: 25px;
+    // margin-bottom: 25px;
+    @include breakpoint(large) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "stats-item_1 stats-item_2 stats-item_5"
+        "stats-item_3 stats-item_4 stats-item_6"
+        "stats-item_7 stats-item_8 .";
     }
   }
-  .room2-stats-item {
+
+  .room2-stats__item {
     @include breakpoint(large) {
       &_1 {
-        grid-area: text-item_1;
+        grid-area: stats-item_1;
       }
       &_2 {
-        grid-area: text-item_2;
+        grid-area: stats-item_2;
       }
       &_3 {
-        grid-area: text-item_3;
+        grid-area: stats-item_3;
       }
       &_4 {
-        grid-area: text-item_4;
+        grid-area: stats-item_4;
       }
       &_5 {
-        grid-area: text-item_5;
+        grid-area: stats-item_5;
       }
       &_6 {
-        grid-area: text-item_6;
+        grid-area: stats-item_6;
+      }
+      &_7 {
+        grid-area: stats-item_7;
+      }
+      &_8 {
+        grid-area: stats-item_8;
       }
     }
   }
@@ -270,16 +275,6 @@
     display: flex;
     align-items: center;
     margin-bottom: 13px;
-    &-item {
-      @include breakpoint(large) {
-        &_1 {
-          grid-area: icons-item_1;
-        }
-        &_2 {
-          grid-area: icons-item_2;
-        }
-      }
-    }
   }
 }
 .room2-support {
@@ -310,7 +305,7 @@
     transform: translateX(-52%);
     max-width: 209px;
   }
-  
+
   &__separator-bottom {
     position: relative;
     width: 100%;
@@ -538,7 +533,6 @@
     @include breakpoint(xxxlarge) {
       margin: 0;
     }
-
   }
   &_bottom {
     margin-top: 17px;
@@ -685,16 +679,7 @@
       margin-bottom: 0;
     }
   }
-}
-.room2-traffic-inner {
-  border-bottom: 1px solid var(--room-color7);
-  padding-bottom: 25px;
-  @include breakpoint(large) {
-    padding-bottom: 44px;
-  }
-}
-.room2-traffic-item {
-  &__title {
+  &__item-title {
     font-family: $secondary-font;
     font-weight: 700;
     font-size: 20px;
@@ -703,11 +688,18 @@
     color: var(--room-color11);
     margin-bottom: 11px;
   }
-  &__text {
+  &__item-text {
     font-family: $condensed-font;
     font-size: 14px;
     line-height: 21px;
     color: var(--room-color2);
+  }
+}
+.room2-traffic-inner {
+  border-bottom: 1px solid var(--room-color7);
+  padding-bottom: 25px;
+  @include breakpoint(large) {
+    padding-bottom: 44px;
   }
 }
 .room2-traffic-items {
@@ -724,6 +716,7 @@
     margin-top: 52px;
   }
 }
+
 .room2-other {
   padding-bottom: 30px;
   @include breakpoint(xxxlarge) {
@@ -756,28 +749,26 @@
       margin-top: 49px;
     }
   }
-  &__row {
-    &_1 {
-      img {
+  &__row-1 {
+    img {
+      max-height: 144px;
+    }
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    @include breakpoint(large) {
+      margin-bottom: 0;
+    }
+  }
+  &__row-2 {
+    img {
+      max-height: 112px;
+      @include breakpoint(large) {
         max-height: 144px;
       }
-      display: flex;
-      gap: 12px;
-      margin-bottom: 12px;
-      @include breakpoint(large) {
-        margin-bottom: 0;
-      }
     }
-    &_2 {
-      img {
-        max-height: 112px;
-        @include breakpoint(large) {
-          max-height: 144px;
-        }
-      }
-      display: flex;
-      gap: 12px;
-    }
+    display: flex;
+    gap: 12px;
   }
   &__img {
     img {
@@ -1035,9 +1026,6 @@
   }
 }
 
-.stats-bars {
-  margin-bottom: 66px;
-}
 .stats-icon {
   max-height: 22px;
   &_svg {
@@ -1104,6 +1092,7 @@
 .progressbar {
   display: flex;
   gap: 29px;
+  margin-bottom: 66px;
   @include breakpoint(xxxlarge) {
     gap: 47px;
   }
@@ -1134,7 +1123,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  &__description {
+  &__text {
     min-width: 10ch;
     color: var(--room-color2);
     font-family: "Roboto Condensed", sans-serif;

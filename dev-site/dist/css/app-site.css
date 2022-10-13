@@ -44573,7 +44573,7 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-header__top {
-    padding-bottom: 20px;
+    padding-bottom: 28px;
   }
 }
 
@@ -44633,7 +44633,7 @@ figure {
 
 @media screen and (min-width: 48em) {
   .room2-rating__stars {
-    margin-bottom: 19px;
+    margin-bottom: 16px;
   }
 }
 
@@ -44716,7 +44716,7 @@ figure {
   margin-bottom: 32px;
 }
 
-.room2-stats__text-items-wrapper {
+.room2-stats__grid {
   row-gap: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -44725,30 +44725,36 @@ figure {
 }
 
 @media screen and (min-width: 48em) {
-  .room2-stats__text-items-wrapper {
-    grid-template-areas: "text-item_1 text-item_2 text-item_5" "text-item_3 text-item_4 text-item_6" "icons-item_1 icons-item_2 .";
+  .room2-stats__grid {
+    grid-template-areas: "stats-item_1 stats-item_2 stats-item_5" "stats-item_3 stats-item_4 stats-item_6" "stats-item_7 stats-item_8 .";
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 48em) {
-  .room2-stats .room2-stats-item_1 {
-    grid-area: text-item_1;
+  .room2-stats .room2-stats__item_1 {
+    grid-area: stats-item_1;
   }
-  .room2-stats .room2-stats-item_2 {
-    grid-area: text-item_2;
+  .room2-stats .room2-stats__item_2 {
+    grid-area: stats-item_2;
   }
-  .room2-stats .room2-stats-item_3 {
-    grid-area: text-item_3;
+  .room2-stats .room2-stats__item_3 {
+    grid-area: stats-item_3;
   }
-  .room2-stats .room2-stats-item_4 {
-    grid-area: text-item_4;
+  .room2-stats .room2-stats__item_4 {
+    grid-area: stats-item_4;
   }
-  .room2-stats .room2-stats-item_5 {
-    grid-area: text-item_5;
+  .room2-stats .room2-stats__item_5 {
+    grid-area: stats-item_5;
   }
-  .room2-stats .room2-stats-item_6 {
-    grid-area: text-item_6;
+  .room2-stats .room2-stats__item_6 {
+    grid-area: stats-item_6;
+  }
+  .room2-stats .room2-stats__item_7 {
+    grid-area: stats-item_7;
+  }
+  .room2-stats .room2-stats__item_8 {
+    grid-area: stats-item_8;
   }
 }
 
@@ -44785,15 +44791,6 @@ figure {
   display: flex;
   align-items: center;
   margin-bottom: 13px;
-}
-
-@media screen and (min-width: 48em) {
-  .room2-stats__icons-item_1 {
-    grid-area: icons-item_1;
-  }
-  .room2-stats__icons-item_2 {
-    grid-area: icons-item_2;
-  }
 }
 
 .room2-support {
@@ -45319,18 +45316,7 @@ figure {
   }
 }
 
-.room2-traffic-inner {
-  padding-bottom: 25px;
-  border-bottom: 1px solid var(--room-color7);
-}
-
-@media screen and (min-width: 48em) {
-  .room2-traffic-inner {
-    padding-bottom: 44px;
-  }
-}
-
-.room2-traffic-item__title {
+.room2-traffic__item-title {
   margin-bottom: 11px;
   color: var(--room-color11);
   font-family: "PT Serif", serif;
@@ -45340,11 +45326,22 @@ figure {
   text-transform: uppercase;
 }
 
-.room2-traffic-item__text {
+.room2-traffic__item-text {
   color: var(--room-color2);
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   line-height: 21px;
+}
+
+.room2-traffic-inner {
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--room-color7);
+}
+
+@media screen and (min-width: 48em) {
+  .room2-traffic-inner {
+    padding-bottom: 44px;
+  }
 }
 
 .room2-traffic-items {
@@ -45421,33 +45418,33 @@ figure {
   }
 }
 
-.room2-other__row_1 {
+.room2-other__row-1 {
   gap: 12px;
   display: flex;
   margin-bottom: 12px;
 }
 
-.room2-other__row_1 img {
+.room2-other__row-1 img {
   max-height: 144px;
 }
 
 @media screen and (min-width: 48em) {
-  .room2-other__row_1 {
+  .room2-other__row-1 {
     margin-bottom: 0;
   }
 }
 
-.room2-other__row_2 {
+.room2-other__row-2 {
   gap: 12px;
   display: flex;
 }
 
-.room2-other__row_2 img {
+.room2-other__row-2 img {
   max-height: 112px;
 }
 
 @media screen and (min-width: 48em) {
-  .room2-other__row_2 img {
+  .room2-other__row-2 img {
     max-height: 144px;
   }
 }
@@ -45734,10 +45731,6 @@ figure {
   }
 }
 
-.stats-bars {
-  margin-bottom: 66px;
-}
-
 .stats-icon {
   max-height: 22px;
 }
@@ -45826,6 +45819,7 @@ figure {
 .progressbar {
   gap: 29px;
   display: flex;
+  margin-bottom: 66px;
 }
 
 @media screen and (min-width: 79.375em) {
@@ -45864,7 +45858,7 @@ figure {
   font-weight: 700;
 }
 
-.progressbar__description {
+.progressbar__text {
   position: absolute;
   left: 50%;
   min-width: 10ch;
@@ -45878,7 +45872,7 @@ figure {
 }
 
 @media screen and (min-width: 79.375em) {
-  .progressbar__description {
+  .progressbar__text {
     top: 86px;
   }
 }
