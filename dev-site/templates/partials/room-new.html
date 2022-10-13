@@ -97,31 +97,31 @@
                         </div>
                     </div>
                     <div class="room2-links">
-                        <div class="room2-links__item">
+                        <a href="#room2__info-link" class="room2-links__item">
                             <svg class="room2-links__icon room2-links__icon--info">
                                 <use href="/nimg/tmpimg/icons-room.svg#icon-info" />
                             </svg>
                             <span>
                                 Информация <span class="room2_full-text"> о покер руме</span>
                             </span>
-                        </div>
-                        <div class="room2-links__item">
+                        </a>
+                        <a href="#room2__testimonials-link" class="room2-links__item">
                             <svg class="room2-links__icon room2-links__icon--testimonials">
                                 <use href="/nimg/tmpimg/icons-room.svg#icon-testimonials" />
                             </svg>
                             <span>
                                 Отзывы <span class="room2_full-text"> пользователей</span>
                             </span>
-                        </div>
+                        </a>
 
-                        <div class="room2-links__item">
+                        <a href="#room2__review-link" class="room2-links__item">
                             <svg class="room2-links__icon room2-links__icon--lines">
                                 <use href="/nimg/tmpimg/icons-room.svg#icon-lines" />
                             </svg>
                             <span>
                                 Обзор <span class="room2_full-text"> авторов GipsyTeam</span>
                             </span>
-                        </div>
+                        </a>
 
                     </div>
                 </div>
@@ -129,7 +129,7 @@
             <div class="room2-stats">
                 <div class="room2-container">
                     <div class="room2-description-inner room2-section-inner">
-                        <div class="room2-stats__title room2_title">
+                        <div class="room2-stats__title room2__title">
                             <h3>Особенности Покердома</h3>
                         </div>
                         <div class="room2-stats__text-items-wrapper">
@@ -292,7 +292,7 @@
             <div class="room2-description">
                 <div class="room2-container">
                     <div class="room2-description-inner room2-section-inner">
-                        <div class="room2-description__title room2_title">
+                        <div id="room2__info-link" class="room2-description__title room2__title">
                             <h3>Описание и регистрация</h3>
                         </div>
                         <div class="room2-description__content">
@@ -536,7 +536,7 @@
             <div class="room2-plus">
                 <div class="room2-container">
                     <div class="room2-plus-inner room2-section-inner">
-                        <div class="room2-plus__title room2_title" id="room2-review__link-plus">
+                        <div class="room2-plus__title room2__title" id="room2-review__link-plus">
                             <h3>Плюсы и минусы</h3>
                         </div>
                         <div class="room2-plus__wrapper">
@@ -575,7 +575,7 @@
             <div class="room2-traffic">
                 <div class="room2-container">
                     <div class="room2-traffic-inner room2-section-inner">
-                        <div class="room2-traffic__title room2_title">
+                        <div class="room2-traffic__title room2__title">
                             <h3>Траффик</h3>
                         </div>
                         <div class="room2-traffic-items">
@@ -618,7 +618,7 @@
             <div class="room2-other">
                 <div class="room2-container">
                     <div class="room2-other-inner room2-section-inner">
-                        <div class="room2-other__title room2_title">
+                        <div class="room2-other__title room2__title">
                             <h3>Прочее</h3>
                         </div>
                         <div class="room2-other__content">
@@ -742,7 +742,7 @@
                         </div>
                         <div class="testimonials-header__bottom">
                             <div class="testimonials-header__feedback">
-                                <a href="#" class="testimonials-header__item testimonials-header__item_dark">
+                                <a href="#" id="room2__testimonials-link" class="testimonials-header__item testimonials-header__item_dark">
                                     <span>Все отзывы</span>
                                     <svg class="testimonials-arrow">
                                         <use href="/nimg/tmpimg/icons-room.svg#icon-arrow-white" />
@@ -898,7 +898,7 @@
         </section>
         <section class="room2-review">
             <div class="room2-review__header">
-                <div class="room2-review__header-title">
+                <div id="room2__review-link" class="room2-review__header-title">
                     Обзор от авторов GipsyTeam
                 </div>
                 <div class="room2-review__author-wrap">
@@ -1230,7 +1230,7 @@
         <div class="room2-description room2-description_bottom">
             <div class="room2-container">
                 <div class="room2-description-inner room2-section-inner">
-                    <div class="room2-description__title room2_title room2-description__title_bottom">
+                    <div class="room2-description__title room2__title room2-description__title_bottom">
                         <h3>Регистрация</h3>
                     </div>
                     <div class="room2-description__content">
@@ -1367,6 +1367,7 @@
                             </svg>
                         </div>
                     </div>
+                        
                     <svg class="room2-support__separator">
                         <use href="/nimg/tmpimg/icons-room.svg#icon-rhombus" />
                     </svg>
@@ -1438,14 +1439,6 @@
                         linkItemsArray.forEach(element => element.classList.remove('room2-review__link_active'))
                         currentActiveLink = linkItemsArray[indexOfContentSection]
                         currentActiveLink.classList.add('room2-review__link_active')
-
-                        // console.log(currentActiveLink.innerText)
-
-                        // console.log(Array.from(items).indexOf(entry.target))
-                        // console.log(entry.target.firstElementChild.innerText)
-
-                    } else {
-                        // button.classList.add('room2-review__next-button_disabled')
                     }
                 })
             });

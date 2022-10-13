@@ -44475,13 +44475,10 @@ figure {
   --room-color12: #4b4b4b;
   --room-color13: #d7dce8;
   --room-color14: #a9b0c0;
-  scroll-behavior: smooth;
-}
-
-.content_room2 {
   display: flex;
   flex-direction: row;
   background-color: var(--room-color6);
+  scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 79.375em) {
@@ -44491,12 +44488,12 @@ figure {
   }
 }
 
-.room2_title {
+.room2__title {
   display: inline-block;
   color: var(--i-color1, #000);
 }
 
-.room2_title h3 {
+.room2__title h3 {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -44504,7 +44501,7 @@ figure {
 }
 
 @media screen and (min-width: 79.375em) {
-  .room2_title {
+  .room2__title {
     flex-basis: 223px;
     flex-grow: 0;
     flex-shrink: 0;
@@ -44512,7 +44509,7 @@ figure {
 }
 
 @media screen and (min-width: 79.375em) {
-  .room2_title h3 {
+  .room2__title h3 {
     max-width: 14ch;
   }
 }
@@ -44571,6 +44568,12 @@ figure {
   .room2-header__top {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-header__top {
+    padding-bottom: 20px;
   }
 }
 
@@ -44667,6 +44670,7 @@ figure {
 
 .room2-links {
   display: flex;
+  position: relative;
   justify-content: space-between;
 }
 
@@ -44682,6 +44686,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-2-color, #000);
 }
 
 .room2-links__icon {
@@ -44825,8 +44830,9 @@ figure {
   position: absolute;
   bottom: 0;
   left: 50%;
+  max-width: 209px;
   height: 9px;
-  transform: translateX(-50%);
+  transform: translateX(-52%);
 }
 
 .room2-support__separator-bottom {
@@ -44908,6 +44914,14 @@ figure {
   background-image: url(../nimg/support-team.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-support-avatar {
+    width: 106px;
+    height: 106px;
+    border: 10px solid var(--room-color3);
+  }
 }
 
 .room2-support-avatar__icon {
@@ -45114,19 +45128,9 @@ figure {
   }
 }
 
-.room2-description__title_bottom {
+.room2-description_bottom {
   margin-top: 17px;
   margin-bottom: 13px;
-}
-
-@media screen and (min-width: 79.375em) {
-  .room2-description__title_bottom {
-    display: none;
-  }
-}
-
-.room2-description_bottom {
-  background-color: inherit;
 }
 
 .room2-banner__item {
