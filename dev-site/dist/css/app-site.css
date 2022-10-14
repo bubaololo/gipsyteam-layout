@@ -45103,7 +45103,7 @@ figure {
 }
 
 .room2-description {
-  padding-bottom: 24px;
+  padding: 0 24px 24px 24px;
   background-color: var(--room-color4);
   color: var(--room-color10);
   font-size: 15px;
@@ -45119,7 +45119,7 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-description {
-    padding: 51px 0 60px;
+    padding: 51px 60px 60px 60px;
   }
 }
 
