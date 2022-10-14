@@ -4,7 +4,9 @@
 // font-family: $condensed-font;
 // var(--room-accent, #e51e25)
 // var(--i-color1, #000)
-
+// * {
+//   border: 1px solid red;
+// }
 .content_room2 {
   --room-accent: #e51e25;
   --room-accent2: #e31f26;
@@ -33,6 +35,12 @@
   background-color: var(--room-color6);
 }
 
+.room2-container {
+  padding: 0 24px;
+  @include breakpoint(xxxlarge) {
+    padding: 0 60px;
+  }
+}
 .room2__title {
   display: inline-block;
   h3 {
@@ -61,12 +69,6 @@
   }
 }
 
-.room2-container {
-  padding: 0 24px;
-  @include breakpoint(xxxlarge) {
-    padding: 0 60px;
-  }
-}
 .room2-main {
   flex-shrink: 1;
   flex-grow: 1;
@@ -79,9 +81,14 @@
   margin-bottom: 63px;
 }
 .room2-header {
-  padding: 0 0 20px 0;
+  padding: 0 24px 20px 24px;
   border-bottom: 1px solid var(--room-color7);
   background-color: var(--room-color3);
+  max-width: 100vw;
+  @include breakpoint(xxxlarge) {
+    padding: 0 60px;
+    padding-bottom: 16px;
+  }
   &__top {
     display: flex;
     flex-direction: column;
@@ -91,9 +98,7 @@
     @include breakpoint(large) {
       flex-direction: row;
       justify-content: space-between;
-    }
-    @include breakpoint(xxxlarge) {
-      padding-bottom: 28px;
+      padding-bottom: 25px;
     }
   }
 }
@@ -195,10 +200,14 @@
     }
   }
 }
+
 .room2-stats {
   background-color: var(--room-color4);
-  padding: 42px 0 44px;
+  padding: 42px 24px 44px 24px;
   border-bottom: 1px solid var(--room-color7);
+  @include breakpoint(xxxlarge) {
+    padding: 42px 60px 44px 60px;
+  }
   &__title {
     margin-bottom: 32px;
   }
@@ -214,35 +223,6 @@
         "stats-item_1 stats-item_2 stats-item_5"
         "stats-item_3 stats-item_4 stats-item_6"
         "stats-item_7 stats-item_8 .";
-    }
-  }
-
-  .room2-stats__item {
-    @include breakpoint(large) {
-      &_1 {
-        grid-area: stats-item_1;
-      }
-      &_2 {
-        grid-area: stats-item_2;
-      }
-      &_3 {
-        grid-area: stats-item_3;
-      }
-      &_4 {
-        grid-area: stats-item_4;
-      }
-      &_5 {
-        grid-area: stats-item_5;
-      }
-      &_6 {
-        grid-area: stats-item_6;
-      }
-      &_7 {
-        grid-area: stats-item_7;
-      }
-      &_8 {
-        grid-area: stats-item_8;
-      }
     }
   }
   &__main-text {
@@ -276,6 +256,37 @@
     align-items: center;
     margin-bottom: 13px;
   }
+
+}
+.room2-stats__item {
+  @include breakpoint(large) {
+    &_1 {
+      grid-area: stats-item_1;
+    }
+    &_2 {
+      grid-area: stats-item_2;
+    }
+    &_3 {
+      grid-area: stats-item_3;
+    }
+    &_4 {
+      grid-area: stats-item_4;
+    }
+    &_5 {
+      grid-area: stats-item_5;
+    }
+    &_6 {
+      grid-area: stats-item_6;
+    }
+    &_7 {
+      grid-area: stats-item_7;
+    }
+    &_8 {
+      grid-area: stats-item_8;
+    }
+  }
+
+
 }
 .room2-support {
   background-color: var(--room-color6);

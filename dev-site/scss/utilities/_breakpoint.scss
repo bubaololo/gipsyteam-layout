@@ -1,5 +1,16 @@
 // use these with the `breakpoint()` mixin to quickly create media queries
-$breakpoints: (small: 0, xsmall: 23.4375em, xxsmall: 30em, medium: 40em, large: 48em, xlarge: 64em, xxlarge: 70.625em, xxdlarge: 78.4375em, xxxlarge: 79.375em, xxxxlarge: 95.9375em) !default;
+$breakpoints: (
+  small: 0,
+  xsmall: 23.4375em,
+  xxsmall: 30em,
+  medium: 40em,
+  large: 48em,
+  xlarge: 64em,
+  xxlarge: 70.625em,
+  xxdlarge: 78.4375em,
+  xxxlarge: 79.375em,
+  xxxxlarge: 95.9375em,
+) !default;
 @mixin breakpoint($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media screen and (min-width: map-get($breakpoints, $breakpoint)) {

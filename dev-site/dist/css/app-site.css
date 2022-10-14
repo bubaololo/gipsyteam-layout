@@ -44488,6 +44488,16 @@ figure {
   }
 }
 
+.room2-container {
+  padding: 0 24px;
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-container {
+    padding: 0 60px;
+  }
+}
+
 .room2__title {
   display: inline-block;
   color: var(--i-color1, #000);
@@ -44524,16 +44534,6 @@ figure {
   }
 }
 
-.room2-container {
-  padding: 0 24px;
-}
-
-@media screen and (min-width: 79.375em) {
-  .room2-container {
-    padding: 0 60px;
-  }
-}
-
 .room2-main {
   flex-grow: 1;
   flex-shrink: 1;
@@ -44551,9 +44551,17 @@ figure {
 }
 
 .room2-header {
-  padding: 0 0 20px 0;
+  max-width: 100vw;
+  padding: 0 24px 20px 24px;
   border-bottom: 1px solid var(--room-color7);
   background-color: var(--room-color3);
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-header {
+    padding: 0 60px;
+    padding-bottom: 16px;
+  }
 }
 
 .room2-header__top {
@@ -44568,12 +44576,7 @@ figure {
   .room2-header__top {
     flex-direction: row;
     justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 79.375em) {
-  .room2-header__top {
-    padding-bottom: 28px;
+    padding-bottom: 25px;
   }
 }
 
@@ -44707,9 +44710,15 @@ figure {
 }
 
 .room2-stats {
-  padding: 42px 0 44px;
+  padding: 42px 24px 44px 24px;
   border-bottom: 1px solid var(--room-color7);
   background-color: var(--room-color4);
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-stats {
+    padding: 42px 60px 44px 60px;
+  }
 }
 
 .room2-stats__title {
@@ -44728,33 +44737,6 @@ figure {
   .room2-stats__grid {
     grid-template-areas: "stats-item_1 stats-item_2 stats-item_5" "stats-item_3 stats-item_4 stats-item_6" "stats-item_7 stats-item_8 .";
     grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media screen and (min-width: 48em) {
-  .room2-stats .room2-stats__item_1 {
-    grid-area: stats-item_1;
-  }
-  .room2-stats .room2-stats__item_2 {
-    grid-area: stats-item_2;
-  }
-  .room2-stats .room2-stats__item_3 {
-    grid-area: stats-item_3;
-  }
-  .room2-stats .room2-stats__item_4 {
-    grid-area: stats-item_4;
-  }
-  .room2-stats .room2-stats__item_5 {
-    grid-area: stats-item_5;
-  }
-  .room2-stats .room2-stats__item_6 {
-    grid-area: stats-item_6;
-  }
-  .room2-stats .room2-stats__item_7 {
-    grid-area: stats-item_7;
-  }
-  .room2-stats .room2-stats__item_8 {
-    grid-area: stats-item_8;
   }
 }
 
@@ -44791,6 +44773,33 @@ figure {
   display: flex;
   align-items: center;
   margin-bottom: 13px;
+}
+
+@media screen and (min-width: 48em) {
+  .room2-stats__item_1 {
+    grid-area: stats-item_1;
+  }
+  .room2-stats__item_2 {
+    grid-area: stats-item_2;
+  }
+  .room2-stats__item_3 {
+    grid-area: stats-item_3;
+  }
+  .room2-stats__item_4 {
+    grid-area: stats-item_4;
+  }
+  .room2-stats__item_5 {
+    grid-area: stats-item_5;
+  }
+  .room2-stats__item_6 {
+    grid-area: stats-item_6;
+  }
+  .room2-stats__item_7 {
+    grid-area: stats-item_7;
+  }
+  .room2-stats__item_8 {
+    grid-area: stats-item_8;
+  }
 }
 
 .room2-support {
