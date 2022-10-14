@@ -45328,8 +45328,26 @@ figure {
   }
 }
 
+.room2-traffic {
+  padding: 0 24px 25px 24px;
+  border-bottom: 1px solid var(--room-color7);
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-traffic {
+    padding: 0 60px 44px 60px;
+  }
+}
+
 .room2-traffic__title {
   margin: 27px 0;
+}
+
+@media screen and (min-width: 48em) {
+  .room2-traffic__title {
+    margin-top: 36px;
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (min-width: 79.375em) {
@@ -45356,17 +45374,6 @@ figure {
   line-height: 21px;
 }
 
-.room2-traffic-inner {
-  padding-bottom: 25px;
-  border-bottom: 1px solid var(--room-color7);
-}
-
-@media screen and (min-width: 48em) {
-  .room2-traffic-inner {
-    padding-bottom: 44px;
-  }
-}
-
 .room2-traffic-items {
   row-gap: 21px;
   display: grid;
@@ -45382,7 +45389,7 @@ figure {
   }
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 79.375em) {
   .room2-traffic-items {
     gap: 74px;
     margin-top: 52px;

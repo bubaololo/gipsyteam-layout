@@ -686,8 +686,17 @@
   }
 }
 .room2-traffic {
+  padding: 0 24px 25px 24px;
+  border-bottom: 1px solid var(--room-color7);
+  @include breakpoint(xxxlarge) {
+    padding: 0 60px 44px 60px;
+  }
   &__title {
     margin: 27px 0;
+    @include breakpoint(large) {
+      margin-top: 36px;
+      margin-bottom: 24px;
+    }
     @include breakpoint(xxxlarge) {
       margin-top: 52px;
       margin-bottom: 0;
@@ -709,13 +718,7 @@
     color: var(--room-color2);
   }
 }
-.room2-traffic-inner {
-  border-bottom: 1px solid var(--room-color7);
-  padding-bottom: 25px;
-  @include breakpoint(large) {
-    padding-bottom: 44px;
-  }
-}
+
 .room2-traffic-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -725,7 +728,7 @@
     display: flex;
     gap: 90px;
   }
-  @include breakpoint(large) {
+  @include breakpoint(xxxlarge) {
     gap: 74px;
     margin-top: 52px;
   }
