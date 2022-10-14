@@ -44808,25 +44808,23 @@ figure {
 }
 
 @media screen and (min-width: 79.375em) {
-  .room2-support .room2-container {
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 48em) {
-  .room2-support {
-    padding: 27px 0;
-  }
-}
-
-@media screen and (min-width: 79.375em) {
   .room2-support {
     margin-bottom: 30px;
     padding: 0;
   }
 }
 
+.room2-support_mobile {
+  padding: 0 24px;
+}
+
 @media screen and (min-width: 48em) {
+  .room2-support_mobile {
+    padding: 27px;
+  }
+}
+
+@media screen and (min-width: 79.375em) {
   .room2-support_mobile {
     display: none;
   }
@@ -45183,6 +45181,7 @@ figure {
 }
 
 .room2-banners {
+  padding: 0 24px;
   background-color: var(--room-color6);
 }
 
@@ -45190,11 +45189,6 @@ figure {
   .room2-banners {
     position: sticky;
     top: 35px;
-  }
-}
-
-@media screen and (min-width: 79.375em) {
-  .room2-banners .room2-container {
     padding: 0;
   }
 }
@@ -45232,6 +45226,19 @@ figure {
   }
 }
 
+.room2-plus {
+  padding: 0 24px 16px 24px;
+  border-bottom: 1px solid var(--room-color7);
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-plus {
+    padding: 0 60px;
+    padding: 49px 60px 52px 60px;
+    border-top: 1px solid var(--room-color7);
+  }
+}
+
 .room2-plus__wrapper {
   color: var(--room-color11);
   font-size: 15px;
@@ -45252,13 +45259,20 @@ figure {
 }
 
 .room2-plus__title {
-  margin-top: 39px;
-  margin-bottom: 19px;
+  margin-top: 32px;
+  margin-bottom: 14px;
+}
+
+@media screen and (min-width: 48em) {
+  .room2-plus__title {
+    margin-top: 43px;
+    margin-bottom: 26px;
+  }
 }
 
 @media screen and (min-width: 79.375em) {
   .room2-plus__title {
-    margin: 0;
+    margin: -4px 0 0 0;
   }
 }
 
@@ -45269,7 +45283,7 @@ figure {
 }
 
 .room2-plus__list_pros {
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .room2-plus__list_cons {

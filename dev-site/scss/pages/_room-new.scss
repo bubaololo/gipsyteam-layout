@@ -256,7 +256,6 @@
     align-items: center;
     margin-bottom: 13px;
   }
-
 }
 .room2-stats__item {
   @include breakpoint(large) {
@@ -285,26 +284,21 @@
       grid-area: stats-item_8;
     }
   }
-
-
 }
 .room2-support {
   background-color: var(--room-color6);
   position: relative;
-  .room2-container {
-    @include breakpoint(xxxlarge) {
-      padding: 0;
-    }
-  }
-  @include breakpoint(large) {
-    padding: 27px 0;
-  }
+
   @include breakpoint(xxxlarge) {
     padding: 0;
     margin-bottom: 30px;
   }
   &_mobile {
+    padding: 0 24px;
     @include breakpoint(large) {
+      padding: 27px;
+    }
+    @include breakpoint(xxxlarge) {
       display: none;
     }
   }
@@ -531,7 +525,7 @@
   line-height: 22px;
   padding: 0 24px 24px 24px;
   color: var(--room-color10);
-  
+
   @include breakpoint(large) {
     font-size: 17px;
     line-height: 27px;
@@ -584,16 +578,13 @@
 }
 .room2-banners {
   background-color: var(--room-color6);
-
+  padding: 0 24px;
   @include breakpoint(xxxlarge) {
     position: sticky;
     top: 35px;
+    padding: 0;
   }
-  .room2-container {
-    @include breakpoint(xxxlarge) {
-      padding: 0;
-    }
-  }
+
   &_mobile {
     border-top: 1px solid var(--room-color7);
     border-bottom: 1px solid var(--room-color7);
@@ -618,6 +609,13 @@
   }
 }
 .room2-plus {
+  border-bottom: 1px solid var(--room-color7);
+  padding: 0 24px 16px 24px;
+  @include breakpoint(xxxlarge) {
+    padding: 0 60px;
+    border-top: 1px solid var(--room-color7);
+    padding: 49px 60px 52px 60px;
+  }
   &__wrapper {
     font-size: 15px;
     line-height: 22px;
@@ -631,10 +629,14 @@
     }
   }
   &__title {
-    margin-top: 39px;
-    margin-bottom: 19px;
+    margin-top: 32px;
+    margin-bottom: 14px;
+    @include breakpoint(large) {
+      margin-top: 43px;
+      margin-bottom: 26px;
+    }
     @include breakpoint(xxxlarge) {
-      margin: 0;
+      margin: -4px 0 0 0;
     }
   }
   &__list {
@@ -642,7 +644,7 @@
       max-width: 300px;
     }
     &_pros {
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
     &_cons {
       margin-bottom: 34px;
