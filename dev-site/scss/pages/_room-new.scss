@@ -79,6 +79,12 @@
 .room2-info {
   background-color: var(--room-color4);
   margin-bottom: 63px;
+  @include breakpoint(large) {
+    margin-bottom: 73px;
+  }
+  @include breakpoint(xxxlarge) {
+    margin-bottom: 82px;
+  }
 }
 .room2-header {
   padding: 0 24px 20px 24px;
@@ -594,7 +600,7 @@
   }
 }
 .room2-banners-inner {
-  padding: 44px 0 36px;
+  padding: 39px 0 11px;
   @include breakpoint(large) {
     display: flex;
     padding: 54px 0 52px;
@@ -636,7 +642,7 @@
       margin-bottom: 26px;
     }
     @include breakpoint(xxxlarge) {
-      margin: -4px 0 0 0;
+      margin: 0;
     }
   }
   &__list {
@@ -698,7 +704,7 @@
       margin-bottom: 24px;
     }
     @include breakpoint(xxxlarge) {
-      margin-top: 52px;
+      margin-top: 49px;
       margin-bottom: 0;
     }
   }
@@ -735,15 +741,19 @@
 }
 
 .room2-other {
-  padding-bottom: 30px;
+  padding: 0 24px 30px 24px;
   @include breakpoint(xxxlarge) {
-    padding-bottom: 60px;
+    padding: 0 60px 60px 60px;
   }
   &__title {
     margin-top: 27px;
-    margin-bottom: 12px;
+    margin-bottom: 17px;
+    @include breakpoint(large) {
+      margin-top: 38px;
+      margin-bottom: 23px;
+    }
     @include breakpoint(xxxlarge) {
-      margin-top: 49px;
+      margin-top: 43px;
       margin-bottom: 0;
     }
   }
@@ -827,7 +837,7 @@
   }
 }
 
-.room2-section-inner {
+.room2-section {
   @include breakpoint(xxxlarge) {
     display: flex;
   }
@@ -1181,7 +1191,10 @@
   height: 9px;
 }
 .room2-testimonials {
-  margin-bottom: 53px;
+  padding: 0 24px 53px 24px;
+  @include breakpoint(xxxlarge) {
+    padding: 0 0 53px 0;
+  }
 }
 .testimonials {
   &-header {
@@ -1415,7 +1428,7 @@
   }
 }
 .testimonials-card {
-  padding: 20px 15px;
+  padding: 18px 22px 20px 15px;
   border-radius: 10px;
   display: flex;
   gap: 8px;
