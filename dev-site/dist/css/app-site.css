@@ -46560,7 +46560,9 @@ figure {
   position: fixed;
   bottom: 16px;
   left: 50%;
+  max-width: calc(100% - 48px);
   padding: 13px 30px 13px 15px;
+  overflow: hidden;
   transform: translateX(-50%);
   border: 1px solid var(--room-accent);
   border-radius: 30px;
@@ -46583,6 +46585,15 @@ figure {
 .room2-review__next-button_disabled {
   opacity: 0;
   pointer-events: none;
+}
+
+.room2-review__button-fade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
 }
 
 .room2-review__arrow-icon {

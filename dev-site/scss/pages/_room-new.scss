@@ -1665,6 +1665,8 @@
     border: 1px solid var(--room-accent);
     transition: all 0.5s;
     opacity: 1;
+    max-width: calc(100% - 48px);
+    overflow: hidden;
     @include breakpoint(large) {
       display: none;
     }
@@ -1672,6 +1674,14 @@
       opacity: 0;
       pointer-events: none;
     }
+  }
+  &__button-fade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, #FFF 16%);
   }
   &__arrow-icon {
     position: absolute;
