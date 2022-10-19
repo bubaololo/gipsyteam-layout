@@ -44500,14 +44500,6 @@ figure {
 
 .room2__title {
   display: inline-block;
-  color: var(--i-color1, #000);
-}
-
-.room2__title h3 {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 26px;
 }
 
 @media screen and (min-width: 79.375em) {
@@ -44516,6 +44508,14 @@ figure {
     flex-grow: 0;
     flex-shrink: 0;
   }
+}
+
+.room2__title h3 {
+  color: var(--i-color1, #000);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
 }
 
 @media screen and (min-width: 79.375em) {
@@ -44735,7 +44735,30 @@ figure {
 }
 
 .room2-stats__title {
+  display: inline-block;
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-stats__title {
+    flex-basis: 223px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.room2-stats__title h3 {
+  color: var(--i-color1, #000);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-stats__title h3 {
+    max-width: 14ch;
+  }
 }
 
 .room2-stats__grid {
@@ -45136,13 +45159,31 @@ figure {
 }
 
 .room2-description__title {
+  display: inline-block;
   margin-top: 44px;
   margin-bottom: 19px;
 }
 
 @media screen and (min-width: 79.375em) {
   .room2-description__title {
+    flex-basis: 223px;
+    flex-grow: 0;
+    flex-shrink: 0;
     margin: 0;
+  }
+}
+
+.room2-description__title h3 {
+  color: var(--i-color1, #000);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-description__title h3 {
+    max-width: 14ch;
   }
 }
 
@@ -45273,6 +45314,7 @@ figure {
 }
 
 .room2-plus__title {
+  display: inline-block;
   margin-top: 32px;
   margin-bottom: 14px;
 }
@@ -45286,7 +45328,24 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-plus__title {
+    flex-basis: 223px;
+    flex-grow: 0;
+    flex-shrink: 0;
     margin: 0;
+  }
+}
+
+.room2-plus__title h3 {
+  color: var(--i-color1, #000);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-plus__title h3 {
+    max-width: 14ch;
   }
 }
 
@@ -45357,6 +45416,7 @@ figure {
 }
 
 .room2-traffic__title {
+  display: inline-block;
   margin: 27px 0;
 }
 
@@ -45369,8 +45429,25 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-traffic__title {
+    flex-basis: 223px;
+    flex-grow: 0;
+    flex-shrink: 0;
     margin-top: 49px;
     margin-bottom: 0;
+  }
+}
+
+.room2-traffic__title h3 {
+  color: var(--i-color1, #000);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-traffic__title h3 {
+    max-width: 14ch;
   }
 }
 
@@ -45425,6 +45502,7 @@ figure {
 }
 
 .room2-other__title {
+  display: inline-block;
   margin-top: 27px;
   margin-bottom: 17px;
 }
@@ -45438,8 +45516,25 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-other__title {
+    flex-basis: 223px;
+    flex-grow: 0;
+    flex-shrink: 0;
     margin-top: 43px;
     margin-bottom: 0;
+  }
+}
+
+.room2-other__title h3 {
+  color: var(--i-color1, #000);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-other__title h3 {
+    max-width: 14ch;
   }
 }
 

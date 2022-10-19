@@ -128,7 +128,7 @@
             <div class="room2-stats ">
 
 
-                <div class="room2-stats__title room2__title">
+                <div class="room2-stats__title">
                     <h3>Особенности Покердома</h3>
                 </div>
                 <div class="room2-stats__grid">
@@ -287,7 +287,7 @@
             </div>
             <div class="room2-description">
 
-                <div id="room2__info-link" class="room2-description__title room2__title">
+                <div id="room2__info-link" class="room2-description__title">
                     <h3>Описание и регистрация</h3>
                 </div>
                 <div class="room2-description__content">
@@ -527,7 +527,7 @@
             <div class="room2-plus">
 
 
-                <div class="room2-plus__title room2__title" id="room2-review__link-plus">
+                <div class="room2-plus__title" id="room2-review__link-plus">
                     <h3>Плюсы и минусы</h3>
                 </div>
                 <div class="room2-plus__wrapper">
@@ -566,7 +566,7 @@
             <div class="room2-traffic">
 
 
-                <div class="room2-traffic__title room2__title">
+                <div class="room2-traffic__title">
                     <h3>Траффик</h3>
                 </div>
                 <div class="room2-traffic-items">
@@ -608,7 +608,7 @@
             </div>
             <div class="room2-other">
 
-                <div class="room2-other__title room2__title">
+                <div class="room2-other__title">
                     <h3>Прочее</h3>
                 </div>
                 <div class="room2-other__content">
@@ -1203,7 +1203,7 @@
         </div>
         <div class="room2-description room2-description_bottom room2-section">
 
-            <div class="room2-description__title room2__title room2-description__title_bottom">
+            <div class="room2-description__title room2-description__title_bottom">
                 <h3>Регистрация</h3>
             </div>
             <div class="room2-description__content">
@@ -1389,6 +1389,7 @@
             closeBtnInside: false,
             fixedContentPos: true
         });
+
         window.onload = function () {
             review();
         };
@@ -1396,6 +1397,7 @@
         window.onresize = function () {
             review();
         };
+
         // add notify element
         document.querySelector('html').style.scrollBehavior = 'smooth';
         let notify = document.createElement("div");
@@ -1404,32 +1406,7 @@
         notify.classList.add('room2-notify');
         document.querySelector('body').appendChild(notify);
 
-
         const titleItems = document.querySelectorAll('.room2-review__content h2');
-            let parent = document.querySelector('.room2-review__content')
-
-        // for (const entry of titleItems.entries()) {
-        //     index = entry[0];
-        //     node = entry[1];
-        //     // let openTag = document.createTextNode(" ");
-        //     var fragment = document.createDocumentFragment();
-        //     // fragment.innerText = "</div> <div class='room2__review-section'>";
-        //     console.log (fragment)
-        //     // openTag.innerHTML="</div> <div class='room2__review-section'>";
-        //         // let closeTag = document.createTextNode('close tag');
-        //         if ((index !== 0) ) {
-                    
-        //             // parent.insertBefore(openTag,node)
-        //             // node.insertAdjacentHTML('beforebegin', "</div> <div class='room2__review-section'>");
-        //             node.before(fragment);
-        //         }
-                
-        //     }
-        //     reviewContent = document.querySelector('.room2-review__content').innerHTML;
-        //     newReviewContent = "<div class='room2__review-section'>" + reviewContent + "</div>";
-        //     // console.log(newReviewContent);
-        //     document.querySelector('.room2-review__content').innerHTML = newReviewContent;
-
 
         function review() {
             if (window.matchMedia("(min-width: 768px)").matches) {
@@ -1452,7 +1429,6 @@
                 const titleItemsArray = Array.from(titleItems)
                 itemsObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
-
                         if ((entry.isIntersecting == true)) { }
                         let oldScrollTopPosition = 0;
                         window.onscroll = () => {
@@ -1466,9 +1442,7 @@
                                 if ((indexOfContentSection != 0) && (indexOfContentSection < (titleItemsArray.length - 1))) {
                                     if (entry.isIntersecting == true && (titleItemsArray[indexOfContentSection + 1] !== undefined)) {
                                         next = titleItemsArray[indexOfContentSection + 1].innerText
-
                                         buttonText.innerText = next
-                                        
                                         button.addEventListener('click', () => {
                                             titleItemsArray[indexOfContentSection + 1].scrollIntoView({ behavior: "smooth", block: "start" })
                                         })
@@ -1479,8 +1453,6 @@
                                 }
                             }
                         }
-
-
                     })
                 });
                 titleItems.forEach(item => {
@@ -1498,7 +1470,6 @@
         const promoCode = 'GT2022FG';
         const promoNotify = document.querySelector('.room2-notify');
 
-
         promoWrappers.forEach(promoWrapper => promoWrapper.addEventListener('click', () => {
             navigator.clipboard.writeText(promoCode);
             promoNotify.classList.add('room2-notify_active');
@@ -1507,8 +1478,6 @@
             }, 1000)
         })
         )
-
-
 
     </script>
 
