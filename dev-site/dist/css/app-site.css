@@ -44729,6 +44729,7 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-stats {
+    display: flex;
     padding: 42px 60px 44px 60px;
   }
 }
@@ -45129,6 +45130,7 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-description {
+    display: flex;
     padding: 51px 60px 60px 60px;
   }
 }
@@ -45245,6 +45247,7 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-plus {
+    display: flex;
     padding: 0 60px;
     padding: 49px 60px 52px 60px;
     border-top: 1px solid var(--room-color7);
@@ -45252,7 +45255,6 @@ figure {
 }
 
 .room2-plus__wrapper {
-  color: var(--room-color11);
   font-size: 15px;
   line-height: 22px;
 }
@@ -45306,6 +45308,8 @@ figure {
   position: relative;
   margin-bottom: 10px;
   padding-left: 24px;
+  color: var(--room-color11);
+  opacity: .85;
 }
 
 .room2-plus__list-item::before {
@@ -45347,6 +45351,7 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-traffic {
+    display: flex;
     padding: 0 60px 44px 60px;
   }
 }
@@ -45414,6 +45419,7 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-other {
+    display: flex;
     padding: 0 60px 60px 60px;
   }
 }
@@ -46591,9 +46597,9 @@ figure {
   position: absolute;
   top: 0;
   right: 0;
-  width: 20px;
+  width: 32px;
   height: 100%;
-  background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+  background: linear-gradient(to right, transparent 0%, #fff 16%);
 }
 
 .room2-review__arrow-icon {
