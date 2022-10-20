@@ -45060,6 +45060,12 @@ figure {
   }
 }
 
+@media screen and (min-width: 48em) {
+  .room2-support-links_mobile-tablet {
+    grid-template-areas: "supp-chat supp-tg supp-more" "supp supp-skype ." "supp-viber supp-whatsapp ." "supp-discord . .";
+  }
+}
+
 .room2-support-links_mobile-bottom {
   margin-bottom: 21px;
 }
@@ -45103,6 +45109,28 @@ figure {
   grid-area: supp-skype;
 }
 
+.room2-support-links__item_discord {
+  grid-area: supp-discord;
+}
+
+.room2-support-links__item_viber {
+  grid-area: supp-viber;
+}
+
+.room2-support-links__item_whatsapp {
+  grid-area: supp-whatsapp;
+}
+
+@media screen and (min-width: 48em) {
+  .room2-support-links__item_tablet {
+    display: none;
+  }
+}
+
+.room2-support-links__item_more {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 48em) {
   .room2-support-links__item_more {
     grid-area: supp-more;
@@ -45128,12 +45156,40 @@ figure {
   width: 20px;
 }
 
+.room2-support-links__icon_discord {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.room2-support-links__icon_whatsapp {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.room2-support-links__icon_viber {
+  transform: translateY(-50%) scale(1.2);
+}
+
 .room2-support-links__icon_arrow {
   right: -12px;
   left: auto;
   width: 9px;
   height: 7px;
   transform: translateY(-39%);
+}
+
+.room2-support-links__icon_arrow-open {
+  transform: translateY(-39%) rotate(180deg);
+}
+
+@media screen and (min-width: 48em) {
+  .room2-support-links__icon_arrow-open {
+    transform: translateX(37px) translateY(-39%) rotate(180deg);
+  }
+}
+
+@media screen and (min-width: 79.375em) {
+  .room2-support-links__icon_arrow-open {
+    transform: translateY(-39%) rotate(180deg);
+  }
 }
 
 .room2-description {
@@ -45203,22 +45259,6 @@ figure {
   }
 }
 
-.room2-banner__item_hidden {
-  display: none;
-}
-
-@media screen and (min-width: 48em) {
-  .room2-banner__item_hidden {
-    display: inline-block;
-  }
-}
-
-@media screen and (min-width: 79.375em) {
-  .room2-banner__item_hidden {
-    display: none;
-  }
-}
-
 .room2-banner__image {
   max-width: 221px;
   margin-bottom: 10px;
@@ -45229,6 +45269,7 @@ figure {
 }
 
 .room2-banner__text {
+  max-width: 221px;
   color: var(--i-color1, #000);
   font-size: 15px;
   font-weight: 700;
@@ -45260,14 +45301,17 @@ figure {
 }
 
 .room2-banners-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 39px 0 11px;
 }
 
 @media screen and (min-width: 48em) {
   .room2-banners-inner {
     gap: 24px;
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
     padding: 54px 0 52px;
   }
 }
@@ -45864,7 +45908,7 @@ figure {
   }
 }
 
-.room2-steps__notify-link {
+.room2-steps__notify-phrase {
   color: var(--room-accent);
 }
 

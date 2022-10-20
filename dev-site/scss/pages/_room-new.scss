@@ -465,9 +465,19 @@
       row-gap: 7px;
       margin-left: 36px;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas:
+
+        grid-template-areas:
         "supp-chat supp-tg supp-more"
         "supp supp-skype .";
+    }
+  }
+  &_mobile-tablet {
+    @include breakpoint(large) {
+      grid-template-areas:
+        "supp-chat supp-tg supp-more"
+        "supp supp-skype ."
+        "supp-viber supp-whatsapp ."
+        "supp-discord . .";
     }
   }
   &_mobile-bottom {
@@ -479,6 +489,7 @@
     color: var(--room-accent);
     position: relative;
     padding-left: 32px;
+
     &_mobile {
       display: none;
       @include breakpoint(large) {
@@ -500,7 +511,22 @@
     &_skype {
       grid-area: supp-skype;
     }
+    &_discord {
+      grid-area: supp-discord;
+    }
+    &_viber {
+      grid-area: supp-viber;
+    }
+    &_whatsapp {
+      grid-area: supp-whatsapp;
+    }
+    &_tablet {
+      @include breakpoint(large) {
+        display: none;
+      }
+    }
     &_more {
+      cursor: pointer;
       @include breakpoint(large) {
         grid-area: supp-more;
         padding-left: 0;
@@ -521,12 +547,30 @@
     &_skype {
       width: 20px;
     }
+    &_discord {
+      transform: translateY(-50%) scale(1.2);
+    }
+    &_whatsapp {
+      transform: translateY(-50%) scale(1.2);
+    }
+    &_viber {
+      transform: translateY(-50%) scale(1.2);
+    }
     &_arrow {
       width: 9px;
       height: 7px;
       left: auto;
       right: -12px;
       transform: translateY(-39%);
+    }
+    &_arrow-open {
+      transform: translateY(-39%) rotate(180deg);
+      @include breakpoint(large) {
+        transform: translateX(37px) translateY(-39%) rotate(180deg);
+      }
+      @include breakpoint(xxxlarge) {
+        transform: translateY(-39%) rotate(180deg);
+      }
     }
   }
 }
@@ -579,15 +623,6 @@
     @include breakpoint(large) {
       max-width: 222px;
     }
-    &_hidden {
-      display: none;
-      @include breakpoint(large) {
-        display: inline-block;
-      }
-      @include breakpoint(xxxlarge) {
-        display: none;
-      }
-    }
   }
   &__image {
     max-width: 221px;
@@ -601,6 +636,7 @@
     font-size: 15px;
     line-height: 20px;
     color: var(--i-color1, #000);
+    max-width: 221px;
   }
 }
 .room2-banners {
@@ -622,10 +658,13 @@
 }
 .room2-banners-inner {
   padding: 39px 0 11px;
+  display: flex;
+  justify-content: center;
+flex-direction: column;
+align-items: center;
   @include breakpoint(large) {
-    display: flex;
+    flex-direction: row;
     padding: 54px 0 52px;
-    justify-content: center;
     gap: 24px;
   }
   @include breakpoint(xxxlarge) {
@@ -823,7 +862,7 @@
         max-width: 14ch;
       }
     }
-    }
+  }
 
   &__text-wrapper {
     @include breakpoint(large) {
@@ -1107,7 +1146,7 @@
       );
     }
   }
-  &__notify-link {
+  &__notify-phrase {
     color: var(--room-accent);
   }
 }
@@ -1749,7 +1788,7 @@
     right: 0;
     width: 32px;
     height: 100%;
-    background: linear-gradient(to right, transparent 0%, #FFF 16%);
+    background: linear-gradient(to right, transparent 0%, #fff 16%);
   }
   &__arrow-icon {
     position: absolute;
