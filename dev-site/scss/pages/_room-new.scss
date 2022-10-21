@@ -453,7 +453,6 @@
   gap: 8px;
   @include breakpoint(xxxlarge) {
     margin-top: 0;
-    align-items: center;
     margin-bottom: 23px;
   }
 
@@ -466,7 +465,7 @@
       margin-left: 36px;
       grid-template-columns: 1fr 1fr 1fr;
 
-        grid-template-areas:
+      grid-template-areas:
         "supp-chat supp-tg supp-more"
         "supp supp-skype .";
     }
@@ -533,6 +532,11 @@
         max-width: 3.5ch;
         transform: translateX(-7px);
       }
+      @include breakpoint(xxxlarge) {
+        padding-left: 32px;
+        max-width: unset;
+        transform: translateX(0);
+      }
     }
   }
   &__icon {
@@ -569,7 +573,7 @@
         transform: translateX(37px) translateY(-39%) rotate(180deg);
       }
       @include breakpoint(xxxlarge) {
-        transform: translateY(-39%) rotate(180deg);
+        transform: translateX(0) translateY(-39%) rotate(180deg);
       }
     }
   }
@@ -622,6 +626,7 @@
     margin-bottom: 23px;
     @include breakpoint(large) {
       max-width: 222px;
+      margin: 0;
     }
   }
   &__image {
@@ -660,9 +665,10 @@
   padding: 39px 0 11px;
   display: flex;
   justify-content: center;
-flex-direction: column;
-align-items: center;
+  flex-direction: column;
+  align-items: center;
   @include breakpoint(large) {
+    align-items: flex-start;
     flex-direction: row;
     padding: 54px 0 52px;
     gap: 24px;
@@ -949,7 +955,9 @@ align-items: center;
     display: flex;
   }
 }
-
+#icon-copy {
+  fill: var(--room-accent);
+}
 .room2-steps {
   display: grid;
   max-width: 643px;
@@ -1042,8 +1050,9 @@ align-items: center;
     max-width: 281px;
     cursor: pointer;
     &:hover .room2-steps__copy {
-      opacity: 0.3;
+      opacity: 1;
     }
+
   }
   &__copy {
     position: absolute;
@@ -1054,6 +1063,7 @@ align-items: center;
     opacity: 0;
     transition: all 0.3s;
   }
+
   &__reg-link {
     font-size: 16px;
     line-height: 21px;
@@ -1583,7 +1593,7 @@ align-items: center;
     font-family: $secondary-font;
     font-size: 22px;
     line-height: 17px;
-
+    white-space: nowrap;
     color: var(--room-color5);
     strong {
       color: var(--room-accent);
@@ -1627,9 +1637,11 @@ align-items: center;
   &__header {
     padding: 0 24px;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
     @include breakpoint(large) {
-      display: flex;
-      justify-content: space-between;
       align-items: flex-end;
     }
     @include breakpoint(xxxlarge) {
@@ -1647,11 +1659,9 @@ align-items: center;
     }
   }
   &__author-item {
-    @include breakpoint(large) {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
   &__header-title {
     font-family: $condensed-font;
@@ -1667,19 +1677,15 @@ align-items: center;
   &__author-text {
     display: flex;
     gap: 19px;
-    align-items: flex-end;
-    @include breakpoint(large) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 2px;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
   }
   &__author-wrap {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 16px;
     @include breakpoint(large) {
-      flex-direction: row;
       gap: 35px;
     }
   }
@@ -1696,13 +1702,11 @@ align-items: center;
     line-height: 19px;
   }
   &__author-avatar {
-    @include breakpoint(large) {
-      width: 39px;
-      height: 39px;
-      border-radius: 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   &__main {
     background-color: var(--room-color3);
