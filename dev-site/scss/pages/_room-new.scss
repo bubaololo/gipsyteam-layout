@@ -1,6 +1,7 @@
 .content_room2 {
   --room-accent: #e51e25;
   --room-accent2: #e31f26;
+  --room-accent3: #E50C2C;
   --room-color1: #ced4e3;
   --room-color2: #808080;
   --room-color3: #fff;
@@ -15,6 +16,10 @@
   --room-color12: #4b4b4b;
   --room-color13: #d7dce8;
   --room-color14: #a9b0c0;
+  --room-color15: #989898;
+  --room-color16: #B1B1B1;
+  --room-color17: #D9D9D9;
+  --room-color18: #E0E0E0;
   scroll-behavior: smooth;
 
   display: flex;
@@ -1096,7 +1101,70 @@
       height: 25px;
     }
   }
-
+  &__form {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 18px;
+  }
+  &__input {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
+    color: var(--i-color1, #000);
+    padding: 10px 13px;
+    border-top: 1px solid var(--room-color18);
+    border-left: 1px solid var(--room-color18);
+    border-bottom: 1px solid var(--room-color18);
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+    max-width: 32vw;
+    @include breakpoint(large) {
+      max-width: 175px;
+    }
+    &::placeholder {
+      color: var(--room-color8);
+      font-family: $condensed-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 17px;
+      opacity: 0.5;
+      @include breakpoint(large) {
+        font-family: inherit;
+      }
+    }
+  }
+  &__button {
+    color: var(--room-color16);
+    cursor: not-allowed;
+    line-height: 23px;
+    font-size: 16px;
+    padding: 0 16px;
+    font-weight: 500;
+    border-radius: 0px 3px 3px 0px;
+    background-color: var(--room-color17);
+    border: none;
+    box-shadow: none;
+  }
+  &__button_active {
+    cursor: pointer;
+    background-color: var(--room-accent3);
+    color: var(--room-color3);
+  }
+  &__login {
+    color: var(--i-color1, #000);
+    font-size: 15px;
+    line-height: 22px;
+    opacity: 0.85;
+    @include breakpoint(large) {
+      font-size: 17px;
+      line-height: 27px;
+    }
+    a {
+      display: inline;
+      color: var(--room-accent3);
+      
+    }
+  }
   &__notify {
     display: flex;
     gap: 12px;
