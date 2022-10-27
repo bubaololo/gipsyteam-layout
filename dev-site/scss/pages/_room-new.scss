@@ -1,7 +1,7 @@
 .content_room2 {
   --room-accent: #e51e25;
   --room-accent2: #e31f26;
-  --room-accent3: #E50C2C;
+  --room-accent3: #e50c2c;
   --room-color1: #ced4e3;
   --room-color2: #808080;
   --room-color3: #fff;
@@ -17,9 +17,9 @@
   --room-color13: #d7dce8;
   --room-color14: #a9b0c0;
   --room-color15: #989898;
-  --room-color16: #B1B1B1;
-  --room-color17: #D9D9D9;
-  --room-color18: #E0E0E0;
+  --room-color16: #b1b1b1;
+  --room-color17: #d9d9d9;
+  --room-color18: #e0e0e0;
   scroll-behavior: smooth;
 
   display: flex;
@@ -384,7 +384,6 @@
   position: relative;
   width: 86px;
   height: 86px;
-  background-image: url(../nimg/support-team.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
@@ -760,12 +759,12 @@
     }
     &_plus {
       &::before {
-        background-image: url(../nimg/tmpimg/plus.svg);
+        background-image: url(../nimg/plus.svg);
       }
     }
     &_minus {
       &::before {
-        background-image: url(../nimg/tmpimg/minus.svg);
+        background-image: url(../nimg/minus.svg);
       }
     }
   }
@@ -889,31 +888,33 @@
     @include breakpoint(large) {
       display: flex;
       gap: 12px;
+      flex-wrap: wrap;
     }
     @include breakpoint(xxxlarge) {
       margin-top: 49px;
     }
   }
-  &__row-1 {
+  &__row {
+    display: flex;
+    gap: 12px;
+    max-width: 100%;
     img {
       max-height: 144px;
     }
-    display: flex;
-    gap: 12px;
+  }
+  &__row:not(:last-child) {
     margin-bottom: 12px;
     @include breakpoint(large) {
       margin-bottom: 0;
     }
   }
-  &__row-2 {
+  &__row:nth-child(2) {
     img {
       max-height: 112px;
       @include breakpoint(large) {
         max-height: 144px;
       }
     }
-    display: flex;
-    gap: 12px;
   }
   &__img {
     img {
@@ -1035,11 +1036,11 @@
   &__main-text {
     max-width: 45ch;
   }
-  &__text {
+  &__text:not(:last-child) {
     margin-bottom: 9px;
-    &_2 {
-      max-width: 45ch;
-    }
+  }
+  &__text_2 {
+    max-width: 45ch;
   }
   &__copy-area {
     position: relative;
@@ -1057,7 +1058,6 @@
     &:hover .room2-steps__copy {
       opacity: 1;
     }
-
   }
   &__copy {
     position: absolute;
@@ -1090,8 +1090,10 @@
     line-height: 18px;
     padding-inline-start: 8px;
     list-style-type: "•";
-    margin-bottom: 15px;
     margin-left: 4px;
+  }
+  &__list-item:not(:last-child) {
+    margin-bottom: 15px;
   }
   &__earth {
     width: 21px;
@@ -1162,7 +1164,6 @@
     a {
       display: inline;
       color: var(--room-accent3);
-      
     }
   }
   &__notify {
@@ -1243,7 +1244,7 @@
   &_svg {
     max-width: 23px;
   }
-  &_mc {
+  &_mastercard {
     height: 17px;
     margin-right: 6px;
     @include breakpoint(large) {
@@ -1258,7 +1259,7 @@
       margin-left: 4px;
     }
   }
-  &_btc {
+  &_crypto {
     @include breakpoint(large) {
       margin-left: -8px;
       order: 1;
@@ -1296,8 +1297,9 @@
     margin-left: -4px;
   }
   &_ios {
-    transform: scale(1.8);
-    margin-left: 5px;
+    width: 27px;
+    transform: scale(1.2);
+    margin-left: 1px;
   }
 }
 
@@ -1394,7 +1396,17 @@
       background-color: var(--room-color4);
       color: var(--room-color2);
       white-space: nowrap;
-
+      @include breakpoint(large) {
+        display: inline-block;
+        &:nth-child(n + 5):not(:last-child) {
+          display: none;
+        }
+      }
+      @include breakpoint(xxxlarge) {
+        &:nth-child(n + 5):not(:last-child) {
+          display: inline-block;
+        }
+      }
       &_dark {
         display: inline-block;
         position: relative;
@@ -1407,19 +1419,6 @@
       }
       &_more {
         background-color: transparent;
-        @include breakpoint(large) {
-          display: inline-block;
-        }
-      }
-      &_tablet {
-        @include breakpoint(large) {
-          display: inline-block;
-        }
-      }
-      &_desktop {
-        @include breakpoint(xxxlarge) {
-          display: inline-block;
-        }
       }
       &_stars {
         width: 99px;
@@ -1496,7 +1495,7 @@
       position: relative;
       width: 87px;
       height: 17px;
-      background-image: url(../nimg/tmpimg/star-off.svg);
+      background-image: url(../nimg/star-off.svg);
     }
     &_active {
       position: absolute;
@@ -1504,7 +1503,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-image: url(../nimg/tmpimg/star-on.svg);
+      background-image: url(../nimg/star-on.svg);
     }
   }
 
@@ -1916,7 +1915,7 @@
       height: 6px;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url(../nimg/tmpimg/rhombus-red.svg);
+      background-image: url(../nimg/rhombus-red.svg);
     }
   }
   &__faq-subtitle {

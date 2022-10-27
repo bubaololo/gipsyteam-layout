@@ -44956,7 +44956,6 @@ figure {
   height: 86px;
   border: 8px solid var(--room-color3);
   border-radius: 50%;
-  background-image: url(../nimg/support-team.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45442,11 +45441,11 @@ figure {
 }
 
 .room2-plus__list-item_plus::before {
-  background-image: url(../nimg/tmpimg/plus.svg);
+  background-image: url(../nimg/plus.svg);
 }
 
 .room2-plus__list-item_minus::before {
-  background-image: url(../nimg/tmpimg/minus.svg);
+  background-image: url(../nimg/minus.svg);
 }
 
 .room2-plus-inner {
@@ -45617,6 +45616,7 @@ figure {
   .room2-other__img-wrapper {
     gap: 12px;
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -45626,33 +45626,32 @@ figure {
   }
 }
 
-.room2-other__row-1 {
+.room2-other__row {
   gap: 12px;
   display: flex;
-  margin-bottom: 12px;
+  max-width: 100%;
 }
 
-.room2-other__row-1 img {
+.room2-other__row img {
   max-height: 144px;
 }
 
+.room2-other__row:not(:last-child) {
+  margin-bottom: 12px;
+}
+
 @media screen and (min-width: 48em) {
-  .room2-other__row-1 {
+  .room2-other__row:not(:last-child) {
     margin-bottom: 0;
   }
 }
 
-.room2-other__row-2 {
-  gap: 12px;
-  display: flex;
-}
-
-.room2-other__row-2 img {
+.room2-other__row:nth-child(2) img {
   max-height: 112px;
 }
 
 @media screen and (min-width: 48em) {
-  .room2-other__row-2 img {
+  .room2-other__row:nth-child(2) img {
     max-height: 144px;
   }
 }
@@ -45791,7 +45790,7 @@ figure {
   max-width: 45ch;
 }
 
-.room2-steps__text {
+.room2-steps__text:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -45846,7 +45845,6 @@ figure {
 }
 
 .room2-steps__list-item {
-  margin-bottom: 15px;
   margin-left: 4px;
   -webkit-padding-start: 8px;
   padding-inline-start: 8px;
@@ -45854,6 +45852,10 @@ figure {
   font-size: 13px;
   line-height: 18px;
   list-style-type: "•";
+}
+
+.room2-steps__list-item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .room2-steps__earth {
@@ -46042,13 +46044,13 @@ figure {
   max-width: 23px;
 }
 
-.stats-icon_mc {
+.stats-icon_mastercard {
   height: 17px;
   margin-right: 6px;
 }
 
 @media screen and (min-width: 48em) {
-  .stats-icon_mc {
+  .stats-icon_mastercard {
     order: 3;
     margin-left: 13px;
   }
@@ -46066,7 +46068,7 @@ figure {
 }
 
 @media screen and (min-width: 48em) {
-  .stats-icon_btc {
+  .stats-icon_crypto {
     order: 1;
     margin-left: -8px;
   }
@@ -46115,8 +46117,9 @@ figure {
 }
 
 .stats-icon_ios {
-  margin-left: 5px;
-  transform: scale(1.8);
+  width: 27px;
+  margin-left: 1px;
+  transform: scale(1.2);
 }
 
 .progressbar {
@@ -46241,6 +46244,21 @@ figure {
   white-space: nowrap;
 }
 
+@media screen and (min-width: 48em) {
+  .testimonials-header__item {
+    display: inline-block;
+  }
+  .testimonials-header__item:nth-child(n + 5):not(:last-child) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 79.375em) {
+  .testimonials-header__item:nth-child(n + 5):not(:last-child) {
+    display: inline-block;
+  }
+}
+
 .testimonials-header__item_dark {
   display: inline-block;
   position: relative;
@@ -46257,24 +46275,6 @@ figure {
 
 .testimonials-header__item_more {
   background-color: transparent;
-}
-
-@media screen and (min-width: 48em) {
-  .testimonials-header__item_more {
-    display: inline-block;
-  }
-}
-
-@media screen and (min-width: 48em) {
-  .testimonials-header__item_tablet {
-    display: inline-block;
-  }
-}
-
-@media screen and (min-width: 79.375em) {
-  .testimonials-header__item_desktop {
-    display: inline-block;
-  }
 }
 
 .testimonials-header__item_stars {
@@ -46374,7 +46374,7 @@ figure {
   position: relative;
   width: 87px;
   height: 17px;
-  background-image: url(../nimg/tmpimg/star-off.svg);
+  background-image: url(../nimg/star-off.svg);
 }
 
 .testimonials__stars_active {
@@ -46383,7 +46383,7 @@ figure {
   left: 0;
   width: 0%;
   height: 100%;
-  background-image: url(../nimg/tmpimg/star-on.svg);
+  background-image: url(../nimg/star-on.svg);
 }
 
 .testimonials__nick {
@@ -46907,7 +46907,7 @@ figure {
   left: -10px;
   width: 5px;
   height: 6px;
-  background-image: url(../nimg/tmpimg/rhombus-red.svg);
+  background-image: url(../nimg/rhombus-red.svg);
   background-repeat: no-repeat;
   background-size: cover;
   content: "";
