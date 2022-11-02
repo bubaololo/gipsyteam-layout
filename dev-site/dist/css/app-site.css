@@ -46939,4 +46939,109 @@ figure {
   transform: translateY(0%);
 }
 
+.content_sv {
+  --sv-color1: #181a20;
+  --sv-color2: #1e2329;
+  --sv-color3: #0d0e14;
+  --sv-color4: #5b626b;
+  --sv-color5: #fff;
+  --sv-color6: #edd732;
+  --sv-color7: #3e8dc2;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--sv-color1);
+  color: var(--sv-color4);
+}
+
+@media screen and (min-width: 79.375em) {
+  .content_sv {
+    padding-top: 38px;
+    padding-left: 30px;
+  }
+}
+
+.content_sv section:not(:first-child) {
+  padding: 0 24px;
+}
+
+.sv-hero {
+  width: 100%;
+  background-color: var(--sv-color3);
+}
+
+.sv-hero__main-logo {
+  display: block;
+  max-width: 170px;
+  margin: 44px auto 30px auto;
+  text-align: center;
+}
+
+.sv-hero__persons {
+  position: relative;
+  width: 100%;
+  height: 50vw;
+  margin-bottom: 38px;
+  background-image: url(../nimg/tmpimg/sv_banner_background.png);
+  background-position: 83% 24%;
+  background-repeat: no-repeat;
+  background-size: 150%;
+}
+
+.sv-hero__tag {
+  position: absolute;
+  bottom: 0;
+  padding: 1ch 0;
+  padding-left: 2.3ch;
+  transform: translateY(50%);
+  color: var(--sv-color5);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+.sv-hero__tag_left {
+  left: 14vw;
+  max-width: 18ch;
+}
+
+.sv-hero__tag_right {
+  right: 14vw;
+  max-width: 16ch;
+}
+
+.sv-hero__tag-background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: skew(-17deg, 0deg);
+  border: 1px solid var(--sv-color6);
+  border-radius: 7px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(30, 35, 41, .1);
+}
+
+.sv-hero__text {
+  padding: 0 24px;
+}
+
+.sv-hero__title {
+  margin-bottom: 14px;
+  color: var(--sv-color5);
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.sv-hero__sub-title {
+  margin-bottom: 34px;
+  color: var(--sv-color7);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
 /*# sourceMappingURL=maps/app-site.css.map */
