@@ -47171,6 +47171,7 @@ figure {
 @media screen and (min-width: 79.375em) {
   .sv-stats {
     gap: 69px;
+    padding-top: 38px;
   }
 }
 
@@ -47202,6 +47203,7 @@ figure {
     margin-top: 1px;
     font-size: 18px;
     line-height: 40px;
+    white-space: nowrap;
   }
 }
 
@@ -47497,6 +47499,92 @@ figure {
 @media screen and (min-width: 48em) {
   .sv-statistic__list-item span {
     display: inline;
+  }
+}
+
+.sv-bottom {
+  margin-top: 39px;
+  margin-bottom: 218px;
+}
+
+@media screen and (min-width: 79.375em) {
+  .sv-bottom {
+    margin-top: 72px;
+    margin-bottom: 129px;
+  }
+}
+
+.sv-bottom__title {
+  max-width: 19ch;
+  margin-bottom: 110px;
+  margin-left: 26px;
+  color: var(--sv-color5);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 34px;
+  white-space: pre-line;
+}
+
+@media screen and (min-width: 40em) {
+  .sv-bottom__title {
+    max-width: 40ch;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 79.375em) {
+  .sv-bottom__title {
+    margin-bottom: 57px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+.sv-bottom__gradient {
+  position: relative;
+  padding: 136px 19px 46px 32px;
+  border-radius: 20px;
+  background: conic-gradient(from 76.35deg at 44.41% 58.58%, #de35a0 -38.07deg, #4df965 15.6deg, #edd732 159.53deg, #de35a0 321.93deg, #4df965 375.6deg);
+}
+
+@media screen and (min-width: 79.375em) {
+  .sv-bottom__gradient {
+    padding: 31px 243px 20px 54px;
+  }
+}
+
+.sv-bottom__logo {
+  position: absolute;
+  top: -122px;
+  left: 50%;
+  width: 257px;
+  transform: translateX(-50%);
+}
+
+@media screen and (min-width: 79.375em) {
+  .sv-bottom__logo {
+    top: 50%;
+    right: 36px;
+    left: auto;
+    width: 177px;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+.sv-bottom__text {
+  color: var(--sv-color1);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 79.375em) {
+  .sv-bottom__text {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .sv-bottom__text span {
+    display: block;
   }
 }
 
