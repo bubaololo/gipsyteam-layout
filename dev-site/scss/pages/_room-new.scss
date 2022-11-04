@@ -1493,7 +1493,7 @@
     overflow: hidden;
     &_bg {
       position: relative;
-      width: 87px;
+      width: 85px;
       height: 17px;
       background-image: url(../nimg/star-off.svg);
     }
@@ -1723,6 +1723,8 @@
     }
     @include breakpoint(xxxlarge) {
       padding-top: 35px;
+      max-width: 641px;
+      overflow-x: scroll;
     }
   }
   &__author-item {
