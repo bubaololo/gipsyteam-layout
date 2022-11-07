@@ -1,0 +1,495 @@
+.content_sv {
+  --sv-color1: #181a20;
+  --sv-color2: #1e2329;
+  --sv-color3: #0d0e14;
+  --sv-color4: #5b626b;
+  --sv-color5: #fff;
+  --sv-color6: #edd732;
+  --sv-color7: #3e8dc2;
+
+  // color: var(--i-color1, #000);
+  background-color: var(--sv-color1);
+  color: var(--sv-color4);
+  padding-top: 38px;
+  @include breakpoint(xxxlarge) {
+    padding-top: 0;
+  }
+  // section:not(:first-child) {
+  //   padding: 0 24px;
+  //   @include breakpoint(xxxlarge) {
+  //     padding: 0 88px;
+  //   }
+  // }
+  // .teamplay-quest {
+  //   padding-top: 65px;
+  //   padding-bottom: 75px;
+  // }
+}
+.sv-hero {
+  position: relative;
+  background-color: var(--sv-color3);
+  width: 100%;
+  @include breakpoint(xlarge) {
+    height: 550px;
+  }
+  &__main-logo {
+    max-width: 170px;
+    margin: 44px auto 30px auto;
+    display: block;
+    text-align: center;
+    @include breakpoint(xlarge) {
+      margin: 44px 0 30px 24px;
+    }
+    @include breakpoint(xxxlarge) {
+      margin: 93px 0 30px 93px;
+    }
+  }
+  &__persons {
+    position: relative;
+    background-image: url(../nimg/tmpimg/sv_banner_background.webp), url(../nimg/tmpimg/sv_banner_background.png);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: 83% 24%;
+    width: 100%;
+    height: 50vw;
+    @include breakpoint(medium) {
+      background-size: 126%;
+      background-position: 91% 24%;
+    }
+    @include breakpoint(xlarge) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-size: contain;
+      background-position: bottom right;
+      height: 100%;
+      width: 91%;
+    }
+  }
+  &__tag {
+    position: absolute;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 12px;
+    color: var(--sv-color5);
+    bottom: 0;
+    padding: 1ch 0;
+    padding-left: 2.3ch;
+    transform: translateY(50%);
+    @include breakpoint(medium) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    @include breakpoint(xlarge) {
+      transform: translateY(0);
+      bottom: 94px;
+    }
+  }
+  &__tag_left {
+    max-width: 18ch;
+    left: 14vw;
+    @include breakpoint(xlarge) {
+      right: 38%;
+      left: auto;
+    }
+  }
+  &__tag_right {
+    max-width: 16ch;
+    right: 14vw;
+    @include breakpoint(xlarge) {
+      right: 5%;
+    }
+  }
+  &__tag-background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skew(-17deg, 0deg);
+    border: 1px solid var(--sv-color6);
+    background: rgba(30, 35, 41, 0.1);
+    border-radius: 7px;
+    backdrop-filter: blur(10px);
+    @include breakpoint(medium) {
+      border-radius: 10px;
+    }
+  }
+  &__text {
+    position: relative;
+    padding: 0 24px;
+    margin-top: 38px;
+    @include breakpoint(medium) {
+      margin-top: 71px;
+    }
+    @include breakpoint(xxxlarge) {
+      padding: 0;
+      margin: 71px 0 41px 88px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    color: var(--sv-color5);
+    margin-bottom: 14px;
+    font-size: 45px;
+    line-height: 42px;
+    @include breakpoint(xlarge) {
+      max-width: 12ch;
+      font-size: 75px;
+      line-height: 80px;
+    }
+  }
+  &__sub-title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 28px;
+    color: var(--sv-color7);
+    margin-bottom: 34px;
+    @include breakpoint(xlarge) {
+      font-size: 35px;
+      line-height: 40px;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.sv-content {
+  padding: 0 24px;
+  @include breakpoint(xxxlarge) {
+    padding: 0 88px;
+  }
+}
+
+.sv-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 15px;
+  column-gap: 22px;
+  padding-top: 22px;
+  padding-bottom: 33px;
+  @include breakpoint(large) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @include breakpoint(xxxlarge) {
+    gap: 69px;
+    padding-top: 38px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 24px;
+    color: var(--sv-color4);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--sv-color4);
+    @include breakpoint(xxxlarge) {
+      font-size: 35px;
+      line-height: 40px;
+      padding-bottom: 13px;
+    }
+  }
+  &__sub-title {
+    font-size: 11px;
+    line-height: 24px;
+    margin-top: 8px;
+    @include breakpoint(xxxlarge) {
+      font-size: 18px;
+      line-height: 40px;
+      margin-top: 1px;
+      white-space: nowrap;
+    }
+  }
+}
+.sv-benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  @include breakpoint(xlarge) {
+    flex-direction: row;
+    margin-bottom: 35px;
+  }
+  @include breakpoint(xxlarge) {
+    justify-content: space-between;
+  }
+  &__item {
+    position: relative;
+    background-color: var(--sv-color2);
+    border-radius: 19px;
+    width: 100%;
+    padding: 20px 0 20px 20px;
+    @include breakpoint(xxdlarge) {
+      padding: 34px 0 30px 33px;
+    }
+  }
+  &__item_1 {
+    @include breakpoint(xxlarge) {
+      max-width: 328px;
+    }
+  }
+  &__item_2 {
+    @include breakpoint(xxlarge) {
+      max-width: 281px;
+    }
+  }
+  &__item_3 {
+    .sv-benefits__title {
+      font-size: 26px;
+      line-height: 30px;
+      @include breakpoint(xlarge) {
+        margin-bottom: 23px;
+      }
+      @include breakpoint(xxdlarge) {
+        font-size: 35px;
+        line-height: 35px;
+        margin-bottom: 17px;
+      }
+    }
+    @include breakpoint(xxlarge) {
+      max-width: 382px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 33px;
+    margin-bottom: 17px;
+    color: var(--sv-color5);
+    max-width: 8ch;
+    @include breakpoint(xxsmall) {
+      max-width: unset;
+    }
+    @include breakpoint(xlarge) {
+      max-width: 8ch;
+    }
+    @include breakpoint(xxlarge) {
+      font-size: 35px;
+      line-height: 35px;
+      margin-bottom: 17px;
+    }
+  }
+  &__sub-title {
+    color: var(--sv-color4);
+    font-size: 17px;
+    line-height: 1em;
+  }
+  &__image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__image_1 {
+    width: 94px;
+    right: 20px;
+  }
+  &__image_2 {
+    width: 103px;
+    right: 14px;
+  }
+  &__image_3 {
+    width: 94px;
+    right: 9px;
+  }
+}
+.sv-mid {
+  background-color: var(--sv-color2);
+  border-radius: 19px;
+  padding: 21px 31px;
+  position: relative;
+  @include breakpoint(xxlarge) {
+    padding: 34px 0 40px 33px;
+  }
+}
+.sv-cabinet {
+  @include breakpoint(xxlarge) {
+    margin-bottom: 32px;
+  }
+  &__title {
+    color: var(--sv-color5);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 14vw;
+    @include breakpoint(large) {
+      margin-bottom: 29px;
+    }
+    @include breakpoint(xxlarge) {
+      font-size: 35px;
+      line-height: 35px;
+    }
+  }
+  &__img {
+    width: 100%;
+    transform: scale(1.37) translateX(-2.8%);
+    @include breakpoint(xxsmall) {
+      transform: scale(1.17) translateX(-2.8%);
+    }
+    @include breakpoint(large) {
+      position: absolute;
+      right: 0;
+      bottom: 13%;
+      width: 57%;
+      transform: none;
+    }
+    @include breakpoint(xxlarge) {
+      width: 53%;
+      bottom: 4%;
+    }
+  }
+  &__text {
+    font-size: 17px;
+    line-height: 19px;
+    color: var(--sv-color4);
+    margin-top: 6vw;
+    @include breakpoint(large) {
+      margin-top: 0;
+      max-width: 43ch;
+    }
+    @include breakpoint(xxlarge) {
+      font-size: 16px;
+      line-height: 21px;
+      max-width: 56ch;
+    }
+  }
+}
+.sv-statistic {
+  position: relative;
+  @include breakpoint(xxlarge) {
+    padding-left: 174px;
+  }
+  &__title {
+    color: var(--sv-color5);
+    font-size: 20px;
+    line-height: 35px;
+    margin-top: 39px;
+    @include breakpoint(xxlarge) {
+      font-size: 22px;
+      line-height: 35px;
+      margin-top: 0;
+      margin-bottom: 23px;
+    }
+  }
+  &__img {
+    width: 158px;
+    margin-left: 28px;
+    @include breakpoint(xxlarge) {
+      position: absolute;
+      margin: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__list {
+    margin: -8px 0 0 0;
+    padding-bottom: 4px;
+  }
+  &__list-item {
+    font-size: 17px;
+    line-height: 19px;
+    color: var(--sv-color4);
+    &:not(:first-child) {
+      padding-top: 10px;
+      @include breakpoint(large) {
+        padding-top: 0;
+      }
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--sv-color4);
+      padding-bottom: 10px;
+      @include breakpoint(large) {
+        border-bottom: none;
+        padding-bottom: 2px;
+      }
+    }
+    span {
+      display: none;
+      @include breakpoint(large) {
+        display: inline;
+      }
+    }
+  }
+}
+.sv-bottom {
+  margin-top: 39px;
+  margin-bottom: 218px;
+  @include breakpoint(xxxlarge) {
+    margin-top: 72px;
+    margin-bottom: 129px;
+  }
+  &__title {
+    font-weight: 300;
+    color: var(--sv-color5);
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 110px;
+    white-space: pre-line;
+    max-width: 19ch;
+    margin-left: 26px;
+    @include breakpoint(medium) {
+      margin-left: 0;
+      max-width: 40ch;
+    }
+    @include breakpoint(xxxlarge) {
+      font-size: 42px;
+      line-height: 50px;
+      margin-bottom: 57px;
+    }
+  }
+  &__gradient {
+    padding: 136px 19px 46px 32px;
+    position: relative;
+    border-radius: 20px;
+    background: conic-gradient(
+      from 76.35deg at 44.41% 58.58%,
+      #de35a0 -38.07deg,
+      #4df965 15.6deg,
+      #edd732 159.53deg,
+      #de35a0 321.93deg,
+      #4df965 375.6deg
+    );
+    @include breakpoint(xxxlarge) {
+      padding: 31px 243px 20px 54px;
+    }
+  }
+  &__logo {
+    width: 257px;
+    position: absolute;
+    top: -122px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include breakpoint(xxxlarge) {
+      width: 177px;
+      top: 50%;
+      transform: translateX(0) translateY(-50%);
+      left: auto;
+      right: 36px;
+    }
+  }
+  &__text {
+    color: var(--sv-color1);
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    @include breakpoint(xxxlarge) {
+      font-size: 28px;
+      line-height: 38px;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.content_sv {
+  .teamplay-quest {
+    padding-left: 24px;
+    padding-right: 24px;
+    @include breakpoint(xxxlarge) {
+      padding-left: 88px;
+      padding-right: 88px;
+    }
+  }
+}
