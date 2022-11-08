@@ -149,9 +149,6 @@
     @include breakpoint(xlarge) {
       font-size: 35px;
       line-height: 40px;
-      span {
-        display: block;
-      }
     }
   }
 }
@@ -473,6 +470,12 @@
     font-size: 24px;
     line-height: 30px;
     font-weight: 500;
+    white-space: pre-line;
+    margin-top: -1em;
+    @include breakpoint(large) {
+      white-space: initial;
+      margin-top: 0;
+    }
     @include breakpoint(xxxlarge) {
       font-size: 28px;
       line-height: 38px;

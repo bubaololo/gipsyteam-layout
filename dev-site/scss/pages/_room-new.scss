@@ -1631,13 +1631,17 @@
 .testimonials-card_feedback_signed {
   display: block;
 }
-.rater {
-  background-image: url(/nimg/star-off.svg) !important;
+
+.room2-wrapper {
+  .rater {
+    background-image: url(/nimg/star-off.svg);
+  }
+  
+  .rater--value {
+    background-image: url(/nimg/star-on.svg);
+  }
 }
 
-.rater--value {
-  background-image: url(/nimg/star-on.svg) !important;
-}
 .testimonials-arrow {
   position: absolute;
   width: 9px;
