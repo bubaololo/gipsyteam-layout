@@ -46551,12 +46551,12 @@ figure {
   display: block;
 }
 
-.rater {
-  background-image: url(/nimg/star-off.svg) !important;
+.room2-wrapper .rater {
+  background-image: url(/nimg/star-off.svg);
 }
 
-.rater--value {
-  background-image: url(/nimg/star-on.svg) !important;
+.room2-wrapper .rater--value {
+  background-image: url(/nimg/star-on.svg);
 }
 
 .testimonials-arrow {
@@ -47151,9 +47151,6 @@ figure {
     font-size: 35px;
     line-height: 40px;
   }
-  .sv-hero__sub-title span {
-    display: block;
-  }
 }
 
 .sv-content {
@@ -47592,10 +47589,19 @@ figure {
 }
 
 .sv-bottom__text {
+  margin-top: -1em;
   color: var(--sv-color1);
   font-size: 24px;
   font-weight: 500;
   line-height: 30px;
+  white-space: pre-line;
+}
+
+@media screen and (min-width: 48em) {
+  .sv-bottom__text {
+    margin-top: 0;
+    white-space: initial;
+  }
 }
 
 @media screen and (min-width: 79.375em) {

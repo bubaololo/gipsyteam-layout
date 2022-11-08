@@ -1,0 +1,622 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GT</title>
+    <link rel="shortcut icon" href="nimg/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Roboto+Condensed:400,700|PT+Serif:400,700|Noto+Serif:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app-site.css">
+    <!--<link rel="stylesheet" href="/css/tables.css">-->
+    <!--<link rel="stylesheet" href="/css/gift-page-pokerdom.css">-->
+    <!--<link rel="stylesheet" href="/css/blogs-battle.css">-->
+    <!--<link rel="stylesheet" href="/css/scrill-contest.css">-->
+    <link rel="stylesheet" href="/css/teamplay.css">
+    <link rel="stylesheet" href="/css/greenline.css">
+    <link rel="stylesheet" href="/css/kot.css">
+    <link rel="stylesheet" href="/css/team-a.css">
+    <link rel="stylesheet" href="/css/support.css">
+    <link rel="stylesheet" href="/css/welcome.css">
+    <link rel="stylesheet" href="/css/stream.css">
+    <link rel="stylesheet" href="/css/partner.css">
+    <!--<script src="/js/swiper.min.js"></script>-->
+    <script src="/js/rater.js"></script>
+    <script src="/js/swiper-641.min.js"></script>
+    <script src="/js/autosize.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <script src="/js/tiny-date-picker.js"></script>
+    <link rel="stylesheet" href="/css/tiny-date-picker.css">
+    <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+    <script src="/js/jquery-ui.min.js"></script>
+    <!--<script src="/js/jquery.ui.touch-punch.min.js"></script>-->
+</head>
+
+<body>
+    <div class="app-site">
+        <!-- site header -->
+        <header class="header">
+            <!-- mobile menu -->
+            <div class="mobile-top">
+                <a class="mobile-top--logo" href="javascript:void(0);">
+                    <svg>
+                        <use href="/nimg/mobile-menu-sprite.svg#i-logo"></use>
+                    </svg>
+                </a>
+                <div class="mobile-top--inner">
+                    <a class="mobile-top--item" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/mobile-menu-sprite.svg#i-promo"></use>
+                        </svg>
+                    </a>
+                    <a class="mobile-top--item mobile-top--item_active" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/mobile-menu-sprite.svg#i-bookmark"></use>
+                        </svg>
+                        <span class="mobile-top--badge">99</span>
+                    </a>
+                    <a class="mobile-top--item" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/mobile-menu-sprite.svg#i-message"></use>
+                        </svg>
+                        <span class="mobile-top--badge">99</span>
+                    </a>
+                    <a class="mobile-top--item" href="javascript:void(0);">
+                        <svg>
+                            <use href="/nimg/mobile-menu-sprite.svg#i-forum"></use>
+                        </svg>
+                    </a>
+                </div>
+                <a class="mobile-top--button" href="javascript:void(0);">
+                    <svg class="mobile-i-menu">
+                        <use href="/nimg/mobile-menu-sprite.svg#i-menu"></use>
+                    </svg>
+                    <svg class="mobile-i-close">
+                        <use href="/nimg/mobile-menu-sprite.svg#i-menu-close"></use>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="mobile-menu">
+                <div class="mobile-menu--wrap">
+                    <!-- user menu -->
+                    <div class="mobile-user">
+                        <div class="mobile-user--avatar"></div>
+                        <a class="mobile-user--nick" href="javascript:void(0);">Alex_Superpoker_1993
+                            <svg>
+                                <use href="/nimg/header-sprite.svg#i-icon-arrow"></use>
+                            </svg>
+                        </a>
+                        <!-- dropdown -->
+                        <div class="mobile-user--options">
+                            <div class="mobile-user--top">
+                                <a class="mobile-user--link mobile-user--link_space" href="javascript:void(0);">
+                                    <svg>
+                                        <use href="/nimg/header-sprite.svg#i-icon-user"></use>
+                                    </svg>
+                                    Профиль
+                                </a>
+                                <a class="mobile-user--link" href="javascript:void(0);">
+                                    <svg>
+                                        <use href="/nimg/header-sprite.svg#i-icon-stack"></use>
+                                    </svg>
+                                    Бекинг
+                                </a>
+                                <a class="mobile-user--link" href="javascript:void(0);">
+                                    <svg>
+                                        <use href="/nimg/header-sprite.svg#i-icon-stack"></use>
+                                    </svg>
+                                    GTP
+                                    <span class="mobile-user--gtp">18638</span>
+                                </a>
+                                <a class="mobile-user--link" href="javascript:void(0);">
+                                    <svg>
+                                        <use href="/nimg/header-sprite.svg#i-icon-settings"></use>
+                                    </svg>
+                                    Настройки форума
+                                </a>
+                                <a class="mobile-user--link" href="javascript:void(0);">
+                                    <svg>
+                                        <use href="/nimg/header-sprite.svg#i-icon-settings"></use>
+                                    </svg>
+                                    Настройки сайта
+                                </a>
+                            </div>
+                            <div class="mobile-user--bottom">
+                                <a class="mobile-user--link" href="javascript:void(0);">
+                                    <svg>
+                                        <use href="/nimg/header-sprite.svg#i-icon-logout"></use>
+                                    </svg>
+                                    Выйти
+                                </a>
+                            </div>
+                        </div>
+                        <!-- !dropdown -->
+                        <a class="mobile-user--login" href="javascript:void(0);" style="display:none;">Войти</a>
+                    </div>
+                    <!-- !user menu -->
+                    <!-- submenu -->
+                    <div class="mobile-submenu mobile-submenu_lang">
+                        <div class="mobile-submenu--top">
+                            <a class="mobile-submenu--item" href="javascript:void(0);">
+                                <svg>
+                                    <use href="/nimg/header-sprite.svg#i-icon-search"></use>
+                                </svg>
+                            </a>
+                            <span class="mobile-submenu--sep"></span>
+                            <a class="mobile-submenu--item mobile-submenu--item_support" href="javascript:void(0);">
+                                <svg>
+                                    <use href="/nimg/header-sprite.svg#i-icon-support"></use>
+                                </svg>
+                                Поддержка
+                            </a>
+                        </div>
+                        <span class="mobile-submenu--sep"></span>
+                        <div class="theme-button-wrap">
+                            <button class="theme-button">
+                                <svg class="theme-icon-sun">
+                                    <use href="/nimg/header-sprite.svg#i-icon-sun"></use>
+                                </svg>
+                                <svg class="theme-icon-moon">
+                                    <use href="/nimg/header-sprite.svg#i-icon-moon"></use>
+                                </svg>
+                                <span class="theme-button--text theme-button--text_dark">Темная тема</span>
+                                <span class="theme-button--text theme-button--text_light">Светлая тема</span>
+                            </button>
+                            
+                        </div>
+                        <span class="mobile-submenu--sep"></span>
+                        <div class="lang-flag-wrap">
+                            <svg>
+                                <use href="/nimg/mobile-menu-sprite.svg#i-flag-ru"></use>
+                            </svg>
+                            <div class="flag-options flag-options_show">
+                                <div class="flag-options--inner">
+                                    <a class="flag-options--link" href="javascript:void(0);">
+                                        <svg>
+                                            <use href="/nimg/mobile-menu-sprite.svg#i-flag-ua"></use>
+                                        </svg>
+                                        Ua
+                                    </a>
+                                    <a class="flag-options--link" href="javascript:void(0);">
+                                        <svg>
+                                            <use href="/nimg/mobile-menu-sprite.svg#i-flag-by"></use>
+                                        </svg>
+                                        By
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !submenu -->
+                </div>
+                
+                <ul class="mobile-menu--inner">
+                    <li class="mobile-menu--item">
+                        <a class="mobile-menu--link" href="javascript:void(0);">Лента</a>
+                    </li>
+                    <li class="mobile-menu--item">
+                        <a class="mobile-menu--link mobile-menu--link_active" href="javascript:void(0);">Покер-румы</a>
+                        <!-- rooms menu -->
+                        <ul class="allrooms-list">
+                            <li class="allrooms-list--item">
+                                <a class="allrooms-list--link" href="javascript:void(0);">
+                                    <div class="allrooms-list--icon allrooms-list--icon_rate">
+                                        <svg>
+                                            <use href="/nimg/dropmenu-sprite.svg#i-chart"></use>
+                                        </svg>
+                                    </div>
+                                    Рейтинги
+                                    <svg class="allrooms-list--arrow">
+                                        <use href="/nimg/dropmenu-sprite.svg#i-right-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="allrooms-list--item">
+                                <a class="allrooms-list--link" href="javascript:void(0);">
+                                    <div class="allrooms-list--icon allrooms-list--icon_all">
+                                        <svg>
+                                            <use href="/nimg/dropmenu-sprite.svg#i-3-cards"></use>
+                                        </svg>
+                                    </div>
+                                    Все покер-румы
+                                </a>
+                            </li>
+                            <li class="allrooms-list--item">
+                                <a class="allrooms-list--link allrooms-list--link_active" href="javascript:void(0);">
+                                    <div class="allrooms-list--icon">
+                                        <img src="/nimg/pokerdom-drop-logo.png" alt=""/>
+                                    </div>
+                                    Покердом
+                                    <svg class="allrooms-list--arrow">
+                                        <use href="/nimg/dropmenu-sprite.svg#i-right-arrow"></use>
+                                    </svg>
+                                </a>
+                                <!-- room submenu -->
+                                <ul class="room-submenu">
+                                    <li class="room-submenu--item">
+                                        <a href="javascript:void(0);">
+                                            <div class="room-submenu--icon">
+                                                <svg>
+                                                    <use href="/nimg/dropmenu-sprite.svg#i-reg"></use>
+                                                </svg>
+                                            </div>
+                                            Регистрация</a>
+                                    </li>
+                                    <li class="room-submenu--item">
+                                        <a href="javascript:void(0);">
+                                            <div class="room-submenu--icon">
+                                                <svg>
+                                                    <use href="/nimg/dropmenu-sprite.svg#i-mobile"></use>
+                                                </svg>
+                                            </div>
+                                            Мобильные приложения</a>
+                                    </li>
+                                    <li class="room-submenu--item">
+                                        <a href="javascript:void(0);">
+                                            <div class="room-submenu--icon">
+                                                <svg>
+                                                    <use href="/nimg/dropmenu-sprite.svg#i-bank"></use>
+                                                </svg>
+                                            </div>
+                                            Платежные системы</a>
+                                    </li>
+                                    <li class="room-submenu--item">
+                                        <a href="javascript:void(0);">
+                                            <div class="room-submenu--icon">
+                                                <svg>
+                                                    <use href="/nimg/dropmenu-sprite.svg#i-free"></use>
+                                                </svg>
+                                            </div>
+                                            Играть бесплатно</a>
+                                    </li>
+                                    <li class="room-submenu--item">
+                                        <a href="javascript:void(0);">
+                                            <div class="room-submenu--icon">
+                                                <svg>
+                                                    <use href="/nimg/dropmenu-sprite.svg#i-comment"></use>
+                                                </svg>
+                                            </div>
+                                            Отзывы</a>
+                                    </li>
+                                </ul>
+                                <!-- !room submenu -->
+                            </li>
+                            <li class="allrooms-list--item">
+                                <a class="allrooms-list--link" href="javascript:void(0);">
+                                    <div class="allrooms-list--icon">
+                                        <img src="/nimg/partypoker-drop-logo.png" alt=""/>
+                                    </div>
+                                    partypoker
+                                    <svg class="allrooms-list--arrow">
+                                        <use href="/nimg/dropmenu-sprite.svg#i-right-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="allrooms-list--item">
+                                <a class="allrooms-list--link" href="javascript:void(0);">
+                                    <div class="allrooms-list--icon">
+                                        <img src="/nimg/partypoker-drop-logo.png" alt=""/>
+                                    </div>
+                                    partypoker
+                                    <svg class="allrooms-list--arrow">
+                                        <use href="/nimg/dropmenu-sprite.svg#i-right-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="allrooms-list--item">
+                                <a class="allrooms-list--link" href="javascript:void(0);">
+                                    <div class="allrooms-list--icon">
+                                        <img src="/nimg/partypoker-drop-logo.png" alt=""/>
+                                    </div>
+                                    partypoker
+                                    <svg class="allrooms-list--arrow">
+                                        <use href="/nimg/dropmenu-sprite.svg#i-right-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- !rooms menu -->
+                    </li>
+                    <li class="mobile-menu--item">
+                        <a class="mobile-menu--link mobile-menu--link_vip" href="javascript:void(0);">GT+</a>
+                    </li>
+                    <li class="mobile-menu--item">
+                        <a class="mobile-menu--link mobile-menu--link_active" href="javascript:void(0);">Акции</a>
+                        <!-- promo menu -->
+                        <ul class="promomenu-list">
+                            <li class="promomenu-list--item">
+                                <a href="javascript:void(0);">
+                                    <div class="promomenu-list--icon promomenu-list--icon_all">
+                                        <svg>
+                                            <use href="/nimg/dropmenu-sprite.svg#i-promo-all"></use>
+                                        </svg>
+                                    </div>
+                                    Все акции</a>
+                            </li>
+                            <li class="promomenu-list--item">
+                                <a href="javascript:void(0);">
+                                    <div class="promomenu-list--icon">
+                                        <svg>
+                                            <use href="/nimg/dropmenu-sprite.svg#i-free"></use>
+                                        </svg>
+                                    </div>
+                                    Играть бесплатно</a>
+                            </li>
+                            <li class="promomenu-list--item">
+                                <a href="javascript:void(0);">
+                                    <div class="promomenu-list--icon">
+                                        <svg>
+                                            <use href="/nimg/dropmenu-sprite.svg#i-money"></use>
+                                        </svg>
+                                    </div>
+                                    Играть на деньги</a>
+                            </li>
+                            <li class="promomenu-list--item">
+                                <a href="javascript:void(0);">
+                                    <div class="promomenu-list--icon">
+                                        <svg>
+                                            <use href="/nimg/dropmenu-sprite.svg#i-bank"></use>
+                                        </svg>
+                                    </div>
+                                    Платежные системы</a>
+                            </li>
+                            <li class="promomenu-list--item">
+                                <a href="javascript:void(0);">
+                                    <div class="promomenu-list--icon">
+                                        <svg>
+                                            <use href="/nimg/dropmenu-sprite.svg#i-mobile"></use>
+                                        </svg>
+                                    </div>
+                                    Мобильные приложения</a>
+                            </li>
+                            <li class="promomenu-list--item">
+                                <a href="javascript:void(0);">
+                                    <div class="promomenu-list--icon">
+                                        <svg>
+                                            <use href="/nimg/dropmenu-sprite.svg#i-trophy"></use>
+                                        </svg>
+                                    </div>
+                                    Турниры</a>
+                            </li>
+                        </ul>
+                        <!-- !promo menu -->
+                    </li>
+                    <li class="mobile-menu--item">
+                        <a class="mobile-menu--link" href="javascript:void(0);">Магазин</a>
+                    </li>
+                </ul>
+            </div>
+            <script>
+              document.querySelector('.mobile-top--button').addEventListener('click', function() {
+                this.classList.toggle('menu-opened');
+                document.querySelector('.mobile-top').classList.toggle('menu-opened');
+                document.querySelector('.mobile-menu').classList.toggle('menu-opened');
+                document.body.classList.toggle('lock-scroll');
+              });
+            </script>
+            
+            <script>
+              const mobileNickButton = document.querySelector('.mobile-user--nick');
+              mobileNickButton.addEventListener('click', function() {
+                this.classList.toggle('active');
+                document.querySelector('.mobile-user--options').classList.toggle('show');
+              });
+            </script>
+            <!-- mobile menu -->
+            <div class="top-header top-header_site">
+                <div class="top-header--inner">
+                    <a class="top-header--target" href="javascript:void(0);"><img src="nimg/750x80.png" alt=""></a>
+                </div>
+            </div>
+            <!-- middle header -->
+            <div class="middle-header">
+                <div class="middle-header--inner">
+                    <div class="middle-header--left">
+                        <div class="submenu-header">
+                            <a class="submenu-header--item modal-login--open" href="javascript:void(0);">Вход</a>
+                            <a class="submenu-header--item" href="javascript:void(0);">Бекинг</a>
+                            <a class="submenu-header--item" href="javascript:void(0);">Поддержка</a>
+                            <a class="submenu-header--item" href="javascript:void(0);">Закладки</a>
+                        </div>
+                    </div>
+                    <div class="middle-header--center">
+                        <a class="middle-header--logo" href="/"></a>
+                    </div>
+                    <div class="middle-header--right">
+                        <div class="submenu-header">
+                            <a class="submenu-header--item" href="javascript:void(0);">GTP<span class="submenu-header--counter-gtp">27</span></a>
+                            <a class="submenu-header--item" href="javascript:void(0);">Сообщения<span class="submenu-header--counter-msg">9</span></a>
+                            <div class="submenu-header--user"><a class="submenu-header--nick" href="javascript:void(0);" onclick="toggleNickMenu()">Alex_Superpoker_1993</a>
+                                <div class="submenu-header--options">
+                                    <a class="submenu-header--user-link" href="javascript:void(0);">Профиль</a>
+                                    <a class="submenu-header--user-link" href="javascript:void(0);">Настройки форума</a>
+                                    <a class="submenu-header--user-link" href="javascript:void(0);">Настройки сайта</a>
+                                    <a class="submenu-header--user-link" href="javascript:void(0);">Выйти</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- !middle header -->
+            <!-- modal login -->
+            <div class="modal-login--overlay hidden"></div>
+            <div class="modal-login hidden">
+                <button class="modal-login--close"></button>
+                <div class="modal-login--inner">
+                    <div class="modal-login--heading">Авторизация</div>
+                    <form class="modal-login--form" name="user" action="" method="post">
+                        <input type="hidden" name="rememberme" value="1">
+                        <input class="modal-login--input-login" type="text" name="login" value="" placeholder="Логин">
+                        <input class="modal-login--input-pass" type="password" name="password" value="" placeholder="Пароль">
+                        <a class="modal-login--remind" href="javascript:void(0);">Напомнить пароль</a>
+                        <input class="modal-login--submit" type="submit" value="Войти">
+                    </form>
+                </div>
+                <div class="modal-login--reg">
+                    <a class="modal-login--reglink" href="javascript:void(0);">Регистрация</a>
+                </div>
+            </div>
+            <!-- !modal login -->
+            <!-- modal 500 -->
+            <div class="modal-500-overlay hidden">
+                <div class="modal-500 hidden">
+                    <div class="modal-500--inner">
+                        <button class="modal-500--close"></button>
+                        <div class="modal-500--logo"></div>
+                        <div class="modal-500--heading">Хочешь выйти на новый<br>уровень в покере?</div>
+                        <div class="modal-500--txt">Мы подберем лучшее поле для игры на твоих лимитах, предоставим бонусы, подарки и поддержку 16 часов в сутки.</div>
+                        <div class="modal-500--txt">Оставь свой контакт, и мы расскажем, как увеличить EV!</div>
+                        <form class="modal-form500" action="">
+                            <div class="modal-form500--inner">
+                                <select class="modal-form500--select">
+                                    <option value="0" selected="selected">Telegram</option>
+                                    <option value="1">Skype</option>
+                                </select>
+                                <input class="modal-form500--field" type="text" value="">
+                                <input class="modal-form500--field" type="text" value="">
+                                <input class="modal-form500--submit" value="Отправить" type="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- !modal 500 -->
+            <!-- main menu -->
+            <nav class="menu-top">
+                <div class="menu-top--wrap">
+                    <div class="menu-top--stripe"></div>
+                    <div class="menu-top--outer">
+                        <div class="menu-top--inner">
+                            <div class="menu-top--section">
+                                <a class="menu-top--item" href="javascript:void(0);">Новости<span class="menu-top--counter">19</span></a>
+                                <a class="menu-top--item" href="javascript:void(0);">Видео<span class="menu-top--counter">12</span></a>
+                                <a class="menu-top--item" href="javascript:void(0);">Live<span class="menu-top--counter">7</span></a>
+                                <a class="menu-top--item menu-top--item_room" href="javascript:void(0);">Покер-румы</a>
+                                <a class="menu-top--item" href="javascript:void(0);">Акции<span class="menu-top--counter menu-top--counter_custom">2</span></a>
+                                <a class="menu-top--vip" href="javascript:void(0);"></a>
+                                <a class="menu-top--item badge-new" href="javascript:void(0);">Сочи</a>
+                                <a class="menu-top--item" href="javascript:void(0);">Магазин</a>
+                                <a class="menu-top--item active" href="javascript:void(0);">Форум</a>
+                            </div>
+                        </div>
+                        <a class="menu-top--search" href="javascript:void(0);"></a>
+                    </div>
+                </div>
+            </nav>
+            <!-- !main menu -->
+        </header>
+        <script>
+        function toggleNickMenu() {
+            document.querySelector('.submenu-header--nick').classList.toggle('active');
+            document.querySelector('.submenu-header--options').classList.toggle('show');
+        }
+        </script>
+        <script>
+        var modal = document.querySelector(".modal-login");
+        var modalOverlay = document.querySelector(".modal-login--overlay");
+        var closeButton = document.querySelector(".modal-login--close");
+        var openButton = document.querySelector(".modal-login--open");
+        closeButton.addEventListener("click", function() {
+            modal.classList.toggle("hidden");
+            modalOverlay.classList.toggle("hidden");
+        });
+        openButton.addEventListener("click", function() {
+            modal.classList.toggle("hidden");
+            modalOverlay.classList.toggle("hidden");
+        });
+        </script>        <!-- !site header -->
+        <div class="content content_light">
+            
+            <section class="plain-text">
+                <h1>Контакты</h1>
+                
+                <p>GipsyTeam – это покерное сообщество с уникальной дружелюбной атмосферой, которой не может похвастаться больше ни один покерный сайт в русском интернете.</p>
+                
+                <p>Мы публикуем ежедневные покерные новости, эксклюзивные интервью, прямые репортажи с турниров, обучающие и развлекательные видео, исторические статьи. Слушайте покерное радио, читайте блоги профессиональных игроков, участвуйте в дискуссиях на огромном покерном форуме.</p>
+                
+                <p>Служба поддержки работает с <strong>7:00 до 0:00</strong> (МСК), сайт доступен круглосуточно.</p>
+                
+                <p>ЗАО «Джипситим»<br><strong>ОГРН</strong> 5137746185429<br><strong>ИНН</strong> 7718960088<br>Юридический адрес: 107113, город Москва, Русаковская улица, дом 31, квартира 368</p>
+                
+                <p>Email: <a href="mailto:gipsyteam@gipsyteam.ru">gipsyteam@gipsyteam.ru</a></p>
+                
+                <p>GipsyTeam в <a href="https://zen.yandex.ru/gipsyteam" target="_blank">Яндекс.Дзен</a></p>
+            </section>
+        </div>
+        <!-- site footer -->
+        <footer class="footer">
+            <!-- main menu -->
+            <nav class="menu-main">
+                <div class="menu-main--inner">
+                    <a class="menu-main--item" href="javascript:void(0);">Новости<span class="menu-main--counter">19</span></a>
+                    <a class="menu-main--item" href="javascript:void(0);">Видео<span class="menu-main--counter">12</span></a>
+                    <a class="menu-main--item" href="javascript:void(0);">Live<span class="menu-main--counter">7</span></a>
+                    <a class="menu-main--item menu-main--item_room" href="javascript:void(0);">Покер-румы</a>
+                    <a class="menu-main--item" href="javascript:void(0);">Акции</a>
+                    <a class="menu-main--vip" href="javascript:void(0);"></a>
+                    <a class="menu-main--item" href="javascript:void(0);">Сочи</a>
+                    <a class="menu-main--item" href="javascript:void(0);">Магазин</a>
+                    <a class="menu-main--item forum active" href="javascript:void(0);">Форум</a>
+                </div>
+            </nav>    <!-- !main menu -->
+            <div class="footer--inner">
+                <div class="footer--logo"></div>
+                <div class="footer-info">
+                    <div class="footer-info--copyright">© GipsyTeam.Ru<span>2009-2020</span></div>
+                    <div class="footer-info--inner">
+                        <a class="footer-info--button-ads" href="javascript:void(0);">Реклама на сайте</a>
+                        <div class="footer-rules">
+                            <div class="footer-rules--item"><a href="javascript:void(0);">Условия использования материалов сайта.</a></div>
+                            <div class="footer-rules--item">Сайт предназначен для лиц старше 18 лет.</div>
+                            <div class="footer-rules--item">Дизайн – <a href="javascript:void(0);">Motka.ru</a>. Powered By IP.Board © 2018 IPS, Inc.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a class="footer-zen" href="javascript:void(0);">
+                            <svg class="footer-zen--icon">
+                                <use href="/nimg/zen.svg#i-zen"></use>
+                            </svg>
+                        </a>
+                        <a class="footer-social--item footer-social--item_facebook" href="javascript:void(0);"></a>
+                        <a class="footer-social--item footer-social--item_twitter" href="javascript:void(0);"></a>
+                        <a class="footer-social--item footer-social--item_vkontakte" href="javascript:void(0);"></a>
+                        <a class="footer-social--item footer-social--item_instagram" href="javascript:void(0);"></a>
+                        <a class="footer-social--item footer-social--item_telegram" href="javascript:void(0);"></a>
+                        <a class="footer-social--item footer-social--item_youtube" href="javascript:void(0);"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-data">
+                    <ul class="footer-data--list">
+                        <li><a href="javascript:void(0);">Контакты</a></li>
+                        <li><a href="javascript:void(0);">Ограничение ответственности</a></li>
+                        <li><a href="javascript:void(0);">Обработка персональных данных</a></li>
+                        <li><a href="javascript:void(0);">Политика конфиденциальности</a></li>
+                        <li><a href="javascript:void(0);">Отзывы о сайте</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-support">
+                    <div class="footer-support--heading">
+                        <a href="javascript:void(0);">Поддержка</a>
+                        <div class="support-time">
+                            <div class="support-time--item support-time--item_open">09:00</div>
+                            <span class="support-time--item support-time--item_sep">—</span>
+                            <div class="support-time--item support-time--item_close">04:00 МСК</div>
+                        </div>
+                    </div>
+                    <a class="footer-support--skype" href="javascript:void(0);">gipsyteam-support</a>
+                    <a class="footer-support--mail" href="javascript:void(0);">support@gipsyteam.ru</a>
+                    <a class="footer-support--telegram" href="javascript:void(0);">telegram</a>
+                </div>
+            </div>
+        </footer>
+        <!-- !site footer -->
+    </div>
+</body>
+
+</html>
