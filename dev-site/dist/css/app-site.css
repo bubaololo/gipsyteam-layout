@@ -44458,7 +44458,7 @@ figure {
   cursor: pointer;
 }
 
-.content_room2 {
+.room2-wrapper {
   --room-accent: #e51e25;
   --room-accent2: #e31f26;
   --room-accent3: #e50c2c;
@@ -44487,7 +44487,7 @@ figure {
 }
 
 @media screen and (min-width: 79.375em) {
-  .content_room2 {
+  .room2-wrapper {
     padding-top: 38px;
     padding-left: 30px;
   }
@@ -44516,7 +44516,7 @@ figure {
 }
 
 .room2__title h3 {
-  color: var(--i-color1, #000);
+  color: #000;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -44706,7 +44706,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-2-color, #000);
+  color: #000;
 }
 
 .room2-links__icon {
@@ -44753,7 +44753,7 @@ figure {
 }
 
 .room2-stats__title h3 {
-  color: var(--i-color1, #000);
+  color: #000;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -45011,7 +45011,7 @@ figure {
 
 .room2-support-info__name {
   margin-bottom: 10px;
-  color: var(--text-2-color, #000);
+  color: #000;
   font-family: "PT Serif", serif;
   font-size: 19px;
   font-weight: 700;
@@ -45241,7 +45241,7 @@ figure {
 }
 
 .room2-description__title h3 {
-  color: var(--i-color1, #000);
+  color: #000;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -45282,7 +45282,7 @@ figure {
 
 .room2-banner__text {
   max-width: 221px;
-  color: var(--i-color1, #000);
+  color: #000;
   font-size: 15px;
   font-weight: 700;
   line-height: 20px;
@@ -45393,7 +45393,7 @@ figure {
 }
 
 .room2-plus__title h3 {
-  color: var(--i-color1, #000);
+  color: #000;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -45495,7 +45495,7 @@ figure {
 }
 
 .room2-traffic__title h3 {
-  color: var(--i-color1, #000);
+  color: #000;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -45582,7 +45582,7 @@ figure {
 }
 
 .room2-other__title h3 {
-  color: var(--i-color1, #000);
+  color: #000;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -45729,7 +45729,7 @@ figure {
   background-position: center 30px;
   background-repeat: no-repeat;
   background-size: 100% 84%;
-  color: var(--i-color1);
+  color: #000;
 }
 
 @media screen and (min-width: 48em) {
@@ -45805,7 +45805,7 @@ figure {
   padding: 11px 0 10px;
   border: 1px dashed rgba(0, 0, 0, .3);
   border-radius: 3px;
-  color: var(--text-2-color, #000);
+  color: #000;
   font-size: 19px;
   font-weight: 700;
   line-height: 17px;
@@ -45884,7 +45884,7 @@ figure {
   border-bottom: 1px solid var(--room-color18);
   border-left: 1px solid var(--room-color18);
   border-radius: 3px 0 0 3px;
-  color: var(--i-color1, #000);
+  color: #000;
   font-size: 16px;
   font-weight: 500;
   line-height: 17px;
@@ -45943,7 +45943,7 @@ figure {
 }
 
 .room2-steps__login {
-  color: var(--i-color1, #000);
+  color: #000;
   font-size: 15px;
   line-height: 22px;
   opacity: .85;
@@ -45971,7 +45971,7 @@ figure {
 .room2-steps__notify-title {
   max-width: 39ch;
   margin-bottom: 8px;
-  color: var(--text-2-color, #000);
+  color: #000;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
@@ -46158,7 +46158,7 @@ figure {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--text-2-color, #000);
+  color: #000;
   font-family: "PT Serif", serif;
   font-size: 22px;
   font-weight: 700;
@@ -46422,7 +46422,7 @@ figure {
 }
 
 .testimonials__nick-wrap {
-  color: var(--text-2-color, #000);
+  color: #000;
 }
 
 .testimonials__nick_red {
@@ -46666,7 +46666,7 @@ figure {
 
 @media screen and (min-width: 79.375em) {
   .room2-review__content {
-    max-width: 641px;
+    max-width: 670px;
     padding-top: 35px;
     overflow-x: scroll;
   }
@@ -46680,7 +46680,7 @@ figure {
 
 .room2-review__header-title {
   margin-bottom: 16px;
-  color: var(--i-color1);
+  color: #000;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -46721,7 +46721,7 @@ figure {
 }
 
 .room2-review__author-name {
-  color: var(--i-color1);
+  color: #000;
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
@@ -46751,7 +46751,7 @@ figure {
 .room2-review__title {
   display: inline-block;
   margin: 40px 0 17px;
-  color: var(--i-color1, #000);
+  color: #000;
   font-family: "PT Serif", serif;
   font-size: 20px;
   font-weight: 700;
@@ -46931,7 +46931,7 @@ figure {
   overflow: hidden;
   transform: translateY(-100%);
   background-color: #fff;
-  color: var(--i-color1, #000);
+  color: #000;
   line-height: 50px;
   text-align: center;
   transition: transform .2s;

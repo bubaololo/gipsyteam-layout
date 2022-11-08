@@ -28,4 +28,5 @@ netlifyctl-debug.log
 netlify
 *.netlify
 *.toml
+dev-site/dist/css/app-site.css
 
