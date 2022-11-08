@@ -46547,6 +46547,10 @@ figure {
   background-color: rgba(255, 255, 255, .5);
 }
 
+.testimonials-card_feedback_signed {
+  display: block;
+}
+
 .testimonials-arrow {
   position: absolute;
   top: 8px;

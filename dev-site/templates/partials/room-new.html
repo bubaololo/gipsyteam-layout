@@ -1097,6 +1097,29 @@
                             </div>
                         </div>
                     </div>
+                    <div class="testimonials-card testimonials-card_feedback testimonials-card_feedback_signed">
+                        <div class="room-feedback--signup">Чтобы оставить отзыв, необходимо <a href="javascript:void(0);">войти</a> или <a href="javascript:void(0);">зарегистрироваться</a></div>
+                        <form>
+                            <div class="room-feedback-content">
+                                <div class="room-feedback-avatar">
+                                    <img src="/nimg/feedback-avatar.png" alt=""/>
+                                </div>
+                                <textarea class="room-feedback--field" placeholder="Оставить отзыв"></textarea>
+                            </div>
+                            <div class="room-feedback-action">
+                                <div class="room-feedback--meta">
+                                    <div class="room-feedback--note">Ваша оценка</div>
+                                    <div id="rater"></div>
+                                </div>
+                                <button class="room-feedback--send">
+                                    <svg>
+                                        <use href="/nimg/buttons-sprite.svg#i-btn-send"></use>
+                                    </svg>
+                                    Отправить
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                     <!-- ____________TESTIMONIAL_ITEM______________ -->
                     <div class="testimonials-card">
                         <div class="testimonials__avatar">
@@ -1906,5 +1929,16 @@
         });
 
     </script>
+    <script>
+        const starRating = rater({
+          starSize: 24,
+          starGap: 8,
+          element: document.querySelector('#rater'),
+          rateCallback: function rateCallback(rating, done) {
+            this.setRating(rating);
+            done();
+          }
+        });
+      </script>
 
 </main>
