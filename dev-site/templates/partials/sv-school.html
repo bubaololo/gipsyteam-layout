@@ -163,39 +163,53 @@
             </div>
 
             <div class="teamplay-group">
-                <div class="teamplay-group--label">Сколько вам лет?</div>
-                <input class="tmpl-input-text" type="text" name="age" data-validation="required" data-validation-error-msg="Это поле обязательно для заполнения">
-            </div>
-
-            <div class="teamplay-group">
-                <div class="teamplay-group--label">Из какого вы города?</div>
-                <input class="tmpl-input-text" type="text" name="location" data-validation="required" data-validation-error-msg="Это поле обязательно для заполнения">
-            </div>
-
-            <div class="teamplay-group">
                 <div class="teamplay-group--label">Ваш e-mail</div>
-                <input class="tmpl-input-text" type="text" name="email" data-validation="email" data-validation-error-msg="Это поле обязательно для заполнения">
+                <input class="tmpl-input-text" type="text" name="email" data-validation="email" data-validation="required" data-validation-error-msg="Это поле обязательно для заполнения">
             </div>
 
             <div class="teamplay-group">
-                <div class="teamplay-group--label">Другие контактные данные Skype, Discord, номер телефона и пр.</div>
-                <input class="tmpl-input-text" type="text" name="contacts" data-validation="required" data-validation-error-msg="Это поле обязательно для заполнения">
+                <div class="teamplay-group--label">Телефон используем только для связи в месенджерах</div>
+                <input class="tmpl-input-text" type="text" name="tel" data-validation="required" data-validation-error-msg="Это поле обязательно для заполнения">
             </div>
 
             <div class="teamplay-group">
-                <div class="teamplay-group--label">Аккаунты на покерных форумах и сайтах: GipsyTeam, pokerstrategy и др.</div>
-                <textarea class="tmpl-input-area" name="profiles"></textarea>
+                <div class="teamplay-group--label">Ник в Telegram</div>
+                <input class="tmpl-input-text" type="text" name="tg">
+            </div>
+            
+            <div class="teamplay-group">
+                <div class="teamplay-group--label">Ссылка на алиас Sharkscope</div>
+                <input class="tmpl-input-text" type="text" name="shark">
             </div>
 
             <div class="teamplay-group">
-                <div class="teamplay-group--label">Ссылка на алиас Sharkscope или ники в румах списком. Статистика на указанных никах должна быть открыта.</div>
-                <textarea class="tmpl-input-area" name="nicks" data-validation="required" data-validation-error-msg="Это поле обязательно для заполнения"></textarea>
+                <div class="teamplay-group--label">Ники в румах:</div>
+                <input class="tmpl-input-text" type="text" name="GGNetwork" placeholder="GGNetwork">
             </div>
-
             <div class="teamplay-group">
-                <div class="teamplay-group--label">Расскажите немного о себе и своем покерном пути. Есть ли другая занятость помимо покера? Как много мтт готовы отыгрывать в месяц? Что делали ранее для работы над игрой?</div>
-                <textarea class="tmpl-input-area tmpl-input-area_medium" name="career" data-validation="required" data-validation-error-msg="Это поле обязательно для заполнения"></textarea>
+                <input class="tmpl-input-text" type="text" name="pokerstars" placeholder="PokerStars">
             </div>
+            <div class="teamplay-group">
+                <input class="tmpl-input-text" type="text" name="wpn" placeholder="WPN">
+            </div>
+            <div class="teamplay-group">
+                <input class="tmpl-input-text" type="text" name="winamax" placeholder="Winamax">
+            </div>
+            <div class="teamplay-group">
+                <input class="tmpl-input-text" type="text" name="ipoker" placeholder="iPoker">
+            </div>
+            <div class="teamplay-group">
+                <input class="tmpl-input-text" type="text" name="888" placeholder="888Poker">
+            </div>
+            <div class="teamplay-group">
+                <input class="tmpl-input-text" type="text" name="pokerstars-es" placeholder="PokerStars.ES">
+            </div>
+            <label class="free-ui-label">
+                <input class="free-ui-input" type="checkbox"><strong class="free-ui-circle"></strong>Готов пройти экспресс-курс обучения, если не попаду в основной состав
+            </label>
+
+
+
 
             <div class="teamplay-group teamplay-group_bottom">
                 <button class="tmpl-button-send tmpl-button-send_sv">Отправить</button>

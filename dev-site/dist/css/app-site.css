@@ -47626,4 +47626,12 @@ figure {
   }
 }
 
+.content_sv .free-ui-circle {
+  border: 1px solid var(--theme-tmpl-color-3, #ccc);
+}
+
+.content_sv .free-ui-label {
+  display: block;
+}
+
 /*# sourceMappingURL=maps/app-site.css.map */
