@@ -7,7 +7,6 @@
   --sv-color6: #edd732;
   --sv-color7: #3e8dc2;
 
-
   background-color: var(--sv-color1);
   color: var(--sv-color4);
   padding-top: 38px;
@@ -46,7 +45,8 @@
   }
   &__persons {
     position: relative;
-    background-image: url(../nimg/tmpimg/sv_banner_background.webp), url(../nimg/tmpimg/sv_banner_background.png);
+    background-image: url(../nimg/tmpimg/sv_banner_background.webp),
+      url(../nimg/tmpimg/sv_banner_background.png);
     background-size: 150%;
     background-repeat: no-repeat;
     background-position: 83% 24%;
@@ -494,5 +494,11 @@
       padding-left: 88px;
       padding-right: 88px;
     }
+  }
+  .free-ui-circle {
+    border: 1px solid var(--theme-tmpl-color-3, #ccc);
+  }
+  .free-ui-label {
+    display: block;
   }
 }
