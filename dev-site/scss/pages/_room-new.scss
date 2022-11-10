@@ -632,6 +632,9 @@
       max-width: 222px;
       margin: 0;
     }
+    @include breakpoint(xxxlarge) {
+      margin-bottom: 23px;
+    }
   }
   &__image {
     max-width: 221px;
@@ -883,13 +886,8 @@
       gap: 51px;
     }
   }
-  &__img-wrapper {
+  .slider-screen {
     margin-bottom: 29px;
-    @include breakpoint(large) {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
     @include breakpoint(xxxlarge) {
       margin-top: 49px;
     }
@@ -1386,8 +1384,9 @@
 .testimonials {
   &-header {
     margin-bottom: 20px;
+    position: relative;
     &__item {
-      display: none;
+      // display: none;
       font-family: $condensed-font;
       font-size: 16px;
       line-height: 21px;
@@ -1398,14 +1397,14 @@
       white-space: nowrap;
       @include breakpoint(large) {
         display: inline-block;
-        &:nth-child(n + 5):not(:last-child) {
-          display: none;
-        }
+        // &:nth-child(n + 5):not(:last-child) {
+        //   display: none;
+        // }
       }
       @include breakpoint(xxxlarge) {
-        &:nth-child(n + 5):not(:last-child) {
-          display: inline-block;
-        }
+        // &:nth-child(n + 5):not(:last-child) {
+        //   display: inline-block;
+        // }
       }
       &_dark {
         display: inline-block;
@@ -1421,18 +1420,16 @@
         background-color: transparent;
       }
       &_stars {
+        display: flex;
         width: 99px;
         height: 23px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        @include breakpoint(large) {
-          display: flex;
-        }
       }
     }
     &__top {
-      margin-bottom: 16px;
+      margin-bottom: 40px;
       @include breakpoint(large) {
         margin-bottom: 16px;
         border-bottom: 1px solid var(--room-color13);
@@ -1445,20 +1442,67 @@
       display: flex;
       flex-wrap: nowrap;
       gap: 5px;
+      position: absolute;
+      top: 2em;
+      left: 0;
+      align-items: flex-start;
       @include breakpoint(large) {
+        position: unset;
         margin-top: 21px;
         justify-content: space-between;
       }
     }
     &__feedback {
       display: flex;
-      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: flex-start;
       gap: 5px;
+      overflow: hidden;
+      height: 23px;
+      transition: all 0.5s;
+      background-color: var(--room-color12);
+      border-radius: 13px;
+      @include breakpoint(large) {
+        background-color: inherit;
+        border-radius: 0;
+        flex-direction: row;
+        overflow: auto;
+        height: unset;
+      }
+    }
+    &__feedback_active {
+      gap: 15px;
+      background-color: var(--room-color12);
+      color: var(--room-color3);
+      padding: 4px 9px 9px 9px;
+      border-radius: 13px;
+      height: 233px;
     }
     &__rate {
       display: flex;
       flex-wrap: nowrap;
       gap: 5px;
+      flex-direction: column;
+      overflow: hidden;
+      height: 23px;
+      transition: all 0.5s;
+      background-color: var(--room-color12);
+      border-radius: 13px;
+      @include breakpoint(large) {
+        background-color: inherit;
+        border-radius: 0;
+        flex-direction: row;
+        overflow: auto;
+        height: unset;
+      }
+    }
+    &__rate_active {
+      gap: 6px;
+      background-color: var(--room-color12);
+      color: var(--room-color3);
+      padding: 4px 9px 9px 9px;
+      border-radius: 13px;
+      height: 67px;
     }
   }
   &__stats {
@@ -1636,7 +1680,7 @@
   .rater {
     background-image: url(/nimg/star-off.svg);
   }
-  
+
   .rater--value {
     background-image: url(/nimg/star-on.svg);
   }
@@ -1957,4 +2001,7 @@
 }
 .room2-notify_active {
   transform: translateY(0%);
+}
+.room2-bottom {
+  background-color: #fff;
 }

@@ -1,237 +1,1512 @@
 <main class="content">
-<div class="room2-wrapper">
-    <section class="room2-main">
-        <section class="room2-info">
-            <div class="room2-header">
+    <div class="room2-wrapper">
+        <section class="room2-main">
+            <section class="room2-info">
+                <div class="room2-header">
 
-                <div class="room2-header__top">
-                    <div class="room2-logo">
-                        <img src="//www.gipsyteam.ru/upload/Pokerroomnewlogo/default/16.png?1614610410" alt="Покердом"
-                            srcset="//www.gipsyteam.ru/upload/Pokerroomnewlogo/default/16.png?1614610410 1x"
-                            itemprop="image">
-                    </div>
-                    <div class="room2-rating">
-                        <div class="room2-rating__stars">
-                            <div class="room2-rating__digits">
-                                <strong class="room2-rating__digits_accent">4.7</strong> <span
-                                    class="room2-rating__digits_secondary"> /5</span>
-                            </div>
-                            <!-- для изменения степени закрашенности линии со звёздами подставляем одинаковые значения в проценты,
+                    <div class="room2-header__top">
+                        <div class="room2-logo">
+                            <img src="//www.gipsyteam.ru/upload/Pokerroomnewlogo/default/16.png?1614610410"
+                                alt="Покердом"
+                                srcset="//www.gipsyteam.ru/upload/Pokerroomnewlogo/default/16.png?1614610410 1x"
+                                itemprop="image">
+                        </div>
+                        <div class="room2-rating">
+                            <div class="room2-rating__stars">
+                                <div class="room2-rating__digits">
+                                    <strong class="room2-rating__digits_accent">4.7</strong> <span
+                                        class="room2-rating__digits_secondary"> /5</span>
+                                </div>
+                                <!-- для изменения степени закрашенности линии со звёздами подставляем одинаковые значения в проценты,
                              процент задаёт ширину красной области фона звёзд -->
-                            <div class="stars-background"
-                                style="background: linear-gradient(90deg, var(--room-accent) 90%, var(--room-color1) 90%);">
+                                <div class="stars-background"
+                                    style="background: linear-gradient(90deg, var(--room-accent) 90%, var(--room-color1) 90%);">
+                                </div>
+
+                                <svg fill="none" class="room-stars-mask" viewBox="0 0 115 21">
+                                    <clipPath id="icon-stars-clip-path">
+                                        <path clip-rule="evenodd"
+                                            d="m11.5 0 2.582 7.946h8.355l-6.76 4.911 2.582 7.947-6.759-4.911-6.76 4.91 2.582-7.946-6.76-4.91h8.356L11.5 0Zm23 0 2.582 7.946h8.355l-6.76 4.911 2.583 7.947-6.76-4.911-6.76 4.91 2.582-7.946-6.76-4.91h8.356L34.5 0Zm25.582 7.946L57.5 0l-2.582 7.946h-8.355l6.76 4.911-2.583 7.947 6.76-4.911 6.76 4.91-2.582-7.946 6.76-4.91h-8.356ZM80.5 0l2.582 7.946h8.355l-6.76 4.911 2.582 7.947-6.759-4.911-6.76 4.91 2.582-7.946-6.76-4.91h8.356L80.5 0Zm25.582 7.946L103.5 0l-2.582 7.946h-8.355l6.76 4.911-2.582 7.947 6.759-4.911 6.76 4.91-2.582-7.946 6.759-4.91h-8.355Z" />
+                                    </clipPath>
+                                </svg>
+
                             </div>
-
-                            <svg fill="none" class="room-stars-mask" viewBox="0 0 115 21">
-                                <clipPath id="icon-stars-clip-path">
-                                    <path clip-rule="evenodd"
-                                        d="m11.5 0 2.582 7.946h8.355l-6.76 4.911 2.582 7.947-6.759-4.911-6.76 4.91 2.582-7.946-6.76-4.91h8.356L11.5 0Zm23 0 2.582 7.946h8.355l-6.76 4.911 2.583 7.947-6.76-4.911-6.76 4.91 2.582-7.946-6.76-4.91h8.356L34.5 0Zm25.582 7.946L57.5 0l-2.582 7.946h-8.355l6.76 4.911-2.583 7.947 6.76-4.911 6.76 4.91-2.582-7.946 6.76-4.91h-8.356ZM80.5 0l2.582 7.946h8.355l-6.76 4.911 2.582 7.947-6.759-4.911-6.76 4.91 2.582-7.946-6.76-4.91h8.356L80.5 0Zm25.582 7.946L103.5 0l-2.582 7.946h-8.355l6.76 4.911-2.582 7.947 6.759-4.911 6.76 4.91-2.582-7.946 6.759-4.91h-8.355Z" />
-                                </clipPath>
-                            </svg>
-
+                            <div class="room2-rating__description">
+                                Оценка редакции GipsyTeam
+                            </div>
                         </div>
-                        <div class="room2-rating__description">
-                            Оценка редакции GipsyTeam
-                        </div>
-                    </div>
 
-                    <div class="progressbar">
-                        <!-- длина дуги 185рх, значение "stroke-dashoffset" укорачивает красную дугу на указанное кол-во пикселей
+                        <div class="progressbar">
+                            <!-- длина дуги 185рх, значение "stroke-dashoffset" укорачивает красную дугу на указанное кол-во пикселей
                             соответственноу нужно передать такое число, которое сотносится со 185 как 5 соотносится с выставленной оценкой
                             например оценка 4.6, тогда 5 - 4.6 = 0.4
                             0.4 / 5 = 0.08
                             185 * 0.08 = 14px -->
-                        <!-- semicircle item -->
-                        <div class="progressbar__semi-circle">
-                            <svg class="progressbar__arc-background">
-                                <use href="/nimg/icons-room.svg#icon-rating-arc-background" />
-                            </svg>
+                            <!-- semicircle item -->
+                            <div class="progressbar__semi-circle">
+                                <svg class="progressbar__arc-background">
+                                    <use href="/nimg/icons-room.svg#icon-rating-arc-background" />
+                                </svg>
 
-                            <svg class="progressbar__arc">
-                                <use href="/nimg/icons-room.svg#icon-rating-arc"
-                                    style="stroke-dashoffset:14px" />
-                            </svg>
-                            <div class="progressbar__digit">
-                                4.6
+                                <svg class="progressbar__arc">
+                                    <use href="/nimg/icons-room.svg#icon-rating-arc" style="stroke-dashoffset:14px" />
+                                </svg>
+                                <div class="progressbar__digit">
+                                    4.6
+                                </div>
+                                <div class="progressbar__text">
+                                    Репутация по отзывам
+                                </div>
                             </div>
-                            <div class="progressbar__text">
-                                Репутация по отзывам
+                            <!-- semicircle item -->
+                            <div class="progressbar__semi-circle">
+                                <svg class="progressbar__arc-background">
+                                    <use href="/nimg/icons-room.svg#icon-rating-arc-background" />
+                                </svg>
+
+                                <svg class="progressbar__arc">
+                                    <use href="/nimg/icons-room.svg#icon-rating-arc" style="stroke-dashoffset:33px" />
+                                </svg>
+                                <div class="progressbar__digit">
+                                    4.1
+                                </div>
+                                <div class="progressbar__text">
+                                    Привлекательность бонусов
+                                </div>
+                            </div>
+                            <!-- semicircle item -->
+                            <div class="progressbar__semi-circle">
+                                <svg class="progressbar__arc-background">
+                                    <use href="/nimg/icons-room.svg#icon-rating-arc-background" />
+                                </svg>
+
+                                <svg class="progressbar__arc">
+                                    <use href="/nimg/icons-room.svg#icon-rating-arc" style="stroke-dashoffset:52px" />
+                                </svg>
+                                <div class="progressbar__digit">
+                                    3.6
+                                </div>
+                                <div class="progressbar__text">
+                                    Качество софта
+                                </div>
                             </div>
                         </div>
-                        <!-- semicircle item -->
-                        <div class="progressbar__semi-circle">
-                            <svg class="progressbar__arc-background">
-                                <use href="/nimg/icons-room.svg#icon-rating-arc-background" />
-                            </svg>
 
-                            <svg class="progressbar__arc">
-                                <use href="/nimg/icons-room.svg#icon-rating-arc"
-                                    style="stroke-dashoffset:33px" />
+                    </div>
+                    <div class="room2-links">
+                        <a href="#room2__info-link" class="room2-links__item">
+                            <svg class="room2-links__icon room2-links__icon--info">
+                                <use href="/nimg/icons-room.svg#icon-info" />
                             </svg>
-                            <div class="progressbar__digit">
-                                4.1
+                            <span>
+                                Информация <span class="room2_full-text"> о покер руме</span>
+                            </span>
+                        </a>
+                        <a href="#room2__testimonials-link" class="room2-links__item">
+                            <svg class="room2-links__icon room2-links__icon--testimonials">
+                                <use href="/nimg/icons-room.svg#icon-testimonials" />
+                            </svg>
+                            <span>
+                                Отзывы <span class="room2_full-text"> пользователей</span>
+                            </span>
+                        </a>
+
+                        <a href="#room2__review-link" class="room2-links__item">
+                            <svg class="room2-links__icon room2-links__icon--lines">
+                                <use href="/nimg/icons-room.svg#icon-lines" />
+                            </svg>
+                            <span>
+                                Обзор <span class="room2_full-text"> авторов GipsyTeam</span>
+                            </span>
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="room2-stats ">
+
+
+                    <div class="room2-stats__title">
+                        <h3>Особенности Покердома</h3>
+                    </div>
+                    <div class="room2-stats__grid">
+
+                        <div class="room2-stats__item room2-stats__item_1">
+                            <div class="room2-stats__main-text">
+                                400₽
                             </div>
-                            <div class="progressbar__text">
-                                Привлекательность бонусов
+                            <div class="room2-stats__sub-text">
+                                Минимальный депозит
                             </div>
                         </div>
-                        <!-- semicircle item -->
-                        <div class="progressbar__semi-circle">
-                            <svg class="progressbar__arc-background">
-                                <use href="/nimg/icons-room.svg#icon-rating-arc-background" />
-                            </svg>
-
-                            <svg class="progressbar__arc">
-                                <use href="/nimg/icons-room.svg#icon-rating-arc"
-                                    style="stroke-dashoffset:52px" />
-                            </svg>
-                            <div class="progressbar__digit">
-                                3.6
+                        <div class="room2-stats__item room2-stats__item_2">
+                            <div class="room2-stats__main-text">
+                                150%
                             </div>
-                            <div class="progressbar__text">
-                                Качество софта
+                            <div class="room2-stats__sub-text">
+                                Бонус новым игрокам
+                            </div>
+                        </div>
+                        <div class="room2-stats__item room2-stats__item_3">
+                            <div class="room2-stats__main-text">
+                                $5000 <span class="room2-stats_secondary"> /24ч</span>
+                            </div>
+                            <div class="room2-stats__sub-text">
+                                Лимиты на вывод
+                            </div>
+                        </div>
+                        <div class="room2-stats__item room2-stats__item_4">
+                            <div class="room2-stats__main-text">
+                                до 10%
+                            </div>
+                            <div class="room2-stats__sub-text">
+                                Комиссия за вывод
+                            </div>
+                        </div>
+                        <div class="room2-stats__item room2-stats__item_5">
+                            <div class="room2-stats__main-text">
+                                24 часа
+                            </div>
+                            <div class="room2-stats__sub-text">
+                                Скорость вывода
+                            </div>
+                        </div>
+                        <div class="room2-stats__item room2-stats__item_6">
+                            <div class="room2-stats__main-text">
+                                300 игроков
+                            </div>
+                            <div class="room2-stats__sub-text">
+                                Средний онлайн
+                            </div>
+                        </div>
+                        <div class="room2-stats__item room2-stats__item_7">
+                            <div class="room2-stats__icons">
+
+                                <img class="stats-icon stats-icon_mastercard" src="/nimg/icon-mastercard.png"
+                                    alt="mastercard logo">
+
+
+                                <img class="stats-icon stats-icon_visa" src="/nimg/icon-visa.png" alt="visa logo">
+
+
+                                <img class="stats-icon stats-icon_crypto" src="/nimg/icon-bitcoin.png"
+                                    alt="bitcoin logo">
+
+                                <img class="stats-icon stats-icon_webmoney" src="/nimg/icon-webmoney.png"
+                                    alt="webmoney-logo logo">
+
+
+                                <img class="stats-icon stats-icon_neteller" src="/nimg/icon-neteller.png"
+                                    alt="neteller logo">
+
+                                <span class="room2-stats_secondary room2-stats_secondary_mobile"> +2</span>
+                            </div>
+                            <div class="room2-stats__sub-text">
+                                Платёжные системы
+                            </div>
+                        </div>
+
+                        <div class="room2-stats__item room2-stats__item_8">
+                            <div class="room2-stats__icons">
+                                <svg class="stats-icon stats-icon_apple">
+                                    <use href="/nimg/icons-room.svg#icon-apple" />
+                                </svg>
+                                <svg class="stats-icon stats-icon_android ">
+                                    <use href="/nimg/icons-room.svg#icon-android" />
+                                </svg>
+                                <svg class="stats-icon stats-icon_windows ">
+                                    <use href="/nimg/icons-room.svg#icon-windows" />
+                                </svg>
+                                <svg class="stats-icon stats-icon_ios">
+                                    <use href="/nimg/icons-room.svg#icon-ios" />
+                                </svg>
+                            </div>
+                            <div class="room2-stats__sub-text">
+                                Платформы
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="room2-support room2-support_mobile">
+                    <div class="room2-support-inner room2-support-inner_mobile">
+                        <div class="room2-support-avatar" style="background-image: url(../nimg/support-team.jpg);">
+                            <div class="room2-support-avatar__icon">
+                                <svg class="room2-support-avatar__icon-image">
+                                    <use href="/nimg/icons-room.svg#icon-headphones" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="room2-support-info">
+                            <div class="room2-support-info__name">
+                                Андрей Антипов
+                            </div>
+                            <div class="room2-support-info__role">
+                                Глава службы поддержки
+                            </div>
+                        </div>
+                        <div class="room2-support-links room2-support-links_mobile">
+                            <a class="room2-support-links__item room2-support-links__item_chat">
+                                <svg class="room2-support-links__icon room2-support-links__icon_chat">
+                                    <use href="/nimg/icons-room.svg#icon-chat" />
+                                </svg>
+                                <span>Онлайн чат</span>
+                            </a>
+                            <a class="room2-support-links__item  room2-support-links__item_telegram"
+                                href="https://t.me/gipsyteamsupport2" target="_blank" rel="nofollow">
+                                <svg class="room2-support-links__icon room2-support-links__icon_telegram">
+                                    <use href="/nimg/icons-room.svg#icon-telegram" />
+                                </svg>
+                                <span>Телеграм</span>
+                            </a>
+                            <a
+                                class="room2-support-links__item room2-support-links__item_mobile room2-support-links__item_support">
+                                <svg class="room2-support-links__icon room2-support-links__icon_gt">
+                                    <use href="/nimg/icons-room.svg#icon-gt-logo" />
+                                </svg>
+                                <span>Поддержка</span>
+                            </a>
+                            <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_skype"
+                                href="skype:gipsyteam-support?chat" target="_blank" rel="nofollow">
+                                <svg class="room2-support-links__icon room2-support-links__icon_skype">
+                                    <use href="/nimg/icons-room.svg#icon-skype" />
+                                </svg>
+                                <span>Скайп</span>
+                            </a>
+                            <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_discord room2-support-links__item_tablet"
+                                href="https://discord.gg/3hfmbNHsEh" target="_blank" rel="nofollow">
+                                <svg class="room2-support-links__icon room2-support-links__icon_discord">
+                                    <use href="/nimg/support-sprite.svg#i-btn-discord" />
+                                </svg>
+                                <span>Discord</span>
+                            </a>
+                            <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_whatsapp room2-support-links__item_tablet"
+                                href="https://api.whatsapp.com/send?phone=79264485917" target="_blank" rel="nofollow">
+                                <svg class="room2-support-links__icon room2-support-links__icon_whatsapp">
+                                    <use href="/nimg/support-sprite.svg#i-link-whatsapp" />
+                                </svg>
+                                <span>WhatsApp</span>
+                            </a>
+                            <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_viber room2-support-links__item_tablet"
+                                ref="viber://chat?number=+79264485917" target="_blank" rel="nofollow">
+                                <svg class="room2-support-links__icon room2-support-links__icon_viber">
+                                    <use href="/nimg/support-sprite.svg#i-link-viber" />
+                                </svg>
+                                <span>Viber</span>
+                            </a>
+                            <div class="room2-support-links__item room2-support-links__item_more">
+                                <span>Ещё</span>
+                                <svg class="room2-support-links__icon room2-support-links__icon_arrow">
+                                    <use href="/nimg/icons-room.svg#icon-arrow-red" />
+                                </svg>
                             </div>
                         </div>
                     </div>
 
                 </div>
-                <div class="room2-links">
-                    <a href="#room2__info-link" class="room2-links__item">
-                        <svg class="room2-links__icon room2-links__icon--info">
-                            <use href="/nimg/icons-room.svg#icon-info" />
-                        </svg>
-                        <span>
-                            Информация <span class="room2_full-text"> о покер руме</span>
-                        </span>
-                    </a>
-                    <a href="#room2__testimonials-link" class="room2-links__item">
-                        <svg class="room2-links__icon room2-links__icon--testimonials">
-                            <use href="/nimg/icons-room.svg#icon-testimonials" />
-                        </svg>
-                        <span>
-                            Отзывы <span class="room2_full-text"> пользователей</span>
-                        </span>
-                    </a>
+                <div class="room2-description">
 
-                    <a href="#room2__review-link" class="room2-links__item">
-                        <svg class="room2-links__icon room2-links__icon--lines">
-                            <use href="/nimg/icons-room.svg#icon-lines" />
-                        </svg>
-                        <span>
-                            Обзор <span class="room2_full-text"> авторов GipsyTeam</span>
-                        </span>
-                    </a>
+                    <div id="room2__info-link" class="room2-description__title">
+                        <h3>Описание и регистрация</h3>
+                    </div>
+                    <div class="room2-description__content">
+                        <div class="room2-description__text">
+                            <p>
+                                Крупнейший российский рум с игрой на рубли и бессменный партнер GipsyTeam с первого
+                                дня
+                                открытия в 2014 году. Широкий выбор кэш-игры и турниров по всем популярным форматам:
+                                от
+                                холдема и омахи до китайского покера. Регулярные турниры со случайным призовым
+                                фондом,
+                                Windfall: взнос от 10 рублей и призовой фонд до 1.6 млн рублей. Есть столы с
+                                бэдбит-джекпотом. Рум дружелюбен к новичкам: каждый день проводятся фрироллы,
+                                работает
+                                круглосуточная поддержка на русском языке. Не поддерживаются программы для сбора
+                                покерной статистики.
+                            </p>
+                            <p>
+                                Как зарегистрироваться на Покердоме и получить бонусы GipsyTeam:
+                            </p>
+                        </div>
+                        <!-- ___________STATE #1_______________ -->
+                        <div class="room2-steps">
+                            <div class="room2-steps__bullet">
+                                <div class="room2-steps__bullet-content">
+                                    1
+                                </div>
+                            </div>
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__text">
+                                    Скопируйте в буфер промокод <span class="room2_full-text"> GT</span> :
+                                </div>
+                                <div class="room2-steps__copy-area">
+                                    GT2022FG
+                                    <svg class="room2-steps__copy">
+                                        <use href="/nimg/icons-room.svg#icon-copy" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="room2-steps__bullet">
+                                <div class="room2-steps__bullet-content">
+                                    2
+                                </div>
+                            </div>
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__text room2-steps__text_2">
+                                    Перейдите по ссылке и зарегистрируйтесь, используя скопированный промокод:
+                                </div>
+                                <a href="#" class="room2-steps__reg-link">
+                                    Регистрация на Покердом
+                                </a>
+                            </div>
+                            <div class="room2-steps__bullet">
+                                <div class="room2-steps__bullet-content">
+                                    3
+                                </div>
+                            </div>
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__text">
+                                    После регистрации, пришлите нам свой ник, чтобы получить:</div>
+                                <ul class="room2-steps__list">
+                                    <li class="room2-steps__list-item">
+                                        <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
+                                        магазине.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
+                                        сутки.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        Профессиональные <strong>лэйауты</strong> для удобной игры.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
+                                        рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
+                                        турнирных
+                                        пакетов на этапы EPT, WPT и других крупнейших серий.
+                                    </li>
+                                </ul>
+                                <form action="" class="room2-steps__form">
+                                    <input type="text" class="room2-steps__input" placeholder="Введите ник" required>
+                                    <input type="button" class="room2-steps__button" value="Отправить"
+                                        title="Введите ваш никнейм в форму слева">
+                                </form>
+                            </div>
+                            <div class="room2-steps__bullet">
+                                <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
+                                    <use href="/nimg/icons-room.svg#icon-check" />
+                                </svg>
+                            </div>
+
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__main-text">
+                                    Готово! Теперь вы можете играть на Покердоме, используя все бонусы от GipsyTeam.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ___________STATE #2_______________ -->
+                        <div class="room2-steps">
+                            <div class="room2-steps__bullet">
+                                <div class="room2-steps__bullet-content">
+                                    1
+                                </div>
+                            </div>
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__text">
+                                    Скопируйте в буфер промокод <span class="room2_full-text"> GT</span> :
+                                </div>
+                                <div class="room2-steps__copy-area">
+                                    GT2022FG
+                                    <svg class="room2-steps__copy">
+                                        <use href="/nimg/icons-room.svg#icon-copy" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="room2-steps__bullet">
+                                <div class="room2-steps__bullet-content">
+                                    2
+                                </div>
+                            </div>
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__text room2-steps__text_2">
+                                    Перейдите по ссылке и зарегистрируйтесь, используя скопированный промокод:
+                                </div>
+                                <a href="#" class="room2-steps__reg-link">
+                                    Регистрация на Покердом
+                                </a>
+                            </div>
+                            <div class="room2-steps__bullet">
+                                <div class="room2-steps__bullet-content">
+                                    3
+                                </div>
+                            </div>
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__text">
+                                    После регистрации, пришлите нам свой ник, чтобы получить:</div>
+                                <ul class="room2-steps__list">
+                                    <li class="room2-steps__list-item">
+                                        <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
+                                        магазине.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
+                                        сутки.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        Профессиональные <strong>лэйауты</strong> для удобной игры.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
+                                        рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
+                                        турнирных
+                                        пакетов на этапы EPT, WPT и других крупнейших серий.
+                                    </li>
+                                </ul>
+                                <div class="room2-steps__login">
+                                    Чтобы отправить ник, <a href="https://www.gipsyteam.ru/user/login">войдите на GT</a>
+                                    или
+                                    <a href="https://www.gipsyteam.ru/user/register">зарегистрируйтесь</a>.
+                                </div>
+                            </div>
+                            <div class="room2-steps__bullet">
+                                <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
+                                    <use href="/nimg/icons-room.svg#icon-check" />
+                                </svg>
+                            </div>
+
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__main-text">
+                                    Готово! Теперь вы можете играть на Покердоме, используя все бонусы от GipsyTeam.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ___________STATE #3_______________ -->
+                        <div class="room2-steps">
+                            <div class="room2-steps__bullet">
+                                <div class="room2-steps__bullet-content">
+                                    1
+                                </div>
+                            </div>
+                            <div class="room2-steps__content">
+                                Чтобы получить все преимущества и бонусы, перед тем как нажать кнопку
+                                «Зарегистрироваться»,
+                                необходимо очистить cookies или использовать неосновной браузер. Депозит удобнее всего
+                                делать через онлайн кассу.
+                            </div>
+                            <div class="room2-steps__bullet">
+                                <div class="room2-steps__bullet-content">
+                                    2
+                                </div>
+                            </div>
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__text room2-steps__text_2">
+                                    Перейдите по ссылке и зарегистрируйтесь:
+                                </div>
+                                <a href="#" class="room2-steps__reg-link">
+                                    Регистрация на Покердом
+                                </a>
+                            </div>
+                            <div class="room2-steps__bullet">
+                                <div class="room2-steps__bullet-content">
+                                    3
+                                </div>
+                            </div>
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__text">
+                                    После регистрации, пришлите нам свой ник, чтобы получить:</div>
+                                <ul class="room2-steps__list">
+                                    <li class="room2-steps__list-item">
+                                        <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
+                                        магазине.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
+                                        сутки.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        Профессиональные <strong>лэйауты</strong> для удобной игры.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
+                                    </li>
+                                    <li class="room2-steps__list-item">
+                                        <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
+                                        рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
+                                        турнирных
+                                        пакетов на этапы EPT, WPT и других крупнейших серий.
+                                    </li>
+                                </ul>
+                                <div class="room2-steps__login">
+                                    Чтобы отправить ник, <a href="https://www.gipsyteam.ru/user/login">войдите на GT</a>
+                                    или
+                                    <a href="https://www.gipsyteam.ru/user/register">зарегистрируйтесь</a>.
+                                </div>
+                            </div>
+                            <div class="room2-steps__bullet">
+                                <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
+                                    <use href="/nimg/icons-room.svg#icon-check" />
+                                </svg>
+                            </div>
+
+                            <div class="room2-steps__content">
+                                <div class="room2-steps__main-text">
+                                    Готово! Теперь вы можете играть на Покердоме, используя все бонусы от GipsyTeam.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ___________STATE #4_______________ -->
+                        <div class="room2-steps-restricted">
+                            <div class="room2-steps__notify">
+
+                                <img class="room2-steps__rkn-logo" src="/nimg/regs-restricted-logo-2x.png"
+                                    alt="ios logo">
+                                <div class="room2-steps__notify-text-wrap">
+                                    <div class="room2-steps__notify-title">
+                                        Доступ в этот рум запрещен в вашем регионе решением Роскомнадзора
+                                    </div>
+                                    <div class="room2-steps__notify-text">
+                                        Ваш IP адрес <strong>90.154.73.185</strong> находится на территории
+                                        Российской Федерации, поэтому вам ограничен доступ к этой странице на
+                                        основании <span class="room2-steps__notify-phrase">Федерального
+                                            закона от 27.11.2017 N 358-ФЗ.</span> </div>
+                                </div>
+                            </div>
+                            <div class="room2-steps room2-steps_blocked">
+
+                                <div class="room2-steps__bullet">
+                                    <svg class="room2-steps__earth">
+                                        <use href="/nimg/icons-room.svg#icon-earth" />
+                                    </svg>
+                                </div>
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__main-text">
+                                        Пройти регистрацию в этом руме можно только из стран, в которых есть доступ
+                                        к сайту. Например из Польши, Литвы, Чехословакии, Германии и др.
+                                    </div>
+                                </div>
+                                <div class="room2-steps__bullet">
+                                    <div class="room2-steps__bullet-content">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__text">
+                                        Скопируйте в буфер промокод <span class="room2_full-text"> GT</span> :
+                                    </div>
+                                    <div class="room2-steps__copy-area">
+                                        GT2022FG
+                                        <svg class="room2-steps__copy">
+                                            <use href="/nimg/icons-room.svg#icon-copy" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="room2-steps__bullet">
+                                    <div class="room2-steps__bullet-content">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__text room2-steps__text_2">
+                                        Перейдите на сайт покер-рума доступный в интернете и зарегистрируйтесь, в строке
+                                        "Referral Code" введите промокод.
+                                    </div>
+                                    <div class="room2-steps__text room2-steps__text_2">
+                                        Если ссылка не работает, используйте любой бесплатный VPN, например BrowSec.
+                                        После регистрации его нужно выключить.
+                                    </div>
+
+                                </div>
+                                <div class="room2-steps__bullet">
+                                    <div class="room2-steps__bullet-content">
+                                        3
+                                    </div>
+                                </div>
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__text">
+                                        После регистрации, пришлите нам свой ник, чтобы получить:</div>
+                                    <ul class="room2-steps__list">
+                                        <li class="room2-steps__list-item">
+                                            <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
+                                            магазине.
+                                        </li>
+                                        <li class="room2-steps__list-item">
+                                            <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
+                                            сутки.
+                                        </li>
+                                        <li class="room2-steps__list-item">
+                                            Профессиональные <strong>лэйауты</strong> для удобной игры.
+                                        </li>
+                                        <li class="room2-steps__list-item">
+                                            <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
+                                        </li>
+                                        <li class="room2-steps__list-item">
+                                            <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
+                                            рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
+                                            турнирных
+                                            пакетов на этапы EPT, WPT и других крупнейших серий.
+                                        </li>
+                                    </ul>
+                                    <form action="" class="room2-steps__form">
+                                        <input type="text" class="room2-steps__input" placeholder="Введите ник"
+                                            required>
+                                        <input type="button" class="room2-steps__button" value="Отправить"
+                                            title="Введите ваш никнейм в форму слева">
+                                    </form>
+                                </div>
+                                <div class="room2-steps__bullet">
+                                    <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
+                                        <use href="/nimg/icons-room.svg#icon-check" />
+                                    </svg>
+                                </div>
+
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__main-text">
+                                        Готово! Теперь вы можете играть на Покердоме, используя все бонусы от
+                                        GipsyTeam.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- ___________STATE #5_______________ -->
+                        <div class="room2-steps-restricted">
+                            <div class="room2-steps__notify">
+
+                                <img class="room2-steps__rkn-logo" src="/nimg/regs-restricted-logo-2x.png"
+                                    alt="ios logo">
+                                <div class="room2-steps__notify-text-wrap">
+                                    <div class="room2-steps__notify-title">
+                                        Доступ в этот рум запрещен в вашем регионе решением Роскомнадзора
+                                    </div>
+                                    <div class="room2-steps__notify-text">
+                                        Ваш IP адрес <strong>90.154.73.185</strong> находится на территории
+                                        Российской Федерации, поэтому вам ограничен доступ к этой странице на
+                                        основании <span class="room2-steps__notify-phrase">Федерального
+                                            закона от 27.11.2017 N 358-ФЗ.</span> </div>
+                                </div>
+
+                            </div>
+                            <div class="room2-steps room2-steps_blocked">
+
+                                <div class="room2-steps__bullet">
+                                    <svg class="room2-steps__earth">
+                                        <use href="/nimg/icons-room.svg#icon-earth" />
+                                    </svg>
+                                </div>
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__main-text">
+                                        Пройти регистрацию в этом руме можно только из стран, в которых есть доступ
+                                        к сайту. Например из Польши, Литвы, Чехословакии, Германии и др.
+                                    </div>
+                                </div>
+                                <div class="room2-steps__bullet">
+                                    <div class="room2-steps__bullet-content">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__text">
+                                        Скопируйте в буфер промокод <span class="room2_full-text"> GT</span> :
+                                    </div>
+                                    <div class="room2-steps__copy-area">
+                                        GT2022FG
+                                        <svg class="room2-steps__copy">
+                                            <use href="/nimg/icons-room.svg#icon-copy" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="room2-steps__bullet">
+                                    <div class="room2-steps__bullet-content">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__text room2-steps__text_2">
+                                        Перейдите на сайт покер-рума доступный в интернете и зарегистрируйтесь, в строке
+                                        "Referral Code" введите промокод.
+                                    </div>
+                                    <div class="room2-steps__text room2-steps__text_2">
+                                        Если ссылка не работает, используйте любой бесплатный VPN, например BrowSec.
+                                        После регистрации его нужно выключить.
+                                    </div>
+
+                                </div>
+                                <div class="room2-steps__bullet">
+                                    <div class="room2-steps__bullet-content">
+                                        3
+                                    </div>
+                                </div>
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__text">
+                                        После регистрации, пришлите нам свой ник, чтобы получить:</div>
+                                    <ul class="room2-steps__list">
+                                        <li class="room2-steps__list-item">
+                                            <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
+                                            магазине.
+                                        </li>
+                                        <li class="room2-steps__list-item">
+                                            <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
+                                            сутки.
+                                        </li>
+                                        <li class="room2-steps__list-item">
+                                            Профессиональные <strong>лэйауты</strong> для удобной игры.
+                                        </li>
+                                        <li class="room2-steps__list-item">
+                                            <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
+                                        </li>
+                                        <li class="room2-steps__list-item">
+                                            <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
+                                            рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
+                                            турнирных
+                                            пакетов на этапы EPT, WPT и других крупнейших серий.
+                                        </li>
+                                    </ul>
+                                    <div class="room2-steps__login">
+                                        Чтобы отправить ник, <a href="https://www.gipsyteam.ru/user/login">войдите на
+                                            GT</a>
+                                        или
+                                        <a href="https://www.gipsyteam.ru/user/register">зарегистрируйтесь</a>.
+                                    </div>
+                                </div>
+                                <div class="room2-steps__bullet">
+                                    <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
+                                        <use href="/nimg/icons-room.svg#icon-check" />
+                                    </svg>
+                                </div>
+
+                                <div class="room2-steps__content">
+                                    <div class="room2-steps__main-text">
+                                        Готово! Теперь вы можете играть на Покердоме, используя все бонусы от
+                                        GipsyTeam.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
+                <div class="room2-banners room2-banners_mobile">
 
-            </div>
-            <div class="room2-stats ">
+                    <div class="room2-banners-inner">
+                        <a href="#" class="room2-banner__item">
+                            <div class="room2-banner__image">
+                                <img src="/nimg/league-free-banner.jpg" alt="">
+                            </div>
+                            <div class="room2-banner__text">
+                                Два еженедельных турнирных лидерборда на 94 тыс. рублей
+                            </div>
+                        </a>
+                        <a href="#" class="room2-banner__item">
+                            <div class="room2-banner__image">
+                                <img src="//www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/54.jpg?1615221289"
+                                    alt=""
+                                    srcset="//www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/54.jpg?1615221289 1x, //www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/54@2x.jpg?1615221289 2x">
+                            </div>
+                            <div class="room2-banner__text">
+                                Бесплатный турнир на 10 тыс. рублей каждую неделю
+                            </div>
+                        </a>
+                        <a href="#" class="room2-banner__item ">
+                            <div class="room2-banner__image">
+                                <img src="//www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/1/159.jpg?1652439296"
+                                    alt=""
+                                    srcset="//www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/1/159.jpg?1652439296 1x, //www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/1/159@2x.jpg?1652439296 2x">
+                            </div>
+                            <div class="room2-banner__text">
+                                Лидерборды и подарки на 4 млн рублей для кэш-игроков
+                            </div>
+                        </a>
+                    </div>
 
-
-                <div class="room2-stats__title">
-                    <h3>Особенности Покердома</h3>
                 </div>
-                <div class="room2-stats__grid">
+                <div class="room2-plus">
 
-                    <div class="room2-stats__item room2-stats__item_1">
-                        <div class="room2-stats__main-text">
-                            400₽
-                        </div>
-                        <div class="room2-stats__sub-text">
-                            Минимальный депозит
-                        </div>
+                    <div class="room2-plus__title" id="room2-review__link-plus">
+                        <h3>Плюсы и минусы</h3>
                     </div>
-                    <div class="room2-stats__item room2-stats__item_2">
-                        <div class="room2-stats__main-text">
-                            150%
-                        </div>
-                        <div class="room2-stats__sub-text">
-                            Бонус новым игрокам
-                        </div>
-                    </div>
-                    <div class="room2-stats__item room2-stats__item_3">
-                        <div class="room2-stats__main-text">
-                            $5000 <span class="room2-stats_secondary"> /24ч</span>
-                        </div>
-                        <div class="room2-stats__sub-text">
-                            Лимиты на вывод
-                        </div>
-                    </div>
-                    <div class="room2-stats__item room2-stats__item_4">
-                        <div class="room2-stats__main-text">
-                            до 10%
-                        </div>
-                        <div class="room2-stats__sub-text">
-                            Комиссия за вывод
-                        </div>
-                    </div>
-                    <div class="room2-stats__item room2-stats__item_5">
-                        <div class="room2-stats__main-text">
-                            24 часа
-                        </div>
-                        <div class="room2-stats__sub-text">
-                            Скорость вывода
-                        </div>
-                    </div>
-                    <div class="room2-stats__item room2-stats__item_6">
-                        <div class="room2-stats__main-text">
-                            300 игроков
-                        </div>
-                        <div class="room2-stats__sub-text">
-                            Средний онлайн
-                        </div>
-                    </div>
-                    <div class="room2-stats__item room2-stats__item_7">
-                        <div class="room2-stats__icons">
-
-                            <img class="stats-icon stats-icon_mastercard" src="/nimg/icon-mastercard.png"
-                                alt="mastercard logo">
-
-
-                            <img class="stats-icon stats-icon_visa" src="/nimg/icon-visa.png" alt="visa logo">
-
-
-                            <img class="stats-icon stats-icon_crypto" src="/nimg/icon-bitcoin.png"
-                                alt="bitcoin logo">
-
-                            <img class="stats-icon stats-icon_webmoney" src="/nimg/icon-webmoney.png"
-                                alt="webmoney-logo logo">
-
-
-                            <img class="stats-icon stats-icon_neteller" src="/nimg/icon-neteller.png"
-                                alt="neteller logo">
-
-                            <span class="room2-stats_secondary room2-stats_secondary_mobile"> +2</span>
-                        </div>
-                        <div class="room2-stats__sub-text">
-                            Платёжные системы
-                        </div>
+                    <div class="room2-plus__wrapper">
+                        <ul class="room2-plus__list room2-plus__list_pros">
+                            <li class="room2-plus__list-item room2-plus__list-item_plus">
+                                Известный и надежный бренд
+                            </li>
+                            <li class="room2-plus__list-item room2-plus__list-item_plus">
+                                Депозиты и выводы в рублях
+                            </li>
+                            <li class="room2-plus__list-item room2-plus__list-item_plus">
+                                Русский онлайн-саппорт
+                            </li>
+                            <li class="room2-plus__list-item room2-plus__list-item_plus">
+                                Постоянные акции и гонки
+                            </li>
+                            <li class="room2-plus__list-item room2-plus__list-item_plus">
+                                Минимум проф. игроков
+                            </li>
+                        </ul>
+                        <ul class="room2-plus__list room2-plus__list_list">
+                            <li class="room2-plus__list-item room2-plus__list-item_minus">
+                                Запрещены программы статистики
+                            </li>
+                            <li class="room2-plus__list-item room2-plus__list-item_minus">
+                                Небольшая комиссия на выводы
+                            </li>
+                            <li class="room2-plus__list-item room2-plus__list-item_minus">
+                                Низкий трафик на средних и высоких лимитах
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="room2-stats__item room2-stats__item_8">
-                        <div class="room2-stats__icons">
-                            <svg class="stats-icon stats-icon_apple">
-                                <use href="/nimg/icons-room.svg#icon-apple" />
-                            </svg>
-                            <svg class="stats-icon stats-icon_android ">
-                                <use href="/nimg/icons-room.svg#icon-android" />
-                            </svg>
-                            <svg class="stats-icon stats-icon_windows ">
-                                <use href="/nimg/icons-room.svg#icon-windows" />
-                            </svg>
-                            <svg class="stats-icon stats-icon_ios">
-                                <use href="/nimg/icons-room.svg#icon-ios" />
-                            </svg>
+                </div>
+                <div class="room2-traffic">
+
+                    <div class="room2-traffic__title">
+                        <h3>Трафик</h3>
+                    </div>
+                    <div class="room2-traffic-items">
+                        <div class="room2-traffic__item">
+                            <div class="room2-traffic__item-title">
+                                2500
+                            </div>
+                            <div class="room2-traffic__item-text">
+                                Средний онлайн
+                            </div>
                         </div>
-                        <div class="room2-stats__sub-text">
-                            Платформы
+                        <div class="room2-traffic__item">
+                            <div class="room2-traffic__item-title">
+                                54 300
+                            </div>
+                            <div class="room2-traffic__item-text">
+                                Игроков в кеше
+                            </div>
+                        </div>
+                        <div class="room2-traffic__item">
+                            <div class="room2-traffic__item-title">
+                                20:00
+                            </div>
+                            <div class="room2-traffic__item-text">
+                                Пиковое время
+                            </div>
+                        </div>
+                        <div class="room2-traffic__item">
+                            <div class="room2-traffic__item-title">
+                                №3
+                            </div>
+                            <div class="room2-traffic__item-text">
+                                Позиция в рейтинге
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="room2-other">
+
+                    <div class="room2-other__title">
+                        <h3>Прочее</h3>
+                    </div>
+                    <div class="room2-other__content">
+                        <div class="slider-screen">
+                            <div
+                                class="slider-screen--container slider-screen--container_initialized slider-screen--container_horizontal">
+                                <ul class="slider-screen--row" style="transform: translate3d(0px, 0px, 0px);">
+                                    <li class="slider-screen--item slider-screen--item_active"
+                                        style="margin-right: 16px;"><a href="/nimg/room-slider-image1280x960.png"><img
+                                                src="/nimg/room-slider-image220x165.png" alt=""></a></li>
+                                    <li class="slider-screen--item slider-screen--item_next"
+                                        style="margin-right: 16px;"><a href="/nimg/room-slider-image960x1280.png"><img
+                                                src="/nimg/room-slider-image124x165.png" alt=""></a></li>
+                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
+                                            href="/nimg/room-slider-image1280x960.png"><img
+                                                src="/nimg/room-slider-image220x165.png" alt=""></a></li>
+                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
+                                            href="/nimg/room-slider-image1280x960.png"><img
+                                                src="/nimg/room-slider-image220x165.png" alt=""></a></li>
+                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
+                                            href="/nimg/room-slider-image960x1280.png"><img
+                                                src="/nimg/room-slider-image124x165.png" alt=""></a></li>
+                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
+                                            href="/nimg/room-slider-image960x1280.png"><img
+                                                src="/nimg/room-slider-image124x165.png" alt=""></a></li>
+                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
+                                            href="/nimg/room-slider-image1280x960.png"><img
+                                                src="/nimg/room-slider-image220x165.png" alt=""></a></li>
+                                </ul>
+                                <div class="slider-screen--button slider-screen--button_next"></div>
+                            </div>
+                        </div>
+                        <div class="room2-other__text-wrapper">
+                            <div class="room2-other__grid">
+                                <div class="room2-other__table-title">
+                                    Год основания
+                                </div>
+                                <div class="room2-other__text">
+                                    2014
+                                </div>
+                                <div class="room2-other__table-title">
+                                    Штаб-квартира
+                                </div>
+                                <div class="room2-other__text">
+                                    Москва
+                                </div>
+                                <div class="room2-other__table-title">
+                                    Телефон
+                                </div>
+                                <div class="room2-other__text">
+                                    +7 (495) 551-5243
+                                </div>
+                                <div class="room2-other__table-title">
+                                    E-mail
+                                </div>
+                                <div class="room2-other__text">
+                                    info@pokerdom.com
+                                </div>
+                            </div>
+                            <div class="room2-other__grid">
+                                <div class="room2-other__table-title">
+                                    Продукты
+                                </div>
+                                <div class="room2-other__text">
+                                    <div class="room2-other__text-row">
+                                        Покер
+                                    </div>
+                                    <div class="room2-other__text-row">
+                                        Казино
+                                    </div>
+                                    <div class="room2-other__text-row">
+                                        Ставки на спорт
+                                    </div>
+                                </div>
+                                <div class="room2-other__table-title">
+                                    Лицензия
+                                </div>
+                                <a href="#" class="room2-other__text">
+                                    0400276445820 <span>
+                                        <svg class="licence-arrow">
+                                            <use href="/nimg/icons-room.svg#icon-licence-arrow" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
+            <section class="room2-testimonials">
+                <div class="room2-testimonials-inner">
+                    <div class="testimonials-header">
+                        <div class="testimonials-header__top">
+                            <div class="reputation">
+                                <div class="reputation__title" id="room2__testimonials-link">
+                                    Репутация
+                                </div>
+                                <div class="reputation__rate">
+                                    <div class="reputation__star">
+                                        <div class="star-background"
+                                            style="background: linear-gradient(90deg, var(--room-accent) 70%, var(--room-color2) 70%);">
+                                        </div>
 
+                                        <svg fill="none" class="room-star-mask" viewBox="0 0 22 22">
+                                            <clipPath id="icon-star-clip-path">
+                                                <path clip-rule="evenodd"
+                                                    d="m0.31507,8.60377l8.16261,0l2.52231,-7.75445l2.52231,7.75445l8.16261,0l-6.60368,4.79246l2.52244,7.75445l-6.60368,-4.79259l-6.60368,4.79259l2.52244,-7.75445l-6.60368,-4.79246z" />
+                                            </clipPath>
+                                        </svg>
+                                    </div>
+                                    <div class="reputation__digits">
+                                        <strong>4.1</strong>
+                                        <span>/5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonials__stats">
+                                <a href="#" class="testimonials__stats-count">
+                                    3 отзыва из 101
+                                </a>
+                                <a href="#" class="testimonials__stats-all">
+                                    Показать все
+                                </a>
+                            </div>
+                        </div>
+                        <div class="testimonials-header__bottom">
+                            <div class="testimonials-header__feedback">
+                                <div class="testimonials-header__item testimonials-header__item_dark">
+                                    <span>Все отзывы</span>
+                                    <svg class="testimonials-arrow">
+                                        <use href="/nimg/icons-room.svg#icon-arrow-white" />
+                                    </svg>
+                                </div>
+                                <a href="#" class="testimonials-header__item">
+                                    Понравилось
+                                </a>
+                                <a href="#" class="testimonials-header__item">
+                                    Поддержка
+                                </a>
+                                <a href="#" class="testimonials-header__item">
+                                    Комиссия
+                                </a>
+                                <a href="#" class="testimonials-header__item">
+                                    Карта
+                                </a>
+                                <a href="#" class="testimonials-header__item">
+                                    Скорость
+                                </a>
+                                <!-- <a href="#" class="testimonials-header__item">
+                                Игра
+                            </a>
+                            <a href="#" class="testimonials-header__item">
+                                Бонус
+                            </a> -->
+                                <!-- <a href="#" class="testimonials-header__item testimonials-header__item_more">
+                                Ещё...
+                            </a> -->
+                            </div>
+                            <div class="testimonials-header__rate">
+                                <div
+                                    class="testimonials-header__item testimonials-header__item_dark testimonials-header__item_rate">
+                                    <span>Все оценки</span>
+                                    <svg class="testimonials-arrow">
+                                        <use href="/nimg/icons-room.svg#icon-arrow-white" />
+                                    </svg>
+                                </div>
+                                <div class="testimonials-header__item testimonials-header__item_stars">
+                                    <div data-rating="3" class="testimonials__stars testimonials__stars_bg">
+                                        <div class="testimonials__stars testimonials__stars_active">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials-cards">
 
-            </div>
-            <div class="room2-support room2-support_mobile">
+                        <div class="testimonials-card testimonials-card_feedback">
+                            <div class="testimonials__avatar">
+                                <div class="testimonials__avatar-image"
+                                    style="background-image: url(../nimg/freemonk-avatar@2x.jpg);">
+                                </div>
+                            </div>
+                            <div class="testimonials__content">
+                                <div class="testimonials__content-header testimonials__content-header_feedback">
+                                    <div class="testimonials__nick-wrap testimonials__nick-wrap_review">
+                                        <div class="testimonials__nick testimonials__nick_review">
+                                            <div class="testimonials__row">
+                                                <span class="testimonials__nick_red">Jauser1337</span>,
+                                            </div>
+                                            <div class="testimonials__sub-nick">уже играли на Покердоме?</div>
+                                        </div>
+                                        <div class="testimonials__call">
+                                            Расскажите другим игрокам, что думаете об этом руме!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonials__text">
+                                    <a href="#" class="testimonials__button">
+                                        <svg class="testimonials__chat">
+                                            <use href="/nimg/icons-room.svg#icon-chat" />
+                                        </svg>
+                                        Написать отзыв
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials-card testimonials-card_feedback testimonials-card_feedback_signed">
+                            <div class="room-feedback--signup">Чтобы оставить отзыв, необходимо <a
+                                    href="javascript:void(0);">войти</a> или <a
+                                    href="javascript:void(0);">зарегистрироваться</a></div>
+                            <form>
+                                <div class="room-feedback-content">
+                                    <div class="room-feedback-avatar">
+                                        <img src="/nimg/feedback-avatar.png" alt="" />
+                                    </div>
+                                    <textarea class="room-feedback--field" placeholder="Оставить отзыв"></textarea>
+                                </div>
+                                <div class="room-feedback-action">
+                                    <div class="room-feedback--meta">
+                                        <div class="room-feedback--note">Ваша оценка</div>
+                                        <div id="rater"></div>
+                                    </div>
+                                    <button class="room-feedback--send">
+                                        <svg>
+                                            <use href="/nimg/buttons-sprite.svg#i-btn-send"></use>
+                                        </svg>
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- ____________TESTIMONIAL_ITEM______________ -->
+                        <div class="testimonials-card">
+                            <div class="testimonials__avatar">
+                                <div class="testimonials__avatar-image"
+                                    style="background-image: url(../nimg/gambler14-avatar2x.png);">
+
+                                </div>
+                            </div>
+                            <div class="testimonials__content">
+                                <div class="testimonials__content-header">
+                                    <div class="testimonials__nick-wrap">
+                                        <div class="testimonials__nick">
+                                            Ноутбук
+                                        </div>
+                                        <div data-rating="3" class="testimonials__stars testimonials__stars_bg">
+                                            <div class="testimonials__stars testimonials__stars_active">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonials__date">
+                                        20 апреля, 02:00
+                                    </div>
+                                </div>
+                                <div class="testimonials__text">
+                                    Столкнулся с хамством и некомпетентностью со стороны представителей данного рума.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ____________TESTIMONIAL_ITEM______________ -->
+
+                        <div class="testimonials-card">
+                            <div class="testimonials__avatar">
+                                <div class="testimonials__avatar-image"
+                                    style="background-image: url(../nimg/goodstory-avatar2x.jpg);">
+
+                                </div>
+                            </div>
+                            <div class="testimonials__content">
+                                <div class="testimonials__content-header">
+                                    <div class="testimonials__nick-wrap">
+                                        <div class="testimonials__nick">
+                                            Vlad764
+                                        </div>
+                                        <div data-rating="5" class="testimonials__stars testimonials__stars_bg">
+                                            <div class="testimonials__stars testimonials__stars_active">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonials__date">
+                                        11 августа, 02:30
+                                    </div>
+                                </div>
+                                <div class="testimonials__text">
+                                    8 лет играю на этом руме, мгновенный вывод денег куда душе угодно, карты, крипта и
+                                    тд,.
+                                    Отличный саппорт. </div>
+                            </div>
+                        </div>
+                        <!-- ____________TESTIMONIAL_ITEM______________ -->
+
+                        <div class="testimonials-card">
+                            <div class="testimonials__avatar">
+                                <div class="testimonials__avatar-image">
+
+                                </div>
+                            </div>
+                            <div class="testimonials__content">
+                                <div class="testimonials__content-header">
+                                    <div class="testimonials__nick-wrap">
+                                        <div class="testimonials__nick">
+                                            Oleg Ivanovich
+                                        </div>
+                                        <div data-rating="3" class="testimonials__stars testimonials__stars_bg">
+                                            <div class="testimonials__stars testimonials__stars_active">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonials__date">
+                                        22 ноября, 18:31
+                                    </div>
+                                </div>
+                                <div class="testimonials__text">
+                                    Софт и поле меня устраивают, но описаная ниже ситуация не позволяет мне поставить
+                                    высокую оценку этому руму.
+                                    При депозите есть возможность получить 100% к сумме (типичный бонус для румов), но
+                                    этот бонус идет для игр в казино, при этом им даже в казино нельзя воспользоваться,
+                                    т.к. сперва списываются реальные деньги (т.е. сам депозит), что самое комичное -
+                                    любой выигрыш в казино зачисляется на бонусный счет (т.е. твои реальные деньги
+                                    конвертируются в фантики).
+                                    п.с. да, я сам виноват, что не вчитался в каждую мелкошрифтную строку перед
+                                    депозитом, но когда ты открываешь в ПОКЕР руме (который называется ПОКЕРдом) кассу,
+                                    жмешь депозит, выбираешь бонус - ты ожидаешь получить отыгрываемый бонус для игры в
+                                    покер, а не в казино. Без сомнений - они осознанно эксплуатируют подобное поведение
+                                    покер игроков. </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials__stats testimonials__stats_mobile">
+                        <a href="#" class="testimonials__stats-count">
+                            3 отзыва из 101
+                        </a>
+                        <a href="#" class="testimonials__stats-all">
+                            Показать все
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+            <section class="room2-review">
+                <div class="room2-review__header">
+                    <div id="room2__review-link" class="room2-review__header-title">
+                        Обзор от авторов GipsyTeam
+                    </div>
+                    <div class="room2-review__author-wrap">
+                        <div class="room2-review__author-item">
+                            <div class="room2-review__author-avatar"
+                                style="background-image: url(../nimg/widget-authors.png);">
+                            </div>
+                            <div class="room2-review__author-text">
+                                <div class="room2-review__author-role">
+                                    Эксперт
+                                </div>
+                                <div class="room2-review__author-name">
+                                    Илья Городецкий
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room2-review__author-item">
+                            <div class="room2-review__author-avatar"
+                                style="background-image: url(../nimg/author-ava.jpg);">
+                            </div>
+                            <div class="room2-review__author-text">
+                                <div class="room2-review__author-role">
+                                    Редактор
+                                </div>
+                                <div class="room2-review__author-name">
+                                    Егор Зарев
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="room2-review__main">
+                    <aside class="room2-review__map">
+                        <div class="room2-review__links">
+                            <a href="#room2-review__link-enter" class="room2-review__link room2-review__link_active">
+                                Вводная
+                            </a>
+                            <a href="#nav-0" class="room2-review__link">
+                                Во что можно играть на Покердоме
+                            </a>
+                            <a href="#nav-1" class="room2-review__link">
+                                Рейк и рейкбек
+                            </a>
+                            <a href="#nav-2" class="room2-review__link">
+                                Депозит и кэшаут
+                            </a>
+                            <a href="#nav-3" class="room2-review__link">
+                                Как установить Покердом на Windows
+                            </a>
+                            <a href="#nav-4" class="room2-review__link">
+                                Мобильное приложение Покердом для iOS и Android
+                            </a>
+                            <a href="#nav-5" class="room2-review__link">
+                                Регистрация на Покердоме
+                            </a>
+                            <a href="#nav-6" class="room2-review__link">
+                                Плюсы и минусы игры
+                            </a>
+                            <a href="#nav-7" class="room2-review__link">
+                                FAQ
+                            </a>
+                        </div>
+                    </aside>
+
+                    <div class="room2-review__content r-view--content">
+
+                        <h2>Обзор покер-рума Покердом</h2>
+                        <p>Покердом (Pokerdom) — крупнейший российский покер-рум, открытый в 2014 году. Здесь проще
+                            всего
+                            начать играть в покер на реальные деньги: в расписании много фрироллов с крупными призами (в
+                            том
+                            числе фрироллы без пароля), круглосуточная игра, знаменитые серии турниров с кубками для
+                            победителей и возможность играть на рубли.</p>
+                        <p>Для новых игроков покер-рум часто раздает бонусы на депозиты и проводит крупные акции, а
+                            уровень
+                            игроков на Покердоме ниже: сайт не поддерживает использование вспомогательных программ
+                            (HUD'ы,
+                            статистика), из-за этого у профессиональных игроков не такое большое преимущество над
+                            любителями.</p>
+
+                        <h2 id="nav-0">Во что можно играть на Покердоме</h2>
+                        <p>Покердом предлагает все популярные форматы современного онлайн-покера: кэш и быстрый покер,
+                            одностоловые и многостоловые турниры, китайский покер, а также особые турниры со случайным
+                            призовым фондом — спины (Windfall). В спинах можно заплатить 10 рублей и выиграть крупный
+                            джекпот. Есть столы с шестикарточной и семикарточной омахой.&nbsp;</p>
+                        <p>Кэш-игра идет на лимитах от ₽1/₽2 до ₽1,000/₽2,000.</p>
+                        <p>Реальные деньги на покердоме можно выиграть без вложения собственных средств - с фрироллов. В
+                            расписании много турниров с бай-инами от 10 рублей, форматы самые разные: от классических
+                            фризаутов до нокаут-турниров с наградой за выбивание. Несколько раз в год на Покердоме
+                            проходят
+                            крупные турнирные серии (именно здесь проходит Российская Онлайн-Покер Лига и Чемпионат
+                            России
+                            по онлайн-покеру), а также можно пройти отбор на живые турниры в игорных зонах России: в
+                            казино
+                            в Сочи и Калининграде.</p>
+                        <figure class="image article--photo article--photo_center"><img
+                                src="https://www.gipsyteam.ru/upload/Rakebackreviewimage/default/33.jpg"></figure>
+
+                        <h2 id="nav-1">Рейк и рейкбек</h2>
+                        <p>На Покердоме рейк средний: в кэше в пот-лимитных и безлимитных играх с каждого банка берется
+                            5%,
+                            в лимитных играх 2.5%. Максимальная сумма зависит от размера ставок и количества игроков в
+                            раздаче.</p>
+                        <p>Стандартная комиссия в турнирах - 10%.</p>
+                        <p>На Pokerdom можно выбрать одну из двух программ лояльности, которая будет возвращать
+                            уплаченную
+                            комиссию (давать рейкбек).</p>
+                        <p>Первая программа, “100 шагов к миллиону”, больше понравится любителям: за каждый рубль вы
+                            получаете балл, при наборе определенного количества баллов, вы переходите на новый уровень и
+                            получаете случайный денежный приз. Уровни не обнуляются, разброс денежных бонусов – от 25 до
+                            1,000,000 рублей. Вторая программа, “Машина времени”, больше понравится профессионалам:
+                            активно
+                            играйте в течение всего месяца и получайте до 67% рейкбека.</p>
+                        <figure class="image article--photo article--photo_center"><img
+                                src="https://www.gipsyteam.ru/upload/Rakebackreviewimage/default/34.jpg"></figure>
+
+                        <h2 id="nav-2">Депозит и кэшаут</h2>
+                        <p>Минимальный депозит на Покердоме составляет 500 рублей.</p>
+                        <p>Для пополнения или вывода средств доступен большой выбор платежных систем:</p>
+                        <ul>
+                            <li>Банковские карты</li>
+                            <li>Monetix</li>
+                            <li>Piastrix</li>
+                            <li>Skrill</li>
+                            <li>Neteller</li>
+                            <li>Криптовалюта</li>
+                            <li>Р2Р (между игроками)</li>
+                            <li>WebMoney</li>
+                        </ul>
+                        <p>Доступность платежных методов может различаться в зависимости от страны и загруженности
+                            платежных
+                            шлюзов.</p>
+                        <p>Кэшаут возможен в любое время без отыгрыша депозита или других правил. Игроки могут
+                            переводить
+                            друг другу деньги внутри рума без комиссии.</p>
+
+                        <h2 id="nav-3">Как установить Покердом на Windows</h2>
+                        <p>Для установки зайдите на сайт, в правом меню выберите “Покер” и нажмите “Скачать приложение”.
+                            При
+                            проблемах с доступом, воспользуйтесь зеркалом сайта Покердом.</p>
+                        <figure class="image article--photo article--photo_center"><img
+                                src="https://www.gipsyteam.ru/upload/Rakebackreviewimage/default/35.jpg"></figure>
+
+                        <h2 id="nav-4">Мобильное приложение Покердом для iOS и Android</h2>
+                        <p>Порядок действий по установке такой же, как для настольного клиента: надо зайти по ссылке со
+                            своего устройства, для скачивания будет предложена соответствующая версия. Если у вас
+                            Android,
+                            не забудьте разрешить установку приложений из неизвестных источников в разделе
+                            “Безопасность”
+                            настроек телефона.</p>
+                        <p>Отдельного приложения на IOS нет, но играть можно прямо из браузера. Браузерная версия по
+                            возможностям ничем не уступает клиенту.</p>
+                        <figure class="image article--photo article--photo_center"><img
+                                src="https://www.gipsyteam.ru/upload/Rakebackreviewimage/default/36.jpg"></figure>
+                        <p>Ограничения на максимальное количество столов нет — лишь бы хватало мощности смартфона.
+                            Переключаться между ними можно свайпом или на панели в верхней части.</p>
+                        <p>Не обязательно скачивать дополнительные программы: достаточно браузера с поддержкой Java и
+                            Flash.
+                            Войдите в личный кабинет на сайте и нажмите “Играть” на главной странице. Доступны все
+                            возможности полноценного клиента.</p>
+
+                        <h2 id="nav-5">Регистрация на Покердоме</h2>
+                        <p>Если у вас еще нет аккаунта, зарегистрируйтесь на сайте при помощи этой <a
+                                href="https://www.gipsyteam.ru/pokerrumy/pokerdom#roomreg"
+                                target="_blank">инструкции</a> и
+                            каждую субботу участвуйте во фриролле от GipsyTeam с гарантией 10,000 рублей! Турнир
+                            проводится
+                            еженедельно, по субботам, в 20:00 по Москве. Для получения билета требуется пройти
+                            верификацию
+                            личности.</p>
+                        <p><a href="https://www.gipsyteam.ru/support" target="_blank">Служба поддержки</a> поможет
+                            решить
+                            возникшие трудности с доступом и другие проблемы.</p>
+
+                        <h2 id="nav-6">Плюсы и минусы игры</h2>
+                        <p>К основным преимуществам можно отнести:</p>
+                        <ul>
+                            <li>Депозиты и кэшауты в рублях</li>
+                            <li>Широкий выбор игры</li>
+                            <li>Много слабых игроков</li>
+                            <li>Высокий рейкбек</li>
+                            <li>Вывод в любое время и без дополнительных условий</li>
+                            <li>Саппорт на русском языке</li>
+                        </ul>
+                        <p>Минусы:</p>
+                        <ul>
+                            <li>Нельзя использовать программы для статистики за столами</li>
+                        </ul>
+
+                        <h2 id="nav-7">FAQ</h2>
+                        <p><strong>В</strong>: Можно ли пользоваться Holdem Manager, Pokertracker или Hand2Note?</p>
+                        <p><strong>О</strong>: Нет, программы для сбора статистики и вывода HUD на столы запрещены.</p>
+                        <p><strong>В</strong>: Проблема с доступом к руму: не могу зайти на Покердом из России. Что
+                            делать?
+                        </p>
+                        <p><strong>О</strong>: Вход в личный кабинет Покердома часто бывает недоступен. Для решения этой
+                            проблемы вбейте в поисковике “зеркало покердома” и зайдите на сайт по одной из открывшихся
+                            ссылок. Есть и другое решение: открыть кассу в клиенте рума.</p>
+                        <p><strong>В</strong>: Как получить бонус на Покердом?</p>
+                        <p><strong>О</strong>: Бонусы на Покердоме бывают нескольких разновидностей: покерные, на игры в
+                            казино и ставки. Если у вас уже есть аккаунт, посмотреть доступные бонусы можно в клиенте в
+                            правом верхнем углу - кликнув на логотип с “подарком” (зеленая кнопка под аватаром).</p>
+                        <p><strong>В</strong>: Как зайти на Покердом?</p>
+                        <p><strong>О</strong>: Если у вас не получается зайти на официальный сайт рума или в личный
+                            кабинет,
+                            воспользуйтесь “зеркалом Покердома” - специальным резервным сайтом, который работает в
+                            случае
+                            неполадок на основной странице. Просто вбейте в поисковике “зеркало покердома” и перейдите
+                            на
+                            рабочий сайт.</p>
+                        <p><strong>В</strong>: Как скачать Покердом на айфон?</p>
+                        <p><strong>О</strong>: На данный момент для игры на Покердоме с устройств на iOS понадобится
+                            браузер, с помощью которого нужно перейти на специальное веб-меню. Однако по функционалу
+                            веб-версия ничем не отличается от клиента на Android.</p>
+                        <p><strong>В</strong>: Как ввести промокод на Покердоме?</p>
+                        <p><strong>О</strong>: Все промокоды вводятся в клиенте рума в разделе “Касса”.</p>
+                        <p><strong>В</strong>: Как выводить деньги из Покердома?</p>
+                        <p><strong>О</strong>: Для перевода денег с аккаунта рума нужно выбрать пункт “вывод средств” в
+                            кассе и указать подходящую платежную систему: Visa и Mastercard, Neteller, Piastrix</p>
+                        <p><strong>В</strong>: Как долго выводятся деньги?</p>
+                        <p><strong>О</strong>: Зависит от способа кэшаута. Подавляющее большинство транзакций
+                            обрабатываются
+                            в течение 1-3 дней.</p>
+                        <p><strong>В</strong>: Как лучше зарегистрироваться на Покердоме?</p>
+                        <p><strong>О</strong>: Выгоднее всего играть от GipsyTeam - так вы получите доступ к закрытым
+                            еженедельным фрироллам на 10,000 рублей, эксклюзивным бонусам на депозит, лидербордам,
+                            розыгрышам призов и другим уникальным акциям.</p>
+                        <p><strong>В</strong>: Как получить бездепозитный бонус на Покердоме?</p>
+                        <p><strong>О</strong>: Иногда покер-рум устраивает бесплатные раздачи призов, в том числе
+                            бездепозитных бонусов, но такие предложения всегда ограничены во времени. Чтобы не
+                            пропустить
+                            ничего важного, чаще заходите в раздел “Акции” на GipsyTeam и подпишитесь на нашу рассылку.
+                        </p>
+                        <p><strong>В</strong>: Как написать в поддержку Покердома?</p>
+                        <p><strong>О</strong>: Проще всего связаться со службой поддержки, зайдя на официальный сайт и
+                            открыв выпадающее меню в левой части экрана. Служба поддержки отвечает на русском языке и
+                            работает 24 часа в сутки.</p>
+                        <p><strong>В</strong>: Почему в Покердоме запретили holdem manager?</p>
+                        <p><strong>О</strong>: Покердом не поддерживает использование вспомогательных программ - в их
+                            число
+                            входит Holdem Manager, Poker Tracker, Hand2Note и многие другие. Из-за этого преимущество
+                            профессиональных игроков над любителями не такое большое.</p>
+
+                        <div class="room2-review__next-button room2-review__next-button_disabled">
+                            <span>Рейк и рейкбек</span>
+                            <div class="room2-review__button-fade"></div>
+                            <svg class="room2-review__arrow-icon">
+                                <use href="/nimg/icons-room.svg#icon-room2-red-arrow"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="room2-support room2-support_mobile room2-support_mobile2">
+
                 <div class="room2-support-inner room2-support-inner_mobile">
                     <div class="room2-support-avatar" style="background-image: url(../nimg/support-team.jpg);">
                         <div class="room2-support-avatar__icon">
@@ -305,33 +1580,16 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="room2-support__separator-bottom">
+                    <div class="room2-support__separator-line"></div>
+                    <img class="room2-support__separator-image" src="/nimg/rhombus-grey.svg" alt="">
+                </div>
             </div>
-            <div class="room2-description">
-
-                <div id="room2__info-link" class="room2-description__title">
-                    <h3>Описание и регистрация</h3>
+            <div class="room2-description room2-description_bottom room2-section">
+                <div class="room2-description__title room2-description__title_bottom">
+                    <h3>Регистрация</h3>
                 </div>
                 <div class="room2-description__content">
-                    <div class="room2-description__text">
-                        <p>
-                            Крупнейший российский рум с игрой на рубли и бессменный партнер GipsyTeam с первого
-                            дня
-                            открытия в 2014 году. Широкий выбор кэш-игры и турниров по всем популярным форматам:
-                            от
-                            холдема и омахи до китайского покера. Регулярные турниры со случайным призовым
-                            фондом,
-                            Windfall: взнос от 10 рублей и призовой фонд до 1.6 млн рублей. Есть столы с
-                            бэдбит-джекпотом. Рум дружелюбен к новичкам: каждый день проводятся фрироллы,
-                            работает
-                            круглосуточная поддержка на русском языке. Не поддерживаются программы для сбора
-                            покерной статистики.
-                        </p>
-                        <p>
-                            Как зарегистрироваться на Покердоме и получить бонусы GipsyTeam:
-                        </p>
-                    </div>
-                    <!-- ___________STATE #1_______________ -->
                     <div class="room2-steps">
                         <div class="room2-steps__bullet">
                             <div class="room2-steps__bullet-content">
@@ -392,10 +1650,6 @@
                                     пакетов на этапы EPT, WPT и других крупнейших серий.
                                 </li>
                             </ul>
-                            <form action="" class="room2-steps__form">
-                                <input type="text" class="room2-steps__input" placeholder="Введите ник" required>
-                                <input type="button" class="room2-steps__button" value="Отправить" title="Введите ваш никнейм в форму слева">
-                            </form>
                         </div>
                         <div class="room2-steps__bullet">
                             <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
@@ -408,386 +1662,94 @@
                                 Готово! Теперь вы можете играть на Покердоме, используя все бонусы от GipsyTeam.
                             </div>
                         </div>
+
                     </div>
-                    <!-- ___________STATE #2_______________ -->
-                    <div class="room2-steps">
-                        <div class="room2-steps__bullet">
-                            <div class="room2-steps__bullet-content">
-                                1
-                            </div>
-                        </div>
-                        <div class="room2-steps__content">
-                            <div class="room2-steps__text">
-                                Скопируйте в буфер промокод <span class="room2_full-text"> GT</span> :
-                            </div>
-                            <div class="room2-steps__copy-area">
-                                GT2022FG
-                                <svg class="room2-steps__copy">
-                                    <use href="/nimg/icons-room.svg#icon-copy" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="room2-steps__bullet">
-                            <div class="room2-steps__bullet-content">
-                                2
-                            </div>
-                        </div>
-                        <div class="room2-steps__content">
-                            <div class="room2-steps__text room2-steps__text_2">
-                                Перейдите по ссылке и зарегистрируйтесь, используя скопированный промокод:
-                            </div>
-                            <a href="#" class="room2-steps__reg-link">
-                                Регистрация на Покердом
-                            </a>
-                        </div>
-                        <div class="room2-steps__bullet">
-                            <div class="room2-steps__bullet-content">
-                                3
-                            </div>
-                        </div>
-                        <div class="room2-steps__content">
-                            <div class="room2-steps__text">
-                                После регистрации, пришлите нам свой ник, чтобы получить:</div>
-                            <ul class="room2-steps__list">
-                                <li class="room2-steps__list-item">
-                                    <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
-                                    магазине.
-                                </li>
-                                <li class="room2-steps__list-item">
-                                    <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
-                                    сутки.
-                                </li>
-                                <li class="room2-steps__list-item">
-                                    Профессиональные <strong>лэйауты</strong> для удобной игры.
-                                </li>
-                                <li class="room2-steps__list-item">
-                                    <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
-                                </li>
-                                <li class="room2-steps__list-item">
-                                    <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
-                                    рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
-                                    турнирных
-                                    пакетов на этапы EPT, WPT и других крупнейших серий.
-                                </li>
-                            </ul>
-                            <div class="room2-steps__login">
-                                Чтобы отправить ник, <a href="https://www.gipsyteam.ru/user/login">войдите на GT</a> или
-                                <a href="https://www.gipsyteam.ru/user/register">зарегистрируйтесь</a>.
-                            </div>
-                        </div>
-                        <div class="room2-steps__bullet">
-                            <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
-                                <use href="/nimg/icons-room.svg#icon-check" />
+                </div>
+            </div>
+        </section>
+        <aside class="room2-sidebar">
+            <div class="room2-support ">
+
+                <div class="room2-support-inner ">
+                    <div class="room2-support-avatar" style="background-image: url(../nimg/support-team.jpg);">
+                        <div class="room2-support-avatar__icon">
+                            <svg class="room2-support-avatar__icon-image">
+                                <use href="/nimg/icons-room.svg#icon-headphones" />
                             </svg>
                         </div>
-
-                        <div class="room2-steps__content">
-                            <div class="room2-steps__main-text">
-                                Готово! Теперь вы можете играть на Покердоме, используя все бонусы от GipsyTeam.
-                            </div>
+                    </div>
+                    <div class="room2-support-info">
+                        <div class="room2-support-info__name">
+                            Андрей Антипов
+                        </div>
+                        <div class="room2-support-info__role">
+                            Глава службы поддержки
                         </div>
                     </div>
-                    <!-- ___________STATE #3_______________ -->
-                    <div class="room2-steps">
-                        <div class="room2-steps__bullet">
-                            <div class="room2-steps__bullet-content">
-                                1
-                            </div>
-                        </div>
-                        <div class="room2-steps__content">
-                            Чтобы получить все преимущества и бонусы, перед тем как нажать кнопку «Зарегистрироваться»,
-                            необходимо очистить cookies или использовать неосновной браузер. Депозит удобнее всего
-                            делать через онлайн кассу.
-                        </div>
-                        <div class="room2-steps__bullet">
-                            <div class="room2-steps__bullet-content">
-                                2
-                            </div>
-                        </div>
-                        <div class="room2-steps__content">
-                            <div class="room2-steps__text room2-steps__text_2">
-                                Перейдите по ссылке и зарегистрируйтесь:
-                            </div>
-                            <a href="#" class="room2-steps__reg-link">
-                                Регистрация на Покердом
-                            </a>
-                        </div>
-                        <div class="room2-steps__bullet">
-                            <div class="room2-steps__bullet-content">
-                                3
-                            </div>
-                        </div>
-                        <div class="room2-steps__content">
-                            <div class="room2-steps__text">
-                                После регистрации, пришлите нам свой ник, чтобы получить:</div>
-                            <ul class="room2-steps__list">
-                                <li class="room2-steps__list-item">
-                                    <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
-                                    магазине.
-                                </li>
-                                <li class="room2-steps__list-item">
-                                    <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
-                                    сутки.
-                                </li>
-                                <li class="room2-steps__list-item">
-                                    Профессиональные <strong>лэйауты</strong> для удобной игры.
-                                </li>
-                                <li class="room2-steps__list-item">
-                                    <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
-                                </li>
-                                <li class="room2-steps__list-item">
-                                    <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
-                                    рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
-                                    турнирных
-                                    пакетов на этапы EPT, WPT и других крупнейших серий.
-                                </li>
-                            </ul>
-                            <div class="room2-steps__login">
-                                Чтобы отправить ник, <a href="https://www.gipsyteam.ru/user/login">войдите на GT</a> или
-                                <a href="https://www.gipsyteam.ru/user/register">зарегистрируйтесь</a>.
-                            </div>
-                        </div>
-                        <div class="room2-steps__bullet">
-                            <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
-                                <use href="/nimg/icons-room.svg#icon-check" />
+                    <div class="room2-support-links ">
+                        <a class="room2-support-links__item room2-support-links__item_chat">
+                            <svg class="room2-support-links__icon room2-support-links__icon_chat">
+                                <use href="/nimg/icons-room.svg#icon-chat" />
+                            </svg>
+                            <span>Онлайн чат</span>
+                        </a>
+                        <a class="room2-support-links__item  room2-support-links__item_telegram"
+                            href="https://t.me/gipsyteamsupport2" target="_blank" rel="nofollow">
+                            <svg class="room2-support-links__icon room2-support-links__icon_telegram">
+                                <use href="/nimg/icons-room.svg#icon-telegram" />
+                            </svg>
+                            <span>Телеграм</span>
+                        </a>
+                        <a
+                            class="room2-support-links__item room2-support-links__item_mobile room2-support-links__item_support">
+                            <svg class="room2-support-links__icon room2-support-links__icon_gt">
+                                <use href="/nimg/icons-room.svg#icon-gt-logo" />
+                            </svg>
+                            <span>Поддержка</span>
+                        </a>
+                        <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_skype"
+                            href="skype:gipsyteam-support?chat" target="_blank" rel="nofollow">
+                            <svg class="room2-support-links__icon room2-support-links__icon_skype">
+                                <use href="/nimg/icons-room.svg#icon-skype" />
+                            </svg>
+                            <span>Скайп</span>
+                        </a>
+                        <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_discord room2-support-links__item_tablet"
+                            href="https://discord.gg/3hfmbNHsEh" target="_blank" rel="nofollow">
+                            <svg class="room2-support-links__icon room2-support-links__icon_discord">
+                                <use href="/nimg/support-sprite.svg#i-btn-discord" />
+                            </svg>
+                            <span>Discord</span>
+                        </a>
+                        <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_whatsapp room2-support-links__item_tablet"
+                            href="https://api.whatsapp.com/send?phone=79264485917" target="_blank" rel="nofollow">
+                            <svg class="room2-support-links__icon room2-support-links__icon_whatsapp">
+                                <use href="/nimg/support-sprite.svg#i-link-whatsapp" />
+                            </svg>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_viber room2-support-links__item_tablet"
+                            ref="viber://chat?number=+79264485917" target="_blank" rel="nofollow">
+                            <svg class="room2-support-links__icon room2-support-links__icon_viber">
+                                <use href="/nimg/support-sprite.svg#i-link-viber" />
+                            </svg>
+                            <span>Viber</span>
+                        </a>
+                        <div class="room2-support-links__item room2-support-links__item_more">
+                            <span>Ещё</span>
+                            <svg class="room2-support-links__icon room2-support-links__icon_arrow">
+                                <use href="/nimg/icons-room.svg#icon-arrow-red" />
                             </svg>
                         </div>
-
-                        <div class="room2-steps__content">
-                            <div class="room2-steps__main-text">
-                                Готово! Теперь вы можете играть на Покердоме, используя все бонусы от GipsyTeam.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ___________STATE #4_______________ -->
-                    <div class="room2-steps-restricted">
-                        <div class="room2-steps__notify">
-
-                            <img class="room2-steps__rkn-logo" src="/nimg/regs-restricted-logo-2x.png" alt="ios logo">
-                            <div class="room2-steps__notify-text-wrap">
-                                <div class="room2-steps__notify-title">
-                                    Доступ в этот рум запрещен в вашем регионе решением Роскомнадзора
-                                </div>
-                                <div class="room2-steps__notify-text">
-                                    Ваш IP адрес <strong>90.154.73.185</strong> находится на территории
-                                    Российской Федерации, поэтому вам ограничен доступ к этой странице на
-                                    основании <span class="room2-steps__notify-phrase">Федерального
-                                        закона от 27.11.2017 N 358-ФЗ.</span> </div>
-                            </div>
-                        </div>
-                        <div class="room2-steps room2-steps_blocked">
-
-                            <div class="room2-steps__bullet">
-                                <svg class="room2-steps__earth">
-                                    <use href="/nimg/icons-room.svg#icon-earth" />
-                                </svg>
-                            </div>
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__main-text">
-                                    Пройти регистрацию в этом руме можно только из стран, в которых есть доступ
-                                    к сайту. Например из Польши, Литвы, Чехословакии, Германии и др.
-                                </div>
-                            </div>
-                            <div class="room2-steps__bullet">
-                                <div class="room2-steps__bullet-content">
-                                    1
-                                </div>
-                            </div>
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__text">
-                                    Скопируйте в буфер промокод <span class="room2_full-text"> GT</span> :
-                                </div>
-                                <div class="room2-steps__copy-area">
-                                    GT2022FG
-                                    <svg class="room2-steps__copy">
-                                        <use href="/nimg/icons-room.svg#icon-copy" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="room2-steps__bullet">
-                                <div class="room2-steps__bullet-content">
-                                    2
-                                </div>
-                            </div>
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__text room2-steps__text_2">
-                                    Перейдите на сайт покер-рума доступный в интернете и зарегистрируйтесь, в строке
-                                    "Referral Code" введите промокод.
-                                </div>
-                                <div class="room2-steps__text room2-steps__text_2">
-                                    Если ссылка не работает, используйте любой бесплатный VPN, например BrowSec.
-                                    После регистрации его нужно выключить.
-                                </div>
-
-                            </div>
-                            <div class="room2-steps__bullet">
-                                <div class="room2-steps__bullet-content">
-                                    3
-                                </div>
-                            </div>
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__text">
-                                    После регистрации, пришлите нам свой ник, чтобы получить:</div>
-                                <ul class="room2-steps__list">
-                                    <li class="room2-steps__list-item">
-                                        <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
-                                        магазине.
-                                    </li>
-                                    <li class="room2-steps__list-item">
-                                        <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
-                                        сутки.
-                                    </li>
-                                    <li class="room2-steps__list-item">
-                                        Профессиональные <strong>лэйауты</strong> для удобной игры.
-                                    </li>
-                                    <li class="room2-steps__list-item">
-                                        <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
-                                    </li>
-                                    <li class="room2-steps__list-item">
-                                        <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
-                                        рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
-                                        турнирных
-                                        пакетов на этапы EPT, WPT и других крупнейших серий.
-                                    </li>
-                                </ul>
-                                <form action="" class="room2-steps__form">
-                                    <input type="text" class="room2-steps__input" placeholder="Введите ник" required>
-                                    <input type="button" class="room2-steps__button" value="Отправить" title="Введите ваш никнейм в форму слева">
-                                </form>
-                            </div>
-                            <div class="room2-steps__bullet">
-                                <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
-                                    <use href="/nimg/icons-room.svg#icon-check" />
-                                </svg>
-                            </div>
-
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__main-text">
-                                    Готово! Теперь вы можете играть на Покердоме, используя все бонусы от
-                                    GipsyTeam.
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- ___________STATE #5_______________ -->
-                    <div class="room2-steps-restricted">
-                        <div class="room2-steps__notify">
-
-                            <img class="room2-steps__rkn-logo" src="/nimg/regs-restricted-logo-2x.png" alt="ios logo">
-                            <div class="room2-steps__notify-text-wrap">
-                                <div class="room2-steps__notify-title">
-                                    Доступ в этот рум запрещен в вашем регионе решением Роскомнадзора
-                                </div>
-                                <div class="room2-steps__notify-text">
-                                    Ваш IP адрес <strong>90.154.73.185</strong> находится на территории
-                                    Российской Федерации, поэтому вам ограничен доступ к этой странице на
-                                    основании <span class="room2-steps__notify-phrase">Федерального
-                                        закона от 27.11.2017 N 358-ФЗ.</span> </div>
-                            </div>
-
-                        </div>
-                        <div class="room2-steps room2-steps_blocked">
-
-                            <div class="room2-steps__bullet">
-                                <svg class="room2-steps__earth">
-                                    <use href="/nimg/icons-room.svg#icon-earth" />
-                                </svg>
-                            </div>
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__main-text">
-                                    Пройти регистрацию в этом руме можно только из стран, в которых есть доступ
-                                    к сайту. Например из Польши, Литвы, Чехословакии, Германии и др.
-                                </div>
-                            </div>
-                            <div class="room2-steps__bullet">
-                                <div class="room2-steps__bullet-content">
-                                    1
-                                </div>
-                            </div>
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__text">
-                                    Скопируйте в буфер промокод <span class="room2_full-text"> GT</span> :
-                                </div>
-                                <div class="room2-steps__copy-area">
-                                    GT2022FG
-                                    <svg class="room2-steps__copy">
-                                        <use href="/nimg/icons-room.svg#icon-copy" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="room2-steps__bullet">
-                                <div class="room2-steps__bullet-content">
-                                    2
-                                </div>
-                            </div>
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__text room2-steps__text_2">
-                                    Перейдите на сайт покер-рума доступный в интернете и зарегистрируйтесь, в строке
-                                    "Referral Code" введите промокод.
-                                </div>
-                                <div class="room2-steps__text room2-steps__text_2">
-                                    Если ссылка не работает, используйте любой бесплатный VPN, например BrowSec.
-                                    После регистрации его нужно выключить.
-                                </div>
-
-                            </div>
-                            <div class="room2-steps__bullet">
-                                <div class="room2-steps__bullet-content">
-                                    3
-                                </div>
-                            </div>
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__text">
-                                    После регистрации, пришлите нам свой ник, чтобы получить:</div>
-                                <ul class="room2-steps__list">
-                                    <li class="room2-steps__list-item">
-                                        <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
-                                        магазине.
-                                    </li>
-                                    <li class="room2-steps__list-item">
-                                        <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
-                                        сутки.
-                                    </li>
-                                    <li class="room2-steps__list-item">
-                                        Профессиональные <strong>лэйауты</strong> для удобной игры.
-                                    </li>
-                                    <li class="room2-steps__list-item">
-                                        <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
-                                    </li>
-                                    <li class="room2-steps__list-item">
-                                        <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
-                                        рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
-                                        турнирных
-                                        пакетов на этапы EPT, WPT и других крупнейших серий.
-                                    </li>
-                                </ul>
-                                <div class="room2-steps__login">
-                                    Чтобы отправить ник, <a href="https://www.gipsyteam.ru/user/login">войдите на GT</a>
-                                    или
-                                    <a href="https://www.gipsyteam.ru/user/register">зарегистрируйтесь</a>.
-                                </div>
-                            </div>
-                            <div class="room2-steps__bullet">
-                                <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
-                                    <use href="/nimg/icons-room.svg#icon-check" />
-                                </svg>
-                            </div>
-
-                            <div class="room2-steps__content">
-                                <div class="room2-steps__main-text">
-                                    Готово! Теперь вы можете играть на Покердоме, используя все бонусы от
-                                    GipsyTeam.
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
 
+                    <svg class="room2-support__separator">
+                        <use href="/nimg/icons-room.svg#icon-rhombus" />
+                    </svg>
                 </div>
 
             </div>
-            <div class="room2-banners room2-banners_mobile">
+            <div class="room2-banners">
 
                 <div class="room2-banners-inner">
                     <a href="#" class="room2-banner__item">
@@ -807,7 +1769,7 @@
                             Бесплатный турнир на 10 тыс. рублей каждую неделю
                         </div>
                     </a>
-                    <a href="#" class="room2-banner__item ">
+                    <a href="#" class="room2-banner__item room2-banner__item_hidden">
                         <div class="room2-banner__image">
                             <img src="//www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/1/159.jpg?1652439296"
                                 alt=""
@@ -820,946 +1782,13 @@
                 </div>
 
             </div>
-            <div class="room2-plus">
-
-                <div class="room2-plus__title" id="room2-review__link-plus">
-                    <h3>Плюсы и минусы</h3>
-                </div>
-                <div class="room2-plus__wrapper">
-                    <ul class="room2-plus__list room2-plus__list_pros">
-                        <li class="room2-plus__list-item room2-plus__list-item_plus">
-                            Известный и надежный бренд
-                        </li>
-                        <li class="room2-plus__list-item room2-plus__list-item_plus">
-                            Депозиты и выводы в рублях
-                        </li>
-                        <li class="room2-plus__list-item room2-plus__list-item_plus">
-                            Русский онлайн-саппорт
-                        </li>
-                        <li class="room2-plus__list-item room2-plus__list-item_plus">
-                            Постоянные акции и гонки
-                        </li>
-                        <li class="room2-plus__list-item room2-plus__list-item_plus">
-                            Минимум проф. игроков
-                        </li>
-                    </ul>
-                    <ul class="room2-plus__list room2-plus__list_list">
-                        <li class="room2-plus__list-item room2-plus__list-item_minus">
-                            Запрещены программы статистики
-                        </li>
-                        <li class="room2-plus__list-item room2-plus__list-item_minus">
-                            Небольшая комиссия на выводы
-                        </li>
-                        <li class="room2-plus__list-item room2-plus__list-item_minus">
-                            Низкий трафик на средних и высоких лимитах
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="room2-traffic">
-
-                <div class="room2-traffic__title">
-                    <h3>Трафик</h3>
-                </div>
-                <div class="room2-traffic-items">
-                    <div class="room2-traffic__item">
-                        <div class="room2-traffic__item-title">
-                            2500
-                        </div>
-                        <div class="room2-traffic__item-text">
-                            Средний онлайн
-                        </div>
-                    </div>
-                    <div class="room2-traffic__item">
-                        <div class="room2-traffic__item-title">
-                            54 300
-                        </div>
-                        <div class="room2-traffic__item-text">
-                            Игроков в кеше
-                        </div>
-                    </div>
-                    <div class="room2-traffic__item">
-                        <div class="room2-traffic__item-title">
-                            20:00
-                        </div>
-                        <div class="room2-traffic__item-text">
-                            Пиковое время
-                        </div>
-                    </div>
-                    <div class="room2-traffic__item">
-                        <div class="room2-traffic__item-title">
-                            №3
-                        </div>
-                        <div class="room2-traffic__item-text">
-                            Позиция в рейтинге
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="room2-other">
-
-                <div class="room2-other__title">
-                    <h3>Прочее</h3>
-                </div>
-                <div class="room2-other__content">
-                    <div class="room2-other__img-wrapper">
-                        <div class="room2-other__row">
-                            <a class="room2-other__img" href="/nimg/pokerdom-screen-full-1.jpg">
-                                <img src="/nimg/pokerdom-screen-thumbnail-1.jpg" alt="игровой клиент покердом">
-                            </a>
-                            <a class="room2-other__img" href="/nimg/pokerdom-screen-full-2.jpg">
-                                <img src="/nimg/pokerdom-screen-thumbnail-2.jpg" alt="игровой клиент покердом">
-                            </a>
-                        </div>
-                        <div class="room2-other__row">
-                            <a class="room2-other__img" href="/nimg/pokerdom-screen-full-3.jpg">
-                                <img src="/nimg/pokerdom-screen-thumbnail-3.jpg" alt="игровой клиент покердом">
-                            </a>
-                            <a class="room2-other__img" href="/nimg/pokerdom-screen-full-4.jpg">
-                                <img src="/nimg/pokerdom-screen-thumbnail-4.jpg" alt="игровой клиент покердом">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="room2-other__text-wrapper">
-                        <div class="room2-other__grid">
-                            <div class="room2-other__table-title">
-                                Год основания
-                            </div>
-                            <div class="room2-other__text">
-                                2014
-                            </div>
-                            <div class="room2-other__table-title">
-                                Штаб-квартира
-                            </div>
-                            <div class="room2-other__text">
-                                Москва
-                            </div>
-                            <div class="room2-other__table-title">
-                                Телефон
-                            </div>
-                            <div class="room2-other__text">
-                                +7 (495) 551-5243
-                            </div>
-                            <div class="room2-other__table-title">
-                                E-mail
-                            </div>
-                            <div class="room2-other__text">
-                                info@pokerdom.com
-                            </div>
-                        </div>
-                        <div class="room2-other__grid">
-                            <div class="room2-other__table-title">
-                                Продукты
-                            </div>
-                            <div class="room2-other__text">
-                                <div class="room2-other__text-row">
-                                    Покер
-                                </div>
-                                <div class="room2-other__text-row">
-                                    Казино
-                                </div>
-                                <div class="room2-other__text-row">
-                                    Ставки на спорт
-                                </div>
-                            </div>
-                            <div class="room2-other__table-title">
-                                Лицензия
-                            </div>
-                            <a href="#" class="room2-other__text">
-                                0400276445820 <span>
-                                    <svg class="licence-arrow">
-                                        <use href="/nimg/icons-room.svg#icon-licence-arrow" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="room2-testimonials">
-            <div class="room2-testimonials-inner">
-                <div class="testimonials-header">
-                    <div class="testimonials-header__top">
-                        <div class="reputation">
-                            <div class="reputation__title" id="room2__testimonials-link">
-                                Репутация
-                            </div>
-                            <div class="reputation__rate">
-                                <div class="reputation__star">
-                                    <div class="star-background"
-                                        style="background: linear-gradient(90deg, var(--room-accent) 70%, var(--room-color2) 70%);">
-                                    </div>
-
-                                    <svg fill="none" class="room-star-mask" viewBox="0 0 22 22">
-                                        <clipPath id="icon-star-clip-path">
-                                            <path clip-rule="evenodd"
-                                                d="m0.31507,8.60377l8.16261,0l2.52231,-7.75445l2.52231,7.75445l8.16261,0l-6.60368,4.79246l2.52244,7.75445l-6.60368,-4.79259l-6.60368,4.79259l2.52244,-7.75445l-6.60368,-4.79246z" />
-                                        </clipPath>
-                                    </svg>
-                                </div>
-                                <div class="reputation__digits">
-                                    <strong>4.1</strong>
-                                    <span>/5</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonials__stats">
-                            <a href="#" class="testimonials__stats-count">
-                                3 отзыва из 101
-                            </a>
-                            <a href="#" class="testimonials__stats-all">
-                                Показать все
-                            </a>
-                        </div>
-                    </div>
-                    <div class="testimonials-header__bottom">
-                        <div class="testimonials-header__feedback">
-                            <a href="#" 
-                                class="testimonials-header__item testimonials-header__item_dark">
-                                <span>Все отзывы</span>
-                                <svg class="testimonials-arrow">
-                                    <use href="/nimg/icons-room.svg#icon-arrow-white" />
-                                </svg>
-                            </a>
-                            <a href="#" class="testimonials-header__item">
-                                Понравилось
-                            </a>
-                            <a href="#" class="testimonials-header__item">
-                                Поддержка
-                            </a>
-                            <a href="#" class="testimonials-header__item">
-                                Комиссия
-                            </a>
-                            <a href="#" class="testimonials-header__item">
-                                Карта
-                            </a>
-                            <a href="#" class="testimonials-header__item">
-                                Скорость
-                            </a>
-                            <a href="#" class="testimonials-header__item">
-                                Игра
-                            </a>
-                            <a href="#" class="testimonials-header__item">
-                                Бонус
-                            </a>
-                            <a href="#" class="testimonials-header__item testimonials-header__item_more">
-                                Ещё...
-                            </a>
-                        </div>
-                        <div class="testimonials-header__rate">
-                            <div class="testimonials-header__item testimonials-header__item_dark">
-                                <span>Все оценки</span>
-                                <svg class="testimonials-arrow">
-                                    <use href="/nimg/icons-room.svg#icon-arrow-white" />
-                                </svg>
-                            </div>
-                            <div class="testimonials-header__item testimonials-header__item_stars">
-                                <div data-rating="3" class="testimonials__stars testimonials__stars_bg">
-                                    <div class="testimonials__stars testimonials__stars_active">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonials-cards">
-
-                    <div class="testimonials-card testimonials-card_feedback">
-                        <div class="testimonials__avatar">
-                            <div class="testimonials__avatar-image"
-                                style="background-image: url(../nimg/freemonk-avatar@2x.jpg);">
-                            </div>
-                        </div>
-                        <div class="testimonials__content">
-                            <div class="testimonials__content-header testimonials__content-header_feedback">
-                                <div class="testimonials__nick-wrap testimonials__nick-wrap_review">
-                                    <div class="testimonials__nick testimonials__nick_review">
-                                        <div class="testimonials__row">
-                                            <span class="testimonials__nick_red">Jauser1337</span>,
-                                        </div>
-                                        <div class="testimonials__sub-nick">уже играли на Покердоме?</div>
-                                    </div>
-                                    <div class="testimonials__call">
-                                        Расскажите другим игрокам, что думаете об этом руме!
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonials__text">
-                                <a href="#" class="testimonials__button">
-                                    <svg class="testimonials__chat">
-                                        <use href="/nimg/icons-room.svg#icon-chat" />
-                                    </svg>
-                                    Написать отзыв
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonials-card testimonials-card_feedback testimonials-card_feedback_signed">
-                        <div class="room-feedback--signup">Чтобы оставить отзыв, необходимо <a href="javascript:void(0);">войти</a> или <a href="javascript:void(0);">зарегистрироваться</a></div>
-                        <form>
-                            <div class="room-feedback-content">
-                                <div class="room-feedback-avatar">
-                                    <img src="/nimg/feedback-avatar.png" alt=""/>
-                                </div>
-                                <textarea class="room-feedback--field" placeholder="Оставить отзыв"></textarea>
-                            </div>
-                            <div class="room-feedback-action">
-                                <div class="room-feedback--meta">
-                                    <div class="room-feedback--note">Ваша оценка</div>
-                                    <div id="rater"></div>
-                                </div>
-                                <button class="room-feedback--send">
-                                    <svg>
-                                        <use href="/nimg/buttons-sprite.svg#i-btn-send"></use>
-                                    </svg>
-                                    Отправить
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- ____________TESTIMONIAL_ITEM______________ -->
-                    <div class="testimonials-card">
-                        <div class="testimonials__avatar">
-                            <div class="testimonials__avatar-image"
-                                style="background-image: url(../nimg/gambler14-avatar2x.png);">
-
-                            </div>
-                        </div>
-                        <div class="testimonials__content">
-                            <div class="testimonials__content-header">
-                                <div class="testimonials__nick-wrap">
-                                    <div class="testimonials__nick">
-                                        Ноутбук
-                                    </div>
-                                    <div data-rating="3" class="testimonials__stars testimonials__stars_bg">
-                                        <div class="testimonials__stars testimonials__stars_active">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonials__date">
-                                    20 апреля, 02:00
-                                </div>
-                            </div>
-                            <div class="testimonials__text">
-                                Столкнулся с хамством и некомпетентностью со стороны представителей данного рума.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ____________TESTIMONIAL_ITEM______________ -->
-
-                    <div class="testimonials-card">
-                        <div class="testimonials__avatar">
-                            <div class="testimonials__avatar-image"
-                                style="background-image: url(../nimg/goodstory-avatar2x.jpg);">
-
-                            </div>
-                        </div>
-                        <div class="testimonials__content">
-                            <div class="testimonials__content-header">
-                                <div class="testimonials__nick-wrap">
-                                    <div class="testimonials__nick">
-                                        Vlad764
-                                    </div>
-                                    <div data-rating="5" class="testimonials__stars testimonials__stars_bg">
-                                        <div class="testimonials__stars testimonials__stars_active">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonials__date">
-                                    11 августа, 02:30
-                                </div>
-                            </div>
-                            <div class="testimonials__text">
-                                8 лет играю на этом руме, мгновенный вывод денег куда душе угодно, карты, крипта и тд,.
-                                Отличный саппорт. </div>
-                        </div>
-                    </div>
-                    <!-- ____________TESTIMONIAL_ITEM______________ -->
-
-                    <div class="testimonials-card">
-                        <div class="testimonials__avatar">
-                            <div class="testimonials__avatar-image">
-
-                            </div>
-                        </div>
-                        <div class="testimonials__content">
-                            <div class="testimonials__content-header">
-                                <div class="testimonials__nick-wrap">
-                                    <div class="testimonials__nick">
-                                        Oleg Ivanovich
-                                    </div>
-                                    <div data-rating="3" class="testimonials__stars testimonials__stars_bg">
-                                        <div class="testimonials__stars testimonials__stars_active">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonials__date">
-                                    22 ноября, 18:31
-                                </div>
-                            </div>
-                            <div class="testimonials__text">
-                                Софт и поле меня устраивают, но описаная ниже ситуация не позволяет мне поставить
-                                высокую оценку этому руму.
-                                При депозите есть возможность получить 100% к сумме (типичный бонус для румов), но
-                                этот бонус идет для игр в казино, при этом им даже в казино нельзя воспользоваться,
-                                т.к. сперва списываются реальные деньги (т.е. сам депозит), что самое комичное -
-                                любой выигрыш в казино зачисляется на бонусный счет (т.е. твои реальные деньги
-                                конвертируются в фантики).
-                                п.с. да, я сам виноват, что не вчитался в каждую мелкошрифтную строку перед
-                                депозитом, но когда ты открываешь в ПОКЕР руме (который называется ПОКЕРдом) кассу,
-                                жмешь депозит, выбираешь бонус - ты ожидаешь получить отыгрываемый бонус для игры в
-                                покер, а не в казино. Без сомнений - они осознанно эксплуатируют подобное поведение
-                                покер игроков. </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonials__stats testimonials__stats_mobile">
-                    <a href="#" class="testimonials__stats-count">
-                        3 отзыва из 101
-                    </a>
-                    <a href="#" class="testimonials__stats-all">
-                        Показать все
-                    </a>
-                </div>
-            </div>
-
-        </section>
-        <section class="room2-review">
-            <div class="room2-review__header">
-                <div id="room2__review-link" class="room2-review__header-title">
-                    Обзор от авторов GipsyTeam
-                </div>
-                <div class="room2-review__author-wrap">
-                    <div class="room2-review__author-item">
-                        <div class="room2-review__author-avatar"
-                            style="background-image: url(../nimg/widget-authors.png);">
-                        </div>
-                        <div class="room2-review__author-text">
-                            <div class="room2-review__author-role">
-                                Эксперт
-                            </div>
-                            <div class="room2-review__author-name">
-                                Илья Городецкий
-                            </div>
-                        </div>
-                    </div>
-                    <div class="room2-review__author-item">
-                        <div class="room2-review__author-avatar"
-                            style="background-image: url(../nimg/author-ava.jpg);">
-                        </div>
-                        <div class="room2-review__author-text">
-                            <div class="room2-review__author-role">
-                                Редактор
-                            </div>
-                            <div class="room2-review__author-name">
-                                Егор Зарев
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="room2-review__main">
-                <aside class="room2-review__map">
-                    <div class="room2-review__links">
-                        <a href="#room2-review__link-enter" class="room2-review__link room2-review__link_active">
-                            Вводная
-                        </a>
-                        <a href="#nav-0" class="room2-review__link">
-                            Во что можно играть на Покердоме
-                        </a>
-                        <a href="#nav-1" class="room2-review__link">
-                            Рейк и рейкбек
-                        </a>
-                        <a href="#nav-2" class="room2-review__link">
-                            Депозит и кэшаут
-                        </a>
-                        <a href="#nav-3" class="room2-review__link">
-                            Как установить Покердом на Windows
-                        </a>
-                        <a href="#nav-4" class="room2-review__link">
-                            Мобильное приложение Покердом для iOS и Android
-                        </a>
-                        <a href="#nav-5" class="room2-review__link">
-                            Регистрация на Покердоме
-                        </a>
-                        <a href="#nav-6" class="room2-review__link">
-                            Плюсы и минусы игры
-                        </a>
-                        <a href="#nav-7" class="room2-review__link">
-                            FAQ
-                        </a>
-                    </div>
-                </aside>
-
-                <div class="room2-review__content r-view--content">
-
-                    <h2>Обзор покер-рума Покердом</h2>
-                    <p>Покердом (Pokerdom) — крупнейший российский покер-рум, открытый в 2014 году. Здесь проще
-                        всего
-                        начать играть в покер на реальные деньги: в расписании много фрироллов с крупными призами (в
-                        том
-                        числе фрироллы без пароля), круглосуточная игра, знаменитые серии турниров с кубками для
-                        победителей и возможность играть на рубли.</p>
-                    <p>Для новых игроков покер-рум часто раздает бонусы на депозиты и проводит крупные акции, а
-                        уровень
-                        игроков на Покердоме ниже: сайт не поддерживает использование вспомогательных программ
-                        (HUD'ы,
-                        статистика), из-за этого у профессиональных игроков не такое большое преимущество над
-                        любителями.</p>
-
-                    <h2 id="nav-0">Во что можно играть на Покердоме</h2>
-                    <p>Покердом предлагает все популярные форматы современного онлайн-покера: кэш и быстрый покер,
-                        одностоловые и многостоловые турниры, китайский покер, а также особые турниры со случайным
-                        призовым фондом — спины (Windfall). В спинах можно заплатить 10 рублей и выиграть крупный
-                        джекпот. Есть столы с шестикарточной и семикарточной омахой.&nbsp;</p>
-                    <p>Кэш-игра идет на лимитах от ₽1/₽2 до ₽1,000/₽2,000.</p>
-                    <p>Реальные деньги на покердоме можно выиграть без вложения собственных средств - с фрироллов. В
-                        расписании много турниров с бай-инами от 10 рублей, форматы самые разные: от классических
-                        фризаутов до нокаут-турниров с наградой за выбивание. Несколько раз в год на Покердоме
-                        проходят
-                        крупные турнирные серии (именно здесь проходит Российская Онлайн-Покер Лига и Чемпионат
-                        России
-                        по онлайн-покеру), а также можно пройти отбор на живые турниры в игорных зонах России: в
-                        казино
-                        в Сочи и Калининграде.</p>
-                    <figure class="image article--photo article--photo_center"><img
-                            src="https://www.gipsyteam.ru/upload/Rakebackreviewimage/default/33.jpg"></figure>
-
-                    <h2 id="nav-1">Рейк и рейкбек</h2>
-                    <p>На Покердоме рейк средний: в кэше в пот-лимитных и безлимитных играх с каждого банка берется
-                        5%,
-                        в лимитных играх 2.5%. Максимальная сумма зависит от размера ставок и количества игроков в
-                        раздаче.</p>
-                    <p>Стандартная комиссия в турнирах - 10%.</p>
-                    <p>На Pokerdom можно выбрать одну из двух программ лояльности, которая будет возвращать
-                        уплаченную
-                        комиссию (давать рейкбек).</p>
-                    <p>Первая программа, “100 шагов к миллиону”, больше понравится любителям: за каждый рубль вы
-                        получаете балл, при наборе определенного количества баллов, вы переходите на новый уровень и
-                        получаете случайный денежный приз. Уровни не обнуляются, разброс денежных бонусов – от 25 до
-                        1,000,000 рублей. Вторая программа, “Машина времени”, больше понравится профессионалам:
-                        активно
-                        играйте в течение всего месяца и получайте до 67% рейкбека.</p>
-                    <figure class="image article--photo article--photo_center"><img
-                            src="https://www.gipsyteam.ru/upload/Rakebackreviewimage/default/34.jpg"></figure>
-
-                    <h2 id="nav-2">Депозит и кэшаут</h2>
-                    <p>Минимальный депозит на Покердоме составляет 500 рублей.</p>
-                    <p>Для пополнения или вывода средств доступен большой выбор платежных систем:</p>
-                    <ul>
-                        <li>Банковские карты</li>
-                        <li>Monetix</li>
-                        <li>Piastrix</li>
-                        <li>Skrill</li>
-                        <li>Neteller</li>
-                        <li>Криптовалюта</li>
-                        <li>Р2Р (между игроками)</li>
-                        <li>WebMoney</li>
-                    </ul>
-                    <p>Доступность платежных методов может различаться в зависимости от страны и загруженности
-                        платежных
-                        шлюзов.</p>
-                    <p>Кэшаут возможен в любое время без отыгрыша депозита или других правил. Игроки могут
-                        переводить
-                        друг другу деньги внутри рума без комиссии.</p>
-
-                    <h2 id="nav-3">Как установить Покердом на Windows</h2>
-                    <p>Для установки зайдите на сайт, в правом меню выберите “Покер” и нажмите “Скачать приложение”.
-                        При
-                        проблемах с доступом, воспользуйтесь зеркалом сайта Покердом.</p>
-                    <figure class="image article--photo article--photo_center"><img
-                            src="https://www.gipsyteam.ru/upload/Rakebackreviewimage/default/35.jpg"></figure>
-
-                    <h2 id="nav-4">Мобильное приложение Покердом для iOS и Android</h2>
-                    <p>Порядок действий по установке такой же, как для настольного клиента: надо зайти по ссылке со
-                        своего устройства, для скачивания будет предложена соответствующая версия. Если у вас
-                        Android,
-                        не забудьте разрешить установку приложений из неизвестных источников в разделе
-                        “Безопасность”
-                        настроек телефона.</p>
-                    <p>Отдельного приложения на IOS нет, но играть можно прямо из браузера. Браузерная версия по
-                        возможностям ничем не уступает клиенту.</p>
-                    <figure class="image article--photo article--photo_center"><img
-                            src="https://www.gipsyteam.ru/upload/Rakebackreviewimage/default/36.jpg"></figure>
-                    <p>Ограничения на максимальное количество столов нет — лишь бы хватало мощности смартфона.
-                        Переключаться между ними можно свайпом или на панели в верхней части.</p>
-                    <p>Не обязательно скачивать дополнительные программы: достаточно браузера с поддержкой Java и
-                        Flash.
-                        Войдите в личный кабинет на сайте и нажмите “Играть” на главной странице. Доступны все
-                        возможности полноценного клиента.</p>
-
-                    <h2 id="nav-5">Регистрация на Покердоме</h2>
-                    <p>Если у вас еще нет аккаунта, зарегистрируйтесь на сайте при помощи этой <a
-                            href="https://www.gipsyteam.ru/pokerrumy/pokerdom#roomreg" target="_blank">инструкции</a> и
-                        каждую субботу участвуйте во фриролле от GipsyTeam с гарантией 10,000 рублей! Турнир
-                        проводится
-                        еженедельно, по субботам, в 20:00 по Москве. Для получения билета требуется пройти
-                        верификацию
-                        личности.</p>
-                    <p><a href="https://www.gipsyteam.ru/support" target="_blank">Служба поддержки</a> поможет
-                        решить
-                        возникшие трудности с доступом и другие проблемы.</p>
-
-                    <h2 id="nav-6">Плюсы и минусы игры</h2>
-                    <p>К основным преимуществам можно отнести:</p>
-                    <ul>
-                        <li>Депозиты и кэшауты в рублях</li>
-                        <li>Широкий выбор игры</li>
-                        <li>Много слабых игроков</li>
-                        <li>Высокий рейкбек</li>
-                        <li>Вывод в любое время и без дополнительных условий</li>
-                        <li>Саппорт на русском языке</li>
-                    </ul>
-                    <p>Минусы:</p>
-                    <ul>
-                        <li>Нельзя использовать программы для статистики за столами</li>
-                    </ul>
-
-                    <h2 id="nav-7">FAQ</h2>
-                    <p><strong>В</strong>: Можно ли пользоваться Holdem Manager, Pokertracker или Hand2Note?</p>
-                    <p><strong>О</strong>: Нет, программы для сбора статистики и вывода HUD на столы запрещены.</p>
-                    <p><strong>В</strong>: Проблема с доступом к руму: не могу зайти на Покердом из России. Что
-                        делать?
-                    </p>
-                    <p><strong>О</strong>: Вход в личный кабинет Покердома часто бывает недоступен. Для решения этой
-                        проблемы вбейте в поисковике “зеркало покердома” и зайдите на сайт по одной из открывшихся
-                        ссылок. Есть и другое решение: открыть кассу в клиенте рума.</p>
-                    <p><strong>В</strong>: Как получить бонус на Покердом?</p>
-                    <p><strong>О</strong>: Бонусы на Покердоме бывают нескольких разновидностей: покерные, на игры в
-                        казино и ставки. Если у вас уже есть аккаунт, посмотреть доступные бонусы можно в клиенте в
-                        правом верхнем углу - кликнув на логотип с “подарком” (зеленая кнопка под аватаром).</p>
-                    <p><strong>В</strong>: Как зайти на Покердом?</p>
-                    <p><strong>О</strong>: Если у вас не получается зайти на официальный сайт рума или в личный
-                        кабинет,
-                        воспользуйтесь “зеркалом Покердома” - специальным резервным сайтом, который работает в
-                        случае
-                        неполадок на основной странице. Просто вбейте в поисковике “зеркало покердома” и перейдите
-                        на
-                        рабочий сайт.</p>
-                    <p><strong>В</strong>: Как скачать Покердом на айфон?</p>
-                    <p><strong>О</strong>: На данный момент для игры на Покердоме с устройств на iOS понадобится
-                        браузер, с помощью которого нужно перейти на специальное веб-меню. Однако по функционалу
-                        веб-версия ничем не отличается от клиента на Android.</p>
-                    <p><strong>В</strong>: Как ввести промокод на Покердоме?</p>
-                    <p><strong>О</strong>: Все промокоды вводятся в клиенте рума в разделе “Касса”.</p>
-                    <p><strong>В</strong>: Как выводить деньги из Покердома?</p>
-                    <p><strong>О</strong>: Для перевода денег с аккаунта рума нужно выбрать пункт “вывод средств” в
-                        кассе и указать подходящую платежную систему: Visa и Mastercard, Neteller, Piastrix</p>
-                    <p><strong>В</strong>: Как долго выводятся деньги?</p>
-                    <p><strong>О</strong>: Зависит от способа кэшаута. Подавляющее большинство транзакций
-                        обрабатываются
-                        в течение 1-3 дней.</p>
-                    <p><strong>В</strong>: Как лучше зарегистрироваться на Покердоме?</p>
-                    <p><strong>О</strong>: Выгоднее всего играть от GipsyTeam - так вы получите доступ к закрытым
-                        еженедельным фрироллам на 10,000 рублей, эксклюзивным бонусам на депозит, лидербордам,
-                        розыгрышам призов и другим уникальным акциям.</p>
-                    <p><strong>В</strong>: Как получить бездепозитный бонус на Покердоме?</p>
-                    <p><strong>О</strong>: Иногда покер-рум устраивает бесплатные раздачи призов, в том числе
-                        бездепозитных бонусов, но такие предложения всегда ограничены во времени. Чтобы не
-                        пропустить
-                        ничего важного, чаще заходите в раздел “Акции” на GipsyTeam и подпишитесь на нашу рассылку.
-                    </p>
-                    <p><strong>В</strong>: Как написать в поддержку Покердома?</p>
-                    <p><strong>О</strong>: Проще всего связаться со службой поддержки, зайдя на официальный сайт и
-                        открыв выпадающее меню в левой части экрана. Служба поддержки отвечает на русском языке и
-                        работает 24 часа в сутки.</p>
-                    <p><strong>В</strong>: Почему в Покердоме запретили holdem manager?</p>
-                    <p><strong>О</strong>: Покердом не поддерживает использование вспомогательных программ - в их
-                        число
-                        входит Holdem Manager, Poker Tracker, Hand2Note и многие другие. Из-за этого преимущество
-                        профессиональных игроков над любителями не такое большое.</p>
-
-                    <div class="room2-review__next-button room2-review__next-button_disabled">
-                        <span>Рейк и рейкбек</span>
-                        <div class="room2-review__button-fade"></div>
-                        <svg class="room2-review__arrow-icon">
-                            <use href="/nimg/icons-room.svg#icon-room2-red-arrow"></use>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="room2-support room2-support_mobile room2-support_mobile2">
-
-            <div class="room2-support-inner room2-support-inner_mobile">
-                <div class="room2-support-avatar" style="background-image: url(../nimg/support-team.jpg);">
-                    <div class="room2-support-avatar__icon">
-                        <svg class="room2-support-avatar__icon-image">
-                            <use href="/nimg/icons-room.svg#icon-headphones" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="room2-support-info">
-                    <div class="room2-support-info__name">
-                        Андрей Антипов
-                    </div>
-                    <div class="room2-support-info__role">
-                        Глава службы поддержки
-                    </div>
-                </div>
-                <div class="room2-support-links room2-support-links_mobile">
-                    <a class="room2-support-links__item room2-support-links__item_chat">
-                        <svg class="room2-support-links__icon room2-support-links__icon_chat">
-                            <use href="/nimg/icons-room.svg#icon-chat" />
-                        </svg>
-                        <span>Онлайн чат</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_telegram"
-                        href="https://t.me/gipsyteamsupport2" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_telegram">
-                            <use href="/nimg/icons-room.svg#icon-telegram" />
-                        </svg>
-                        <span>Телеграм</span>
-                    </a>
-                    <a
-                        class="room2-support-links__item room2-support-links__item_mobile room2-support-links__item_support">
-                        <svg class="room2-support-links__icon room2-support-links__icon_gt">
-                            <use href="/nimg/icons-room.svg#icon-gt-logo" />
-                        </svg>
-                        <span>Поддержка</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_skype"
-                        href="skype:gipsyteam-support?chat" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_skype">
-                            <use href="/nimg/icons-room.svg#icon-skype" />
-                        </svg>
-                        <span>Скайп</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_discord room2-support-links__item_tablet"
-                        href="https://discord.gg/3hfmbNHsEh" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_discord">
-                            <use href="/nimg/support-sprite.svg#i-btn-discord" />
-                        </svg>
-                        <span>Discord</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_whatsapp room2-support-links__item_tablet"
-                        href="https://api.whatsapp.com/send?phone=79264485917" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_whatsapp">
-                            <use href="/nimg/support-sprite.svg#i-link-whatsapp" />
-                        </svg>
-                        <span>WhatsApp</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_viber room2-support-links__item_tablet"
-                        ref="viber://chat?number=+79264485917" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_viber">
-                            <use href="/nimg/support-sprite.svg#i-link-viber" />
-                        </svg>
-                        <span>Viber</span>
-                    </a>
-                    <div class="room2-support-links__item room2-support-links__item_more">
-                        <span>Ещё</span>
-                        <svg class="room2-support-links__icon room2-support-links__icon_arrow">
-                            <use href="/nimg/icons-room.svg#icon-arrow-red" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="room2-support__separator-bottom">
-                <div class="room2-support__separator-line"></div>
-                <img class="room2-support__separator-image" src="/nimg/rhombus-grey.svg" alt="">
-            </div>
+        </aside>
+    </div>
+    <div class="content_room room2-bottom">
+        <div class="room-bottom">
+            {{> slider-news}}
         </div>
-        <div class="room2-description room2-description_bottom room2-section">
-            <div class="room2-description__title room2-description__title_bottom">
-                <h3>Регистрация</h3>
-            </div>
-            <div class="room2-description__content">
-                <div class="room2-steps">
-                    <div class="room2-steps__bullet">
-                        <div class="room2-steps__bullet-content">
-                            1
-                        </div>
-                    </div>
-                    <div class="room2-steps__content">
-                        <div class="room2-steps__text">
-                            Скопируйте в буфер промокод <span class="room2_full-text"> GT</span> :
-                        </div>
-                        <div class="room2-steps__copy-area">
-                            GT2022FG
-                            <svg class="room2-steps__copy">
-                                <use href="/nimg/icons-room.svg#icon-copy" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="room2-steps__bullet">
-                        <div class="room2-steps__bullet-content">
-                            2
-                        </div>
-                    </div>
-                    <div class="room2-steps__content">
-                        <div class="room2-steps__text room2-steps__text_2">
-                            Перейдите по ссылке и зарегистрируйтесь, используя скопированный промокод:
-                        </div>
-                        <a href="#" class="room2-steps__reg-link">
-                            Регистрация на Покердом
-                        </a>
-                    </div>
-                    <div class="room2-steps__bullet">
-                        <div class="room2-steps__bullet-content">
-                            3
-                        </div>
-                    </div>
-                    <div class="room2-steps__content">
-                        <div class="room2-steps__text">
-                            После регистрации, пришлите нам свой ник, чтобы получить:</div>
-                        <ul class="room2-steps__list">
-                            <li class="room2-steps__list-item">
-                                <strong>Дополнительный рейкбек</strong> на покупку софта и сувениров в
-                                магазине.
-                            </li>
-                            <li class="room2-steps__list-item">
-                                <strong>Cлужба поддержки</strong> ответит на любые вопросы, 18 часов в
-                                сутки.
-                            </li>
-                            <li class="room2-steps__list-item">
-                                Профессиональные <strong>лэйауты</strong> для удобной игры.
-                            </li>
-                            <li class="room2-steps__list-item">
-                                <strong>Помощь</strong> в решении конфликтных ситуаций с румами.
-                            </li>
-                            <li class="room2-steps__list-item">
-                                <strong>Акции,</strong> которые не найти у других аффилейтов: приватные
-                                рейк-гонки с крупными призами, собственные онлайн-серии и розыгрыши
-                                турнирных
-                                пакетов на этапы EPT, WPT и других крупнейших серий.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="room2-steps__bullet">
-                        <svg class="room2-steps__bullet-content room2-steps__bullet-content_check ">
-                            <use href="/nimg/icons-room.svg#icon-check" />
-                        </svg>
-                    </div>
-
-                    <div class="room2-steps__content">
-                        <div class="room2-steps__main-text">
-                            Готово! Теперь вы можете играть на Покердоме, используя все бонусы от GipsyTeam.
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <aside class="room2-sidebar">
-        <div class="room2-support ">
-
-            <div class="room2-support-inner ">
-                <div class="room2-support-avatar" style="background-image: url(../nimg/support-team.jpg);">
-                    <div class="room2-support-avatar__icon">
-                        <svg class="room2-support-avatar__icon-image">
-                            <use href="/nimg/icons-room.svg#icon-headphones" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="room2-support-info">
-                    <div class="room2-support-info__name">
-                        Андрей Антипов
-                    </div>
-                    <div class="room2-support-info__role">
-                        Глава службы поддержки
-                    </div>
-                </div>
-                <div class="room2-support-links ">
-                    <a class="room2-support-links__item room2-support-links__item_chat">
-                        <svg class="room2-support-links__icon room2-support-links__icon_chat">
-                            <use href="/nimg/icons-room.svg#icon-chat" />
-                        </svg>
-                        <span>Онлайн чат</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_telegram"
-                        href="https://t.me/gipsyteamsupport2" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_telegram">
-                            <use href="/nimg/icons-room.svg#icon-telegram" />
-                        </svg>
-                        <span>Телеграм</span>
-                    </a>
-                    <a
-                        class="room2-support-links__item room2-support-links__item_mobile room2-support-links__item_support">
-                        <svg class="room2-support-links__icon room2-support-links__icon_gt">
-                            <use href="/nimg/icons-room.svg#icon-gt-logo" />
-                        </svg>
-                        <span>Поддержка</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_skype"
-                        href="skype:gipsyteam-support?chat" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_skype">
-                            <use href="/nimg/icons-room.svg#icon-skype" />
-                        </svg>
-                        <span>Скайп</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_discord room2-support-links__item_tablet"
-                        href="https://discord.gg/3hfmbNHsEh" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_discord">
-                            <use href="/nimg/support-sprite.svg#i-btn-discord" />
-                        </svg>
-                        <span>Discord</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_whatsapp room2-support-links__item_tablet"
-                        href="https://api.whatsapp.com/send?phone=79264485917" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_whatsapp">
-                            <use href="/nimg/support-sprite.svg#i-link-whatsapp" />
-                        </svg>
-                        <span>WhatsApp</span>
-                    </a>
-                    <a class="room2-support-links__item  room2-support-links__item_mobile room2-support-links__item_viber room2-support-links__item_tablet"
-                        ref="viber://chat?number=+79264485917" target="_blank" rel="nofollow">
-                        <svg class="room2-support-links__icon room2-support-links__icon_viber">
-                            <use href="/nimg/support-sprite.svg#i-link-viber" />
-                        </svg>
-                        <span>Viber</span>
-                    </a>
-                    <div class="room2-support-links__item room2-support-links__item_more">
-                        <span>Ещё</span>
-                        <svg class="room2-support-links__icon room2-support-links__icon_arrow">
-                            <use href="/nimg/icons-room.svg#icon-arrow-red" />
-                        </svg>
-                    </div>
-                </div>
-
-                <svg class="room2-support__separator">
-                    <use href="/nimg/icons-room.svg#icon-rhombus" />
-                </svg>
-            </div>
-
-        </div>
-        <div class="room2-banners">
-
-            <div class="room2-banners-inner">
-                <a href="#" class="room2-banner__item">
-                    <div class="room2-banner__image">
-                        <img src="/nimg/league-free-banner.jpg" alt="">
-                    </div>
-                    <div class="room2-banner__text">
-                        Два еженедельных турнирных лидерборда на 94 тыс. рублей
-                    </div>
-                </a>
-                <a href="#" class="room2-banner__item">
-                    <div class="room2-banner__image">
-                        <img src="//www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/54.jpg?1615221289" alt=""
-                            srcset="//www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/54.jpg?1615221289 1x, //www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/54@2x.jpg?1615221289 2x">
-                    </div>
-                    <div class="room2-banner__text">
-                        Бесплатный турнир на 10 тыс. рублей каждую неделю
-                    </div>
-                </a>
-                <a href="#" class="room2-banner__item room2-banner__item_hidden">
-                    <div class="room2-banner__image">
-                        <img src="//www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/1/159.jpg?1652439296" alt=""
-                            srcset="//www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/1/159.jpg?1652439296 1x, //www.gipsyteam.ru/upload/Pokerroomofferrbimage/default/1/159@2x.jpg?1652439296 2x">
-                    </div>
-                    <div class="room2-banner__text">
-                        Лидерборды и подарки на 4 млн рублей для кэш-игроков
-                    </div>
-                </a>
-            </div>
-
-        </div>
-    </aside>
-</div>
+    </div>
     <script>
         $('.room2-other__img-wrapper').magnificPopup({
             delegate: 'a',
@@ -1927,19 +1956,72 @@
                 false
             );
         });
+        // REVIEWS ACCORDEON _______________________
+
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            const reviewsButton = document.querySelector('.testimonials-header__item_dark');
+            const reviewsWrapper = document.querySelector('.testimonials-header__feedback')
+
+            reviewsButton.addEventListener('click', () => {
+                reviewsWrapper.classList.toggle('testimonials-header__feedback_active');
+            })
+
+            const rateButton = document.querySelector('.testimonials-header__item_rate');
+            const rateWrapper = document.querySelector('.testimonials-header__rate')
+
+            rateButton.addEventListener('click', () => {
+                rateWrapper.classList.toggle('testimonials-header__rate_active');
+            })
+        }
 
         // STAR RATING _______________________
 
         const starRating = rater({
-          starSize: 18,
-          starGap: 0,
-          element: document.querySelector('#rater'),
-          rateCallback: function rateCallback(rating, done) {
-            this.setRating(rating);
-            done();
-          }
+            starSize: 18,
+            starGap: 0,
+            element: document.querySelector('#rater'),
+            rateCallback: function rateCallback(rating, done) {
+                this.setRating(rating);
+                done();
+            }
         });
 
     </script>
+    <script>
+        var mySwiper = new Swiper('.slider-screen--container', {
+            wrapperClass: 'slider-screen--row',
+            containerModifierClass: 'slider-screen--container_',
+            slideClass: 'slider-screen--item',
+            slideActiveClass: 'slider-screen--item_active',
+            slideNextClass: 'slider-screen--item_next',
+            slidePrevClass: 'slider-screen--item_prev',
+            //
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.slider-screen--button_next',
+                prevEl: '.slider-screen--button_prev',
+                disabledClass: 'slider-screen--button_disabled'
+            }
+        });
+    </script>
 
+    <script>
+        (function ($) {
+            $(function () {
+                $('.slider-screen--row').magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    gallery: {
+                        enabled: true,
+                        tPrev: '',
+                        tNext: ''
+                    },
+                    closeBtnInside: false,
+                    fixedContentPos: true
+                });
+            });
+        })(jQuery);
+    </script>
 </main>
