@@ -1786,21 +1786,50 @@
     </div>
     <div class="content_room room2-bottom">
         <div class="room-bottom">
+            <!-- bottom content begin -->
             {{> slider-news}}
+            <!-- bottom content end -->
         </div>
     </div>
     <script>
-        $('.room2-other__img-wrapper').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            gallery: {
-                enabled: true,
-                tPrev: '',
-                tNext: ''
-            },
-            closeBtnInside: false,
-            fixedContentPos: true
+
+        // GALLERY SLIDER
+        var mySwiper = new Swiper('.slider-screen--container', {
+            wrapperClass: 'slider-screen--row',
+            containerModifierClass: 'slider-screen--container_',
+            slideClass: 'slider-screen--item',
+            slideActiveClass: 'slider-screen--item_active',
+            slideNextClass: 'slider-screen--item_next',
+            slidePrevClass: 'slider-screen--item_prev',
+            //
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            loopFillGroupWithBlank: true,
+            navigation: {
+                nextEl: '.slider-screen--button_next',
+                prevEl: '.slider-screen--button_prev',
+                disabledClass: 'slider-screen--button_disabled'
+            }
         });
+
+        // GALLERY POPUP
+        (function ($) {
+            $(function () {
+                $('.slider-screen--row').magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    gallery: {
+                        enabled: true,
+                        tPrev: '',
+                        tNext: ''
+                    },
+                    closeBtnInside: false,
+                    fixedContentPos: true
+                });
+            });
+        })(jQuery);
+
+        // REFRESH FUNCTIONS FOR WHITCH SCREEN SIZE IS IMPORTANT 
 
         window.onload = function () {
             review();
@@ -1810,7 +1839,7 @@
             review();
         };
 
-        // add notify element
+        // ADD NOTIFY ELEMENT
         document.querySelector('html').style.scrollBehavior = 'smooth';
         let notify = document.createElement("div");
         let text = document.createTextNode("Скопировано!");
@@ -1956,21 +1985,41 @@
                 false
             );
         });
+
         // REVIEWS ACCORDEON _______________________
 
         if (window.matchMedia("(max-width: 768px)").matches) {
             const reviewsButton = document.querySelector('.testimonials-header__item_dark');
-            const reviewsWrapper = document.querySelector('.testimonials-header__feedback')
+            const reviewsWrapper = document.querySelector('.testimonials-header__feedback');
+            const reviewsArrow = document.querySelector('.testimonials-header__feedback .testimonials-arrow');
 
             reviewsButton.addEventListener('click', () => {
                 reviewsWrapper.classList.toggle('testimonials-header__feedback_active');
+                reviewsArrow.classList.toggle('testimonials-arrow_active');
+                document.addEventListener('click', (e) => {
+                    const withinBoundaries = e.composedPath().includes(reviewsWrapper);
+                    if (!withinBoundaries) {
+                        reviewsWrapper.classList.remove('testimonials-header__feedback_active');
+                        reviewsArrow.classList.remove('testimonials-arrow_active');
+                    }
+                })
             })
 
             const rateButton = document.querySelector('.testimonials-header__item_rate');
-            const rateWrapper = document.querySelector('.testimonials-header__rate')
+            const rateWrapper = document.querySelector('.testimonials-header__rate');
+            const rateArrow = document.querySelector('.testimonials-header__rate .testimonials-arrow');
+
 
             rateButton.addEventListener('click', () => {
                 rateWrapper.classList.toggle('testimonials-header__rate_active');
+                rateArrow.classList.toggle('testimonials-arrow_active');
+                document.addEventListener('click', (e) => {
+                    const withinBoundaries = e.composedPath().includes(rateWrapper);
+                    if (!withinBoundaries) {
+                        rateWrapper.classList.remove('testimonials-header__rate_active');
+                        rateArrow.classList.remove('testimonials-arrow_active');
+                    }
+                })
             })
         }
 
@@ -1987,41 +2036,5 @@
         });
 
     </script>
-    <script>
-        var mySwiper = new Swiper('.slider-screen--container', {
-            wrapperClass: 'slider-screen--row',
-            containerModifierClass: 'slider-screen--container_',
-            slideClass: 'slider-screen--item',
-            slideActiveClass: 'slider-screen--item_active',
-            slideNextClass: 'slider-screen--item_next',
-            slidePrevClass: 'slider-screen--item_prev',
-            //
-            slidesPerView: 'auto',
-            spaceBetween: 16,
-            loopFillGroupWithBlank: true,
-            navigation: {
-                nextEl: '.slider-screen--button_next',
-                prevEl: '.slider-screen--button_prev',
-                disabledClass: 'slider-screen--button_disabled'
-            }
-        });
-    </script>
 
-    <script>
-        (function ($) {
-            $(function () {
-                $('.slider-screen--row').magnificPopup({
-                    delegate: 'a',
-                    type: 'image',
-                    gallery: {
-                        enabled: true,
-                        tPrev: '',
-                        tNext: ''
-                    },
-                    closeBtnInside: false,
-                    fixedContentPos: true
-                });
-            });
-        })(jQuery);
-    </script>
 </main>

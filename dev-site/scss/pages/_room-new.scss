@@ -1444,7 +1444,7 @@
       gap: 5px;
       position: absolute;
       top: 2em;
-      left: 0;
+      right: 0;
       align-items: flex-start;
       @include breakpoint(large) {
         position: unset;
@@ -1459,11 +1459,11 @@
       gap: 5px;
       overflow: hidden;
       height: 23px;
-      transition: all 0.5s;
-      background-color: var(--room-color12);
+      transition: all 0.3s;
+      // background-color: var(--room-color12);
       border-radius: 13px;
       @include breakpoint(large) {
-        background-color: inherit;
+        // background-color: inherit;
         border-radius: 0;
         flex-direction: row;
         overflow: auto;
@@ -1472,11 +1472,11 @@
     }
     &__feedback_active {
       gap: 15px;
-      background-color: var(--room-color12);
+      background-color: var(--room-color6);
       color: var(--room-color3);
-      padding: 4px 9px 9px 9px;
+      padding: 0 9px 9px 9px;
       border-radius: 13px;
-      height: 233px;
+      height: 225px;
     }
     &__rate {
       display: flex;
@@ -1485,8 +1485,7 @@
       flex-direction: column;
       overflow: hidden;
       height: 23px;
-      transition: all 0.5s;
-      background-color: var(--room-color12);
+      transition: all 0.3s;
       border-radius: 13px;
       @include breakpoint(large) {
         background-color: inherit;
@@ -1497,12 +1496,12 @@
       }
     }
     &__rate_active {
-      gap: 6px;
-      background-color: var(--room-color12);
+      gap: 15px;
+      background-color: var(--room-color6);
       color: var(--room-color3);
-      padding: 4px 9px 9px 9px;
+      padding: 0 9px 9px 9px;
       border-radius: 13px;
-      height: 67px;
+      height: 73px;
     }
   }
   &__stats {
@@ -1692,9 +1691,13 @@
   height: 7px;
   top: 8px;
   right: 7px;
+  transition: all 0.3s;
   @include breakpoint(large) {
     display: none;
   }
+}
+.testimonials-arrow_active {
+  transform: rotate(180deg);
 }
 .reputation {
   &__title {
