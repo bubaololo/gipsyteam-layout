@@ -13,16 +13,6 @@
   @include breakpoint(xxxlarge) {
     padding-top: 0;
   }
-  // section:not(:first-child) {
-  //   padding: 0 24px;
-  //   @include breakpoint(xxxlarge) {
-  //     padding: 0 88px;
-  //   }
-  // }
-  // .teamplay-quest {
-  //   padding-top: 65px;
-  //   padding-bottom: 75px;
-  // }
 }
 .sv-hero {
   position: relative;
@@ -45,8 +35,8 @@
   }
   &__persons {
     position: relative;
-    background-image: url(../nimg/tmpimg/sv_banner_background.webp),
-      url(../nimg/tmpimg/sv_banner_background.png);
+    background-image: url(../nimg/sv_banner_background.webp),
+      url(../nimg/sv_banner_background.png);
     background-size: 150%;
     background-repeat: no-repeat;
     background-position: 83% 24%;

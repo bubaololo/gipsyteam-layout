@@ -314,8 +314,19 @@
     @include breakpoint(large) {
       padding: 27px;
     }
+  }
+  &_mobile-top {
     @include breakpoint(xxxlarge) {
       display: none;
+    }
+  }
+  &_mobile-bottom {
+    .room2-support-links__icon_arrow-open {
+      transform: translateX(34px) translateY(-39%) rotate(180deg);
+    }
+    @include breakpoint(xxxlarge) {
+      margin-top: 30px;
+      padding: 0;
     }
   }
   &__separator {
@@ -358,11 +369,7 @@
   @include breakpoint(large) {
     padding-top: 0;
   }
-  @include breakpoint(xxxlarge) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
   &_mobile {
     @include breakpoint(xsmall) {
       margin: 0 auto;
@@ -378,8 +385,25 @@
       outline-offset: 3px;
       padding: 23px 44px 24px 31px;
     }
+    @include breakpoint(xxxlarge) {
+      border: none;
+      outline: none;
+      padding: 33px 0;
+      justify-content: center;
+    }
+  }
+  &_desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .room2-support-links__item_mobile {
+      @include breakpoint(xxxlarge) {
+        display: none;
+      }
+    }
   }
 }
+
 .room2-support-avatar {
   position: relative;
   width: 86px;
@@ -498,9 +522,6 @@
       @include breakpoint(large) {
         display: inline-block;
       }
-      @include breakpoint(xxxlarge) {
-        display: none;
-      }
     }
     &_chat {
       grid-area: supp-chat;
@@ -536,6 +557,8 @@
         max-width: 3.5ch;
         transform: translateX(-7px);
       }
+    }
+    &_more-desktop {
       @include breakpoint(xxxlarge) {
         padding-left: 32px;
         max-width: unset;
@@ -1466,6 +1489,7 @@
         // background-color: inherit;
         border-radius: 0;
         flex-direction: row;
+        flex-wrap: wrap;
         overflow: auto;
         height: unset;
       }
@@ -1491,7 +1515,7 @@
         background-color: inherit;
         border-radius: 0;
         flex-direction: row;
-        overflow: auto;
+        overflow: initial;
         height: unset;
       }
     }
