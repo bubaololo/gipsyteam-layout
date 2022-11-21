@@ -707,6 +707,26 @@
     padding: 0;
     margin-bottom: 8px;
   }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint(xxsmall) {
+      // align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 24px;
+    }
+    @include breakpoint(large) {
+      gap: 24px;
+    }
+    @include breakpoint(xxxlarge) {
+      display: unset;
+      padding: 0;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
   &__button {
     position: relative;
     color: #000;
@@ -721,42 +741,38 @@
   &__arrow {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 3px;
     width: 13px;
     height: 8px;
-    transform: translateY(-39%);
+    transform: translateY(-47%);
   }
 }
 .room2-banners__wrapper_open {
-  overflow-y: scroll;
-  border-radius: 10px;
-  scrollbar-width: thin;
-  max-height: 84vh;
+  margin-bottom: 24px;
   .room2-banner__item {
     &:nth-child(n + 4) {
       display: inline-block;
     }
   }
+  @include breakpoint(xxxlarge) {
+    overflow-y: scroll;
+    border-radius: 10px;
+    scrollbar-width: thin;
+    max-height: 84vh;
+    margin-bottom: 0;
+  }
 }
 .room2-banners-inner {
-  padding: 39px 0 11px;
+  padding: 39px 0 22px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  @include breakpoint(large) {
-    align-items: flex-start;
-    flex-direction: row;
-    padding: 54px 0 52px;
-    gap: 24px;
-  }
   @include breakpoint(xxxlarge) {
-    display: unset;
-    padding: 44px 0 36px;
-    justify-content: center;
-    gap: 24px;
+    padding: 0;
   }
 }
+
 .room2-plus {
   border-bottom: 1px solid var(--room-color7);
   padding: 0 24px 16px 24px;
