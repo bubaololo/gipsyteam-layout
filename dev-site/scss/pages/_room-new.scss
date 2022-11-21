@@ -307,7 +307,7 @@
 
   @include breakpoint(xxxlarge) {
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
   }
   &_mobile {
     padding: 0 24px;
@@ -651,6 +651,9 @@
   &__item {
     display: inline-block;
     margin-bottom: 23px;
+    &:nth-child(n + 4) {
+      display: none;
+    }
     @include breakpoint(large) {
       max-width: 222px;
       margin: 0;
@@ -674,12 +677,13 @@
     max-width: 221px;
   }
 }
+
 .room2-banners {
   background-color: var(--room-color6);
   padding: 0 24px;
   @include breakpoint(xxxlarge) {
     position: sticky;
-    top: 35px;
+    top: 22px;
     padding: 0;
   }
 
@@ -688,6 +692,49 @@
     border-bottom: 1px solid var(--room-color7);
     @include breakpoint(xxxlarge) {
       display: none;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &__title-item {
+    color: #000;
+    font-family: "PT Serif", serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 21px;
+    padding: 0;
+    margin-bottom: 8px;
+  }
+  &__button {
+    position: relative;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    font-family: Roboto, Arial, sans-serif;
+    text-align: center;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 13px;
+    height: 8px;
+    transform: translateY(-39%);
+  }
+}
+.room2-banners__wrapper_open {
+  overflow-y: scroll;
+  border-radius: 10px;
+  scrollbar-width: thin;
+  max-height: 84vh;
+  .room2-banner__item {
+    &:nth-child(n + 4) {
+      display: inline-block;
     }
   }
 }
@@ -913,34 +960,6 @@
     margin-bottom: 29px;
     @include breakpoint(xxxlarge) {
       margin-top: 49px;
-    }
-  }
-  &__row {
-    display: flex;
-    gap: 12px;
-    max-width: 100%;
-    img {
-      max-height: 144px;
-    }
-  }
-  &__row:not(:last-child) {
-    margin-bottom: 12px;
-    @include breakpoint(large) {
-      margin-bottom: 0;
-    }
-  }
-  &__row:nth-child(2) {
-    img {
-      max-height: 112px;
-      @include breakpoint(large) {
-        max-height: 144px;
-      }
-    }
-  }
-  &__img {
-    img {
-      height: 100%;
-      border-radius: 3px;
     }
   }
 
@@ -1420,15 +1439,8 @@
       white-space: nowrap;
       @include breakpoint(large) {
         display: inline-block;
-        // &:nth-child(n + 5):not(:last-child) {
-        //   display: none;
-        // }
       }
-      @include breakpoint(xxxlarge) {
-        // &:nth-child(n + 5):not(:last-child) {
-        //   display: inline-block;
-        // }
-      }
+
       &_dark {
         display: inline-block;
         position: relative;
