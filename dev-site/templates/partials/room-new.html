@@ -17,8 +17,7 @@
                                     <strong class="room2-rating__digits_accent">4.7</strong> <span
                                         class="room2-rating__digits_secondary"> /5</span>
                                 </div>
-                                <!-- для изменения степени закрашенности линии со звёздами подставляем одинаковые значения в проценты,
-                             процент задаёт ширину красной области фона звёзд -->
+
                                 <div class="stars-background"
                                     style="background: linear-gradient(90deg, var(--room-accent) 90%, var(--room-color1) 90%);">
                                 </div>
@@ -37,12 +36,7 @@
                         </div>
 
                         <div class="progressbar">
-                            <!-- длина дуги 185рх, значение "stroke-dashoffset" укорачивает красную дугу на указанное кол-во пикселей
-                            соответственноу нужно передать такое число, которое сотносится со 185 как 5 соотносится с выставленной оценкой
-                            например оценка 4.6, тогда 5 - 4.6 = 0.4
-                            0.4 / 5 = 0.08
-                            185 * 0.08 = 14px -->
-                            <!-- semicircle item -->
+
                             <div class="progressbar__semi-circle">
                                 <svg class="progressbar__arc-background">
                                     <use href="/nimg/icons-room.svg#icon-rating-arc-background" />
@@ -181,25 +175,32 @@
                         </div>
                         <div class="room2-stats__item room2-stats__item_7">
                             <div class="room2-stats__icons">
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-astropay" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-ecopayz" />
+                                    </svg>
 
-                                <img class="stats-icon stats-icon_mastercard" src="/nimg/icon-mastercard.png"
-                                    alt="mastercard logo">
-
-
-                                <img class="stats-icon stats-icon_visa" src="/nimg/icon-visa.png" alt="visa logo">
-
-
-                                <img class="stats-icon stats-icon_crypto" src="/nimg/icon-bitcoin.png"
-                                    alt="bitcoin logo">
-
-                                <img class="stats-icon stats-icon_webmoney" src="/nimg/icon-webmoney.png"
-                                    alt="webmoney-logo logo">
-
-
-                                <img class="stats-icon stats-icon_neteller" src="/nimg/icon-neteller.png"
-                                    alt="neteller logo">
-
-                                <span class="room2-stats_secondary room2-stats_secondary_mobile"> +2</span>
+                                </div>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-luxonpay" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-paypal" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-applepay" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="room2-stats__sub-text">
                                 Платёжные системы
@@ -208,18 +209,26 @@
 
                         <div class="room2-stats__item room2-stats__item_8">
                             <div class="room2-stats__icons">
-                                <svg class="stats-icon stats-icon_apple">
-                                    <use href="/nimg/icons-room.svg#icon-apple" />
-                                </svg>
-                                <svg class="stats-icon stats-icon_android ">
-                                    <use href="/nimg/icons-room.svg#icon-android" />
-                                </svg>
-                                <svg class="stats-icon stats-icon_windows ">
-                                    <use href="/nimg/icons-room.svg#icon-windows" />
-                                </svg>
-                                <svg class="stats-icon stats-icon_ios">
-                                    <use href="/nimg/icons-room.svg#icon-ios" />
-                                </svg>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/icons-room.svg#icon-apple" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/icons-room.svg#icon-android" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/icons-room.svg#icon-windows" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/icons-room.svg#icon-ios" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="room2-stats__sub-text">
                                 Платформы
@@ -926,30 +935,22 @@
                     </div>
                     <div class="room2-other__content">
                         <div class="slider-screen">
-                            <div
-                                class="slider-screen--container slider-screen--container_initialized slider-screen--container_horizontal">
-                                <ul class="slider-screen--row" style="transform: translate3d(0px, 0px, 0px);">
-                                    <li class="slider-screen--item slider-screen--item_active"
-                                        style="margin-right: 16px;"><a href="/nimg/room-slider-image1280x960.png"><img
-                                                src="/nimg/room-slider-image220x165.png" alt=""></a></li>
-                                    <li class="slider-screen--item slider-screen--item_next"
-                                        style="margin-right: 16px;"><a href="/nimg/room-slider-image960x1280.png"><img
-                                                src="/nimg/room-slider-image124x165.png" alt=""></a></li>
-                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
-                                            href="/nimg/room-slider-image1280x960.png"><img
-                                                src="/nimg/room-slider-image220x165.png" alt=""></a></li>
-                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
-                                            href="/nimg/room-slider-image1280x960.png"><img
-                                                src="/nimg/room-slider-image220x165.png" alt=""></a></li>
-                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
-                                            href="/nimg/room-slider-image960x1280.png"><img
-                                                src="/nimg/room-slider-image124x165.png" alt=""></a></li>
-                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
-                                            href="/nimg/room-slider-image960x1280.png"><img
-                                                src="/nimg/room-slider-image124x165.png" alt=""></a></li>
-                                    <li class="slider-screen--item" style="margin-right: 16px;"><a
-                                            href="/nimg/room-slider-image1280x960.png"><img
-                                                src="/nimg/room-slider-image220x165.png" alt=""></a></li>
+                            <div class="slider-screen--container">
+                                <ul class="slider-screen--row">
+                                    <li class="slider-screen--item"><a href="/nimg/room-slider-image1280x960.png"><img
+                                                src="/nimg/room-slider-image220x165.png" alt="" /></a></li>
+                                    <li class="slider-screen--item"><a href="/nimg/room-slider-image960x1280.png"><img
+                                                src="/nimg/room-slider-image124x165.png" alt="" /></a></li>
+                                    <li class="slider-screen--item"><a href="/nimg/room-slider-image1280x960.png"><img
+                                                src="/nimg/room-slider-image220x165.png" alt="" /></a></li>
+                                    <li class="slider-screen--item"><a href="/nimg/room-slider-image1280x960.png"><img
+                                                src="/nimg/room-slider-image220x165.png" alt="" /></a></li>
+                                    <li class="slider-screen--item"><a href="/nimg/room-slider-image960x1280.png"><img
+                                                src="/nimg/room-slider-image124x165.png" alt="" /></a></li>
+                                    <li class="slider-screen--item"><a href="/nimg/room-slider-image960x1280.png"><img
+                                                src="/nimg/room-slider-image124x165.png" alt="" /></a></li>
+                                    <li class="slider-screen--item"><a href="/nimg/room-slider-image1280x960.png"><img
+                                                src="/nimg/room-slider-image220x165.png" alt="" /></a></li>
                                 </ul>
                                 <div class="slider-screen--button slider-screen--button_next"></div>
                             </div>
@@ -1080,10 +1081,7 @@
                                     </svg>
                                 </div>
                                 <div class="testimonials-header__item testimonials-header__item_stars">
-                                    <div data-rating="3" class="testimonials__stars testimonials__stars_bg">
-                                        <div class="testimonials__stars testimonials__stars_active">
-                                        </div>
-                                    </div>
+                                    <div id="get-rater"></div>
                                 </div>
                             </div>
                         </div>
@@ -1134,7 +1132,7 @@
                                 <div class="room-feedback-action">
                                     <div class="room-feedback--meta">
                                         <div class="room-feedback--note">Ваша оценка</div>
-                                        <div id="rater"></div>
+                                        <div id="set-rater"></div>
                                     </div>
                                     <button class="room-feedback--send">
                                         <svg>
@@ -1809,6 +1807,7 @@
         <!-- bottom content end -->
 
     </div>
+
     <script>
         // REFRESH FUNCTIONS FOR WHITCH SCREEN SIZE IS IMPORTANT 
 
@@ -1823,6 +1822,7 @@
         };
 
         // GALLERY SLIDER
+
         var mySwiper = new Swiper('.slider-screen--container', {
             wrapperClass: 'slider-screen--row',
             containerModifierClass: 'slider-screen--container_',
@@ -1940,6 +1940,7 @@
             }, 1000)
         })
         )
+
         // SUPPORT _______________________
 
         moreButtons = document.querySelectorAll('.room2-support-links__item_more');
@@ -2045,29 +2046,26 @@
         }
         // STAR RATING _______________________
 
-        const starRating = rater({
+        const getRating = rater({
             starSize: 18,
             starGap: 0,
-            element: document.querySelector('#rater'),
+            element: document.querySelector('#get-rater'),
             rateCallback: function rateCallback(rating, done) {
                 this.setRating(rating);
                 done();
             }
         });
-        // // BANNER ACCORDEON___________________________
 
-        // const bannerButtons = document.querySelectorAll('.room2-banners__button');
-        // const bannerWrappers = document.querySelectorAll('.room2-banners__wrapper');
-        // bannerButtons.forEach(function (button) {
-        //     button.addEventListener('click', () => {
-        //         bannerWrappers.forEach((item) => {
-        //             item.classList.toggle('room2-banners__wrapper_open');
-        //         })
-        //         bannerButtons.forEach((item) => {
-        //             item.style.display = 'none';
-        //         })
-        //     });
-        // })
+        const setRating = rater({
+            starSize: 18,
+            starGap: 0,
+            element: document.querySelector('#set-rater'),
+            rateCallback: function rateCallback(rating, done) {
+                this.setRating(rating);
+                done();
+            }
+        });
+
     </script>
 
 </main>

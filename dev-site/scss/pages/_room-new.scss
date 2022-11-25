@@ -248,29 +248,41 @@
     line-height: 17px;
     margin-bottom: 11px;
   }
-  &_secondary {
-    font-family: $secondary-font;
-    color: var(--room-color5);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 17px;
-    &_mobile {
-      @include breakpoint(large) {
-        display: none;
-      }
-    }
-  }
   &__sub-text {
     font-family: $condensed-font;
     font-size: 14px;
     line-height: 21px;
     color: var(--room-color2);
   }
-
   &__icons {
     display: flex;
     align-items: center;
     margin-bottom: 13px;
+    flex-wrap: wrap;
+    gap: 10px;
+    @include breakpoint(large) {
+      gap: 13px;
+    }
+  }
+  &__icon-wrap {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    @include breakpoint(large) {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  &__icon-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    @include breakpoint(large) {
+      width: 28px;
+      height: 28px;
+    }
   }
 }
 .room2-stats__item {
@@ -1295,70 +1307,6 @@
   }
 }
 
-.stats-icon {
-  max-height: 22px;
-  &_svg {
-    max-width: 23px;
-  }
-  &_mastercard {
-    height: 17px;
-    margin-right: 6px;
-    @include breakpoint(large) {
-      order: 3;
-      margin-left: 13px;
-    }
-  }
-  &_visa {
-    height: 14px;
-    @include breakpoint(large) {
-      order: 4;
-      margin-left: 4px;
-    }
-  }
-  &_crypto {
-    @include breakpoint(large) {
-      margin-left: -8px;
-      order: 1;
-    }
-  }
-  &_webmoney {
-    display: none;
-    max-height: 20px;
-    @include breakpoint(large) {
-      display: inline-block;
-      order: 2;
-      margin-left: 4px;
-    }
-  }
-  &_neteller {
-    display: none;
-    max-height: 19px;
-    @include breakpoint(large) {
-      display: inline-block;
-      order: 5;
-      margin-left: 14px;
-    }
-  }
-  &_apple {
-    width: 18px;
-    margin-right: 12px;
-  }
-  &_android {
-    width: 19px;
-    margin-right: 16px;
-  }
-  &_windows {
-    width: 22px;
-    margin-right: 10px;
-    margin-left: -4px;
-  }
-  &_ios {
-    width: 27px;
-    transform: scale(1.2);
-    margin-left: 1px;
-  }
-}
-
 .progressbar {
   display: flex;
   gap: 29px;
@@ -2297,3 +2245,101 @@
   }
 }
 // end~ slider news
+
+// slider with screens
+.slider-screen {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.slider-screen--container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.slider-screen--row {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  transition-property: transform;
+  box-sizing: content-box;
+  transform: translate3d(0, 0, 0);
+  z-index: 1;
+}
+.slider-screen--item {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  transition-property: transform;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  a {
+    display: flex;
+    -webkit-tap-highlight-color: transparent;
+  }
+  img {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+.slider-screen--button {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  width: 48px;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  outline: none;
+  background-size: 28px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  @include breakpoint(large) {
+    pointer-events: auto;
+  }
+  &_next {
+    right: 0;
+    left: auto;
+    transition: opacity 0.2s ease-in-out;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 64px;
+      height: 100%;
+      background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        #fff 95%
+      );
+      pointer-events: none;
+    }
+    &::after {
+      display: none;
+      width: 13px;
+      height: 13px;
+      content: "";
+      border: solid #ec314d;
+      border-width: 0 3px 3px 0;
+      transform: rotate(-45deg);
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+  }
+  &_disabled {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+//
