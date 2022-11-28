@@ -524,17 +524,16 @@
       grid-template-columns: 1fr 1fr 1fr;
 
       grid-template-areas:
-        "supp-chat supp-tg supp-more"
+        "supp-whatsapp supp-tg supp-more"
         "supp supp-skype .";
     }
   }
   &_mobile-tablet {
     @include breakpoint(large) {
       grid-template-areas:
-        "supp-chat supp-tg supp-more"
+        "supp-whatsapp supp-tg supp-more"
         "supp supp-skype ."
-        "supp-viber supp-whatsapp ."
-        "supp-discord . .";
+        "supp-viber supp-discord .";
     }
   }
   &_mobile-bottom {
@@ -552,9 +551,6 @@
       @include breakpoint(large) {
         display: inline-block;
       }
-    }
-    &_chat {
-      grid-area: supp-chat;
     }
     &_support {
       grid-area: supp;
@@ -2040,7 +2036,7 @@
 .slider-news {
   // theme = dark
   --sl-bg-color: #eef0f5;
-  --sl-title-color: var(--room2-white, #000);
+  --sl-title-color: #000;
   --sl-line-color: #e3e3e3;
   --sl-sep-color: #dfe1e4;
   --sl-meta-color: #a8a8a9;
@@ -2414,3 +2410,26 @@
     margin: 0 16px 0 0;
   }
 }
+// back button link
+.review-back {
+  display: flex;
+  align-items: center;
+  margin: 0 0 24px;
+  a {
+    color: #000;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  svg {
+    --color1: #000;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 0;
+  }
+}
+.review-arrow-left {
+  transform: rotate(180deg);
+}
+//
