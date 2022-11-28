@@ -6,10 +6,13 @@
 
                     <div class="room2-header__top">
                         <div class="room2-logo">
-                            <img src="//www.gipsyteam.ru/upload/Pokerroomnewlogo/default/16.png?1614610410"
+                            <img class="room2-logo__img_light"
+                                src="//www.gipsyteam.ru/upload/Pokerroomnewlogo/default/16.png?1614610410"
                                 alt="Покердом"
                                 srcset="//www.gipsyteam.ru/upload/Pokerroomnewlogo/default/16.png?1614610410 1x"
                                 itemprop="image">
+                            <img class="room2-logo__img_dark" src="/nimg/gft-pokerdom-logo@2x.png">
+
                         </div>
                         <div class="room2-rating">
                             <div class="room2-rating__stars">
@@ -1801,7 +1804,15 @@
         </aside>
     </div>
     <div class="room2-bottom">
-
+        <div class="room-forum">
+            <p class="room-forum--text">Узнать об особенностях рума, акциях и комиссии, а также задать вопрос
+                представителю Покердом можно на нашем форуме.</p>
+            <a class="room-forum--link" href="javascript:void(0);">
+                <svg width="16px" height="16px">
+                    <use href="/nimg/buttons-sprite.svg#i-btn-edit"></use>
+                </svg>
+                Форум</a>
+        </div>
         <!-- bottom content begin -->
         {{> slider-news}}
         <!-- bottom content end -->
