@@ -177,7 +177,7 @@
                             </div>
                         </div>
                         <div class="room2-stats__item room2-stats__item_7">
-                            <div class="room2-stats__icons">
+                            <div class="room2-stats__icons room2-stats__icons_closed">
                                 <div class="room2-stats__icon-wrap">
                                     <svg class="room2-stats__icon-img">
                                         <use href="/nimg/room2-payments.svg#icon-astropay" />
@@ -204,6 +204,80 @@
                                         <use href="/nimg/room2-payments.svg#icon-applepay" />
                                     </svg>
                                 </div>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-crypto" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-paysafe" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap ">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-mastercard" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap ">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-muchbetter" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__icon-wrap_hidden">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-neteller" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__icon-wrap_hidden">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-pay4fun" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__icon-wrap_hidden">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-pix" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__icon-wrap_hidden">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-qiwi" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__icon-wrap_hidden">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-skrill" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__icon-wrap_hidden">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-sms" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__icon-wrap_hidden">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-visa" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__icon-wrap_hidden">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-webmoney" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__icon-wrap_hidden">
+                                    <svg class="room2-stats__icon-img">
+                                        <use href="/nimg/room2-payments.svg#icon-yoomoney" />
+                                    </svg>
+                                </div>
+                                <div class="room2-stats__icon-wrap room2-stats__more">
+                                    <div class="room2-stats__more-inner">
+                                        Ещё
+                                        <svg class="room2-stats__more-arrow">
+                                            <use href="/nimg/icons-room.svg#icon-arrow-grey"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="room2-stats__sub-text">
                                 Платёжные системы
@@ -2053,6 +2127,18 @@
                 this.setRating(rating);
                 done();
             }
+        });
+
+        // SHOW MORE PAYMENT METHODS _______________________
+
+        const paymentButton = document.querySelector('.room2-stats__more');
+        const additionalPayMethods = document.querySelectorAll('.room2-stats__icon-wrap_hidden');
+
+        paymentButton.addEventListener('click', () => {
+            paymentButton.style.display = 'none';
+            additionalPayMethods.forEach(function (item) {
+                item.classList.toggle('room2-stats__icon-wrap_hidden');
+            })
         });
 
     </script>

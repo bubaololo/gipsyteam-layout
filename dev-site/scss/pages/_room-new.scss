@@ -247,7 +247,6 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 36px;
     row-gap: 25px;
-    // margin-bottom: 25px;
     @include breakpoint(large) {
       grid-template-columns: 1fr 1px 1fr 1px 1fr;
       grid-template-areas:
@@ -279,6 +278,9 @@
     @include breakpoint(large) {
       gap: 13px;
     }
+    @include breakpoint(xxxlarge) {
+      min-width: 151px;
+    }
   }
   &__icon-wrap {
     width: 24px;
@@ -287,6 +289,9 @@
     @include breakpoint(large) {
       width: 28px;
       height: 28px;
+    }
+    &_hidden {
+      display: none;
     }
   }
   &__icon-img {
@@ -320,8 +325,37 @@
       grid-area: sep2;
     }
   }
+  &__more {
+    cursor: pointer;
+  }
+  &__more-inner {
+    color: var(--text-3-color, #333);
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+  }
+  &__more-arrow {
+    position: absolute;
+    top: 50%;
+    right: -11px;
+    width: 9px;
+    height: 6px;
+    transform: translateY(-47%);
+    @include breakpoint(large) {
+      right: -7px;
+    }
+  }
 }
 .room2-stats__item {
+  &_7 {
+    @include breakpoint(xxsmall) {
+      max-width: 166px;
+    }
+  }
   @include breakpoint(large) {
     &_1 {
       grid-area: stats-item_1;
@@ -343,9 +377,16 @@
     }
     &_7 {
       grid-area: stats-item_7;
+      max-width: 193px;
     }
     &_8 {
       grid-area: stats-item_8;
+    }
+  }
+  @include breakpoint(xxxlarge) {
+    &_7 {
+      max-width: unset;
+      min-width: 192px;
     }
   }
 }
