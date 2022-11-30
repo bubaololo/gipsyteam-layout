@@ -245,15 +245,15 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 29px;
+    column-gap: 36px;
     row-gap: 25px;
     // margin-bottom: 25px;
     @include breakpoint(large) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1px 1fr 1px 1fr;
       grid-template-areas:
-        "stats-item_1 stats-item_2 stats-item_5"
-        "stats-item_3 stats-item_4 stats-item_6"
-        "stats-item_7 stats-item_8 .";
+        "stats-item_1 sep1 stats-item_2 sep2 stats-item_5"
+        "stats-item_3 sep1 stats-item_4 sep2 stats-item_6"
+        "stats-item_7 sep1 stats-item_8 sep2 .";
     }
   }
   &__main-text {
@@ -298,6 +298,26 @@
     @include breakpoint(large) {
       width: 28px;
       height: 28px;
+    }
+  }
+  &__separator-1 {
+    display: none;
+    @include breakpoint(large) {
+      display: initial;
+      width: 1px;
+      height: 100%;
+      background-color: var(--room2-d-border-color, #e5e8ee);
+      grid-area: sep1;
+    }
+  }
+  &__separator-2 {
+    display: none;
+    @include breakpoint(large) {
+      display: initial;
+      width: 1px;
+      height: 100%;
+      background-color: var(--room2-d-border-color, #e5e8ee);
+      grid-area: sep2;
     }
   }
 }
@@ -1313,7 +1333,7 @@
   padding: 19px 25px 29px 15px;
   border-radius: 10px;
   border: 1px solid var(--room2-d-border-color, #e5e8ee);
-  background-color: var(--room-color3);
+  background-color: var(--layer-2-color, #fff);
   @include breakpoint(large) {
     padding: 30px 35px;
   }
@@ -1836,7 +1856,7 @@
   &__author-role {
     font-size: 14px;
     line-height: 16px;
-    color: var(--room-color2);
+    color: var(--text-5-color, #808080);
     min-width: 8ch;
   }
   &__author-name {
@@ -1853,7 +1873,7 @@
     background-size: cover;
   }
   &__main {
-    background-color: var(--room-color3);
+    background-color: var(--layer-2-color, #fff);
     padding: 0 24px 46px;
     @include breakpoint(large) {
       display: flex;
