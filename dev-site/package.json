@@ -6,8 +6,8 @@
   "scripts": {
     "start": "gulp --development",
     "build": "gulp --production",
-    "standdev": "gulp --development standalone",
-    "standprod": "gulp --production standalone"
+    "standdev": "gulp standalone --development",
+    "standprod": "gulp standalone --production"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
