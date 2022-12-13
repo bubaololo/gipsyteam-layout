@@ -7,6 +7,8 @@
   --room-accent: #e51e25;
   --room-accent2: #e31f26;
   --room-accent3: #e50c2c;
+  --room-color1: #ced4e3;
+
   --room-grey: var(--layer-5-color, #ced4e3);
   scroll-behavior: smooth;
 
@@ -333,7 +335,7 @@
     cursor: pointer;
   }
   &__more-inner {
-    color: var(--text-3-color, #333);
+    color: var(--text-3-color, #808080);
     font-family: "Roboto Condensed", sans-serif;
     font-size: 14px;
     line-height: 21px;
@@ -1086,6 +1088,7 @@
     line-height: 21px;
     color: #808080;
     margin-top: 0.5ch;
+    min-width: 13ch;
   }
   &__text {
     font-size: 17px;
@@ -1235,7 +1238,8 @@
     list-style-type: "•";
     margin-left: 4px;
     a {
-      color: var(--room2-d-links-color, #005581);
+      color: inherit;
+      font-weight: bolder;
     }
   }
   &__list-item:not(:last-child) {
