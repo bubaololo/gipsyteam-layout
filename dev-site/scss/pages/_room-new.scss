@@ -7,19 +7,6 @@
   --room-accent: #e51e25;
   --room-accent2: #e31f26;
   --room-accent3: #e50c2c;
-  --room-color1: #ced4e3;
-  --room-color2: #808080;
-  --room-color3: #fff;
-  --room-color5: #b5b5b5;
-  --room-color6: #eef0f5;
-  --room-color7: #e5e8ee;
-  --room-color8: #545454;
-  --room-color10: #444444;
-  --room-color11: #242424;
-  --room-color13: #d7dce8;
-  --room-color14: #a9b0c0;
-  --room-color15: #989898;
-  --room-color17: #d9d9d9;
   --room-grey: var(--layer-5-color, #ced4e3);
   scroll-behavior: smooth;
 
@@ -71,7 +58,6 @@
   }
 }
 .room2-info {
-  background-color: var(#fbfbfb);
   margin-bottom: 63px;
   @include breakpoint(large) {
     margin-bottom: 73px;
@@ -548,7 +534,6 @@
     &-image {
       width: 13px;
       height: 16px;
-      transform: translate(-44%, -46.5%);
       position: absolute;
       top: 50%;
       left: 50%;
@@ -856,16 +841,7 @@
     transform: translateY(-47%);
   }
 }
-.room2-banners__wrapper_open {
-  margin-bottom: 24px;
-  @include breakpoint(xxxlarge) {
-    overflow-y: scroll;
-    border-radius: 10px;
-    scrollbar-width: thin;
-    max-height: 84vh;
-    margin-bottom: 0;
-  }
-}
+
 .room2-banners-inner {
   padding: 39px 0 32px;
   display: flex;
@@ -882,8 +858,8 @@
 .room2-plus {
   border-bottom: 1px solid var(--room2-d-border-color, #e5e8ee);
   padding: 0 24px 16px 24px;
+  background-color: var(--layer-2a-color, #fbfbfb);
   @include breakpoint(xxxlarge) {
-    padding: 0 60px;
     border-bottom: 1px solid var(--room2-d-border-color, #e5e8ee);
     padding: 49px 60px 52px 60px;
     display: flex;
@@ -975,6 +951,7 @@
 .room2-traffic {
   padding: 0 24px 25px 24px;
   border-bottom: 1px solid var(--room2-d-border-color, #e5e8ee);
+  background-color: var(--layer-2a-color, #fbfbfb);
   @include breakpoint(xxxlarge) {
     padding: 0 60px 44px 60px;
     display: flex;
@@ -1012,12 +989,14 @@
     text-transform: uppercase;
     color: var(--text-4-color, #242424);
     margin-bottom: 11px;
+    white-space: nowrap;
   }
   &__item-text {
     font-family: $condensed-font;
     font-size: 14px;
     line-height: 21px;
     color: #808080;
+    white-space: nowrap;
   }
 }
 
@@ -1038,6 +1017,7 @@
 
 .room2-other {
   padding: 0 24px 30px 24px;
+  background-color: var(--layer-2a-color, #fbfbfb);
   @include breakpoint(xxxlarge) {
     padding: 0 60px 60px 60px;
     display: flex;
@@ -1219,7 +1199,7 @@
       fill: var(--text-3-color, #b1b1b1);
     }
     &:hover svg {
-      fill: red;
+      fill: var(--room-accent3);
     }
   }
   &__copy {
@@ -1507,13 +1487,12 @@
       line-height: 21px;
       padding: 1px 9px;
       border-radius: 13px;
-      background-color: var(#fbfbfb);
+      background-color: var(--layer-2a-color, #fbfbfb);
       color: var(--text-1-color, #808080);
       white-space: nowrap;
       @include breakpoint(large) {
         display: inline-block;
       }
-
       &_dark {
         display: inline-block;
         position: relative;
@@ -1584,8 +1563,8 @@
       gap: 15px;
       z-index: 1;
       position: relative;
-      height: 232px;
-      padding: 9px 9px 9px 9px;
+      height: 225px;
+      padding: 0 9px 9px 9px;
       border-radius: 13px;
       background-color: var(--layer-4-color, #eef0f5);
       color: #fff;
@@ -1611,9 +1590,9 @@
       gap: 15px;
       background-color: var(--layer-4-color, #eef0f5);
       color: #fff;
-      padding: 9px 9px 9px 9px;
+      padding: 0 9px 9px 9px;
       border-radius: 13px;
-      height: 75px;
+      height: 73px;
     }
   }
   &__stats {
@@ -1721,6 +1700,13 @@
   }
   &__content {
     width: 100%;
+
+    &_feedback {
+    @include breakpoint(xxxlarge) {
+      display: flex;
+      justify-content: space-between;
+    }
+    }
   }
   &__content-header {
     display: flex;
@@ -1732,6 +1718,9 @@
     &_feedback {
       @include breakpoint(large) {
         margin-bottom: 14px;
+      }
+      @include breakpoint(xxxlarge) {
+        margin-bottom: 0;
       }
     }
   }
@@ -1766,6 +1755,9 @@
     color: var(--room-accent);
     font-weight: 500;
     font-style: normal;
+    @include breakpoint(xxxlarge) {
+      width: 249px;
+    }
   }
   &__chat {
     width: 19px;
@@ -2316,6 +2308,7 @@
 }
 .review-arrow-left {
   transform: rotate(180deg);
+  cursor: pointer;
 }
 //
 
