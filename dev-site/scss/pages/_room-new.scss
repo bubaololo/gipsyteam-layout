@@ -1899,17 +1899,17 @@
       margin-bottom: 22px;
     }
   }
-  &__content {
-    padding-top: 38px;
-    overflow-x: hidden;
-    @include breakpoint(large) {
-      padding-top: 26px;
-    }
-    @include breakpoint(xxxlarge) {
-      padding-top: 35px;
-      max-width: 670px;
-    }
-  }
+  // &__content {
+  //   padding-top: 38px;
+  //   overflow-x: hidden;
+  //   @include breakpoint(large) {
+  //     padding-top: 26px;
+  //   }
+  //   @include breakpoint(xxxlarge) {
+  //     padding-top: 35px;
+  //     max-width: 670px;
+  //   }
+  // }
   &__author-item {
     display: flex;
     gap: 10px;
@@ -2217,7 +2217,7 @@
       background-image: linear-gradient(
         90deg,
         rgba(255, 255, 255, 0) 0%,
-        var(--layer-2-color, #fff) 95%
+        var(--layer-2a-color, #fff) 95%
       );
       pointer-events: none;
     }
@@ -2316,42 +2316,4 @@
 }
 //
 
-//extend styles redefenition for dark theme
 
-.room2-wrapper {
-  .room-feedback--field {
-    background-color: var(--layer-4-color);
-    color: var(--text-2-color);
-  }
-  .room-feedback--signup {
-    color: var(--text-2-color, #000);
-    a {
-      color: var(--text-1-color, #000);
-    }
-  }
-  .r-view--content h2,
-  h3 {
-    [theme="dark"] & {
-      color: var(--text-2-color);
-    }
-  }
-  .r-view--content p {
-    [theme="dark"] & {
-      color: var(--text-3-color);
-    }
-  }
-  .r-view--content ul li {
-    [theme="dark"] & {
-      color: var(--text-3-color);
-    }
-  }
-  .r-view--content a {
-    color: var(--room2-d-links-color, #6b82dc);
-  }
-  .r-view--content th {
-    color: var(--text-1-color, #1a1d34);
-  }
-  .r-view--content td {
-    color: var(--text-2-color, #1a1d34);
-  }
-}
