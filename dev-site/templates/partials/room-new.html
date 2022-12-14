@@ -1922,12 +1922,12 @@
         })(jQuery);
 
         // ADD NOTIFY ELEMENT
-        document.querySelector('html').style.scrollBehavior = 'smooth';
-        let notify = document.createElement("div");
-        let text = document.createTextNode("Скопировано!");
-        notify.appendChild(text);
-        notify.classList.add('room2-notify');
-        document.querySelector('body').appendChild(notify);
+        // document.querySelector('html').style.scrollBehavior = 'smooth';
+        // let notify = document.createElement("div");
+        // let text = document.createTextNode("Скопировано!");
+        // notify.appendChild(text);
+        // notify.classList.add('room2-notify');
+        // document.querySelector('body').appendChild(notify);
 
 
         // REVIEW TITLES
@@ -1997,9 +1997,9 @@
 
         promoWrappers.forEach(promoWrapper => promoWrapper.addEventListener('click', () => {
             navigator.clipboard.writeText(promoCode);
-            promoNotify.classList.add('room2-notify_active');
+            promoWrapper.classList.add('room2-steps__copy-area_active');
             setTimeout(function () {
-                promoNotify.classList.remove('room2-notify_active');
+                promoWrapper.classList.remove('room2-steps__copy-area_active');
             }, 1000)
         })
         )
