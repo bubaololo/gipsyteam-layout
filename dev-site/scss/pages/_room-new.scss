@@ -248,8 +248,8 @@
     font-family: $secondary-font;
     font-weight: 700;
     font-size: 20px;
-    line-height: 17px;
-    margin-bottom: 11px;
+    line-height: 24px;
+    margin-bottom: 8px;
   }
   &__sub-text {
     font-family: $condensed-font;
@@ -1568,8 +1568,8 @@
       gap: 15px;
       z-index: 1;
       position: relative;
-      height: 225px;
-      padding: 0 9px 9px 9px;
+      height: auto;
+      padding: 0 9px 12px 9px;
       border-radius: 13px;
       background-color: var(--layer-4-color, #eef0f5);
       color: #fff;
