@@ -25,11 +25,12 @@
   flex-direction: column;
   width: 100%;
   padding: 16px;
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
   @include breakpoint(large) {
     padding: 24px;
     &:hover {
-      box-shadow: 0 6px 15px rgba(68, 8, 8, .1), 0 26px 25px -17px rgba(68, 8, 8, .3);
+      box-shadow: 0 6px 15px rgba(68, 8, 8, 0.1),
+        0 26px 25px -17px rgba(68, 8, 8, 0.3);
     }
   }
 }
@@ -51,7 +52,7 @@
   height: 76px;
   border-radius: 50%;
   flex-shrink: 0;
-  border: 1px solid #e7e7e7;
+  border: 1px solid var(--line-2-color, #e7e7e7);
   @include breakpoint(large) {
     width: 86px;
     height: 86px;
@@ -67,7 +68,7 @@
   }
   // tmp fix for dark theme
   svg {
-    [theme='dark'] .market-wrap & {
+    [theme="dark"] .market-wrap & {
       --logo-color-1: initial;
       --logo-color-2: initial;
     }
@@ -82,7 +83,7 @@
   font-size: 22px;
   line-height: 30px;
   font-weight: 500;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   margin: 0 0 2px;
   @include breakpoint(large) {
     font-size: 24px;
@@ -92,7 +93,7 @@
 .fund-card--lead {
   font-size: 14px;
   line-height: 1.5;
-  color: #666;
+  color: var(--text-4-color, #666);
   margin: 0 0 8px;
   @include breakpoint(large) {
     font-size: 16px;
@@ -106,12 +107,12 @@
 .fund-card--label {
   font-size: 13px;
   line-height: 1;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   padding: 3px 7px;
   text-align: center;
   text-transform: uppercase;
   border-radius: 40px;
-  background-color: #e4e5e7;
+  background-color: var(--layer-5-color, #e4e5e7);
 }
 .fund-card--list {
   margin: 0 0 27px;
@@ -122,7 +123,7 @@
   li {
     font-size: 14px;
     line-height: 1.5;
-    color: #202020;
+    color: var(--text-2-color, #202020);
     list-style-position: outside;
     list-style-type: disc;
     &:not(:last-child) {
@@ -191,7 +192,7 @@
 .fund-mail--text {
   font-size: 18px;
   line-height: 1.3;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   text-align: center;
   @include breakpoint(large) {
     font-size: 24px;
@@ -201,11 +202,11 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
-  color: #fff;
+  color:  var(--layer-1-color, #fff);
   text-align: center;
   width: 100%;
   margin: auto 0 0;
   padding: 14px 24px;
   border-radius: 5px;
-  background-color: #202020;
+  background-color: var(--text-2-color, #202020);
 }

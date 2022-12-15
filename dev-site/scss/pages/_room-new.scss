@@ -8,9 +8,9 @@
   --room-accent2: #e31f26;
   --room-accent3: #e50c2c;
   --room-color1: #ced4e3;
+  --room-color2: #808080;
 
   --room-grey: var(--layer-5-color, #ced4e3);
-  scroll-behavior: smooth;
 
   display: flex;
   flex-direction: row;
@@ -60,12 +60,12 @@
   }
 }
 .room2-info {
-  margin-bottom: 63px;
+  margin-bottom: 39px;
   @include breakpoint(large) {
-    margin-bottom: 73px;
+    margin-bottom: 49px;
   }
   @include breakpoint(xxxlarge) {
-    margin-bottom: 82px;
+    margin-bottom: 58px;
   }
 }
 .room2-header {
@@ -268,24 +268,6 @@
     }
     @include breakpoint(xxxlarge) {
       min-width: 151px;
-    }
-    &_closed {
-      // .room2-stats__icon-wrap:nth-child(n + 8):not(.room2-stats__more) {
-      //   position: absolute;
-      //   visibility: hidden;
-      //   pointer-events: none;
-      //   width: 0;
-      //   height: 0;
-      // }
-      // @include breakpoint(xsmall) {
-      //   .room2-stats__icon-wrap:nth-child(n + 8):not(.room2-stats__more) {
-      //     position: relative;
-      //     visibility: visible;
-      //     pointer-events: initial;
-      //     width: 24px;
-      //     height: 24px;
-      //   }
-      // }
     }
   }
   &__icon-wrap {
@@ -1231,7 +1213,6 @@
     height: 16px;
     top: 11px;
     right: 17%;
-    // opacity: 0;
     transition: all 0.3s;
   }
 
@@ -1407,24 +1388,6 @@
     color: var(--room-accent);
   }
 }
-// .room2-notify {
-//   position: fixed;
-//   top: 0px;
-//   width: 100%;
-//   height: 50px;
-//   box-sizing: border-box;
-//   color: var(--text-1-color, #000);
-//   text-align: center;
-//   background-color: var(--layer-1-color, #fff);
-//   overflow: hidden;
-//   transform: translateY(-100%);
-//   transition: transform 0.2s;
-//   line-height: 50px;
-//   z-index: 9999;
-// }
-// .room2-notify_active {
-//   transform: translateY(0%);
-// }
 
 .room2-steps-restricted {
   max-width: 643px;
@@ -1935,17 +1898,6 @@
       margin-bottom: 22px;
     }
   }
-  // &__content {
-  //   padding-top: 38px;
-  //   overflow-x: hidden;
-  //   @include breakpoint(large) {
-  //     padding-top: 26px;
-  //   }
-  //   @include breakpoint(xxxlarge) {
-  //     padding-top: 35px;
-  //     max-width: 670px;
-  //   }
-  // }
   &__author-item {
     display: flex;
     gap: 10px;
@@ -2259,7 +2211,7 @@
     pointer-events: none;
   }
 }
-//
+
 // forum links
 .room-forum {
   display: flex;
@@ -2314,7 +2266,7 @@
 .review-back {
   display: flex;
   align-items: center;
-  margin: 0 0 24px;
+  margin: 24px 0;
   a {
     color: var(--text-1-color, #000);
     font-size: 16px;
@@ -2333,4 +2285,4 @@
   transform: rotate(180deg);
   cursor: pointer;
 }
-//
+

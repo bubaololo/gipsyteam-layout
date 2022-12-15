@@ -25,7 +25,7 @@
   flex-direction: column;
   width: 100%;
   padding: 16px;
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
   @include breakpoint(xxsmall) {
     max-width: 328px;
   }
@@ -57,12 +57,12 @@
   font-size: 18px;
   line-height: 1.5;
   font-weight: 500;
-  color: #202020;
+  color: var(--text-2-color, #202020);
 }
 .trainer-card--name {
   font-size: 14px;
   line-height: 1.5;
-  color: #202020;
+  color: var(--text-2-color, #202020);
 }
 .trainer-card--rate {
   margin: 0 0 8px;
@@ -117,7 +117,7 @@
 .trainer-card--graph {
   font-size: 14px;
   line-height: 1.5;
-  color: #202020;
+  color: var(--text-2-color, #202020);
 }
 .trainer-card--list {
   margin: 0 0 24px;
@@ -140,7 +140,7 @@
 .trainer-card--title {
   font-size: 14px;
   line-height: 17px;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   order: 1;
 }
 .trainer-card--tag {
@@ -151,18 +151,18 @@
 .trainer-card--label {
   font-size: 13px;
   line-height: 1;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   padding: 3px 7px;
   text-align: center;
   text-transform: uppercase;
   border-radius: 40px;
-  background-color: #e4e5e7;
+  background-color: var(--layer-5-color, #e4e5e7);
 }
 .trainer-card--data {
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   order: 3;
 }
 .trainer-card--review {

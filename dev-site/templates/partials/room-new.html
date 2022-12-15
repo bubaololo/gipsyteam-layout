@@ -319,7 +319,7 @@
                 </div>
                 <div class="room2-support room2-support_mobile room2-support_mobile-top">
                     <div class="room2-support-inner room2-support-inner_mobile">
-                        <div class="room2-support-avatar" style="background-image: url(../nimg/support-team.jpg);">
+                        <div class="room2-support-avatar" style="background-image: url(../nimg/support-avatar-new.jpg);">
                             <div class="room2-support-avatar__icon">
                                 <svg class="room2-support-avatar__icon-image">
                                     <use href="/nimg/icons-room.svg#icon-headphones" />
@@ -1579,7 +1579,7 @@
             <div class="room2-support room2-support_mobile room2-support_mobile-bottom">
 
                 <div class="room2-support-inner room2-support-inner_mobile">
-                    <div class="room2-support-avatar" style="background-image: url(../nimg/support-team.jpg);">
+                    <div class="room2-support-avatar" style="background-image: url(../nimg/support-avatar-new.jpg);">
                         <div class="room2-support-avatar__icon">
                             <svg class="room2-support-avatar__icon-image">
                                 <use href="/nimg/icons-room.svg#icon-headphones" />
@@ -1732,7 +1732,7 @@
             <div class="room2-support room2-support_desktop">
 
                 <div class="room2-support-inner room2-support-inner_desktop">
-                    <div class="room2-support-avatar" style="background-image: url(../nimg/support-team.jpg);">
+                    <div class="room2-support-avatar" style="background-image: url(../nimg/support-avatar-new.jpg);">
                         <div class="room2-support-avatar__icon">
                             <svg class="room2-support-avatar__icon-image">
                                 <use href="/nimg/icons-room.svg#icon-headphones" />
@@ -1993,7 +1993,6 @@
 
         const promoWrappers = document.querySelectorAll('.room2-steps__copy-area');
         const promoCode = 'GT2022FG';
-        const promoNotify = document.querySelector('.room2-notify');
 
         promoWrappers.forEach(promoWrapper => promoWrapper.addEventListener('click', () => {
             navigator.clipboard.writeText(promoCode);
@@ -2072,41 +2071,41 @@
         // REVIEWS ACCORDEON _______________________
 
         function reviewsAccordeon() {
-            if (window.matchMedia("(max-width: 768px)").matches) {
-                const reviewsButton = document.querySelector('.testimonials-header__item_dark');
-                const reviewsWrapper = document.querySelector('.testimonials-header__feedback');
-                const reviewsArrow = document.querySelector('.testimonials-header__feedback .testimonials-arrow');
-
-                reviewsButton.addEventListener('click', () => {
-                    reviewsWrapper.classList.toggle('testimonials-header__feedback_active');
-                    reviewsArrow.classList.toggle('testimonials-arrow_active');
-                    document.addEventListener('click', (e) => {
-                        const withinBoundaries = e.composedPath().includes(reviewsWrapper);
-                        if (!withinBoundaries) {
-                            reviewsWrapper.classList.remove('testimonials-header__feedback_active');
-                            reviewsArrow.classList.remove('testimonials-arrow_active');
-                        }
-                    })
-                })
-
-                const rateButton = document.querySelector('.testimonials-header__item_rate');
-                const rateWrapper = document.querySelector('.testimonials-header__rate');
-                const rateArrow = document.querySelector('.testimonials-header__rate .testimonials-arrow');
-
-
-                rateButton.addEventListener('click', () => {
-                    rateWrapper.classList.toggle('testimonials-header__rate_active');
-                    rateArrow.classList.toggle('testimonials-arrow_active');
-                    document.addEventListener('click', (e) => {
-                        const withinBoundaries = e.composedPath().includes(rateWrapper);
-                        if (!withinBoundaries) {
-                            rateWrapper.classList.remove('testimonials-header__rate_active');
-                            rateArrow.classList.remove('testimonials-arrow_active');
-                        }
-                    })
-                })
-            }
-        }
+                    if (window.matchMedia("(max-width: 768px)").matches) {
+                        const reviewsButton = document.querySelector('.testimonials-header__item_dark');
+                        const reviewsWrapper = document.querySelector('.testimonials-header__feedback');
+                        const reviewsArrow = document.querySelector('.testimonials-header__feedback .testimonials-arrow');
+        
+                        reviewsButton.addEventListener('click', () => {
+                            reviewsWrapper.classList.toggle('testimonials-header__feedback_active');
+                            reviewsArrow.classList.toggle('testimonials-arrow_active');
+                            document.addEventListener('click', (e) => {
+                                const withinBoundaries = e.composedPath().includes(reviewsWrapper);
+                                if (!withinBoundaries) {
+                                    reviewsWrapper.classList.remove('testimonials-header__feedback_active');
+                                    reviewsArrow.classList.remove('testimonials-arrow_active');
+                                }
+                            })
+                        })
+        
+                        const rateButton = document.querySelector('.testimonials-header__item_rate');
+                        const rateWrapper = document.querySelector('.testimonials-header__rate');
+                        const rateArrow = document.querySelector('.testimonials-header__rate .testimonials-arrow');
+        
+        
+                        rateButton.addEventListener('click', () => {
+                            rateWrapper.classList.toggle('testimonials-header__rate_active');
+                            rateArrow.classList.toggle('testimonials-arrow_active');
+                            document.addEventListener('click', (e) => {
+                                const withinBoundaries = e.composedPath().includes(rateWrapper);
+                                if (!withinBoundaries) {
+                                    rateWrapper.classList.remove('testimonials-header__rate_active');
+                                    rateArrow.classList.remove('testimonials-arrow_active');
+                                }
+                            })
+                        })
+                    }
+                }
         // STAR RATING _______________________
 
         const getRating = rater({

@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   width: 100%;
   padding: 40px 24px;
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
   @include breakpoint(large) {
     padding: 40px 30px;
   }
@@ -24,7 +24,7 @@
   background-position: 100% 50%;
   background-size: contain;
   background-image: url(#{$images}/discord-bg.png);
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
   @include breakpoint(large) {
     flex-direction: row;
     align-items: center;
@@ -50,7 +50,7 @@
 .market-discord--text {
   font-size: 16px;
   line-height: 1.5;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   @include breakpoint(large) {
     font-size: 21px;
   }

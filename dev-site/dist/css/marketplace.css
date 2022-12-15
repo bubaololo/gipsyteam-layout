@@ -102,14 +102,14 @@
   top: 0;
   flex-grow: 1;
   height: 1px;
-  background-color: #e7e7e7;
-  content: '';
+  background-color: var(--line-2-color, #e7e7e7);
+  content: "";
 }
 
 .market-more--button {
   padding: 10px 24px;
   border: 1px solid #e4e5e7;
-  color: #666;
+  color: var(--text-3-color, var(--line-2-color, #e7e7e7));
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -469,7 +469,7 @@
   flex-direction: column;
   width: 100%;
   padding: 16px;
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
 }
 
 @media screen and (min-width: 30em) {
@@ -508,14 +508,14 @@
 }
 
 .trainer-card--nick {
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
 }
 
 .trainer-card--name {
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -579,7 +579,7 @@
 }
 
 .trainer-card--graph {
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -608,7 +608,7 @@
 
 .trainer-card--title {
   order: 1;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 14px;
   line-height: 17px;
 }
@@ -622,8 +622,8 @@
 .trainer-card--label {
   padding: 3px 7px;
   border-radius: 40px;
-  background-color: #e4e5e7;
-  color: #202020;
+  background-color: var(--layer-5-color, #e4e5e7);
+  color: var(--text-2-color, #202020);
   font-size: 13px;
   line-height: 1;
   text-align: center;
@@ -632,7 +632,7 @@
 
 .trainer-card--data {
   order: 3;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
@@ -737,7 +737,7 @@
   flex-direction: column;
   width: 100%;
   padding: 16px;
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
 }
 
 @media screen and (min-width: 48em) {
@@ -770,7 +770,7 @@
   width: 76px;
   height: 76px;
   overflow: hidden;
-  border: 1px solid #e7e7e7;
+  border: 1px solid var(--line-2-color, #e7e7e7);
   border-radius: 50%;
 }
 
@@ -794,7 +794,7 @@
   }
 }
 
-[theme='dark'] .market-wrap .fund-card--logo svg {
+[theme="dark"] .market-wrap .fund-card--logo svg {
   --logo-color-1: initial;
   --logo-color-2: initial;
 }
@@ -806,7 +806,7 @@
 
 .fund-card--heading {
   margin: 0 0 2px;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 22px;
   font-weight: 500;
   line-height: 30px;
@@ -821,7 +821,7 @@
 
 .fund-card--lead {
   margin: 0 0 8px;
-  color: #666;
+  color: var(--text-4-color, #666);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -841,8 +841,8 @@
 .fund-card--label {
   padding: 3px 7px;
   border-radius: 40px;
-  background-color: #e4e5e7;
-  color: #202020;
+  background-color: var(--layer-5-color, #e4e5e7);
+  color: var(--text-2-color, #202020);
   font-size: 13px;
   line-height: 1;
   text-align: center;
@@ -861,7 +861,7 @@
 }
 
 .fund-card--list li {
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 14px;
   line-height: 1.5;
   list-style-position: outside;
@@ -948,7 +948,7 @@
 }
 
 .fund-mail--text {
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 18px;
   line-height: 1.3;
   text-align: center;
@@ -965,8 +965,8 @@
   margin: auto 0 0;
   padding: 14px 24px;
   border-radius: 5px;
-  background-color: #202020;
-  color: #fff;
+  background-color: var(--text-2-color, #202020);
+  color: var(--layer-1-color, #fff);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -1127,7 +1127,7 @@
   max-width: 1034px;
   padding: 32px 16px;
   border-radius: 6px;
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
 }
 
 @media screen and (min-width: 48em) {
@@ -1167,7 +1167,7 @@
 }
 
 .market-mail--text {
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 18px;
   line-height: 1.3;
   text-align: center;
@@ -1184,8 +1184,8 @@
   width: 100%;
   padding: 14px 24px;
   border-radius: 5px;
-  background-color: #202020;
-  color: #fff;
+  background-color: var(--text-2-color, #202020);
+  color: var(--layer-1-color, #fff);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -1203,6 +1203,7 @@
   justify-content: center;
   width: 100%;
   padding: 40px 24px 0;
+  background-color: var(--layer-2a-color);
 }
 
 @media screen and (min-width: 48em) {
@@ -1216,12 +1217,12 @@
   flex-direction: column;
   width: 100%;
   max-width: 1034px;
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid var(--line-1-color, #e7e7e7);
 }
 
 .market-faq--heading {
   margin: 0 0 24px;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-family: "PT Serif", serif;
   font-size: 30px;
   font-weight: 700;
@@ -1237,11 +1238,11 @@
 }
 
 .market-faq--item {
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid var(--line-1-color, #e7e7e7);
 }
 
 .market-faq--item a {
-  color: #202020;
+  color: var(--text-2-color, #202020);
 }
 
 .market-faq--button {
@@ -1335,7 +1336,7 @@
   justify-content: center;
   width: 100%;
   padding: 40px 24px;
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
   background-repeat: no-repeat;
 }
 
@@ -1355,7 +1356,7 @@
   padding: 14px 88px 14px 14px;
   border: 2px solid #784ef5;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
   background-image: url(/nimg/discord-bg.png);
   background-position: 100% 50%;
   background-repeat: no-repeat;
@@ -1392,7 +1393,7 @@
 }
 
 .market-discord--text {
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 16px;
   line-height: 1.5;
 }
@@ -1464,7 +1465,7 @@
 
 .market-contact--heading {
   margin: 0 0 8px;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-family: "PT Serif", serif;
   font-size: 30px;
   font-weight: 700;
@@ -1481,7 +1482,7 @@
 }
 
 .market-contact--lead {
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
@@ -1498,7 +1499,7 @@
 .market-contact--note {
   display: none;
   position: relative;
-  color: #202020;
+  color: var(--text-2-color, #202020);
   font-size: 13px;
   line-height: 1.3;
   text-align: center;
@@ -1565,21 +1566,21 @@
   appearance: none;
   width: 100%;
   padding: 16px 24px;
-  border: 1px solid #e4e5e7;
+  border: 1px solid var(--control-1-border-color, #e4e5e7);
   border-radius: 6px;
-  background-color: #fff;
-  color: #202020;
+  background-color: var(--layer-3-color, #fff);
+  color: var(--text-2-color, #202020);
   font-family: inherit;
   font-size: 16px;
   line-height: 24px;
 }
 
 .market-form--field::-moz-placeholder {
-  color: #666;
+  color: var(--text-2-color, #666);
 }
 
 .market-form--field::placeholder {
-  color: #666;
+  color: var(--text-2-color, #666);
 }
 
 .market-form--option {
@@ -1588,18 +1589,22 @@
   appearance: none;
   width: 100%;
   padding: 16px 51px 16px 24px;
-  border: 1px solid #e4e5e7;
+  border: 1px solid var(--control-1-border-color, #e4e5e7);
   border-radius: 6px;
-  background-color: #fff;
+  background-color: var(--layer-3-color, #fff);
   background-image: url(/nimg/select-arrow-24.svg);
   background-origin: content-box;
   background-position: right -32px center;
   background-repeat: no-repeat;
   background-size: 16px;
-  color: #666;
+  color: var(--control-1-color, #666);
   font-family: inherit;
   font-size: 16px;
   line-height: 24px;
+}
+
+[theme="dark"] .market-form--option {
+  background-image: url(/nimg/select-arrow-light-24.svg);
 }
 
 .market-form--submit {
